@@ -148,16 +148,6 @@ FADE_STOP_PTS = _f("ES_FADE_STOP_PTS", 6.0)     # stop beyond the wall
 FADE_FILL_TIMEOUT = _f("ES_FADE_FILL_TIMEOUT", 60)  # sec to fill at wall
 FADE_MAX_TOUCH_PER_WALL = _i("ES_FADE_MAX_TOUCH_PER_WALL", 2)
 FADE_MIN_WALL_SEP = _f("ES_FADE_MIN_WALL_SEP", 10.0)  # wall must be this far
-# [v1.10 TAPER] fade entry mode. "taper" (default): sell/buy only after price
-# touches the wall zone, a closed M1 bar comes back outside it, AND >= FADE_TAPER_NEED
-# of 4 tapering signs (shrinking ranges / slowing speed / rejection wick /
-# volume-without-progress). "blind" = old rule (market order on touch).
-# 19-day OPRA+ES replay 2026-10-02: blind 15 tr +$2,478 DD -$1,582; taper(2)
-# 12 tr 75% win +$3,630 DD -$938.
-FADE_MODE = _s("ES_FADE_MODE", "taper").lower()
-FADE_TAPER_NEED = _i("ES_FADE_TAPER_NEED", 2)
-FADE_STOP_REF = _s("ES_FADE_STOP_REF", "wall").lower()   # wall | edge (taper fades)
-FADE_TAPER_MAX_AGE_SEC = _f("ES_FADE_TAPER_MAX_AGE_SEC", 150)   # signal bar must be fresh
 # from spot-side... (min wall distance from spot to bother)
 
 # ---------------- BREAKOUT sleeve (-gamma or wall-break event) ----------------

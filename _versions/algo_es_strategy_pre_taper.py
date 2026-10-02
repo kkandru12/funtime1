@@ -1,28 +1,5 @@
 """ES futures GEX strategy: FADE (+gamma) and BREAKOUT (-gamma / wall-break).
 
-v1.10 2026-10-02 [TAPER] KK: blind fade sells on touch -- "isn't there a
-    better way / how can you find tapering". New evaluate_fade_taper():
-    fade only when a CLOSED M1 bar touched the wall zone and closed back
-    outside it, and >= FADE_TAPER_NEED (2) of 4 tapering signs agree:
-      shrink  last 3 M1 ranges smaller than the 3 before
-      slow    progress into the wall over 3 bars < half the 3 before
-      wick    rejection wick >= 50% of the signal bar's range
-      absorb  volume up over 3 bars while progress < 1 pt
-    Entry = that bar's close (market), stop = FADE_STOP_PTS beyond the WALL
-    (ES_FADE_STOP_REF=wall, default -- same as the blind fade) or beyond the
-    zone edge (=edge, tighter), target = flip. Replay: wall-stop 12 tr 92%
-    win +$4,287 DD -$610 (avg stop 11.9 pt, max 26); edge-stop 13 tr 77%
-    +$3,165 DD -$920 (avg 6.8 pt). Every touch is reported (FADE_TOUCH) with its signs, taken
-    or not, so live days keep growing the sample. ES_FADE_MODE=blind restores
-    the old rule. 19-day replay: blind 15 tr +$2,478 DD -$1,582 vs taper 12 tr
-    75% win +$3,630 DD -$938.
-    [TOUCHKEY] the 2-fades-per-wall cap is keyed on the SPX strike (it was
-    keyed on the ES wall, which moves with the basis, so it never capped).
-    [TPSIDE] blind fade bug fixed: it checked the flip against the WALL but
-    entered at the zone EDGE, so the "target" could sit on the losing side of
-    the entry (3 of 9 blind targets in the replay were losses). Both modes now
-    need the flip > 1 pt on the profit side of the entry.
-
 Pure decision logic; no IBKR calls here.
 
 FADE (their wall-bounce semantics: put_wall -> long, call_wall -> short,
@@ -67,14 +44,6 @@ def true_risk_dollars(stop_pts: float, qty: int) -> float:
 
 
 # ---------------- FADE ----------------
-def fade_key(gex, wall: float) -> int:
-    """[v1.10 TOUCHKEY] per-wall touch counter key = the SPX strike. The ES
-    wall is SPX + live basis, so round(es_wall) changed whenever the basis
-    drifted and FADE_MAX_TOUCH_PER_WALL never actually capped anything."""
-    b = getattr(gex, "basis", None) or 0.0
-    return int(round(wall - b))
-
-
 def evaluate_fade(now_et: datetime, spot: float, gex, touches: dict):
     """Return candidate dict or None.
 
@@ -91,7 +60,7 @@ def evaluate_fade(now_et: datetime, spot: float, gex, touches: dict):
         return None
     if conf < config.FADE_MIN_CONFIDENCE:
         return None
-    if touches.get(fade_key(gex, wall), 0) >= config.FADE_MAX_TOUCH_PER_WALL:
+    if touches.get(round(wall), 0) >= config.FADE_MAX_TOUCH_PER_WALL:
         return None
     direction = 1 if side == "long" else -1
     flip = gex.flip
@@ -102,14 +71,10 @@ def evaluate_fade(now_et: datetime, spot: float, gex, touches: dict):
         return None
     if side == "short" and not (flip < wall - 2):
         return None
-    # [v1.10 TPSIDE] the target must also be beyond the actual ENTRY (zone edge)
-    if direction * (flip - edge) <= 1.0:
-        return None
     tp2 = gex.magnet_beyond(flip, direction)
     stop_pts = config.FADE_STOP_PTS
     qty = size_contracts(stop_pts)
     return dict(trigger="fade", side=side, wall=round(wall, 2),
-                touch_key=fade_key(gex, wall),
                 entry_px=round(edge / config.FUT_TICK) * config.FUT_TICK,
                 stop_pts=stop_pts, tp1_px=flip, tp2_px=tp2,
                 qty=qty,
@@ -117,96 +82,6 @@ def evaluate_fade(now_et: datetime, spot: float, gex, touches: dict):
                 spot=round(spot, 2), flip=flip,
                 regime=gex.gamma_regime(), wall_conf=conf,
                 zone=gex.call_zone if side == "short" else gex.put_zone)
-
-
-# ---------------- FADE: tapering confirmation [v1.10 TAPER] ----------------
-def taper_signs(bars: list, vols: list, side: str) -> dict:
-    """bars: >= 7 CLOSED M1 bars (t, o, h, l, c), oldest -> newest; the last
-    one is the signal bar. vols: same length (0 = unknown). side: 'short'
-    (into a call wall from below) or 'long' (into a put wall from above)."""
-    if len(bars) < 7:
-        return {}
-    o = [b[1] for b in bars]; h = [b[2] for b in bars]
-    l = [b[3] for b in bars]; c = [b[4] for b in bars]
-    r = [hh - ll for hh, ll in zip(h, l)]
-    s = 1 if side == "short" else -1
-    i = len(bars) - 1
-    p_now = s * (c[i] - c[i - 3]); p_prev = s * (c[i - 3] - c[i - 6])
-    rng = max(r[i], 0.25)
-    wick = ((h[i] - max(o[i], c[i])) if side == "short"
-            else (min(o[i], c[i]) - l[i])) / rng
-    v_now = sum(vols[i - 2:i + 1]) if vols else 0.0
-    v_prev = sum(vols[i - 5:i - 2]) if vols else 0.0
-    return {
-        "shrink": sum(r[i - 2:i + 1]) < sum(r[i - 5:i - 2]),
-        "slow": p_prev > 0 and p_now < 0.5 * p_prev,
-        "wick": wick >= 0.5,
-        "absorb": v_prev > 0 and v_now > v_prev and p_now < 1.0,
-    }
-
-
-def evaluate_fade_taper(now_et: datetime, gex, touches: dict, bars: list,
-                        vols: list, state: dict):
-    """(candidate | None, touch_report | None). Runs once per new CLOSED M1
-    bar (state['last_t'] dedupes). A touch = bar reached the zone edge (within
-    0.5) and CLOSED back outside it."""
-    if not config.FADE_ENABLED or len(bars) < 7:
-        return None, None
-    last = bars[-1]
-    if state.get("last_t") == last[0]:
-        return None, None
-    state["last_t"] = last[0]
-    try:
-        age = (now_et - last[0]).total_seconds() - 60.0   # bar closes 60 s after its time
-    except Exception:  # noqa: BLE001
-        age = 0.0
-    if age > config.FADE_TAPER_MAX_AGE_SEC:
-        return None, None
-    _t, _o, h, l, c = last
-    for side, wall, zone, conf in (("short", gex.call_wall, gex.call_zone, gex.call_conf),
-                                   ("long", gex.put_wall, gex.put_zone, gex.put_conf)):
-        if wall is None or zone is None:
-            continue
-        edge = zone[0] if side == "short" else zone[1]
-        touched = (h >= edge - 0.5) if side == "short" else (l <= edge + 0.5)
-        back = (c < edge) if side == "short" else (c > edge)
-        if not (touched and back):
-            continue
-        signs = taper_signs(bars, vols, side)
-        score = sum(1 for v in signs.values() if v)
-        rep = {"side": side, "wall": round(wall, 2), "edge": round(edge, 2),
-               "close": round(c, 2), "score": score, "signs": signs,
-               "regime": gex.gamma_regime(), "conf": conf, "flip": gex.flip,
-               "taken": False, "why": ""}
-        direction = 1 if side == "long" else -1
-        flip = gex.flip
-        if gex.gamma_regime() != "+":
-            rep["why"] = "regime"
-        elif conf < config.FADE_MIN_CONFIDENCE:
-            rep["why"] = "confidence"
-        elif touches.get(fade_key(gex, wall), 0) >= config.FADE_MAX_TOUCH_PER_WALL:
-            rep["why"] = "max-touches"
-        elif flip is None or direction * (flip - c) <= 1.0:
-            rep["why"] = "no-target-room"
-        elif score < config.FADE_TAPER_NEED:
-            rep["why"] = "no-taper"
-        if rep["why"]:
-            return None, rep
-        entry = round(c / config.FUT_TICK) * config.FUT_TICK
-        ref = wall if config.FADE_STOP_REF == "wall" else edge   # [v1.10 STOPREF]
-        stop_px = round((ref - direction * config.FADE_STOP_PTS)
-                        / config.FUT_TICK) * config.FUT_TICK
-        stop_pts = abs(entry - stop_px)
-        qty = size_contracts(stop_pts)
-        tp2 = gex.magnet_beyond(flip, direction)
-        rep["taken"] = True
-        return dict(trigger="fade", side=side, wall=round(wall, 2),
-                    touch_key=fade_key(gex, wall), entry_px=entry, stop_pts=round(stop_pts, 2),
-                    stop_px=stop_px, tp1_px=flip, tp2_px=tp2, qty=qty,
-                    risk_usd=true_risk_dollars(stop_pts, qty), spot=round(c, 2),
-                    flip=flip, regime=gex.gamma_regime(), wall_conf=conf,
-                    zone=zone, mode="taper", taper=signs), rep
-    return None, None
 
 
 # ---------------- BREAKOUT ----------------

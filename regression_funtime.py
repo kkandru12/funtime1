@@ -729,5 +729,58 @@ if got != "[7700.0, 7690.0, True, 0.0]":
 check("R24 NaN OI/gamma from IBKR is ignored: finite net GEX, walls from real strikes only",
       not r24, "; ".join(r24))
 
+# R25 ES fade: tapering confirmation, target-side fix, touch cap per SPX strike
+r25 = []
+code25 = r"""
+import sys, datetime as dt
+sys.path.insert(0, 'algo_es')
+import config, strategy
+config.FADE_STOP_REF = 'wall'
+class G:
+    basis = 55.0
+    call_wall = 7805.0; call_zone = (7805.0, 7810.0); call_conf = 0.8
+    put_wall = None; put_zone = None; put_conf = 0.0
+    flip = 7775.0; magnets = [7760.0]; regime = '+'
+    def gamma_regime(s): return s.regime
+    def magnet_beyond(s, ref, d):
+        c = [m for m in s.magnets if (d > 0 and m > ref) or (d < 0 and m < ref)]
+        return (min(c) if d > 0 else max(c)) if c else None
+    def wall_for_fade(s, spot):
+        zlo = s.call_zone[0]
+        return (s.call_wall, 'short', zlo, s.call_conf) if 0 <= zlo - spot <= 3 else (None, None, None, 0.0)
+t0 = dt.datetime(2026, 10, 2, 10, 0, tzinfo=dt.timezone.utc)
+def bars(last):
+    # strong rally, then smaller bars into the wall, last = touch + close back below
+    b = [(t0 + dt.timedelta(minutes=k), *x) for k, x in enumerate([
+        (7790, 7794, 7789, 7793), (7793, 7797, 7792, 7796), (7796, 7800, 7795, 7799),
+        (7799, 7801, 7798.5, 7800.5), (7800.5, 7802, 7800, 7801.5), (7801.5, 7803, 7801, 7802.5), last])]
+    return b
+out = []
+taper_bar = (7802.5, 7805.25, 7802.0, 7802.75)        # wick to the wall, close back below
+st = {}; now = t0 + dt.timedelta(minutes=7, seconds=5)
+c, rep = strategy.evaluate_fade_taper(now, G(), {}, bars(taper_bar), [100] * 6 + [300], st)
+out.append((c is not None, c and c['entry_px'], c and c['stop_px'], c and c['tp1_px'], c and c['touch_key'], rep and rep['score']))
+c2, rep2 = strategy.evaluate_fade_taper(now, G(), {}, bars(taper_bar), [100] * 7, st)   # same bar again
+out.append((c2, rep2))
+g = G(); g.regime = 'flat'
+c3, rep3 = strategy.evaluate_fade_taper(now, g, {}, bars(taper_bar), [100] * 7, {})
+out.append((c3, rep3['why']))
+c4, rep4 = strategy.evaluate_fade_taper(now, G(), {7750: 2}, bars(taper_bar), [100] * 7, {})
+out.append((c4, rep4['why']))
+g = G(); g.flip = 7804.0                                # flip above the entry edge: no room
+c5 = strategy.evaluate_fade(now, 7803.0, g, {})
+g.flip = 7790.0
+c6 = strategy.evaluate_fade(now, 7803.0, g, {})
+out.append((c5, c6 is not None and c6['touch_key']))
+print(out)
+"""
+o = subprocess.run([sys.executable, "-c", code25], cwd=HERE, capture_output=True, text=True, timeout=60)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+want = "[(True, 7802.75, 7811.0, 7775.0, 7750, 3), (None, None), (None, 'regime'), (None, 'max-touches'), (None, 7750)]"
+if got != want:
+    r25.append("taper %r %s" % (got, o.stderr.strip()[-300:]))
+check("R25 ES taper fade: enters on touch+close-back with >=2 signs, once per bar, gates hold; blind target-side fix; cap per SPX strike",
+      not r25, "; ".join(r25))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

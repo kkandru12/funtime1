@@ -1,7 +1,4 @@
 """
-v1.08 2026-10-02 [TAPERVOL] also keeps each closed M1 bar's volume in
-    self.vols {bar time: volume} (real_volume, else tick_volume) for the fade
-    tapering check. The bars tuple itself is unchanged (PA unpacks 5 fields).
 v1.07 2026-10-02 [CLOSEDBARS] sync() keeps closed M1 bars only (the forming
     bar was frozen at its first partial print).
 MT5 market-data feed for the ES algo's overnight PA sleeves.
@@ -52,7 +49,6 @@ class MT5DataFeed:
         self.symbol = None
         self.ok = False
         self.bars: deque = deque()   # (t_et, o, h, l, c), ascending
-        self.vols: dict = {}         # [v1.08 TAPERVOL] t_et -> M1 volume
         self._bar_tz = ZoneInfo(config.MT5_BAR_TZ)
 
     async def connect(self):
@@ -134,18 +130,11 @@ class MT5DataFeed:
                 continue
             self.bars.append((t_et, float(r["open"]), float(r["high"]),
                               float(r["low"]), float(r["close"])))
-            try:                               # [v1.08 TAPERVOL]
-                v = float(r["real_volume"]) if float(r["real_volume"]) > 0 \
-                    else float(r["tick_volume"])
-            except Exception:  # noqa: BLE001 - field missing on some builds
-                v = 0.0
-            self.vols[t_et] = v
             last_t = t_et
             added += 1
         # keep a bounded window (lookback covers a full overnight session)
         while len(self.bars) > config.MT5_BAR_LOOKBACK:
-            b0 = self.bars.popleft()
-            self.vols.pop(b0[0], None)
+            self.bars.popleft()
         if added:
             log.debug("MT5 bars: +%d, last=%s", added,
                       self.bars[-1][0].strftime("%H:%M %Z"))

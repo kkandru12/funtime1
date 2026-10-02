@@ -1,10 +1,5 @@
 """ES futures GEX algo - always-on main loop (CONSUMER mode).
 
-v1.10 2026-10-02 [TAPER] NY fade uses evaluate_fade_taper (ES_FADE_MODE=taper,
-    default) on the closed MT5 M1 bars + volumes; every wall touch is logged
-    as FADE_TOUCH with its 4 tapering signs, taken or not. ES_FADE_MODE=blind
-    = previous behaviour. Fade touch cap counts per SPX strike (touch_key).
-
 v1.09 2026-10-02 [NATIVECLOSE] any broker-side close that leaves 0 contracts
     ends the position and books the full realized P&L (tp1 part included).
 
@@ -50,7 +45,7 @@ from zoneinfo import ZoneInfo
 import config
 from bridge_levels import LevelsWatcher
 from bridge_gex import BridgeGex
-from strategy import (evaluate_fade, evaluate_fade_taper, evaluate_breakout, WallBreakState,
+from strategy import (evaluate_fade, evaluate_breakout, WallBreakState,
                       Position, TP1_FILL, TP2_FILL, STOP, FLATTEN,
                       OvernightPA, true_risk_dollars)
 from mt5_data import MT5DataFeed
@@ -200,7 +195,6 @@ async def run_session(dry_run: bool):
     position: Position | None = None
     pending_entry = False
     touches: dict[int, int] = {}      # fade touches per wall per day
-    fade_state: dict = {}             # [v1.10 TAPER] last evaluated M1 bar
     last_beat = datetime.now(ET)
     last_status = datetime.min.replace(tzinfo=ET)
     last_quote_ok = datetime.now(ET)
@@ -402,15 +396,7 @@ async def run_session(dry_run: bool):
                         cand = evaluate_breakout(now, spot, gex, wb, closes)
                         trigger = "breakout"
                         if cand is None:
-                            if config.FADE_MODE == "taper":     # [v1.10 TAPER]
-                                tb = list(mt5data.bars)[-8:]
-                                tv = [mt5data.vols.get(b[0], 0.0) for b in tb]
-                                cand, touch = evaluate_fade_taper(
-                                    now, gex, touches, tb, tv, fade_state)
-                                if touch:
-                                    await emit("FADE_TOUCH", touch)
-                            else:
-                                cand = evaluate_fade(now, spot, gex, touches)
+                            cand = evaluate_fade(now, spot, gex, touches)
                             trigger = "fade"
                 # Globex sleeve: only when no GEX/PA candidate this pass
                 if cand is None and glx_sigs:
@@ -439,8 +425,8 @@ async def run_session(dry_run: bool):
                             if glx_taken and glx:
                                 glx.on_not_taken(glx_taken)
                         elif trigger == "fade":
-                            k = cand.get("touch_key", round(cand["wall"]))   # [v1.10]
-                            touches[k] = touches.get(k, 0) + 1
+                            touches[round(cand["wall"])] = \
+                                touches.get(round(cand["wall"]), 0) + 1
                     finally:
                         pending_entry = False
                 elif not gex_ok and last_gex_ok:

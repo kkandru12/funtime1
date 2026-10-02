@@ -1,7 +1,4 @@
 """
-v1.10 2026-10-02 [TAPER] enter() uses cand["stop_px"] whenever the
-    candidate carries one (taper fades put the stop 6 pts beyond the zone
-    edge); the old wall +/- stop_pts formula remains for blind fades.
 v1.09 2026-10-02 [CLOSEGUARD] close() checks the ticket is still open at the
     broker before sending; a missing ticket never produces a blind order.
 MT5 execution backend for the ES futures GEX algo.
@@ -177,11 +174,9 @@ class MT5Executor:
         Position | None."""
         side, qty = cand["side"], cand["qty"]
         is_long = side == "long"
-        if cand.get("stop_px") is not None:          # [v1.10 TAPER]
-            stop_px = _tick(cand["stop_px"])
-        else:
-            stop_px = _tick(cand["wall"] + (-cand["stop_pts"] if is_long
-                                           else cand["stop_pts"]))
+        stop_px = _tick(cand["wall"] + (-cand["stop_pts"] if is_long
+                                       else cand["stop_pts"])
+                        if cand["trigger"] == "fade" else cand["stop_px"])
 
         if self.dry_run:
             q = self.get_quote()
