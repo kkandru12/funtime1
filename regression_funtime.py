@@ -503,6 +503,8 @@ threading.Thread(target=srv.serve_forever, daemon=True).start()
 base = 'http://127.0.0.1:%d' % srv.server_address[1]
 res = []
 res.append(urllib.request.urlopen(base + '/').status)
+js = urllib.request.urlopen(base + '/plotly.min.js')
+res.append(int(js.status == 200 and b'plotly' in js.read(400)))
 st = json.load(urllib.request.urlopen(base + '/api/state'))
 res.append(int(st['levels']['spx'] == 6700.0 and 'chain_frame' not in st['levels']
                and st['profile']['strikes'] == [6690, 6700] and st['es']['position']['side'] == 'long'))
@@ -521,7 +523,7 @@ print(res)
 """
 o = subprocess.run([sys.executable, "-c", code19], cwd=HERE, capture_output=True, text=True, timeout=60)
 got = (o.stdout.strip().splitlines() or ["?"])[-1]
-if got != "[200, 1, 405, 405, 405, 404]":
+if got != "[200, 1, 1, 405, 405, 405, 404]":
     r19.append("server behaviour %r %s" % (got, o.stderr.strip()[-200:]))
 check("R19 dashboard read-only: GET works from files, writes 405, no file paths, no broker code",
       not r19, "; ".join(r19))

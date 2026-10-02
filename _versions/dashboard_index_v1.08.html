@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FunTime Dashboard</title>
 <!-- v1.08 DASH 2026-10-02: read-only view. No buttons, no actions. -->
-<!-- v1.09 LOCALPLOTLY: Plotly is served by the dashboard itself (no internet
-     needed); the public CDN is only a fallback -->
-<script src="/plotly.min.js"></script>
-<script>if (!window.Plotly) document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"><\/script>');</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"></script>
 <style>
   :root { --bg:#0f1218; --panel:#171b23; --line:#262c38; --text:#e6e9ef; --muted:#8b93a3;
           --green:#2fb67c; --red:#e05c5c; --blue:#5b9cf5; --amber:#e3a33b; --violet:#a07cf0; }
@@ -57,10 +54,6 @@ function kpi(l, v, s="") { return `<div class="kpi"><div class="l">${l}</div><di
 
 function drawGex(p, lv) {
   const el = $("gex");
-  if (!window.Plotly) {     // chart library missing: keep the rest of the page alive
-    el.innerHTML = '<p class="warn" style="padding:16px">Chart library (Plotly) not loaded — histogram unavailable; positions and P&L below still update.</p>';
-    return;
-  }
   if (!p || !p.strikes || !p.strikes.length) {
     Plotly.react(el, [], {paper_bgcolor:"#171b23", plot_bgcolor:"#171b23", font:{color:"#8b93a3"},
       annotations:[{text:"No GEX profile yet — the bridge publishes it after the first 5-min wall evaluation in the NY session.",
@@ -144,12 +137,12 @@ async function tick() {
       kpi("Gamma regime", reg === '+' ? '<span class="ok">+</span>' : reg === '-' ? '<span class="bad">−</span>' : reg, `net ${f(p&&p.net_total_b!=null?p.net_total_b*0.01:null,1)} $B/1%`) +
       kpi("Call wall", f(p&&p.call_wall,0), `conf ${f(p&&p.call_conf)}`) + kpi("Put wall", f(p&&p.put_wall,0), `conf ${f(p&&p.put_conf)}`) +
       kpi("Flip", f(p&&p.flip,0), "") + kpi("ES day P&L", money(es.day_pnl), `${es.trades??0} trades`) + kpi("0DTE day P&L", money(od.day_pnl), `${od.trades??0} trades`);
-    try { drawGex(p, lv); } catch (e) { $("gex").innerHTML = '<p class="warn" style="padding:16px">Chart error: ' + e + '</p>'; }
+    drawGex(p, lv);
     $("es").innerHTML = '<div class="tw">' + esPanel(s.es) + '</div>'; $("od").innerHTML = '<div class="tw">' + odPanel(s.odte) + '</div>';
     $("es_ev").innerHTML = evTable(s.es_events); $("od_ev").innerHTML = evTable(s.odte_events);
     $("health").innerHTML = `<span>levels.json ${age(s.levels_age_s)}</span><span>GEX profile ${age(s.profile_age_s)}</span>` +
       `<span>algo_es ${age(s.es_age_s)}</span><span>0DTE algo ${age(s.odte_age_s)}</span>`;
-  } catch (e) { $("health").innerHTML = `<span class="bad">dashboard error: ${e}</span>`; }
+  } catch (e) { $("health").innerHTML = `<span class="bad">dashboard server unreachable: ${e}</span>`; }
 }
 tick(); setInterval(tick, 5000);
 </script>

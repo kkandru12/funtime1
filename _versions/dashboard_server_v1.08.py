@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 """FunTime dashboard -- READ-ONLY web page (v1.08 DASH, 2026-10-02).
 
-v1.09 2026-10-02 [LOCALPLOTLY] serves the bundled dashboard/plotly.min.js
-    (plotly.js 4.1.1, MIT) at /plotly.min.js, so the chart works without
-    internet access to the CDN ("ReferenceError: Plotly is not defined").
-
 What it is
   One page at http://<DASH_HOST>:<DASH_PORT>/ (default 127.0.0.1:9100) that
   refreshes every 5 s: the SPX GEX histogram (call / put / net $B per strike)
@@ -114,7 +110,6 @@ def state():
 
 
 PAGE = os.path.join(HERE, "index.html")
-PLOTLY = os.path.join(HERE, "plotly.min.js")      # [v1.09] bundled chart library
 
 
 class H(BaseHTTPRequestHandler):
@@ -136,12 +131,6 @@ class H(BaseHTTPRequestHandler):
                     return self._send(200, f.read(), "text/html; charset=utf-8")
             except OSError:
                 return self._send(500, b"index.html missing", "text/plain")
-        if path == "/plotly.min.js":                # fixed file, never a URL path
-            try:
-                with open(PLOTLY, "rb") as f:
-                    return self._send(200, f.read(), "application/javascript")
-            except OSError:
-                return self._send(404, b"plotly.min.js missing", "text/plain")
         if path == "/api/state":
             body = json.dumps(state(), default=str).encode()
             return self._send(200, body, "application/json")
