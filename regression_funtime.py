@@ -417,5 +417,44 @@ got = (o.stdout.strip().splitlines() or ["?"])[-1]
 check("R16 5DMA M1-close entry, every touch counts, blocked in NY while GEX active",
       got == "2 0", "globex/ny entries %r (want '2 0') %s" % (got, o.stderr.strip()[-200:]))
 
+# R17 overnight fade is restart-safe -----------------------------------------
+code17 = r"""
+import sys, os, tempfile, datetime as dt
+sys.path.insert(0, '.')
+import config
+config.LOG_DIR = tempfile.mkdtemp()
+from strategy import OvernightPA
+from zoneinfo import ZoneInfo
+ET = ZoneInfo('America/New_York')
+t0 = dt.datetime(2026, 10, 1, 18, 0, tzinfo=ET)
+# ON range built in < 2-pt steps (a 2-pt jump would be a sweep and block C)
+hi = [7742, 7743.5, 7745, 7746.5] + [7746.5] * 56
+lo = [7735, 7733.5, 7732, 7730.5, 7730] + [7730] * 55
+bars = [(t0 + dt.timedelta(minutes=i), 7740, min(hi[i], 7746.5), max(lo[i], 7730), 7740)
+        for i in range(60)]                       # ON range 7730-7746.5 (16.5 pts)
+now = dt.datetime(2026, 10, 2, 0, 51, tzinfo=ET)
+out = []
+def start():
+    pa = OvernightPA(); pa.note_bars(bars); return pa
+pa = start()
+out.append(bool(pa.evaluate_c(now, 7745.88)))     # at the high on startup -> no
+pa = start()
+out.append(bool(pa.evaluate_c(now, 7745.88)))     # restart, still there -> no
+out.append(bool(pa.evaluate_c(now, 7740.0)))      # away
+out.append(bool(pa.evaluate_c(now, 7746.0)))      # back -> fade #1
+pa = start()                                       # restart at the high
+out.append(bool(pa.evaluate_c(now, 7746.0)))      # -> no
+pa.evaluate_c(now, 7740.0)
+out.append(bool(pa.evaluate_c(now, 7746.2)))      # fresh touch -> fade #2
+pa = start(); pa.evaluate_c(now, 7740.0)
+out.append(bool(pa.evaluate_c(now, 7746.0)))      # cap 2 survived restart -> no
+print(''.join('1' if x else '0' for x in out))
+"""
+o = subprocess.run([sys.executable, "-c", code17], cwd=os.path.join(HERE, "algo_es"),
+                   capture_output=True, text=True)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+check("R17 overnight fade restart-safe (no re-sell on restart, cap survives)",
+      got == "0001010", "got %r want '0001010' %s" % (got, o.stderr.strip()[-200:]))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

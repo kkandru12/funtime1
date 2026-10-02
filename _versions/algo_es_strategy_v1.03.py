@@ -324,15 +324,6 @@ def _tick(px: float) -> float:
 class OvernightPA:
     """Tracks the overnight (18:00 ET ->) range and pending sweep events.
 
-    v1.07 2026-10-02 [PARESTART] Restart-safe (seen live 00:25/00:41/00:51:
-    every restart re-sold the ON high at once):
-      - a C fade needs price to have been AWAY from the extreme (outside the
-        touch zone) since the process started / since the last fade on that
-        side -- sitting at the high on startup is not a new touch
-      - fades/sweeps per side per night are saved to <LOG_DIR>/pa_state.json
-        and reloaded for the same overnight session, so the per-night caps
-        survive a restart
-
     SLEEVE C: fade the ON high/low when the range is tradeable (8-30 pts).
     SLEEVE D: a sweep (>=2 pts beyond the extreme) that closes back inside
     the pre-sweep range within 15 min -> reversal. D overrides C: any sweep
@@ -349,36 +340,6 @@ class OvernightPA:
         self.c_blocked = {"up": False, "down": False}
         self.pend = {"up": None, "down": None}  # pending sweep awaiting reclaim
         self._d_signal = None      # ("short"|"long", pending-info) set on reclaim
-        self.need_away = {"up": True, "down": True}   # [v1.07] fresh touch only
-
-    # ---------------- [v1.07 PARESTART] persistence ----------------
-    @staticmethod
-    def _state_path():
-        import os
-        return os.path.join(config.LOG_DIR, "pa_state.json")
-
-    def _save(self):
-        import json, os
-        try:
-            os.makedirs(config.LOG_DIR, exist_ok=True)
-            with open(self._state_path(), "w") as f:
-                json.dump({"sess": self.sess_start.isoformat() if self.sess_start else None,
-                           "fades": self.fades, "sweeps": self.sweep_trades}, f)
-        except Exception as e:  # noqa: BLE001
-            log.warning("pa_state save failed: %s", e)
-
-    def _load(self):
-        import json
-        try:
-            with open(self._state_path()) as f:
-                d = json.load(f)
-        except Exception:
-            return
-        if self.sess_start and d.get("sess") == self.sess_start.isoformat():
-            self.fades = {k: int(d["fades"].get(k, 0)) for k in ("up", "down")}
-            self.sweep_trades = {k: int(d["sweeps"].get(k, 0)) for k in ("up", "down")}
-            log.info("PA counts restored for %s: fades=%s sweeps=%s",
-                     self.sess_start, self.fades, self.sweep_trades)
 
     # ---------------- bar feed ----------------
     def reset(self, sess_start):
@@ -390,7 +351,6 @@ class OvernightPA:
         self.c_blocked = {"up": False, "down": False}
         self.pend = {"up": None, "down": None}
         self._d_signal = None
-        self._load()            # [v1.07] same night after a restart: keep caps
         log.info("PA overnight session reset @ %s", sess_start)
 
     def note_bars(self, bars):
@@ -463,18 +423,11 @@ class OvernightPA:
         if not (config.PA_RANGE_MIN <= width <= config.PA_RANGE_MAX):
             return None
         tol = config.PA_TOUCH_PTS
-        # [v1.07] a side re-arms once price is outside its touch zone
-        if not (self.on_high - tol <= spot <= self.on_high + tol):
-            self.need_away["up"] = False
-        if not (self.on_low - tol <= spot <= self.on_low + tol):
-            self.need_away["down"] = False
         if (not self.c_blocked["up"]
-                and not self.need_away["up"]
                 and self.fades["up"] < config.PA_MAX_FADES_PER_SIDE
                 and self.on_high - tol <= spot <= self.on_high + tol):
             return self._mk_fade("short", spot, width)
         if (not self.c_blocked["down"]
-                and not self.need_away["down"]
                 and self.fades["down"] < config.PA_MAX_FADES_PER_SIDE
                 and self.on_low - tol <= spot <= self.on_low + tol):
             return self._mk_fade("long", spot, width)
@@ -492,8 +445,6 @@ class OvernightPA:
             tp = _tick(extreme + config.PA_RETRACE * width)
         qty = max(1, size_contracts(stop_pts) // 2)   # overnight: halved
         self.fades[key] += 1
-        self.need_away[key] = True      # [v1.07] next fade needs a fresh touch
-        self._save()
         log.info("PA-C fade %s #%d: extreme=%.2f stop=%.2f tp=%.2f qty=%d",
                  side, self.fades[key], extreme, stop_px, tp, qty)
         return dict(trigger="pa_fade", sleeve="C", side=side,
@@ -526,7 +477,6 @@ class OvernightPA:
             return None
         key = "up" if side == "short" else "down"
         self.sweep_trades[key] += 1
-        self._save()                    # [v1.07] cap survives a restart
         extreme = p["extreme"]
         stop_px = _tick(extreme + config.SWEEP_STOP if side == "short"
                         else extreme - config.SWEEP_STOP)
