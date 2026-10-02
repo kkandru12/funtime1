@@ -705,5 +705,28 @@ if got != "[True, False, 1, [], False]":
 check("R23 levels.json publish retries when a reader holds it (never raises); no tick 107",
       not r23, "; ".join(r23))
 
+# R24 NaN OI / gamma never reaches the GEX sums ---------------------------
+r24 = []
+code24 = r"""
+import sys, math
+sys.path.insert(0, 'gex_bridge')
+import stable_gex, chain
+nan = float('nan')
+g = stable_gex.GexState()
+oi = {(7700.0, 'C'): 1000.0, (7710.0, 'C'): nan, (7690.0, 'P'): 800.0, (7525.0, 'P'): nan,
+      (7530.0, 'P'): 500.0}
+g.note_gamma({(7700.0, 'C'): 0.01, (7710.0, 'C'): 0.02, (7690.0, 'P'): 0.01,
+              (7525.0, 'P'): 0.01, (7530.0, 'P'): nan}, ts=1000.0)
+g.evaluate(oi, 7740.0, 1000.0)
+class T: callOpenInterest = nan; putOpenInterest = None
+print([g.call_wall, g.put_wall, math.isfinite(g.net_total), chain._oi_from_ticker(T(), 'C')])
+"""
+o = subprocess.run([sys.executable, "-c", code24], cwd=HERE, capture_output=True, text=True, timeout=60)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+if got != "[7700.0, 7690.0, True, 0.0]":
+    r24.append("nan guard %r %s" % (got, o.stderr.strip()[-300:]))
+check("R24 NaN OI/gamma from IBKR is ignored: finite net GEX, walls from real strikes only",
+      not r24, "; ".join(r24))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

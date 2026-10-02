@@ -1,11 +1,5 @@
 """GEX levels via the StableWall estimator (ES edition).
 
-v1.09 2026-10-02 [NANGUARD] Live 09:57 IBKR left some OI/gamma fields as NaN.
-    NaN passed the old "not g or g <= 0" checks (NaN is truthy and NaN<=0 is
-    False), so it reached the sums: net_total=nan, flip=None, and max()
-    picked garbage walls (put wall 7525, magnets 7525..7545). Every OI and
-    gamma value is now required to be finite and > 0.
-
 v1.08 2026-10-02 [DASHPROFILE] evaluate() also keeps self.profile (smoothed
     call/put/net $B per strike) for the read-only dashboard. No effect on walls.
 
@@ -42,22 +36,12 @@ THE ESTIMATOR:
 Backportable to ~/workspace/algo/gex.py later (same pattern, mult=100).
 """
 import logging
-import math
 import time
 from collections import deque
 
 import config
 
 log = logging.getLogger("algo.gex")
-
-
-def _pos(x) -> bool:
-    """[v1.09 NANGUARD] finite and > 0 (rejects None, NaN, inf, <= 0)."""
-    try:
-        x = float(x)
-    except (TypeError, ValueError):
-        return False
-    return math.isfinite(x) and x > 0
 
 EVAL_SEC = float(getattr(config, "GEX_EVAL_SEC", 300))
 TWAP_SEC = 900.0            # 15-min gamma TWAP
@@ -102,7 +86,7 @@ class GexState:
         ts = ts if ts is not None else time.time()
         cutoff = ts - TWAP_SEC
         for key, g in gamma_map.items():
-            if not _pos(g):
+            if not g or g <= 0:
                 continue
             dq = self._samples.setdefault(key, deque())
             dq.append((ts, float(g)))
@@ -129,15 +113,15 @@ class GexState:
 
         # 1. gamma TWAP15 per (strike, right)
         twap = {k: self._twap(k, ts) for k in self._samples}
-        twap = {k: v for k, v in twap.items() if _pos(v)}
+        twap = {k: v for k, v in twap.items() if v and v > 0}
 
         # 2. dollar gamma ($B) per strike per side
         raw: dict[str, dict[float, float]] = {"C": {}, "P": {}}
         for (k, r), o in oi.items():
-            if not _pos(o):
+            if not o or o <= 0:
                 continue
             g = twap.get((k, r))
-            if not _pos(g):
+            if not g:
                 continue
             raw[r][k] = o * g * spot * spot * self.mult / DOLLAR_SCALE
 

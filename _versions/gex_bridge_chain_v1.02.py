@@ -1,7 +1,4 @@
-"""v1.03 2026-10-02 [NANGUARD] _oi_from_ticker returns 0 for NaN OI (IBKR
-    leaves the field NaN when it has not arrived) -- NaN poisoned the GEX sums.
-
-v1.02 2026-10-02 [OIRANGE] morning_oi_snapshot(spot) scans only strikes
+"""v1.02 2026-10-02 [OIRANGE] morning_oi_snapshot(spot) scans only strikes
     within BRIDGE_OI_SCAN_RANGE (default 300) of spot; 0 = whole chain.
 
 v1.01 2026-10-02 [NOSNAPGENERIC] IBKR rejects snapshot=True with generic
@@ -71,10 +68,9 @@ def _greeks_from_ticker(t: Ticker):
 def _oi_from_ticker(t: Ticker, right: str) -> float:
     v = t.callOpenInterest if right == "C" else t.putOpenInterest
     try:
-        v = float(v or 0)
+        return float(v or 0)
     except (TypeError, ValueError):
         return 0.0
-    return v if v == v and v > 0 else 0.0     # [v1.03 NANGUARD] NaN -> 0
 
 
 class ChainStream:
