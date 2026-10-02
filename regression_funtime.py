@@ -675,5 +675,31 @@ if not (0 < msrc.find("chain.ensure_spx()") < msrc.find("_await_spot(chain)")):
 check("R22 bridge: OI scan by brief streaming, lines capped; SPX subscribed before spot wait; NaN-safe spot",
       not r22, "; ".join(r22))
 
+# R23 bridge publish survives a reader holding levels.json; legal OPT ticks --
+r23 = []
+code23 = r"""
+import sys, os, json, tempfile
+sys.path.insert(0, 'gex_bridge')
+import publish, config
+d = tempfile.mkdtemp(); p = os.path.join(d, 'levels.json')
+real = os.replace; n = {'k': 0}
+def flaky(a, b):
+    n['k'] += 1
+    if n['k'] <= 3: raise PermissionError(5, 'Access is denied')
+    real(a, b)
+publish.os.replace = flaky
+ok1 = publish.publish(p, {'a': 1})
+publish.os.replace = lambda a, b: (_ for _ in ()).throw(PermissionError(5, 'denied'))
+ok2 = publish.publish(p, {'a': 2})
+left = [f for f in os.listdir(d) if f.endswith('.tmp')]
+print([ok1, ok2, json.load(open(p))['a'], left, '107' in config.GENERIC_TICKS.split(',')])
+"""
+o = subprocess.run([sys.executable, "-c", code23], cwd=HERE, capture_output=True, text=True, timeout=60)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+if got != "[True, False, 1, [], False]":
+    r23.append("publish %r %s" % (got, o.stderr.strip()[-300:]))
+check("R23 levels.json publish retries when a reader holds it (never raises); no tick 107",
+      not r23, "; ".join(r23))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

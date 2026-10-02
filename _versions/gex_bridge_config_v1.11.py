@@ -154,9 +154,7 @@ ALLLAST_MAX_LINES = 0                 # not streamed by the bridge
 WING_SWEEP_RANGE = _i("BRIDGE_WING_SWEEP_RANGE", 200)
 WING_SWEEP_MIN = _i("BRIDGE_WING_SWEEP_MIN", 15)
 RECENTER_MIN = _i("BRIDGE_RECENTER_MIN", 15)
-# [v1.12 TICKS107] 107 is not a legal OPT generic tick (IBKR Error 321 live
-# 2026-10-02); model Greeks arrive by default for options.
-GENERIC_TICKS = "100,101,106"         # volume, OI, implied vol
+GENERIC_TICKS = "100,101,106,107"     # volume, OI, bid/ask model Greeks
 
 # ---------------- API pacer ----------------
 PACER_MKT_PER_SEC = _f("BRIDGE_PACER_MKT_PER_SEC", 3.0)
