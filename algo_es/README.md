@@ -1,1 +1,154 @@
-IyBhbGdvX2VzIOKAlCBFUyBmdXR1cmVzIEdFWCBhbGdvIChTdGFibGVXYWxsIGVkaXRpb24sIENPTlNVTUVSIG1vZGUpCgpUcmFkZXMgKipFUyBmcm9udCBmdXR1cmVzKiogKCQ1MC9wdCkgb2ZmIEdFWCBsZXZlbHMgcHVibGlzaGVkIGJ5ICoqZ2V4X2JyaWRnZSoqCih0aGUgYWNjb3VudCdzIHNpbmdsZSBJQktSIHN0cmVhbWluZyBjb25uZWN0aW9uKSB2aWEgYC4uL3NoYXJlZC9sZXZlbHMuanNvbmAuClRoaXMgcHJvY2VzcyBob2xkcyBaRVJPIElCS1IgbGluZXMgYW5kIG1ha2VzIFpFUk8gSUJLUiBjYWxsczogcXVvdGVzIGFuZApleGVjdXRpb24gY29tZSBmcm9tIHRoZSBBTVAgTVQ1IHRlcm1pbmFsIG9uIHRoZSBzYW1lIG1hY2hpbmUuCgpUd28gR0VYIHNsZWV2ZXMsIGJvdGggb24gYnkgZGVmYXVsdDoKCi0gKipGQURFKiogKCtnYW1tYSByZWdpbWUpOiBzaG9ydCB0aGUgY2FsbCB3YWxsIC8gbG9uZyB0aGUgcHV0IHdhbGwgb24gYQogIHRvdWNoIG9mIHRoZSB3YWxsICp6b25lKiwgVFAxID0gZmxpcCAoaGFsZjsgZnVsbCBxdHkgd2hlbiBxdHk9PTEpLAogIFRQMiA9IG5leHQgbWFnbmV0LCBzdG9wIDYgcHRzIGJleW9uZCB0aGUgd2FsbCwgc3RvcOKGkmJyZWFrZXZlbiBhZnRlciBUUDEuCi0gKipCUkVBS09VVCoqIChkb21pbmFudCB3YWxsIG9yIOKIkmdhbW1hKTogYSBkb21pbmFudCB3YWxsIChPSSDiiaUgMi41w5cKICBhZGphY2VudCkgYnJlYWtzIG9uIDIgY29uc2VjdXRpdmUgMS1taW4gY2xvc2VzIGJleW9uZCB0aGUgKip6b25lIGVkZ2UqKiDihpIKICBtb21lbnR1bSBlbnRyeSwgc3RvcCA0IHB0cyBiYWNrIGluc2lkZSwgdGFyZ2V0ID0gbmV4dCBtYWduZXQgLyBtZWFzdXJlZAogIG1vdmUuCgpXYWxscyBjb21lIGZyb20gdGhlIGJyaWRnZSdzICoqU3RhYmxlV2FsbCBlc3RpbWF0b3IqKiDigJQgc3RydWN0dXJhbCwgTk9UCnJlY29tcHV0ZWQgYXQgdGljayBmcmVxdWVuY3kgKHRoZSBib3VuY2UvanVtcCBidWcgeW91ciBzZXJ2ZXIgaGFzKS4gVGhlCmJyaWRnZSBwdWJsaXNoZXMgU1BYIHdhbGxzOyB0aGUgYWxnbyBjb252ZXJ0cyB0byBFUyB2aWEgdGhlIGxpdmUgYmFzaXMKKGBlc193YWxsc2ApIGFuZCB0cmFkZXMgdGhlbSB3aXRoIE1UNSBxdW90ZXMuIE92ZXJuaWdodCB0aGUgYnJpZGdlIGZyZWV6ZXMKd2FsbHMgKGNvbmZpZGVuY2UgZGVjYXllZCk7IGJyZWFrb3V0cyB0aGVuIHJ1biBoYWxmLXNpemUgd2l0aCBhICswLjE1CmNvbmZpZGVuY2UgYmFyLiBTZWUgQlVJTERfTk9URVMubWQgZm9yIHRoZSBTdGFibGVXYWxsIGRpYWdub3Npcy4KCioqU2xlZXZlIHNjaGVkdWxlKiogKGxvY2FsIGNsb2NrIGlzIHRoZSBhdXRob3JpdHk7IGJyaWRnZSBzZXNzaW9uID0gY3Jvc3MtY2hlY2spOgotICoqTlkgKDA5OjMw4oCTMTY6MDAgRVQpOioqIGZhZGUgKyBicmVha291dCBvZmYgYnJpZGdlIGxldmVscwotICoqT3Zlcm5pZ2h0ICgxODowMOKAkzA5OjAwKToqKiBicmVha291dHMgb24gZnJvemVuIHpvbmVzIChoYWxmIHNpemUpICsKICBQQSBzbGVldmVzIEMgKE9OLXJhbmdlIGZhZGUpICsgRCAoc3dlZXArcmVjbGFpbSksIHB1cmUgTVQ1IHByaWNlIGFjdGlvbgotICoqSGFsdCAxNzowMOKAkzE4OjAwIC8gd2Vla2VuZDoqKiBmbGF0LCBzbGVlcAoKIyMgUXVpY2sgc3RhcnQgKExJVkUgYnkgZGVmYXVsdDogTVQ1IGRlbW8pCgpgYGBiYXQKY2QgQzpccGF0aFx0b1xhbGdvX2VzCnBpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy50eHQKcHl0aG9uIG1haW4ucHkgICAgICAgICAgICAgICAgIDo6IExJVkUgb24gTVQ1IGRlbW8sIGFsd2F5cy1vbiAoYWRkIC0tZHJ5LXJ1biB0byBzaW11bGF0ZSkKcHl0aG9uIG1haW4ucHkgLS1vbmVzaG90ICAgICAgIDo6IG9uZSBzZXNzaW9uIHRoZW4gZXhpdCAoZGVidWdnaW5nKQpgYGAKClRXUyBwYXBlciBtdXN0IGJlIGxvZ2dlZCBpbiAocG9ydCA3NDk3LCBjbGllbnQgSURzIDIxLzIyKS4KCiMjIE1UNSBleGVjdXRpb24gKEFNUCBkZW1vKQoKU2VuZHMgb3JkZXJzIHRvIHRoZSBBTVAgTVQ1IHRlcm1pbmFsIG9uIHRoZSAqKnNhbWUgV2luZG93cyBtYWNoaW5lKiogKHRoZQpNZXRhVHJhZGVyNSBwYWNrYWdlIGNhbm5vdCByZWFjaCBhIHRlcm1pbmFsIG9uIGFub3RoZXIgYm94KS4gTWFya2V0IGRhdGEKKEdFWCwgcXVvdGVzKSBzdGlsbCBjb21lcyBmcm9tIElCS1I7IG9ubHkgb3JkZXIgZmxvdyBtb3ZlcyB0byBNVDUuCgpWUFMgc2V0dXAgKG9uZSB0aW1lKToKCmBgYGJhdApjZCBDOlxwYXRoXHRvXGFsZ29fZXMKLlx2ZW52XFNjcmlwdHNccGlwIGluc3RhbGwgTWV0YVRyYWRlcjUKYGBgCgpUaGVuIGNyZWF0ZSBhIGZpbGUgbmFtZWQgYC5lbnZgICoqbmV4dCB0byBtYWluLnB5Kiogd2l0aCB5b3VyIGRlbW8gbG9naW4KKHlvdSBjcmVhdGUgdGhpcyDigJQgaXQgaXMgbmV2ZXIgY29tbWl0dGVkIGFueXdoZXJlKToKCmBgYApNVDVfUEFUSD1DOlxwYXRoXHRvXHRlcm1pbmFsNjQuZXhlCk1UNV9TRVJWRVI9QU1QR2xvYmFsVVNBLURlbW8KTVQ1X0xPR0lOPTE2MDQ1MTAKTVQ1X1BBU1NXT1JEPXlvdXItcGFzc3dvcmQtaGVyZQpNVDVfU1lNQk9MPUVTWjI1CmBgYAoKVGhlIHRlcm1pbmFsIG11c3QgaGF2ZSBiZWVuIGxvZ2dlZCBpbiBhdCBsZWFzdCBvbmNlIHNvIHRoZSBzeW1ib2wgaXMKdmlzaWJsZSBpbiBNYXJrZXQgV2F0Y2guIElmIGBNVDVfU1lNQk9MYCBpcyB3cm9uZyBvciBtaXNzaW5nLCB0aGUgYWxnbwpsaXN0cyB0aGUgRVMvRVAtbGlrZSBzeW1ib2xzIGl0IGNhbiBzZWUgc28geW91IGNhbiBwaWNrIHRoZSByaWdodCBvbmUuCgpSdW46CgpgYGBiYXQKc2V0IEVTX0VYRUNVVE9SPW10NQouXHZlbnZcU2NyaXB0c1xweXRob24gbWFpbi5weSAgICAgICAgICAgIDo6IExJVkU6IHRyYW5zbWl0cyB0byBNVDUgZGVtbyAoYWRkIC0tZHJ5LXJ1biB0byBzaW11bGF0ZSkKYGBgCgpOb3RlczoKCi0gRW50cmllcyBhcmUgKiptYXJrZXQqKiBvcmRlcnMgd2l0aCBTTCtUUCBhdHRhY2hlZCBpbiB0aGUgc2FtZSByZXF1ZXN0CiAgKE1UNSBob2xkcyB0aGVtIHNlcnZlci1zaWRlIOKAlCBubyBPQ0EgZ3JvdXAgdG8gbWFuYWdlKS4gVGhlIElCS1IgYmFja2VuZCdzCiAgZmFkZSBsaW1pdC1hdC10aGUtd2FsbCBiZWNvbWVzIGEgbWFya2V0IGVudHJ5IG9uIE1UNS4KLSAxIGNvbnRyYWN0ID0gMS4wIE1UNSB2b2x1bWUuIENvbW1pc3Npb24gaXMgYm9va2VkIGF0ICQ1LjAwIHJvdW5kLXR1cm4gcGVyCiAgY29udHJhY3QgKEFNUCBkZW1vIEVTIGVzdGltYXRlIOKAlCByZWNvbmNpbGUgYWdhaW5zdCB5b3VyIHN0YXRlbWVudCkuCi0gZGVmYXVsdCBpcyBMSVZFIHRyYW5zbWlzc2lvbiB0byB0aGUgTVQ1IGRlbW8gYWNjb3VudDsgYC0tZHJ5LXJ1bmAgc2ltdWxhdGVzIHdpdGhvdXQgc2VuZGluZy4KLSBUaGUgcGFzc3dvcmQgaXMgcmVhZCBmcm9tIHRoZSBlbnZpcm9ubWVudCBvbmx5IGFuZCBpcyBuZXZlciBsb2dnZWQuCgojIyBDb25maWcgKGVudiwgYEVTX2AgcHJlZml4KQoKfCB2YXIgfCBkZWZhdWx0IHwgbWVhbmluZyB8CnwtLS18LS0tfC0tLXwKfCBgRVNfRVhFQ1VUT1JgIHwgaWJrciB8IG9yZGVyIGJhY2tlbmQ6IGBpYmtyYCAoVFdTIHBhcGVyKSBvciBgbXQ1YCAoQU1QIGRlbW8pIHwKfCBgRVNfR0VYX0VWQUxfU0VDYCB8IDMwMCB8IHdhbGwtY2xvY2s6IHdhbGxzIHJlLWV2YWx1YXRlZCBldmVyeSA1IG1pbiB8CnwgYEVTX0ZBREVfTUlOX0NPTkZJREVOQ0VgIHwgMC41IHwgZmFkZSBuZWVkcyB3YWxsIGNvbmZpZGVuY2Ug4omlIHRoaXMgfAp8IGBFU19CUkVBS09VVF9NSU5fQ09ORklERU5DRWAgfCAwLjM1IHwgYnJlYWtvdXQgYXJtaW5nIG5lZWRzIOKJpSB0aGlzIHwKfCBgRVNfT0lfU1dFRVBfTUlOYCB8IDYwIHwgZnVsbC1jaGFpbiBPSStnYW1tYSBzd2VlcCBjYWRlbmNlIHwKfCBgRVNfRkxBVFRFTl9CRUZPUkVfSEFMVGAgfCB0cnVlIHwgZmxhdHRlbiBhdCAxNjo1NSBFVCBiZWZvcmUgdGhlIDE3OjAwIGhhbHQgfAp8IGBFU19SSVNLX1BFUl9UUkFERWAgfCAyMDAgfCAkIHJpc2svdHJhZGUg4oaSIGNvbnRyYWN0cyA9IGZsb29yKDIwMC8oc3RvcMOXNTApKSB8CnwgYEVTX01BWF9UUkFERVNfUEVSX0RBWWAgfCA0IHwgfAp8IGBFU19EQUlMWV9TVE9QX1BDVGAgfCAyIHwg4oiSMiUgTmV0TGlxIGtpbGwgc3dpdGNoIHwKfCBgRVNfU0xFRVZFX0NgIHwgMSB8IG92ZXJuaWdodCByYW5nZS1mYWRlIHNsZWV2ZSBvbi9vZmYgfAp8IGBFU19TTEVFVkVfRGAgfCAxIHwgb3Zlcm5pZ2h0IHN3ZWVwK3JlY2xhaW0gc2xlZXZlIG9uL29mZiB8CnwgYEVTX1BBX1JBTkdFX01JTmAgLyBgRVNfUEFfUkFOR0VfTUFYYCB8IDggLyAzMCB8IEMgZmFkZXMgb25seSB3aGVuIE9OIHJhbmdlIHdpZHRoIGluIFttaW4sbWF4XSBwdHMgfAp8IGBFU19QQV9TVE9QYCB8IDQgfCBDIHN0b3A6IHRoaXMgbWFueSBwdHMgYmV5b25kIHRoZSBleHRyZW1lIHwKfCBgRVNfU1dFRVBfTUlOYCB8IDIgfCBEIHN3ZWVwOiBleHRyZW1lIGV4Y2VlZGVkIGJ5IOKJpSB0aGlzIChwdHMpIHwKfCBgRVNfU1dFRVBfUkVDTEFJTV9NSU5gIHwgMTUgfCBEIHJlY2xhaW0gd2luZG93IChtaW51dGVzKSB8CnwgYEVTX01UNV9CQVJfVFpgIHwgVVRDIHwgWm9uZUluZm8gZm9yIE1UNSBiYXIgdGltZXN0YW1wcyAodmVyaWZ5IHZzIDE4OjAwIEVUIHJlc2V0KSB8CgojIyBPdmVybmlnaHQgUEEgc2xlZXZlcyAoQyArIEQpCgpPdmVybmlnaHQgR0VYIHdhbGxzIGFyZSBmcm96ZW4vc3RhbGUsIHNvIHRoZXNlIHR3byBzbGVldmVzIHRyYWRlICoqcHVyZQpwcmljZSBhY3Rpb24qKiBvZmYgTVQ1LWJ1aWx0IE0xIGJhcnMgKGBtdDVfZGF0YS5weWA6IGBjb3B5X3JhdGVzX2Zyb21fcG9zYCwKZXF1aXZhbGVudCB0byBhZ2dyZWdhdGluZyBNVDUncyB0aWNrIHN0cmVhbSDigJQgbm8gdGljayBzdG9yYWdlKS4gVGhleSBuZXZlcgpyZWFkIHRoZSBicmlkZ2UgZmlsZSBmb3IgT0hMQyAob25seSBmb3IgdGhlIHNlc3Npb24gZmxhZyArIHdhbGxzKS4gRmFpbC1zb2Z0OgppZiB0aGUgTVQ1IGZlZWQgY2FuJ3QgY29ubmVjdCwgdGhlIFBBIHNsZWV2ZXMgZ28gZG9ybWFudCAoYFBBX0RBVEFfRE9XTmApCmFuZCBldmVyeXRoaW5nIGVsc2Uga2VlcHMgcnVubmluZy4KCi0gKipTbGVldmUgQyDigJQgb3Zlcm5pZ2h0IHJhbmdlIGZhZGUqKiAobWVhbiByZXZlcnNpb247IEdsb2JleCBpcyByb3RhdGlvbmFsCiAgfjcwJSk6IHRyYWNrcyBPTiBoaWdoL2xvdyBzaW5jZSAxODowMCBFVC4gRmFkZXMgb25seSB3aGVuIHRoZSByYW5nZSBpcwogIDjigJMzMCBwdHMgd2lkZSAodG9vIHRpZ2h0ID0gY2hvcCwgdG9vIHdpZGUgPSBhbHJlYWR5IHRyZW5kZWQpLiBUb3VjaCB3aXRoaW4KICAxcHQgb2YgT04gaGlnaCDihpIgc2hvcnQ7IHdpdGhpbiAxcHQgb2YgT04gbG93IOKGkiBsb25nLiBTdG9wIDRwdHMgYmV5b25kIHRoZQogIGV4dHJlbWU7IHRhcmdldCA9IDcwJSByZXRyYWNlbWVudCB0b3dhcmQgdGhlIG9wcG9zaXRlIGV4dHJlbWUuIE1heCAyIGZhZGVzCiAgcGVyIHNpZGUgcGVyIG5pZ2h0LgotICoqU2xlZXZlIEQg4oCUIGxpcXVpZGl0eSBzd2VlcCArIHJlY2xhaW0qKiAoc3RvcC1odW50cyBpbiB0aGluIEdsb2JleCk6CiAgcHJpY2UgZXhjZWVkcyBPTiBoaWdoIC8gdW5kZXJjdXRzIE9OIGxvdyBieSDiiaUycHRzICh0aGUgc3dlZXApIEFORCBhIGJhcgogIGNsb3NlcyBiYWNrIGluc2lkZSB0aGUgcHJlLXN3ZWVwIHJhbmdlIHdpdGhpbiAxNSBtaW4g4oaSIHJldmVyc2FsIChsb25nCiAgYWZ0ZXIgZG93bnNpZGUgc3dlZXAsIHNob3J0IGFmdGVyIHVwc2lkZSkuIFN0b3AgM3B0cyBiZXlvbmQgdGhlIHN3ZWVwCiAgZXh0cmVtZTsgdGFyZ2V0ID0gb3Bwb3NpdGUgT04gZXh0cmVtZS4gTWF4IDEgcGVyIHNpZGUgcGVyIG5pZ2h0LgotICoqU2hhcmVkOioqIGFjdGl2ZSBvbmx5IDE4OjAw4oCTMDk6MDAgRVQ7IGhhcmQgYmxhY2tvdXQgMDk6MDDigJMwOTozMCAoTlkKICBoYW5kb2ZmIGNob3ApLiBEIG92ZXJyaWRlcyBDIOKAlCBhbnkgc3dlZXAgb24gYSBzaWRlIGJsb2NrcyBmdXJ0aGVyIEMgZmFkZXMKICBhdCB0aGF0IGV4dHJlbWUgZm9yIHRoZSBuaWdodC4gT25lIHBvc2l0aW9uIGF0IGEgdGltZTsgc2hhcmVkIDQtdHJhZGVzL2RheQogIGJ1ZGdldDsgb3Zlcm5pZ2h0IHNpemUgaGFsdmVkIChgbWF4KDEsIHNpemUvLzIpYCkuIFNsZWV2ZSBuYW1lIGxvZ2dlZCBvbgogIGV2ZXJ5IHNpZ25hbCAoYHNsZWV2ZTogQy9EYCBpbiBgQ0FORElEQVRFYCkuCgojIyBGaWxlcwoKLSBgbWFpbi5weWAg4oCUIGFsd2F5cy1vbiBzdXBlcnZpc29yICsgR2xvYmV4IHNlc3Npb24gbG9vcAotIGBjb25maWcucHlgIOKAlCBrbm9icywgR2xvYmV4IHNlc3Npb24vaGFsdCBtYXRoLCBQQSBzZXNzaW9uIGhlbHBlcnMKLSBgZm9wLnB5YCDigJQgRk9QIGNoYWluIGRpc2NvdmVyeSwgaG91cmx5IE9JK2dhbW1hIHN3ZWVwcywgRVMgc3RyZWFtaW5nLCBNMSBjbG9zZXMKLSBgbXQ1X2RhdGEucHlgIOKAlCAqKk1UNSBNMS1iYXIgKyBxdW90ZSBmZWVkKiogZm9yIHRoZSBQQSBzbGVldmVzIChmYWlsLXNvZnQpCi0gYGdleC5weWAg4oCUICoqU3RhYmxlV2FsbCBlc3RpbWF0b3IqKiAoNS1taW4gd2FsbCBjbG9jaywgVFdBUDE1IGdhbW1hLAogIHN0cmlrZSBzbW9vdGhpbmcsIGh5c3RlcmVzaXMsIHpvbmVzLCBjb25maWRlbmNlKQotIGBzdHJhdGVneS5weWAg4oCUIGZhZGUvYnJlYWtvdXQgY2FuZGlkYXRlcywgem9uZS1lZGdlIGBXYWxsQnJlYWtTdGF0ZWAsCiAgZnV0dXJlcyBgUG9zaXRpb25gIChUUDEvQkUvc3RvcCBkcnktcnVuIGZsb3cpLCAqKmBPdmVybmlnaHRQQWAqKiAoc2xlZXZlcyBDL0QpCi0gYG9yZGVycy5weWAg4oCUIGVudHJpZXMgKyBuYXRpdmUgT0NBIHN0b3AvdGFyZ2V0IGJyYWNrZXRzLCBUUDHihpJicmVha2V2ZW4gcmVicmFja2V0Ci0gYHJpc2sucHlgIOKAlCBHbG9iZXgtZGF5IHJpc2sgKCQyMDAvdHJhZGUgc2l6aW5nLCA0L2RheSwg4oiSMiUga2lsbCkKLSBgaWJrcl9jb25uLnB5YCwgYHBhY2VyLnB5YCDigJQgY29waWVkIHZlcmJhdGltIGZyb20gYH4vd29ya3NwYWNlL2FsZ28vYAoKIyMgTG9nIGV2ZW50cwoKYFdBTExTYCAoZXZlcnkgNS1taW4gZXZhbDogd2FsbCwgem9uZSwgY29uZmlkZW5jZSwgdGVudXJlLCBmbGlwLCByZWdpbWUpLApgQ0FORElEQVRFYCwgYEVOVFJZYCwgYFRQMWAsIGBOQVRJVkVfRklMTGAsIGBDTE9TRURgLCBgV0JfQVJNYCwgYFJJU0tfQkxPQ0tgLApgU0VTU0lPTl9TVEFSVC9FTkRgLCBgREFZX0VORGAsIGBTTEVFUGAsIGBTSFVURE9XTmAsIGBNVDVfREFUQV9DT05ORUNURURgLApgUEFfREFUQV9ET1dOYC4gSlNPTkwsIG9uZSBmaWxlIHBlciBHbG9iZXggc2Vzc2lvbiBkYXkuIFBBIHNpZ25hbHMgbG9nIGFzCmBQQS1DIGZhZGUg4oCmYCAvIGBQQS1EIHN3ZWVwIOKApmAgLyBgUEEtRCByZWNsYWltIOKApmAgLyBgUEEtRCByZXZlcnNhbCDigKZgLgo=
+# algo_es — ES futures GEX algo (StableWall edition, CONSUMER mode)
+
+Trades **ES front futures** ($50/pt) off GEX levels published by **gex_bridge**
+(the account's single IBKR streaming connection) via `../shared/levels.json`.
+This process holds ZERO IBKR lines and makes ZERO IBKR calls: quotes and
+execution come from the AMP MT5 terminal on the same machine.
+
+Two GEX sleeves, both on by default:
+
+- **FADE** (+gamma regime): short the call wall / long the put wall on a
+  touch of the wall *zone*, TP1 = flip (half; full qty when qty==1),
+  TP2 = next magnet, stop 6 pts beyond the wall, stop→breakeven after TP1.
+- **BREAKOUT** (dominant wall or −gamma): a dominant wall (OI ≥ 2.5×
+  adjacent) breaks on 2 consecutive 1-min closes beyond the **zone edge** →
+  momentum entry, stop 4 pts back inside, target = next magnet / measured
+  move.
+
+Walls come from the bridge's **StableWall estimator** — structural, NOT
+recomputed at tick frequency (the bounce/jump bug your server has). The
+bridge publishes SPX walls; the algo converts to ES via the live basis
+(`es_walls`) and trades them with MT5 quotes. Overnight the bridge freezes
+walls (confidence decayed); breakouts then run half-size with a +0.15
+confidence bar. See BUILD_NOTES.md for the StableWall diagnosis.
+
+**Sleeve schedule** (local clock is the authority; bridge session = cross-check):
+- **NY (09:30–16:00 ET):** fade + breakout off bridge levels
+- **Overnight (18:00–09:00):** breakouts on frozen zones (half size) +
+  PA sleeves C (ON-range fade) + D (sweep+reclaim), pure MT5 price action
+- **Halt 17:00–18:00 / weekend:** flat, sleep
+
+## Quick start (LIVE by default: MT5 demo)
+
+```bat
+cd C:\path\to\algo_es
+pip install -r requirements.txt
+python main.py                 :: LIVE on MT5 demo, always-on (add --dry-run to simulate)
+python main.py --oneshot       :: one session then exit (debugging)
+```
+
+TWS paper must be logged in (port 7497, client IDs 21/22).
+
+## MT5 execution (AMP demo)
+
+Sends orders to the AMP MT5 terminal on the **same Windows machine** (the
+MetaTrader5 package cannot reach a terminal on another box). Market data
+(GEX, quotes) still comes from IBKR; only order flow moves to MT5.
+
+VPS setup (one time):
+
+```bat
+cd C:\path\to\algo_es
+.\venv\Scripts\pip install MetaTrader5
+```
+
+Then create a file named `.env` **next to main.py** with your demo login
+(you create this — it is never committed anywhere):
+
+```
+MT5_PATH=C:\path\to\terminal64.exe
+MT5_SERVER=AMPGlobalUSA-Demo
+MT5_LOGIN=12345678
+MT5_PASSWORD=your-password-here
+MT5_SYMBOL=ESZ25
+```
+
+The terminal must have been logged in at least once so the symbol is
+visible in Market Watch. If `MT5_SYMBOL` is wrong or missing, the algo
+lists the ES/EP-like symbols it can see so you can pick the right one.
+
+Run:
+
+```bat
+set ES_EXECUTOR=mt5
+.\venv\Scripts\python main.py            :: LIVE: transmits to MT5 demo (add --dry-run to simulate)
+```
+
+Notes:
+
+- Entries are **market** orders with SL+TP attached in the same request
+  (MT5 holds them server-side — no OCA group to manage). The IBKR backend's
+  fade limit-at-the-wall becomes a market entry on MT5.
+- 1 contract = 1.0 MT5 volume. Commission is booked at $5.00 round-turn per
+  contract (AMP demo ES estimate — reconcile against your statement).
+- default is LIVE transmission to the MT5 demo account; `--dry-run` simulates without sending.
+- The password is read from the environment only and is never logged.
+
+## Config (env, `ES_` prefix)
+
+| var | default | meaning |
+|---|---|---|
+| `ES_EXECUTOR` | ibkr | order backend: `ibkr` (TWS paper) or `mt5` (AMP demo) |
+| `ES_GEX_EVAL_SEC` | 300 | wall-clock: walls re-evaluated every 5 min |
+| `ES_FADE_MIN_CONFIDENCE` | 0.5 | fade needs wall confidence ≥ this |
+| `ES_BREAKOUT_MIN_CONFIDENCE` | 0.35 | breakout arming needs ≥ this |
+| `ES_OI_SWEEP_MIN` | 60 | full-chain OI+gamma sweep cadence |
+| `ES_FLATTEN_BEFORE_HALT` | true | flatten at 16:55 ET before the 17:00 halt |
+| `ES_RISK_PER_TRADE` | 200 | $ risk/trade → contracts = floor(200/(stop×50)) |
+| `ES_MAX_TRADES_PER_DAY` | 4 | |
+| `ES_DAILY_STOP_PCT` | 2 | −2% NetLiq kill switch |
+| `ES_SLEEVE_C` | 1 | overnight range-fade sleeve on/off |
+| `ES_SLEEVE_D` | 1 | overnight sweep+reclaim sleeve on/off |
+| `ES_PA_RANGE_MIN` / `ES_PA_RANGE_MAX` | 8 / 30 | C fades only when ON range width in [min,max] pts |
+| `ES_PA_STOP` | 4 | C stop: this many pts beyond the extreme |
+| `ES_SWEEP_MIN` | 2 | D sweep: extreme exceeded by ≥ this (pts) |
+| `ES_SWEEP_RECLAIM_MIN` | 15 | D reclaim window (minutes) |
+| `ES_MT5_BAR_TZ` | UTC | ZoneInfo for MT5 bar timestamps (verify vs 18:00 ET reset) |
+
+## Overnight PA sleeves (C + D)
+
+Overnight GEX walls are frozen/stale, so these two sleeves trade **pure
+price action** off MT5-built M1 bars (`mt5_data.py`: `copy_rates_from_pos`,
+equivalent to aggregating MT5's tick stream — no tick storage). They never
+read the bridge file for OHLC (only for the session flag + walls). Fail-soft:
+if the MT5 feed can't connect, the PA sleeves go dormant (`PA_DATA_DOWN`)
+and everything else keeps running.
+
+- **Sleeve C — overnight range fade** (mean reversion; Globex is rotational
+  ~70%): tracks ON high/low since 18:00 ET. Fades only when the range is
+  8–30 pts wide (too tight = chop, too wide = already trended). Touch within
+  1pt of ON high → short; within 1pt of ON low → long. Stop 4pts beyond the
+  extreme; target = 70% retracement toward the opposite extreme. Max 2 fades
+  per side per night.
+- **Sleeve D — liquidity sweep + reclaim** (stop-hunts in thin Globex):
+  price exceeds ON high / undercuts ON low by ≥2pts (the sweep) AND a bar
+  closes back inside the pre-sweep range within 15 min → reversal (long
+  after downside sweep, short after upside). Stop 3pts beyond the sweep
+  extreme; target = opposite ON extreme. Max 1 per side per night.
+- **Shared:** active only 18:00–09:00 ET; hard blackout 09:00–09:30 (NY
+  handoff chop). D overrides C — any sweep on a side blocks further C fades
+  at that extreme for the night. One position at a time; shared 4-trades/day
+  budget; overnight size halved (`max(1, size//2)`). Sleeve name logged on
+  every signal (`sleeve: C/D` in `CANDIDATE`).
+
+## Files
+
+- `main.py` — always-on supervisor + Globex session loop
+- `config.py` — knobs, Globex session/halt math, PA session helpers
+- `fop.py` — FOP chain discovery, hourly OI+gamma sweeps, ES streaming, M1 closes
+- `mt5_data.py` — **MT5 M1-bar + quote feed** for the PA sleeves (fail-soft)
+- `gex.py` — **StableWall estimator** (5-min wall clock, TWAP15 gamma,
+  strike smoothing, hysteresis, zones, confidence)
+- `strategy.py` — fade/breakout candidates, zone-edge `WallBreakState`,
+  futures `Position` (TP1/BE/stop dry-run flow), **`OvernightPA`** (sleeves C/D)
+- `orders.py` — entries + native OCA stop/target brackets, TP1→breakeven rebracket
+- `risk.py` — Globex-day risk ($200/trade sizing, 4/day, −2% kill)
+- `ibkr_conn.py`, `pacer.py` — copied verbatim from `~/workspace/algo/`
+
+## Log events
+
+`WALLS` (every 5-min eval: wall, zone, confidence, tenure, flip, regime),
+`CANDIDATE`, `ENTRY`, `TP1`, `NATIVE_FILL`, `CLOSED`, `WB_ARM`, `RISK_BLOCK`,
+`SESSION_START/END`, `DAY_END`, `SLEEP`, `SHUTDOWN`, `MT5_DATA_CONNECTED`,
+`PA_DATA_DOWN`. JSONL, one file per Globex session day. PA signals log as
+`PA-C fade …` / `PA-D sweep …` / `PA-D reclaim …` / `PA-D reversal …`.

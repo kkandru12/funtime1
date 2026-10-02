@@ -1,1 +1,300 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJTbW9rZSB0ZXN0cyBmb3IgdGhlIGJyaWRnZSBhcmNoaXRlY3R1cmUgKGJyaWRnZSArIHR3byBjb25zdW1lcnMpLgoKUnVuOiBQWVRIT05QQVRIPS90bXAvc3R1YnMgcHl0aG9uMyAvdG1wL3Ntb2tlX2JyaWRnZS5weQpDb3ZlcnM6IGF0b21pYyBwdWJsaXNoL2NvbnN1bWUsIHN0YWxlIGZhaWwtc2FmZSwgb3Zlcm5pZ2h0IGNvbmZpZGVuY2UKZGVjYXksIHNlc3Npb24gZGV0ZWN0aW9uLCBFUz1TUFgrYmFzaXMsIDBEVEUgc2NyZWVuLCB6b25lIHdhbGwtYnJlYWssClN0YWJsZVdhbGwgd2FsbHMsIEJyaWRnZUdleCBhZGFwdGVyLCBQQSBzbGVldmVzIEMvRCwgcHlfY29tcGlsZSBvZiBhbGwKdGhyZWUgcGFja2FnZXMuCiIiIgppbXBvcnQganNvbgppbXBvcnQgb3MKaW1wb3J0IHN5cwppbXBvcnQgdGVtcGZpbGUKaW1wb3J0IHRpbWUKZnJvbSBkYXRldGltZSBpbXBvcnQgZGF0ZXRpbWUsIHRpbWVkZWx0YSwgdGltZXpvbmUKCmltcG9ydCBpbXBvcnRsaWIudXRpbAoKCmRlZiBsb2FkX21vZChuYW1lLCBwYXRoKToKICAgIHNwZWMgPSBpbXBvcnRsaWIudXRpbC5zcGVjX2Zyb21fZmlsZV9sb2NhdGlvbihuYW1lLCBwYXRoKQogICAgbSA9IGltcG9ydGxpYi51dGlsLm1vZHVsZV9mcm9tX3NwZWMoc3BlYykKICAgIHN5cy5tb2R1bGVzW25hbWVdID0gbQogICAgc3BlYy5sb2FkZXIuZXhlY19tb2R1bGUobSkKICAgIHJldHVybiBtCgoKV1MgPSBvcy5wYXRoLmV4cGFuZHVzZXIoIn4vd29ya3NwYWNlIikKIyBicmlkZ2UgbW9kdWxlcyBmaXJzdCwgdW5kZXIgdGhlaXIgcGxhaW4gbmFtZXMgKCdpbXBvcnQgY29uZmlnJyBpbnNpZGUKIyBicmlkZ2UgbW9kdWxlcyBtdXN0IHJlc29sdmUgdG8gdGhlIEJSSURHRSBjb25maWcpCmJjb25mID0gbG9hZF9tb2QoImJjb25mIiwgZiJ7V1N9L2dleF9icmlkZ2UvY29uZmlnLnB5IikKc3lzLm1vZHVsZXNbImNvbmZpZyJdID0gYmNvbmYKZm9yIF9uIGluIFsicHVibGlzaCIsICJwYWNlciIsICJpYmtyX2Nvbm4iLCAiY2hhaW4iLCAic3RhYmxlX2dleCIsICJzY3JlZW4iLAogICAgICAgICAgICJyZWdpbWUiXToKICAgIGxvYWRfbW9kKF9uLCBmIntXU30vZ2V4X2JyaWRnZS97X259LnB5IikKYm1haW4gPSBsb2FkX21vZCgiYm1haW4iLCBmIntXU30vZ2V4X2JyaWRnZS9tYWluLnB5IikKcHVibGlzaCA9IHN5cy5tb2R1bGVzWyJwdWJsaXNoIl0ucHVibGlzaApzY3JlZW4gPSBzeXMubW9kdWxlc1sic2NyZWVuIl0Kc3RhYmxlX2dleCA9IHN5cy5tb2R1bGVzWyJzdGFibGVfZ2V4Il0KCnN5cy5wYXRoLmluc2VydCgwLCBmIntXU30vYWxnbyIpCmZyb20gbGV2ZWxzIGltcG9ydCBMZXZlbHNXYXRjaGVyCgpQQVNTID0gW10KRkFJTCA9IFtdCgoKZGVmIGNoZWNrKG5hbWUsIGNvbmQsIGRldGFpbD0iIik6CiAgICAoUEFTUyBpZiBjb25kIGVsc2UgRkFJTCkuYXBwZW5kKG5hbWUpCiAgICBwcmludCgoIlBBU1MgIiBpZiBjb25kIGVsc2UgIkZBSUwgIikgKyBuYW1lICsgKGYiIFt7ZGV0YWlsfV0iIGlmIGRldGFpbCBlbHNlICIiKSkKCgojID09PT09PT09PT09PSAxLiBhdG9taWMgcHVibGlzaC9jb25zdW1lIHJvdW5kLXRyaXAgPT09PT09PT09PT09CnRtcGQgPSB0ZW1wZmlsZS5ta2R0ZW1wKCkKbHAgPSBvcy5wYXRoLmpvaW4odG1wZCwgImxldmVscy5qc29uIikKcGF5bG9hZCA9IHsidHNfdXRjIjogIngiLCAic2Vzc2lvbiI6ICJueSIsICJzcHgiOiA2NTAwLjAsCiAgICAgICAgICAgImNhbmRpZGF0ZXMiOiBbeyJrZXkiOiAiNjU2MEMiLCAiYXNrIjogMC4zNX1dfQpwdWJsaXNoKGxwLCBwYXlsb2FkKQpjaGVjaygiYXRvbWljLXB1Ymxpc2gtcmVhZGFibGUiLCBqc29uLmxvYWQob3BlbihscCkpWyJzcHgiXSA9PSA2NTAwLjApCmNoZWNrKCJuby10bXAtbGVmdG92ZXJzIiwgbm90IGFueShmLnN0YXJ0c3dpdGgoIi5sZXZlbHMtIikKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvciBmIGluIG9zLmxpc3RkaXIodG1wZCkpKQoKdyA9IExldmVsc1dhdGNoZXIoc2hhcmVkX2Rpcj10bXBkKQpjaGVjaygid2F0Y2hlci1yZWFkcyIsIHcuZ2V0KClbInNlc3Npb24iXSA9PSAibnkiKQpjaGVjaygid2F0Y2hlci1mcmVzaCIsIHcuZnJlc2goKSkKY2hlY2soImVudHJpZXMtYWxsb3dlZC1mcmVzaCIsCiAgICAgIHcuZW50cmllc19hbGxvd2VkKGRhdGV0aW1lLm5vdyhiY29uZi5FVCkpWzBdIGlzIFRydWUpCgojID09PT09PT09PT09PSAyLiBzdGFsZSBmYWlsLXNhZmUgPT09PT09PT09PT09Cm9sZCA9IHRpbWUudGltZSgpIC0gMTIwCm9zLnV0aW1lKGxwLCAob2xkLCBvbGQpKQp3MiA9IExldmVsc1dhdGNoZXIoc2hhcmVkX2Rpcj10bXBkKQp3Mi5yZWZyZXNoKCkKY2hlY2soInN0YWxlLWRldGVjdGVkIiwgdzIuYWdlX3NlYygpID4gNjApCm9rLCB3aHkgPSB3Mi5lbnRyaWVzX2FsbG93ZWQoZGF0ZXRpbWUubm93KGJjb25mLkVUKSkKY2hlY2soInN0YWxlLWJsb2Nrcy1lbnRyaWVzIiwgb2sgaXMgRmFsc2UsIHdoeSkKdzMgPSBMZXZlbHNXYXRjaGVyKHNoYXJlZF9kaXI9Ii9ub25leGlzdGVudCIpCm9rLCB3aHkgPSB3My5lbnRyaWVzX2FsbG93ZWQoZGF0ZXRpbWUubm93KGJjb25mLkVUKSkKY2hlY2soIm1pc3NpbmctYmxvY2tzLWVudHJpZXMiLCBvayBpcyBGYWxzZSwgd2h5KQoKIyA9PT09PT09PT09PT0gMy4gc2Vzc2lvbiBkZXRlY3Rpb24gPT09PT09PT09PT09CkVUID0gYmNvbmYuRVQKY2hlY2soInNlc3MtbnkiLCBiY29uZi5zZXNzaW9uKGRhdGV0aW1lKDIwMjYsIDEwLCAxLCAxMCwgMCwgdHppbmZvPUVUKSkgPT0gIm55IikKY2hlY2soInNlc3Mtb3Zlcm5pZ2h0IiwKICAgICAgYmNvbmYuc2Vzc2lvbihkYXRldGltZSgyMDI2LCAxMCwgMSwgMjAsIDAsIHR6aW5mbz1FVCkpID09ICJvdmVybmlnaHQiKQpjaGVjaygic2Vzcy1zYXQiLAogICAgICBiY29uZi5zZXNzaW9uKGRhdGV0aW1lKDIwMjYsIDEwLCAzLCAxMiwgMCwgdHppbmZvPUVUKSkgPT0gIndlZWtlbmQiKQpjaGVjaygic2Vzcy1mcmktZXZlIiwKICAgICAgYmNvbmYuc2Vzc2lvbihkYXRldGltZSgyMDI2LCAxMCwgMiwgMTgsIDAsIHR6aW5mbz1FVCkpID09ICJ3ZWVrZW5kIikKY2hlY2soInNlc3Mtc3VuLWV2ZSIsCiAgICAgIGJjb25mLnNlc3Npb24oZGF0ZXRpbWUoMjAyNiwgMTAsIDQsIDE4LCAwLCB0emluZm89RVQpKSA9PSAib3Zlcm5pZ2h0IikKCiMgPT09PT09PT09PT09IDQuIEVTID0gU1BYICsgYmFzaXMsIG92ZXJuaWdodCBkZWNheSA9PT09PT09PT09PT0Kd2FsbHMgPSB7ImNhbGwiOiB7InN0cmlrZSI6IDY1NTAsICJ6b25lX2xvIjogNjU0NSwgInpvbmVfaGkiOiA2NTU1LAogICAgICAgICAgICAgICAgICAiY29uZmlkZW5jZSI6IDAuOCwgInRlbnVyZV9taW4iOiAzMCwgImRvbWluYW5jZSI6IDMuMH0sCiAgICAgICAgICJwdXQiOiB7InN0cmlrZSI6IDY0NTAsICJ6b25lX2xvIjogNjQ0NSwgInpvbmVfaGkiOiA2NDU1LAogICAgICAgICAgICAgICAgICJjb25maWRlbmNlIjogMC42LCAidGVudXJlX21pbiI6IDMwLCAiZG9taW5hbmNlIjogMi44fX0KZXN3ID0gYm1haW4uX2VzX3dhbGxzKHdhbGxzLCAyMC40KQpjaGVjaygiZXMtY2FsbC1zdHJpa2UiLCBlc3dbImNhbGwiXVsic3RyaWtlIl0gPT0gNjU3MC41LCBlc3dbImNhbGwiXVsic3RyaWtlIl0pCmNoZWNrKCJlcy1wdXQtem9uZSIsIGVzd1sicHV0Il1bInpvbmVfbG8iXSA9PSA2NDY1LjUsIGVzd1sicHV0Il1bInpvbmVfbG8iXSkKY2hlY2soImVzLXF1YXJ0ZXItZ3JpZCIsIGVzd1siY2FsbCJdWyJzdHJpa2UiXSAlIDAuMjUgPT0gMCkKCnN0YXRlID0geyJmcm96ZW4iOiB7ImNhbGwiOiB3YWxsc1siY2FsbCJdLCAicHV0Ijogd2FsbHNbInB1dCJdLAogICAgICAgICAgICAgICAgICAgICJmbGlwIjogNjUwMCwgInJlZ2ltZSI6ICIrIiwgIm5ldF9nZXhfYiI6IDEuMiwKICAgICAgICAgICAgICAgICAgICAibWFnbmV0cyI6IFs2NjAwXX0sCiAgICAgICAgICJ3YWxsX3RzIjogdGltZS50aW1lKCkgLSAxMjAgKiA2MCwgImJhc2lzIjogMjAuMCwKICAgICAgICAgIndhbGxfdHNfdXRjIjogInQiLCAiYmFzaXNfdHNfdXRjIjogInQiLAogICAgICAgICAicmVnaW1lIjogdHlwZSgiUiIsICgpLCB7InNjb3JlIjogTm9uZSwgImRldGFpbCI6IHt9fSkoKSwKICAgICAgICAgImNoYWluIjogTm9uZSwgImVzX3RpY2tlciI6IE5vbmUsICJvaV90c191dGMiOiAidCJ9CnAgPSBibWFpbi5idWlsZF9wYXlsb2FkKHN0YXRlLCBkYXRldGltZS5ub3coRVQpLCAib3Zlcm5pZ2h0IikKY2hlY2soIm92ZXJuaWdodC1zdGFsZS1mbGFnIiwgcFsic3RhbGUiXSBpcyBUcnVlKQpjaGVjaygib3Zlcm5pZ2h0LXdhbGwtYWdlIiwgYWJzKHBbIndhbGxfYWdlX21pbiJdIC0gMTIwKSA8IDEsIHBbIndhbGxfYWdlX21pbiJdKQojIGRlY2F5OiAxMjBtaW4gLT4geCBtYXgoMC4zLCAxLTEyMC8yNDApPTAuNQpjaGVjaygib3Zlcm5pZ2h0LWRlY2F5IiwgYWJzKHBbIndhbGxzIl1bImNhbGwiXVsiY29uZmlkZW5jZSJdIC0gMC40KSA8IDAuMDEsCiAgICAgIHBbIndhbGxzIl1bImNhbGwiXVsiY29uZmlkZW5jZSJdKQpjaGVjaygib3Zlcm5pZ2h0LW5vLWNhbmRpZGF0ZXMiLCBwWyJjYW5kaWRhdGVzIl0gPT0gW10pCmNoZWNrKCJvdmVybmlnaHQtZXMtd2FsbHMiLCBwWyJlc193YWxscyJdWyJjYWxsIl1bInN0cmlrZSJdID09IDY1NzAuMCkKCnN0YXRlMiA9IGRpY3Qoc3RhdGUsIHdhbGxfdHM9dGltZS50aW1lKCkgLSA2MDAgKiA2MCkgICMgMTBoIC0+IGZsb29yIDAuMwpwMiA9IGJtYWluLmJ1aWxkX3BheWxvYWQoc3RhdGUyLCBkYXRldGltZS5ub3coRVQpLCAib3Zlcm5pZ2h0IikKY2hlY2soImRlY2F5LWZsb29yIiwgYWJzKHAyWyJ3YWxscyJdWyJjYWxsIl1bImNvbmZpZGVuY2UiXSAtIDAuMjQpIDwgMC4wMSwKICAgICAgcDJbIndhbGxzIl1bImNhbGwiXVsiY29uZmlkZW5jZSJdKQoKIyA9PT09PT09PT09PT0gNS4gMERURSBzY3JlZW4gKGJyaWRnZS9zY3JlZW4ucHkpID09PT09PT09PT09PQoKCmNsYXNzIEZha2VDaGFpbjoKICAgIGRlZiBpdl9vayhzZWxmKToKICAgICAgICByZXR1cm4gVHJ1ZSwgIm9rIgoKICAgIGRlZiBhc2tfenNjb3JlKHNlbGYsIGtleSk6CiAgICAgICAgcmV0dXJuIC0xLjUKCgpjbGFzcyBGYWtlR2V4OgogICAgY2FsbF93YWxsID0gNjU2MAogICAgcHV0X3dhbGwgPSA2NDQwCiAgICBmbGlwID0gNjUwMAogICAgbWFnbmV0cyA9IFs2NjAwXQoKCmRlZiB1bmkoc3RyaWtlcz0oNjU2MCwpLCByaWdodHM9KCJjYWxsIiwpKToKICAgIG91dCA9IFtdCiAgICBmb3IgcyBpbiBzdHJpa2VzOgogICAgICAgIGZvciByIGluIHJpZ2h0czoKICAgICAgICAgICAgcnIgPSAiY2FsbCIgaWYgciA9PSAiY2FsbCIgZWxzZSAicHV0IgogICAgICAgICAgICBvdXQuYXBwZW5kKGRpY3Qoa2V5PShzLCAiQyIgaWYgcnIgPT0gImNhbGwiIGVsc2UgIlAiKSwgc3RyaWtlPXMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICByaWdodD1yciwgYXNrPTAuMzUsIGJpZD0wLjMwLCBtaWQ9MC4zMjUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZWx0YT0wLjA1LCBnYW1tYT0wLjAwNCwgaXY9MC4xMikpCiAgICByZXR1cm4gb3V0CgoKbm93X2EgPSBkYXRldGltZSgyMDI2LCAxMCwgMSwgMTEsIDMwLCB0emluZm89RVQpICAjIHdpbmRvdyBBCmNhbmRzLCByZWosIG5vdGVzID0gc2NyZWVuLmV2YWx1YXRlKHVuaSgpLCBGYWtlQ2hhaW4oKSwgRmFrZUdleCgpLCBub3dfYSwgNjUxMC4wKQpjaGVjaygic2NyZWVuLWNhbmRpZGF0ZSIsIGxlbihjYW5kcykgPT0gMSBhbmQgY2FuZHNbMF1bImtleSJdID09ICI2NTYwQyIsCiAgICAgIGNhbmRzWzBdIGlmIGNhbmRzIGVsc2UgTm9uZSkKY2hlY2soInNjcmVlbi10cmlnZ2VyIiwgY2FuZHNbMF1bInRyaWdnZXIiXSA9PSAiY3J1c2giKQpjaGVjaygic2NyZWVuLWpzb24ta2V5IiwgaXNpbnN0YW5jZShjYW5kc1swXVsia2V5Il0sIHN0cikpCm5vd19vdXQgPSBkYXRldGltZSgyMDI2LCAxMCwgMSwgMTMsIDAsIHR6aW5mbz1FVCkgICMgZGVhZCB6b25lCmNhbmRzLCBfLCBfID0gc2NyZWVuLmV2YWx1YXRlKHVuaSgpLCBGYWtlQ2hhaW4oKSwgRmFrZUdleCgpLCBub3dfb3V0LCA2NTEwLjApCmNoZWNrKCJzY3JlZW4tZGVhZC16b25lLWVtcHR5IiwgY2FuZHMgPT0gW10pCgojID09PT09PT09PT09PSA2LiB6b25lIHdhbGwtYnJlYWsgKGJyaWRnZSkgPT09PT09PT09PT09CndiID0gc2NyZWVuLldhbGxCcmVha1N0YXRlKCkKCgpjbGFzcyBGYWtlR2V4VzoKICAgIGNhbGxfd2FsbCA9IDY1NjAKICAgIGNhbGxfem9uZSA9ICg2NTU1LCA2NTY1KQogICAgcHV0X3dhbGwgPSBOb25lCiAgICBwdXRfem9uZSA9IE5vbmUKCgpvaSA9IHsoNjU2MC4wLCAiQyIpOiAyNTAwMCwgKDY1NTUuMCwgIkMiKTogODAwMH0KZXZzID0gd2Iubm90ZShkYXRldGltZSgyMDI2LCAxMCwgMSwgMTEsIDQwLCB0emluZm89RVQpLCA2NTUzLjAsIEZha2VHZXhXKCksIG9pKQpjaGVjaygid2ItYXJtLXpvbmUiLCB3Yi5hcm1lZCBpcyBub3QgTm9uZSBhbmQgd2IuYXJtZWRbInpvbmUiXSA9PSAoNjU1NSwgNjU2NSksCiAgICAgIHdiLmFybWVkKQojIDIgTTEgY2xvc2VzIGFib3ZlIHpvbmVfaGkgLT4gYnJlYWsKdDAgPSBkYXRldGltZSgyMDI2LCAxMCwgMSwgMTEsIDQxLCB0emluZm89RVQpCmZvciBtLCBweCBpbiAoKDQxLCA2NTUzLjApLCAoNDIsIDY1NjcuMCksICg0MywgNjU2OC4wKSwgKDQ0LCA2NTY5LjApKToKICAgIHdiLm5vdGUodDAucmVwbGFjZShtaW51dGU9bSksIHB4LCBGYWtlR2V4VygpLCBvaSkKc2lnID0gd2IuYnJlYWtfc2lnbmFsKCkKY2hlY2soIndiLWJyZWFrLTJjbG9zZXMiLCBzaWcgPT0gInVwIiwgc2lnKQpjYW5kLCBfLCBfID0gc2NyZWVuLmV2YWx1YXRlX3dhbGxicmVhayh1bmkoKDY1NzAsKSwgKCJjYWxsIiwpKSwgNjU2OC4wLCB3YikKY2hlY2soIndiLWNhbmRpZGF0ZSIsIGNhbmQgaXMgbm90IE5vbmUgYW5kIGNhbmRbInRyaWdnZXIiXSA9PSAid2FsbGJyZWFrIiwKICAgICAgY2FuZFsia2V5Il0gaWYgY2FuZCBlbHNlIE5vbmUpCmNoZWNrKCJ3Yi1kaXNhcm1lZC1hZnRlciIsIHdiLmFybWVkIGlzIE5vbmUpCgojID09PT09PT09PT09PSA3LiBTdGFibGVXYWxsIChicmlkZ2Uvc3RhYmxlX2dleC5weSkgPT09PT09PT09PT09CnNnID0gc3RhYmxlX2dleC5HZXhTdGF0ZSgpCmJhc2UgPSB0aW1lLnRpbWUoKQpnbSA9IHsoZmxvYXQoayksICJDIik6IDAuMDAyICsgMC4wMDAxICogKGsgJSA3KSBmb3IgayBpbiByYW5nZSg2NDAwLCA2NjIwLCA1KX0KZ20udXBkYXRlKHsoZmxvYXQoayksICJQIik6IDAuMDAyIGZvciBrIGluIHJhbmdlKDY0MDAsIDY2MjAsIDUpfSkKZ21bKDY1NjAuMCwgIkMiKV0gPSAwLjAyICAjIGRvbWluYW50IGNhbGwgZ2FtbWEKZ21bKDY0NDAuMCwgIlAiKV0gPSAwLjAyICAjIGRvbWluYW50IHB1dCBnYW1tYQpvaTIgPSB7KGZsb2F0KGspLCByKTogMTAwMDAuMCBmb3IgayBpbiByYW5nZSg2NDAwLCA2NjIwLCA1KQogICAgICAgZm9yIHIgaW4gKCJDIiwgIlAiKX0Kc2cubm90ZV9nYW1tYShnbSwgYmFzZSkKZXYgPSBzZy5tYXliZV9ldmFsdWF0ZShvaTIsIDY1MDAuMCwgYmFzZSkKcDcgPSBzZy53YWxsc19wYXlsb2FkKGJhc2UpCmNoZWNrKCJzdGFibGV3YWxsLWV2YWwiLCBldiBpcyBub3QgTm9uZSkKY2hlY2soInN0YWJsZXdhbGwtY2FsbCIsIHA3WyJjYWxsX3dhbGwiXSA9PSA2NTYwLjAsIHA3WyJjYWxsX3dhbGwiXSkKY2hlY2soInN0YWJsZXdhbGwtcHV0IiwgcDdbInB1dF93YWxsIl0gPT0gNjQ0MC4wLCBwN1sicHV0X3dhbGwiXSkKY2hlY2soInN0YWJsZXdhbGwtem9uZXMiLCBwN1siY2FsbF96b25lIl0gaXMgbm90IE5vbmUgYW5kIHA3WyJwdXRfem9uZSJdIGlzIG5vdCBOb25lKQpjaGVjaygic3RhYmxld2FsbC1yZWdpbWUiLCBwN1sicmVnaW1lIl0gaW4gKCIrIiwgIi0iLCAiZmxhdCIpLCBwN1sicmVnaW1lIl0pCgojID09PT09PT09PT09PSA4LiBCcmlkZ2VHZXggYWRhcHRlciAoYWxnb19lcykgPT09PT09PT09PT09CiMgYWxnb19lcyBtb2R1bGVzIGRvICdpbXBvcnQgY29uZmlnJyAtPiBwb2ludCBpdCBhdCB0aGUgQUxHT19FUyBjb25maWcgbm93CiMgKGJyaWRnZSBpbXBvcnRzIGFib3ZlIGFyZSBhbHJlYWR5IGZ1bGx5IGxvYWRlZCkKZXNjb25mID0gbG9hZF9tb2QoImVzY29uZiIsIGYie1dTfS9hbGdvX2VzL2NvbmZpZy5weSIpCnN5cy5tb2R1bGVzWyJjb25maWciXSA9IGVzY29uZgpzeXMucGF0aC5pbnNlcnQoMCwgZiJ7V1N9L2FsZ29fZXMiKQppbXBvcnQgc3RyYXRlZ3kgYXMgZXNzdHJhdApmcm9tIGJyaWRnZV9sZXZlbHMgaW1wb3J0IExldmVsc1dhdGNoZXIgYXMgRVNMVwpmcm9tIGJyaWRnZV9nZXggaW1wb3J0IEJyaWRnZUdleAoKcHVibGlzaChscCwgeyJ0c191dGMiOiAieCIsICJzZXNzaW9uIjogIm55IiwgInNweCI6IDY1MDAuMCwgImVzIjogNjUyMC40LAogICAgICAgICAgICAgImJhc2lzIjogMjAuNCwgImJhc2lzX3RzX3V0YyI6ICJ4IiwKICAgICAgICAgICAgICJ3YWxscyI6IHsiY2FsbCI6IHsic3RyaWtlIjogNjU1MCwgInpvbmVfbG8iOiA2NTQ1LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ6b25lX2hpIjogNjU1NSwgImNvbmZpZGVuY2UiOiAwLjcyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ0ZW51cmVfbWluIjogNDAsICJkb21pbmFuY2UiOiAzLjF9LAogICAgICAgICAgICAgICAgICAgICAgICJwdXQiOiB7InN0cmlrZSI6IDY0NTAsICJ6b25lX2xvIjogNjQ0NSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ6b25lX2hpIjogNjQ1NSwgImNvbmZpZGVuY2UiOiAwLjY1LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInRlbnVyZV9taW4iOiA0MCwgImRvbWluYW5jZSI6IDIuOH19LAogICAgICAgICAgICAgImVzX3dhbGxzIjogTm9uZSwgImZsaXAiOiA2NDgwLCAicmVnaW1lIjogIisiLAogICAgICAgICAgICAgIm5ldF9nZXhfYiI6IDEuMiwgIm1hZ25ldHMiOiBbNjYwMF0sCiAgICAgICAgICAgICAid2FsbF90c191dGMiOiAieCIsICJzdGFsZSI6IEZhbHNlLCAid2FsbF9hZ2VfbWluIjogMC4wLAogICAgICAgICAgICAgImNhbmRpZGF0ZXMiOiBbXSwgImNoYWluX2ZyYW1lIjoge30sICJvaV90c191dGMiOiAieCIsCiAgICAgICAgICAgICAicmVnaW1lX2luZm8iOiB7fX0pCiMgZmlsbCBlc193YWxscyBsaWtlIHRoZSBicmlkZ2Ugd291bGQKZG9jID0ganNvbi5sb2FkKG9wZW4obHApKQpkb2NbImVzX3dhbGxzIl0gPSBibWFpbi5fZXNfd2FsbHMoZG9jWyJ3YWxscyJdLCAyMC40KQpqc29uLmR1bXAoZG9jLCBvcGVuKGxwLCAidyIpKQoKZWx3ID0gRVNMVyhzaGFyZWRfZGlyPXRtcGQpCmJnID0gQnJpZGdlR2V4KGVsdykKY2hlY2soImJyaWRnZWdleC1yZWZyZXNoIiwgYmcucmVmcmVzaCgpIGlzIFRydWUpCmNoZWNrKCJicmlkZ2VnZXgtY2FsbC1lcyIsIGJnLmNhbGxfd2FsbCA9PSA2NTcwLjUsIGJnLmNhbGxfd2FsbCkKY2hlY2soImJyaWRnZWdleC16b25lLWVzIiwgYmcuY2FsbF96b25lID09ICg2NTY1LjUsIDY1NzUuNSksIGJnLmNhbGxfem9uZSkKY2hlY2soImJyaWRnZWdleC1yZWdpbWUiLCBiZy5nYW1tYV9yZWdpbWUoKSA9PSAiKyIpCndhbGwsIHNpZGUsIGVkZ2UsIGNvbmYgPSBiZy53YWxsX2Zvcl9mYWRlKDY1NjQuMCkKY2hlY2soImJyaWRnZWdleC1mYWRlLXRvdWNoIiwKICAgICAgd2FsbCA9PSA2NTcwLjUgYW5kIHNpZGUgPT0gInNob3J0IiBhbmQgZWRnZSA9PSA2NTY1LjUsICh3YWxsLCBzaWRlLCBlZGdlKSkKY2hlY2soImJyaWRnZWdleC1mYWRlLW1pc3MiLCBiZy53YWxsX2Zvcl9mYWRlKDY1MDAuMClbMF0gaXMgTm9uZSkKY2hlY2soImJyaWRnZWdleC1tYWduZXQiLCBiZy5tYWduZXRfYmV5b25kKDY1NjAuMCwgMSkgPT0gNjYyMC40LCBiZy5tYWduZXRfYmV5b25kKDY1NjAuMCwgMSkpCmNoZWNrKCJicmlkZ2VnZXgtZG9taW5hbmNlIiwgYmcuZG9taW5hbmNlKDY1NzAuNSwgIkMiLCB7fSkgPT0gMy4xKQpjaGVjaygiYnJpZGdlZ2V4LWZsaXAtZXMiLCBiZy5mbGlwID09IDY1MDAuNCwgYmcuZmxpcCkKCiMgRVMgV2FsbEJyZWFrU3RhdGUgd2l0aCBhZGFwdGVyIChtaW5fY29uZiBvdmVycmlkZSkKd2IyID0gZXNzdHJhdC5XYWxsQnJlYWtTdGF0ZSgpCmV2cyA9IHdiMi5ub3RlKDY1NjQuMCwgYmcsIHt9LCBtaW5fY29uZj0wLjUpCmNoZWNrKCJlcy13Yi1hcm0iLCB3YjIuYXJtZWQgaXMgbm90IE5vbmUsIHdiMi5hcm1lZCkKCiMgPT09PT09PT09PT09IDkuIFBBIHNsZWV2ZXMgKHN5bnRoZXRpYyBNVDUgYmFycykgPT09PT09PT09PT09CnBhID0gZXNzdHJhdC5PdmVybmlnaHRQQSgpCnNlc3Nfc3RhcnQgPSBkYXRldGltZSgyMDI2LCAxMCwgMSwgMTgsIDAsIHR6aW5mbz1FVCkKcGEucmVzZXQoc2Vzc19zdGFydCkKYmFycyA9IFtdCnQgPSBzZXNzX3N0YXJ0CnB4ID0gNjUwMC4wCmZvciBpIGluIHJhbmdlKDEyMCk6ICAjIDJoIG9mIGJhcnMsIHJhbmdlIDY0OTUuLjY1MDUgKDEwcHQgLT4gdHJhZGVhYmxlKQogICAgaGkgPSA2NTA1LjAgaWYgaSAlIDIgPT0gMCBlbHNlIDY1MDQuMAogICAgbG8gPSA2NDk1LjAgaWYgaSAlIDMgPT0gMCBlbHNlIDY0OTYuMAogICAgYmFycy5hcHBlbmQoKHQsIHB4LCBoaSwgbG8sIHB4KSkKICAgIHQgKz0gdGltZWRlbHRhKG1pbnV0ZXM9MSkKcGEubm90ZV9iYXJzKGJhcnMpCmNoZWNrKCJwYS1yYW5nZSIsIHBhLm9uX2hpZ2ggPT0gNjUwNS4wIGFuZCBwYS5vbl9sb3cgPT0gNjQ5NS4wLAogICAgICAocGEub25faGlnaCwgcGEub25fbG93KSkKbm93X29uID0gZGF0ZXRpbWUoMjAyNiwgMTAsIDEsIDIyLCAwLCB0emluZm89RVQpCmMgPSBwYS5ldmFsdWF0ZV9jKG5vd19vbiwgNjQ5NS41KSAgIyB0b3VjaCBvZiBPTiBsb3cKY2hlY2soInBhLWZhZGUtc2lnbmFsIiwgYyBpcyBub3QgTm9uZSBhbmQgY1sidHJpZ2dlciJdID09ICJwYV9mYWRlIiwgYykKIyBzd2VlcDogZXhjZWVkIGxvdyBieSA+PTIgdGhlbiByZWNsYWltIHdpdGhpbiAxNSBtaW4KYmFyczIgPSBsaXN0KGJhcnMpCnQyID0gc2Vzc19zdGFydCArIHRpbWVkZWx0YShtaW51dGVzPTEyMCkKYmFyczIuYXBwZW5kKCh0MiwgNjQ5Mi4wLCA2NDkzLjAsIDY0OTEuMCwgNjQ5Mi41KSkgICAgICAjIHN3ZWVwIGxvdwpiYXJzMi5hcHBlbmQoKHQyICsgdGltZWRlbHRhKG1pbnV0ZXM9NSksIDY0OTYuMCwgNjQ5Ny4wLCA2NDk1LjUsIDY0OTYuNSkpICAjIHJlY2xhaW0KcGEubm90ZV9iYXJzKGJhcnMyKQpkID0gcGEuZXZhbHVhdGVfZChzZXNzX3N0YXJ0ICsgdGltZWRlbHRhKG1pbnV0ZXM9MTI2KSwgNjQ5Ni41KQpjaGVjaygicGEtc3dlZXAtc2lnbmFsIiwgZCBpcyBub3QgTm9uZSBhbmQgZFsidHJpZ2dlciJdID09ICJwYV9zd2VlcCIsIGQpCgojID09PT09PT09PT09PSAxMC4gcHlfY29tcGlsZSBldmVyeXRoaW5nID09PT09PT09PT09PQppbXBvcnQgcHlfY29tcGlsZQpyb290cyA9IFtvcy5wYXRoLmV4cGFuZHVzZXIoIn4vd29ya3NwYWNlL2dleF9icmlkZ2UiKSwKICAgICAgICAgb3MucGF0aC5leHBhbmR1c2VyKCJ+L3dvcmtzcGFjZS9hbGdvIiksCiAgICAgICAgIG9zLnBhdGguZXhwYW5kdXNlcigifi93b3Jrc3BhY2UvYWxnb19lcyIpXQpiYWQgPSBbXQpmb3IgciBpbiByb290czoKICAgIGZvciBmIGluIG9zLmxpc3RkaXIocik6CiAgICAgICAgaWYgZi5lbmRzd2l0aCgiLnB5Iik6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHB5X2NvbXBpbGUuY29tcGlsZShvcy5wYXRoLmpvaW4ociwgZiksIGRvcmFpc2U9VHJ1ZSkKICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICAgICAgYmFkLmFwcGVuZCgoZiwgc3RyKGUpKSkKY2hlY2soInB5LWNvbXBpbGUtYWxsIiwgbm90IGJhZCwgYmFkKQoKcHJpbnQoKQpwcmludChmIntsZW4oUEFTUyl9IHBhc3NlZCwge2xlbihGQUlMKX0gZmFpbGVkIikKaWYgRkFJTDoKICAgIHByaW50KCJGQUlMVVJFUzoiLCBGQUlMKQogICAgc3lzLmV4aXQoMSkK
+#!/usr/bin/env python3
+"""Smoke tests for the bridge architecture (bridge + two consumers).
+
+Run: PYTHONPATH=/tmp/stubs python3 /tmp/smoke_bridge.py
+Covers: atomic publish/consume, stale fail-safe, overnight confidence
+decay, session detection, ES=SPX+basis, 0DTE screen, zone wall-break,
+StableWall walls, BridgeGex adapter, PA sleeves C/D, py_compile of all
+three packages.
+"""
+import json
+import os
+import sys
+import tempfile
+import time
+from datetime import datetime, timedelta, timezone
+
+import importlib.util
+
+
+def load_mod(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    m = importlib.util.module_from_spec(spec)
+    sys.modules[name] = m
+    spec.loader.exec_module(m)
+    return m
+
+
+WS = os.path.expanduser("~/workspace")
+# bridge modules first, under their plain names ('import config' inside
+# bridge modules must resolve to the BRIDGE config)
+bconf = load_mod("bconf", f"{WS}/gex_bridge/config.py")
+sys.modules["config"] = bconf
+for _n in ["publish", "pacer", "ibkr_conn", "chain", "stable_gex", "screen",
+           "regime"]:
+    load_mod(_n, f"{WS}/gex_bridge/{_n}.py")
+bmain = load_mod("bmain", f"{WS}/gex_bridge/main.py")
+publish = sys.modules["publish"].publish
+screen = sys.modules["screen"]
+stable_gex = sys.modules["stable_gex"]
+
+sys.path.insert(0, f"{WS}/algo")
+from levels import LevelsWatcher
+
+PASS = []
+FAIL = []
+
+
+def check(name, cond, detail=""):
+    (PASS if cond else FAIL).append(name)
+    print(("PASS " if cond else "FAIL ") + name + (f" [{detail}]" if detail else ""))
+
+
+# ============ 1. atomic publish/consume round-trip ============
+tmpd = tempfile.mkdtemp()
+lp = os.path.join(tmpd, "levels.json")
+payload = {"ts_utc": "x", "session": "ny", "spx": 6500.0,
+           "candidates": [{"key": "6560C", "ask": 0.35}]}
+publish(lp, payload)
+check("atomic-publish-readable", json.load(open(lp))["spx"] == 6500.0)
+check("no-tmp-leftovers", not any(f.startswith(".levels-")
+                                  for f in os.listdir(tmpd)))
+
+w = LevelsWatcher(shared_dir=tmpd)
+check("watcher-reads", w.get()["session"] == "ny")
+check("watcher-fresh", w.fresh())
+check("entries-allowed-fresh",
+      w.entries_allowed(datetime.now(bconf.ET))[0] is True)
+
+# ============ 2. stale fail-safe ============
+old = time.time() - 120
+os.utime(lp, (old, old))
+w2 = LevelsWatcher(shared_dir=tmpd)
+w2.refresh()
+check("stale-detected", w2.age_sec() > 60)
+ok, why = w2.entries_allowed(datetime.now(bconf.ET))
+check("stale-blocks-entries", ok is False, why)
+w3 = LevelsWatcher(shared_dir="/nonexistent")
+ok, why = w3.entries_allowed(datetime.now(bconf.ET))
+check("missing-blocks-entries", ok is False, why)
+
+# ============ 3. session detection ============
+ET = bconf.ET
+check("sess-ny", bconf.session(datetime(2026, 10, 1, 10, 0, tzinfo=ET)) == "ny")
+check("sess-overnight",
+      bconf.session(datetime(2026, 10, 1, 20, 0, tzinfo=ET)) == "overnight")
+check("sess-sat",
+      bconf.session(datetime(2026, 10, 3, 12, 0, tzinfo=ET)) == "weekend")
+check("sess-fri-eve",
+      bconf.session(datetime(2026, 10, 2, 18, 0, tzinfo=ET)) == "weekend")
+check("sess-sun-eve",
+      bconf.session(datetime(2026, 10, 4, 18, 0, tzinfo=ET)) == "overnight")
+
+# ============ 4. ES = SPX + basis, overnight decay ============
+walls = {"call": {"strike": 6550, "zone_lo": 6545, "zone_hi": 6555,
+                  "confidence": 0.8, "tenure_min": 30, "dominance": 3.0},
+         "put": {"strike": 6450, "zone_lo": 6445, "zone_hi": 6455,
+                 "confidence": 0.6, "tenure_min": 30, "dominance": 2.8}}
+esw = bmain._es_walls(walls, 20.4)
+check("es-call-strike", esw["call"]["strike"] == 6570.5, esw["call"]["strike"])
+check("es-put-zone", esw["put"]["zone_lo"] == 6465.5, esw["put"]["zone_lo"])
+check("es-quarter-grid", esw["call"]["strike"] % 0.25 == 0)
+
+state = {"frozen": {"call": walls["call"], "put": walls["put"],
+                    "flip": 6500, "regime": "+", "net_gex_b": 1.2,
+                    "magnets": [6600]},
+         "wall_ts": time.time() - 120 * 60, "basis": 20.0,
+         "wall_ts_utc": "t", "basis_ts_utc": "t",
+         "regime": type("R", (), {"score": None, "detail": {}})(),
+         "chain": None, "es_ticker": None, "oi_ts_utc": "t"}
+p = bmain.build_payload(state, datetime.now(ET), "overnight")
+check("overnight-stale-flag", p["stale"] is True)
+check("overnight-wall-age", abs(p["wall_age_min"] - 120) < 1, p["wall_age_min"])
+# decay: 120min -> x max(0.3, 1-120/240)=0.5
+check("overnight-decay", abs(p["walls"]["call"]["confidence"] - 0.4) < 0.01,
+      p["walls"]["call"]["confidence"])
+check("overnight-no-candidates", p["candidates"] == [])
+check("overnight-es-walls", p["es_walls"]["call"]["strike"] == 6570.0)
+
+state2 = dict(state, wall_ts=time.time() - 600 * 60)  # 10h -> floor 0.3
+p2 = bmain.build_payload(state2, datetime.now(ET), "overnight")
+check("decay-floor", abs(p2["walls"]["call"]["confidence"] - 0.24) < 0.01,
+      p2["walls"]["call"]["confidence"])
+
+# ============ 5. 0DTE screen (bridge/screen.py) ============
+
+
+class FakeChain:
+    def iv_ok(self):
+        return True, "ok"
+
+    def ask_zscore(self, key):
+        return -1.5
+
+
+class FakeGex:
+    call_wall = 6560
+    put_wall = 6440
+    flip = 6500
+    magnets = [6600]
+
+
+def uni(strikes=(6560,), rights=("call",)):
+    out = []
+    for s in strikes:
+        for r in rights:
+            rr = "call" if r == "call" else "put"
+            out.append(dict(key=(s, "C" if rr == "call" else "P"), strike=s,
+                            right=rr, ask=0.35, bid=0.30, mid=0.325,
+                            delta=0.05, gamma=0.004, iv=0.12))
+    return out
+
+
+now_a = datetime(2026, 10, 1, 11, 30, tzinfo=ET)  # window A
+cands, rej, notes = screen.evaluate(uni(), FakeChain(), FakeGex(), now_a, 6510.0)
+check("screen-candidate", len(cands) == 1 and cands[0]["key"] == "6560C",
+      cands[0] if cands else None)
+check("screen-trigger", cands[0]["trigger"] == "crush")
+check("screen-json-key", isinstance(cands[0]["key"], str))
+now_out = datetime(2026, 10, 1, 13, 0, tzinfo=ET)  # dead zone
+cands, _, _ = screen.evaluate(uni(), FakeChain(), FakeGex(), now_out, 6510.0)
+check("screen-dead-zone-empty", cands == [])
+
+# ============ 6. zone wall-break (bridge) ============
+wb = screen.WallBreakState()
+
+
+class FakeGexW:
+    call_wall = 6560
+    call_zone = (6555, 6565)
+    put_wall = None
+    put_zone = None
+
+
+oi = {(6560.0, "C"): 25000, (6555.0, "C"): 8000}
+evs = wb.note(datetime(2026, 10, 1, 11, 40, tzinfo=ET), 6553.0, FakeGexW(), oi)
+check("wb-arm-zone", wb.armed is not None and wb.armed["zone"] == (6555, 6565),
+      wb.armed)
+# 2 M1 closes above zone_hi -> break
+t0 = datetime(2026, 10, 1, 11, 41, tzinfo=ET)
+for m, px in ((41, 6553.0), (42, 6567.0), (43, 6568.0), (44, 6569.0)):
+    wb.note(t0.replace(minute=m), px, FakeGexW(), oi)
+sig = wb.break_signal()
+check("wb-break-2closes", sig == "up", sig)
+cand, _, _ = screen.evaluate_wallbreak(uni((6570,), ("call",)), 6568.0, wb)
+check("wb-candidate", cand is not None and cand["trigger"] == "wallbreak",
+      cand["key"] if cand else None)
+check("wb-disarmed-after", wb.armed is None)
+
+# ============ 7. StableWall (bridge/stable_gex.py) ============
+sg = stable_gex.GexState()
+base = time.time()
+gm = {(float(k), "C"): 0.002 + 0.0001 * (k % 7) for k in range(6400, 6620, 5)}
+gm.update({(float(k), "P"): 0.002 for k in range(6400, 6620, 5)})
+gm[(6560.0, "C")] = 0.02  # dominant call gamma
+gm[(6440.0, "P")] = 0.02  # dominant put gamma
+oi2 = {(float(k), r): 10000.0 for k in range(6400, 6620, 5)
+       for r in ("C", "P")}
+sg.note_gamma(gm, base)
+ev = sg.maybe_evaluate(oi2, 6500.0, base)
+p7 = sg.walls_payload(base)
+check("stablewall-eval", ev is not None)
+check("stablewall-call", p7["call_wall"] == 6560.0, p7["call_wall"])
+check("stablewall-put", p7["put_wall"] == 6440.0, p7["put_wall"])
+check("stablewall-zones", p7["call_zone"] is not None and p7["put_zone"] is not None)
+check("stablewall-regime", p7["regime"] in ("+", "-", "flat"), p7["regime"])
+
+# ============ 8. BridgeGex adapter (algo_es) ============
+# algo_es modules do 'import config' -> point it at the ALGO_ES config now
+# (bridge imports above are already fully loaded)
+esconf = load_mod("esconf", f"{WS}/algo_es/config.py")
+sys.modules["config"] = esconf
+sys.path.insert(0, f"{WS}/algo_es")
+import strategy as esstrat
+from bridge_levels import LevelsWatcher as ESLW
+from bridge_gex import BridgeGex
+
+publish(lp, {"ts_utc": "x", "session": "ny", "spx": 6500.0, "es": 6520.4,
+             "basis": 20.4, "basis_ts_utc": "x",
+             "walls": {"call": {"strike": 6550, "zone_lo": 6545,
+                                "zone_hi": 6555, "confidence": 0.72,
+                                "tenure_min": 40, "dominance": 3.1},
+                       "put": {"strike": 6450, "zone_lo": 6445,
+                               "zone_hi": 6455, "confidence": 0.65,
+                               "tenure_min": 40, "dominance": 2.8}},
+             "es_walls": None, "flip": 6480, "regime": "+",
+             "net_gex_b": 1.2, "magnets": [6600],
+             "wall_ts_utc": "x", "stale": False, "wall_age_min": 0.0,
+             "candidates": [], "chain_frame": {}, "oi_ts_utc": "x",
+             "regime_info": {}})
+# fill es_walls like the bridge would
+doc = json.load(open(lp))
+doc["es_walls"] = bmain._es_walls(doc["walls"], 20.4)
+json.dump(doc, open(lp, "w"))
+
+elw = ESLW(shared_dir=tmpd)
+bg = BridgeGex(elw)
+check("bridgegex-refresh", bg.refresh() is True)
+check("bridgegex-call-es", bg.call_wall == 6570.5, bg.call_wall)
+check("bridgegex-zone-es", bg.call_zone == (6565.5, 6575.5), bg.call_zone)
+check("bridgegex-regime", bg.gamma_regime() == "+")
+wall, side, edge, conf = bg.wall_for_fade(6564.0)
+check("bridgegex-fade-touch",
+      wall == 6570.5 and side == "short" and edge == 6565.5, (wall, side, edge))
+check("bridgegex-fade-miss", bg.wall_for_fade(6500.0)[0] is None)
+check("bridgegex-magnet", bg.magnet_beyond(6560.0, 1) == 6620.4, bg.magnet_beyond(6560.0, 1))
+check("bridgegex-dominance", bg.dominance(6570.5, "C", {}) == 3.1)
+check("bridgegex-flip-es", bg.flip == 6500.4, bg.flip)
+
+# ES WallBreakState with adapter (min_conf override)
+wb2 = esstrat.WallBreakState()
+evs = wb2.note(6564.0, bg, {}, min_conf=0.5)
+check("es-wb-arm", wb2.armed is not None, wb2.armed)
+
+# ============ 9. PA sleeves (synthetic MT5 bars) ============
+pa = esstrat.OvernightPA()
+sess_start = datetime(2026, 10, 1, 18, 0, tzinfo=ET)
+pa.reset(sess_start)
+bars = []
+t = sess_start
+px = 6500.0
+for i in range(120):  # 2h of bars, range 6495..6505 (10pt -> tradeable)
+    hi = 6505.0 if i % 2 == 0 else 6504.0
+    lo = 6495.0 if i % 3 == 0 else 6496.0
+    bars.append((t, px, hi, lo, px))
+    t += timedelta(minutes=1)
+pa.note_bars(bars)
+check("pa-range", pa.on_high == 6505.0 and pa.on_low == 6495.0,
+      (pa.on_high, pa.on_low))
+now_on = datetime(2026, 10, 1, 22, 0, tzinfo=ET)
+c = pa.evaluate_c(now_on, 6495.5)  # touch of ON low
+check("pa-fade-signal", c is not None and c["trigger"] == "pa_fade", c)
+# sweep: exceed low by >=2 then reclaim within 15 min
+bars2 = list(bars)
+t2 = sess_start + timedelta(minutes=120)
+bars2.append((t2, 6492.0, 6493.0, 6491.0, 6492.5))      # sweep low
+bars2.append((t2 + timedelta(minutes=5), 6496.0, 6497.0, 6495.5, 6496.5))  # reclaim
+pa.note_bars(bars2)
+d = pa.evaluate_d(sess_start + timedelta(minutes=126), 6496.5)
+check("pa-sweep-signal", d is not None and d["trigger"] == "pa_sweep", d)
+
+# ============ 10. py_compile everything ============
+import py_compile
+roots = [os.path.expanduser("~/workspace/gex_bridge"),
+         os.path.expanduser("~/workspace/algo"),
+         os.path.expanduser("~/workspace/algo_es")]
+bad = []
+for r in roots:
+    for f in os.listdir(r):
+        if f.endswith(".py"):
+            try:
+                py_compile.compile(os.path.join(r, f), doraise=True)
+            except Exception as e:
+                bad.append((f, str(e)))
+check("py-compile-all", not bad, bad)
+
+print()
+print(f"{len(PASS)} passed, {len(FAIL)} failed")
+if FAIL:
+    print("FAILURES:", FAIL)
+    sys.exit(1)

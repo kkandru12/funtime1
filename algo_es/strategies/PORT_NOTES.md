@@ -1,1 +1,127 @@
-IyBQT1JUIE5PVEVTIOKAlCBBcGV4IEdsb2JleCBzdHJhdGVnaWVzIOKGkiBgYWxnb19lcy9zdHJhdGVnaWVzL2AKClNvdXJjZTogYH4vd29ya3NwYWNlL3VzZXIvZmlsZXMvQXBleHRyYWRlcl9FU19PcHRpb25zX1BSRV9QT1NUX0tLLXYyLnB5YCAocHJpdmF0ZSwgdW5tb2RpZmllZCkuClRhcmdldDogb25lIG1vZHVsZSBwZXIgc3RyYXRlZ3ksIGVhY2ggZXhwb3NpbmcKYGNsYXNzIFN0cmF0ZWd5YCB3aXRoIGBfX2luaXRfXyhjb25maWcpYCBhbmQgYG9uX2JhcihiYXIsIHN0YXRlKSAtPiBTaWduYWwgfCBOb25lYC4KCmBiYXJgID0gbmV3ZXN0ICoqQ0xPU0VEKiogYmFyIGRpY3QgYHt0aW1lLCBvcGVuLCBoaWdoLCBsb3csIGNsb3NlfWAuCmBzdGF0ZWAgPSBkaWN0IHRoZSBjYWxsZXIgcG9wdWxhdGVzIChkb2N1bWVudGVkIHBlciBtb2R1bGUgYmVsb3cpLgpgU2lnbmFsYCAoaW4gYHNpZ25hbC5weWApOiBgc2lkZSwgZW50cnlfcHgsIHN0b3BfcHgsIHRhcmdldF9weCwgc3RyYXRlZ3lfbmFtZSwgcmVhc29uLCBjb25maWRlbmNlLCBleHRyYWAuCgojIyBDbG9zZWQtYmFyIGNvbnZlbnRpb24gKGltcG9ydGFudCkKCkFwZXggZXZhbHVhdGVzIG9uIGBiYXJzLmlsb2NbLTJdYCBiZWNhdXNlIGBpbG9jWy0xXWAgaXMgdGhlIGZvcm1pbmcgYmFyLgpUaGUgcG9ydCBjb25zdW1lcyAqKmNsb3NlZCBiYXJzIG9ubHkqKiwgc28gZXZlcnkgImxhc3QgY2xvc2VkIiBpbmRleCBzaGlmdHMgYnkgb25lOgpBcGV4IGBpbG9jWy0yXWAg4oaSIHBvcnQgYGJhcnNbLTFdYDsgQXBleCBgaWxvY1stM11gIOKGkiBwb3J0IGBiYXJzWy0yXWAuClNlbWFudGljcyBhcmUgaWRlbnRpY2FsIGFzIGxvbmcgYXMgdGhlIGNhbGxlciBuZXZlciBmZWVkcyBhIGZvcm1pbmcgYmFyCihleGNlcHQgYGRtYTUyMGAgbTEtbW9kZSwgd2hlcmUgdGhlIGZvcm1pbmcgdGYgY2FuZGxlIGlzIGV4cGxpY2l0bHkgdGhlIGxhc3QKZWxlbWVudCBvZiBgc3RhdGVbInRmX2JhcnMiXVt0Zl1gIOKAlCBkb2N1bWVudGVkIGluIHRoYXQgbW9kdWxlKS4KCiMjIFdoYXQgd2FzIHN0cmlwcGVkIGZyb20gYWxsIGZpdmUKCi0gKipNVDVFeGVjdXRvcioqIOKGkiByZXBsYWNlZCBieSB0aGUgYFNpZ25hbGAgZGF0YWNsYXNzLiBUaGUgY2FsbGVyIGV4ZWN1dGVzLgotICoqUG9zaXRpb24gZ3VhcmRzKiogKGBnZXRfcG9zaXRpb25zYCwgb25lLWF0LWEtdGltZSwgc2FtZS1kaXJlY3Rpb24gc3RhY2tpbmcpOgogIGV4ZWN1dG9yLWxldmVsLCBub3cgdGhlIGNhbGxlcidzIGpvYi4gRWFjaCBTdHJhdGVneSBzdGlsbCByZXNldHMgaXRzIG93bgogIHN0YXRlIG1hY2hpbmUgb24gZmlyZSAoYXMgQXBleCBkb2VzKSBhbmQga2VlcHMgaXRzIGNvb2xkb3ducy9kZWR1cC4KLSAqKkRPTSBnYXRlcyoqIChgZG9tX2ZvcmNlX3RyYWRlYCAvIGBkb21fZ2V4X2FjdGlvbmAgY29uZmxpY3QgY2hlY2tzIGluIFZPQgogIGFuZCBTUVVFRVpFKTogcmVtb3ZlZCDigJQgRE9NIG9yZGVyLWZsb3cgZmVlZCBkb2VzIG5vdCBleGlzdCBpbiB0aGUgbmV3IHN0YWNrLgotICoqTmV3cy1jYWxlbmRhciBnYXRlKiogKGBpc19uZXdzX3dpbmRvd19hY3RpdmVgIGluIFNRVUVFWkUpOiByZW1vdmVkLgotICoqQXBleCB0aHJlYWRpbmcgbW9kZWwqKiAocmVmcmVzaCB0aHJlYWRzLCBiYXIgY2FjaGVzLCBsb2Nrcyk6IHRoZSBjYWxsZXIKICBvd25zIGJhciBmZWVkczsgVk9CJ3MgMzAgcyB6b25lIHJlZnJlc2ggYmVjYW1lIGEgdGltZS10aHJvdHRsZWQgcmVjb21wdXRlCiAgaW5zaWRlIGBvbl9iYXJgLgotICoqTG9nZ2luZyoqOiBzdGFuZGFyZCBgbG9nZ2luZ2AgcGVyIG1vZHVsZSAoYGFsZ29fZXMuc3RyYXRlZ2llcy48bmFtZT5gKS4KLSAqKkdFWCBjbGllbnQgb2JqZWN0Kiog4oaSIG9wdGlvbmFsIHBsYWluLWRpY3QgYHN0YXRlWyJnZXgiXWAKICAoYGNhbGxfd2FsbGAsIGBwdXRfd2FsbGAsIHBsdXMgdmFubmEvY2hhcm0gZmllbGRzIGZvciBTUVVFRVpFKS4KLSAqKlNQWC1hbmNob3JlZCBzeW50aCA1RE1BKiogKGBfZGFpbHlfNWRtYWAgdmlhIHNlcnZlciBzZWVkKTogcmVwbGFjZWQgYnkKICBtZWFuIG9mIGxhc3QgNSBgc3RhdGVbImRhaWx5X2Nsb3NlcyJdYCwgd2l0aCB0aGUgc2FtZSBBcGV4IGZhbGxiYWNrcy4KCiMjIFBlci1zdHJhdGVneSBub3RlcwoKIyMjIHZvYi5weSDigJQgVk9CX1JldGVzdCAoQXBleCBgcnVuX3ZvYl9jeWNsZWAsIEwxMjI0MykKLSBGYWl0aGZ1bDogSDEgRU1BKDUpL0VNQSgxOCkgY3Jvc3Mgem9uZXMgKHBvcnQgb2YgTVE1IGBWT0JfQ2FsY2ApLCB6b25lCiAgaW52YWxpZGF0aW9uIHZzIGxhc3QgSDEgY2xvc2UsIGtlZXAtbGFzdC0xNSwgdHJhZGUgbW9zdC1yZWNlbnQgem9uZSBvbmx5LgotIEZhaXRoZnVsOiAzLXN0YXRlIG1hY2hpbmUgSURMReKGklRPVUNIRUTihpJSRVZFUlNFROKGkmZpcmUgb24gY2xvc2VkIE0xIGJhcnMsCiAgYGJ1Zj1BVFIxNCowLjVgLCBwcm94aW1pdHkgYEFUUioyLjBgLCBjbGVhciBkaXN0YW5jZSBgQVRSKjAuMWAuCi0gRmFpdGhmdWw6IFRQID0gbGFzdF9wcmljZSDCsTQwLCBTTCA9IHdhbGwg4oiTMTAsIHRpY2stcm91bmRlZC4KLSBDaGFuZ2VkOiB6b25lIHJlZnJlc2ggdGhyZWFkIOKGkiB0aHJvdHRsZWQgcmVjb21wdXRlIChgem9uZV9yZWZyZXNoX3NlYz0zMGApLgogIE0xIHpvbmUgZmFsbGJhY2sgc3RheXMgT0ZGIGJ5IGRlZmF1bHQgKEFwZXggYFZPQl9NMV9aT05FX0ZBTExCQUNLPTBgKS4KLSBDaGFuZ2VkOiBgVk9CX09ORV9BVF9BX1RJTUVgIHBvc2l0aW9uIGd1YXJkIGlzIGNhbGxlci1zaWRlIG5vdy4KLSBOZWVkczogYHN0YXRlWyJiYXJzX2gxIl1gICjiiaUgfjI1IGJhcnMpLCBgc3RhdGVbImJhcnNfbTEiXWAgKOKJpTE1IGZvciBBVFIpLAogIGBub3dfZXRgLCBgbGFzdF9wcmljZWAuCgojIyMgc3F1ZWV6ZS5weSDigJQgU1FVRUVaRSAoQXBleCBgcnVuX3NxdWVlemVfY3ljbGVgLCBMMTIzODcpCi0gRmFpdGhmdWw6IGBuZXRfbW9tID0gwrF2YW5uYV9zY29yZSDCsSBjaGFybV9zY29yZWAsIHRocmVzaG9sZHMgMC4zNQogICgwLjIwIGluIHRoZSAxNTo0NeKAkzE2OjQ1IEVUIEVPRCB3aW5kb3cpLCBTTCAyMCAoMTUgRU9EKSwgVFAgPSBHRVgKICBjYWxsL3B1dCB3YWxsIGVsc2UgwrE0MCAowrEzMCBFT0QpLCA2MCBzIGNvb2xkb3duLCBsYWJlbHMKICBFT0RfUmFtcCAvIERlYWxlcl9VbndpbmQgLyBEZWFsZXJfSGVkZ2UuCi0gKipDYW5ub3QgcnVuIG9uIHByaWNlIGFjdGlvbiBhbG9uZSoqIOKAlCB0aGUgdHJpZ2dlciBJUyB0aGUgR0VYIGZlZWQuCiAgUmV0dXJucyBgTm9uZWAgdW5sZXNzIGBzdGF0ZVsiZ2V4Il1gIGNhcnJpZXMKICBgdmFubmFfc2NvcmUsIHZhbm5hX2RpciwgY2hhcm1fc2NvcmUsIGNoYXJtX2RpciwgaXNfbmVnYXRpdmVfcmVnaW1lLAogIGlzX2ZyZXNoLCBjYWxsX3dhbGwsIHB1dF93YWxsYC4KLSBgU1FVRUVaRV9SRVFVSVJFX05FR19HQU1NQT0wYCBkZWZhdWx0IGtlcHQgKGdhdGUgaW5lcnQsIGFzIGluIEFwZXgpLgotIGByZXF1aXJlX2ZyZXNoX2dleD1UcnVlYCBkZWZhdWx0IG1pcnJvcnMgQXBleCAoc3RhbGUgR0VYIOKGkiBza2lwIHVubGVzcwogIHRoZSBjYWxsZXIgcmVsYXhlcyBpdCkuCi0gTmVlZHM6IGBub3dfZXRgLCBgbGFzdF9wcmljZWAsIGBnZXhgIGRpY3QuCgojIyMgYmIyYy5weSDigJQgQkItMkMgKEFwZXggYHJ1bl9jb25zb2xfYmJfMmNfY3ljbGVgLCBMMTIwMjApCi0gRmFpdGhmdWw6IHBlci1iYXIgQm9sbGluZ2VyICgyMCwgMi4wLCAqKnBvcHVsYXRpb24qKiBzaWdtYSB0byBtYXRjaCB0aGUgRUEpLAogIEEtY2xvc2VzLW91dHNpZGUtb3duLWJhbmQg4oaSIGZhZGUgZGlyZWN0aW9uLCBCLWJhY2staW5zaWRlICsgY29ycmVjdC1oYWxmCiAgcnVsZSAodjIuNzMgZml4KS4KLSBGYWl0aGZ1bCBkZWZhdWx0IGBlbnRyeV90cmlnZ2VyPSJmaXJzdF9tMSJgOiBBID0gbGFzdCBjbG9zZWQgc3RydWN0dXJlIGJhciwKICBlbnRyeSA9IGZpcnN0IGNsb3NlZCBNMSBvZiB0aGUgbmV4dCBzdHJ1Y3R1cmUgYmFyLCByZWZ1c2VkIGlmIHRoYXQgTTEgaXMKICBvbGRlciB0aGFuIDE4MCBzLiBGb3JtaW5nLWJhciBvcGVuIHRpbWUgaXMgZGVyaXZlZCBhcwogIGBBLnRpbWUgKyBzdHJ1Y3RfdGZgIChjYWxsZXIgZmVlZHMgY2xvc2VkIGJhcnMgb25seSkuCi0gRmFpdGhmdWwgdHdvLWNhbmRsZSBicmFuY2g6IGVudHJ5LVRGIHBpbiB3aW5zIG91dHJpZ2h0IOKGkiBlbHNlIEZWRyBsaW1pdAogIHdoZW4gQiB3aXRoaW4gMjAgcHRzIG9mIDVETUEgKGRyb3BwZWQg4oCUIG5vdCBkb3duZ3JhZGVkIOKAlCB3aGVuIG5vIGltYmFsYW5jZSkKICDihpIgZWxzZSBtYXJrZXQgYXQgQiBjbG9zZS4gVFAgPSA1RE1BIGNhcHBlZCBhdCA0MCBwdHMgKGBfdHBfY2FwcGVkYCk7CiAgU0wgwrEyMDsgc2V0dXAgZHJvcHBlZCB3aGVuIDVETUEgaXMgbm90IGFoZWFkIG9mIGVudHJ5LgotIDVETUE6IG1lYW4gb2YgbGFzdCA1IGBkYWlseV9jbG9zZXNgLCBmYWxsYmFjayBTTUEoNSkgb2Ygc3RydWN0dXJlIGJhcnMuCi0gRGVmYXVsdHM6IGBzdHJ1Y3RfdGY9IjRoImAsIGBlbnRyeV90Zj0iMWgiYCAoQXBleCBlbnYgZGVmYXVsdHMpLgotIE5lZWRzOiBgc3RhdGVbImJhcnMiXWAgKHN0cnVjdHVyZSwg4omlMjMpLCBgc3RhdGVbImVudHJ5X2JhcnMiXWAgKHR3by1jYW5kbGUKICBwaW4pLCBgc3RhdGVbImJhcnNfbTEiXWAgKGZpcnN0X20xKSwgYHN0YXRlWyJkYWlseV9jbG9zZXMiXWAsIGBub3dfZXRgLAogIGBsYXN0X3ByaWNlYCwgYHN0cnVjdF90ZmAuCgojIyMgZG1hNTIwLnB5IOKAlCBETUEtNTIwIChBcGV4IGBydW5fNV8yMGRtYV9zd2VlcGAsIEw5ODM3KQotIEZhaXRoZnVsOiBkYWlseSA1LzIwIFNNQXMgZnJvbSBjb25maXJtZWQgZGFpbHkgY2xvc2VzICjiiaUyMCByZXF1aXJlZCk7CiAgImluc2lkZSIgZG91YmxlLXN3ZWVwIHJ1bGUgKGxvdyDiiaQgYm90aCwgaGlnaCDiiaUgYm90aCwgY2xvc2UgYmV0d2Vlbik7CiAgZGlyZWN0aW9uIGZhZGVzIHRoZSBsYXJnZXIgb3ZlcnNob290OyBib3RoIG92ZXJzaG9vdHMg4omlIDIuMCBwdHMuCi0gRmFpdGhmdWw6IGBlbnRyeV9tb2RlPSJtMSJgIGRlZmF1bHQg4oCUIHN3ZWVwIHJlYWQgb2ZmIHRoZSBGT1JNSU5HIHRmIGNhbmRsZSwKICBkZWNpc2lvbiBjbG9zZSA9IGxhc3QgY2xvc2VkIE0xIChyZWplY3RlZCBpZiBpdCBwcmVkYXRlcyB0aGUgdGYgY2FuZGxlIG9yCiAgaXMgb2xkZXIgdGhhbiAxODAgcyk7IGAiY2xvc2VkImAgbW9kZSB1c2VzIHRoZSBsYXN0IGNsb3NlZCB0ZiBjYW5kbGUuCi0gRmFpdGhmdWw6IFNMID0gc3dlcHQgZXh0cmVtZSDCsTMuMCAodGhlIHdpY2sgaXMgdGhlIGludmFsaWRhdGlvbik7CiAgVFAgPSB0ZiBCb2xsaW5nZXIgYmFuZCAodXBwZXIgZm9yIGJ1eSAvIGxvd2VyIGZvciBzZWxsKSBwdWxsZWQgaW4gdG8KICA0MCBwdHM7IGRyb3BwZWQgd2hlbiB0aGUgYmFuZCBpcyBub3QgYmV5b25kIGVudHJ5LgotIEZhaXRoZnVsOiBgIm91dHNpZGUiYCB0cmF2ZXJzZSBtb2RlICsgcGluLWJhciBnYXRlICg2MC8zNS8yMCkgcG9ydGVkIGJlaGluZAogIGBjbG9zZV9tb2RlPSJvdXRzaWRlImAgLyBgcGluX2dhdGVgIHBhcmFtcyAocGluIGdhdGUgZGVsaWJlcmF0ZWx5IE5PVAogIGFwcGxpZWQgaW4gaW5zaWRlIG1vZGUsIGFzIGluIEFwZXgpLgotIEZpcnN0IG1hdGNoaW5nIFRGIHdpbnM7IGNvb2xkb3duIDMwMCBzOyBvbmUgc2lnbmFsIHBlciB0ZiBjYW5kbGUuCi0gTmVlZHM6IGBzdGF0ZVsidGZfYmFycyJdYCA9IGB7IjFoIjogWy4uLl0sICI0aCI6IFsuLi5dfWAgKGZvcm1pbmcgYmFyIGxhc3QKICBmb3IgbTEgbW9kZSksIGBzdGF0ZVsiYmFyc19tMSJdYCwgYHN0YXRlWyJkYWlseV9jbG9zZXMiXWAgKOKJpTIwKSwgYG5vd19ldGAuCgojIyMgc21hY3Jvc3MucHkg4oCUIFNNQS1DUk9TUyAoQXBleCBgcnVuX3NtYV9jcm9zc19jeWNsZWAsIEwxNTEzMCkKLSBGYWl0aGZ1bDogTTE1IFNNQSg1MCkvU01BKDIwMCksIGNyb3NzIG9uIHR3byBjbG9zZWQgY2FuZGxlcywgc2VwYXJhdGlvbgogIOKJpSAyLjAgcHRzLCBmbGF04oaSbG9uZ+KGknNob3J0IHN0YXRlIG1hY2hpbmUsIDkwMCBzIGNvb2xkb3duLCBTTCDCsTI1LAogIFRQID0gR0VYIGNhbGwvcHV0IHdhbGwgKG9ubHkgd2hlbiA+NSBwdHMgYmV5b25kIGVudHJ5KSBlbHNlIMKxNjAsCiAgUjpSIOKJpSAxLjUgZ2F0ZS4KLSBTZXNzaW9uOiBHbG9iZXgtb25seSBnYXRlICsgdGhlIDE2OjU54oCTMTg6MDAgRVQgbWFpbnRlbmFuY2UtcGF1c2UgZXhjbHVzaW9uCiAgKGBfYXBleF9lbnRyeV93aW5kb3dfb3BlbmAgcG9ydCkuCi0gKipOb3RlOiB0aGUgMi1wdCBzZXBhcmF0aW9uIGZpbHRlciBtYWtlcyB0aGlzIHN0cmF0ZWd5IGV4dHJlbWVseQogIHNlbGVjdGl2ZSoqIOKAlCBhIGNyb3NzIGlzIG9ubHkgZGV0ZWN0ZWQgd2hlbiB0aGUgU01BcyBhcmUgYWxyZWFkeSDiiaUyIHB0cwogIGFwYXJ0IGF0IHRoZSBjcm9zcyBiYXIsIHdoaWNoIG5lZWRzIGEgfjEzMCsgcHQgc2luZ2xlLWJhciBpbXB1bHNlIG9uIE0xNS4KICBUaGUgZWFybGllciAzLW1vbnRoIGJhY2t0ZXN0IGZvdW5kIDM2IHJhdyBjcm9zc2VzLCAwIHBhc3NpbmcgdGhlIGZpbHRlci4KICBQb3J0ZWQgZmFpdGhmdWxseTsgc2VsZWN0aXZpdHkgaXMgQXBleCdzLCBub3QgYSBwb3J0IGFydGlmYWN0LgotIE5lZWRzOiBgc3RhdGVbImJhcnMiXWAgKE0xNSwg4omlMjA1KSwgYG5vd19ldGAsIGBsYXN0X3ByaWNlYCwKICBvcHRpb25hbCBgc3RhdGVbImdleCJdYCA9IGB7Y2FsbF93YWxsLCBwdXRfd2FsbH1gLgoKIyMgQ291bGQgbm90IGJlIHBvcnRlZCBmYWl0aGZ1bGx5CgoxLiAqKlNRVUVFWkUgd2l0aG91dCBHRVgqKiDigJQgdGhlIGVudGlyZSBzaWduYWwgaXMgdmFubmEvY2hhcm0gZGVhbGVyLWZsb3cKICAgc2NvcmVzLiBUaGVyZSBpcyBubyBwcmljZS1hY3Rpb24gZXF1aXZhbGVudCBpbiB0aGUgQXBleCBzb3VyY2U7IHRoZSBtb2R1bGUKICAgcmVxdWlyZXMgYHN0YXRlWyJnZXgiXWAgYW5kIHJldHVybnMgYE5vbmVgIHdpdGhvdXQgaXQuCjIuICoqU01BLUNST1NTIC8gQkItMkMgR0VYLXdhbGwgVFBzKiog4oCUIGRlZ3JhZGUgZ3JhY2VmdWxseSB0byB0aGUgZml4ZWQtcG9pbnQKICAgZmFsbGJhY2tzICjCsTYwIC8gwrE0MCkgd2hlbiBgc3RhdGVbImdleCJdYCBpcyBhYnNlbnQsIGV4YWN0bHkgYXMgQXBleCBkb2VzLgozLiAqKlZPQidzIEdFWCBjb250ZXh0Kiog4oCUIEFwZXggZmV0Y2hlZCBpdCBvbmx5IHRvIGhhbmQgdG8gYGV4ZWN1dGUoKWA7CiAgIHRoZSB0cmlnZ2VyIGlzIHB1cmUgcHJpY2Ugc3RydWN0dXJlLCBzbyBub3RoaW5nIHdhcyBsb3N0Lgo0LiAqKkJCLTJDIGBfZGFpbHlfNWRtYWAgU1BYLWFuY2hvcmVkIHBhdGgqKiDigJQgbmVlZGVkIHRoZSBBcGV4IHNlcnZlcidzCiAgIHNlZWRlZCBTUFggYW5jaG9yczsgcmVwbGFjZWQgYnkgcGxhaW4gZGFpbHkgY2xvc2VzICh0aGUKLi4uW3RydW5jYXRlZCAxMTQ5IGNoYXJzXQ==
+# PORT NOTES — Apex Globex strategies → `algo_es/strategies/`
+
+Source: `~/workspace/user/files/Apextrader_ES_Options_PRE_POST_KK-v2.py` (private, unmodified).
+Target: one module per strategy, each exposing
+`class Strategy` with `__init__(config)` and `on_bar(bar, state) -> Signal | None`.
+
+`bar` = newest **CLOSED** bar dict `{time, open, high, low, close}`.
+`state` = dict the caller populates (documented per module below).
+`Signal` (in `signal.py`): `side, entry_px, stop_px, target_px, strategy_name, reason, confidence, extra`.
+
+## Closed-bar convention (important)
+
+Apex evaluates on `bars.iloc[-2]` because `iloc[-1]` is the forming bar.
+The port consumes **closed bars only**, so every "last closed" index shifts by one:
+Apex `iloc[-2]` → port `bars[-1]`; Apex `iloc[-3]` → port `bars[-2]`.
+Semantics are identical as long as the caller never feeds a forming bar
+(except `dma520` m1-mode, where the forming tf candle is explicitly the last
+element of `state["tf_bars"][tf]` — documented in that module).
+
+## What was stripped from all five
+
+- **MT5Executor** → replaced by the `Signal` dataclass. The caller executes.
+- **Position guards** (`get_positions`, one-at-a-time, same-direction stacking):
+  executor-level, now the caller's job. Each Strategy still resets its own
+  state machine on fire (as Apex does) and keeps its cooldowns/dedup.
+- **DOM gates** (`dom_force_trade` / `dom_gex_action` conflict checks in VOB
+  and SQUEEZE): removed — DOM order-flow feed does not exist in the new stack.
+- **News-calendar gate** (`is_news_window_active` in SQUEEZE): removed.
+- **Apex threading model** (refresh threads, bar caches, locks): the caller
+  owns bar feeds; VOB's 30 s zone refresh became a time-throttled recompute
+  inside `on_bar`.
+- **Logging**: standard `logging` per module (`algo_es.strategies.<name>`).
+- **GEX client object** → optional plain-dict `state["gex"]`
+  (`call_wall`, `put_wall`, plus vanna/charm fields for SQUEEZE).
+- **SPX-anchored synth 5DMA** (`_daily_5dma` via server seed): replaced by
+  mean of last 5 `state["daily_closes"]`, with the same Apex fallbacks.
+
+## Per-strategy notes
+
+### vob.py — VOB_Retest (Apex `run_vob_cycle`, L12243)
+- Faithful: H1 EMA(5)/EMA(18) cross zones (port of MQ5 `VOB_Calc`), zone
+  invalidation vs last H1 close, keep-last-15, trade most-recent zone only.
+- Faithful: 3-state machine IDLE→TOUCHED→REVERSED→fire on closed M1 bars,
+  `buf=ATR14*0.5`, proximity `ATR*2.0`, clear distance `ATR*0.1`.
+- Faithful: TP = last_price ±40, SL = wall ∓10, tick-rounded.
+- Changed: zone refresh thread → throttled recompute (`zone_refresh_sec=30`).
+  M1 zone fallback stays OFF by default (Apex `VOB_M1_ZONE_FALLBACK=0`).
+- Changed: `VOB_ONE_AT_A_TIME` position guard is caller-side now.
+- Needs: `state["bars_h1"]` (≥ ~25 bars), `state["bars_m1"]` (≥15 for ATR),
+  `now_et`, `last_price`.
+
+### squeeze.py — SQUEEZE (Apex `run_squeeze_cycle`, L12387)
+- Faithful: `net_mom = ±vanna_score ± charm_score`, thresholds 0.35
+  (0.20 in the 15:45–16:45 ET EOD window), SL 20 (15 EOD), TP = GEX
+  call/put wall else ±40 (±30 EOD), 60 s cooldown, labels
+  EOD_Ramp / Dealer_Unwind / Dealer_Hedge.
+- **Cannot run on price action alone** — the trigger IS the GEX feed.
+  Returns `None` unless `state["gex"]` carries
+  `vanna_score, vanna_dir, charm_score, charm_dir, is_negative_regime,
+  is_fresh, call_wall, put_wall`.
+- `SQUEEZE_REQUIRE_NEG_GAMMA=0` default kept (gate inert, as in Apex).
+- `require_fresh_gex=True` default mirrors Apex (stale GEX → skip unless
+  the caller relaxes it).
+- Needs: `now_et`, `last_price`, `gex` dict.
+
+### bb2c.py — BB-2C (Apex `run_consol_bb_2c_cycle`, L12020)
+- Faithful: per-bar Bollinger (20, 2.0, **population** sigma to match the EA),
+  A-closes-outside-own-band → fade direction, B-back-inside + correct-half
+  rule (v2.73 fix).
+- Faithful default `entry_trigger="first_m1"`: A = last closed structure bar,
+  entry = first closed M1 of the next structure bar, refused if that M1 is
+  older than 180 s. Forming-bar open time is derived as
+  `A.time + struct_tf` (caller feeds closed bars only).
+- Faithful two-candle branch: entry-TF pin wins outright → else FVG limit
+  when B within 20 pts of 5DMA (dropped — not downgraded — when no imbalance)
+  → else market at B close. TP = 5DMA capped at 40 pts (`_tp_capped`);
+  SL ±20; setup dropped when 5DMA is not ahead of entry.
+- 5DMA: mean of last 5 `daily_closes`, fallback SMA(5) of structure bars.
+- Defaults: `struct_tf="4h"`, `entry_tf="1h"` (Apex env defaults).
+- Needs: `state["bars"]` (structure, ≥23), `state["entry_bars"]` (two-candle
+  pin), `state["bars_m1"]` (first_m1), `state["daily_closes"]`, `now_et`,
+  `last_price`, `struct_tf`.
+
+### dma520.py — DMA-520 (Apex `run_5_20dma_sweep`, L9837)
+- Faithful: daily 5/20 SMAs from confirmed daily closes (≥20 required);
+  "inside" double-sweep rule (low ≤ both, high ≥ both, close between);
+  direction fades the larger overshoot; both overshoots ≥ 2.0 pts.
+- Faithful: `entry_mode="m1"` default — sweep read off the FORMING tf candle,
+  decision close = last closed M1 (rejected if it predates the tf candle or
+  is older than 180 s); `"closed"` mode uses the last closed tf candle.
+- Faithful: SL = swept extreme ±3.0 (the wick is the invalidation);
+  TP = tf Bollinger band (upper for buy / lower for sell) pulled in to
+  40 pts; dropped when the band is not beyond entry.
+- Faithful: `"outside"` traverse mode + pin-bar gate (60/35/20) ported behind
+  `close_mode="outside"` / `pin_gate` params (pin gate deliberately NOT
+  applied in inside mode, as in Apex).
+- First matching TF wins; cooldown 300 s; one signal per tf candle.
+- Needs: `state["tf_bars"]` = `{"1h": [...], "4h": [...]}` (forming bar last
+  for m1 mode), `state["bars_m1"]`, `state["daily_closes"]` (≥20), `now_et`.
+
+### smacross.py — SMA-CROSS (Apex `run_sma_cross_cycle`, L15130)
+- Faithful: M15 SMA(50)/SMA(200), cross on two closed candles, separation
+  ≥ 2.0 pts, flat→long→short state machine, 900 s cooldown, SL ±25,
+  TP = GEX call/put wall (only when >5 pts beyond entry) else ±60,
+  R:R ≥ 1.5 gate.
+- Session: Globex-only gate + the 16:59–18:00 ET maintenance-pause exclusion
+  (`_apex_entry_window_open` port).
+- **Note: the 2-pt separation filter makes this strategy extremely
+  selective** — a cross is only detected when the SMAs are already ≥2 pts
+  apart at the cross bar, which needs a ~130+ pt single-bar impulse on M15.
+  The earlier 3-month backtest found 36 raw crosses, 0 passing the filter.
+  Ported faithfully; selectivity is Apex's, not a port artifact.
+- Needs: `state["bars"]` (M15, ≥205), `now_et`, `last_price`,
+  optional `state["gex"]` = `{call_wall, put_wall}`.
+
+## Could not be ported faithfully
+
+1. **SQUEEZE without GEX** — the entire signal is vanna/charm dealer-flow
+   scores. There is no price-action equivalent in the Apex source; the module
+   requires `state["gex"]` and returns `None` without it.
+2. **SMA-CROSS / BB-2C GEX-wall TPs** — degrade gracefully to the fixed-point
+   fallbacks (±60 / ±40) when `state["gex"]` is absent, exactly as Apex does.
+3. **VOB's GEX context** — Apex fetched it only to hand to `execute()`;
+   the trigger is pure price structure, so nothing was lost.
+4. **BB-2C `_daily_5dma` SPX-anchored path** — needed the Apex server's
+   seeded SPX anchors; replaced by plain daily closes (the
+...[truncated 1149 chars]

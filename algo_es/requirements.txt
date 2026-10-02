@@ -1,1 +1,4 @@
-bnVtcHk9PTIuMi42CnR6ZGF0YTsgc3lzX3BsYXRmb3JtID09ICJ3aW4zMiIKTWV0YVRyYWRlcjU7IHN5c19wbGF0Zm9ybSA9PSAid2luMzIiICAjIE1UNSBleGVjdXRpb24gYmFja2VuZCAoV2luZG93cy1vbmx5OwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyB0aGUgQU1QIHRlcm1pbmFsIG11c3QgcnVuIG9uIHRoaXMgbWFjaGluZSkK
+numpy==2.2.6
+tzdata; sys_platform == "win32"
+MetaTrader5; sys_platform == "win32"  # MT5 execution backend (Windows-only;
+                                     # the AMP terminal must run on this machine)

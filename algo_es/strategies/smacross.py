@@ -1,1 +1,152 @@
-IiIiU01BLUNST1NTIOKAlCBwb3J0ZWQgZnJvbSBBcGV4IHJ1bl9zbWFfY3Jvc3NfY3ljbGUuCgpFUyBNMTUgU01BKDUwKS9TTUEoMjAwKSBHb2xkZW4gQ3Jvc3MgLyBEZWF0aCBDcm9zcy4KCiAgQ3Jvc3MgY29uZmlybWVkIG9uIHR3byBDTE9TRUQgY2FuZGxlczogZmFzdFstMl0gdnMgc2xvd1stMl0gKCJwcmV2aW91cyIpCiAgYW5kIGZhc3RbLTFdIHZzIHNsb3dbLTFdICgiY3VycmVudCIpLiBJbiBBcGV4IHRoZXNlIGFyZSBpbG9jWy0zXS9pbG9jWy0yXQogIGJlY2F1c2UgaWxvY1stMV0gaXMgdGhlIGZvcm1pbmcgYmFyOyBoZXJlIHRoZSBjYWxsZXIgZmVlZHMgQ0xPU0VEIGJhcnMKICBvbmx5LCBzbyB0aGUgaW5kaWNlcyBzaGlmdCBieSBvbmUg4oCUIHRoZSBzZW1hbnRpY3MgYXJlIGlkZW50aWNhbC4KCiAgZ29sZGVuOiBmYXN0X3ByZXYgPD0gc2xvd19wcmV2IGFuZCBmYXN0X25vdyA+IHNsb3dfbm93IC0+IEJVWQogIGRlYXRoIDogZmFzdF9wcmV2ID49IHNsb3dfcHJldiBhbmQgZmFzdF9ub3cgPCBzbG93X25vdyAtPiBTRUxMCgpHYXRlcyAoaW4gb3JkZXIpOgogIDEuIEdsb2JleC1vbmx5IChvdXRzaWRlIDA5OjMwLTEzOjAwIEVUKQogIDIuIFNlc3Npb246IG5vdCBpbiB0aGUgMTY6NTktMTg6MDAgRVQgbWFpbnRlbmFuY2UgcGF1c2UKICAzLiBNMTUgYmFycyBhdmFpbGFibGUgKD49IDIwNSkKICA0LiBDcm9zcyBwcmVzZW50CiAgNS4gU2VwYXJhdGlvbiBmaWx0ZXI6IHxmYXN0IC0gc2xvd3wgPj0gMi4wIHB0cyAoZmxhdC16b25lIHdoaXBzYXcgZ3VhcmQpCiAgNi4gU3RhdGUgbWFjaGluZTogbm8gcmUtZW50cnkgaW4gdGhlIHNhbWUgZGlyZWN0aW9uIChmbGF0LT5sb25nLT5zaG9ydCkKICA3LiBDb29sZG93biA5MDAgcwogIDguIFNMID0gKy8tMjUgcHRzIDsgVFAgPSBHRVggY2FsbC9wdXQgd2FsbCB3aGVuIGJleW9uZCArLy01IHB0cyBvZiBlbnRyeSwKICAgICBlbHNlICsvLTYwIHB0cyA7IFI6UiA+PSAxLjUgb3IgdGhlIGVudHJ5IGlzIHJlamVjdGVkCgpJbnRlcmZhY2U6CiAgYmFyICAgOiBuZXdlc3QgQ0xPU0VEIE0xNSBiYXIgZGljdAogIHN0YXRlIDogeyJiYXJzIjogWy4uLmNsb3NlZCBNMTUgYmFycywgb2xkZXN0LT5uZXdlc3QuLi5dLAogICAgICAgICAgICJub3dfZXQiOiBkYXRldGltZSAoRVQpLCAibGFzdF9wcmljZSI6IGZsb2F0LAogICAgICAgICAgICJ0aWNrX3NpemUiOiBmbG9hdCwKICAgICAgICAgICAiZ2V4IjogeyJjYWxsX3dhbGwiOiBmbG9hdCwgInB1dF93YWxsIjogZmxvYXR9IChvcHRpb25hbCl9CiIiIgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgbG9nZ2luZwppbXBvcnQgdGltZQpmcm9tIHR5cGluZyBpbXBvcnQgRGljdCwgTGlzdCwgT3B0aW9uYWwKCmZyb20gLnNpZ25hbCBpbXBvcnQgKFNpZ25hbCwgYXBleF9lbnRyeV93aW5kb3dfb3BlbiwgY2xvc2VzLCBnbG9iZXhfb25seV9vaywKICAgICAgICAgICAgICAgICAgICAgcm91bmRfdG9fdGljaykKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvX2VzLnN0cmF0ZWdpZXMuc21hY3Jvc3MiKQoKCmNsYXNzIFN0cmF0ZWd5OgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGNvbmZpZzogT3B0aW9uYWxbRGljdF0gPSBOb25lKToKICAgICAgICBjID0gY29uZmlnIG9yIHt9CiAgICAgICAgZyA9IGMuZ2V0CiAgICAgICAgc2VsZi5mYXN0ID0gaW50KGcoImZhc3QiLCA1MCkpCiAgICAgICAgc2VsZi5zbG93ID0gaW50KGcoInNsb3ciLCAyMDApKQogICAgICAgIHNlbGYubWluX2hpc3RvcnkgPSBpbnQoZygibWluX2hpc3RvcnkiLCBzZWxmLnNsb3cgKyA1KSkKICAgICAgICBzZWxmLnNsX3BvaW50cyA9IGZsb2F0KGcoInNsX3BvaW50cyIsIDI1LjApKQogICAgICAgIHNlbGYudHBfcG9pbnRzID0gZmxvYXQoZygidHBfcG9pbnRzIiwgNjAuMCkpCiAgICAgICAgc2VsZi5taW5fc2VwX3B0cyA9IGZsb2F0KGcoIm1pbl9zZXBfcHRzIiwgMi4wKSkKICAgICAgICBzZWxmLmNvb2xkb3duX3NlYyA9IGZsb2F0KGcoImNvb2xkb3duX3NlYyIsIDkwMC4wKSkKICAgICAgICBzZWxmLm1pbl9yciA9IGZsb2F0KGcoIm1pbl9yciIsIDEuNSkpCiAgICAgICAgc2VsZi50aWNrX3NpemUgPSBmbG9hdChnKCJ0aWNrX3NpemUiLCAwLjI1KSkKICAgICAgICBzZWxmLmdsb2JleF9vbmx5ID0gYm9vbChnKCJnbG9iZXhfb25seSIsIFRydWUpKQogICAgICAgIHNlbGYucnRoX3N0YXJ0ID0gc3RyKGcoInJ0aF9zdGFydCIsICIwOTozMCIpKQogICAgICAgIHNlbGYucnRoX2VuZCA9IHN0cihnKCJydGhfZW5kIiwgIjEzOjAwIikpCiAgICAgICAgc2VsZi5fc3RhdGUgPSAiZmxhdCIgICAgICAgICAgIyBmbGF0IHwgbG9uZyB8IHNob3J0CiAgICAgICAgc2VsZi5fbGFzdF9maXJlID0gMC4wCgogICAgQHN0YXRpY21ldGhvZAogICAgZGVmIF9zbWEodmFsdWVzOiBMaXN0W2Zsb2F0XSwgbjogaW50LCBlbmQ6IGludCkgLT4gT3B0aW9uYWxbZmxvYXRdOgogICAgICAgICIiIlNNQShuKSBlbmRpbmcgYXQgaW5kZXggYGVuZGAgaW5jbHVzaXZlLiIiIgogICAgICAgIGxvID0gZW5kIC0gbiArIDEKICAgICAgICBpZiBsbyA8IDA6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIHN1bSh2YWx1ZXNbbG86ZW5kICsgMV0pIC8gbgoKICAgIGRlZiBvbl9iYXIoc2VsZiwgYmFyOiBEaWN0LCBzdGF0ZTogT3B0aW9uYWxbRGljdF0gPSBOb25lKSAtPiBPcHRpb25hbFtTaWduYWxdOgogICAgICAgIHN0YXRlID0gc3RhdGUgb3Ige30KICAgICAgICBpZiBzZWxmLmdsb2JleF9vbmx5IGFuZCBub3QgZ2xvYmV4X29ubHlfb2soCiAgICAgICAgICAgICAgICBzdGF0ZSwgc2VsZi5ydGhfc3RhcnQsIHNlbGYucnRoX2VuZCk6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgaWYgbm90IGFwZXhfZW50cnlfd2luZG93X29wZW4oc3RhdGUpOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBiYXJzOiBMaXN0W0RpY3RdID0gc3RhdGUuZ2V0KCJiYXJzIikgb3IgW10KICAgICAgICBpZiBsZW4oYmFycykgPCBzZWxmLm1pbl9oaXN0b3J5OgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBsYXN0X3ByaWNlID0gZmxvYXQoc3RhdGUuZ2V0KCJsYXN0X3ByaWNlIikgb3IgYmFyLmdldCgiY2xvc2UiKSBvciAwLjApCiAgICAgICAgaWYgbm90IGxhc3RfcHJpY2U6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIGNsID0gY2xvc2VzKGJhcnMpCiAgICAgICAgbiA9IGxlbihjbCkgLSAxICAgICAgICAgICAgICAgICAgICAgICAjIGxhc3QgQ0xPU0VEIGJhcgogICAgICAgIGZhc3Rfbm93ID0gc2VsZi5fc21hKGNsLCBzZWxmLmZhc3QsIG4pCiAgICAgICAgZmFzdF9wcmV2ID0gc2VsZi5fc21hKGNsLCBzZWxmLmZhc3QsIG4gLSAxKQogICAgICAgIHNsb3dfbm93ID0gc2VsZi5fc21hKGNsLCBzZWxmLnNsb3csIG4pCiAgICAgICAgc2xvd19wcmV2ID0gc2VsZi5fc21hKGNsLCBzZWxmLnNsb3csIG4gLSAxKQogICAgICAgIGlmIE5vbmUgaW4gKGZhc3Rfbm93LCBmYXN0X3ByZXYsIHNsb3dfbm93LCBzbG93X3ByZXYpOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBnb2xkZW4gPSAoZmFzdF9wcmV2IDw9IHNsb3dfcHJldikgYW5kIChmYXN0X25vdyA+IHNsb3dfbm93KQogICAgICAgIGRlYXRoID0gKGZhc3RfcHJldiA+PSBzbG93X3ByZXYpIGFuZCAoZmFzdF9ub3cgPCBzbG93X25vdykKICAgICAgICBpZiBub3QgKGdvbGRlbiBvciBkZWF0aCk6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIHNlcGFyYXRpb24gPSBhYnMoZmFzdF9ub3cgLSBzbG93X25vdykKICAgICAgICBpZiBzZXBhcmF0aW9uIDwgc2VsZi5taW5fc2VwX3B0czoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgYWN0aW9uID0gImJ1eSIgaWYgZ29sZGVuIGVsc2UgInNlbGwiCiAgICAgICAgbmV3X3N0YXRlID0gImxvbmciIGlmIGdvbGRlbiBlbHNlICJzaG9ydCIKICAgICAgICBpZiBzZWxmLl9zdGF0ZSA9PSBuZXdfc3RhdGU6CiAgICAgICAgICAgIHJldHVybiBOb25lICAgICAgICAgICAgICAgICAgICAgICAjIG5vIHNhbWUtZGlyZWN0aW9uIHJlLWVudHJ5CgogICAgICAgIG5vdyA9IHRpbWUudGltZSgpCiAgICAgICAgaWYgKG5vdyAtIHNlbGYuX2xhc3RfZmlyZSkgPCBzZWxmLmNvb2xkb3duX3NlYzoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgdGljayA9IHNlbGYudGlja19zaXplCiAgICAgICAgZ2V4OiBPcHRpb25hbFtEaWN0XSA9IHN0YXRlLmdldCgiZ2V4Iikgb3Ige30KICAgICAgICBjcm9zc19sYWJlbCA9ICJHT0xERU4gKDUwPjIwMCkiIGlmIGdvbGRlbiBlbHNlICJERUFUSCAoNTA8MjAwKSIKICAgICAgICBpZiBnb2xkZW46CiAgICAgICAgICAgIHNsX3B4ID0gcm91bmRfdG9fdGljayhsYXN0X3ByaWNlIC0gc2VsZi5zbF9wb2ludHMsIHRpY2spCiAgICAgICAgICAgIGN3ID0gZ2V4LmdldCgiY2FsbF93YWxsIikKICAgICAgICAgICAgdHBfcHggPSByb3VuZF90b190aWNrKAogICAgICAgICAgICAgICAgZmxvYXQoY3cpIGlmIChjdyBhbmQgZmxvYXQoY3cpID4gbGFzdF9wcmljZSArIDUuMCkKICAgICAgICAgICAgICAgIGVsc2UgbGFzdF9wcmljZSArIHNlbGYudHBfcG9pbnRzLCB0aWNrKQogICAgICAgICAgICBuYW1lID0gIlNNQTUwXzIwMF9Hb2xkZW5fQ3Jvc3MiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2xfcHggPSByb3VuZF90b190aWNrKGxhc3RfcHJpY2UgKyBzZWxmLnNsX3BvaW50cywgdGljaykKICAgICAgICAgICAgcHcgPSBnZXguZ2V0KCJwdXRfd2FsbCIpCiAgICAgICAgICAgIHRwX3B4ID0gcm91bmRfdG9fdGljaygKICAgICAgICAgICAgICAgIGZsb2F0KHB3KSBpZiAocHcgYW5kIGZsb2F0KHB3KSA8IGxhc3RfcHJpY2UgLSA1LjApCiAgICAgICAgICAgICAgICBlbHNlIGxhc3RfcHJpY2UgLSBzZWxmLnRwX3BvaW50cywgdGljaykKICAgICAgICAgICAgbmFtZSA9ICJTTUE1MF8yMDBfRGVhdGhfQ3Jvc3MiCgogICAgICAgIHJpc2sgPSBhYnMobGFzdF9wcmljZSAtIHNsX3B4KQogICAgICAgIHJld2FyZCA9IGFicyhsYXN0X3ByaWNlIC0gdHBfcHgpCiAgICAgICAgcnIgPSByZXdhcmQgLyByaXNrIGlmIHJpc2sgPiAwIGVsc2UgMC4wCiAgICAgICAgaWYgcnIgPCBzZWxmLm1pbl9ycjoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgc2VsZi5fc3RhdGUgPSBuZXdfc3RhdGUKICAgICAgICBzZWxmLl9sYXN0X2ZpcmUgPSBub3cKICAgICAgICBsb2cuaW5mbygiW1NNQS1DUk9TU10gJXMgRklSRUQgJXMgQCAlLjJmIHwgU01BNTA9JS4yZiBTTUEyMDA9JS4yZiAiCiAgICAgICAgICAgICAgICAgInNlcD0lLjJmIHwgU0w9JS4yZiBUUD0lLjJmIFI6Uj0lLjJmIiwKICAgICAgICAgICAgICAgICBjcm9zc19sYWJlbCwgYWN0aW9uLnVwcGVyKCksIGxhc3RfcHJpY2UsCiAgICAgICAgICAgICAgICAgZmFzdF9ub3csIHNsb3dfbm93LCBzZXBhcmF0aW9uLCBzbF9weCwgdHBfcHgsIHJyKQogICAgICAgIHJldHVybiBTaWduYWwoCiAgICAgICAgICAgIHNpZGU9YWN0aW9uLCBlbnRyeV9weD1sYXN0X3ByaWNlLCBzdG9wX3B4PXNsX3B4LCB0YXJnZXRfcHg9dHBfcHgsCiAgICAgICAgICAgIHN0cmF0ZWd5X25hbWU9bmFtZSwgY29uZmlkZW5jZT0wLjkwLAogICAgICAgICAgICByZWFzb249KGYiTTE1IHtjcm9zc19sYWJlbH0gY29uZmlybWVkIHwgU01BNTA9e2Zhc3Rfbm93Oi4yZn0gIgogICAgICAgICAgICAgICAgICAgIGYiU01BMjAwPXtzbG93X25vdzouMmZ9IHNlcD17c2VwYXJhdGlvbjouMmZ9cHRzIHwgIgogICAgICAgICAgICAgICAgICAgIGYiZW50cnk9e2xhc3RfcHJpY2U6LjJmfSBzbD17c2xfcHg6LjJmfSB0cD17dHBfcHg6LjJmfSAiCiAgICAgICAgICAgICAgICAgICAgZiJSOlI9e3JyOi4yZn0iKSwKICAgICAgICAgICAgZXh0cmE9eyJzbWFfZmFzdCI6IHJvdW5kKGZhc3Rfbm93LCAyKSwKICAgICAgICAgICAgICAgICAgICJzbWFfc2xvdyI6IHJvdW5kKHNsb3dfbm93LCAyKSwKICAgICAgICAgICAgICAgICAgICJzZXBhcmF0aW9uIjogcm91bmQoc2VwYXJhdGlvbiwgMiksICJyciI6IHJvdW5kKHJyLCAyKX0pCg==
+"""SMA-CROSS — ported from Apex run_sma_cross_cycle.
+
+ES M15 SMA(50)/SMA(200) Golden Cross / Death Cross.
+
+  Cross confirmed on two CLOSED candles: fast[-2] vs slow[-2] ("previous")
+  and fast[-1] vs slow[-1] ("current"). In Apex these are iloc[-3]/iloc[-2]
+  because iloc[-1] is the forming bar; here the caller feeds CLOSED bars
+  only, so the indices shift by one — the semantics are identical.
+
+  golden: fast_prev <= slow_prev and fast_now > slow_now -> BUY
+  death : fast_prev >= slow_prev and fast_now < slow_now -> SELL
+
+Gates (in order):
+  1. Globex-only (outside 09:30-13:00 ET)
+  2. Session: not in the 16:59-18:00 ET maintenance pause
+  3. M15 bars available (>= 205)
+  4. Cross present
+  5. Separation filter: |fast - slow| >= 2.0 pts (flat-zone whipsaw guard)
+  6. State machine: no re-entry in the same direction (flat->long->short)
+  7. Cooldown 900 s
+  8. SL = +/-25 pts ; TP = GEX call/put wall when beyond +/-5 pts of entry,
+     else +/-60 pts ; R:R >= 1.5 or the entry is rejected
+
+Interface:
+  bar   : newest CLOSED M15 bar dict
+  state : {"bars": [...closed M15 bars, oldest->newest...],
+           "now_et": datetime (ET), "last_price": float,
+           "tick_size": float,
+           "gex": {"call_wall": float, "put_wall": float} (optional)}
+"""
+from __future__ import annotations
+
+import logging
+import time
+from typing import Dict, List, Optional
+
+from .signal import (Signal, apex_entry_window_open, closes, globex_only_ok,
+                     round_to_tick)
+
+log = logging.getLogger("algo_es.strategies.smacross")
+
+
+class Strategy:
+    def __init__(self, config: Optional[Dict] = None):
+        c = config or {}
+        g = c.get
+        self.fast = int(g("fast", 50))
+        self.slow = int(g("slow", 200))
+        self.min_history = int(g("min_history", self.slow + 5))
+        self.sl_points = float(g("sl_points", 25.0))
+        self.tp_points = float(g("tp_points", 60.0))
+        self.min_sep_pts = float(g("min_sep_pts", 2.0))
+        self.cooldown_sec = float(g("cooldown_sec", 900.0))
+        self.min_rr = float(g("min_rr", 1.5))
+        self.tick_size = float(g("tick_size", 0.25))
+        self.globex_only = bool(g("globex_only", True))
+        self.rth_start = str(g("rth_start", "09:30"))
+        self.rth_end = str(g("rth_end", "13:00"))
+        self._state = "flat"          # flat | long | short
+        self._last_fire = 0.0
+
+    @staticmethod
+    def _sma(values: List[float], n: int, end: int) -> Optional[float]:
+        """SMA(n) ending at index `end` inclusive."""
+        lo = end - n + 1
+        if lo < 0:
+            return None
+        return sum(values[lo:end + 1]) / n
+
+    def on_bar(self, bar: Dict, state: Optional[Dict] = None) -> Optional[Signal]:
+        state = state or {}
+        if self.globex_only and not globex_only_ok(
+                state, self.rth_start, self.rth_end):
+            return None
+        if not apex_entry_window_open(state):
+            return None
+
+        bars: List[Dict] = state.get("bars") or []
+        if len(bars) < self.min_history:
+            return None
+
+        last_price = float(state.get("last_price") or bar.get("close") or 0.0)
+        if not last_price:
+            return None
+
+        cl = closes(bars)
+        n = len(cl) - 1                       # last CLOSED bar
+        fast_now = self._sma(cl, self.fast, n)
+        fast_prev = self._sma(cl, self.fast, n - 1)
+        slow_now = self._sma(cl, self.slow, n)
+        slow_prev = self._sma(cl, self.slow, n - 1)
+        if None in (fast_now, fast_prev, slow_now, slow_prev):
+            return None
+
+        golden = (fast_prev <= slow_prev) and (fast_now > slow_now)
+        death = (fast_prev >= slow_prev) and (fast_now < slow_now)
+        if not (golden or death):
+            return None
+
+        separation = abs(fast_now - slow_now)
+        if separation < self.min_sep_pts:
+            return None
+
+        action = "buy" if golden else "sell"
+        new_state = "long" if golden else "short"
+        if self._state == new_state:
+            return None                       # no same-direction re-entry
+
+        now = time.time()
+        if (now - self._last_fire) < self.cooldown_sec:
+            return None
+
+        tick = self.tick_size
+        gex: Optional[Dict] = state.get("gex") or {}
+        cross_label = "GOLDEN (50>200)" if golden else "DEATH (50<200)"
+        if golden:
+            sl_px = round_to_tick(last_price - self.sl_points, tick)
+            cw = gex.get("call_wall")
+            tp_px = round_to_tick(
+                float(cw) if (cw and float(cw) > last_price + 5.0)
+                else last_price + self.tp_points, tick)
+            name = "SMA50_200_Golden_Cross"
+        else:
+            sl_px = round_to_tick(last_price + self.sl_points, tick)
+            pw = gex.get("put_wall")
+            tp_px = round_to_tick(
+                float(pw) if (pw and float(pw) < last_price - 5.0)
+                else last_price - self.tp_points, tick)
+            name = "SMA50_200_Death_Cross"
+
+        risk = abs(last_price - sl_px)
+        reward = abs(last_price - tp_px)
+        rr = reward / risk if risk > 0 else 0.0
+        if rr < self.min_rr:
+            return None
+
+        self._state = new_state
+        self._last_fire = now
+        log.info("[SMA-CROSS] %s FIRED %s @ %.2f | SMA50=%.2f SMA200=%.2f "
+                 "sep=%.2f | SL=%.2f TP=%.2f R:R=%.2f",
+                 cross_label, action.upper(), last_price,
+                 fast_now, slow_now, separation, sl_px, tp_px, rr)
+        return Signal(
+            side=action, entry_px=last_price, stop_px=sl_px, target_px=tp_px,
+            strategy_name=name, confidence=0.90,
+            reason=(f"M15 {cross_label} confirmed | SMA50={fast_now:.2f} "
+                    f"SMA200={slow_now:.2f} sep={separation:.2f}pts | "
+                    f"entry={last_price:.2f} sl={sl_px:.2f} tp={tp_px:.2f} "
+                    f"R:R={rr:.2f}"),
+            extra={"sma_fast": round(fast_now, 2),
+                   "sma_slow": round(slow_now, 2),
+                   "separation": round(separation, 2), "rr": round(rr, 2)})

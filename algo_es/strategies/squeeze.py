@@ -1,1 +1,124 @@
-IiIiU1FVRUVaRSDigJQgcG9ydGVkIGZyb20gQXBleCBydW5fc3F1ZWV6ZV9jeWNsZSAoIk1lcmdlZCBWYW5uYStDaGFybSBGbG93IEVuZ2luZSIpLgoKVGhlIGVudHJ5IHRyaWdnZXIgaXMgZGVhbGVyIGZsb3csIE5PVCBwcmljZSBzdHJ1Y3R1cmU6CiAgbmV0X21vbSA9IHNpZ25lZCh2YW5uYV9zY29yZSkgKyBzaWduZWQoY2hhcm1fc2NvcmUpCiAgRU9EIHdpbmRvdyAgIDE1OjQ1LTE2OjQ1IEVUIDogfG5ldF9tb218ID4gMC4yMCAtPiBFT0RfUmFtcAogIG90aGVyd2lzZSAgICAgICAgICAgICAgICAgICA6IHxuZXRfbW9tfCA+IDAuMzUgLT4gRGVhbGVyX1Vud2luZCAoYnV5KQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLyBEZWFsZXJfSGVkZ2UgKHNlbGwpCgogIFNMOiAyMCBwdHMgKDE1IEVPRCkuICBUUDogR0VYIGNhbGwvcHV0IHdhbGwsIGZhbGxiYWNrICsvLTQwIHB0cyAoKy8tMzAgRU9EKS4KICBPbmUgc2lnbmFsIHBlciBjb29sZG93biAoNjAgcykuIFYtc2hhcGUgb3Bwb3NpdGUgZGlyZWN0aW9uIGZpcmVzIGZyZWVseS4KCkJlY2F1c2UgdGhlIHNpZ25hbCBJUyB0aGUgR0VYIGZlZWQsIHRoaXMgbW9kdWxlIGNhbm5vdCBydW4gb24gcHJpY2UgYWN0aW9uCmFsb25lOiBzdGF0ZVsiZ2V4Il0gbXVzdCBjYXJyeQogIHsidmFubmFfc2NvcmUiLCJ2YW5uYV9kaXIiLCJjaGFybV9zY29yZSIsImNoYXJtX2RpciIsCiAgICJpc19uZWdhdGl2ZV9yZWdpbWUiLCJpc19mcmVzaCIsImNhbGxfd2FsbCIsInB1dF93YWxsIn0uCklmIHN0YXRlWyJnZXgiXSBpcyBhYnNlbnQvdW51c2FibGUsIG9uX2JhciByZXR1cm5zIE5vbmUgKGRvY3VtZW50ZWQsIG5vdApzaWxlbnQg4oCUIHRoZSBjYWxsZXIgbXVzdCB3aXJlIHRoZSBHRVggY29udGV4dCkuCgpTdHJpcHBlZCB2cyBBcGV4OiBET00gZ2F0ZSwgbmV3cy1jYWxlbmRhciBnYXRlLCBNVDVFeGVjdXRvciBwb3NpdGlvbiBndWFyZAooc2FtZS1kaXJlY3Rpb24gc3RhY2tpbmcgaXMgdGhlIGNhbGxlcidzIGpvYiksIEdFWCBmcmVzaG5lc3MgaXMga2VwdCBhcyBhbgpleHBsaWNpdCBgcmVxdWlyZV9mcmVzaF9nZXhgIHBhcmFtIChBcGV4IGRlZmF1bHQgcmVxdWlyZXMgZnJlc2gpLgoKSW50ZXJmYWNlOgogIGJhciAgIDogbmV3ZXN0IENMT1NFRCBNMSBiYXIgZGljdCAob25seSBpdHMgdGltZSBpcyB1c2VkIGZvciBkZWR1cCkKICBzdGF0ZSA6IHsibm93X2V0IjogZGF0ZXRpbWUgKEVUKSwgImxhc3RfcHJpY2UiOiBmbG9hdCwKICAgICAgICAgICAiZ2V4IjogZGljdCBhcyBhYm92ZX0KIiIiCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmltcG9ydCBkYXRldGltZSBhcyBfZHQKaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IHRpbWUKZnJvbSB0eXBpbmcgaW1wb3J0IERpY3QsIE9wdGlvbmFsCgpmcm9tIC5zaWduYWwgaW1wb3J0IFNpZ25hbCwgZ2xvYmV4X29ubHlfb2ssIG5vd19ldCwgdHMKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvX2VzLnN0cmF0ZWdpZXMuc3F1ZWV6ZSIpCgoKY2xhc3MgU3RyYXRlZ3k6CiAgICBkZWYgX19pbml0X18oc2VsZiwgY29uZmlnOiBPcHRpb25hbFtEaWN0XSA9IE5vbmUpOgogICAgICAgIGMgPSBjb25maWcgb3Ige30KICAgICAgICBnID0gYy5nZXQKICAgICAgICBzZWxmLm1vbV90aHJlc2ggPSBmbG9hdChnKCJtb21fdGhyZXNoIiwgMC4zNSkpCiAgICAgICAgc2VsZi5tb21fdGhyZXNoX2VvZCA9IGZsb2F0KGcoIm1vbV90aHJlc2hfZW9kIiwgMC4yMCkpCiAgICAgICAgc2VsZi5zbF9wdHMgPSBmbG9hdChnKCJzbF9wdHMiLCAyMC4wKSkKICAgICAgICBzZWxmLnNsX3B0c19lb2QgPSBmbG9hdChnKCJzbF9wdHNfZW9kIiwgMTUuMCkpCiAgICAgICAgc2VsZi50cF9wdHMgPSBmbG9hdChnKCJ0cF9wdHMiLCA0MC4wKSkKICAgICAgICBzZWxmLnRwX3B0c19lb2QgPSBmbG9hdChnKCJ0cF9wdHNfZW9kIiwgMzAuMCkpCiAgICAgICAgc2VsZi5jb29sZG93bl9zZWMgPSBmbG9hdChnKCJjb29sZG93bl9zZWMiLCA2MC4wKSkKICAgICAgICBzZWxmLnJlcXVpcmVfbmVnX2dhbW1hID0gYm9vbChnKCJyZXF1aXJlX25lZ19nYW1tYSIsIEZhbHNlKSkKICAgICAgICBzZWxmLnJlcXVpcmVfZnJlc2hfZ2V4ID0gYm9vbChnKCJyZXF1aXJlX2ZyZXNoX2dleCIsIFRydWUpKQogICAgICAgIHNlbGYuZ2xvYmV4X29ubHkgPSBib29sKGcoImdsb2JleF9vbmx5IiwgVHJ1ZSkpCiAgICAgICAgc2VsZi5ydGhfc3RhcnQgPSBzdHIoZygicnRoX3N0YXJ0IiwgIjA5OjMwIikpCiAgICAgICAgc2VsZi5ydGhfZW5kID0gc3RyKGcoInJ0aF9lbmQiLCAiMTM6MDAiKSkKICAgICAgICBzZWxmLl9sYXN0X2ZpcmUgPSAwLjAKICAgICAgICBzZWxmLl9sYXN0X2Jhcl90ID0gMC4wCgogICAgZGVmIG9uX2JhcihzZWxmLCBiYXI6IERpY3QsIHN0YXRlOiBPcHRpb25hbFtEaWN0XSA9IE5vbmUpIC0+IE9wdGlvbmFsW1NpZ25hbF06CiAgICAgICAgc3RhdGUgPSBzdGF0ZSBvciB7fQogICAgICAgIGlmIHNlbGYuZ2xvYmV4X29ubHkgYW5kIG5vdCBnbG9iZXhfb25seV9vaygKICAgICAgICAgICAgICAgIHN0YXRlLCBzZWxmLnJ0aF9zdGFydCwgc2VsZi5ydGhfZW5kKToKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgZ2V4OiBPcHRpb25hbFtEaWN0XSA9IHN0YXRlLmdldCgiZ2V4IikKICAgICAgICBpZiBub3QgZ2V4OgogICAgICAgICAgICByZXR1cm4gTm9uZSAgICAgICAgICAgICAgICAgICAgICAgIyBubyBHRVggY29udGV4dDogbm8gc2lnbmFsCiAgICAgICAgaWYgc2VsZi5yZXF1aXJlX2ZyZXNoX2dleCBhbmQgbm90IGdleC5nZXQoImlzX2ZyZXNoIiwgRmFsc2UpOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBiYXJfdCA9IHRzKGJhci5nZXQoInRpbWUiKSkKICAgICAgICBpZiBiYXJfdCBhbmQgYmFyX3QgPT0gc2VsZi5fbGFzdF9iYXJfdDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBzZWxmLl9sYXN0X2Jhcl90ID0gYmFyX3QKCiAgICAgICAgbiA9IG5vd19ldChzdGF0ZSkudGltZSgpCiAgICAgICAgaXNfZW9kID0gX2R0LnRpbWUoMTUsIDQ1KSA8PSBuIDw9IF9kdC50aW1lKDE2LCA0NSkKICAgICAgICBpbl9zZXNzaW9uID0gX2R0LnRpbWUoOSwgMzApIDw9IG4gPD0gX2R0LnRpbWUoMTYsIDApCiAgICAgICAgaXNfbmVnID0gYm9vbChnZXguZ2V0KCJpc19uZWdhdGl2ZV9yZWdpbWUiLCBGYWxzZSkpCgogICAgICAgIGlmIHNlbGYucmVxdWlyZV9uZWdfZ2FtbWEgYW5kIG5vdCBpc19lb2QgYW5kIG5vdCAoaW5fc2Vzc2lvbiBhbmQgaXNfbmVnKToKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgdiA9IGZsb2F0KGdleC5nZXQoInZhbm5hX3Njb3JlIikgb3IgMC4wKSAqIFwKICAgICAgICAgICAgKDEgaWYgc3RyKGdleC5nZXQoInZhbm5hX2RpciIpKSA9PSAiYnVsbGlzaCIgZWxzZSAtMSkKICAgICAgICBjaCA9IGZsb2F0KGdleC5nZXQoImNoYXJtX3Njb3JlIikgb3IgMC4wKSAqIFwKICAgICAgICAgICAgKDEgaWYgc3RyKGdleC5nZXQoImNoYXJtX2RpciIpKSA9PSAiYnVsbGlzaCIgZWxzZSAtMSkKICAgICAgICBuZXRfbW9tID0gdiArIGNoCgogICAgICAgIHRocmVzaCA9IHNlbGYubW9tX3RocmVzaF9lb2QgaWYgaXNfZW9kIGVsc2Ugc2VsZi5tb21fdGhyZXNoCiAgICAgICAgaWYgYWJzKG5ldF9tb20pIDw9IHRocmVzaDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBhY3Rpb24gPSAiYnV5IiBpZiBuZXRfbW9tID4gMCBlbHNlICJzZWxsIgoKICAgICAgICBub3cgPSB0aW1lLnRpbWUoKQogICAgICAgIGlmIHNlbGYuY29vbGRvd25fc2VjID4gMCBhbmQgKG5vdyAtIHNlbGYuX2xhc3RfZmlyZSkgPCBzZWxmLmNvb2xkb3duX3NlYzoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBzZWxmLl9sYXN0X2ZpcmUgPSBub3cKCiAgICAgICAgbGFzdF9wcmljZSA9IGZsb2F0KHN0YXRlLmdldCgibGFzdF9wcmljZSIpIG9yIGJhci5nZXQoImNsb3NlIikgb3IgMC4wKQogICAgICAgIGlmIG5vdCBsYXN0X3ByaWNlOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBzbF9wdHMgPSBzZWxmLnNsX3B0c19lb2QgaWYgaXNfZW9kIGVsc2Ugc2VsZi5zbF9wdHMKICAgICAgICB0cF9wdHMgPSBzZWxmLnRwX3B0c19lb2QgaWYgaXNfZW9kIGVsc2Ugc2VsZi50cF9wdHMKICAgICAgICBpZiBhY3Rpb24gPT0gImJ1eSI6CiAgICAgICAgICAgIHNsX3B4ID0gcm91bmQobGFzdF9wcmljZSAtIHNsX3B0cywgMikKICAgICAgICAgICAgY3cgPSBnZXguZ2V0KCJjYWxsX3dhbGwiKQogICAgICAgICAgICB0cF9weCA9IHJvdW5kKGZsb2F0KGN3KSwgMikgaWYgY3cgZWxzZSByb3VuZChsYXN0X3ByaWNlICsgdHBfcHRzLCAyKQogICAgICAgICAgICBzdHJhdGVneSA9ICJFT0RfUmFtcCIgaWYgaXNfZW9kIGVsc2UgIkRlYWxlcl9VbndpbmQiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2xfcHggPSByb3VuZChsYXN0X3ByaWNlICsgc2xfcHRzLCAyKQogICAgICAgICAgICBwdyA9IGdleC5nZXQoInB1dF93YWxsIikKICAgICAgICAgICAgdHBfcHggPSByb3VuZChmbG9hdChwdyksIDIpIGlmIHB3IGVsc2Ugcm91bmQobGFzdF9wcmljZSAtIHRwX3B0cywgMikKICAgICAgICAgICAgc3RyYXRlZ3kgPSAiRU9EX1JhbXAiIGlmIGlzX2VvZCBlbHNlICJEZWFsZXJfSGVkZ2UiCgogICAgICAgIGxvZy5pbmZvKCJbU1FVRUVaRV0gRklSSU5HICVzICVzIEAgJS4yZiB8IE1vbT0lKy4yZiB0aHJlc2g9JS4yZiB8ICIKICAgICAgICAgICAgICAgICAiU0w9JS4yZiBUUD0lLjJmIiwgc3RyYXRlZ3ksIGFjdGlvbi51cHBlcigpLCBsYXN0X3ByaWNlLAogICAgICAgICAgICAgICAgIG5ldF9tb20sIHRocmVzaCwgc2xfcHgsIHRwX3B4KQogICAgICAgIHJldHVybiBTaWduYWwoCiAgICAgICAgICAgIHNpZGU9YWN0aW9uLCBlbnRyeV9weD1sYXN0X3ByaWNlLCBzdG9wX3B4PXNsX3B4LCB0YXJnZXRfcHg9dHBfcHgsCiAgICAgICAgICAgIHN0cmF0ZWd5X25hbWU9c3RyYXRlZ3ksIGNvbmZpZGVuY2U9MC45OSwKICAgICAgICAgICAgcmVhc29uPWYiVmFubmErQ2hhcm06IHtuZXRfbW9tOisuMmZ9ICh2PXt2OisuMmZ9IGM9e2NoOisuMmZ9KSIsCiAgICAgICAgICAgIGV4dHJhPXsibmV0X21vbSI6IHJvdW5kKG5ldF9tb20sIDMpLCAiaXNfZW9kIjogaXNfZW9kfSkK
+"""SQUEEZE — ported from Apex run_squeeze_cycle ("Merged Vanna+Charm Flow Engine").
+
+The entry trigger is dealer flow, NOT price structure:
+  net_mom = signed(vanna_score) + signed(charm_score)
+  EOD window   15:45-16:45 ET : |net_mom| > 0.20 -> EOD_Ramp
+  otherwise                   : |net_mom| > 0.35 -> Dealer_Unwind (buy)
+                                                 / Dealer_Hedge (sell)
+
+  SL: 20 pts (15 EOD).  TP: GEX call/put wall, fallback +/-40 pts (+/-30 EOD).
+  One signal per cooldown (60 s). V-shape opposite direction fires freely.
+
+Because the signal IS the GEX feed, this module cannot run on price action
+alone: state["gex"] must carry
+  {"vanna_score","vanna_dir","charm_score","charm_dir",
+   "is_negative_regime","is_fresh","call_wall","put_wall"}.
+If state["gex"] is absent/unusable, on_bar returns None (documented, not
+silent — the caller must wire the GEX context).
+
+Stripped vs Apex: DOM gate, news-calendar gate, MT5Executor position guard
+(same-direction stacking is the caller's job), GEX freshness is kept as an
+explicit `require_fresh_gex` param (Apex default requires fresh).
+
+Interface:
+  bar   : newest CLOSED M1 bar dict (only its time is used for dedup)
+  state : {"now_et": datetime (ET), "last_price": float,
+           "gex": dict as above}
+"""
+from __future__ import annotations
+
+import datetime as _dt
+import logging
+import time
+from typing import Dict, Optional
+
+from .signal import Signal, globex_only_ok, now_et, ts
+
+log = logging.getLogger("algo_es.strategies.squeeze")
+
+
+class Strategy:
+    def __init__(self, config: Optional[Dict] = None):
+        c = config or {}
+        g = c.get
+        self.mom_thresh = float(g("mom_thresh", 0.35))
+        self.mom_thresh_eod = float(g("mom_thresh_eod", 0.20))
+        self.sl_pts = float(g("sl_pts", 20.0))
+        self.sl_pts_eod = float(g("sl_pts_eod", 15.0))
+        self.tp_pts = float(g("tp_pts", 40.0))
+        self.tp_pts_eod = float(g("tp_pts_eod", 30.0))
+        self.cooldown_sec = float(g("cooldown_sec", 60.0))
+        self.require_neg_gamma = bool(g("require_neg_gamma", False))
+        self.require_fresh_gex = bool(g("require_fresh_gex", True))
+        self.globex_only = bool(g("globex_only", True))
+        self.rth_start = str(g("rth_start", "09:30"))
+        self.rth_end = str(g("rth_end", "13:00"))
+        self._last_fire = 0.0
+        self._last_bar_t = 0.0
+
+    def on_bar(self, bar: Dict, state: Optional[Dict] = None) -> Optional[Signal]:
+        state = state or {}
+        if self.globex_only and not globex_only_ok(
+                state, self.rth_start, self.rth_end):
+            return None
+
+        gex: Optional[Dict] = state.get("gex")
+        if not gex:
+            return None                       # no GEX context: no signal
+        if self.require_fresh_gex and not gex.get("is_fresh", False):
+            return None
+
+        bar_t = ts(bar.get("time"))
+        if bar_t and bar_t == self._last_bar_t:
+            return None
+        self._last_bar_t = bar_t
+
+        n = now_et(state).time()
+        is_eod = _dt.time(15, 45) <= n <= _dt.time(16, 45)
+        in_session = _dt.time(9, 30) <= n <= _dt.time(16, 0)
+        is_neg = bool(gex.get("is_negative_regime", False))
+
+        if self.require_neg_gamma and not is_eod and not (in_session and is_neg):
+            return None
+
+        v = float(gex.get("vanna_score") or 0.0) * \
+            (1 if str(gex.get("vanna_dir")) == "bullish" else -1)
+        ch = float(gex.get("charm_score") or 0.0) * \
+            (1 if str(gex.get("charm_dir")) == "bullish" else -1)
+        net_mom = v + ch
+
+        thresh = self.mom_thresh_eod if is_eod else self.mom_thresh
+        if abs(net_mom) <= thresh:
+            return None
+        action = "buy" if net_mom > 0 else "sell"
+
+        now = time.time()
+        if self.cooldown_sec > 0 and (now - self._last_fire) < self.cooldown_sec:
+            return None
+        self._last_fire = now
+
+        last_price = float(state.get("last_price") or bar.get("close") or 0.0)
+        if not last_price:
+            return None
+
+        sl_pts = self.sl_pts_eod if is_eod else self.sl_pts
+        tp_pts = self.tp_pts_eod if is_eod else self.tp_pts
+        if action == "buy":
+            sl_px = round(last_price - sl_pts, 2)
+            cw = gex.get("call_wall")
+            tp_px = round(float(cw), 2) if cw else round(last_price + tp_pts, 2)
+            strategy = "EOD_Ramp" if is_eod else "Dealer_Unwind"
+        else:
+            sl_px = round(last_price + sl_pts, 2)
+            pw = gex.get("put_wall")
+            tp_px = round(float(pw), 2) if pw else round(last_price - tp_pts, 2)
+            strategy = "EOD_Ramp" if is_eod else "Dealer_Hedge"
+
+        log.info("[SQUEEZE] FIRING %s %s @ %.2f | Mom=%+.2f thresh=%.2f | "
+                 "SL=%.2f TP=%.2f", strategy, action.upper(), last_price,
+                 net_mom, thresh, sl_px, tp_px)
+        return Signal(
+            side=action, entry_px=last_price, stop_px=sl_px, target_px=tp_px,
+            strategy_name=strategy, confidence=0.99,
+            reason=f"Vanna+Charm: {net_mom:+.2f} (v={v:+.2f} c={ch:+.2f})",
+            extra={"net_mom": round(net_mom, 3), "is_eod": is_eod})

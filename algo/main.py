@@ -1,1 +1,412 @@
-IiIiMERURSBTUFhXIGNydXNoLWVudHJ5IGFsZ28gLSBtYWluIGxvb3AgKENPTlNVTUVSIG1vZGUpLgoKVGhlIGJyaWRnZSAoZ2V4X2JyaWRnZS8pIGlzIHRoZSBhY2NvdW50J3Mgc2luZ2xlIHN0cmVhbWluZyBjb25uZWN0aW9uLgpUaGlzIHByb2Nlc3MgaG9sZHMgWkVSTyBtYXJrZXQtZGF0YSBsaW5lczogaXQgY29ubmVjdHMgdG8gSUJLUiBvcmRlci1vbmx5CihjbGllbnRJZD03LCBwYXBlci1nYXRlZCkgYW5kIHJlYWRzIGV2ZXJ5dGhpbmcgLS0gY2hhaW4gcXVvdGVzLCB3YWxscywKY2FuZGlkYXRlcywgcmVnaW1lIC0tIGZyb20gLi4vc2hhcmVkL2xldmVscy5qc29uIChhdG9taWMgcHVibGlzaCkuCgpGYWlsLXNhZmU6IG5vIE5FVyBlbnRyaWVzIHdoZW4gbGV2ZWxzLmpzb24gaXMgbWlzc2luZyBvciBvbGRlciB0aGFuIDYwcwppbiBhIE5ZIHNlc3Npb24gKFNUQUxFX0xFVkVMUyk7IG9wZW4gcG9zaXRpb25zIGtlZXAgYmVpbmcgbWFuYWdlZC4KCkFMV0FZUy1PTiAoZGVmYXVsdCk6IHRoZSBwcm9jZXNzIG5ldmVyIGV4aXRzIG9uIGl0cyBvd24uIEVhY2ggc2Vzc2lvbiBpcwpjb25uZWN0IChwYXBlci1nYXRlZCkgLT4gd2FpdCBmb3IgYnJpZGdlIGxldmVscyAtPiB0cmFkZSAtPiAxNTo1NSBmbGF0dGVuCi0+IDE2OjA1IGRpc2Nvbm5lY3Q7IHRoZW4gaXQgc2xlZXBzIChpbnRlcnJ1cHRpYmx5KSB1bnRpbCB0aGUgbmV4dCB3ZWVrZGF5CjA5OjMwIEVULiBDdHJsK0MgLyBTSUdURVJNIGFsd2F5cyBleGl0cyBwcm9tcHRseSAoZmxhdHRlbiBmaXJzdCkuClBhc3MgLS1vbmVzaG90IGZvciBhIHNpbmdsZSBzZXNzaW9uIChkZWJ1Z2dpbmcpLgoKRGVmYXVsdCBpcyBEUlktUlVOIChubyBvcmRlcnMpLiBQYXNzIC0tbGl2ZSB0byB0cmFuc21pdCBvbiB0aGUgUEFQRVIKYWNjb3VudCAoc3RpbGwgaGFyZC1nYXRlZCB0byBEVSogcGFwZXIgYWNjb3VudHM7IGxpdmUgbW9uZXkgaW1wb3NzaWJsZSkuCiIiIgppbXBvcnQgYXJncGFyc2UKaW1wb3J0IGFzeW5jaW8KaW1wb3J0IGpzb24KaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IG9zCmltcG9ydCBzaWduYWwKaW1wb3J0IHN5cwpmcm9tIGRhdGV0aW1lIGltcG9ydCBkYXRldGltZSwgdGltZWRlbHRhCmZyb20gem9uZWluZm8gaW1wb3J0IFpvbmVJbmZvCgppbXBvcnQgY29uZmlnCmZyb20gbGV2ZWxzIGltcG9ydCBMZXZlbHNXYXRjaGVyCmZyb20gaWJrcl9jb25uIGltcG9ydCBjb25uZWN0X2liLCBlbnN1cmVfY29ubmVjdGVkLCBhY2NvdW50X25ldF9saXEKZnJvbSBzdHJhdGVneSBpbXBvcnQgKEhPTEQsIFQxX0ZJTEwsIFQyX0ZJTEwsIFRQX1RPVUNILCBUUkFJTF9TVE9QLCBTVE9QLAogICAgICAgICAgICAgICAgICAgICAgRkxBVFRFTikKZnJvbSBvcmRlcnMgaW1wb3J0IE9yZGVyTWFuYWdlciwgQ09NTUlTU0lPTgpmcm9tIHJpc2sgaW1wb3J0IFJpc2tNYW5hZ2VyCgpFVCA9IFpvbmVJbmZvKCJBbWVyaWNhL05ld19Zb3JrIikKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ28iKQoKX3NodXRkb3duID0gYXN5bmNpby5FdmVudCgpCl9sb2dfaGFuZGxlcnM6IGxpc3QgPSBbXQoKCmRlZiBzZXR1cF9sb2dnaW5nKGxvZ19kaXI6IHN0cik6CiAgICBnbG9iYWwgX2xvZ19oYW5kbGVycwogICAgcm9vdCA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCkKICAgIGZvciBoIGluIF9sb2dfaGFuZGxlcnM6CiAgICAgICAgcm9vdC5yZW1vdmVIYW5kbGVyKGgpCiAgICAgICAgdHJ5OgogICAgICAgICAgICBoLmNsb3NlKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgICAgICBwYXNzCiAgICBfbG9nX2hhbmRsZXJzID0gW10KICAgIG9zLm1ha2VkaXJzKGxvZ19kaXIsIGV4aXN0X29rPVRydWUpCiAgICBkYXkgPSBkYXRldGltZS5ub3coRVQpLnN0cmZ0aW1lKCIlWSVtJWQiKQogICAgcGF0aCA9IG9zLnBhdGguam9pbihsb2dfZGlyLCBmImFsZ29fe2RheX0uanNvbmwiKQogICAgZmggPSBsb2dnaW5nLkZpbGVIYW5kbGVyKHBhdGgpCiAgICBmaC5zZXRGb3JtYXR0ZXIobG9nZ2luZy5Gb3JtYXR0ZXIoIiUobWVzc2FnZSlzIikpCiAgICByb290LnNldExldmVsKGxvZ2dpbmcuSU5GTykKICAgIHJvb3QuYWRkSGFuZGxlcihmaCkKICAgIGNoID0gbG9nZ2luZy5TdHJlYW1IYW5kbGVyKHN5cy5zdGRvdXQpCiAgICBjaC5zZXRMZXZlbChsb2dnaW5nLldBUk5JTkcpCiAgICByb290LmFkZEhhbmRsZXIoY2gpCiAgICBfbG9nX2hhbmRsZXJzID0gW2ZoLCBjaF0KICAgIHJldHVybiBwYXRoCgoKYXN5bmMgZGVmIGVtaXQoZXZlbnQ6IHN0ciwgZGF0YTogZGljdCk6CiAgICByZWMgPSB7InRzIjogZGF0ZXRpbWUubm93KEVUKS5pc29mb3JtYXQoKSwgImV2ZW50IjogZXZlbnQsICoqZGF0YX0KICAgIGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvIikuaW5mbyhqc29uLmR1bXBzKHJlYykpCgoKZGVmIG5leHRfc2Vzc2lvbl9zdGFydChub3dfZXQ6IGRhdGV0aW1lKSAtPiBkYXRldGltZToKICAgICIiIk5leHQgd2Vla2RheSAwOTozMCBFVCBhdCBvciBhZnRlciBub3cuIiIiCiAgICBjYW5kID0gbm93X2V0LnJlcGxhY2UoaG91cj05LCBtaW51dGU9MzAsIHNlY29uZD0wLCBtaWNyb3NlY29uZD0wKQogICAgaWYgY2FuZCA8PSBub3dfZXQ6CiAgICAgICAgY2FuZCArPSB0aW1lZGVsdGEoZGF5cz0xKQogICAgd2hpbGUgY2FuZC53ZWVrZGF5KCkgPj0gNToKICAgICAgICBjYW5kICs9IHRpbWVkZWx0YShkYXlzPTEpCiAgICByZXR1cm4gY2FuZAoKCmFzeW5jIGRlZiBzbGVlcF9pbnRlcnJ1cHRpYmxlKHRvdGFsX3NlY3M6IGZsb2F0KToKICAgIGVuZCA9IGFzeW5jaW8uZ2V0X2V2ZW50X2xvb3AoKS50aW1lKCkgKyB0b3RhbF9zZWNzCiAgICB3aGlsZSBub3QgX3NodXRkb3duLmlzX3NldCgpOgogICAgICAgIHJlbWFpbmluZyA9IGVuZCAtIGFzeW5jaW8uZ2V0X2V2ZW50X2xvb3AoKS50aW1lKCkKICAgICAgICBpZiByZW1haW5pbmcgPD0gMDoKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgdHJ5OgogICAgICAgICAgICBhd2FpdCBhc3luY2lvLndhaXRfZm9yKF9zaHV0ZG93bi53YWl0KCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGltZW91dD1taW4oNjAuMCwgcmVtYWluaW5nKSkKICAgICAgICBleGNlcHQgYXN5bmNpby5UaW1lb3V0RXJyb3I6CiAgICAgICAgICAgIHBhc3MKCgphc3luYyBkZWYgc2xlZXBfdW50aWxfbmV4dF9zZXNzaW9uKCk6CiAgICBub3cgPSBkYXRldGltZS5ub3coRVQpCiAgICB0YXJnZXQgPSBuZXh0X3Nlc3Npb25fc3RhcnQobm93KQogICAgc2VjcyA9ICh0YXJnZXQgLSBub3cpLnRvdGFsX3NlY29uZHMoKQogICAgaWYgc2VjcyA8PSAwOgogICAgICAgIHJldHVybgogICAgYXdhaXQgZW1pdCgiU0xFRVAiLCB7InVudGlsIjogdGFyZ2V0Lmlzb2Zvcm1hdCgpLCAic2VjcyI6IGludChzZWNzKX0pCiAgICBwcmludChmInNsZWVwaW5nIHtpbnQoc2Vjcyl9cyB1bnRpbCBuZXh0IHNlc3Npb24ge3RhcmdldC5zdHJmdGltZSgnJWEgJUg6JU0gJVonKX0iLAogICAgICAgICAgZmx1c2g9VHJ1ZSkKICAgIGF3YWl0IHNsZWVwX2ludGVycnVwdGlibGUoc2VjcykKCgphc3luYyBkZWYgbWFpbigpOgogICAgYXAgPSBhcmdwYXJzZS5Bcmd1bWVudFBhcnNlcigpCiAgICBhcC5hZGRfYXJndW1lbnQoIi0tZHJ5LXJ1biIsIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsCiAgICAgICAgICAgICAgICAgICAgaGVscD0ic2ltdWxhdGUgb25seTsgZG8gTk9UIHRyYW5zbWl0IChkZWZhdWx0OiBMSVZFKSIpCiAgICBhcC5hZGRfYXJndW1lbnQoIi0tbG9nLWRpciIsIGRlZmF1bHQ9Y29uZmlnLkxPR19ESVIpCiAgICBhcC5hZGRfYXJndW1lbnQoIi0tb25lc2hvdCIsIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsCiAgICAgICAgICAgICAgICAgICAgaGVscD0icnVuIG9uZSBzZXNzaW9uIChvciBvbmUgZGF5LWNoZWNrKSB0aGVuIGV4aXQ7ICIKICAgICAgICAgICAgICAgICAgICAgICAgICJkZWZhdWx0IGlzIGFsd2F5cy1vbjogc2xlZXAgYW5kIHJldHJ5IG5leHQgc2Vzc2lvbiIpCiAgICBhcmdzID0gYXAucGFyc2VfYXJncygpCiAgICBkcnlfcnVuID0gYXJncy5kcnlfcnVuCgogICAgc2V0dXBfbG9nZ2luZyhhcmdzLmxvZ19kaXIpCgogICAgbG9vcCA9IGFzeW5jaW8uZ2V0X3J1bm5pbmdfbG9vcCgpCiAgICB0cnk6CiAgICAgICAgZm9yIHNpZyBpbiAoc2lnbmFsLlNJR0lOVCwgc2lnbmFsLlNJR1RFUk0pOgogICAgICAgICAgICBsb29wLmFkZF9zaWduYWxfaGFuZGxlcihzaWcsIF9zaHV0ZG93bi5zZXQpCiAgICBleGNlcHQgTm90SW1wbGVtZW50ZWRFcnJvcjoKICAgICAgICBmb3Igc2lnIGluIChzaWduYWwuU0lHSU5ULCBzaWduYWwuU0lHVEVSTSk6CiAgICAgICAgICAgIHNpZ25hbC5zaWduYWwoc2lnLCBsYW1iZGEgKl86IF9zaHV0ZG93bi5zZXQoKSkKCiAgICBhd2FpdCBlbWl0KCJEQUVNT04iLCB7Im1vZGUiOiAib25lc2hvdCIgaWYgYXJncy5vbmVzaG90IGVsc2UgImFsd2F5cy1vbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgImRyeV9ydW4iOiBkcnlfcnVufSkKICAgIHByaW50KGYibW9kZT17J0RSWS1SVU4nIGlmIGRyeV9ydW4gZWxzZSAnTElWRS1QQVBFUid9IHwgIgogICAgICAgICAgZiJ7J09ORVNIT1QnIGlmIGFyZ3Mub25lc2hvdCBlbHNlICdBTFdBWVMtT04nfSIsIGZsdXNoPVRydWUpCgogICAgaWYgYXJncy5vbmVzaG90OgogICAgICAgIGF3YWl0IHJ1bl9zZXNzaW9uKGRyeV9ydW4sIGFyZ3MpCiAgICAgICAgcmV0dXJuCgogICAgd2hpbGUgbm90IF9zaHV0ZG93bi5pc19zZXQoKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGF3YWl0IHJ1bl9zZXNzaW9uKGRyeV9ydW4sIGFyZ3MpCiAgICAgICAgZXhjZXB0IFN5c3RlbUV4aXQgYXMgZToKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiU0VTU0lPTl9BQk9SVCIsIHsiZXJyb3IiOiBzdHIoZSl9KQogICAgICAgICAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZTogICMgbm9xYTogQkxFMDAxIC0gc3RheSBhbGl2ZSBvbiB0cmFuc2llbnQgZmF1bHRzCiAgICAgICAgICAgIGxvZy5leGNlcHRpb24oInNlc3Npb24gY3Jhc2hlZDsgcmV0cnlpbmcgc2hvcnRseSIpCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIlNFU1NJT05fRVJST1IiLAogICAgICAgICAgICAgICAgICAgICAgICAgICB7ImVycm9yIjogZiJ7dHlwZShlKS5fX25hbWVfX306IHtlfSJ9KQogICAgICAgICAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICBhd2FpdCBzbGVlcF9pbnRlcnJ1cHRpYmxlKDMwMCkKICAgICAgICAgICAgY29udGludWUKICAgICAgICBpZiBfc2h1dGRvd24uaXNfc2V0KCk6CiAgICAgICAgICAgIGJyZWFrCiAgICAgICAgYXdhaXQgc2xlZXBfdW50aWxfbmV4dF9zZXNzaW9uKCkKICAgIHRyeToKICAgICAgICBhd2FpdCBlbWl0KCJEQUVNT05fU1RPUCIsIHsicmVhc29uIjogInNodXRkb3duLXNpZ25hbCJ9KQogICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICBwYXNzCgoKYXN5bmMgZGVmIF9hd2FpdF9ueV9sZXZlbHMobGV2ZWxzOiBMZXZlbHNXYXRjaGVyLCB0aW1lb3V0OiBmbG9hdCA9IDYwMCk6CiAgICAiIiJXYWl0IGZvciB0aGUgYnJpZGdlIHRvIHB1Ymxpc2ggYSBOWSBzZXNzaW9uIHBheWxvYWQuIiIiCiAgICBlbmQgPSBhc3luY2lvLmdldF9ldmVudF9sb29wKCkudGltZSgpICsgdGltZW91dAogICAgd2hpbGUgYXN5bmNpby5nZXRfZXZlbnRfbG9vcCgpLnRpbWUoKSA8IGVuZCBhbmQgbm90IF9zaHV0ZG93bi5pc19zZXQoKToKICAgICAgICBsdiA9IGxldmVscy5nZXQoKQogICAgICAgIGlmIGx2IGlzIG5vdCBOb25lIGFuZCBsdi5nZXQoInNlc3Npb24iKSA9PSAibnkiOgogICAgICAgICAgICByZXR1cm4gbHYKICAgICAgICBhd2FpdCBhc3luY2lvLnNsZWVwKDUpCiAgICByZXR1cm4gTm9uZQoKCmFzeW5jIGRlZiBydW5fc2Vzc2lvbihkcnlfcnVuOiBib29sLCBhcmdzKToKICAgICIiIk9uZSB0cmFkaW5nIHNlc3Npb246IGNvbm5lY3QgKG9yZGVyLW9ubHkpIC0+IHdhaXQgZm9yIGJyaWRnZSBsZXZlbHMKICAgIC0+IHRyYWRlIC0+IDE1OjU1IGZsYXR0ZW4gLT4gMTY6MDUgZGlzY29ubmVjdC4iIiIKICAgIGxvZ19wYXRoID0gc2V0dXBfbG9nZ2luZyhhcmdzLmxvZ19kaXIpCiAgICBwcmludChmImxvZ2dpbmcgdG8ge2xvZ19wYXRofSB8IG1vZGU9eydEUlktUlVOJyBpZiBkcnlfcnVuIGVsc2UgJ0xJVkUtUEFQRVInfSIsCiAgICAgICAgICBmbHVzaD1UcnVlKQogICAgYXdhaXQgZW1pdCgiU1RBUlQiLCB7Im1vZGUiOiAiZHJ5LXJ1biIgaWYgZHJ5X3J1biBlbHNlICJsaXZlLXBhcGVyIiwKICAgICAgICAgICAgICAgICAgICAgICAgICJwb3J0IjogY29uZmlnLklCX1BPUlQsICJjbGllbnRfaWQiOiBjb25maWcuSUJfQ0xJRU5UX0lEfSkKCiAgICAjIC0tLS0gY29ubmVjdCAob3JkZXItb25seSwgcGFwZXItZ2F0ZWQpIC0tLS0KICAgIGliLCBhY2NvdW50ID0gYXdhaXQgY29ubmVjdF9pYigpCiAgICBhd2FpdCBlbWl0KCJDT05ORUNURUQiLCB7ImFjY291bnQiOiBhY2NvdW50fSkKCiAgICAjIC0tLS0gYnJpZGdlIGxldmVscyAtLS0tCiAgICBsZXZlbHMgPSBMZXZlbHNXYXRjaGVyKCkKICAgIGx2ID0gYXdhaXQgX2F3YWl0X255X2xldmVscyhsZXZlbHMpCiAgICBpZiBsdiBpcyBOb25lOgogICAgICAgIGF3YWl0IGVtaXQoIk5PX1RSQURFX0RBWSIsIHsicmVhc29uIjogIm5vLW55LWxldmVscyAoYnJpZGdlIGRvd24/KSJ9KQogICAgICAgIGliLmRpc2Nvbm5lY3QoKQogICAgICAgIHJldHVybgogICAgYXdhaXQgZW1pdCgiTEVWRUxTX09LIiwgeyJzZXNzaW9uIjogbHYuZ2V0KCJzZXNzaW9uIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgImFnZV9zIjogcm91bmQobGV2ZWxzLmFnZV9zZWMoKSwgMSl9KQoKICAgICMgLS0tLSBvcmRlciBjb250cmFjdHMgZnJvbSB0aGUgYnJpZGdlJ3MgZGVzY3JpcHRvcnMgKG9uZS1zaG90IHF1YWxpZnkpIC0tLS0KICAgIG9tX3Byb2JlID0gT3JkZXJNYW5hZ2VyKGliLCBhY2NvdW50LCBkcnlfcnVuLCBsZXZlbHMucXVvdGUsIGVtaXQpCiAgICBjb250cmFjdHMgPSBvbV9wcm9iZS5iaW5kX2NvbnRyYWN0X2Rlc2NyaXB0b3JzKGxldmVscy5sb2FkX2NvbnRyYWN0cygpKQogICAgaWYgbm90IGNvbnRyYWN0czoKICAgICAgICBhd2FpdCBlbWl0KCJOT19UUkFERV9EQVkiLCB7InJlYXNvbiI6ICJlbXB0eSBjb250cmFjdHMuanNvbiJ9KQogICAgICAgIGliLmRpc2Nvbm5lY3QoKQogICAgICAgIHJldHVybgogICAgYXdhaXQgaWIucXVhbGlmeUNvbnRyYWN0c0FzeW5jKCpjb250cmFjdHMudmFsdWVzKCkpCiAgICBhd2FpdCBlbWl0KCJDT05UUkFDVFMiLCB7Im4iOiBsZW4oY29udHJhY3RzKX0pCgogICAgIyAtLS0tIHJlZ2ltZSAoZnJvbSB0aGUgYnJpZGdlOyBvYnNlcnZlIGJ5IGRlZmF1bHQpIC0tLS0KICAgIHJpbmZvID0gbGV2ZWxzLnJlZ2ltZSgpCiAgICByZWdpbWVfc2NvcmUgPSByaW5mby5nZXQoInNjb3JlIikKICAgIGF3YWl0IGVtaXQoIlJFR0lNRSIsIHsibW9kZSI6IHJpbmZvLmdldCgibW9kZSIsIGNvbmZpZy5SRUdJTUVfTU9ERSksCiAgICAgICAgICAgICAgICAgICAgICAgICAgInNjb3JlIjogcmVnaW1lX3Njb3JlLAogICAgICAgICAgICAgICAgICAgICAgICAgICJkZXRhaWwiOiByaW5mby5nZXQoImRldGFpbCIpfSkKCiAgICAjIC0tLS0gcmlzayAvIG9yZGVycyAtLS0tCiAgICBhY2N0X3ZhbCA9IGFjY291bnRfbmV0X2xpcShpYiwgYWNjb3VudCkKICAgIHJpc2sgPSBSaXNrTWFuYWdlcihhY2N0X3ZhbCkKICAgIGF3YWl0IGVtaXQoIlJJU0siLCB7Im5ldF9saXEiOiBhY2N0X3ZhbCwKICAgICAgICAgICAgICAgICAgICAgICAgImRhaWx5X3N0b3AiOiByb3VuZChyaXNrLmRhaWx5X3N0b3BfYW10LCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgInJpc2tfcGVyX3RyYWRlIjogY29uZmlnLlJJU0tfUEVSX1RSQURFfSkKICAgIGlmIHJpbmZvLmdldCgibW9kZSIpID09ICJsaXZlIiBhbmQgcmVnaW1lX3Njb3JlIGlzIG5vdCBOb25lOgogICAgICAgIG9rID0gcmVnaW1lX3Njb3JlID49IGNvbmZpZy5SRUdJTUVfTUlOX1NDT1JFCiAgICAgICAgbXVsdCA9IChjb25maWcuUkVHSU1FX1NJWkVfTVVMVAogICAgICAgICAgICAgICAgaWYgcmVnaW1lX3Njb3JlID49IGNvbmZpZy5SRUdJTUVfSElHSF9TQ09SRSBlbHNlIDEuMCkKICAgICAgICByaXNrLnNldF9yZWdpbWUob2ssIG11bHQpCiAgICAgICAgaWYgbm90IG9rOgogICAgICAgICAgICBhd2FpdCBlbWl0KCJSRUdJTUVfR0FURSIsIHsic2NvcmUiOiByZWdpbWVfc2NvcmUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJtaW4iOiBjb25maWcuUkVHSU1FX01JTl9TQ09SRSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIm5vdGUiOiAibm8gbmV3IGVudHJpZXMgdG9kYXkifSkKCiAgICBvbSA9IG9tX3Byb2JlICAjIGdldF9xdW90ZSA9IGxldmVscy5xdW90ZSAoYmlkLCBhc2spIGZyb20gY2hhaW5fZnJhbWUKCiAgICAjIC0tLS0gbWFpbiBsb29wIC0tLS0KICAgIHBvc2l0aW9uID0gTm9uZQogICAgcGVuZGluZ19lbnRyeSA9IEZhbHNlCiAgICBsYXN0X2JlYXQgPSBkYXRldGltZS5ub3coRVQpCiAgICBsYXN0X3NjYW5fbG9nID0gMAoKICAgIGF3YWl0IGVtaXQoIlJVTiIsIHsibm90ZSI6ICJlbnRlcmluZyBtYWluIGxvb3AgKGNvbnN1bWVyIG1vZGUpIn0pCiAgICB3aGlsZSBub3QgX3NodXRkb3duLmlzX3NldCgpOgogICAgICAgIG5vdyA9IGRhdGV0aW1lLm5vdyhFVCkKICAgICAgICBpZiAobm93LmhvdXIsIG5vdy5taW51dGUpID49IGNvbmZpZy5MT09QX0VORDoKICAgICAgICAgICAgYnJlYWsKICAgICAgICBpZiBub3QgYXdhaXQgZW5zdXJlX2Nvbm5lY3RlZChpYik6CiAgICAgICAgICAgIGF3YWl0IGVtaXQoIkZBVEFMIiwgeyJyZWFzb24iOiAicmVjb25uZWN0LWV4aGF1c3RlZCJ9KQogICAgICAgICAgICBicmVhawoKICAgICAgICByaXNrLm5ld19kYXkobm93LmRhdGUoKSkKICAgICAgICBsdiA9IGxldmVscy5nZXQoKQogICAgICAgIHNwb3QgPSAobHYgb3Ige30pLmdldCgic3B4IikKICAgICAgICB3YWxscyA9IChsdiBvciB7fSkuZ2V0KCJ3YWxscyIpIG9yIHt9CiAgICAgICAgbHZsX29rLCBsdmxfd2h5ID0gbGV2ZWxzLmVudHJpZXNfYWxsb3dlZChub3cpCgogICAgICAgICMgLS0tLSBwb3NpdGlvbiBtYW5hZ2VtZW50IChleGl0cyBmaXJzdCkgLS0tLQogICAgICAgIGlmIHBvc2l0aW9uIGFuZCBzcG90OgogICAgICAgICAgICBpZiBwb3NpdGlvbi50aWVyZWRfZWZmZWN0aXZlOgogICAgICAgICAgICAgICAgbGl2ZV9maWxscyA9IFsodCwgZnEsIGZweCkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHQsIGZxLCBmcHggaW4gb20uY2hlY2tfdGllcl9maWxscyhwb3NpdGlvbildCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBfZiA9IG9tLmNoZWNrX3RwX2ZpbGwocG9zaXRpb24pCiAgICAgICAgICAgICAgICBsaXZlX2ZpbGxzID0gWygwLCBfZlswXSwgX2ZbMV0pXSBpZiBfZiBlbHNlIFtdCiAgICAgICAgICAgIGZvciB0aWVyLCBmcSwgZnB4IGluIGxpdmVfZmlsbHM6CiAgICAgICAgICAgICAgICBpZiB0aWVyID09IDA6CiAgICAgICAgICAgICAgICAgICAgZnBubCA9IHBvc2l0aW9uLm9uX2Nsb3NlKGZxLCBmcHgpIC0gQ09NTUlTU0lPTgogICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uLnF0eSAtPSBmcQogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBmcG5sID0gcG9zaXRpb24uYXBwbHlfdGllcl9maWxsKHRpZXIsIGZxLCBmcHgpIC0gQ09NTUlTU0lPTgogICAgICAgICAgICAgICAgcmlzay5yZWdpc3Rlcl9wYXJ0aWFsKGZwbmwpCiAgICAgICAgICAgICAgICBpZiB0aWVyID09IDA6CiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiQ0xPU0VEIiwgeyJrZXkiOiBwb3NpdGlvbi5rZXksICJyZWFzb24iOiAidHAtMTB4IiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInBubCI6IHJvdW5kKGZwbmwsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiZXhpdF9weCI6IHJvdW5kKGZweCwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJwZWFrX3giOiByb3VuZChwb3NpdGlvbi5wZWFrX211bHRpcGxlLCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgImhlbGRfbWluIjogcG9zaXRpb24uaGVsZF9taW51dGVzKG5vdyksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ3aW5kb3ciOiBwb3NpdGlvbi53aW5kb3csCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ0cmlnZ2VyIjogcG9zaXRpb24udHJpZ2dlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInJlZ2ltZV9zY29yZSI6IHJlZ2ltZV9zY29yZX0pCiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb24gPSBOb25lCiAgICAgICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIlRJRVJfRklMTCIsIHsia2V5IjogcG9zaXRpb24ua2V5LCAidGllciI6IHRpZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInF0eSI6IGZxLCAicHgiOiByb3VuZChmcHgsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJtdWx0aXBsZSI6IHJvdW5kKGZweCAvIHBvc2l0aW9uLmVudHJ5X3B4LCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQoZnBubCwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInRyaWdnZXIiOiBwb3NpdGlvbi50cmlnZ2VyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJyZWdpbWVfc2NvcmUiOiByZWdpbWVfc2NvcmV9KQogICAgICAgICAgICAgICAgaWYgdGllciA9PSAyIGFuZCBwb3NpdGlvbi50Ml9xdHkgPT0gMDoKICAgICAgICAgICAgICAgICAgICBxID0gbGV2ZWxzLnF1b3RlKHBvc2l0aW9uLmtleSkKICAgICAgICAgICAgICAgICAgICBhd2FpdCBvbS5hcm1fdHJhaWwocG9zaXRpb24sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHFbMF0gaWYgcSBhbmQgcVswXSA+IDAgZWxzZSBmcHgpCiAgICAgICAgICAgIHBvc2l0aW9uLmRyYWluX3RpZXJfZmlsbHMoKSBpZiBwb3NpdGlvbiBlbHNlIE5vbmUKCiAgICAgICAgICAgIGlmIHBvc2l0aW9uOgogICAgICAgICAgICAgICAgcSA9IGxldmVscy5xdW90ZShwb3NpdGlvbi5rZXkpCiAgICAgICAgICAgICAgICBiaWQgPSBxWzBdIGlmIHEgYW5kIHFbMF0gZWxzZSAwLjAKICAgICAgICAgICAgICAgIGFjdGlvbiA9IHBvc2l0aW9uLnVwZGF0ZShub3csIGJpZCwgc3BvdCkKICAgICAgICAgICAgICAgIGZvciB0aWVyLCBmcSwgZnB4LCBmcG5sMCBpbiBwb3NpdGlvbi5kcmFpbl90aWVyX2ZpbGxzKCk6CiAgICAgICAgICAgICAgICAgICAgZnBubCA9IGZwbmwwIC0gQ09NTUlTU0lPTgogICAgICAgICAgICAgICAgICAgIHJpc2sucmVnaXN0ZXJfcGFydGlhbChmcG5sKQogICAgICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIlRJRVJfRklMTCIsIHsia2V5IjogcG9zaXRpb24ua2V5LCAidGllciI6IHRpZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJxdHkiOiBmcSwgInB4Ijogcm91bmQoZnB4LCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIm11bHRpcGxlIjogcm91bmQoZnB4IC8gcG9zaXRpb24uZW50cnlfcHgsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQoZnBubCwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ0cmlnZ2VyIjogcG9zaXRpb24udHJpZ2dlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInJlZ2ltZV9zY29yZSI6IHJlZ2ltZV9zY29yZX0pCiAgICAgICAgICAgICAgICBpZiBwb3NpdGlvbi5zdGF0ZSA9PSAiVFJBSUwiIGFuZCBub3QgcG9zaXRpb24udHJhaWxfYXJtX2VtaXR0ZWQ6CiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb24udHJhaWxfYXJtX2VtaXR0ZWQgPSBUcnVlCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiVFJBSUxfQVJNIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHsia2V5IjogcG9zaXRpb24ua2V5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJmbG9vciI6IHJvdW5kKHBvc2l0aW9uLnRyYWlsX2Zsb29yLCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicGVhayI6IHJvdW5kKHBvc2l0aW9uLnRyYWlsX3BlYWssIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJydW5uZXJfcXR5IjogcG9zaXRpb24ucnVubmVyX3F0eSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAidHJpZ2dlciI6IHBvc2l0aW9uLnRyaWdnZXJ9KQogICAgICAgICAgICAgICAgaWYgYWN0aW9uID09IFRQX1RPVUNIOgogICAgICAgICAgICAgICAgICAgIGF3YWl0IG9tLmFybV90cmFpbChwb3NpdGlvbiwgYmlkKQogICAgICAgICAgICAgICAgZWxpZiBhY3Rpb24gaW4gKFNUT1AsIFRSQUlMX1NUT1AsIEZMQVRURU4pOgogICAgICAgICAgICAgICAgICAgIHJlYXNvbiA9IHsiU1RPUCI6ICJzdG9wLWxvc3MiLCAiVFJBSUxfU1RPUCI6ICJ0cmFpbC1zdG9wIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIkZMQVRURU4iOiAiMTU6NTUtZmxhdCJ9W2FjdGlvbl0KICAgICAgICAgICAgICAgICAgICBwbmwgPSBhd2FpdCBvbS5jbG9zZShwb3NpdGlvbiwgcmVhc29uKQogICAgICAgICAgICAgICAgICAgIHJpc2sucmVnaXN0ZXJfY2xvc2UocG5sKQogICAgICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIkNMT1NFRCIsIHsia2V5IjogcG9zaXRpb24ua2V5LCAicmVhc29uIjogcmVhc29uLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQocG5sLCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInBlYWtfeCI6IHJvdW5kKHBvc2l0aW9uLnBlYWtfbXVsdGlwbGUsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiaGVsZF9taW4iOiBwb3NpdGlvbi5oZWxkX21pbnV0ZXMobm93KSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInRwX3RvdWNoZWQiOiBwb3NpdGlvbi50cF90b3VjaGVkLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAid2luZG93IjogcG9zaXRpb24ud2luZG93LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAidHJpZ2dlciI6IHBvc2l0aW9uLnRyaWdnZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJyZWdpbWVfc2NvcmUiOiByZWdpbWVfc2NvcmUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJtZmUiOiByb3VuZChwb3NpdGlvbi5tZmUsIDMpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAibWFlIjogcm91bmQocG9zaXRpb24ubWFlLCAzKX0pCiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb24gPSBOb25lCiAgICAgICAgICAgIGlmIHBvc2l0aW9uIGFuZCByaXNrLmNoZWNrX2tpbGwoVHJ1ZSk6CiAgICAgICAgICAgICAgICBwbmwgPSBhd2FpdCBvbS5mbGF0dGVuKHBvc2l0aW9uLCAia2lsbC1zd2l0Y2giKQogICAgICAgICAgICAgICAgcmlzay5yZWdpc3Rlcl9jbG9zZShwbmwpCiAgICAgICAgICAgICAgICBhd2FpdCBlbWl0KCJDTE9TRUQiLCB7ImtleSI6IHBvc2l0aW9uLmtleSwgInJlYXNvbiI6ICJraWxsLXN3aXRjaCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInBubCI6IHJvdW5kKHBubCwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInRyaWdnZXIiOiBwb3NpdGlvbi50cmlnZ2VyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJyZWdpbWVfc2NvcmUiOiByZWdpbWVfc2NvcmV9KQogICAgICAgICAgICAgICAgcG9zaXRpb24gPSBOb25lCgogICAgICAgICMgLS0tLSBlbnRyeSBldmFsdWF0aW9uIChicmlkZ2Utc2NyZWVuZWQgY2FuZGlkYXRlcykgLS0tLQogICAgICAgIGlmIG5vdCBwb3NpdGlvbiBhbmQgbm90IHBlbmRpbmdfZW50cnkgYW5kIHNwb3Q6CiAgICAgICAgICAgIGlmIG5vdCBsdmxfb2s6CiAgICAgICAgICAgICAgICBpZiBsdmxfd2h5LnN0YXJ0c3dpdGgoInN0YWxlIikgYW5kIFwKICAgICAgICAgICAgICAgICAgICAgICAgbm93LnRpbWVzdGFtcCgpIC0gbGFzdF9zY2FuX2xvZyA+IDMwMDoKICAgICAgICAgICAgICAgICAgICBsYXN0X3NjYW5fbG9nID0gbm93LnRpbWVzdGFtcCgpCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiU1RBTEVfTEVWRUxTIiwgeyJ3aHkiOiBsdmxfd2h5fSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGNhbmRzID0gbGV2ZWxzLmNhbmRpZGF0ZXMoKQogICAgICAgICAgICAgICAgY2FuZCA9IGNhbmRzWzBdIGlmIGNhbmRzIGVsc2UgTm9uZQogICAgICAgICAgICAgICAgaWYgY2FuZCBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICBvaywgd2h5ID0gcmlzay5jYW5fZW50ZXIoCiAgICAgICAgICAgICAgICAgICAgICAgIG5vdywgRmFsc2UsIGNhbmQuZ2V0KCJ0cmlnZ2VyIiwgImNydXNoIikpCiAgICAgICAgICAgICAgICAgICAgaWYgb2s6CiAgICAgICAgICAgICAgICAgICAgICAgIHF0eSA9IHJpc2suc2l6ZV9xdHkoY2FuZFsiYXNrIl0pCiAgICAgICAgICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIkNBTkRJREFURSIsIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJrZXkiOiBjYW5kWyJrZXkiXSwgImFzayI6IGNhbmRbImFzayJdLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgImRlbHRhIjogY2FuZC5nZXQoImRlbHRhIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiZ2FtbWEiOiBjYW5kLmdldCgiZ2FtbWEiKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJzY29yZSI6IGNhbmQuZ2V0KCJzY29yZSIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgImFza196IjogY2FuZC5nZXQoImFza196IiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAid2luZG93IjogY2FuZC5nZXQoIndpbmRvdyIpLCAib3RtIjogY2FuZC5nZXQoIm90bSIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgInNwb3QiOiBjYW5kLmdldCgic3BvdCIpLCAid2FsbCI6IGNhbmQuZ2V0KCJ3YWxsIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAidHJpZ2dlciI6IGNhbmQuZ2V0KCJ0cmlnZ2VyIiwgImNydXNoIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAid2Jfc2lkZSI6IGNhbmQuZ2V0KCJ3Yl9zaWRlIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiZmxpcCI6IChsdiBvciB7fSkuZ2V0KCJmbGlwIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAicmVnaW1lX3Njb3JlIjogcmVnaW1lX3Njb3JlLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgInF0eSI6IHF0eX0pCiAgICAgICAgICAgICAgICAgICAgICAgIHBlbmRpbmdfZW50cnkgPSBUcnVlCiAgICAgICAgICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uID0gYXdhaXQgb20uZW50ZXIoY2FuZCwgcXR5LCBub3cpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBwb3NpdGlvbiBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIk5PX0ZJTEwiLCB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJrZXkiOiBjYW5kWyJrZXkiXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInRyaWdnZXIiOiBjYW5kLmdldCgidHJpZ2dlciIsICJjcnVzaCIpfSkKICAgICAgICAgICAgICAgICAgICAgICAgZmluYWxseToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBlbmRpbmdfZW50cnkgPSBGYWxzZQogICAgICAgICAgICAgICAgICAgIGVsaWYgd2h5IG5vdCBpbiAoInRpbWUtZ2F0ZSIsKToKICAgICAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiUklTS19CTE9DSyIsIHsicmVhc29uIjogd2h5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ0cmlnZ2VyIjogY2FuZC5nZXQoInRyaWdnZXIiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgImNydXNoIil9KQoKICAgICAgICAjIC0tLS0gaGVhcnRiZWF0IC0tLS0KICAgICAgICBpZiAobm93IC0gbGFzdF9iZWF0KS50b3RhbF9zZWNvbmRzKCkgPj0gY29uZmlnLkhFQVJUQkVBVF9TRUM6CiAgICAgICAgICAgIGxhc3RfYmVhdCA9IG5vdwogICAgICAgICAgICBwb3MgPSAoZiJ7cG9zaXRpb24ua2V5fSB4e3Bvc2l0aW9uLnF0eX0gIgogICAgICAgICAgICAgICAgICAgZiJAe3Bvc2l0aW9uLmVudHJ5X3B4Oi4yZn0ge3Bvc2l0aW9uLnN0YXRlfSIKICAgICAgICAgICAgICAgICAgIGYiW3twb3NpdGlvbi50cmlnZ2VyfV0iCiAgICAgICAgICAgICAgICAgICArIChmIiBmbHI9e3Bvc2l0aW9uLnRyYWlsX2Zsb29yOi4yZn0iCiAgICAgICAgICAgICAgICAgICAgICBpZiBwb3NpdGlvbi5zdGF0ZSA9PSAiVFJBSUwiIGVsc2UgIiIpCiAgICAgICAgICAgICAgICAgICApIGlmIHBvc2l0aW9uIGVsc2UgImZsYXQiCiAgICAgICAgICAgIHByaW50KGYie25vdy5zdHJmdGltZSgnJUg6JU06JVMnKX0gc3BvdD17c3BvdDouMWZ9IHBvcz17cG9zfSAiCiAgICAgICAgICAgICAgICAgIGYiZGF5X3BubD17cmlzay5kYWlseV9wbmw6Ky4wZn0gdHJhZGVzPXtyaXNrLnRyYWRlc190b2RheX0gIgogICAgICAgICAgICAgICAgICBmImx2bF9hZ2U9e2xldmVscy5hZ2Vfc2VjKCk6LjBmfXMiLAogICAgICAgICAgICAgICAgICBmbHVzaD1UcnVlKQoKICAgICAgICBhd2FpdCBhc3luY2lvLnNsZWVwKGNvbmZpZy5MT09QX0NBREVOQ0VfU0VDKQoKICAgICMgLS0tLSBzaHV0ZG93bjogZmxhdHRlbiBmaXJzdCAtLS0tCiAgICBhd2FpdCBlbWl0KCJTSFVURE9XTiIsIHsicmVhc29uIjogImxvb3AtZW5kIiBpZiBub3QgX3NodXRkb3duLmlzX3NldCgpIGVsc2UgInNpZ25hbCJ9KQogICAgaWYgcG9zaXRpb246CiAgICAgICAgcG5sID0gYXdhaXQgb20uZmxhdHRlbihwb3NpdGlvbiwgInNodXRkb3duIikKICAgICAgICByaXNrLnJlZ2lzdGVyX2Nsb3NlKHBubCkKICAgICAgICBhd2FpdCBlbWl0KCJDTE9TRUQiLCB7ImtleSI6IHBvc2l0aW9uLmtleSwgInJlYXNvbiI6ICJzaHV0ZG93biIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJwbmwiOiByb3VuZChwbmwsIDIpfSkKICAgIGF3YWl0IGVtaXQoIkRBWV9FTkQiLCB7InRyYWRlcyI6IHJpc2sudHJhZGVzX3RvZGF5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAiZGF5X3BubCI6IHJvdW5kKHJpc2suZGFpbHlfcG5sLCAyKX0pCiAgICBpYi5kaXNjb25uZWN0KCkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgYXN5bmNpby5ydW4obWFpbigpKQo=
+"""0DTE SPXW crush-entry algo - main loop (CONSUMER mode).
+
+The bridge (gex_bridge/) is the account's single streaming connection.
+This process holds ZERO market-data lines: it connects to IBKR order-only
+(clientId=7, paper-gated) and reads everything -- chain quotes, walls,
+candidates, regime -- from ../shared/levels.json (atomic publish).
+
+Fail-safe: no NEW entries when levels.json is missing or older than 60s
+in a NY session (STALE_LEVELS); open positions keep being managed.
+
+ALWAYS-ON (default): the process never exits on its own. Each session is
+connect (paper-gated) -> wait for bridge levels -> trade -> 15:55 flatten
+-> 16:05 disconnect; then it sleeps (interruptibly) until the next weekday
+09:30 ET. Ctrl+C / SIGTERM always exits promptly (flatten first).
+Pass --oneshot for a single session (debugging).
+
+Default is DRY-RUN (no orders). Pass --live to transmit on the PAPER
+account (still hard-gated to DU* paper accounts; live money impossible).
+"""
+import argparse
+import asyncio
+import json
+import logging
+import os
+import signal
+import sys
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+import config
+from levels import LevelsWatcher
+from ibkr_conn import connect_ib, ensure_connected, account_net_liq
+from strategy import (HOLD, T1_FILL, T2_FILL, TP_TOUCH, TRAIL_STOP, STOP,
+                      FLATTEN)
+from orders import OrderManager, COMMISSION
+from risk import RiskManager
+
+ET = ZoneInfo("America/New_York")
+log = logging.getLogger("algo")
+
+_shutdown = asyncio.Event()
+_log_handlers: list = []
+
+
+def setup_logging(log_dir: str):
+    global _log_handlers
+    root = logging.getLogger()
+    for h in _log_handlers:
+        root.removeHandler(h)
+        try:
+            h.close()
+        except Exception:
+            pass
+    _log_handlers = []
+    os.makedirs(log_dir, exist_ok=True)
+    day = datetime.now(ET).strftime("%Y%m%d")
+    path = os.path.join(log_dir, f"algo_{day}.jsonl")
+    fh = logging.FileHandler(path)
+    fh.setFormatter(logging.Formatter("%(message)s"))
+    root.setLevel(logging.INFO)
+    root.addHandler(fh)
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.WARNING)
+    root.addHandler(ch)
+    _log_handlers = [fh, ch]
+    return path
+
+
+async def emit(event: str, data: dict):
+    rec = {"ts": datetime.now(ET).isoformat(), "event": event, **data}
+    logging.getLogger("algo").info(json.dumps(rec))
+
+
+def next_session_start(now_et: datetime) -> datetime:
+    """Next weekday 09:30 ET at or after now."""
+    cand = now_et.replace(hour=9, minute=30, second=0, microsecond=0)
+    if cand <= now_et:
+        cand += timedelta(days=1)
+    while cand.weekday() >= 5:
+        cand += timedelta(days=1)
+    return cand
+
+
+async def sleep_interruptible(total_secs: float):
+    end = asyncio.get_event_loop().time() + total_secs
+    while not _shutdown.is_set():
+        remaining = end - asyncio.get_event_loop().time()
+        if remaining <= 0:
+            return
+        try:
+            await asyncio.wait_for(_shutdown.wait(),
+                                   timeout=min(60.0, remaining))
+        except asyncio.TimeoutError:
+            pass
+
+
+async def sleep_until_next_session():
+    now = datetime.now(ET)
+    target = next_session_start(now)
+    secs = (target - now).total_seconds()
+    if secs <= 0:
+        return
+    await emit("SLEEP", {"until": target.isoformat(), "secs": int(secs)})
+    print(f"sleeping {int(secs)}s until next session {target.strftime('%a %H:%M %Z')}",
+          flush=True)
+    await sleep_interruptible(secs)
+
+
+async def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true",
+                    help="simulate only; do NOT transmit (default: LIVE)")
+    ap.add_argument("--log-dir", default=config.LOG_DIR)
+    ap.add_argument("--oneshot", action="store_true",
+                    help="run one session (or one day-check) then exit; "
+                         "default is always-on: sleep and retry next session")
+    args = ap.parse_args()
+    dry_run = args.dry_run
+
+    setup_logging(args.log_dir)
+
+    loop = asyncio.get_running_loop()
+    try:
+        for sig in (signal.SIGINT, signal.SIGTERM):
+            loop.add_signal_handler(sig, _shutdown.set)
+    except NotImplementedError:
+        for sig in (signal.SIGINT, signal.SIGTERM):
+            signal.signal(sig, lambda *_: _shutdown.set())
+
+    await emit("DAEMON", {"mode": "oneshot" if args.oneshot else "always-on",
+                          "dry_run": dry_run})
+    print(f"mode={'DRY-RUN' if dry_run else 'LIVE-PAPER'} | "
+          f"{'ONESHOT' if args.oneshot else 'ALWAYS-ON'}", flush=True)
+
+    if args.oneshot:
+        await run_session(dry_run, args)
+        return
+
+    while not _shutdown.is_set():
+        try:
+            await run_session(dry_run, args)
+        except SystemExit as e:
+            try:
+                await emit("SESSION_ABORT", {"error": str(e)})
+            except Exception:
+                pass
+        except Exception as e:  # noqa: BLE001 - stay alive on transient faults
+            log.exception("session crashed; retrying shortly")
+            try:
+                await emit("SESSION_ERROR",
+                           {"error": f"{type(e).__name__}: {e}"})
+            except Exception:
+                pass
+            await sleep_interruptible(300)
+            continue
+        if _shutdown.is_set():
+            break
+        await sleep_until_next_session()
+    try:
+        await emit("DAEMON_STOP", {"reason": "shutdown-signal"})
+    except Exception:
+        pass
+
+
+async def _await_ny_levels(levels: LevelsWatcher, timeout: float = 600):
+    """Wait for the bridge to publish a NY session payload."""
+    end = asyncio.get_event_loop().time() + timeout
+    while asyncio.get_event_loop().time() < end and not _shutdown.is_set():
+        lv = levels.get()
+        if lv is not None and lv.get("session") == "ny":
+            return lv
+        await asyncio.sleep(5)
+    return None
+
+
+async def run_session(dry_run: bool, args):
+    """One trading session: connect (order-only) -> wait for bridge levels
+    -> trade -> 15:55 flatten -> 16:05 disconnect."""
+    log_path = setup_logging(args.log_dir)
+    print(f"logging to {log_path} | mode={'DRY-RUN' if dry_run else 'LIVE-PAPER'}",
+          flush=True)
+    await emit("START", {"mode": "dry-run" if dry_run else "live-paper",
+                         "port": config.IB_PORT, "client_id": config.IB_CLIENT_ID})
+
+    # ---- connect (order-only, paper-gated) ----
+    ib, account = await connect_ib()
+    await emit("CONNECTED", {"account": account})
+
+    # ---- bridge levels ----
+    levels = LevelsWatcher()
+    lv = await _await_ny_levels(levels)
+    if lv is None:
+        await emit("NO_TRADE_DAY", {"reason": "no-ny-levels (bridge down?)"})
+        ib.disconnect()
+        return
+    await emit("LEVELS_OK", {"session": lv.get("session"),
+                             "age_s": round(levels.age_sec(), 1)})
+
+    # ---- order contracts from the bridge's descriptors (one-shot qualify) ----
+    om_probe = OrderManager(ib, account, dry_run, levels.quote, emit)
+    contracts = om_probe.bind_contract_descriptors(levels.load_contracts())
+    if not contracts:
+        await emit("NO_TRADE_DAY", {"reason": "empty contracts.json"})
+        ib.disconnect()
+        return
+    await ib.qualifyContractsAsync(*contracts.values())
+    await emit("CONTRACTS", {"n": len(contracts)})
+
+    # ---- regime (from the bridge; observe by default) ----
+    rinfo = levels.regime()
+    regime_score = rinfo.get("score")
+    await emit("REGIME", {"mode": rinfo.get("mode", config.REGIME_MODE),
+                          "score": regime_score,
+                          "detail": rinfo.get("detail")})
+
+    # ---- risk / orders ----
+    acct_val = account_net_liq(ib, account)
+    risk = RiskManager(acct_val)
+    await emit("RISK", {"net_liq": acct_val,
+                        "daily_stop": round(risk.daily_stop_amt, 2),
+                        "risk_per_trade": config.RISK_PER_TRADE})
+    if rinfo.get("mode") == "live" and regime_score is not None:
+        ok = regime_score >= config.REGIME_MIN_SCORE
+        mult = (config.REGIME_SIZE_MULT
+                if regime_score >= config.REGIME_HIGH_SCORE else 1.0)
+        risk.set_regime(ok, mult)
+        if not ok:
+            await emit("REGIME_GATE", {"score": regime_score,
+                                       "min": config.REGIME_MIN_SCORE,
+                                       "note": "no new entries today"})
+
+    om = om_probe  # get_quote = levels.quote (bid, ask) from chain_frame
+
+    # ---- main loop ----
+    position = None
+    pending_entry = False
+    last_beat = datetime.now(ET)
+    last_scan_log = 0
+
+    await emit("RUN", {"note": "entering main loop (consumer mode)"})
+    while not _shutdown.is_set():
+        now = datetime.now(ET)
+        if (now.hour, now.minute) >= config.LOOP_END:
+            break
+        if not await ensure_connected(ib):
+            await emit("FATAL", {"reason": "reconnect-exhausted"})
+            break
+
+        risk.new_day(now.date())
+        lv = levels.get()
+        spot = (lv or {}).get("spx")
+        walls = (lv or {}).get("walls") or {}
+        lvl_ok, lvl_why = levels.entries_allowed(now)
+
+        # ---- position management (exits first) ----
+        if position and spot:
+            if position.tiered_effective:
+                live_fills = [(t, fq, fpx)
+                              for t, fq, fpx in om.check_tier_fills(position)]
+            else:
+                _f = om.check_tp_fill(position)
+                live_fills = [(0, _f[0], _f[1])] if _f else []
+            for tier, fq, fpx in live_fills:
+                if tier == 0:
+                    fpnl = position.on_close(fq, fpx) - COMMISSION
+                    position.qty -= fq
+                else:
+                    fpnl = position.apply_tier_fill(tier, fq, fpx) - COMMISSION
+                risk.register_partial(fpnl)
+                if tier == 0:
+                    await emit("CLOSED", {"key": position.key, "reason": "tp-10x",
+                                          "pnl": round(fpnl, 2),
+                                          "exit_px": round(fpx, 2),
+                                          "peak_x": round(position.peak_multiple, 2),
+                                          "held_min": position.held_minutes(now),
+                                          "window": position.window,
+                                          "trigger": position.trigger,
+                                          "regime_score": regime_score})
+                    position = None
+                    break
+                await emit("TIER_FILL", {"key": position.key, "tier": tier,
+                                         "qty": fq, "px": round(fpx, 2),
+                                         "multiple": round(fpx / position.entry_px, 2),
+                                         "pnl": round(fpnl, 2),
+                                         "trigger": position.trigger,
+                                         "regime_score": regime_score})
+                if tier == 2 and position.t2_qty == 0:
+                    q = levels.quote(position.key)
+                    await om.arm_trail(position,
+                                       q[0] if q and q[0] > 0 else fpx)
+            position.drain_tier_fills() if position else None
+
+            if position:
+                q = levels.quote(position.key)
+                bid = q[0] if q and q[0] else 0.0
+                action = position.update(now, bid, spot)
+                for tier, fq, fpx, fpnl0 in position.drain_tier_fills():
+                    fpnl = fpnl0 - COMMISSION
+                    risk.register_partial(fpnl)
+                    await emit("TIER_FILL", {"key": position.key, "tier": tier,
+                                             "qty": fq, "px": round(fpx, 2),
+                                             "multiple": round(fpx / position.entry_px, 2),
+                                             "pnl": round(fpnl, 2),
+                                             "trigger": position.trigger,
+                                             "regime_score": regime_score})
+                if position.state == "TRAIL" and not position.trail_arm_emitted:
+                    position.trail_arm_emitted = True
+                    await emit("TRAIL_ARM",
+                               {"key": position.key,
+                                "floor": round(position.trail_floor, 2),
+                                "peak": round(position.trail_peak, 2),
+                                "runner_qty": position.runner_qty,
+                                "trigger": position.trigger})
+                if action == TP_TOUCH:
+                    await om.arm_trail(position, bid)
+                elif action in (STOP, TRAIL_STOP, FLATTEN):
+                    reason = {"STOP": "stop-loss", "TRAIL_STOP": "trail-stop",
+                              "FLATTEN": "15:55-flat"}[action]
+                    pnl = await om.close(position, reason)
+                    risk.register_close(pnl)
+                    await emit("CLOSED", {"key": position.key, "reason": reason,
+                                          "pnl": round(pnl, 2),
+                                          "peak_x": round(position.peak_multiple, 2),
+                                          "held_min": position.held_minutes(now),
+                                          "tp_touched": position.tp_touched,
+                                          "window": position.window,
+                                          "trigger": position.trigger,
+                                          "regime_score": regime_score,
+                                          "mfe": round(position.mfe, 3),
+                                          "mae": round(position.mae, 3)})
+                    position = None
+            if position and risk.check_kill(True):
+                pnl = await om.flatten(position, "kill-switch")
+                risk.register_close(pnl)
+                await emit("CLOSED", {"key": position.key, "reason": "kill-switch",
+                                      "pnl": round(pnl, 2),
+                                      "trigger": position.trigger,
+                                      "regime_score": regime_score})
+                position = None
+
+        # ---- entry evaluation (bridge-screened candidates) ----
+        if not position and not pending_entry and spot:
+            if not lvl_ok:
+                if lvl_why.startswith("stale") and \
+                        now.timestamp() - last_scan_log > 300:
+                    last_scan_log = now.timestamp()
+                    await emit("STALE_LEVELS", {"why": lvl_why})
+            else:
+                cands = levels.candidates()
+                cand = cands[0] if cands else None
+                if cand is not None:
+                    ok, why = risk.can_enter(
+                        now, False, cand.get("trigger", "crush"))
+                    if ok:
+                        qty = risk.size_qty(cand["ask"])
+                        await emit("CANDIDATE", {
+                            "key": cand["key"], "ask": cand["ask"],
+                            "delta": cand.get("delta"),
+                            "gamma": cand.get("gamma"),
+                            "score": cand.get("score"),
+                            "ask_z": cand.get("ask_z"),
+                            "window": cand.get("window"), "otm": cand.get("otm"),
+                            "spot": cand.get("spot"), "wall": cand.get("wall"),
+                            "trigger": cand.get("trigger", "crush"),
+                            "wb_side": cand.get("wb_side"),
+                            "flip": (lv or {}).get("flip"),
+                            "regime_score": regime_score,
+                            "qty": qty})
+                        pending_entry = True
+                        try:
+                            position = await om.enter(cand, qty, now)
+                            if position is None:
+                                await emit("NO_FILL", {
+                                    "key": cand["key"],
+                                    "trigger": cand.get("trigger", "crush")})
+                        finally:
+                            pending_entry = False
+                    elif why not in ("time-gate",):
+                        await emit("RISK_BLOCK", {"reason": why,
+                                                  "trigger": cand.get("trigger",
+                                                                      "crush")})
+
+        # ---- heartbeat ----
+        if (now - last_beat).total_seconds() >= config.HEARTBEAT_SEC:
+            last_beat = now
+            pos = (f"{position.key} x{position.qty} "
+                   f"@{position.entry_px:.2f} {position.state}"
+                   f"[{position.trigger}]"
+                   + (f" flr={position.trail_floor:.2f}"
+                      if position.state == "TRAIL" else "")
+                   ) if position else "flat"
+            print(f"{now.strftime('%H:%M:%S')} spot={spot:.1f} pos={pos} "
+                  f"day_pnl={risk.daily_pnl:+.0f} trades={risk.trades_today} "
+                  f"lvl_age={levels.age_sec():.0f}s",
+                  flush=True)
+
+        await asyncio.sleep(config.LOOP_CADENCE_SEC)
+
+    # ---- shutdown: flatten first ----
+    await emit("SHUTDOWN", {"reason": "loop-end" if not _shutdown.is_set() else "signal"})
+    if position:
+        pnl = await om.flatten(position, "shutdown")
+        risk.register_close(pnl)
+        await emit("CLOSED", {"key": position.key, "reason": "shutdown",
+                              "pnl": round(pnl, 2)})
+    await emit("DAY_END", {"trades": risk.trades_today,
+                           "day_pnl": round(risk.daily_pnl, 2)})
+    ib.disconnect()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

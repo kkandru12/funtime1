@@ -1,1 +1,124 @@
-IiIiTGV2ZWxzV2F0Y2hlcjogcmVhZC1vbmx5IGNvbnN1bWVyIG9mIHRoZSBicmlkZ2UncyBzaGFyZWQvbGV2ZWxzLmpzb24uCgpUaGUgYnJpZGdlIChnZXhfYnJpZGdlLykgaXMgdGhlIGFjY291bnQncyBzaW5nbGUgc3RyZWFtaW5nIGNvbm5lY3Rpb247IHRoaXMKYWxnbyBob2xkcyBaRVJPIG1hcmtldC1kYXRhIGxpbmVzLiBBbGwgY2hhaW4gcXVvdGVzLCB3YWxscywgY2FuZGlkYXRlcyBhbmQKcmVnaW1lIHN0YXRlIGFycml2ZSB2aWEgdGhlIGF0b21pY2FsbHktcHVibGlzaGVkIGxldmVscy5qc29uLgoKRmFpbC1zYWZlOiBlbnRyaWVzIGFyZSBibG9ja2VkIHdoZW4gbGV2ZWxzIGFyZSBtaXNzaW5nIG9yIG9sZGVyIHRoYW4KU1RBTEVfTEVWRUxTX1NFQyAoNjBzKSBpbiBhIE5ZIHNlc3Npb24uIE9wZW4gcG9zaXRpb25zIGtlZXAgYmVpbmcgbWFuYWdlZAooZXhpdHMgYXJlIE1UNS9JQktSLW5hdGl2ZSBvciBxdW90ZS1kcml2ZW4gZnJvbSB0aGUgbGFzdCBnb29kIGZyYW1lKS4KIiIiCmltcG9ydCBqc29uCmltcG9ydCBsb2dnaW5nCmltcG9ydCBvcwppbXBvcnQgdGltZQoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ28ubGV2ZWxzIikKClNUQUxFX0xFVkVMU19TRUMgPSA2MC4wCgoKZGVmIF9zaGFyZWRfZGlyKCkgLT4gc3RyOgogICAgZW52ID0gb3MuZ2V0ZW52KCJTSEFSRURfRElSIikgb3Igb3MuZ2V0ZW52KCJDUlVTSF9TSEFSRURfRElSIikKICAgIGlmIGVudjoKICAgICAgICByZXR1cm4gZW52CiAgICBoZXJlID0gb3MucGF0aC5kaXJuYW1lKG9zLnBhdGguYWJzcGF0aChfX2ZpbGVfXykpCiAgICByZXR1cm4gb3MucGF0aC5qb2luKG9zLnBhdGguZGlybmFtZShoZXJlKSwgInNoYXJlZCIpCgoKY2xhc3MgTGV2ZWxzV2F0Y2hlcjoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBzaGFyZWRfZGlyOiBzdHIgfCBOb25lID0gTm9uZSk6CiAgICAgICAgc2VsZi5kaXIgPSBzaGFyZWRfZGlyIG9yIF9zaGFyZWRfZGlyKCkKICAgICAgICBzZWxmLmxldmVsc19wYXRoID0gb3MucGF0aC5qb2luKHNlbGYuZGlyLCAibGV2ZWxzLmpzb24iKQogICAgICAgIHNlbGYuY29udHJhY3RzX3BhdGggPSBvcy5wYXRoLmpvaW4oc2VsZi5kaXIsICJjb250cmFjdHMuanNvbiIpCiAgICAgICAgc2VsZi5fbGV2ZWxzOiBkaWN0IHwgTm9uZSA9IE5vbmUKICAgICAgICBzZWxmLl9sZXZlbHNfbXRpbWUgPSAwLjAKICAgICAgICBzZWxmLl9jb250cmFjdHM6IGRpY3QgfCBOb25lID0gTm9uZQogICAgICAgIHNlbGYuX3N0YWxlX3dhcm5lZCA9IEZhbHNlCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tIGxldmVscyAtLS0tLS0tLS0tLS0tLS0tCiAgICBkZWYgcmVmcmVzaChzZWxmKSAtPiBkaWN0IHwgTm9uZToKICAgICAgICAiIiJSZS1yZWFkIGxldmVscy5qc29uIGlmIGl0IGNoYW5nZWQuIFJldHVybnMgdGhlIHBheWxvYWQgb3IgTm9uZS4iIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIG10aW1lID0gb3MucGF0aC5nZXRtdGltZShzZWxmLmxldmVsc19wYXRoKQogICAgICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIGlmIG10aW1lID09IHNlbGYuX2xldmVsc19tdGltZSBhbmQgc2VsZi5fbGV2ZWxzIGlzIG5vdCBOb25lOgogICAgICAgICAgICByZXR1cm4gc2VsZi5fbGV2ZWxzCiAgICAgICAgdHJ5OgogICAgICAgICAgICB3aXRoIG9wZW4oc2VsZi5sZXZlbHNfcGF0aCkgYXMgZjoKICAgICAgICAgICAgICAgIHNlbGYuX2xldmVscyA9IGpzb24ubG9hZChmKQogICAgICAgICAgICBzZWxmLl9sZXZlbHNfbXRpbWUgPSBtdGltZQogICAgICAgICAgICBzZWxmLl9zdGFsZV93YXJuZWQgPSBGYWxzZQogICAgICAgIGV4Y2VwdCAoT1NFcnJvciwgVmFsdWVFcnJvcikgYXMgZToKICAgICAgICAgICAgbG9nLndhcm5pbmcoImxldmVscy5qc29uIHJlYWQgZmFpbGVkOiAlcyIsIGUpCiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIHNlbGYuX2xldmVscwoKICAgIGRlZiBnZXQoc2VsZikgLT4gZGljdCB8IE5vbmU6CiAgICAgICAgcmV0dXJuIHNlbGYucmVmcmVzaCgpCgogICAgZGVmIGFnZV9zZWMoc2VsZikgLT4gZmxvYXQ6CiAgICAgICAgaWYgc2VsZi5fbGV2ZWxzIGlzIE5vbmU6CiAgICAgICAgICAgIHJldHVybiBmbG9hdCgiaW5mIikKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJldHVybiB0aW1lLnRpbWUoKSAtIHNlbGYuX2xldmVsc19tdGltZQogICAgICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgICAgICByZXR1cm4gZmxvYXQoImluZiIpCgogICAgZGVmIGZyZXNoKHNlbGYsIG1heF9hZ2U6IGZsb2F0ID0gU1RBTEVfTEVWRUxTX1NFQykgLT4gYm9vbDoKICAgICAgICBsdiA9IHNlbGYuZ2V0KCkKICAgICAgICBpZiBsdiBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICByZXR1cm4gc2VsZi5hZ2Vfc2VjKCkgPD0gbWF4X2FnZQoKICAgIGRlZiBlbnRyaWVzX2FsbG93ZWQoc2VsZiwgbm93X2V0KSAtPiB0dXBsZVtib29sLCBzdHJdOgogICAgICAgICIiIkZhaWwtc2FmZSBnYXRlOiBubyBORVcgZW50cmllcyBvbiBzdGFsZS9taXNzaW5nIGxldmVscyBpbiBOWS4iIiIKICAgICAgICBsdiA9IHNlbGYuZ2V0KCkKICAgICAgICBpZiBsdiBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gRmFsc2UsICJubyBsZXZlbHMuanNvbiAoYnJpZGdlIGRvd24/KSIKICAgICAgICBpZiBsdi5nZXQoInNlc3Npb24iKSAhPSAibnkiOgogICAgICAgICAgICByZXR1cm4gRmFsc2UsIGYiYnJpZGdlIHNlc3Npb249e2x2LmdldCgnc2Vzc2lvbicpfSIKICAgICAgICBhZ2UgPSBzZWxmLmFnZV9zZWMoKQogICAgICAgIGlmIGFnZSA+IFNUQUxFX0xFVkVMU19TRUM6CiAgICAgICAgICAgIGlmIG5vdCBzZWxmLl9zdGFsZV93YXJuZWQ6CiAgICAgICAgICAgICAgICBsb2cuZXJyb3IoIlNUQUxFX0xFVkVMUzogbGV2ZWxzLmpzb24gYWdlICUuMGZzID4gJS4wZnMgLSAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgImVudHJpZXMgYmxvY2tlZCwgbWFuYWdpbmcgb3BlbiBwb3NpdGlvbnMgb25seSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgYWdlLCBTVEFMRV9MRVZFTFNfU0VDKQogICAgICAgICAgICAgICAgc2VsZi5fc3RhbGVfd2FybmVkID0gVHJ1ZQogICAgICAgICAgICByZXR1cm4gRmFsc2UsIGYic3RhbGUgbGV2ZWxzICh7YWdlOi4wZn1zKSIKICAgICAgICByZXR1cm4gVHJ1ZSwgIm9rIgoKICAgICMgLS0tLS0tLS0tLS0tLS0tLSBjb250cmFjdHMgLS0tLS0tLS0tLS0tLS0tLQogICAgZGVmIGxvYWRfY29udHJhY3RzKHNlbGYpIC0+IGRpY3Q6CiAgICAgICAgIiIiY29udHJhY3RzLmpzb24gLT4ge2tleV9zdHI6IGRlc2NyaXB0b3J9LiBDYWNoZWQgYWZ0ZXIgZmlyc3QgbG9hZC4iIiIKICAgICAgICBpZiBzZWxmLl9jb250cmFjdHMgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHJldHVybiBzZWxmLl9jb250cmFjdHMKICAgICAgICBkZWFkbGluZSA9IHRpbWUudGltZSgpICsgMzAwCiAgICAgICAgd2hpbGUgdGltZS50aW1lKCkgPCBkZWFkbGluZToKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgd2l0aCBvcGVuKHNlbGYuY29udHJhY3RzX3BhdGgpIGFzIGY6CiAgICAgICAgICAgICAgICAgICAgZG9jID0ganNvbi5sb2FkKGYpCiAgICAgICAgICAgICAgICBzZWxmLl9jb250cmFjdHMgPSBkb2MuZ2V0KCJjb250cmFjdHMiLCB7fSkKICAgICAgICAgICAgICAgIGxvZy5pbmZvKCJjb250cmFjdHMuanNvbiBsb2FkZWQ6ICVkIGNvbnRyYWN0cywgZXhwaXJ5ICVzIiwKICAgICAgICAgICAgICAgICAgICAgICAgIGxlbihzZWxmLl9jb250cmFjdHMpLCBkb2MuZ2V0KCJleHBpcnkiKSkKICAgICAgICAgICAgICAgIHJldHVybiBzZWxmLl9jb250cmFjdHMKICAgICAgICAgICAgZXhjZXB0IChPU0Vycm9yLCBWYWx1ZUVycm9yKToKICAgICAgICAgICAgICAgIHRpbWUuc2xlZXAoNSkKICAgICAgICByYWlzZSBTeXN0ZW1FeGl0KCJsZXZlbHM6IGNvbnRyYWN0cy5qc29uIG5vdCBhdmFpbGFibGUgYWZ0ZXIgMzAwcyAiCiAgICAgICAgICAgICAgICAgICAgICAgICAiKHN0YXJ0IGdleF9icmlkZ2UgZmlyc3QpIikKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0gY29udmVuaWVuY2UgcmVhZGVycyAtLS0tLS0tLS0tLS0tLS0tCiAgICBkZWYgcXVvdGUoc2VsZiwga2V5X3N0cjogc3RyKSAtPiB0dXBsZVtmbG9hdCB8IE5vbmUsIGZsb2F0IHwgTm9uZV06CiAgICAgICAgIiIiKGJpZCwgYXNrKSBmcm9tIHRoZSBsYXRlc3QgY2hhaW5fZnJhbWUuIEtleSBsaWtlICc2NTYwQycuIiIiCiAgICAgICAgbHYgPSBzZWxmLl9sZXZlbHMgb3Ige30KICAgICAgICBxID0gKGx2LmdldCgiY2hhaW5fZnJhbWUiKSBvciB7fSkuZ2V0KGtleV9zdHIpIG9yIHt9CiAgICAgICAgcmV0dXJuIHEuZ2V0KCJiaWQiKSwgcS5nZXQoImFzayIpCgogICAgZGVmIGNhbmRpZGF0ZXMoc2VsZikgLT4gbGlzdFtkaWN0XToKICAgICAgICBsdiA9IHNlbGYuX2xldmVscyBvciB7fQogICAgICAgIHJldHVybiBsdi5nZXQoImNhbmRpZGF0ZXMiKSBvciBbXQoKICAgIGRlZiByZWdpbWUoc2VsZikgLT4gZGljdDoKICAgICAgICBsdiA9IHNlbGYuX2xldmVscyBvciB7fQogICAgICAgIHJldHVybiBsdi5nZXQoInJlZ2ltZV9pbmZvIikgb3Ige30K
+"""LevelsWatcher: read-only consumer of the bridge's shared/levels.json.
+
+The bridge (gex_bridge/) is the account's single streaming connection; this
+algo holds ZERO market-data lines. All chain quotes, walls, candidates and
+regime state arrive via the atomically-published levels.json.
+
+Fail-safe: entries are blocked when levels are missing or older than
+STALE_LEVELS_SEC (60s) in a NY session. Open positions keep being managed
+(exits are MT5/IBKR-native or quote-driven from the last good frame).
+"""
+import json
+import logging
+import os
+import time
+
+log = logging.getLogger("algo.levels")
+
+STALE_LEVELS_SEC = 60.0
+
+
+def _shared_dir() -> str:
+    env = os.getenv("SHARED_DIR") or os.getenv("CRUSH_SHARED_DIR")
+    if env:
+        return env
+    here = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(os.path.dirname(here), "shared")
+
+
+class LevelsWatcher:
+    def __init__(self, shared_dir: str | None = None):
+        self.dir = shared_dir or _shared_dir()
+        self.levels_path = os.path.join(self.dir, "levels.json")
+        self.contracts_path = os.path.join(self.dir, "contracts.json")
+        self._levels: dict | None = None
+        self._levels_mtime = 0.0
+        self._contracts: dict | None = None
+        self._stale_warned = False
+
+    # ---------------- levels ----------------
+    def refresh(self) -> dict | None:
+        """Re-read levels.json if it changed. Returns the payload or None."""
+        try:
+            mtime = os.path.getmtime(self.levels_path)
+        except OSError:
+            return None
+        if mtime == self._levels_mtime and self._levels is not None:
+            return self._levels
+        try:
+            with open(self.levels_path) as f:
+                self._levels = json.load(f)
+            self._levels_mtime = mtime
+            self._stale_warned = False
+        except (OSError, ValueError) as e:
+            log.warning("levels.json read failed: %s", e)
+            return None
+        return self._levels
+
+    def get(self) -> dict | None:
+        return self.refresh()
+
+    def age_sec(self) -> float:
+        if self._levels is None:
+            return float("inf")
+        try:
+            return time.time() - self._levels_mtime
+        except OSError:
+            return float("inf")
+
+    def fresh(self, max_age: float = STALE_LEVELS_SEC) -> bool:
+        lv = self.get()
+        if lv is None:
+            return False
+        return self.age_sec() <= max_age
+
+    def entries_allowed(self, now_et) -> tuple[bool, str]:
+        """Fail-safe gate: no NEW entries on stale/missing levels in NY."""
+        lv = self.get()
+        if lv is None:
+            return False, "no levels.json (bridge down?)"
+        if lv.get("session") != "ny":
+            return False, f"bridge session={lv.get('session')}"
+        age = self.age_sec()
+        if age > STALE_LEVELS_SEC:
+            if not self._stale_warned:
+                log.error("STALE_LEVELS: levels.json age %.0fs > %.0fs - "
+                          "entries blocked, managing open positions only",
+                          age, STALE_LEVELS_SEC)
+                self._stale_warned = True
+            return False, f"stale levels ({age:.0f}s)"
+        return True, "ok"
+
+    # ---------------- contracts ----------------
+    def load_contracts(self) -> dict:
+        """contracts.json -> {key_str: descriptor}. Cached after first load."""
+        if self._contracts is not None:
+            return self._contracts
+        deadline = time.time() + 300
+        while time.time() < deadline:
+            try:
+                with open(self.contracts_path) as f:
+                    doc = json.load(f)
+                self._contracts = doc.get("contracts", {})
+                log.info("contracts.json loaded: %d contracts, expiry %s",
+                         len(self._contracts), doc.get("expiry"))
+                return self._contracts
+            except (OSError, ValueError):
+                time.sleep(5)
+        raise SystemExit("levels: contracts.json not available after 300s "
+                         "(start gex_bridge first)")
+
+    # ---------------- convenience readers ----------------
+    def quote(self, key_str: str) -> tuple[float | None, float | None]:
+        """(bid, ask) from the latest chain_frame. Key like '6560C'."""
+        lv = self._levels or {}
+        q = (lv.get("chain_frame") or {}).get(key_str) or {}
+        return q.get("bid"), q.get("ask")
+
+    def candidates(self) -> list[dict]:
+        lv = self._levels or {}
+        return lv.get("candidates") or []
+
+    def regime(self) -> dict:
+        lv = self._levels or {}
+        return lv.get("regime_info") or {}

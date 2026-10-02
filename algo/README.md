@@ -1,1 +1,132 @@
-IyAwRFRFIFNQWFcgMTBYLU9UTSBBbGdvICh2MykKCkJ1eXMgY3J1c2hlZCBmYXItT1RNIFNQWFcgMERURSBwdXRzL2NhbGxzIGluIHR3byBtZWFzdXJlZCB3aW5kb3dzIOKAlAoqKjExOjAw4oCTMTI6MzAgRVQgKDQw4oCTNTUgcHRzIE9UTSkqKiBhbmQgKioxNTozMOKAkzE1OjU4IEVUICg44oCTMTIgcHRzIE9UTSkqKiDigJQKYXNrICQwLjIw4oCTJDAuNTAsIHxkZWx0YXwgPCAwLjE1LCBhc2sgei1zY29yZSBpbiBb4oiSMi4wLCDiiJIxLjBdIHZzIHRyYWlsaW5nCjMwLW1pbi4gVGFyZ2V0OiBtaW5pbXVtIDEweCBwZXIgdHJhZGUgKCQyMDAgcmlzayDihpIgJDIsMDAwKSwgc3RyZXRjaCA1MHguCgpFeGl0cyAodjMgdGllcmVkLCBkZWZhdWx0KTogKioxLzMgb2YgdGhlIHBvc2l0aW9uIGF0IDV4LCAxLzMgYXQgMTB4KiogKHJlc3RpbmcKbmF0aXZlIGxpbWl0cyBwbGFjZWQgYXQgZmlsbCksIHJ1bm5lciBvbiBhICoqMzAlIGdpdmViYWNrIHRyYWlsKiouIE5vIHBlci10cmFkZQpzdG9wIGJ5IGRlZmF1bHQgKG1lYXN1cmVkOiByZW1vdmluZyBpdCBhZGRlZCAkMzcsMTAwIG92ZXIgNSBiYWNrdGVzdCBkYXlzKTsKdGhlIOKIkjIlIE5ldExpcSBkYWlseSBraWxsIHN3aXRjaCBpcyB0aGUgYmFja3N0b3AuIEZsYXQgZXZlcnl0aGluZyAxNTo1NSBFVC4KCnYzICgyMDI2LTEwLTAxKSBhZGRzIHRocmVlIGluZGVwZW5kZW50LCBjb25maWctdG9nZ2xlZCBtb2R1bGVzIG9uIHRoZSB2MiBtZXJnZWQKY29yZTogKip0aWVyZWQgZXhpdHMqKiAoYENSVVNIX1RJRVJFRF9FWElUU2AsIGRlZmF1bHQgb24pLCBhICoqd2FsbC1icmVhawpzbGVldmUqKiAoYENSVVNIX1dBTExCUkVBS19FTkFCTEVEYCwgZGVmYXVsdCBvbiDigJQgZG9taW5hbnQtd2FsbCBicmVhayBlbnRyaWVzCmluc2lkZSB0aGUgc2FtZSBBL0Igd2luZG93cywgb3V0cmlnaHRzKSwgYW5kIGEgKipyZWdpbWUvZGF5IGZpbHRlcioqCihgQ1JVU0hfUkVHSU1FX01PREU9b2JzZXJ2ZWAsIGRlZmF1bHQg4oCUIGxvZ3MgYW4gZW5lcmd5IHNjb3JlLCBkb2VzIG5vdCB0cmFkZQpvbiBpdDsgdW5jYWxpYnJhdGVkKS4gRnVsbCBldmlkZW5jZSBhbmQgb3BlbiBjYWxpYnJhdGlvbiB3b3JrIGluIGBCVUlMRF9OT1RFUy5tZGAuCgoqKkFMV0FZUy1PTiAoZGVmYXVsdCk6KiogdGhlIHByb2Nlc3MgbmV2ZXIgZXhpdHMgb24gaXRzIG93bi4gSXQgcnVucyB0aGUKc2Vzc2lvbiAoY29ubmVjdCDihpIgdHJhZGUg4oaSIDE1OjU1IGZsYXR0ZW4g4oaSIDE2OjA1IGRpc2Nvbm5lY3QpLCB0aGVuIHNsZWVwcyDigJQKaW50ZXJydXB0aWJseSwgc28gQ3RybCtDIGFsd2F5cyBsYW5kcyBwcm9tcHRseSDigJQgdW50aWwgdGhlIG5leHQgd2Vla2RheQowOTozMCBFVCBhbmQgcmVjb25uZWN0cyBmcmVzaC4gV2Vla2VuZHMsIGhvbGlkYXlzIGFuZCBwb3N0LWNsb3NlIHJ1bnMganVzdApzbGVlcCB0byB0aGUgbmV4dCBzZXNzaW9uLiBgLS1vbmVzaG90YCBydW5zIGEgc2luZ2xlIHNlc3Npb24vZGF5LWNoZWNrIHRoZW4KZXhpdHMgKGZvciBkZWJ1Z2dpbmcpLgoKKipDT05TVU1FUiBNT0RFIChicmlkZ2UgYXJjaGl0ZWN0dXJlKS4qKiBUaGUgYnJpZGdlIChgLi4vZ2V4X2JyaWRnZWApIGlzIHRoZQphY2NvdW50J3Mgc2luZ2xlIElCS1Igc3RyZWFtaW5nIGNvbm5lY3Rpb24gKGNsaWVudElkPTEpLiBUaGlzIGFsZ28gaG9sZHMKWkVSTyBtYXJrZXQtZGF0YSBsaW5lczogaXQgY29ubmVjdHMgb3JkZXItb25seSAoY2xpZW50SWQ9NywgcGFwZXItZ2F0ZWQpIGFuZApyZWFkcyBjaGFpbiBxdW90ZXMsIFN0YWJsZVdhbGwgd2FsbHMvem9uZXMsIGNhbmRpZGF0ZXMgYW5kIHJlZ2ltZSBmcm9tCmAuLi9zaGFyZWQvbGV2ZWxzLmpzb25gIChhdG9taWMgcHVibGlzaCwgNXMgY2FkZW5jZSBpbiBOWSkuIFRoZSAwRFRFIGNydXNoCmFuZCB3YWxsLWJyZWFrIHNjcmVlbnMgcnVuIGluIHRoZSBicmlkZ2U7IHRoaXMgcHJvY2VzcyBjb25zdW1lcyB0aGUgcmFua2VkCmNhbmRpZGF0ZXMsIGFwcGxpZXMgaXRzIG93biByaXNrIG1hbmFnZXIsIGFuZCBtYW5hZ2VzIGV4aXRzLgoqKkZhaWwtc2FmZToqKiBubyBORVcgZW50cmllcyB3aGVuIGxldmVscy5qc29uIGlzIG1pc3Npbmcgb3Igb2xkZXIgdGhhbiA2MHMKKGBTVEFMRV9MRVZFTFNgKTsgb3BlbiBwb3NpdGlvbnMga2VlcCBiZWluZyBtYW5hZ2VkLgpTdGFydCB0aGUgYnJpZGdlIEZJUlNULCB0aGVuIHRoaXMgYWxnby4gQWxsIHRocmVlIGZvbGRlcnMgbXVzdCBiZSBzaWJsaW5ncwpzbyBgLi4vc2hhcmVkYCByZXNvbHZlcy4KCioqUEFQRVIgT05MWS4qKiBUaGUgYWxnbyBoYXJkLWZhaWxzIG9uIGFueSBub24tcGFwZXIgSUJLUiBhY2NvdW50IChubyBvdmVycmlkZSkuCgojIyAxLiBJQiBHYXRld2F5IHNldHVwIChvbiB0aGUgVlBTKQoKVGhlIGFsZ28gdGFyZ2V0cyAqKklCIEdhdGV3YXkqKiAoaGVhZGxlc3MsIGxpZ2h0ZXIgdGhhbiBUV1MpLiBUV1Mgc3RheXMgYXMgbWFudWFsIGJhY2t1cC4KCjEuIEluc3RhbGwgSUIgR2F0ZXdheSwgbG9nIGluIHdpdGggdGhlICoqcGFwZXIqKiBhY2NvdW50IGNyZWRlbnRpYWxzLgoyLiBDb25maWd1cmUg4oaSIFNldHRpbmdzIOKGkiBBUEkg4oaSIFNldHRpbmdzOgogICAtIOKchSBFbmFibGUgQWN0aXZlWCBhbmQgU29ja2V0IENsaWVudHMKICAgLSDinIUgQWxsb3cgY29ubmVjdGlvbnMgZnJvbSBsb2NhbGhvc3Qgb25seSAodW5jaGVjayAiUmVhZC1Pbmx5IEFQSSIg4oCUIHRoZSBhbGdvCiAgICAgbXVzdCBwbGFjZSBvcmRlcnMgKExJVkUgYnkgZGVmYXVsdDsgYC0tZHJ5LXJ1bmAgb25seSBzaW11bGF0ZXMpCiAgIC0gU29ja2V0IHBvcnQ6ICoqNDAwMioqIChHYXRld2F5IHBhcGVyKS4gVFdTIHBhcGVyIGFsdGVybmF0aXZlOiAqKjc0OTcqKi4KICAgLSBBZGQgdHJ1c3RlZCBJUCBgMTI3LjAuMC4xYCBpZiB0aGUgQVBJIHBhbmVsIHJlcXVpcmVzIGl0LgozLiBLZWVwIEdhdGV3YXkgcnVubmluZy4gVGhlIGFsZ28gY29ubmVjdHMgdG8gYDEyNy4wLjAuMTo0MDAyYC4KCiMjIDIuIERlcGxveSB0byB0aGUgVlBTCgpGcm9tIHRoaXMgbWFjaGluZSAod2hlcmUgYH4vd29ya3NwYWNlL2FsZ29gIGxpdmVzKToKCmBgYGJhc2gKIyBjb3B5IHRvIHRoZSBWUFMgKDMgY29tbWFuZHMpCnJzeW5jIC1hdnogLS1leGNsdWRlIHZlbnYgLS1leGNsdWRlIGxvZ3Mgfi93b3Jrc3BhY2UvYWxnby8gdXNlckB2cHM6fi9hbGdvLwpzc2ggdXNlckB2cHMgImNkIH4vYWxnbyAmJiBweXRob24zIC1tIHZlbnYgdmVudiAmJiAuL3ZlbnYvYmluL3BpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy50eHQiCmBgYAoKT24gdGhlIFZQUywgY29uZmlndXJlIHZpYSBlbnYgKGFsbCBvcHRpb25hbDsgZGVmYXVsdHMgdGFyZ2V0IEdhdGV3YXkgcGFwZXIpOgoKYGBgYmFzaApleHBvcnQgQ1JVU0hfSUJfSE9TVD0xMjcuMC4wLjEKZXhwb3J0IENSVVNIX0lCX1BPUlQ9NDAwMiAgICAgICAgICAjIDc0OTcgZm9yIFRXUyBwYXBlcgpleHBvcnQgQ1JVU0hfSUJfQ0xJRU5UX0lEPTcgICAgICAgIyBtdXN0IG5vdCBjb2xsaWRlIHdpdGggb3RoZXIgQVBJIGNsaWVudHMKYGBgCgojIyAzLiBSdW4KCmBgYHBvd2Vyc2hlbGwKY2QgQzpcVXNlcnNcQWRtaW5pc3RyYXRvclxEb3dubG9hZHNcYWxnb1xhbGdvCi5cdmVudlxTY3JpcHRzXHB5dGhvbiBtYWluLnB5ICAgICAgICAgICAgIyBEUlktUlVOIChkZWZhdWx0KSwgQUxXQVlTLU9OOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgdHJhZGVzIHRoZSBzZXNzaW9uLCBzbGVlcHMgdG8gbmV4dAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgd2Vla2RheSAwOTozMCBFVCwgcmVjb25uZWN0cyBmcmVzaC4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIFBsYWNlcyBOTyBvcmRlcnMuCi5cdmVudlxTY3JpcHRzXHB5dGhvbiBtYWluLnB5ICAgICAgICAgICAgICAjIExJVkU6IHJlYWwgb3JkZXJzIG9uIHRoZSBQQVBFUiBhY2NvdW50Ci5cdmVudlxTY3JpcHRzXHB5dGhvbiBtYWluLnB5IC0tZHJ5LXJ1biAgIyBzaW11bGF0ZSBvbmx5LCBubyBvcmRlcnMKLlx2ZW52XFNjcmlwdHNccHl0aG9uIG1haW4ucHkgLS1vbmVzaG90ICAjIG9uZSBzZXNzaW9uL2RheS1jaGVjayB0aGVuIGV4aXQKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIChkZWJ1Z2dpbmc7IHRoZSBvbGQgYmVoYXZpb3IpCmBgYAoKQWRkIGAtLWRyeS1ydW5gIHRvIHNpbXVsYXRlIHdpdGhvdXQgdHJhbnNtaXR0aW5nLiBFdmVyeSBkZWNpc2lvbiBpcyBKU09OLWxvZ2dlZCB0bwpgbG9nc1xhbGdvX1lZWVlNTURELmpzb25sYCAoYSBuZXcgZmlsZSBwZXIgY2FsZW5kYXIgZGF5KSBmb3IgYXVkaXQuCgpDdHJsK0MgLyBTSUdURVJNIGFsd2F5cyBleGl0cyBwcm9tcHRseTogdGhlIGN1cnJlbnQgc2Vzc2lvbiBmbGF0dGVucyBmaXJzdCwKdGhlbiB0aGUgcHJvY2VzcyBzdG9wcyBpbnN0ZWFkIG9mIHNsZWVwaW5nLgoKIyMgNC4gQXV0b3N0YXJ0IChXaW5kb3dzIFRhc2sgU2NoZWR1bGVyLCBvbiB0aGUgVlBTKQoKQWx3YXlzLW9uIG1vZGUgbWVhbnMgKipubyBkYWlseSBzY2hlZHVsZSBpcyBuZWVkZWQqKiDigJQgc3RhcnQgaXQgb25jZSBhbmQgaXQKcnVucyBldmVyeSB0cmFkaW5nIGRheSBieSBpdHNlbGYuIFRhc2sgU2NoZWR1bGVyIGlzIG5vdyBvbmx5IGEgd2F0Y2hkb2c6CnJlc3RhcnQgdGhlIHByb2Nlc3MgYWZ0ZXIgYSBWUFMgcmVib290LgoKYGBgcG93ZXJzaGVsbAojIG9uZS10aW1lOiBydW4gYXQgc3lzdGVtIHN0YXJ0dXAgKG9yIGF0IGxvZ29uIG9mIHRoZSBBZG1pbmlzdHJhdG9yIGFjY291bnQpCiRhY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAiQzpcVXNlcnNcQWRtaW5pc3RyYXRvclxEb3dubG9hZHNcYWxnb1xhbGdvXHZlbnZcU2NyaXB0c1xweXRob24uZXhlIiBgCiAgICAtQXJndW1lbnQgIm1haW4ucHkiIC1Xb3JraW5nRGlyZWN0b3J5ICJDOlxVc2Vyc1xBZG1pbmlzdHJhdG9yXERvd25sb2Fkc1xhbGdvXGFsZ28iCiR0cmlnZ2VyID0gTmV3LVNjaGVkdWxlZFRhc2tUcmlnZ2VyIC1BdFN0YXJ0dXAKJHNldHRpbmdzID0gTmV3LVNjaGVkdWxlZFRhc2tTZXR0aW5nc1NldCAtUmVzdGFydENvdW50IDk5OSAtUmVzdGFydEludGVydmFsIChOZXctVGltZVNwYW4gLU1pbnV0ZXMgNSkKUmVnaXN0ZXItU2NoZWR1bGVkVGFzayAtVGFza05hbWUgIkNydXNoQWxnbyIgLUFjdGlvbiAkYWN0aW9uIC1UcmlnZ2VyICR0cmlnZ2VyIGAKICAgIC1TZXR0aW5ncyAkc2V0dGluZ3MgLVVzZXIgIkFkbWluaXN0cmF0b3IiIC1SdW5MZXZlbCBIaWdoZXN0CmBgYAoKTm90ZXM6Ci0gVFdTL0dhdGV3YXkgKHBhcGVyLCBBUEkgZW5hYmxlZCwgcG9ydCA3NDk3KSBtdXN0IGJlIHJ1bm5pbmcgYW5kIGxvZ2dlZCBpbiDigJQKICBzdGFydCBpdCB2aWEgaXRzIG93biBzY2hlZHVsZWQgdGFzayAvIGF1dG9zdGFydCBiZWZvcmUgdGhlIGFsZ28uCi0gSWYgdGhlIGFsZ28gZXZlciBleGl0cyBvbiBpdHMgb3duIChpdCBzaG91bGRuJ3Qg4oCUIFN5c3RlbUV4aXQtY2xhc3MgZmFpbHVyZXMKICBsaWtlIGEgcGFwZXItZ2F0ZSByZWZ1c2FsIHNsZWVwIHRvIHRoZSBuZXh0IHNlc3Npb24gaW5zdGVhZCksIHRoZSA1LW1pbnV0ZQogIHJlc3RhcnQgaW50ZXJ2YWwgYWJvdmUgYnJpbmdzIGl0IGJhY2suCi0gVG8gc3RvcCBpdCBmb3IgdGhlIGRheTogZW5kIHRoZSBgQ3J1c2hBbGdvYCB0YXNrLCBvciBDdHJsK0MgaW4gaXRzIGNvbnNvbGUg4oCUCiAgdGhlIG9wZW4gcG9zaXRpb24gaXMgZmxhdHRlbmVkIGJlZm9yZSBleGl0LgoKIyMgNS4gV2hhdCBpdCBkb2VzIGVhY2ggZGF5Cgp8IFRpbWUgKEVUKSB8IEFjdGlvbiB8CnwtLS18LS0tfAp8IHN0YXJ0IHwgY29ubmVjdCAocGFwZXItZ2F0ZWQpIOKGkiBkaXNjb3ZlciAwRFRFIGNoYWluIOKGkiBvbmUgZnVsbC1jaGFpbiBPSSBzbmFwc2hvdCB8Cnwgc3RhcnQrIHwgc3RyZWFtIFNQWCArIGFjdGl2ZSB3aW5kb3cgKMKxNTAsIDUtcHQpICsgY3J1c2ggYmFuZCAoNTXigJM5NSBPVE0pIOKJiCA2MyBsaW5lcyB8CnwgZXZlcnkgMTUgbWluIHwgcmUtY2VudGVyIHdpbmRvdyBvbiBzcG90OyB3aW5nIHN3ZWVwIChzbmFwc2hvdHMpIGZvciBHRVggY29tcGxldGVuZXNzIHwKfCAxMTowMOKAkzEyOjMwIHwgY3J1c2ggZW50cmllczogNDDigJM1NSBwdHMgT1RNLCBhc2sgJDAuMjDigJMkMC41MCwgZGVsdGE8MC4xNSwgYXNrIHogaW4gW+KIkjIuMCziiJIxLjBdLCBJViBmbGF0IHwKfCAxNTozMOKAkzE1OjU4IHwgY3J1c2ggZW50cmllczogOOKAkzEyIHB0cyBPVE0gKHNhbWUgZmlsdGVycyk7IHdhbGwtYnJlYWsgc2xlZXZlIGFybWVkIG9uIGRvbWluYW50IHdhbGxzIHwKfCBvbiBlbnRyeSB8IGxpbWl0IGF0IGFzayAoKyQwLjA1IGNoYXNlIG9uY2UsIGdpdmUgdXAgYXQgNjBzKTsgc2l6ZSA9ICQyMDAgLy8gYXNrIHwKfCBleGl0cyB8IDEvMyBhdCA1eCDCtyAxLzMgYXQgMTB4IChyZXN0aW5nIG5hdGl2ZSkgwrcgcnVubmVyIG9uIDMwJSBnaXZlYmFjayB0cmFpbCDCtyAxNTo1NSBmbGF0IHwKfCByaXNrIHwgbWF4IDIgdHJhZGVzL2RheSwgMSBwb3NpdGlvbiwg4oiSMiUgZGFpbHkga2lsbCBzd2l0Y2ggKGZsYXR0ZW5zKSB8CnwgMTY6MDUgfCBzZXNzaW9uIGVuZHMg4oaSIGRpc2Nvbm5lY3Qg4oaSIHNsZWVwIHVudGlsIG5leHQgd2Vla2RheSAwOTozMCBFVCAoYWx3YXlzLW9uKSB8CgpTZWUgW0JVSUxEX05PVEVTLm1kXShzYW5kYm94Oi8vd29ya3NwYWNlL2FsZ28vQlVJTERfTk9URVMubWQpIGZvciB0aGUgbGluZS1idWRnZXQKZGVzaWduLCBwYXJhbWV0ZXIgcHJvdmVuYW5jZSwgYW5kIGFzc3VtcHRpb25zLgo=
+# 0DTE SPXW 10X-OTM Algo (v3)
+
+Buys crushed far-OTM SPXW 0DTE puts/calls in two measured windows —
+**11:00–12:30 ET (40–55 pts OTM)** and **15:30–15:58 ET (8–12 pts OTM)** —
+ask $0.20–$0.50, |delta| < 0.15, ask z-score in [−2.0, −1.0] vs trailing
+30-min. Target: minimum 10x per trade ($200 risk → $2,000), stretch 50x.
+
+Exits (v3 tiered, default): **1/3 of the position at 5x, 1/3 at 10x** (resting
+native limits placed at fill), runner on a **30% giveback trail**. No per-trade
+stop by default (measured: removing it added $37,100 over 5 backtest days);
+the −2% NetLiq daily kill switch is the backstop. Flat everything 15:55 ET.
+
+v3 (2026-10-01) adds three independent, config-toggled modules on the v2 merged
+core: **tiered exits** (`CRUSH_TIERED_EXITS`, default on), a **wall-break
+sleeve** (`CRUSH_WALLBREAK_ENABLED`, default on — dominant-wall break entries
+inside the same A/B windows, outrights), and a **regime/day filter**
+(`CRUSH_REGIME_MODE=observe`, default — logs an energy score, does not trade
+on it; uncalibrated). Full evidence and open calibration work in `BUILD_NOTES.md`.
+
+**ALWAYS-ON (default):** the process never exits on its own. It runs the
+session (connect → trade → 15:55 flatten → 16:05 disconnect), then sleeps —
+interruptibly, so Ctrl+C always lands promptly — until the next weekday
+09:30 ET and reconnects fresh. Weekends, holidays and post-close runs just
+sleep to the next session. `--oneshot` runs a single session/day-check then
+exits (for debugging).
+
+**CONSUMER MODE (bridge architecture).** The bridge (`../gex_bridge`) is the
+account's single IBKR streaming connection (clientId=1). This algo holds
+ZERO market-data lines: it connects order-only (clientId=7, paper-gated) and
+reads chain quotes, StableWall walls/zones, candidates and regime from
+`../shared/levels.json` (atomic publish, 5s cadence in NY). The 0DTE crush
+and wall-break screens run in the bridge; this process consumes the ranked
+candidates, applies its own risk manager, and manages exits.
+**Fail-safe:** no NEW entries when levels.json is missing or older than 60s
+(`STALE_LEVELS`); open positions keep being managed.
+Start the bridge FIRST, then this algo. All three folders must be siblings
+so `../shared` resolves.
+
+**PAPER ONLY.** The algo hard-fails on any non-paper IBKR account (no override).
+
+## 1. IB Gateway setup (on the VPS)
+
+The algo targets **IB Gateway** (headless, lighter than TWS). TWS stays as manual backup.
+
+1. Install IB Gateway, log in with the **paper** account credentials.
+2. Configure → Settings → API → Settings:
+   - ✅ Enable ActiveX and Socket Clients
+   - ✅ Allow connections from localhost only (uncheck "Read-Only API" — the algo
+     must place orders (LIVE by default; `--dry-run` only simulates)
+   - Socket port: **4002** (Gateway paper). TWS paper alternative: **7497**.
+   - Add trusted IP `127.0.0.1` if the API panel requires it.
+3. Keep Gateway running. The algo connects to `127.0.0.1:4002`.
+
+## 2. Deploy to the VPS
+
+From this machine (where `~/workspace/algo` lives):
+
+```bash
+# copy to the VPS (3 commands)
+rsync -avz --exclude venv --exclude logs ~/workspace/algo/ user@vps:~/algo/
+ssh user@vps "cd ~/algo && python3 -m venv venv && ./venv/bin/pip install -r requirements.txt"
+```
+
+On the VPS, configure via env (all optional; defaults target Gateway paper):
+
+```bash
+export CRUSH_IB_HOST=127.0.0.1
+export CRUSH_IB_PORT=4002          # 7497 for TWS paper
+export CRUSH_IB_CLIENT_ID=7       # must not collide with other API clients
+```
+
+## 3. Run
+
+```powershell
+cd C:\Users\Administrator\Downloads\algo\algo
+.\venv\Scripts\python main.py            # DRY-RUN (default), ALWAYS-ON:
+                                         # trades the session, sleeps to next
+                                         # weekday 09:30 ET, reconnects fresh.
+                                         # Places NO orders.
+.\venv\Scripts\python main.py              # LIVE: real orders on the PAPER account
+.\venv\Scripts\python main.py --dry-run  # simulate only, no orders
+.\venv\Scripts\python main.py --oneshot  # one session/day-check then exit
+                                         # (debugging; the old behavior)
+```
+
+Add `--dry-run` to simulate without transmitting. Every decision is JSON-logged to
+`logs\algo_YYYYMMDD.jsonl` (a new file per calendar day) for audit.
+
+Ctrl+C / SIGTERM always exits promptly: the current session flattens first,
+then the process stops instead of sleeping.
+
+## 4. Autostart (Windows Task Scheduler, on the VPS)
+
+Always-on mode means **no daily schedule is needed** — start it once and it
+runs every trading day by itself. Task Scheduler is now only a watchdog:
+restart the process after a VPS reboot.
+
+```powershell
+# one-time: run at system startup (or at logon of the Administrator account)
+$action = New-ScheduledTaskAction -Execute "C:\Users\Administrator\Downloads\algo\algo\venv\Scripts\python.exe" `
+    -Argument "main.py" -WorkingDirectory "C:\Users\Administrator\Downloads\algo\algo"
+$trigger = New-ScheduledTaskTrigger -AtStartup
+$settings = New-ScheduledTaskSettingsSet -RestartCount 999 -RestartInterval (New-TimeSpan -Minutes 5)
+Register-ScheduledTask -TaskName "CrushAlgo" -Action $action -Trigger $trigger `
+    -Settings $settings -User "Administrator" -RunLevel Highest
+```
+
+Notes:
+- TWS/Gateway (paper, API enabled, port 7497) must be running and logged in —
+  start it via its own scheduled task / autostart before the algo.
+- If the algo ever exits on its own (it shouldn't — SystemExit-class failures
+  like a paper-gate refusal sleep to the next session instead), the 5-minute
+  restart interval above brings it back.
+- To stop it for the day: end the `CrushAlgo` task, or Ctrl+C in its console —
+  the open position is flattened before exit.
+
+## 5. What it does each day
+
+| Time (ET) | Action |
+|---|---|
+| start | connect (paper-gated) → discover 0DTE chain → one full-chain OI snapshot |
+| start+ | stream SPX + active window (±50, 5-pt) + crush band (55–95 OTM) ≈ 63 lines |
+| every 15 min | re-center window on spot; wing sweep (snapshots) for GEX completeness |
+| 11:00–12:30 | crush entries: 40–55 pts OTM, ask $0.20–$0.50, delta<0.15, ask z in [−2.0,−1.0], IV flat |
+| 15:30–15:58 | crush entries: 8–12 pts OTM (same filters); wall-break sleeve armed on dominant walls |
+| on entry | limit at ask (+$0.05 chase once, give up at 60s); size = $200 // ask |
+| exits | 1/3 at 5x · 1/3 at 10x (resting native) · runner on 30% giveback trail · 15:55 flat |
+| risk | max 2 trades/day, 1 position, −2% daily kill switch (flattens) |
+| 16:05 | session ends → disconnect → sleep until next weekday 09:30 ET (always-on) |
+
+See [BUILD_NOTES.md](sandbox://workspace/algo/BUILD_NOTES.md) for the line-budget
+design, parameter provenance, and assumptions.

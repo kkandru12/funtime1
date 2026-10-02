@@ -1,1 +1,19 @@
-IiIiUG9ydGVkIEFwZXggR2xvYmV4IEVTIHN0cmF0ZWdpZXMuCgpFYWNoIG1vZHVsZSBleHBvc2VzIGBTdHJhdGVneWAgd2l0aCBgX19pbml0X18oY29uZmlnKWAgYW5kCmBvbl9iYXIoYmFyLCBzdGF0ZSkgLT4gU2lnbmFsIHwgTm9uZWAuCgpTZWUgUE9SVF9OT1RFUy5tZCBmb3Igd2hhdCB3YXMgcG9ydGVkLCBzdHJpcHBlZCwgYW5kIGNoYW5nZWQuCiIiIgpmcm9tIC4gaW1wb3J0IGJiMmMsIGRtYTUyMCwgc21hY3Jvc3MsIHNxdWVlemUsIHZvYgpmcm9tIC5zaWduYWwgaW1wb3J0IFNpZ25hbAoKU1RSQVRFR0lFUyA9IHsKICAgICJ2b2IiOiB2b2IuU3RyYXRlZ3ksCiAgICAic3F1ZWV6ZSI6IHNxdWVlemUuU3RyYXRlZ3ksCiAgICAiYmIyYyI6IGJiMmMuU3RyYXRlZ3ksCiAgICAiZG1hNTIwIjogZG1hNTIwLlN0cmF0ZWd5LAogICAgInNtYWNyb3NzIjogc21hY3Jvc3MuU3RyYXRlZ3ksCn0KCl9fYWxsX18gPSBbIlNpZ25hbCIsICJTVFJBVEVHSUVTIiwgInZvYiIsICJzcXVlZXplIiwgImJiMmMiLCAiZG1hNTIwIiwgInNtYWNyb3NzIl0K
+"""Ported Apex Globex ES strategies.
+
+Each module exposes `Strategy` with `__init__(config)` and
+`on_bar(bar, state) -> Signal | None`.
+
+See PORT_NOTES.md for what was ported, stripped, and changed.
+"""
+from . import bb2c, dma520, smacross, squeeze, vob
+from .signal import Signal
+
+STRATEGIES = {
+    "vob": vob.Strategy,
+    "squeeze": squeeze.Strategy,
+    "bb2c": bb2c.Strategy,
+    "dma520": dma520.Strategy,
+    "smacross": smacross.Strategy,
+}
+
+__all__ = ["Signal", "STRATEGIES", "vob", "squeeze", "bb2c", "dma520", "smacross"]

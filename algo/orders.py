@@ -1,1 +1,290 @@
-IiIiT3JkZXIgbWFuYWdlciAodjIpOiBlbnRyaWVzIChsaW1pdCBhdCBhc2sgKyBvbmUgJDAuMDUgY2hhc2UpLCBSRVNUSU5HIG5hdGl2ZQoxMHggdGFrZS1wcm9maXQgcGxhY2VkIEFUIEZJTEwsIDMwJSBnaXZlYmFjayB0cmFpbCBhZnRlciAxMHggdG91Y2gsCkVPRCBmbGF0dGVuLiBUaGUgcmVzdGluZyBUUCBpcyBhIG5hdGl2ZSBleGNoYW5nZSBvcmRlcjogaXQgc3Vydml2ZXMgYQpwcm9jZXNzIGNyYXNoLiBUaGUgdHJhaWwgaXMgc29mdHdhcmUtbWFuYWdlZCBvbiB0aGUgNXMgbG9vcC4KCmRyeV9ydW49VHJ1ZTogbm8gb3JkZXJzIHRvdWNoIElCS1IuIEZpbGxzIGFyZSBzaW11bGF0ZWQgYXQgdGhlIGludGVuZGVkCnByaWNlIHNvIHRoZSBmdWxsIGVudHJ5LT5leGl0IHN0YXRlIG1hY2hpbmUgaXMgZXhlcmNpc2VkIGVuZCB0byBlbmQuCiIiIgppbXBvcnQgYXN5bmNpbwppbXBvcnQgbG9nZ2luZwpmcm9tIGRhdGV0aW1lIGltcG9ydCBkYXRldGltZQoKZnJvbSBpYl9pbnN5bmMgaW1wb3J0IExpbWl0T3JkZXIsIE9wdGlvbgoKaW1wb3J0IGNvbmZpZwpmcm9tIHN0cmF0ZWd5IGltcG9ydCBQb3NpdGlvbgoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ28ub3JkZXJzIikKQ09NTUlTU0lPTiA9IDEuMzAKCgpjbGFzcyBPcmRlck1hbmFnZXI6CiAgICBkZWYgX19pbml0X18oc2VsZiwgaWIsIGFjY291bnQ6IHN0ciwgZHJ5X3J1bjogYm9vbCwgZ2V0X3F1b3RlLCBlbWl0KToKICAgICAgICBzZWxmLmliID0gaWIKICAgICAgICBzZWxmLmFjY291bnQgPSBhY2NvdW50CiAgICAgICAgc2VsZi5kcnlfcnVuID0gZHJ5X3J1bgogICAgICAgIHNlbGYuZ2V0X3F1b3RlID0gZ2V0X3F1b3RlICAgIyBrZXkgLT4gKGJpZCwgYXNrKSB8IE5vbmUKICAgICAgICBzZWxmLmVtaXQgPSBlbWl0ICAgICAgICAgICAgIyBhc3luYyBqc29uLWxvZyBmbgogICAgICAgIHNlbGYub3Blbl90cmFkZXMgPSBbXQogICAgICAgIHNlbGYuX3RwX29yZGVyID0ge30gICAgICAgICAjIGlkKHBvcykgLT4gbGlzdCBvZiByZXN0aW5nLVRQIFRyYWRlcyAobGl2ZSkKICAgICAgICBzZWxmLl90cF9kb25lID0ge30gICAgICAgICAgIyBpZChwb3MpIC0+IChmaWxsZWRfcXR5LCBhdmdfcHgpLCBsZWdhY3kgc2luZ2xlIFRQCiAgICAgICAgc2VsZi5fdGllcl9kb25lID0ge30gICAgICAgICMgaWQocG9zKSAtPiBbKHRpZXIsIGZpbGxlZF9xdHksIGF2Z19weCldCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tIGVudHJpZXMgLS0tLS0tLS0tLS0tLS0tLQogICAgYXN5bmMgZGVmIGVudGVyKHNlbGYsIGNhbmQ6IGRpY3QsIHF0eTogaW50LCBub3dfZXQ6IGRhdGV0aW1lKToKICAgICAgICBrZXksIGFzayA9IGNhbmRbImtleSJdLCBjYW5kWyJhc2siXQogICAgICAgIGNvbnRyYWN0ID0gc2VsZi5fY29udHJhY3Qoa2V5KQogICAgICAgIGlmIHNlbGYuZHJ5X3J1bjoKICAgICAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJTSU1fRU5URVIiLCBkaWN0KGtleT1rZXksIHF0eT1xdHksIHB4PWFzaywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0cmlrZT1jYW5kWyJzdHJpa2UiXSwgcmlnaHQ9Y2FuZFsicmlnaHQiXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHdpbmRvdz1jYW5kWyJ3aW5kb3ciXSwgb3RtPWNhbmRbIm90bSJdLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYXNrX3o9KHJvdW5kKGNhbmRbImFza196Il0sIDIpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgY2FuZC5nZXQoImFza196IikgaXMgbm90IE5vbmUgZWxzZSBOb25lKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXI9Y2FuZC5nZXQoInRyaWdnZXIiLCAiY3J1c2giKSkpCiAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoMC4yKQogICAgICAgICAgICBwb3MgPSBQb3NpdGlvbihrZXksIGNhbmRbInN0cmlrZSJdLCBjYW5kWyJyaWdodCJdLCBxdHksIGFzaywKICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FuZFsid2FsbCJdLCBub3dfZXQuc3RyZnRpbWUoIiVIOiVNIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhbmRbIndpbmRvdyJdLCBjYW5kWyJzcG90Il0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXI9Y2FuZC5nZXQoInRyaWdnZXIiLCAiY3J1c2giKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgc2ltdWxhdGVkPVRydWUpCiAgICAgICAgICAgIGF3YWl0IHNlbGYuZW1pdCgiU0lNX0ZJTEwiLCBkaWN0KGtleT1rZXksIHF0eT1xdHksIHB4PWFzaywgc2lkZT0iQlVZIikpCiAgICAgICAgICAgIGF3YWl0IHNlbGYucGxhY2VfcmVzdGluZ190cChwb3MpICAgIyBkcnktcnVuOiBsb2dzIHRoZSBzaW11bGF0ZWQgVFBzCiAgICAgICAgICAgIHJldHVybiBwb3MKCiAgICAgICAgcHggPSBhc2sKICAgICAgICBvcmRlciA9IExpbWl0T3JkZXIoIkJVWSIsIHF0eSwgcHgpCiAgICAgICAgb3JkZXIuYWNjb3VudCA9IHNlbGYuYWNjb3VudAogICAgICAgIHRyYWRlID0gc2VsZi5pYi5wbGFjZU9yZGVyKGNvbnRyYWN0LCBvcmRlcikKICAgICAgICBzZWxmLm9wZW5fdHJhZGVzLmFwcGVuZCh0cmFkZSkKICAgICAgICBmaWxsZWRfZXZ0ID0gYXN5bmNpby5FdmVudCgpCiAgICAgICAgdHJhZGUuZmlsbEV2ZW50ICs9IGxhbWJkYSB0LCBmOiBmaWxsZWRfZXZ0LnNldCgpCiAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJFTlRFUiIsIGRpY3Qoa2V5PWtleSwgcXR5PXF0eSwgcHg9cm91bmQocHgsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0cmlrZT1jYW5kWyJzdHJpa2UiXSwgcmlnaHQ9Y2FuZFsicmlnaHQiXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aW5kb3c9Y2FuZFsid2luZG93Il0sIG90bT1jYW5kWyJvdG0iXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cmlnZ2VyPWNhbmQuZ2V0KCJ0cmlnZ2VyIiwgImNydXNoIikpKQogICAgICAgIGNoYXNlZCA9IEZhbHNlCiAgICAgICAgZGVhZGxpbmUgPSBhc3luY2lvLmdldF9ldmVudF9sb29wKCkudGltZSgpICsgY29uZmlnLkVOVFJZX0dJVkVVUF9USU1FT1VUCiAgICAgICAgY2hhc2VfYXQgPSBhc3luY2lvLmdldF9ldmVudF9sb29wKCkudGltZSgpICsgY29uZmlnLkVOVFJZX0ZJTExfVElNRU9VVAogICAgICAgIHdoaWxlIFRydWU6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8ud2FpdF9mb3IoZmlsbGVkX2V2dC53YWl0KCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRpbWVvdXQ9bWF4KDAsIGNoYXNlX2F0IC0gYXN5bmNpby5nZXRfZXZlbnRfbG9vcCgpLnRpbWUoKSkpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICBleGNlcHQgYXN5bmNpby5UaW1lb3V0RXJyb3I6CiAgICAgICAgICAgICAgICBwYXNzCiAgICAgICAgICAgIGZpbGxlZCA9IHN1bShmLnNoYXJlcyBmb3IgZiBpbiB0cmFkZS5maWxscykKICAgICAgICAgICAgaWYgZmlsbGVkID49IHF0eToKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIG5vdyA9IGFzeW5jaW8uZ2V0X2V2ZW50X2xvb3AoKS50aW1lKCkKICAgICAgICAgICAgaWYgbm90IGNoYXNlZCBhbmQgbm93ID49IGNoYXNlX2F0OgogICAgICAgICAgICAgICAgcSA9IHNlbGYuZ2V0X3F1b3RlKGtleSkKICAgICAgICAgICAgICAgICMgY2hhc2UgY2FwOiBuZXZlciBhYm92ZSBhc2sgKyAkMC4wNSAodGhlaXIgQ0hBU0VDQVAgbGVzc29uKQogICAgICAgICAgICAgICAgbmV3X3B4ID0gcm91bmQobWluKChxWzFdIGlmIHEgZWxzZSBweCkgKyBjb25maWcuQ0hBU0VfQUxMT1dBTkNFLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFzayArIGNvbmZpZy5DSEFTRV9BTExPV0FOQ0UpLCAyKQogICAgICAgICAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJFTlRFUl9DSEFTRSIsIGRpY3Qoa2V5PWtleSwgb2xkX3B4PXB4LCBuZXdfcHg9bmV3X3B4KSkKICAgICAgICAgICAgICAgIHNlbGYuaWIuY2FuY2VsT3JkZXIodHJhZGUub3JkZXIpCiAgICAgICAgICAgICAgICBvcmRlciA9IExpbWl0T3JkZXIoIkJVWSIsIHF0eSAtIGZpbGxlZCwgbmV3X3B4KQogICAgICAgICAgICAgICAgb3JkZXIuYWNjb3VudCA9IHNlbGYuYWNjb3VudAogICAgICAgICAgICAgICAgdHJhZGUgPSBzZWxmLmliLnBsYWNlT3JkZXIoY29udHJhY3QsIG9yZGVyKQogICAgICAgICAgICAgICAgdHJhZGUuZmlsbEV2ZW50ICs9IGxhbWJkYSB0LCBmOiBmaWxsZWRfZXZ0LnNldCgpCiAgICAgICAgICAgICAgICBmaWxsZWRfZXZ0LmNsZWFyKCkKICAgICAgICAgICAgICAgIGNoYXNlZCwgcHggPSBUcnVlLCBuZXdfcHgKICAgICAgICAgICAgICAgIGNoYXNlX2F0ID0gZmxvYXQoImluZiIpCiAgICAgICAgICAgIGlmIG5vdyA+PSBkZWFkbGluZToKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgZmlsbGVkID0gc3VtKGYuc2hhcmVzIGZvciBmIGluIHRyYWRlLmZpbGxzKQogICAgICAgIGlmIHRyYWRlLm9yZGVyU3RhdHVzLnN0YXR1cyBub3QgaW4gKCJGaWxsZWQiLCk6CiAgICAgICAgICAgIHNlbGYuaWIuY2FuY2VsT3JkZXIodHJhZGUub3JkZXIpCiAgICAgICAgaWYgZmlsbGVkIDw9IDA6CiAgICAgICAgICAgIGF3YWl0IHNlbGYuZW1pdCgiRU5URVJfVU5GSUxMRUQiLCBkaWN0KGtleT1rZXkpKQogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIGF2ZyA9IHN1bShmLnNoYXJlcyAqIGYucHJpY2UgZm9yIGYgaW4gdHJhZGUuZmlsbHMpIC8gZmlsbGVkCiAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJGSUxMIiwgZGljdChrZXk9a2V5LCBxdHk9ZmlsbGVkLCBweD1yb3VuZChhdmcsIDIpLCBzaWRlPSJCVVkiKSkKICAgICAgICBwb3MgPSBQb3NpdGlvbihrZXksIGNhbmRbInN0cmlrZSJdLCBjYW5kWyJyaWdodCJdLCBmaWxsZWQsIGF2ZywKICAgICAgICAgICAgICAgICAgICAgICBjYW5kWyJ3YWxsIl0sIG5vd19ldC5zdHJmdGltZSgiJUg6JU0iKSwKICAgICAgICAgICAgICAgICAgICAgICBjYW5kWyJ3aW5kb3ciXSwgY2FuZFsic3BvdCJdLAogICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXI9Y2FuZC5nZXQoInRyaWdnZXIiLCAiY3J1c2giKSwKICAgICAgICAgICAgICAgICAgICAgICBzaW11bGF0ZWQ9RmFsc2UpCiAgICAgICAgYXdhaXQgc2VsZi5wbGFjZV9yZXN0aW5nX3RwKHBvcykKICAgICAgICByZXR1cm4gcG9zCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tIHJlc3RpbmcgVFBzICh2MzogdGllcmVkKSAtLS0tLS0tLS0tLS0tLS0tCiAgICBhc3luYyBkZWYgcGxhY2VfcmVzdGluZ190cChzZWxmLCBwb3M6IFBvc2l0aW9uKToKICAgICAgICAiIiJOYXRpdmUgU0VMTCBsaW1pdChzKSBwbGFjZWQgYXQgZmlsbC4gU3Vydml2ZSBwcm9jZXNzIGRlYXRoLgoKICAgICAgICBUaWVyZWQgKGRlZmF1bHQpOiBUMSA9IHQxX3F0eSBAIDV4LCBUMiA9IHQyX3F0eSBAIDEweDsgdGhlIHJ1bm5lcgogICAgICAgIHRyYWlscy4gT2ZmIC8gdG9vLXNtYWxsIHF0eTogc2luZ2xlIDEweCBUUCBvbiB0aGUgZnVsbCBxdHkgKHYyKS4KICAgICAgICBEcnktcnVuOiBvbmx5IGxvZ2dlZDsgdGhlIHN0YXRlIG1hY2hpbmUgc2ltdWxhdGVzIHRoZSBmaWxscy4iIiIKICAgICAgICBsZWdzID0gW10KICAgICAgICBpZiBwb3MudGllcmVkX2VmZmVjdGl2ZToKICAgICAgICAgICAgaWYgcG9zLnQxX3F0eSA+IDA6CiAgICAgICAgICAgICAgICBsZWdzLmFwcGVuZCgoMSwgcG9zLnQxX3F0eSwgcG9zLnRwMV9weCkpCiAgICAgICAgICAgIGlmIHBvcy50Ml9xdHkgPiAwOgogICAgICAgICAgICAgICAgbGVncy5hcHBlbmQoKDIsIHBvcy50Ml9xdHksIHBvcy50cDJfcHgpKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxlZ3MuYXBwZW5kKCgwLCBwb3MucXR5LCBwb3MudHBfcHgpKQogICAgICAgIGlmIHNlbGYuZHJ5X3J1bjoKICAgICAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJTSU1fUkVTVElOR19UUCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkaWN0KGtleT1wb3Mua2V5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsZWdzPVt7InRpZXIiOiB0LCAicXR5IjogcSwgInB4Ijogcm91bmQocCwgMil9CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvciB0LCBxLCBwIGluIGxlZ3NdLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBydW5uZXI9cG9zLnJ1bm5lcl9xdHksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRpZXJlZD1wb3MudGllcmVkX2VmZmVjdGl2ZSkpCiAgICAgICAgICAgIHJldHVybgogICAgICAgIGNvbnRyYWN0ID0gc2VsZi5fY29udHJhY3QocG9zLmtleSkKICAgICAgICB0cmFkZXMgPSBbXQogICAgICAgIGZvciB0aWVyLCBxdHksIHB4IGluIGxlZ3M6CiAgICAgICAgICAgIG9yZGVyID0gTGltaXRPcmRlcigiU0VMTCIsIHF0eSwgcm91bmQocHgsIDIpKQogICAgICAgICAgICBvcmRlci5hY2NvdW50ID0gc2VsZi5hY2NvdW50CiAgICAgICAgICAgIG9yZGVyLnRpZiA9ICJHVEMiCiAgICAgICAgICAgIHRyYWRlID0gc2VsZi5pYi5wbGFjZU9yZGVyKGNvbnRyYWN0LCBvcmRlcikKICAgICAgICAgICAgc2VsZi5vcGVuX3RyYWRlcy5hcHBlbmQodHJhZGUpCiAgICAgICAgICAgIHRyYWRlcy5hcHBlbmQodHJhZGUpCiAgICAgICAgICAgIGlmIHRpZXIgPT0gMDoKICAgICAgICAgICAgICAgIHRyYWRlLmZpbGxFdmVudCArPSBsYW1iZGEgdCwgZjogc2VsZi5fb25fdHBfZmlsbChwb3MsIHQpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB0cmFkZS5maWxsRXZlbnQgKz0gbGFtYmRhIHQsIGYsIHRpZXI9dGllcjogXAogICAgICAgICAgICAgICAgICAgIHNlbGYuX29uX3RpZXJfZmlsbChwb3MsIHRpZXIsIHQpCiAgICAgICAgc2VsZi5fdHBfb3JkZXJbaWQocG9zKV0gPSB0cmFkZXMKICAgICAgICBhd2FpdCBzZWxmLmVtaXQoIlJFU1RJTkdfVFAiLAogICAgICAgICAgICAgICAgICAgICAgICBkaWN0KGtleT1wb3Mua2V5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxlZ3M9W3sidGllciI6IHQsICJxdHkiOiBxLCAicHgiOiByb3VuZChwLCAyKX0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmb3IgdCwgcSwgcCBpbiBsZWdzXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBydW5uZXI9cG9zLnJ1bm5lcl9xdHksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGllcmVkPXBvcy50aWVyZWRfZWZmZWN0aXZlKSkKCiAgICBkZWYgX2NhbmNlbF9yZXN0aW5nKHNlbGYsIHBvczogUG9zaXRpb24pOgogICAgICAgIGZvciB0cmFkZSBpbiBzZWxmLl90cF9vcmRlci5wb3AoaWQocG9zKSwgW10pOgogICAgICAgICAgICBpZiBub3Qgc2VsZi5kcnlfcnVuOgogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIHNlbGYuaWIuY2FuY2VsT3JkZXIodHJhZGUub3JkZXIpCiAgICAgICAgICAgICAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgICAgICAgICAgICAgIHBhc3MKCiAgICBkZWYgX29uX3RpZXJfZmlsbChzZWxmLCBwb3M6IFBvc2l0aW9uLCB0aWVyOiBpbnQsIHRyYWRlKToKICAgICAgICBmaWxsZWQgPSBzdW0oZi5zaGFyZXMgZm9yIGYgaW4gdHJhZGUuZmlsbHMpCiAgICAgICAgaWYgZmlsbGVkID4gMDoKICAgICAgICAgICAgYXZnID0gc3VtKGYuc2hhcmVzICogZi5wcmljZSBmb3IgZiBpbiB0cmFkZS5maWxscykgLyBmaWxsZWQKICAgICAgICAgICAgc2VsZi5fdGllcl9kb25lLnNldGRlZmF1bHQoaWQocG9zKSwgW10pLmFwcGVuZCgodGllciwgZmlsbGVkLCBhdmcpKQogICAgICAgICAgICBsb2cuaW5mbygicmVzdGluZyBUJWQgZmlsbGVkOiAlcyBxdHk9JWQgQCAlLjJmIiwKICAgICAgICAgICAgICAgICAgICAgdGllciwgcG9zLmtleSwgZmlsbGVkLCBhdmcpCgogICAgZGVmIGNoZWNrX3RpZXJfZmlsbHMoc2VsZiwgcG9zOiBQb3NpdGlvbik6CiAgICAgICAgIiIiTGl2ZSB0aWVyIGZpbGxzIHNpbmNlIGxhc3QgY2FsbDogWyh0aWVyLCBmaWxsZWRfcXR5LCBhdmdfcHgpXS4iIiIKICAgICAgICByZXR1cm4gc2VsZi5fdGllcl9kb25lLnBvcChpZChwb3MpLCBbXSkKCiAgICBkZWYgX29uX3RwX2ZpbGwoc2VsZiwgcG9zOiBQb3NpdGlvbiwgdHJhZGUpOgogICAgICAgIGZpbGxlZCA9IHN1bShmLnNoYXJlcyBmb3IgZiBpbiB0cmFkZS5maWxscykKICAgICAgICBpZiBmaWxsZWQgPiAwOgogICAgICAgICAgICBhdmcgPSBzdW0oZi5zaGFyZXMgKiBmLnByaWNlIGZvciBmIGluIHRyYWRlLmZpbGxzKSAvIGZpbGxlZAogICAgICAgICAgICBzZWxmLl90cF9kb25lW2lkKHBvcyldID0gKGZpbGxlZCwgYXZnKQogICAgICAgICAgICBsb2cuaW5mbygicmVzdGluZyBUUCBmaWxsZWQ6ICVzIHF0eT0lZCBAICUuMmYiLCBwb3Mua2V5LCBmaWxsZWQsIGF2ZykKCiAgICBkZWYgY2hlY2tfdHBfZmlsbChzZWxmLCBwb3M6IFBvc2l0aW9uKToKICAgICAgICAiIiJSZXR1cm4gKGZpbGxlZF9xdHksIGF2Z19weCkgaWYgdGhlIHJlc3RpbmcgVFAgZmlsbGVkLCBlbHNlIE5vbmUuIiIiCiAgICAgICAgcmV0dXJuIHNlbGYuX3RwX2RvbmUucG9wKGlkKHBvcyksIE5vbmUpCgogICAgYXN5bmMgZGVmIGFybV90cmFpbChzZWxmLCBwb3M6IFBvc2l0aW9uLCB0b3VjaF9iaWQ6IGZsb2F0KToKICAgICAgICAiIiIxMHggdG91Y2hlZDogY2FuY2VsIHRoZSByZXN0aW5nIFRQKHMpLCBzd2l0Y2ggcmVtYWluZGVyIHRvIHRoZQogICAgICAgIDMwJSBnaXZlYmFjayB0cmFpbC4iIiIKICAgICAgICBzZWxmLl9jYW5jZWxfcmVzdGluZyhwb3MpCiAgICAgICAgcG9zLmFybV90cmFpbCh0b3VjaF9iaWQpCiAgICAgICAgcG9zLnRyYWlsX2FybV9lbWl0dGVkID0gVHJ1ZQogICAgICAgIGF3YWl0IHNlbGYuZW1pdCgiVFJBSUxfQVJNIiwgZGljdChrZXk9cG9zLmtleSwgdG91Y2hfYmlkPXJvdW5kKHRvdWNoX2JpZCwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZsb29yPXJvdW5kKHBvcy50cmFpbF9mbG9vciwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBlYWs9cm91bmQocG9zLnRyYWlsX3BlYWssIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBydW5uZXJfcXR5PXBvcy5ydW5uZXJfcXR5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cmlnZ2VyPXBvcy50cmlnZ2VyKSkKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0gZXhpdHMgLS0tLS0tLS0tLS0tLS0tLQogICAgYXN5bmMgZGVmIF9zZWxsKHNlbGYsIHBvczogUG9zaXRpb24sIHF0eTogaW50LCByZWFzb246IHN0cik6CiAgICAgICAgIiIiTWFya2V0YWJsZSBsaW1pdCBzZWxsIGF0IGN1cnJlbnQgYmlkLiBSZXR1cm5zIChmaWxsZWRfcXR5LCBhdmdfcHgpLiIiIgogICAgICAgIHEgPSBzZWxmLmdldF9xdW90ZShwb3Mua2V5KQogICAgICAgIGJpZCA9IHFbMF0gaWYgcSBhbmQgcVswXSBhbmQgcVswXSA+IDAgZWxzZSAwLjAxCiAgICAgICAgYmlkID0gcm91bmQoYmlkLCAyKQogICAgICAgIGlmIHNlbGYuZHJ5X3J1bjoKICAgICAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJTSU1fRVhJVCIsIGRpY3Qoa2V5PXBvcy5rZXksIHF0eT1xdHksIHB4PWJpZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmVhc29uPXJlYXNvbiwgbWZlPXJvdW5kKHBvcy5tZmUsIDMpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYWU9cm91bmQocG9zLm1hZSwgMykpKQogICAgICAgICAgICBhd2FpdCBhc3luY2lvLnNsZWVwKDAuMikKICAgICAgICAgICAgcmV0dXJuIHF0eSwgYmlkCiAgICAgICAgY29udHJhY3QgPSBzZWxmLl9jb250cmFjdChwb3Mua2V5KQogICAgICAgIG9yZGVyID0gTGltaXRPcmRlcigiU0VMTCIsIHF0eSwgYmlkKQogICAgICAgIG9yZGVyLmFjY291bnQgPSBzZWxmLmFjY291bnQKICAgICAgICB0cmFkZSA9IHNlbGYuaWIucGxhY2VPcmRlcihjb250cmFjdCwgb3JkZXIpCiAgICAgICAgZmlsbGVkX2V2dCA9IGFzeW5jaW8uRXZlbnQoKQogICAgICAgIHRyYWRlLmZpbGxFdmVudCArPSBsYW1iZGEgdCwgZjogZmlsbGVkX2V2dC5zZXQoKQogICAgICAgIGF3YWl0IHNlbGYuZW1pdCgiRVhJVF9PUkRFUiIsIGRpY3Qoa2V5PXBvcy5rZXksIHF0eT1xdHksIHB4PWJpZCwgcmVhc29uPXJlYXNvbikpCiAgICAgICAgdHJ5OgogICAgICAgICAgICBhd2FpdCBhc3luY2lvLndhaXRfZm9yKGZpbGxlZF9ldnQud2FpdCgpLCB0aW1lb3V0PTE1KQogICAgICAgIGV4Y2VwdCBhc3luY2lvLlRpbWVvdXRFcnJvcjoKICAgICAgICAgICAgIyBvbmUgc3RlcC1kb3duLCB0aGVuIGxlYXZlIHdvcmtpbmcgaW50byB0aGUgY2xvc2UKICAgICAgICAgICAgcTIgPSBzZWxmLmdldF9xdW90ZShwb3Mua2V5KQogICAgICAgICAgICBuYiA9IHJvdW5kKG1heCgocTJbMF0gaWYgcTIgYW5kIHEyWzBdIGVsc2UgYmlkKSAtIDAuMDUsIDAuMDEpLCAyKQogICAgICAgICAgICBhd2FpdCBzZWxmLmVtaXQoIkVYSVRfU1RFUERPV04iLCBkaWN0KGtleT1wb3Mua2V5LCBvbGQ9YmlkLCBuZXc9bmIpKQogICAgICAgICAgICBzZWxmLmliLmNhbmNlbE9yZGVyKHRyYWRlLm9yZGVyKQogICAgICAgICAgICBvcmRlciA9IExpbWl0T3JkZXIoIlNFTEwiLCBxdHksIG5iKQogICAgICAgICAgICBvcmRlci5hY2NvdW50ID0gc2VsZi5hY2NvdW50CiAgICAgICAgICAgIHRyYWRlID0gc2VsZi5pYi5wbGFjZU9yZGVyKGNvbnRyYWN0LCBvcmRlcikKICAgICAgICAgICAgZmlsbGVkX2V2dDIgPSBhc3luY2lvLkV2ZW50KCkKICAgICAgICAgICAgdHJhZGUuZmlsbEV2ZW50ICs9IGxhbWJkYSB0LCBmOiBmaWxsZWRfZXZ0Mi5zZXQoKQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBhd2FpdCBhc3luY2lvLndhaXRfZm9yKGZpbGxlZF9ldnQyLndhaXQoKSwgdGltZW91dD0xMCkKICAgICAgICAgICAgZXhjZXB0IGFzeW5jaW8uVGltZW91dEVycm9yOgogICAgICAgICAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJFWElUX1dPUktJTkciLCBkaWN0KGtleT1wb3Mua2V5LCBxdHk9cXR5LCBweD1uYikpCiAgICAgICAgZmlsbGVkID0gc3VtKGYuc2hhcmVzIGZvciBmIGluIHRyYWRlLmZpbGxzKQogICAgICAgIGF2ZyA9IHN1bShmLnNoYXJlcyAqIGYucHJpY2UgZm9yIGYgaW4gdHJhZGUuZmlsbHMpIC8gZmlsbGVkIGlmIGZpbGxlZCBlbHNlIDAuMAogICAgICAgIGlmIGZpbGxlZDoKICAgICAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJGSUxMIiwgZGljdChrZXk9cG9zLmtleSwgcXR5PWZpbGxlZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBweD1yb3VuZChhdmcsIDIpLCBzaWRlPSJTRUxMIiwgcmVhc29uPXJlYXNvbikpCiAgICAgICAgcmV0dXJuIGZpbGxlZCwgYXZnCgogICAgYXN5bmMgZGVmIGNsb3NlKHNlbGYsIHBvczogUG9zaXRpb24sIHJlYXNvbjogc3RyKToKICAgICAgICAiIiJDbG9zZSByZW1haW5pbmcgcXR5LiBSZXR1cm5zIHJlYWxpemVkIFBuTCBpbmNsLiBjb21taXNzaW9uLiIiIgogICAgICAgICMgbmV2ZXIgbGVhdmUgYSByZXN0aW5nIFRQIGJlaGluZCBhIGNsb3NlZCBwb3NpdGlvbgogICAgICAgIHNlbGYuX2NhbmNlbF9yZXN0aW5nKHBvcykKICAgICAgICBzZWxmLl90cF9kb25lLnBvcChpZChwb3MpLCBOb25lKQogICAgICAgIHNlbGYuX3RpZXJfZG9uZS5wb3AoaWQocG9zKSwgTm9uZSkKICAgICAgICBpZiBwb3MucXR5IDw9IDA6CiAgICAgICAgICAgIHJldHVybiAwLjAKICAgICAgICBmaWxsZWQsIGF2ZyA9IGF3YWl0IHNlbGYuX3NlbGwocG9zLCBwb3MucXR5LCByZWFzb24pCiAgICAgICAgaWYgZmlsbGVkOgogICAgICAgICAgICBwbmwgPSBwb3Mub25fY2xvc2UoZmlsbGVkLCBhdmcpIC0gQ09NTUlTU0lPTgogICAgICAgICAgICBwb3MucXR5IC09IGZpbGxlZAogICAgICAgICAgICByZXR1cm4gcG5sCiAgICAgICAgcmV0dXJuIDAuMAoKICAgIGFzeW5jIGRlZiBmbGF0dGVuKHNlbGYsIHBvczogUG9zaXRpb24sIHJlYXNvbjogc3RyKToKICAgICAgICAiIiJFT0QgLyBraWxsLXN3aXRjaDogY2FuY2VsIGV2ZXJ5dGhpbmcsIHNlbGwgYWxsLiIiIgogICAgICAgIGZvciB0IGluIGxpc3Qoc2VsZi5vcGVuX3RyYWRlcyk6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHNlbGYuaWIuY2FuY2VsT3JkZXIodC5vcmRlcikKICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICAgICAgICAgIHBhc3MKICAgICAgICBzZWxmLl90cF9vcmRlci5wb3AoaWQocG9zKSwgTm9uZSkKICAgICAgICBwbmwgPSBhd2FpdCBzZWxmLmNsb3NlKHBvcywgcmVhc29uKQogICAgICAgIHJldHVybiBwbmwKCiAgICBkZWYgX2NvbnRyYWN0KHNlbGYsIGtleSk6CiAgICAgICAgIyByZXNvbHZlZCB2aWEgYnJpZGdlIGNvbnRyYWN0cy5qc29uIGRlc2NyaXB0b3JzIGF0IHN0YXJ0dXAgKHNldCBieSBtYWluKQogICAgICAgIHJldHVybiBzZWxmLl9jb250cmFjdHNba2V5XQoKICAgIGRlZiBiaW5kX2NvbnRyYWN0cyhzZWxmLCBjb250cmFjdHM6IGRpY3QpOgogICAgICAgIHNlbGYuX2NvbnRyYWN0cyA9IGNvbnRyYWN0cwoKICAgIGRlZiBiaW5kX2NvbnRyYWN0X2Rlc2NyaXB0b3JzKHNlbGYsIGRlc2NzOiBkaWN0KToKICAgICAgICAiIiJCdWlsZCBpYl9pbnN5bmMgT3B0aW9uIGNvbnRyYWN0cyBmcm9tIHRoZSBicmlkZ2UncwogICAgICAgIGNvbnRyYWN0cy5qc29uIGRlc2NyaXB0b3JzICh7JzY1NjBDJzogey4uLn19KS4gbWFpbigpIHF1YWxpZmllcwogICAgICAgIHRoZW0gb25jZSBiZWZvcmUgdHJhZGluZy4iIiIKICAgICAgICBjb250cmFjdHMgPSB7fQogICAgICAgIGZvciBrZXlfc3RyLCBkIGluIGRlc2NzLml0ZW1zKCk6CiAgICAgICAgICAgIGNvbnRyYWN0c1trZXlfc3RyXSA9IE9wdGlvbigKICAgICAgICAgICAgICAgIHN5bWJvbD1kWyJzeW1ib2wiXSwKICAgICAgICAgICAgICAgIGxhc3RUcmFkZURhdGVPckNvbnRyYWN0TW9udGg9ZFsibGFzdFRyYWRlRGF0ZU9yQ29udHJhY3RNb250aCJdLAogICAgICAgICAgICAgICAgc3RyaWtlPWRbInN0cmlrZSJdLCByaWdodD1kWyJyaWdodCJdLAogICAgICAgICAgICAgICAgZXhjaGFuZ2U9ZFsiZXhjaGFuZ2UiXSwgdHJhZGluZ0NsYXNzPWQuZ2V0KCJ0cmFkaW5nQ2xhc3MiKSBvciAiIiwKICAgICAgICAgICAgICAgIGN1cnJlbmN5PWQuZ2V0KCJjdXJyZW5jeSIpIG9yICJVU0QiLAogICAgICAgICAgICAgICAgbXVsdGlwbGllcj1kLmdldCgibXVsdGlwbGllciIpIG9yICIxMDAiKQogICAgICAgIHNlbGYuX2NvbnRyYWN0cyA9IGNvbnRyYWN0cwogICAgICAgIHJldHVybiBjb250cmFjdHMK
+"""Order manager (v2): entries (limit at ask + one $0.05 chase), RESTING native
+10x take-profit placed AT FILL, 30% giveback trail after 10x touch,
+EOD flatten. The resting TP is a native exchange order: it survives a
+process crash. The trail is software-managed on the 5s loop.
+
+dry_run=True: no orders touch IBKR. Fills are simulated at the intended
+price so the full entry->exit state machine is exercised end to end.
+"""
+import asyncio
+import logging
+from datetime import datetime
+
+from ib_insync import LimitOrder, Option
+
+import config
+from strategy import Position
+
+log = logging.getLogger("algo.orders")
+COMMISSION = 1.30
+
+
+class OrderManager:
+    def __init__(self, ib, account: str, dry_run: bool, get_quote, emit):
+        self.ib = ib
+        self.account = account
+        self.dry_run = dry_run
+        self.get_quote = get_quote   # key -> (bid, ask) | None
+        self.emit = emit            # async json-log fn
+        self.open_trades = []
+        self._tp_order = {}         # id(pos) -> list of resting-TP Trades (live)
+        self._tp_done = {}          # id(pos) -> (filled_qty, avg_px), legacy single TP
+        self._tier_done = {}        # id(pos) -> [(tier, filled_qty, avg_px)]
+
+    # ---------------- entries ----------------
+    async def enter(self, cand: dict, qty: int, now_et: datetime):
+        key, ask = cand["key"], cand["ask"]
+        contract = self._contract(key)
+        if self.dry_run:
+            await self.emit("SIM_ENTER", dict(key=key, qty=qty, px=ask,
+                                              strike=cand["strike"], right=cand["right"],
+                                              window=cand["window"], otm=cand["otm"],
+                                              ask_z=(round(cand["ask_z"], 2)
+                                                     if cand.get("ask_z") is not None else None),
+                                              trigger=cand.get("trigger", "crush")))
+            await asyncio.sleep(0.2)
+            pos = Position(key, cand["strike"], cand["right"], qty, ask,
+                           cand["wall"], now_et.strftime("%H:%M"),
+                           cand["window"], cand["spot"],
+                           trigger=cand.get("trigger", "crush"),
+                           simulated=True)
+            await self.emit("SIM_FILL", dict(key=key, qty=qty, px=ask, side="BUY"))
+            await self.place_resting_tp(pos)   # dry-run: logs the simulated TPs
+            return pos
+
+        px = ask
+        order = LimitOrder("BUY", qty, px)
+        order.account = self.account
+        trade = self.ib.placeOrder(contract, order)
+        self.open_trades.append(trade)
+        filled_evt = asyncio.Event()
+        trade.fillEvent += lambda t, f: filled_evt.set()
+        await self.emit("ENTER", dict(key=key, qty=qty, px=round(px, 2),
+                                      strike=cand["strike"], right=cand["right"],
+                                      window=cand["window"], otm=cand["otm"],
+                                      trigger=cand.get("trigger", "crush")))
+        chased = False
+        deadline = asyncio.get_event_loop().time() + config.ENTRY_GIVEUP_TIMEOUT
+        chase_at = asyncio.get_event_loop().time() + config.ENTRY_FILL_TIMEOUT
+        while True:
+            try:
+                await asyncio.wait_for(filled_evt.wait(),
+                                       timeout=max(0, chase_at - asyncio.get_event_loop().time()))
+                break
+            except asyncio.TimeoutError:
+                pass
+            filled = sum(f.shares for f in trade.fills)
+            if filled >= qty:
+                break
+            now = asyncio.get_event_loop().time()
+            if not chased and now >= chase_at:
+                q = self.get_quote(key)
+                # chase cap: never above ask + $0.05 (their CHASECAP lesson)
+                new_px = round(min((q[1] if q else px) + config.CHASE_ALLOWANCE,
+                                   ask + config.CHASE_ALLOWANCE), 2)
+                await self.emit("ENTER_CHASE", dict(key=key, old_px=px, new_px=new_px))
+                self.ib.cancelOrder(trade.order)
+                order = LimitOrder("BUY", qty - filled, new_px)
+                order.account = self.account
+                trade = self.ib.placeOrder(contract, order)
+                trade.fillEvent += lambda t, f: filled_evt.set()
+                filled_evt.clear()
+                chased, px = True, new_px
+                chase_at = float("inf")
+            if now >= deadline:
+                break
+        filled = sum(f.shares for f in trade.fills)
+        if trade.orderStatus.status not in ("Filled",):
+            self.ib.cancelOrder(trade.order)
+        if filled <= 0:
+            await self.emit("ENTER_UNFILLED", dict(key=key))
+            return None
+        avg = sum(f.shares * f.price for f in trade.fills) / filled
+        await self.emit("FILL", dict(key=key, qty=filled, px=round(avg, 2), side="BUY"))
+        pos = Position(key, cand["strike"], cand["right"], filled, avg,
+                       cand["wall"], now_et.strftime("%H:%M"),
+                       cand["window"], cand["spot"],
+                       trigger=cand.get("trigger", "crush"),
+                       simulated=False)
+        await self.place_resting_tp(pos)
+        return pos
+
+    # ---------------- resting TPs (v3: tiered) ----------------
+    async def place_resting_tp(self, pos: Position):
+        """Native SELL limit(s) placed at fill. Survive process death.
+
+        Tiered (default): T1 = t1_qty @ 5x, T2 = t2_qty @ 10x; the runner
+        trails. Off / too-small qty: single 10x TP on the full qty (v2).
+        Dry-run: only logged; the state machine simulates the fills."""
+        legs = []
+        if pos.tiered_effective:
+            if pos.t1_qty > 0:
+                legs.append((1, pos.t1_qty, pos.tp1_px))
+            if pos.t2_qty > 0:
+                legs.append((2, pos.t2_qty, pos.tp2_px))
+        else:
+            legs.append((0, pos.qty, pos.tp_px))
+        if self.dry_run:
+            await self.emit("SIM_RESTING_TP",
+                            dict(key=pos.key,
+                                 legs=[{"tier": t, "qty": q, "px": round(p, 2)}
+                                       for t, q, p in legs],
+                                 runner=pos.runner_qty,
+                                 tiered=pos.tiered_effective))
+            return
+        contract = self._contract(pos.key)
+        trades = []
+        for tier, qty, px in legs:
+            order = LimitOrder("SELL", qty, round(px, 2))
+            order.account = self.account
+            order.tif = "GTC"
+            trade = self.ib.placeOrder(contract, order)
+            self.open_trades.append(trade)
+            trades.append(trade)
+            if tier == 0:
+                trade.fillEvent += lambda t, f: self._on_tp_fill(pos, t)
+            else:
+                trade.fillEvent += lambda t, f, tier=tier: \
+                    self._on_tier_fill(pos, tier, t)
+        self._tp_order[id(pos)] = trades
+        await self.emit("RESTING_TP",
+                        dict(key=pos.key,
+                             legs=[{"tier": t, "qty": q, "px": round(p, 2)}
+                                   for t, q, p in legs],
+                             runner=pos.runner_qty,
+                             tiered=pos.tiered_effective))
+
+    def _cancel_resting(self, pos: Position):
+        for trade in self._tp_order.pop(id(pos), []):
+            if not self.dry_run:
+                try:
+                    self.ib.cancelOrder(trade.order)
+                except Exception:
+                    pass
+
+    def _on_tier_fill(self, pos: Position, tier: int, trade):
+        filled = sum(f.shares for f in trade.fills)
+        if filled > 0:
+            avg = sum(f.shares * f.price for f in trade.fills) / filled
+            self._tier_done.setdefault(id(pos), []).append((tier, filled, avg))
+            log.info("resting T%d filled: %s qty=%d @ %.2f",
+                     tier, pos.key, filled, avg)
+
+    def check_tier_fills(self, pos: Position):
+        """Live tier fills since last call: [(tier, filled_qty, avg_px)]."""
+        return self._tier_done.pop(id(pos), [])
+
+    def _on_tp_fill(self, pos: Position, trade):
+        filled = sum(f.shares for f in trade.fills)
+        if filled > 0:
+            avg = sum(f.shares * f.price for f in trade.fills) / filled
+            self._tp_done[id(pos)] = (filled, avg)
+            log.info("resting TP filled: %s qty=%d @ %.2f", pos.key, filled, avg)
+
+    def check_tp_fill(self, pos: Position):
+        """Return (filled_qty, avg_px) if the resting TP filled, else None."""
+        return self._tp_done.pop(id(pos), None)
+
+    async def arm_trail(self, pos: Position, touch_bid: float):
+        """10x touched: cancel the resting TP(s), switch remainder to the
+        30% giveback trail."""
+        self._cancel_resting(pos)
+        pos.arm_trail(touch_bid)
+        pos.trail_arm_emitted = True
+        await self.emit("TRAIL_ARM", dict(key=pos.key, touch_bid=round(touch_bid, 2),
+                                          floor=round(pos.trail_floor, 2),
+                                          peak=round(pos.trail_peak, 2),
+                                          runner_qty=pos.runner_qty,
+                                          trigger=pos.trigger))
+
+    # ---------------- exits ----------------
+    async def _sell(self, pos: Position, qty: int, reason: str):
+        """Marketable limit sell at current bid. Returns (filled_qty, avg_px)."""
+        q = self.get_quote(pos.key)
+        bid = q[0] if q and q[0] and q[0] > 0 else 0.01
+        bid = round(bid, 2)
+        if self.dry_run:
+            await self.emit("SIM_EXIT", dict(key=pos.key, qty=qty, px=bid,
+                                             reason=reason, mfe=round(pos.mfe, 3),
+                                             mae=round(pos.mae, 3)))
+            await asyncio.sleep(0.2)
+            return qty, bid
+        contract = self._contract(pos.key)
+        order = LimitOrder("SELL", qty, bid)
+        order.account = self.account
+        trade = self.ib.placeOrder(contract, order)
+        filled_evt = asyncio.Event()
+        trade.fillEvent += lambda t, f: filled_evt.set()
+        await self.emit("EXIT_ORDER", dict(key=pos.key, qty=qty, px=bid, reason=reason))
+        try:
+            await asyncio.wait_for(filled_evt.wait(), timeout=15)
+        except asyncio.TimeoutError:
+            # one step-down, then leave working into the close
+            q2 = self.get_quote(pos.key)
+            nb = round(max((q2[0] if q2 and q2[0] else bid) - 0.05, 0.01), 2)
+            await self.emit("EXIT_STEPDOWN", dict(key=pos.key, old=bid, new=nb))
+            self.ib.cancelOrder(trade.order)
+            order = LimitOrder("SELL", qty, nb)
+            order.account = self.account
+            trade = self.ib.placeOrder(contract, order)
+            filled_evt2 = asyncio.Event()
+            trade.fillEvent += lambda t, f: filled_evt2.set()
+            try:
+                await asyncio.wait_for(filled_evt2.wait(), timeout=10)
+            except asyncio.TimeoutError:
+                await self.emit("EXIT_WORKING", dict(key=pos.key, qty=qty, px=nb))
+        filled = sum(f.shares for f in trade.fills)
+        avg = sum(f.shares * f.price for f in trade.fills) / filled if filled else 0.0
+        if filled:
+            await self.emit("FILL", dict(key=pos.key, qty=filled,
+                                         px=round(avg, 2), side="SELL", reason=reason))
+        return filled, avg
+
+    async def close(self, pos: Position, reason: str):
+        """Close remaining qty. Returns realized PnL incl. commission."""
+        # never leave a resting TP behind a closed position
+        self._cancel_resting(pos)
+        self._tp_done.pop(id(pos), None)
+        self._tier_done.pop(id(pos), None)
+        if pos.qty <= 0:
+            return 0.0
+        filled, avg = await self._sell(pos, pos.qty, reason)
+        if filled:
+            pnl = pos.on_close(filled, avg) - COMMISSION
+            pos.qty -= filled
+            return pnl
+        return 0.0
+
+    async def flatten(self, pos: Position, reason: str):
+        """EOD / kill-switch: cancel everything, sell all."""
+        for t in list(self.open_trades):
+            try:
+                self.ib.cancelOrder(t.order)
+            except Exception:
+                pass
+        self._tp_order.pop(id(pos), None)
+        pnl = await self.close(pos, reason)
+        return pnl
+
+    def _contract(self, key):
+        # resolved via bridge contracts.json descriptors at startup (set by main)
+        return self._contracts[key]
+
+    def bind_contracts(self, contracts: dict):
+        self._contracts = contracts
+
+    def bind_contract_descriptors(self, descs: dict):
+        """Build ib_insync Option contracts from the bridge's
+        contracts.json descriptors ({'6560C': {...}}). main() qualifies
+        them once before trading."""
+        contracts = {}
+        for key_str, d in descs.items():
+            contracts[key_str] = Option(
+                symbol=d["symbol"],
+                lastTradeDateOrContractMonth=d["lastTradeDateOrContractMonth"],
+                strike=d["strike"], right=d["right"],
+                exchange=d["exchange"], tradingClass=d.get("tradingClass") or "",
+                currency=d.get("currency") or "USD",
+                multiplier=d.get("multiplier") or "100")
+        self._contracts = contracts
+        return contracts

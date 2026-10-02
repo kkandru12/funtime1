@@ -1,1 +1,220 @@
-IiIiUG9zaXRpb24gZXhpdCBzdGF0ZSBtYWNoaW5lICh2Mykg4oCUIGNvbnN1bWVyIG1vZGUuCgpFTlRSWSBzY3JlZW5zIChjcnVzaCBldmFsdWF0ZSArIHdhbGwtYnJlYWsgV2FsbEJyZWFrU3RhdGUpIG1vdmVkIHRvCmdleF9icmlkZ2Uvc2NyZWVuLnB5LCB3aGljaCBydW5zIHdoZXJlIHRoZSBkYXRhIGxpdmVzLiBUaGlzIG1vZHVsZSBrZWVwcwp0aGUgZXhpdCBzdGF0ZSBtYWNoaW5lLCB3aW5kb3cgaGVscGVycywgYW5kIGZsYXQtdGltZSBjaGVjay4KCkVYSVQgKHByaW9yaXR5IG9yZGVyKSAtIHRoZWlyIG1lYXN1cmVkIGRlc2lnbjoKICAxLiAxNTo1NSAtPiBGTEFUIGV2ZXJ5dGhpbmcKICAyLiByZXN0aW5nIDEweCBsaW1pdCBUUCAocGxhY2VkIEFUIEZJTEwsIG5hdGl2ZSBpbiBsaXZlIG1vZGUpCiAgMy4gb24gMTB4IHRvdWNoIC0+IDMwJSBnaXZlYmFjayBUUkFJTCBvbiByZW1haW5kZXIKICAgICAoZmxvb3IgcmF0Y2hldHM6IG1heCgxMHggZW50cnksIHBlYWsgKiAwLjcwKSwgfjIwcyBjb25maXJtYXRpb24pCiAgNC4gcGVyLXRyYWRlIHN0b3Agb25seSBpZiBjb25maWcuU1RPUF9QQ1QgPiAwIChkZWZhdWx0IDAgPSBkaXNhYmxlZCkKIiIiCmltcG9ydCBsb2dnaW5nCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lCgppbXBvcnQgY29uZmlnCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiYWxnby5zdHJhdGVneSIpCgoKZGVmIGluX2VudHJ5X3dpbmRvdyhub3dfZXQ6IGRhdGV0aW1lKSAtPiBib29sOgogICAgcmV0dXJuIGNvbmZpZy5pbl9lbnRyeV93aW5kb3cobm93X2V0KQoKCmRlZiBwYXN0X2ZsYXRfdGltZShub3dfZXQ6IGRhdGV0aW1lKSAtPiBib29sOgogICAgcmV0dXJuIChub3dfZXQuaG91ciwgbm93X2V0Lm1pbnV0ZSkgPj0gY29uZmlnLkZMQVRfVElNRQoKCgoKIyAtLS0tLS0tLS0tLS0tLS0tIHBvc2l0aW9uIHN0YXRlIG1hY2hpbmUgLS0tLS0tLS0tLS0tLS0tLQpIT0xELCBUMV9GSUxMLCBUMl9GSUxMLCBUUF9UT1VDSCwgVFJBSUxfU1RPUCwgU1RPUCwgRkxBVFRFTiA9IFwKICAgICJIT0xEIiwgIlQxX0ZJTEwiLCAiVDJfRklMTCIsICJUUF9UT1VDSCIsICJUUkFJTF9TVE9QIiwgIlNUT1AiLCAiRkxBVFRFTiIKCgpjbGFzcyBQb3NpdGlvbjoKICAgICIiIkxvbmcgMERURSB0aWNrZXQuCgogICAgdjIgcGF0aCAodGllcmVkIG9mZik6IHJlc3RpbmcgMTB4IFRQIC0+IDMwJSBnaXZlYmFjayB0cmFpbC4KICAgIHYzIE1vZHVsZSBBICh0aWVyZWQgb24sIGRlZmF1bHQpOiBUMSByZXN0aW5nIDV4IG9uIDEvMywgVDIgcmVzdGluZyAxMHggb24KICAgIDEvMywgcnVubmVyIDEvMyBvbiB0aGUgMzAlIGdpdmViYWNrIHRyYWlsLiBTdGF0ZXM6CiAgICAgICJQUkVfVDEiIC0+IDV4IHRvdWNoIC0+ICJQUkVfVDIiIC0+IDEweCB0b3VjaCAtPiAiVFJBSUwiLgogICAgVGllciBmaWxscyBhcmUgcmVjb3JkZWQgaW4gcGVuZGluZ190aWVyX2ZpbGxzIGZvciB0aGUgY2FsbGVyIHRvIGpvdXJuYWw7CiAgICBpbiBsaXZlIG1vZGUgdGhlIGV4Y2hhbmdlIGRyaXZlcyBmaWxscyB2aWEgYXBwbHlfdGllcl9maWxsKCksIGluIGRyeS1ydW4KICAgIHVwZGF0ZSgpIHNpbXVsYXRlcyB0aGVtIChzaW11bGF0ZWQ9VHJ1ZSkuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwga2V5LCBzdHJpa2UsIHJpZ2h0LCBxdHksIGVudHJ5X3B4LCB3YWxsLCBlbnRyeV90aW1lLAogICAgICAgICAgICAgICAgIHdpbmRvdywgc3BvdF9hdF9lbnRyeSwgdHJpZ2dlcj0iY3J1c2giLCB0aWVyZWQ9Tm9uZSwKICAgICAgICAgICAgICAgICBzaW11bGF0ZWQ9VHJ1ZSk6CiAgICAgICAgc2VsZi5rZXkgPSBrZXkKICAgICAgICBzZWxmLnN0cmlrZSA9IHN0cmlrZQogICAgICAgIHNlbGYucmlnaHQgPSByaWdodCAgICAgICAgICAjICJjYWxsIiB8ICJwdXQiCiAgICAgICAgc2VsZi5xdHkgPSBxdHkgICAgICAgICAgICAgICMgcmVtYWluaW5nIGNvbnRyYWN0cyAoYWxsIHRpZXJzKQogICAgICAgIHNlbGYuZW50cnlfcHggPSBlbnRyeV9weAogICAgICAgIHNlbGYud2FsbCA9IHdhbGwKICAgICAgICBzZWxmLmVudHJ5X3RpbWUgPSBlbnRyeV90aW1lCiAgICAgICAgc2VsZi53aW5kb3cgPSB3aW5kb3cKICAgICAgICBzZWxmLnNwb3RfYXRfZW50cnkgPSBzcG90X2F0X2VudHJ5CiAgICAgICAgc2VsZi50cmlnZ2VyID0gdHJpZ2dlciAgICAgICMgImNydXNoIiB8ICJ3YWxsYnJlYWsiCiAgICAgICAgc2VsZi5zaW11bGF0ZWQgPSBzaW11bGF0ZWQKICAgICAgICBzZWxmLnRpZXJlZCA9IGNvbmZpZy5USUVSRURfRVhJVFMgaWYgdGllcmVkIGlzIE5vbmUgZWxzZSB0aWVyZWQKICAgICAgICAjIHRpZXIgc3BsaXQ6IDEvMywgMS8zLCBydW5uZXIgZ2V0cyB0aGUgcmVtYWluZGVyCiAgICAgICAgdDEgPSBxdHkgLy8gMyBpZiBzZWxmLnRpZXJlZCBlbHNlIDAKICAgICAgICB0MiA9IHF0eSAvLyAzIGlmIHNlbGYudGllcmVkIGVsc2UgMAogICAgICAgIHNlbGYudDFfcXR5ID0gdDEKICAgICAgICBzZWxmLnQyX3F0eSA9IHQyCiAgICAgICAgc2VsZi5ydW5uZXJfcXR5ID0gcXR5IC0gdDEgLSB0MgogICAgICAgICMgcXR5IHRvbyBzbWFsbCB0byB0aWVyICg8MykgLT4gZmFsbCBiYWNrIHRvIHRoZSB2MiBzaW5nbGUtVFAgcGF0aAogICAgICAgIHNlbGYudGllcmVkX2VmZmVjdGl2ZSA9IHNlbGYudGllcmVkIGFuZCBzZWxmLnJ1bm5lcl9xdHkgPCBxdHkKICAgICAgICBpZiBzZWxmLnRpZXJlZF9lZmZlY3RpdmU6CiAgICAgICAgICAgIHNlbGYudHAxX3B4ID0gcm91bmQoZW50cnlfcHggKiBjb25maWcuVElFUjFfTVVMVCAvIDAuMDUpICogMC4wNQogICAgICAgICAgICBzZWxmLnRwMl9weCA9IHJvdW5kKGVudHJ5X3B4ICogY29uZmlnLlRJRVIyX01VTFQgLyAwLjA1KSAqIDAuMDUKICAgICAgICAgICAgc2VsZi5zdGF0ZSA9ICJQUkVfVDEiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi50cF9weCA9IHJvdW5kKGVudHJ5X3B4ICogY29uZmlnLlRQX01VTFQgLyAwLjA1KSAqIDAuMDUKICAgICAgICAgICAgc2VsZi5zdGF0ZSA9ICJQUkVfVFAiCiAgICAgICAgc2VsZi50cmFpbF9wZWFrID0gMC4wCiAgICAgICAgc2VsZi50cmFpbF9mbG9vciA9IHNlbGYudHAyX3B4IGlmIHNlbGYudGllcmVkX2VmZmVjdGl2ZSBlbHNlIHNlbGYudHBfcHgKICAgICAgICBzZWxmLnRyYWlsX2JlbG93ID0gMCAgICAgICAgIyBjb25zZWN1dGl2ZSB0aWNrcyBiZWxvdyBmbG9vcgogICAgICAgIHNlbGYudHJhaWxfYXJtX2VtaXR0ZWQgPSBGYWxzZQogICAgICAgIHNlbGYubWF4X2JpZCA9IGVudHJ5X3B4CiAgICAgICAgc2VsZi5taW5fYmlkID0gZW50cnlfcHgKICAgICAgICBzZWxmLnJlYWxpemVkID0gMC4wCiAgICAgICAgc2VsZi50cF90b3VjaGVkID0gRmFsc2UKICAgICAgICBzZWxmLnBlbmRpbmdfdGllcl9maWxscyA9IFtdICAjICh0aWVyLCBxdHksIHB4LCBwbmwpIGF3YWl0aW5nIGpvdXJuYWwKCiAgICAjIC0tIHRpZXIgYm9va2tlZXBpbmcgKHNoYXJlZCBieSBkcnktcnVuIHNpbSBhbmQgbGl2ZSBuYXRpdmUgZmlsbHMpIC0tCiAgICBkZWYgX2ZpbGxfdGllcihzZWxmLCB0aWVyOiBpbnQsIHB4OiBmbG9hdCk6CiAgICAgICAgZnEgPSBzZWxmLnQxX3F0eSBpZiB0aWVyID09IDEgZWxzZSBzZWxmLnQyX3F0eQogICAgICAgIGZxID0gbWF4KGludChmcSksIDApCiAgICAgICAgaWYgZnEgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIDAuMAogICAgICAgIHBubCA9IHNlbGYub25fY2xvc2UoZnEsIHB4KQogICAgICAgIHNlbGYucXR5IC09IGZxCiAgICAgICAgaWYgdGllciA9PSAxOgogICAgICAgICAgICBzZWxmLnQxX3F0eSA9IDAKICAgICAgICAgICAgc2VsZi5zdGF0ZSA9ICJQUkVfVDIiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi50Ml9xdHkgPSAwCiAgICAgICAgc2VsZi5wZW5kaW5nX3RpZXJfZmlsbHMuYXBwZW5kKCh0aWVyLCBmcSwgcHgsIHBubCkpCiAgICAgICAgbG9nLmluZm8oInRpZXIgJWQgZmlsbGVkOiAlcyBxdHk9JWQgQCAlLjJmICglLjFmeCkiLAogICAgICAgICAgICAgICAgIHRpZXIsIHNlbGYua2V5LCBmcSwgcHgsIHB4IC8gc2VsZi5lbnRyeV9weCBpZiBzZWxmLmVudHJ5X3B4IGVsc2UgMCkKICAgICAgICByZXR1cm4gcG5sCgogICAgZGVmIGFwcGx5X3RpZXJfZmlsbChzZWxmLCB0aWVyOiBpbnQsIGZxOiBpbnQsIHB4OiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgIiIiTGl2ZS1tb2RlIGVudHJ5IHBvaW50OiBhIHJlc3RpbmcgbmF0aXZlIFRQIHBhcnRpYWxseS9mdWxseSBmaWxsZWQuIiIiCiAgICAgICAgaWYgdGllciA9PSAxOgogICAgICAgICAgICB0YWtlID0gbWluKGludChmcSksIGludChzZWxmLnQxX3F0eSkpCiAgICAgICAgICAgIHNlbGYudDFfcXR5IC09IHRha2UKICAgICAgICBlbGlmIHRpZXIgPT0gMjoKICAgICAgICAgICAgdGFrZSA9IG1pbihpbnQoZnEpLCBpbnQoc2VsZi50Ml9xdHkpKQogICAgICAgICAgICBzZWxmLnQyX3F0eSAtPSB0YWtlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdGFrZSA9IDAKICAgICAgICBpZiB0YWtlIDw9IDA6CiAgICAgICAgICAgIHJldHVybiAwLjAKICAgICAgICBwbmwgPSBzZWxmLm9uX2Nsb3NlKHRha2UsIHB4KQogICAgICAgIHNlbGYucXR5IC09IHRha2UKICAgICAgICBzZWxmLnBlbmRpbmdfdGllcl9maWxscy5hcHBlbmQoKHRpZXIsIHRha2UsIHB4LCBwbmwpKQogICAgICAgIGlmIHRpZXIgPT0gMSBhbmQgc2VsZi50MV9xdHkgPT0gMCBhbmQgc2VsZi5zdGF0ZSA9PSAiUFJFX1QxIjoKICAgICAgICAgICAgc2VsZi5zdGF0ZSA9ICJQUkVfVDIiCiAgICAgICAgcmV0dXJuIHBubAoKICAgIGRlZiBkcmFpbl90aWVyX2ZpbGxzKHNlbGYpOgogICAgICAgIG91dCA9IHNlbGYucGVuZGluZ190aWVyX2ZpbGxzCiAgICAgICAgc2VsZi5wZW5kaW5nX3RpZXJfZmlsbHMgPSBbXQogICAgICAgIHJldHVybiBvdXQKCiAgICAjIC0tIHRyYWlsIGFybWluZyAoY2FsbGVkIG9uY2Ugd2hlbiAxMHggdG91Y2hlcykgLS0KICAgIGRlZiBhcm1fdHJhaWwoc2VsZiwgdG91Y2hfYmlkOiBmbG9hdCk6CiAgICAgICAgc2VsZi5zdGF0ZSA9ICJUUkFJTCIKICAgICAgICBzZWxmLnRwX3RvdWNoZWQgPSBUcnVlCiAgICAgICAgdHBfcmVmID0gc2VsZi50cDJfcHggaWYgc2VsZi50aWVyZWRfZWZmZWN0aXZlIGVsc2Ugc2VsZi50cF9weAogICAgICAgIHNlbGYudHJhaWxfcGVhayA9IG1heCh0b3VjaF9iaWQsIHRwX3JlZikKICAgICAgICBzZWxmLnRyYWlsX2Zsb29yID0gbWF4KHRwX3JlZiwgc2VsZi50cmFpbF9wZWFrICogKDEgLSBjb25maWcuVFJBSUxfR0lWRUJBQ0spKQogICAgICAgIHNlbGYudHJhaWxfYmVsb3cgPSAwCiAgICAgICAgbG9nLmluZm8oInRyYWlsIGFybWVkOiBwZWFrPSUuMmYgZmxvb3I9JS4yZiAoMTB4PSUuMmYpIHJ1bm5lcl9xdHk9JWQiLAogICAgICAgICAgICAgICAgIHNlbGYudHJhaWxfcGVhaywgc2VsZi50cmFpbF9mbG9vciwgdHBfcmVmLCBzZWxmLnJ1bm5lcl9xdHkpCgogICAgZGVmIHVwZGF0ZShzZWxmLCBub3dfZXQ6IGRhdGV0aW1lLCBiaWQ6IGZsb2F0LCBzcG90OiBmbG9hdCkgLT4gc3RyOgogICAgICAgIGlmIHBhc3RfZmxhdF90aW1lKG5vd19ldCk6CiAgICAgICAgICAgIHJldHVybiBGTEFUVEVOCiAgICAgICAgaWYgYmlkIGFuZCBiaWQgPiAwOgogICAgICAgICAgICBzZWxmLm1heF9iaWQgPSBtYXgoc2VsZi5tYXhfYmlkLCBiaWQpCiAgICAgICAgICAgIHNlbGYubWluX2JpZCA9IG1pbihzZWxmLm1pbl9iaWQsIGJpZCkKCiAgICAgICAgaWYgc2VsZi5zdGF0ZSA9PSAiVFJBSUwiOgogICAgICAgICAgICBpZiBiaWQgYW5kIGJpZCA+IDA6CiAgICAgICAgICAgICAgICBpZiBiaWQgPiBzZWxmLnRyYWlsX3BlYWs6CiAgICAgICAgICAgICAgICAgICAgc2VsZi50cmFpbF9wZWFrID0gYmlkCiAgICAgICAgICAgICAgICAgICAgdHBfcmVmID0gc2VsZi50cDJfcHggaWYgc2VsZi50aWVyZWRfZWZmZWN0aXZlIGVsc2Ugc2VsZi50cF9weAogICAgICAgICAgICAgICAgICAgIHNlbGYudHJhaWxfZmxvb3IgPSBtYXgoCiAgICAgICAgICAgICAgICAgICAgICAgIHRwX3JlZiwgc2VsZi50cmFpbF9wZWFrICogKDEgLSBjb25maWcuVFJBSUxfR0lWRUJBQ0spKQogICAgICAgICAgICAgICAgaWYgYmlkIDw9IHNlbGYudHJhaWxfZmxvb3I6CiAgICAgICAgICAgICAgICAgICAgc2VsZi50cmFpbF9iZWxvdyArPSAxCiAgICAgICAgICAgICAgICAgICAgaWYgc2VsZi50cmFpbF9iZWxvdyA+PSBjb25maWcuVFJBSUxfQ09ORklSTV9USUNLUzoKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFRSQUlMX1NUT1AKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgc2VsZi50cmFpbF9iZWxvdyA9IDAKICAgICAgICAgICAgcmV0dXJuIEhPTEQKCiAgICAgICAgaWYgbm90IGJpZCBvciBiaWQgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIEhPTEQKCiAgICAgICAgIyB2MyB0aWVyZWQgZHJ5LXJ1bjogc2ltdWxhdGUgcmVzdGluZy1saW1pdCBmaWxscyBpbiBwcmljZSBvcmRlcgogICAgICAgIGlmIHNlbGYudGllcmVkX2VmZmVjdGl2ZSBhbmQgc2VsZi5zaW11bGF0ZWQ6CiAgICAgICAgICAgIGZpbGxlZCA9IE5vbmUKICAgICAgICAgICAgaWYgc2VsZi5zdGF0ZSA9PSAiUFJFX1QxIiBhbmQgYmlkID49IHNlbGYudHAxX3B4OgogICAgICAgICAgICAgICAgc2VsZi5fZmlsbF90aWVyKDEsIHNlbGYudHAxX3B4KQogICAgICAgICAgICAgICAgZmlsbGVkID0gVDFfRklMTAogICAgICAgICAgICBpZiBzZWxmLnN0YXRlID09ICJQUkVfVDIiIGFuZCBiaWQgPj0gc2VsZi50cDJfcHg6CiAgICAgICAgICAgICAgICBzZWxmLl9maWxsX3RpZXIoMiwgc2VsZi50cDJfcHgpCiAgICAgICAgICAgICAgICBzZWxmLmFybV90cmFpbChiaWQpCiAgICAgICAgICAgICAgICBmaWxsZWQgPSBUMl9GSUxMCiAgICAgICAgICAgIGlmIGZpbGxlZDoKICAgICAgICAgICAgICAgIHJldHVybiBmaWxsZWQKICAgICAgICAgICAgaWYgc2VsZi5zdGF0ZSAhPSAiVFJBSUwiIGFuZCBjb25maWcuU1RPUF9QQ1QgPiAwIGFuZCBcCiAgICAgICAgICAgICAgICAgICAgYmlkIDw9IHNlbGYuZW50cnlfcHggKiAoMSAtIGNvbmZpZy5TVE9QX1BDVCk6CiAgICAgICAgICAgICAgICByZXR1cm4gU1RPUAogICAgICAgICAgICByZXR1cm4gSE9MRAoKICAgICAgICAjIHYyIHNpbmdsZS1UUCBwYXRoICh0aWVyZWQgb2ZmLCBvciBxdHkgdG9vIHNtYWxsIHRvIHRpZXIpCiAgICAgICAgaWYgbm90IHNlbGYudGllcmVkX2VmZmVjdGl2ZToKICAgICAgICAgICAgaWYgYmlkID49IHNlbGYudHBfcHg6CiAgICAgICAgICAgICAgICByZXR1cm4gVFBfVE9VQ0gKICAgICAgICAgICAgaWYgY29uZmlnLlNUT1BfUENUID4gMCBhbmQgYmlkIDw9IHNlbGYuZW50cnlfcHggKiAoMSAtIGNvbmZpZy5TVE9QX1BDVCk6CiAgICAgICAgICAgICAgICByZXR1cm4gU1RPUAogICAgICAgICAgICByZXR1cm4gSE9MRAogICAgICAgICMgbGl2ZSB0aWVyZWQ6IHRoZSBleGNoYW5nZSBkcml2ZXMgdGllciBmaWxscyB2aWEgYXBwbHlfdGllcl9maWxsKCk7CiAgICAgICAgIyB0aGUgc29mdHdhcmUgbG9vcCBvbmx5IG1hbmFnZXMgc3RvcCAvIGZsYXR0ZW4gLyB0cmFpbC4KICAgICAgICBpZiBjb25maWcuU1RPUF9QQ1QgPiAwIGFuZCBiaWQgPD0gc2VsZi5lbnRyeV9weCAqICgxIC0gY29uZmlnLlNUT1BfUENUKToKICAgICAgICAgICAgcmV0dXJuIFNUT1AKICAgICAgICByZXR1cm4gSE9MRAoKICAgIGRlZiBvbl9jbG9zZShzZWxmLCBxdHk6IGludCwgcHg6IGZsb2F0KSAtPiBmbG9hdDoKICAgICAgICBwbmwgPSAocHggLSBzZWxmLmVudHJ5X3B4KSAqIDEwMCAqIHF0eQogICAgICAgIHNlbGYucmVhbGl6ZWQgKz0gcG5sCiAgICAgICAgcmV0dXJuIHBubAoKICAgIGRlZiBoZWxkX21pbnV0ZXMoc2VsZiwgbm93X2V0OiBkYXRldGltZSkgLT4gaW50OgogICAgICAgIHRyeToKICAgICAgICAgICAgaCwgbSA9IHNlbGYuZW50cnlfdGltZS5zcGxpdCgiOiIpCiAgICAgICAgICAgIHQwID0gbm93X2V0LnJlcGxhY2UoaG91cj1pbnQoaCksIG1pbnV0ZT1pbnQobSksIHNlY29uZD0wLCBtaWNyb3NlY29uZD0wKQogICAgICAgICAgICByZXR1cm4gbWF4KDAsIGludCgobm93X2V0IC0gdDApLnRvdGFsX3NlY29uZHMoKSAvLyA2MCkpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICAgICAgcmV0dXJuIC0xCgogICAgQHByb3BlcnR5CiAgICBkZWYgcGVha19tdWx0aXBsZShzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5tYXhfYmlkIC8gc2VsZi5lbnRyeV9weCBpZiBzZWxmLmVudHJ5X3B4IGVsc2UgMAoKICAgIEBwcm9wZXJ0eQogICAgZGVmIG1mZShzZWxmKToKICAgICAgICByZXR1cm4gKHNlbGYubWF4X2JpZCAtIHNlbGYuZW50cnlfcHgpIC8gc2VsZi5lbnRyeV9weCBpZiBzZWxmLmVudHJ5X3B4IGVsc2UgMAoKICAgIEBwcm9wZXJ0eQogICAgZGVmIG1hZShzZWxmKToKICAgICAgICByZXR1cm4gKHNlbGYubWluX2JpZCAtIHNlbGYuZW50cnlfcHgpIC8gc2VsZi5lbnRyeV9weCBpZiBzZWxmLmVudHJ5X3B4IGVsc2UgMAo=
+"""Position exit state machine (v3) — consumer mode.
+
+ENTRY screens (crush evaluate + wall-break WallBreakState) moved to
+gex_bridge/screen.py, which runs where the data lives. This module keeps
+the exit state machine, window helpers, and flat-time check.
+
+EXIT (priority order) - their measured design:
+  1. 15:55 -> FLAT everything
+  2. resting 10x limit TP (placed AT FILL, native in live mode)
+  3. on 10x touch -> 30% giveback TRAIL on remainder
+     (floor ratchets: max(10x entry, peak * 0.70), ~20s confirmation)
+  4. per-trade stop only if config.STOP_PCT > 0 (default 0 = disabled)
+"""
+import logging
+from datetime import datetime
+
+import config
+
+log = logging.getLogger("algo.strategy")
+
+
+def in_entry_window(now_et: datetime) -> bool:
+    return config.in_entry_window(now_et)
+
+
+def past_flat_time(now_et: datetime) -> bool:
+    return (now_et.hour, now_et.minute) >= config.FLAT_TIME
+
+
+
+
+# ---------------- position state machine ----------------
+HOLD, T1_FILL, T2_FILL, TP_TOUCH, TRAIL_STOP, STOP, FLATTEN = \
+    "HOLD", "T1_FILL", "T2_FILL", "TP_TOUCH", "TRAIL_STOP", "STOP", "FLATTEN"
+
+
+class Position:
+    """Long 0DTE ticket.
+
+    v2 path (tiered off): resting 10x TP -> 30% giveback trail.
+    v3 Module A (tiered on, default): T1 resting 5x on 1/3, T2 resting 10x on
+    1/3, runner 1/3 on the 30% giveback trail. States:
+      "PRE_T1" -> 5x touch -> "PRE_T2" -> 10x touch -> "TRAIL".
+    Tier fills are recorded in pending_tier_fills for the caller to journal;
+    in live mode the exchange drives fills via apply_tier_fill(), in dry-run
+    update() simulates them (simulated=True).
+    """
+
+    def __init__(self, key, strike, right, qty, entry_px, wall, entry_time,
+                 window, spot_at_entry, trigger="crush", tiered=None,
+                 simulated=True):
+        self.key = key
+        self.strike = strike
+        self.right = right          # "call" | "put"
+        self.qty = qty              # remaining contracts (all tiers)
+        self.entry_px = entry_px
+        self.wall = wall
+        self.entry_time = entry_time
+        self.window = window
+        self.spot_at_entry = spot_at_entry
+        self.trigger = trigger      # "crush" | "wallbreak"
+        self.simulated = simulated
+        self.tiered = config.TIERED_EXITS if tiered is None else tiered
+        # tier split: 1/3, 1/3, runner gets the remainder
+        t1 = qty // 3 if self.tiered else 0
+        t2 = qty // 3 if self.tiered else 0
+        self.t1_qty = t1
+        self.t2_qty = t2
+        self.runner_qty = qty - t1 - t2
+        # qty too small to tier (<3) -> fall back to the v2 single-TP path
+        self.tiered_effective = self.tiered and self.runner_qty < qty
+        if self.tiered_effective:
+            self.tp1_px = round(entry_px * config.TIER1_MULT / 0.05) * 0.05
+            self.tp2_px = round(entry_px * config.TIER2_MULT / 0.05) * 0.05
+            self.state = "PRE_T1"
+        else:
+            self.tp_px = round(entry_px * config.TP_MULT / 0.05) * 0.05
+            self.state = "PRE_TP"
+        self.trail_peak = 0.0
+        self.trail_floor = self.tp2_px if self.tiered_effective else self.tp_px
+        self.trail_below = 0        # consecutive ticks below floor
+        self.trail_arm_emitted = False
+        self.max_bid = entry_px
+        self.min_bid = entry_px
+        self.realized = 0.0
+        self.tp_touched = False
+        self.pending_tier_fills = []  # (tier, qty, px, pnl) awaiting journal
+
+    # -- tier bookkeeping (shared by dry-run sim and live native fills) --
+    def _fill_tier(self, tier: int, px: float):
+        fq = self.t1_qty if tier == 1 else self.t2_qty
+        fq = max(int(fq), 0)
+        if fq <= 0:
+            return 0.0
+        pnl = self.on_close(fq, px)
+        self.qty -= fq
+        if tier == 1:
+            self.t1_qty = 0
+            self.state = "PRE_T2"
+        else:
+            self.t2_qty = 0
+        self.pending_tier_fills.append((tier, fq, px, pnl))
+        log.info("tier %d filled: %s qty=%d @ %.2f (%.1fx)",
+                 tier, self.key, fq, px, px / self.entry_px if self.entry_px else 0)
+        return pnl
+
+    def apply_tier_fill(self, tier: int, fq: int, px: float) -> float:
+        """Live-mode entry point: a resting native TP partially/fully filled."""
+        if tier == 1:
+            take = min(int(fq), int(self.t1_qty))
+            self.t1_qty -= take
+        elif tier == 2:
+            take = min(int(fq), int(self.t2_qty))
+            self.t2_qty -= take
+        else:
+            take = 0
+        if take <= 0:
+            return 0.0
+        pnl = self.on_close(take, px)
+        self.qty -= take
+        self.pending_tier_fills.append((tier, take, px, pnl))
+        if tier == 1 and self.t1_qty == 0 and self.state == "PRE_T1":
+            self.state = "PRE_T2"
+        return pnl
+
+    def drain_tier_fills(self):
+        out = self.pending_tier_fills
+        self.pending_tier_fills = []
+        return out
+
+    # -- trail arming (called once when 10x touches) --
+    def arm_trail(self, touch_bid: float):
+        self.state = "TRAIL"
+        self.tp_touched = True
+        tp_ref = self.tp2_px if self.tiered_effective else self.tp_px
+        self.trail_peak = max(touch_bid, tp_ref)
+        self.trail_floor = max(tp_ref, self.trail_peak * (1 - config.TRAIL_GIVEBACK))
+        self.trail_below = 0
+        log.info("trail armed: peak=%.2f floor=%.2f (10x=%.2f) runner_qty=%d",
+                 self.trail_peak, self.trail_floor, tp_ref, self.runner_qty)
+
+    def update(self, now_et: datetime, bid: float, spot: float) -> str:
+        if past_flat_time(now_et):
+            return FLATTEN
+        if bid and bid > 0:
+            self.max_bid = max(self.max_bid, bid)
+            self.min_bid = min(self.min_bid, bid)
+
+        if self.state == "TRAIL":
+            if bid and bid > 0:
+                if bid > self.trail_peak:
+                    self.trail_peak = bid
+                    tp_ref = self.tp2_px if self.tiered_effective else self.tp_px
+                    self.trail_floor = max(
+                        tp_ref, self.trail_peak * (1 - config.TRAIL_GIVEBACK))
+                if bid <= self.trail_floor:
+                    self.trail_below += 1
+                    if self.trail_below >= config.TRAIL_CONFIRM_TICKS:
+                        return TRAIL_STOP
+                else:
+                    self.trail_below = 0
+            return HOLD
+
+        if not bid or bid <= 0:
+            return HOLD
+
+        # v3 tiered dry-run: simulate resting-limit fills in price order
+        if self.tiered_effective and self.simulated:
+            filled = None
+            if self.state == "PRE_T1" and bid >= self.tp1_px:
+                self._fill_tier(1, self.tp1_px)
+                filled = T1_FILL
+            if self.state == "PRE_T2" and bid >= self.tp2_px:
+                self._fill_tier(2, self.tp2_px)
+                self.arm_trail(bid)
+                filled = T2_FILL
+            if filled:
+                return filled
+            if self.state != "TRAIL" and config.STOP_PCT > 0 and \
+                    bid <= self.entry_px * (1 - config.STOP_PCT):
+                return STOP
+            return HOLD
+
+        # v2 single-TP path (tiered off, or qty too small to tier)
+        if not self.tiered_effective:
+            if bid >= self.tp_px:
+                return TP_TOUCH
+            if config.STOP_PCT > 0 and bid <= self.entry_px * (1 - config.STOP_PCT):
+                return STOP
+            return HOLD
+        # live tiered: the exchange drives tier fills via apply_tier_fill();
+        # the software loop only manages stop / flatten / trail.
+        if config.STOP_PCT > 0 and bid <= self.entry_px * (1 - config.STOP_PCT):
+            return STOP
+        return HOLD
+
+    def on_close(self, qty: int, px: float) -> float:
+        pnl = (px - self.entry_px) * 100 * qty
+        self.realized += pnl
+        return pnl
+
+    def held_minutes(self, now_et: datetime) -> int:
+        try:
+            h, m = self.entry_time.split(":")
+            t0 = now_et.replace(hour=int(h), minute=int(m), second=0, microsecond=0)
+            return max(0, int((now_et - t0).total_seconds() // 60))
+        except Exception:
+            return -1
+
+    @property
+    def peak_multiple(self):
+        return self.max_bid / self.entry_px if self.entry_px else 0
+
+    @property
+    def mfe(self):
+        return (self.max_bid - self.entry_px) / self.entry_px if self.entry_px else 0
+
+    @property
+    def mae(self):
+        return (self.min_bid - self.entry_px) / self.entry_px if self.entry_px else 0

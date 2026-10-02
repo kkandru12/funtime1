@@ -1,1 +1,82 @@
-IyBnZXhfYnJpZGdlIOKAlCB0aGUgc2luZ2xlIElCS1Igc3RyZWFtaW5nIGNvbm5lY3Rpb24KCioqRGF0YSBvbmx5LiBUaGlzIHByb2Nlc3MgTkVWRVIgcGxhY2VzIG9yZGVycy4qKiBJdCBpcyB0aGUgYWNjb3VudCdzIG9uZQpzdHJlYW1pbmcgY29ubmVjdGlvbiAoY2xpZW50SWQ9MSkuIEJvdGggYWxnb3MgYXJlIGNvbnN1bWVycyBvZgpgLi4vc2hhcmVkL2xldmVscy5qc29uYDsgdGhleSBob2xkIHplcm8gbWFya2V0LWRhdGEgbGluZXMuCgojIyBMaW5lIGJ1ZGdldCAoaGFyZCBjYXAgMTAwLCB0YXJnZXQg4omkNzUpCgp8IExpbmVzIHwgV2hhdCB8CnwtLS18LS0tfAp8IDEgfCBTUFggaW5kZXggKHNwb3QpIHwKfCAxIHwgRVMgZnJvbnQgZnV0dXJlcyBDb250RnV0dXJlIChiYXNpcyA9IEVTIOKIkiBTUFgpIHwKfCA0MiB8IFNQWFcgMERURSBhY3RpdmUgd2luZG93OiBzcG90IMKxNTAsIDUtcHQgc3RyaWtlcywgYm90aCByaWdodHMgfAp8IDIwIHwgU1BYVyAwRFRFIGNydXNoIGJhbmQ6IDU14oCTOTUgcHRzIE9UTSwgMTAtcHQgc3RlcHMsIGJvdGggc2lkZXMvcmlnaHRzIHwKfCAqKjY0KiogfCAqKnN1c3RhaW5lZCoqIHwKCk9JIGlzIGZyb3plbiBpbnRyYWRheSAodmVyaWZpZWQpOiBvbmUgcGFjZWQgbW9ybmluZyBzbmFwc2hvdCAoc3Vic2NyaWJlIOKGkgpkd2VsbCDihpIgY2FuY2VsKSwgbmV2ZXIgaGVsZCBsaW5lcy4gR0VYID0gZnJvemVuIE9JIMOXIGxpdmUgZ2FtbWEgdmlhIHRoZQpTdGFibGVXYWxsIGVzdGltYXRvciAoNS1taW4gd2FsbCBjbG9jaywgVFdBUDE1IGdhbW1hLCBzdHJpa2Ugc21vb3RoaW5nLAoxLjI1w5cvMy1ldmFsIGh5c3RlcmVzaXMsIHpvbmVzIG5vdCBsaW5lcywgY29uZmlkZW5jZSBnYXRpbmcpLgoKQWxsTGFzdCBmbG93IHdhcyB0aWVicmVhay1vbmx5IGluIHYzIGFuZCBpcyBOT1Qgc3RyZWFtZWQgYnkgdGhlIGJyaWRnZS4KCiMjIFNlc3Npb25zIChFVCkKCi0gKipOWSAwOTozMOKAkzE2OjA1Kiog4oCUIGZ1bGwgc3RyZWFtaW5nLCBmcmVzaCA1LW1pbiB3YWxsIGV2YWxzLCAwRFRFIGNydXNoICsKICB3YWxsLWJyZWFrIGNhbmRpZGF0ZSBzY3JlZW5zLCBwdWJsaXNoIGV2ZXJ5IDVzLgotICoqT3Zlcm5pZ2h0Kiog4oCUIGNoYWluIHN0cmVhbWluZyBjYW5jZWxsZWQgKFNQWCArIEVTIGtlcHQpLiBXYWxscyBmcm96ZW46CiAgYHN0YWxlOnRydWVgLCBgd2FsbF90c191dGNgLCBgd2FsbF9hZ2VfbWluYCwgY29uZmlkZW5jZSBkZWNheWVkIMOXCiAgbWF4KDAuMywgMSDiiJIgYWdlX21pbi8yNDApLiBQdWJsaXNoIGV2ZXJ5IDE1cy4KLSAqKldlZWtlbmQqKiAoU2F0LCBGcmkg4omlMTc6MDAsIFN1biA8MTc6NTUpIOKAlCBzbGVlcCB1bnRpbCBTdW4gMTc6NTUgRVQuCgojIyBsZXZlbHMuanNvbiBjb250cmFjdCAoYXRvbWljIHRtcCtyZW5hbWUgcHVibGlzaCkKCmBgYGpzb25jCnsKICAidHNfdXRjIjogIi4uLiIsICJzZXNzaW9uIjogIm55fG92ZXJuaWdodCIsCiAgInNweCI6IDY1MDAuMSwgImVzIjogNjUyMC41LCAiYmFzaXMiOiAyMC40LCAiYmFzaXNfdHNfdXRjIjogIi4uLiIsCiAgIndhbGxzIjogewogICAgImNhbGwiOiB7InN0cmlrZSI6IDY1NTAsICJ6b25lX2xvIjogNjU0NSwgInpvbmVfaGkiOiA2NTU1LAogICAgICAgICAgICAgImNvbmZpZGVuY2UiOiAwLjcyLCAidGVudXJlX21pbiI6IDQ1LjAsCiAgICAgICAgICAgICAiZ2V4X2IiOiBudWxsLCAiZG9taW5hbmNlIjogMy4xfSwKICAgICJwdXQiOiAgey4uLn0KICB9LAogICJlc193YWxscyI6IHsiY2FsbCI6IHsuLi5FUy1jb252ZXJ0ZWQsIDAuMjUgZ3JpZC4uLn0sICJwdXQiOiB7Li4ufX0sCiAgImZsaXAiOiA2NDgwLCAicmVnaW1lIjogIisiLCAibmV0X2dleF9iIjogMS4yMywgIm1hZ25ldHMiOiBbNjYwMF0sCiAgIndhbGxfdHNfdXRjIjogIi4uLiIsICJzdGFsZSI6IGZhbHNlLCAid2FsbF9hZ2VfbWluIjogMC4wLAogICJjYW5kaWRhdGVzIjogWwogICAgeyJrZXkiOiAiNjU2MEMiLCAic3RyaWtlIjogNjU2MCwgInJpZ2h0IjogImNhbGwiLAogICAgICJhc2siOiAwLjM1LCAiYmlkIjogMC4zMCwgImRlbHRhIjogMC4wNSwgImdhbW1hIjogMC4wMDQsCiAgICAgIml2IjogMC4xMiwgInNjb3JlIjogMC4wMTE0LCAiYXNrX3oiOiAtMS40LCAid2luZG93IjogIkIiLAogICAgICJvdG0iOiAxMC4wLCAic3BvdCI6IDY1NTAuMCwgIndhbGwiOiA2NjAwLCAidHJpZ2dlciI6ICJjcnVzaCJ9CiAgXSwKICAiY2hhaW5fZnJhbWUiOiB7IjY1NjBDIjogeyJiaWQiOjAuMzAsImFzayI6MC4zNSwiZGVsdGEiOjAuMDUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiaXYiOjAuMTIsImdhbW1hIjowLjAwNH0sIC4uLn0sCiAgIm9pX3RzX3V0YyI6ICIuLi4iLAogICJyZWdpbWVfaW5mbyI6IHsibW9kZSI6ICJvYnNlcnZlIiwgInNjb3JlIjogbnVsbCwgImRldGFpbCI6IG51bGx9Cn0KYGBgCgpgc2hhcmVkL2NvbnRyYWN0cy5qc29uYDogYWxsIGRpc2NvdmVyZWQgMERURSBjb250cmFjdHMgd2l0aCBmdWxsIGRlc2NyaXB0b3JzCihzeW1ib2wsIGV4Y2hhbmdlLCB0cmFkaW5nQ2xhc3MsIGxhc3RUcmFkZURhdGVPckNvbnRyYWN0TW9udGgsIHN0cmlrZSwgcmlnaHQsCm11bHRpcGxpZXIsIGN1cnJlbmN5KSDigJQgY29uc3VtZXJzIGJ1aWxkICsgcXVhbGlmeSBvcmRlciBjb250cmFjdHMgZnJvbSB0aGlzLgoKIyMgRmFpbC1zYWZlcwoKLSBCcmlkZ2UgZG93biAvIGBsZXZlbHMuanNvbmAgbWlzc2luZyBvciBhZ2UgPjYwcyBpbiBOWSDihpIgY29uc3VtZXJzIGVudGVyCiAgTk9USElORyAoYFNUQUxFX0xFVkVMU2ApLCBrZWVwIG1hbmFnaW5nIG9wZW4gcG9zaXRpb25zLgotIElCS1IgZGlzY29ubmVjdCDihpIgcmVjb25uZWN0IGxvb3Agd2l0aCBiYWNrb2ZmIChzYW1lIGNsaWVudElkPTEpLgotIEFueSBsb29wIGV4Y2VwdGlvbiDihpIgbG9nZ2VkLCAxMHMgYmFja29mZiwgbG9vcCBjb250aW51ZXMgKGFsd2F5cy1vbikuCgojIyBSdW4KCmBgYHBvd2Vyc2hlbGwKY2QgZ2V4X2JyaWRnZQouLlwudmVudlxTY3JpcHRzXEFjdGl2YXRlLnBzMQokZW52OkJSSURHRV9JQl9QT1JUID0gIjc0OTciICAgIyBUV1MgcGFwZXI7IEdhdGV3YXkgcGFwZXIgPSA0MDAyCnB5dGhvbiBtYWluLnB5CmBgYAoKU3RhcnQgdGhlIGJyaWRnZSBGSVJTVCwgdGhlbiBgYWxnby9gIGFuZCBgYWxnb19lcy9gLiBBbGwgdGhyZWUgZm9sZGVycyBtdXN0CmJlIHNpYmxpbmdzIHNvIGAuLi9zaGFyZWRgIHJlc29sdmVzLgo=
+# gex_bridge — the single IBKR streaming connection
+
+**Data only. This process NEVER places orders.** It is the account's one
+streaming connection (clientId=1). Both algos are consumers of
+`../shared/levels.json`; they hold zero market-data lines.
+
+## Line budget (hard cap 100, target ≤75)
+
+| Lines | What |
+|---|---|
+| 1 | SPX index (spot) |
+| 1 | ES front futures ContFuture (basis = ES − SPX) |
+| 42 | SPXW 0DTE active window: spot ±50, 5-pt strikes, both rights |
+| 20 | SPXW 0DTE crush band: 55–95 pts OTM, 10-pt steps, both sides/rights |
+| **64** | **sustained** |
+
+OI is frozen intraday (verified): one paced morning snapshot (subscribe →
+dwell → cancel), never held lines. GEX = frozen OI × live gamma via the
+StableWall estimator (5-min wall clock, TWAP15 gamma, strike smoothing,
+1.25×/3-eval hysteresis, zones not lines, confidence gating).
+
+AllLast flow was tiebreak-only in v3 and is NOT streamed by the bridge.
+
+## Sessions (ET)
+
+- **NY 09:30–16:05** — full streaming, fresh 5-min wall evals, 0DTE crush +
+  wall-break candidate screens, publish every 5s.
+- **Overnight** — chain streaming cancelled (SPX + ES kept). Walls frozen:
+  `stale:true`, `wall_ts_utc`, `wall_age_min`, confidence decayed ×
+  max(0.3, 1 − age_min/240). Publish every 15s.
+- **Weekend** (Sat, Fri ≥17:00, Sun <17:55) — sleep until Sun 17:55 ET.
+
+## levels.json contract (atomic tmp+rename publish)
+
+```jsonc
+{
+  "ts_utc": "...", "session": "ny|overnight",
+  "spx": 6500.1, "es": 6520.5, "basis": 20.4, "basis_ts_utc": "...",
+  "walls": {
+    "call": {"strike": 6550, "zone_lo": 6545, "zone_hi": 6555,
+             "confidence": 0.72, "tenure_min": 45.0,
+             "gex_b": null, "dominance": 3.1},
+    "put":  {...}
+  },
+  "es_walls": {"call": {...ES-converted, 0.25 grid...}, "put": {...}},
+  "flip": 6480, "regime": "+", "net_gex_b": 1.23, "magnets": [6600],
+  "wall_ts_utc": "...", "stale": false, "wall_age_min": 0.0,
+  "candidates": [
+    {"key": "6560C", "strike": 6560, "right": "call",
+     "ask": 0.35, "bid": 0.30, "delta": 0.05, "gamma": 0.004,
+     "iv": 0.12, "score": 0.0114, "ask_z": -1.4, "window": "B",
+     "otm": 10.0, "spot": 6550.0, "wall": 6600, "trigger": "crush"}
+  ],
+  "chain_frame": {"6560C": {"bid":0.30,"ask":0.35,"delta":0.05,
+                            "iv":0.12,"gamma":0.004}, ...},
+  "oi_ts_utc": "...",
+  "regime_info": {"mode": "observe", "score": null, "detail": null}
+}
+```
+
+`shared/contracts.json`: all discovered 0DTE contracts with full descriptors
+(symbol, exchange, tradingClass, lastTradeDateOrContractMonth, strike, right,
+multiplier, currency) — consumers build + qualify order contracts from this.
+
+## Fail-safes
+
+- Bridge down / `levels.json` missing or age >60s in NY → consumers enter
+  NOTHING (`STALE_LEVELS`), keep managing open positions.
+- IBKR disconnect → reconnect loop with backoff (same clientId=1).
+- Any loop exception → logged, 10s backoff, loop continues (always-on).
+
+## Run
+
+```powershell
+cd gex_bridge
+..\.venv\Scripts\Activate.ps1
+$env:BRIDGE_IB_PORT = "7497"   # TWS paper; Gateway paper = 4002
+python main.py
+```
+
+Start the bridge FIRST, then `algo/` and `algo_es/`. All three folders must
+be siblings so `../shared` resolves.

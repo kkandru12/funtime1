@@ -1,1 +1,425 @@
-IiIiRVMgZnV0dXJlcyBHRVggYWxnbyAtIGFsd2F5cy1vbiBtYWluIGxvb3AgKENPTlNVTUVSIG1vZGUpLgoKVGhlIGJyaWRnZSAoZ2V4X2JyaWRnZS8pIGlzIHRoZSBhY2NvdW50J3Mgc2luZ2xlIElCS1Igc3RyZWFtaW5nIGNvbm5lY3Rpb24uClRoaXMgcHJvY2VzcyBob2xkcyBaRVJPIElCS1IgbWFya2V0LWRhdGEgbGluZXMgYW5kIG1ha2VzIFpFUk8gSUJLUiBjYWxsczoKICAtIEdFWCB3YWxscy96b25lcy9jb25maWRlbmNlL3JlZ2ltZS9mbGlwICsgYmFzaXM6IC4uL3NoYXJlZC9sZXZlbHMuanNvbgogICAgKGF0b21pYyBwdWJsaXNoOyByZWFkLW9ubHkgTGV2ZWxzV2F0Y2hlciArIEJyaWRnZUdleCBhZGFwdGVyKQogIC0gZW50cnkgdHJpZ2dlciBwcmljZXMgKyBQQSBiYXJzOiB0aGUgQU1QIE1UNSB0ZXJtaW5hbCAoc2FtZSBtYWNoaW5lKQogIC0gZXhlY3V0aW9uOiBNVDVFeGVjdXRvciAtPiBNVDUgZGVtbyBhY2NvdW50CgpTbGVldmUgc2NoZWR1bGUgKGxvY2FsIGNsb2NrIGlzIHRoZSBhdXRob3JpdHk7IGJyaWRnZSBzZXNzaW9uID0gY3Jvc3MtY2hlY2spOgogIE5ZICgwOTozMC0xNjowMCBFVCk6ICBmYWRlICsgYnJlYWtvdXQgb2ZmIGJyaWRnZSBsZXZlbHMgKHNwb3QgZnJvbSBNVDUpCiAgb3Zlcm5pZ2h0ICgxODowMC0wOTowMCk6IGJyZWFrb3V0cyBvbiBmcm96ZW4gYnJpZGdlIHpvbmVzIChoYWxmIHNpemUsCiAgICAgIGNvbmZpZGVuY2UgYmFyICswLjE1KSArIFBBIHNsZWV2ZXMgQyAocmFuZ2UgZmFkZSkgKyBEIChzd2VlcCtyZWNsYWltKQogIGhhbHQgMTc6MDAtMTg6MDAgLyB3ZWVrZW5kOiBmbGF0LCBzbGVlcC4KCkdsb2JleDogU3VuIDE4OjAwIC0+IEZyaSAxNzowMCBFVC4gQWx3YXlzLW9uOiBzbGVlcHMgdW50aWwgdGhlIG5leHQgc2Vzc2lvbgppbnN0ZWFkIG9mIGV4aXRpbmcuIEN0cmwrQyAvIFNJR1RFUk0gYWx3YXlzIGV4aXRzIHByb21wdGx5IChmbGF0dGVuIGZpcnN0KS4KUGFzcyAtLW9uZXNob3QgdG8gcnVuIGEgc2luZ2xlIHNlc3Npb24gdGhlbiBleGl0IChkZWJ1Z2dpbmcpLgoKRGVmYXVsdCBpcyBEUlktUlVOIChubyBvcmRlcnMpLiBQYXNzIC0tbGl2ZSB0byB0cmFuc21pdCB0byB0aGUgTVQ1IGRlbW8KYWNjb3VudCAoLS1saXZlID0gTVQ1IGRlbW8gb25seTsgdGhlcmUgaXMgbm8gbGl2ZS1tb25leSBwYXRoKS4KIiIiCmltcG9ydCBhcmdwYXJzZQppbXBvcnQgYXN5bmNpbwppbXBvcnQganNvbgppbXBvcnQgbG9nZ2luZwppbXBvcnQgb3MKaW1wb3J0IHNpZ25hbAppbXBvcnQgc3lzCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlcXVlCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lCmZyb20gem9uZWluZm8gaW1wb3J0IFpvbmVJbmZvCgppbXBvcnQgY29uZmlnCmZyb20gYnJpZGdlX2xldmVscyBpbXBvcnQgTGV2ZWxzV2F0Y2hlcgpmcm9tIGJyaWRnZV9nZXggaW1wb3J0IEJyaWRnZUdleApmcm9tIHN0cmF0ZWd5IGltcG9ydCAoZXZhbHVhdGVfZmFkZSwgZXZhbHVhdGVfYnJlYWtvdXQsIFdhbGxCcmVha1N0YXRlLAogICAgICAgICAgICAgICAgICAgICAgUG9zaXRpb24sIFRQMV9GSUxMLCBUUDJfRklMTCwgU1RPUCwgRkxBVFRFTiwKICAgICAgICAgICAgICAgICAgICAgIE92ZXJuaWdodFBBLCB0cnVlX3Jpc2tfZG9sbGFycykKZnJvbSBtdDVfZGF0YSBpbXBvcnQgTVQ1RGF0YUZlZWQKZnJvbSBtdDVfZXhlYyBpbXBvcnQgTVQ1RXhlY3V0b3IKZnJvbSByaXNrIGltcG9ydCBSaXNrTWFuYWdlcgoKRVQgPSBab25lSW5mbygiQW1lcmljYS9OZXdfWW9yayIpCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvX2VzIikKCl9zaHV0ZG93biA9IGFzeW5jaW8uRXZlbnQoKQpfbG9nX2hhbmRsZXJzOiBsaXN0ID0gW10KCgpkZWYgc2V0dXBfbG9nZ2luZyhsb2dfZGlyOiBzdHIpOgogICAgIiIiUGVyLXNlc3Npb24gbG9nIHNldHVwOiBuZXcgZGF0ZWQgZmlsZSwgcHJldmlvdXMgaGFuZGxlcnMgcmVtb3ZlZC4iIiIKICAgIGdsb2JhbCBfbG9nX2hhbmRsZXJzCiAgICByb290ID0gbG9nZ2luZy5nZXRMb2dnZXIoKQogICAgZm9yIGggaW4gX2xvZ19oYW5kbGVyczoKICAgICAgICByb290LnJlbW92ZUhhbmRsZXIoaCkKICAgICAgICB0cnk6CiAgICAgICAgICAgIGguY2xvc2UoKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgICAgIHBhc3MKICAgIF9sb2dfaGFuZGxlcnMgPSBbXQogICAgb3MubWFrZWRpcnMobG9nX2RpciwgZXhpc3Rfb2s9VHJ1ZSkKICAgIGRheSA9IGNvbmZpZy5zZXNzaW9uX2RhdGUoZGF0ZXRpbWUubm93KEVUKSkuc3RyZnRpbWUoIiVZJW0lZCIpCiAgICBwYXRoID0gb3MucGF0aC5qb2luKGxvZ19kaXIsIGYiYWxnb19lc197ZGF5fS5qc29ubCIpCiAgICBmaCA9IGxvZ2dpbmcuRmlsZUhhbmRsZXIocGF0aCkKICAgIGZoLnNldEZvcm1hdHRlcihsb2dnaW5nLkZvcm1hdHRlcigiJShtZXNzYWdlKXMiKSkKICAgIHJvb3Quc2V0TGV2ZWwobG9nZ2luZy5JTkZPKQogICAgcm9vdC5hZGRIYW5kbGVyKGZoKQogICAgY2ggPSBsb2dnaW5nLlN0cmVhbUhhbmRsZXIoc3lzLnN0ZG91dCkKICAgIGNoLnNldExldmVsKGxvZ2dpbmcuV0FSTklORykKICAgIHJvb3QuYWRkSGFuZGxlcihjaCkKICAgIF9sb2dfaGFuZGxlcnMgPSBbZmgsIGNoXQogICAgcmV0dXJuIHBhdGgKCgphc3luYyBkZWYgZW1pdChldmVudDogc3RyLCBkYXRhOiBkaWN0KToKICAgIHJlYyA9IHsidHMiOiBkYXRldGltZS5ub3coRVQpLmlzb2Zvcm1hdCgpLCAiZXZlbnQiOiBldmVudCwgKipkYXRhfQogICAgbG9nZ2luZy5nZXRMb2dnZXIoImFsZ29fZXMiKS5pbmZvKGpzb24uZHVtcHMocmVjKSkKCgphc3luYyBkZWYgc2xlZXBfaW50ZXJydXB0aWJsZSh0b3RhbF9zZWNzOiBmbG9hdCk6CiAgICBlbmQgPSBhc3luY2lvLmdldF9ldmVudF9sb29wKCkudGltZSgpICsgdG90YWxfc2VjcwogICAgd2hpbGUgbm90IF9zaHV0ZG93bi5pc19zZXQoKToKICAgICAgICByZW1haW5pbmcgPSBlbmQgLSBhc3luY2lvLmdldF9ldmVudF9sb29wKCkudGltZSgpCiAgICAgICAgaWYgcmVtYWluaW5nIDw9IDA6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIHRyeToKICAgICAgICAgICAgYXdhaXQgYXN5bmNpby53YWl0X2Zvcihfc2h1dGRvd24ud2FpdCgpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRpbWVvdXQ9bWluKDYwLjAsIHJlbWFpbmluZykpCiAgICAgICAgZXhjZXB0IGFzeW5jaW8uVGltZW91dEVycm9yOgogICAgICAgICAgICBwYXNzCgoKYXN5bmMgZGVmIHNsZWVwX3VudGlsX25leHRfc2Vzc2lvbigpOgogICAgbm93ID0gZGF0ZXRpbWUubm93KEVUKQogICAgdGFyZ2V0ID0gY29uZmlnLm5leHRfc2Vzc2lvbl9zdGFydChub3cpCiAgICBzZWNzID0gKHRhcmdldCAtIG5vdykudG90YWxfc2Vjb25kcygpCiAgICBpZiBzZWNzIDw9IDA6CiAgICAgICAgcmV0dXJuCiAgICBhd2FpdCBlbWl0KCJTTEVFUCIsIHsidW50aWwiOiB0YXJnZXQuaXNvZm9ybWF0KCksICJzZWNzIjogaW50KHNlY3MpfSkKICAgIHByaW50KGYic2xlZXBpbmcge2ludChzZWNzKX1zIHVudGlsIG5leHQgc2Vzc2lvbiAiCiAgICAgICAgICBmInt0YXJnZXQuc3RyZnRpbWUoJyVhICVIOiVNICVaJyl9IiwgZmx1c2g9VHJ1ZSkKICAgIGF3YWl0IHNsZWVwX2ludGVycnVwdGlibGUoc2VjcykKCgphc3luYyBkZWYgcnVuX3Nlc3Npb24oZHJ5X3J1bjogYm9vbCk6CiAgICAiIiJPbmUgR2xvYmV4IHNlc3Npb24uIFJldHVybnMgd2hlbiB0aGUgc2Vzc2lvbiBlbmRzIChoYWx0L3dlZWtlbmQpLiIiIgogICAgbG9nX3BhdGggPSBzZXR1cF9sb2dnaW5nKGNvbmZpZy5MT0dfRElSKQogICAgcHJpbnQoZiJsb2dnaW5nIHRvIHtsb2dfcGF0aH0gfCBtb2RlPXsnRFJZLVJVTicgaWYgZHJ5X3J1biBlbHNlICdMSVZFLU1UNS1ERU1PJ30iLAogICAgICAgICAgZmx1c2g9VHJ1ZSkKICAgIGF3YWl0IGVtaXQoIlNFU1NJT05fU1RBUlQiLCB7Im1vZGUiOiAiZHJ5LXJ1biIgaWYgZHJ5X3J1biBlbHNlICJsaXZlLW10NS1kZW1vIn0pCgogICAgIyAtLS0tIGJyaWRnZSBsZXZlbHMgKHJlYWQtb25seTsgdGhlIGJyaWRnZSBvd25zIGFsbCBJQktSIHN0cmVhbWluZykgLS0tLQogICAgbGV2ZWxzID0gTGV2ZWxzV2F0Y2hlcigpCiAgICBnZXggPSBCcmlkZ2VHZXgobGV2ZWxzKQogICAgZ2V4X29rLCBnZXhfd2h5ID0gbGV2ZWxzLmdleF9vaygpCiAgICBpZiBnZXhfb2s6CiAgICAgICAgZ2V4LnJlZnJlc2goKQogICAgYXdhaXQgZW1pdCgiTEVWRUxTX1NUQVRVUyIsIHsib2siOiBnZXhfb2ssICJ3aHkiOiBnZXhfd2h5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAic2Vzc2lvbiI6IGxldmVscy5zZXNzaW9uKCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJhZ2VfcyI6IHJvdW5kKGxldmVscy5hZ2Vfc2VjKCksIDEpfSkKCiAgICAjIC0tLS0gTVQ1IGRhdGEgZmVlZDogdGhlIE9OTFkgcXVvdGUgc291cmNlIG5vdyAocmVxdWlyZWQpIC0tLS0KICAgIG10NWRhdGEgPSBNVDVEYXRhRmVlZChlbWl0KQogICAgdHJ5OgogICAgICAgIGF3YWl0IG10NWRhdGEuY29ubmVjdCgpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6ICAjIG5vcWE6IEJMRTAwMSAtIHdpdGhvdXQgTVQ1IHRoZXJlIGlzIG5vIG1hcmtldAogICAgICAgIGxvZy5lcnJvcigiTVQ1IGRhdGEgZmVlZCBmYWlsZWQ6ICVzIiwgZSkKICAgICAgICBhd2FpdCBlbWl0KCJNVDVfREFUQV9ET1dOIiwgeyJlcnJvciI6IHN0cihlKVs6MjAwXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJub3RlIjogIm5vIHF1b3RlcyBwb3NzaWJsZTsgc2Vzc2lvbiBhYm9ydGVkIn0pCiAgICAgICAgcmV0dXJuCgogICAgIyAtLS0tIE1UNSBleGVjdXRvciAoZGVtbyBhY2NvdW50KSAtLS0tCiAgICBvbSA9IE1UNUV4ZWN1dG9yKE5vbmUsICJNVDUtREVNTyIsIGRyeV9ydW4sIG10NWRhdGEucXVvdGUsIGVtaXQpCiAgICB0cnk6CiAgICAgICAgYXdhaXQgb20uY29ubmVjdCgpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6ICAjIG5vcWE6IEJMRTAwMQogICAgICAgIGxvZy5lcnJvcigiTVQ1IGV4ZWN1dG9yIGNvbm5lY3QgZmFpbGVkOiAlcyIsIGUpCiAgICAgICAgYXdhaXQgZW1pdCgiTVQ1X0VYRUNfRE9XTiIsIHsiZXJyb3IiOiBzdHIoZSlbOjIwMF19KQogICAgICAgIG10NWRhdGEuc2h1dGRvd24oKQogICAgICAgIHJldHVybgoKICAgIHRyeToKICAgICAgICBhY2N0ID0gYXdhaXQgYXN5bmNpby50b190aHJlYWQob20ubXQ1LmFjY291bnRfaW5mbykKICAgICAgICBhY2N0X3ZhbCA9IChhY2N0LmJhbGFuY2UgaWYgYWNjdCBhbmQgYWNjdC5iYWxhbmNlCiAgICAgICAgICAgICAgICAgICAgZWxzZSBjb25maWcuQUNDT1VOVF9GQUxMQkFDSykKICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgYWNjdF92YWwgPSBjb25maWcuQUNDT1VOVF9GQUxMQkFDSwogICAgcmlzayA9IFJpc2tNYW5hZ2VyKGFjY3RfdmFsKQogICAgcmlzay5uZXdfZGF5KGNvbmZpZy5zZXNzaW9uX2RhdGUoZGF0ZXRpbWUubm93KEVUKSkpCiAgICBhd2FpdCBlbWl0KCJSSVNLIiwgeyJuZXRfbGlxIjogYWNjdF92YWwsCiAgICAgICAgICAgICAgICAgICAgICAgICJkYWlseV9zdG9wIjogcm91bmQocmlzay5kYWlseV9zdG9wX2FtdCwgMiksCiAgICAgICAgICAgICAgICAgICAgICAgICJyaXNrX3Blcl90cmFkZSI6IGNvbmZpZy5SSVNLX1BFUl9UUkFERX0pCgogICAgd2IgPSBXYWxsQnJlYWtTdGF0ZSgpCiAgICBwYSA9IE92ZXJuaWdodFBBKCkKICAgIGNsb3NlczogZGVxdWUgPSBkZXF1ZShtYXhsZW49NSkgICAjIEVTIE0xIGNsb3NlcyBmcm9tIE1UNSBiYXJzIChicmVha291dCkKICAgIHBvc2l0aW9uOiBQb3NpdGlvbiB8IE5vbmUgPSBOb25lCiAgICBwZW5kaW5nX2VudHJ5ID0gRmFsc2UKICAgIHRvdWNoZXM6IGRpY3RbaW50LCBpbnRdID0ge30gICAgICAjIGZhZGUgdG91Y2hlcyBwZXIgd2FsbCBwZXIgZGF5CiAgICBsYXN0X2JlYXQgPSBkYXRldGltZS5ub3coRVQpCiAgICBzZXNzX21pc21hdGNoX3dhcm5lZCA9IEZhbHNlCiAgICBsYXN0X2dleF9vayA9IFRydWUKCiAgICBhd2FpdCBlbWl0KCJSVU4iLCB7Im5vdGUiOiAiZW50ZXJpbmcgc2Vzc2lvbiBsb29wIChjb25zdW1lciBtb2RlKSJ9KQogICAgd2hpbGUgbm90IF9zaHV0ZG93bi5pc19zZXQoKToKICAgICAgICBub3cgPSBkYXRldGltZS5ub3coRVQpCiAgICAgICAgaWYgbm90IGNvbmZpZy5pbl90cmFkaW5nX3Nlc3Npb24obm93KToKICAgICAgICAgICAgYXdhaXQgZW1pdCgiU0VTU0lPTl9FTkQiLCB7InJlYXNvbiI6ICJoYWx0LW9yLXdlZWtlbmQifSkKICAgICAgICAgICAgYnJlYWsKCiAgICAgICAgcmlzay5uZXdfZGF5KGNvbmZpZy5zZXNzaW9uX2RhdGUobm93KSkKCiAgICAgICAgIyAtLS0tIHNwb3Q6IE1UNSBsaXZlIHF1b3RlIChlbnRyeSB0cmlnZ2VyIHByaWNlIHNvdXJjZSkgLS0tLQogICAgICAgIHEgPSBtdDVkYXRhLnF1b3RlKCkKICAgICAgICBpZiBub3QgcToKICAgICAgICAgICAgYXdhaXQgYXN5bmNpby5zbGVlcChjb25maWcuTE9PUF9DQURFTkNFX1NFQykKICAgICAgICAgICAgY29udGludWUKICAgICAgICBiaWQsIGFzayA9IHEKICAgICAgICBzcG90ID0gKGJpZCArIGFzaykgLyAyCgogICAgICAgICMgLS0tLSBNVDUgTTEgYmFycyAtPiBQQSBzbGVldmVzICsgYnJlYWtvdXQgTTEgY2xvc2VzIC0tLS0KICAgICAgICBhd2FpdCBtdDVkYXRhLnN5bmMoKQogICAgICAgIGJhcnMgPSBtdDVkYXRhLmJhcnNfc2luY2UoCiAgICAgICAgICAgIHBhLnNlc3Nfc3RhcnQgb3IgY29uZmlnLm92ZXJuaWdodF9zZXNzaW9uX3N0YXJ0KG5vdykpCiAgICAgICAgcGEubm90ZV9iYXJzKGJhcnMpCiAgICAgICAgY2xvc2VzLmNsZWFyKCkKICAgICAgICBmb3IgYiBpbiBsaXN0KG10NWRhdGEuYmFycylbLTU6XToKICAgICAgICAgICAgY2xvc2VzLmFwcGVuZChiWzRdKSAgICMgTTEgYmFyIGNsb3NlcyBmb3IgdGhlIGJyZWFrb3V0IHNsZWV2ZQoKICAgICAgICAjIC0tLS0gYnJpZGdlIGxldmVscyAtLS0tCiAgICAgICAgZ2V4X29rLCBnZXhfd2h5ID0gbGV2ZWxzLmdleF9vaygpCiAgICAgICAgaWYgZ2V4X29rOgogICAgICAgICAgICBnZXgucmVmcmVzaCgpCiAgICAgICAgb3Zlcm5pZ2h0ID0gY29uZmlnLmlzX3BhX292ZXJuaWdodChub3cpICAgIyBsb2NhbCBjbG9jayA9IGF1dGhvcml0eQogICAgICAgIGJyaWRnZV9zZXNzID0gbGV2ZWxzLnNlc3Npb24oKQogICAgICAgIGlmIG5vdCBzZXNzX21pc21hdGNoX3dhcm5lZCBhbmQgYnJpZGdlX3Nlc3M6CiAgICAgICAgICAgIGV4cGVjdCA9ICJvdmVybmlnaHQiIGlmIG92ZXJuaWdodCBlbHNlICJueSIKICAgICAgICAgICAgIyBicmlkZ2UgcHVibGlzaGVzICJueSIvIm92ZXJuaWdodCI7IGFueXRoaW5nIGVsc2UgaXMgYSBtaXNtYXRjaAogICAgICAgICAgICBpZiBicmlkZ2Vfc2VzcyBub3QgaW4gKGV4cGVjdCwpOgogICAgICAgICAgICAgICAgc2Vzc19taXNtYXRjaF93YXJuZWQgPSBUcnVlCiAgICAgICAgICAgICAgICBhd2FpdCBlbWl0KCJCUklER0VfU0VTU0lPTl9NSVNNQVRDSCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgIHsiYnJpZGdlIjogYnJpZGdlX3Nlc3MsICJsb2NhbCI6IGV4cGVjdCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJub3RlIjogImxvY2FsIGNsb2NrIGlzIHRoZSBhdXRob3JpdHkifSkKCiAgICAgICAgIyAtLS0tIHdhbGwtYnJlYWsgYXJtaW5nIChyZWFkcyBicmlkZ2Ugd2FsbHMvem9uZXMpIC0tLS0KICAgICAgICBpZiBnZXhfb2sgYW5kIHNwb3Q6CiAgICAgICAgICAgIG1pbl9jb25mID0gY29uZmlnLkJSRUFLT1VUX01JTl9DT05GSURFTkNFICsgXAogICAgICAgICAgICAgICAgKGNvbmZpZy5PVkVSTklHSFRfQ09ORl9CVU1QIGlmIG92ZXJuaWdodCBlbHNlIDAuMCkKICAgICAgICAgICAgZm9yIGV2LCBpbmZvIGluIHdiLm5vdGUoc3BvdCwgZ2V4LCB7fSwgbWluX2NvbmYpOgogICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiV0JfIiArIGV2LnVwcGVyKCksIGluZm8pCgogICAgICAgIGZsYXR0ZW5fbm93ID0gKGNvbmZpZy5wYXN0X2ZsYXR0ZW5fdGltZShub3cpCiAgICAgICAgICAgICAgICAgICAgICAgYW5kIGNvbmZpZy5GTEFUVEVOX0JFRk9SRV9IQUxUKQoKICAgICAgICAjIC0tLS0gcG9zaXRpb24gbWFuYWdlbWVudCAtLS0tCiAgICAgICAgaWYgcG9zaXRpb24gYW5kIHNwb3Q6CiAgICAgICAgICAgIGlmIHBvc2l0aW9uLnNpbXVsYXRlZDoKICAgICAgICAgICAgICAgIGFjdGlvbiA9IHBvc2l0aW9uLnVwZGF0ZShub3csIGJpZCwgYXNrLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZsYXR0ZW49ZmxhdHRlbl9ub3cpCiAgICAgICAgICAgICAgICBpZiBhY3Rpb24gPT0gVFAxX0ZJTEw6CiAgICAgICAgICAgICAgICAgICAgcG5sID0gcG9zaXRpb24ub25fZmlsbChwb3NpdGlvbi50cDFfcXR5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb24udHAxX3B4LCAidHAxIikKICAgICAgICAgICAgICAgICAgICBhd2FpdCBlbWl0KCJUUDEiLCB7InB4IjogcG9zaXRpb24udHAxX3B4LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQocG5sLCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgInJ1bm5lciI6IHBvc2l0aW9uLnRwMl9xdHl9KQogICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uLm1vdmVfc3RvcF90b19icmVha2V2ZW4oKQogICAgICAgICAgICAgICAgICAgIGF3YWl0IG9tLnJlYnJhY2tldF9icmVha2V2ZW4ocG9zaXRpb24pCiAgICAgICAgICAgICAgICBlbGlmIGFjdGlvbiBpbiAoVFAyX0ZJTEwsIFNUT1AsIEZMQVRURU4pOgogICAgICAgICAgICAgICAgICAgIHJlYXNvbiA9IHsiVFAyX0ZJTEwiOiAidGFyZ2V0LTIiLCAiU1RPUCI6ICJzdG9wIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIkZMQVRURU4iOiAicHJlLWhhbHQtZmxhdCJ9W2FjdGlvbl0KICAgICAgICAgICAgICAgICAgICBsZWcgPSB7IlRQMl9GSUxMIjogInRwMiIsICJTVE9QIjogInN0b3AiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAiRkxBVFRFTiI6ICJleGl0In1bYWN0aW9uXQogICAgICAgICAgICAgICAgICAgIGZxID0gcG9zaXRpb24ucXR5CiAgICAgICAgICAgICAgICAgICAgcHggPSB7IlRQMl9GSUxMIjogcG9zaXRpb24udHAyX3B4LAogICAgICAgICAgICAgICAgICAgICAgICAgICJTVE9QIjogcG9zaXRpb24uc3RvcF9weCwKICAgICAgICAgICAgICAgICAgICAgICAgICAiRkxBVFRFTiI6IGJpZCBpZiBwb3NpdGlvbi5zaWRlID09ICJsb25nIgogICAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgYXNrfVthY3Rpb25dCiAgICAgICAgICAgICAgICAgICAgcG5sID0gcG9zaXRpb24ub25fZmlsbChmcSwgcHgsIGxlZykKICAgICAgICAgICAgICAgICAgICBwbmwgLT0gb20uY29tbWlzc2lvbl9ydCAqIGZxCiAgICAgICAgICAgICAgICAgICAgcmlzay5yZWdpc3Rlcl9jbG9zZShwbmwpCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiQ0xPU0VEIiwgewogICAgICAgICAgICAgICAgICAgICAgICAidHJpZ2dlciI6IHBvc2l0aW9uLnRyaWdnZXIsICJyZWFzb24iOiByZWFzb24sCiAgICAgICAgICAgICAgICAgICAgICAgICJwbmwiOiByb3VuZChwbmwsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAibWZlX3B0cyI6IHJvdW5kKHBvc2l0aW9uLm1heF9mYXYsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAibWFlX3B0cyI6IHJvdW5kKHBvc2l0aW9uLm1heF9hZHYsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAiaGVsZF9taW4iOiBwb3NpdGlvbi5oZWxkX21pbnV0ZXMobm93KX0pCiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb24gPSBOb25lCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAjIGxpdmU6IHRoZSBleGNoYW5nZSBkcml2ZXMgZmlsbHMgdmlhIG5hdGl2ZSBPQ0EgYnJhY2tldHMKICAgICAgICAgICAgICAgIGZvciBsZWcsIGZxLCBweCBpbiBvbS5jaGVja19uYXRpdmVfZmlsbHMocG9zaXRpb24pOgogICAgICAgICAgICAgICAgICAgIHBubCA9IHBvc2l0aW9uLm9uX2ZpbGwoZnEsIHB4LCBsZWcpCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiTkFUSVZFX0ZJTEwiLCB7ImxlZyI6IGxlZywgInF0eSI6IGZxLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJweCI6IHJvdW5kKHB4LCAyKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQocG5sLCAyKX0pCiAgICAgICAgICAgICAgICAgICAgaWYgbGVnID09ICJ0cDEiOgogICAgICAgICAgICAgICAgICAgICAgICBhd2FpdCBvbS5yZWJyYWNrZXRfYnJlYWtldmVuKHBvc2l0aW9uKQogICAgICAgICAgICAgICAgICAgIGVsaWYgbGVnIGluICgic3RvcCIsICJ0cDIiKToKICAgICAgICAgICAgICAgICAgICAgICAgcG5sIC09IG9tLmNvbW1pc3Npb25fcnQgKiBmcQogICAgICAgICAgICAgICAgICAgICAgICByaXNrLnJlZ2lzdGVyX2Nsb3NlKHBubCkKICAgICAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiQ0xPU0VEIiwgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgInRyaWdnZXIiOiBwb3NpdGlvbi50cmlnZ2VyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgInJlYXNvbiI6ICJuYXRpdmUtIiArIGxlZywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJwbmwiOiByb3VuZChwbmwsIDIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgImhlbGRfbWluIjogcG9zaXRpb24uaGVsZF9taW51dGVzKG5vdyl9KQogICAgICAgICAgICAgICAgICAgICAgICBwb3NpdGlvbiA9IE5vbmUKICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGlmIHBvc2l0aW9uIGFuZCBmbGF0dGVuX25vdzoKICAgICAgICAgICAgICAgICAgICBwbmwgPSBhd2FpdCBvbS5jbG9zZShwb3NpdGlvbiwgInByZS1oYWx0LWZsYXQiLCBsZWc9ImV4aXQiKQogICAgICAgICAgICAgICAgICAgIHJpc2sucmVnaXN0ZXJfY2xvc2UocG5sKQogICAgICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIkNMT1NFRCIsIHsidHJpZ2dlciI6IHBvc2l0aW9uLnRyaWdnZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJyZWFzb24iOiAicHJlLWhhbHQtZmxhdCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJwbmwiOiByb3VuZChwbmwsIDIpfSkKICAgICAgICAgICAgICAgICAgICBwb3NpdGlvbiA9IE5vbmUKCiAgICAgICAgICAgIGlmIHBvc2l0aW9uIGFuZCByaXNrLmNoZWNrX2tpbGwoVHJ1ZSk6CiAgICAgICAgICAgICAgICBwbmwgPSBhd2FpdCBvbS5jbG9zZShwb3NpdGlvbiwgImtpbGwtc3dpdGNoIiwgbGVnPSJleGl0IikKICAgICAgICAgICAgICAgIHJpc2sucmVnaXN0ZXJfY2xvc2UocG5sKQogICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiQ0xPU0VEIiwgeyJ0cmlnZ2VyIjogcG9zaXRpb24udHJpZ2dlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicmVhc29uIjogImtpbGwtc3dpdGNoIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQocG5sLCAyKX0pCiAgICAgICAgICAgICAgICBwb3NpdGlvbiA9IE5vbmUKCiAgICAgICAgIyAtLS0tIGVudHJpZXMgLS0tLQogICAgICAgIGlmIG5vdCBwb3NpdGlvbiBhbmQgbm90IHBlbmRpbmdfZW50cnkgYW5kIHNwb3QgYW5kIG5vdCBmbGF0dGVuX25vdzoKICAgICAgICAgICAgb2ssIHdoeSA9IHJpc2suY2FuX2VudGVyKG5vdywgRmFsc2UpCiAgICAgICAgICAgIGlmIG9rOgogICAgICAgICAgICAgICAgY2FuZCA9IE5vbmUKICAgICAgICAgICAgICAgIHRyaWdnZXIgPSBOb25lCiAgICAgICAgICAgICAgICBpZiBvdmVybmlnaHQ6CiAgICAgICAgICAgICAgICAgICAgIyBHRVggc2xlZXZlOiBicmVha291dHMgb24gZnJvemVuIHpvbmVzLCBoYWxmIHNpemUsCiAgICAgICAgICAgICAgICAgICAgIyBjb25maWRlbmNlIGJhciArMC4xNS4gVGhlbiBQQSBzbGVldmVzIEMvRC4KICAgICAgICAgICAgICAgICAgICBpZiBnZXhfb2s6CiAgICAgICAgICAgICAgICAgICAgICAgIGNhbmQgPSBldmFsdWF0ZV9icmVha291dChub3csIHNwb3QsIGdleCwgd2IsIGNsb3NlcykKICAgICAgICAgICAgICAgICAgICAgICAgaWYgY2FuZCBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhbmRbInF0eSJdID0gbWF4KDEsIGNhbmRbInF0eSJdIC8vIDIpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYW5kWyJyaXNrX3VzZCJdID0gdHJ1ZV9yaXNrX2RvbGxhcnMoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FuZFsic3RvcF9wdHMiXSwgY2FuZFsicXR5Il0pCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYW5kWyJvdmVybmlnaHQiXSA9IFRydWUKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXIgPSAiYnJlYWtvdXQiCiAgICAgICAgICAgICAgICAgICAgaWYgY2FuZCBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICBjYW5kID0gcGEuZXZhbHVhdGVfZChub3csIHNwb3QpCiAgICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXIgPSAicGFfc3dlZXAiCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGNhbmQgaXMgTm9uZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhbmQgPSBwYS5ldmFsdWF0ZV9jKG5vdywgc3BvdCkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXIgPSAicGFfZmFkZSIKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgIyBOWTogZmFkZSArIGJyZWFrb3V0IG9mZiBicmlkZ2UgbGV2ZWxzLgogICAgICAgICAgICAgICAgICAgIGlmIGdleF9vazoKICAgICAgICAgICAgICAgICAgICAgICAgY2FuZCA9IGV2YWx1YXRlX2JyZWFrb3V0KG5vdywgc3BvdCwgZ2V4LCB3YiwgY2xvc2VzKQogICAgICAgICAgICAgICAgICAgICAgICB0cmlnZ2VyID0gImJyZWFrb3V0IgogICAgICAgICAgICAgICAgICAgICAgICBpZiBjYW5kIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYW5kID0gZXZhbHVhdGVfZmFkZShub3csIHNwb3QsIGdleCwgdG91Y2hlcykKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyaWdnZXIgPSAiZmFkZSIKICAgICAgICAgICAgICAgIGlmIGNhbmQ6CiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiQ0FORElEQVRFIiwgewogICAgICAgICAgICAgICAgICAgICAgICBrOiBjYW5kW2tdIGZvciBrIGluCiAgICAgICAgICAgICAgICAgICAgICAgICgidHJpZ2dlciIsICJzbGVldmUiLCAic2lkZSIsICJ3YWxsIiwgInF0eSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAicmlza191c2QiLCAic3BvdCIsICJyZWdpbWUiLAogICAgICAgICAgICAgICAgICAgICAgICAgInN0b3BfcHRzIiwgIm92ZXJuaWdodCIpIGlmIGsgaW4gY2FuZH0pCiAgICAgICAgICAgICAgICAgICAgcGVuZGluZ19lbnRyeSA9IFRydWUKICAgICAgICAgICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uID0gYXdhaXQgb20uZW50ZXIoY2FuZCwgbm93KQogICAgICAgICAgICAgICAgICAgICAgICBpZiBwb3NpdGlvbiBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiTk9fRklMTCIsIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAidHJpZ2dlciI6IHRyaWdnZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIndhbGwiOiBjYW5kLmdldCgid2FsbCIpfSkKICAgICAgICAgICAgICAgICAgICAgICAgZWxpZiB0cmlnZ2VyID09ICJmYWRlIjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvdWNoZXNbcm91bmQoY2FuZFsid2FsbCJdKV0gPSBcCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdG91Y2hlcy5nZXQocm91bmQoY2FuZFsid2FsbCJdKSwgMCkgKyAxCiAgICAgICAgICAgICAgICAgICAgZmluYWxseToKICAgICAgICAgICAgICAgICAgICAgICAgcGVuZGluZ19lbnRyeSA9IEZhbHNlCiAgICAgICAgICAgICAgICBlbGlmIG5vdCBnZXhfb2sgYW5kIGxhc3RfZ2V4X29rOgogICAgICAgICAgICAgICAgICAgIGF3YWl0IGVtaXQoIkdFWF9ET1dOIiwgeyJ3aHkiOiBnZXhfd2h5LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJub3RlIjogIlBBIHNsZWV2ZXMgb25seSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBvdmVybmlnaHQgZWxzZSAibm8gZW50cmllcyJ9KQogICAgICAgICAgICBlbGlmIHdoeSBub3QgaW4gKCJzZXNzaW9uIiwpOgogICAgICAgICAgICAgICAgYXdhaXQgZW1pdCgiUklTS19CTE9DSyIsIHsicmVhc29uIjogd2h5fSkKCiAgICAgICAgbGFzdF9nZXhfb2sgPSBnZXhfb2sKCiAgICAgICAgIyAtLS0tIGhlYXJ0YmVhdCAtLS0tCiAgICAgICAgaWYgKG5vdyAtIGxhc3RfYmVhdCkudG90YWxfc2Vjb25kcygpID49IGNvbmZpZy5IRUFSVEJFQVRfU0VDOgogICAgICAgICAgICBsYXN0X2JlYXQgPSBub3cKICAgICAgICAgICAgcG9zID0gKGYie3Bvc2l0aW9uLnNpZGV9IHh7cG9zaXRpb24ucXR5fSAiCiAgICAgICAgICAgICAgICAgICBmIkB7cG9zaXRpb24uZW50cnlfcHg6LjJmfSIpIGlmIHBvc2l0aW9uIGVsc2UgImZsYXQiCiAgICAgICAgICAgIHByaW50KGYie25vdy5zdHJmdGltZSgnJUg6JU06JVMnKX0gRVM9e3Nwb3Q6LjJmfSBwb3M9e3Bvc30gIgogICAgICAgICAgICAgICAgICBmImRheV9wbmw9e3Jpc2suZGFpbHlfcG5sOisuMGZ9IHRyYWRlcz17cmlzay50cmFkZXNfdG9kYXl9ICIKICAgICAgICAgICAgICAgICAgZiJyZWdpbWU9e2dleC5yZWdpbWV9ICIKICAgICAgICAgICAgICAgICAgZiJjdz17Z2V4LmNhbGxfd2FsbH0gY2M9e2dleC5jYWxsX2NvbmY6LjJmfSAiCiAgICAgICAgICAgICAgICAgIGYicHc9e2dleC5wdXRfd2FsbH0gcGM9e2dleC5wdXRfY29uZjouMmZ9ICIKICAgICAgICAgICAgICAgICAgZiJsdmxfYWdlPXtsZXZlbHMuYWdlX3NlYygpOi4wZn1zICIKICAgICAgICAgICAgICAgICAgZiJ7J09OJyBpZiBvdmVybmlnaHQgZWxzZSAnTlknfSIsIGZsdXNoPVRydWUpCgogICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoY29uZmlnLkxPT1BfQ0FERU5DRV9TRUMpCgogICAgIyAtLS0tIHNlc3Npb24gZW5kOiBmbGF0dGVuIGZpcnN0IC0tLS0KICAgIGF3YWl0IGVtaXQoIlNFU1NJT05fTE9PUF9FTkQiLCB7fSkKICAgIGlmIHBvc2l0aW9uOgogICAgICAgIHBubCA9IGF3YWl0IG9tLmNsb3NlKHBvc2l0aW9uLCAic2Vzc2lvbi1lbmQiLCBsZWc9ImV4aXQiKQogICAgICAgIHJpc2sucmVnaXN0ZXJfY2xvc2UocG5sKQogICAgICAgIGF3YWl0IGVtaXQoIkNMT1NFRCIsIHsidHJpZ2dlciI6IHBvc2l0aW9uLnRyaWdnZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJyZWFzb24iOiAic2Vzc2lvbi1lbmQiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG5sIjogcm91bmQocG5sLCAyKX0pCiAgICBhd2FpdCBlbWl0KCJEQVlfRU5EIiwgeyJ0cmFkZXMiOiByaXNrLnRyYWRlc190b2RheSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgImRheV9wbmwiOiByb3VuZChyaXNrLmRhaWx5X3BubCwgMil9KQogICAgdHJ5OgogICAgICAgIG9tLnNodXRkb3duKCkKICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgcGFzcwogICAgdHJ5OgogICAgICAgIG10NWRhdGEuc2h1dGRvd24oKQogICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICBwYXNzCgoKYXN5bmMgZGVmIG1haW4oKToKICAgIGFwID0gYXJncGFyc2UuQXJndW1lbnRQYXJzZXIoKQogICAgYXAuYWRkX2FyZ3VtZW50KCItLWRyeS1ydW4iLCBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgICAgICAgICAgICAgIGhlbHA9InNpbXVsYXRlIG9ubHk7IGRvIE5PVCB0cmFuc21pdCAiCiAgICAgICAgICAgICAgICAgICAgICAgICAiKGRlZmF1bHQ6IExJVkUpIikKICAgIGFwLmFkZF9hcmd1bWVudCgiLS1sb2ctZGlyIiwgZGVmYXVsdD1jb25maWcuTE9HX0RJUikKICAgIGFwLmFkZF9hcmd1bWVudCgiLS1vbmVzaG90IiwgYWN0aW9uPSJzdG9yZV90cnVlIiwKICAgICAgICAgICAgICAgICAgICBoZWxwPSJydW4gb25lIHNlc3Npb24gdGhlbiBleGl0IChkZWJ1Z2dpbmcpOyAiCiAgICAgICAgICAgICAgICAgICAgICAgICAiZGVmYXVsdCBpcyBhbHdheXMtb246IHNsZWVwIGFuZCByZXRyeSBuZXh0IHNlc3Npb24iKQogICAgYXJncyA9IGFwLnBhcnNlX2FyZ3MoKQogICAgZHJ5X3J1biA9IGFyZ3MuZHJ5X3J1bgoKICAgIGxvb3AgPSBhc3luY2lvLmdldF9ydW5uaW5nX2xvb3AoKQogICAgdHJ5OgogICAgICAgIGZvciBzaWcgaW4gKHNpZ25hbC5TSUdJTlQsIHNpZ25hbC5TSUdURVJNKToKICAgICAgICAgICAgbG9vcC5hZGRfc2lnbmFsX2hhbmRsZXIoc2lnLCBfc2h1dGRvd24uc2V0KQogICAgZXhjZXB0IE5vdEltcGxlbWVudGVkRXJyb3I6CiAgICAgICAgZm9yIHNpZyBpbiAoc2lnbmFsLlNJR0lOVCwgc2lnbmFsLlNJR1RFUk0pOgogICAgICAgICAgICBzaWduYWwuc2lnbmFsKHNpZywgbGFtYmRhICpfOiBfc2h1dGRvd24uc2V0KCkpCgogICAgYXdhaXQgZW1pdCgiREFFTU9OIiwgeyJtb2RlIjogIm9uZXNob3QiIGlmIGFyZ3Mub25lc2hvdCBlbHNlICJhbHdheXMtb24iLAogICAgICAgICAgICAgICAgICAgICAgICAgICJkcnlfcnVuIjogZHJ5X3J1biwgImV4ZWN1dG9yIjogIm10NSJ9KQogICAgcHJpbnQoZiJtb2RlPXsnT05FU0hPVCcgaWYgYXJncy5vbmVzaG90IGVsc2UgJ0FMV0FZUy1PTid9IHwgIgogICAgICAgICAgZiJ7J0RSWS1SVU4nIGlmIGRyeV9ydW4gZWxzZSAnTElWRS1NVDUtREVNTyd9IiwgZmx1c2g9VHJ1ZSkKCiAgICBpZiBhcmdzLm9uZXNob3Q6CiAgICAgICAgaWYgY29uZmlnLmluX3RyYWRpbmdfc2Vzc2lvbihkYXRldGltZS5ub3coRVQpKToKICAgICAgICAgICAgYXdhaXQgcnVuX3Nlc3Npb24oZHJ5X3J1bikKICAgICAgICBlbHNlOgogICAgICAgICAgICBhd2FpdCBlbWl0KCJOT19UUkFERV9EQVkiLCB7InJlYXNvbiI6ICJvZmYtc2Vzc2lvbiAob25lc2hvdCkifSkKICAgICAgICAgICAgcHJpbnQoIm9mZi1zZXNzaW9uOyBvbmVzaG90IGV4aXRzIiwgZmx1c2g9VHJ1ZSkKICAgICAgICByZXR1cm4KCiAgICAjIGFsd2F5cy1vbiBzdXBlcnZpc29yOiBlYWNoIHNlc3Npb24gcnVucyBmcmVzaDsgYmV0d2VlbiBzZXNzaW9ucyB3ZQogICAgIyBzbGVlcCB1bnRpbCBHbG9iZXggcmVvcGVucy4KICAgIHdoaWxlIG5vdCBfc2h1dGRvd24uaXNfc2V0KCk6CiAgICAgICAgbm93ID0gZGF0ZXRpbWUubm93KEVUKQogICAgICAgIGlmIGNvbmZpZy5pbl90cmFkaW5nX3Nlc3Npb24obm93KToKICAgICAgICAgICAgYXdhaXQgcnVuX3Nlc3Npb24oZHJ5X3J1bikKICAgICAgICBlbHNlOgogICAgICAgICAgICBhd2FpdCBlbWl0KCJOT19UUkFERV9EQVkiLCB7InJlYXNvbiI6ICJvZmYtc2Vzc2lvbi13YWl0aW5nIn0pCiAgICAgICAgICAgIGF3YWl0IHNsZWVwX3VudGlsX25leHRfc2Vzc2lvbigpCiAgICAgICAgaWYgX3NodXRkb3duLmlzX3NldCgpOgogICAgICAgICAgICBicmVhawogICAgYXdhaXQgZW1pdCgiU0hVVERPV04iLCB7InJlYXNvbiI6ICJzaWduYWwifSkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgYXN5bmNpby5ydW4obWFpbigpKQo=
+"""ES futures GEX algo - always-on main loop (CONSUMER mode).
+
+The bridge (gex_bridge/) is the account's single IBKR streaming connection.
+This process holds ZERO IBKR market-data lines and makes ZERO IBKR calls:
+  - GEX walls/zones/confidence/regime/flip + basis: ../shared/levels.json
+    (atomic publish; read-only LevelsWatcher + BridgeGex adapter)
+  - entry trigger prices + PA bars: the AMP MT5 terminal (same machine)
+  - execution: MT5Executor -> MT5 demo account
+
+Sleeve schedule (local clock is the authority; bridge session = cross-check):
+  NY (09:30-16:00 ET):  fade + breakout off bridge levels (spot from MT5)
+  overnight (18:00-09:00): breakouts on frozen bridge zones (half size,
+      confidence bar +0.15) + PA sleeves C (range fade) + D (sweep+reclaim)
+  halt 17:00-18:00 / weekend: flat, sleep.
+
+Globex: Sun 18:00 -> Fri 17:00 ET. Always-on: sleeps until the next session
+instead of exiting. Ctrl+C / SIGTERM always exits promptly (flatten first).
+Pass --oneshot to run a single session then exit (debugging).
+
+Default is DRY-RUN (no orders). Pass --live to transmit to the MT5 demo
+account (--live = MT5 demo only; there is no live-money path).
+"""
+import argparse
+import asyncio
+import json
+import logging
+import os
+import signal
+import sys
+from collections import deque
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+import config
+from bridge_levels import LevelsWatcher
+from bridge_gex import BridgeGex
+from strategy import (evaluate_fade, evaluate_breakout, WallBreakState,
+                      Position, TP1_FILL, TP2_FILL, STOP, FLATTEN,
+                      OvernightPA, true_risk_dollars)
+from mt5_data import MT5DataFeed
+from mt5_exec import MT5Executor
+from risk import RiskManager
+
+ET = ZoneInfo("America/New_York")
+log = logging.getLogger("algo_es")
+
+_shutdown = asyncio.Event()
+_log_handlers: list = []
+
+
+def setup_logging(log_dir: str):
+    """Per-session log setup: new dated file, previous handlers removed."""
+    global _log_handlers
+    root = logging.getLogger()
+    for h in _log_handlers:
+        root.removeHandler(h)
+        try:
+            h.close()
+        except Exception:
+            pass
+    _log_handlers = []
+    os.makedirs(log_dir, exist_ok=True)
+    day = config.session_date(datetime.now(ET)).strftime("%Y%m%d")
+    path = os.path.join(log_dir, f"algo_es_{day}.jsonl")
+    fh = logging.FileHandler(path)
+    fh.setFormatter(logging.Formatter("%(message)s"))
+    root.setLevel(logging.INFO)
+    root.addHandler(fh)
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.WARNING)
+    root.addHandler(ch)
+    _log_handlers = [fh, ch]
+    return path
+
+
+async def emit(event: str, data: dict):
+    rec = {"ts": datetime.now(ET).isoformat(), "event": event, **data}
+    logging.getLogger("algo_es").info(json.dumps(rec))
+
+
+async def sleep_interruptible(total_secs: float):
+    end = asyncio.get_event_loop().time() + total_secs
+    while not _shutdown.is_set():
+        remaining = end - asyncio.get_event_loop().time()
+        if remaining <= 0:
+            return
+        try:
+            await asyncio.wait_for(_shutdown.wait(),
+                                   timeout=min(60.0, remaining))
+        except asyncio.TimeoutError:
+            pass
+
+
+async def sleep_until_next_session():
+    now = datetime.now(ET)
+    target = config.next_session_start(now)
+    secs = (target - now).total_seconds()
+    if secs <= 0:
+        return
+    await emit("SLEEP", {"until": target.isoformat(), "secs": int(secs)})
+    print(f"sleeping {int(secs)}s until next session "
+          f"{target.strftime('%a %H:%M %Z')}", flush=True)
+    await sleep_interruptible(secs)
+
+
+async def run_session(dry_run: bool):
+    """One Globex session. Returns when the session ends (halt/weekend)."""
+    log_path = setup_logging(config.LOG_DIR)
+    print(f"logging to {log_path} | mode={'DRY-RUN' if dry_run else 'LIVE-MT5-DEMO'}",
+          flush=True)
+    await emit("SESSION_START", {"mode": "dry-run" if dry_run else "live-mt5-demo"})
+
+    # ---- bridge levels (read-only; the bridge owns all IBKR streaming) ----
+    levels = LevelsWatcher()
+    gex = BridgeGex(levels)
+    gex_ok, gex_why = levels.gex_ok()
+    if gex_ok:
+        gex.refresh()
+    await emit("LEVELS_STATUS", {"ok": gex_ok, "why": gex_why,
+                                 "session": levels.session(),
+                                 "age_s": round(levels.age_sec(), 1)})
+
+    # ---- MT5 data feed: the ONLY quote source now (required) ----
+    mt5data = MT5DataFeed(emit)
+    try:
+        await mt5data.connect()
+    except Exception as e:  # noqa: BLE001 - without MT5 there is no market
+        log.error("MT5 data feed failed: %s", e)
+        await emit("MT5_DATA_DOWN", {"error": str(e)[:200],
+                                     "note": "no quotes possible; session aborted"})
+        return
+
+    # ---- MT5 executor (demo account) ----
+    om = MT5Executor(None, "MT5-DEMO", dry_run, mt5data.quote, emit)
+    try:
+        await om.connect()
+    except Exception as e:  # noqa: BLE001
+        log.error("MT5 executor connect failed: %s", e)
+        await emit("MT5_EXEC_DOWN", {"error": str(e)[:200]})
+        mt5data.shutdown()
+        return
+
+    try:
+        acct = await asyncio.to_thread(om.mt5.account_info)
+        acct_val = (acct.balance if acct and acct.balance
+                    else config.ACCOUNT_FALLBACK)
+    except Exception:
+        acct_val = config.ACCOUNT_FALLBACK
+    risk = RiskManager(acct_val)
+    risk.new_day(config.session_date(datetime.now(ET)))
+    await emit("RISK", {"net_liq": acct_val,
+                        "daily_stop": round(risk.daily_stop_amt, 2),
+                        "risk_per_trade": config.RISK_PER_TRADE})
+
+    wb = WallBreakState()
+    pa = OvernightPA()
+    closes: deque = deque(maxlen=5)   # ES M1 closes from MT5 bars (breakout)
+    position: Position | None = None
+    pending_entry = False
+    touches: dict[int, int] = {}      # fade touches per wall per day
+    last_beat = datetime.now(ET)
+    sess_mismatch_warned = False
+    last_gex_ok = True
+
+    await emit("RUN", {"note": "entering session loop (consumer mode)"})
+    while not _shutdown.is_set():
+        now = datetime.now(ET)
+        if not config.in_trading_session(now):
+            await emit("SESSION_END", {"reason": "halt-or-weekend"})
+            break
+
+        risk.new_day(config.session_date(now))
+
+        # ---- spot: MT5 live quote (entry trigger price source) ----
+        q = mt5data.quote()
+        if not q:
+            await asyncio.sleep(config.LOOP_CADENCE_SEC)
+            continue
+        bid, ask = q
+        spot = (bid + ask) / 2
+
+        # ---- MT5 M1 bars -> PA sleeves + breakout M1 closes ----
+        await mt5data.sync()
+        bars = mt5data.bars_since(
+            pa.sess_start or config.overnight_session_start(now))
+        pa.note_bars(bars)
+        closes.clear()
+        for b in list(mt5data.bars)[-5:]:
+            closes.append(b[4])   # M1 bar closes for the breakout sleeve
+
+        # ---- bridge levels ----
+        gex_ok, gex_why = levels.gex_ok()
+        if gex_ok:
+            gex.refresh()
+        overnight = config.is_pa_overnight(now)   # local clock = authority
+        bridge_sess = levels.session()
+        if not sess_mismatch_warned and bridge_sess:
+            expect = "overnight" if overnight else "ny"
+            # bridge publishes "ny"/"overnight"; anything else is a mismatch
+            if bridge_sess not in (expect,):
+                sess_mismatch_warned = True
+                await emit("BRIDGE_SESSION_MISMATCH",
+                           {"bridge": bridge_sess, "local": expect,
+                            "note": "local clock is the authority"})
+
+        # ---- wall-break arming (reads bridge walls/zones) ----
+        if gex_ok and spot:
+            min_conf = config.BREAKOUT_MIN_CONFIDENCE + \
+                (config.OVERNIGHT_CONF_BUMP if overnight else 0.0)
+            for ev, info in wb.note(spot, gex, {}, min_conf):
+                await emit("WB_" + ev.upper(), info)
+
+        flatten_now = (config.past_flatten_time(now)
+                       and config.FLATTEN_BEFORE_HALT)
+
+        # ---- position management ----
+        if position and spot:
+            if position.simulated:
+                action = position.update(now, bid, ask,
+                                         flatten=flatten_now)
+                if action == TP1_FILL:
+                    pnl = position.on_fill(position.tp1_qty,
+                                           position.tp1_px, "tp1")
+                    await emit("TP1", {"px": position.tp1_px,
+                                       "pnl": round(pnl, 2),
+                                       "runner": position.tp2_qty})
+                    position.move_stop_to_breakeven()
+                    await om.rebracket_breakeven(position)
+                elif action in (TP2_FILL, STOP, FLATTEN):
+                    reason = {"TP2_FILL": "target-2", "STOP": "stop",
+                              "FLATTEN": "pre-halt-flat"}[action]
+                    leg = {"TP2_FILL": "tp2", "STOP": "stop",
+                           "FLATTEN": "exit"}[action]
+                    fq = position.qty
+                    px = {"TP2_FILL": position.tp2_px,
+                          "STOP": position.stop_px,
+                          "FLATTEN": bid if position.side == "long"
+                          else ask}[action]
+                    pnl = position.on_fill(fq, px, leg)
+                    pnl -= om.commission_rt * fq
+                    risk.register_close(pnl)
+                    await emit("CLOSED", {
+                        "trigger": position.trigger, "reason": reason,
+                        "pnl": round(pnl, 2),
+                        "mfe_pts": round(position.max_fav, 2),
+                        "mae_pts": round(position.max_adv, 2),
+                        "held_min": position.held_minutes(now)})
+                    position = None
+            else:
+                # live: the exchange drives fills via native OCA brackets
+                for leg, fq, px in om.check_native_fills(position):
+                    pnl = position.on_fill(fq, px, leg)
+                    await emit("NATIVE_FILL", {"leg": leg, "qty": fq,
+                                               "px": round(px, 2),
+                                               "pnl": round(pnl, 2)})
+                    if leg == "tp1":
+                        await om.rebracket_breakeven(position)
+                    elif leg in ("stop", "tp2"):
+                        pnl -= om.commission_rt * fq
+                        risk.register_close(pnl)
+                        await emit("CLOSED", {
+                            "trigger": position.trigger,
+                            "reason": "native-" + leg,
+                            "pnl": round(pnl, 2),
+                            "held_min": position.held_minutes(now)})
+                        position = None
+                        break
+                if position and flatten_now:
+                    pnl = await om.close(position, "pre-halt-flat", leg="exit")
+                    risk.register_close(pnl)
+                    await emit("CLOSED", {"trigger": position.trigger,
+                                          "reason": "pre-halt-flat",
+                                          "pnl": round(pnl, 2)})
+                    position = None
+
+            if position and risk.check_kill(True):
+                pnl = await om.close(position, "kill-switch", leg="exit")
+                risk.register_close(pnl)
+                await emit("CLOSED", {"trigger": position.trigger,
+                                      "reason": "kill-switch",
+                                      "pnl": round(pnl, 2)})
+                position = None
+
+        # ---- entries ----
+        if not position and not pending_entry and spot and not flatten_now:
+            ok, why = risk.can_enter(now, False)
+            if ok:
+                cand = None
+                trigger = None
+                if overnight:
+                    # GEX sleeve: breakouts on frozen zones, half size,
+                    # confidence bar +0.15. Then PA sleeves C/D.
+                    if gex_ok:
+                        cand = evaluate_breakout(now, spot, gex, wb, closes)
+                        if cand is not None:
+                            cand["qty"] = max(1, cand["qty"] // 2)
+                            cand["risk_usd"] = true_risk_dollars(
+                                cand["stop_pts"], cand["qty"])
+                            cand["overnight"] = True
+                            trigger = "breakout"
+                    if cand is None:
+                        cand = pa.evaluate_d(now, spot)
+                        trigger = "pa_sweep"
+                        if cand is None:
+                            cand = pa.evaluate_c(now, spot)
+                            trigger = "pa_fade"
+                else:
+                    # NY: fade + breakout off bridge levels.
+                    if gex_ok:
+                        cand = evaluate_breakout(now, spot, gex, wb, closes)
+                        trigger = "breakout"
+                        if cand is None:
+                            cand = evaluate_fade(now, spot, gex, touches)
+                            trigger = "fade"
+                if cand:
+                    await emit("CANDIDATE", {
+                        k: cand[k] for k in
+                        ("trigger", "sleeve", "side", "wall", "qty",
+                         "risk_usd", "spot", "regime",
+                         "stop_pts", "overnight") if k in cand})
+                    pending_entry = True
+                    try:
+                        position = await om.enter(cand, now)
+                        if position is None:
+                            await emit("NO_FILL", {
+                                "trigger": trigger,
+                                "wall": cand.get("wall")})
+                        elif trigger == "fade":
+                            touches[round(cand["wall"])] = \
+                                touches.get(round(cand["wall"]), 0) + 1
+                    finally:
+                        pending_entry = False
+                elif not gex_ok and last_gex_ok:
+                    await emit("GEX_DOWN", {"why": gex_why,
+                                            "note": "PA sleeves only"
+                                            if overnight else "no entries"})
+            elif why not in ("session",):
+                await emit("RISK_BLOCK", {"reason": why})
+
+        last_gex_ok = gex_ok
+
+        # ---- heartbeat ----
+        if (now - last_beat).total_seconds() >= config.HEARTBEAT_SEC:
+            last_beat = now
+            pos = (f"{position.side} x{position.qty} "
+                   f"@{position.entry_px:.2f}") if position else "flat"
+            print(f"{now.strftime('%H:%M:%S')} ES={spot:.2f} pos={pos} "
+                  f"day_pnl={risk.daily_pnl:+.0f} trades={risk.trades_today} "
+                  f"regime={gex.regime} "
+                  f"cw={gex.call_wall} cc={gex.call_conf:.2f} "
+                  f"pw={gex.put_wall} pc={gex.put_conf:.2f} "
+                  f"lvl_age={levels.age_sec():.0f}s "
+                  f"{'ON' if overnight else 'NY'}", flush=True)
+
+        await asyncio.sleep(config.LOOP_CADENCE_SEC)
+
+    # ---- session end: flatten first ----
+    await emit("SESSION_LOOP_END", {})
+    if position:
+        pnl = await om.close(position, "session-end", leg="exit")
+        risk.register_close(pnl)
+        await emit("CLOSED", {"trigger": position.trigger,
+                              "reason": "session-end",
+                              "pnl": round(pnl, 2)})
+    await emit("DAY_END", {"trades": risk.trades_today,
+                           "day_pnl": round(risk.daily_pnl, 2)})
+    try:
+        om.shutdown()
+    except Exception:
+        pass
+    try:
+        mt5data.shutdown()
+    except Exception:
+        pass
+
+
+async def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true",
+                    help="simulate only; do NOT transmit "
+                         "(default: LIVE)")
+    ap.add_argument("--log-dir", default=config.LOG_DIR)
+    ap.add_argument("--oneshot", action="store_true",
+                    help="run one session then exit (debugging); "
+                         "default is always-on: sleep and retry next session")
+    args = ap.parse_args()
+    dry_run = args.dry_run
+
+    loop = asyncio.get_running_loop()
+    try:
+        for sig in (signal.SIGINT, signal.SIGTERM):
+            loop.add_signal_handler(sig, _shutdown.set)
+    except NotImplementedError:
+        for sig in (signal.SIGINT, signal.SIGTERM):
+            signal.signal(sig, lambda *_: _shutdown.set())
+
+    await emit("DAEMON", {"mode": "oneshot" if args.oneshot else "always-on",
+                          "dry_run": dry_run, "executor": "mt5"})
+    print(f"mode={'ONESHOT' if args.oneshot else 'ALWAYS-ON'} | "
+          f"{'DRY-RUN' if dry_run else 'LIVE-MT5-DEMO'}", flush=True)
+
+    if args.oneshot:
+        if config.in_trading_session(datetime.now(ET)):
+            await run_session(dry_run)
+        else:
+            await emit("NO_TRADE_DAY", {"reason": "off-session (oneshot)"})
+            print("off-session; oneshot exits", flush=True)
+        return
+
+    # always-on supervisor: each session runs fresh; between sessions we
+    # sleep until Globex reopens.
+    while not _shutdown.is_set():
+        now = datetime.now(ET)
+        if config.in_trading_session(now):
+            await run_session(dry_run)
+        else:
+            await emit("NO_TRADE_DAY", {"reason": "off-session-waiting"})
+            await sleep_until_next_session()
+        if _shutdown.is_set():
+            break
+    await emit("SHUTDOWN", {"reason": "signal"})
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

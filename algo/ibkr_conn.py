@@ -1,1 +1,102 @@
-IiIiSUJLUiBjb25uZWN0aW9uOiBleHBvbmVudGlhbC1iYWNrb2ZmIGNvbm5lY3QsIFBBUEVSLU9OTFkgZW5mb3JjZW1lbnQsCmF1dG8tcmVjb25uZWN0IG9uIGRyb3BzLgoKUGFwZXIgY2hlY2s6IElCS1IgcGFwZXItdHJhZGluZyBhY2NvdW50cyBhcmUgaXNzdWVkIGFjY291bnQgbnVtYmVycyBzdGFydGluZwp3aXRoICJEVSIuIElmIEFOWSBtYW5hZ2VkIGFjY291bnQgaXMgbm90IGEgRFUgYWNjb3VudCwgd2UgcmVmdXNlIHRvIHJ1bi4KVGhlcmUgaXMgZGVsaWJlcmF0ZWx5IG5vIG92ZXJyaWRlIGZsYWcuCiIiIgppbXBvcnQgYXN5bmNpbwppbXBvcnQgbG9nZ2luZwoKZnJvbSBpYl9pbnN5bmMgaW1wb3J0IElCCgppbXBvcnQgY29uZmlnCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiYWxnby5pYmtyIikKCgpkZWYgYXNzZXJ0X3BhcGVyX29ubHkoaWI6IElCKSAtPiBzdHI6CiAgICAiIiJSZXR1cm4gdGhlIHBhcGVyIGFjY291bnQgaWQsIG9yIHJhaXNlIFN5c3RlbUV4aXQgb24gYW55dGhpbmcgZWxzZS4iIiIKICAgIGFjY291bnRzID0gaWIubWFuYWdlZEFjY291bnRzKCkKICAgIGxvZy5pbmZvKCJtYW5hZ2VkQWNjb3VudHM9JXMiLCBhY2NvdW50cykKICAgIGlmIG5vdCBhY2NvdW50czoKICAgICAgICByYWlzZSBTeXN0ZW1FeGl0KCJQQVBFUi1HQVRFOiBubyBtYW5hZ2VkIGFjY291bnRzIHJlcG9ydGVkIC0gcmVmdXNpbmcgdG8gcnVuIikKICAgIG5vbl9wYXBlciA9IFthIGZvciBhIGluIGFjY291bnRzIGlmIG5vdCBhLnN0YXJ0c3dpdGgoIkRVIildCiAgICBpZiBub25fcGFwZXI6CiAgICAgICAgcmFpc2UgU3lzdGVtRXhpdCgKICAgICAgICAgICAgZiJQQVBFUi1HQVRFOiByZWZ1c2luZyB0byBydW4gLSBub24tcGFwZXIgYWNjb3VudChzKSBkZXRlY3RlZDoge25vbl9wYXBlcn0uICIKICAgICAgICAgICAgZiJUaGlzIGFsZ28gaXMgUEFQRVIgT05MWS4iCiAgICAgICAgKQogICAgYWNjdCA9IGFjY291bnRzWzBdCiAgICBsb2cuaW5mbygiUEFQRVItR0FURSBPSzogcGFwZXIgYWNjb3VudCAlcyIsIGFjY3QpCiAgICByZXR1cm4gYWNjdAoKCmFzeW5jIGRlZiBjb25uZWN0X2liKCkgLT4gdHVwbGVbSUIsIHN0cl06CiAgICAiIiJDb25uZWN0IHdpdGggZXhwb25lbnRpYWwgYmFja29mZjsgdmVyaWZ5IHBhcGVyOyB3aXJlIHJlY29ubmVjdCBoYW5kbGVyLiIiIgogICAgaWIgPSBJQigpCiAgICBkZWxheSA9IDIuMAogICAgbGFzdF9lcnIgPSBOb25lCiAgICBmb3IgYXR0ZW1wdCBpbiByYW5nZSgxLCBjb25maWcuQ09OTkVDVF9SRVRSSUVTICsgMSk6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBsb2cuaW5mbygiY29ubmVjdCBhdHRlbXB0ICVkIC0+ICVzOiVkIGNsaWVudElkPSVkIiwKICAgICAgICAgICAgICAgICAgICAgYXR0ZW1wdCwgY29uZmlnLklCX0hPU1QsIGNvbmZpZy5JQl9QT1JULCBjb25maWcuSUJfQ0xJRU5UX0lEKQogICAgICAgICAgICBhd2FpdCBpYi5jb25uZWN0QXN5bmMoY29uZmlnLklCX0hPU1QsIGNvbmZpZy5JQl9QT1JULAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2xpZW50SWQ9Y29uZmlnLklCX0NMSUVOVF9JRCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRpbWVvdXQ9Y29uZmlnLkNPTk5FQ1RfVElNRU9VVCkKICAgICAgICAgICAgaWYgaWIuaXNDb25uZWN0ZWQoKToKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOiAgIyBub3FhOiBCTEUwMDEgLSBhbnkgY29ubmVjdCBmYWlsdXJlIHJldHJpZXMKICAgICAgICAgICAgbGFzdF9lcnIgPSBlCiAgICAgICAgICAgIGxvZy53YXJuaW5nKCJjb25uZWN0IGF0dGVtcHQgJWQgZmFpbGVkOiAlcyAocmV0cnkgaW4gJS4wZnMpIiwKICAgICAgICAgICAgICAgICAgICAgICAgYXR0ZW1wdCwgZSwgZGVsYXkpCiAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoZGVsYXkpCiAgICAgICAgICAgIGRlbGF5ID0gbWluKGRlbGF5ICogMiwgNjApCiAgICBlbHNlOgogICAgICAgIHJhaXNlIFN5c3RlbUV4aXQoZiJjb3VsZCBub3QgY29ubmVjdCB0byBJQktSIGFmdGVyIHtjb25maWcuQ09OTkVDVF9SRVRSSUVTfSAiCiAgICAgICAgICAgICAgICAgICAgICAgICBmInRyaWVzOiB7bGFzdF9lcnJ9IikKCiAgICBhY2NvdW50ID0gYXNzZXJ0X3BhcGVyX29ubHkoaWIpCgogICAgZGVmIF9vbl9kaXNjb25uZWN0ZWQoKToKICAgICAgICBsb2cuZXJyb3IoIkRJU0NPTk5FQ1RFRCBmcm9tIElCS1IgKFRXUy9HYXRld2F5IGRyb3BwZWQpIikKCiAgICBpYi5kaXNjb25uZWN0ZWRFdmVudCArPSBfb25fZGlzY29ubmVjdGVkCiAgICBsb2cuaW5mbygiY29ubmVjdGVkOyBzZXJ2ZXJWZXJzaW9uPSVzIiwgaWIuY2xpZW50LnNlcnZlclZlcnNpb24oKQogICAgICAgICAgICAgaWYgaGFzYXR0cihpYi5jbGllbnQsICJzZXJ2ZXJWZXJzaW9uIikgZWxzZSAiPyIpCiAgICByZXR1cm4gaWIsIGFjY291bnQKCgphc3luYyBkZWYgZW5zdXJlX2Nvbm5lY3RlZChpYjogSUIpIC0+IGJvb2w6CiAgICAiIiJDYWxsIGVhY2ggbG9vcCBpdGVyYXRpb247IHJlY29ubmVjdHMgd2l0aCBiYWNrb2ZmIGlmIGRyb3BwZWQuIiIiCiAgICBpZiBpYi5pc0Nvbm5lY3RlZCgpOgogICAgICAgIHJldHVybiBUcnVlCiAgICBsb2cud2FybmluZygiY29ubmVjdGlvbiBsb3N0IC0gcmVjb25uZWN0aW5nIikKICAgIGRlbGF5ID0gMi4wCiAgICBmb3IgXyBpbiByYW5nZShjb25maWcuQ09OTkVDVF9SRVRSSUVTKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGF3YWl0IGliLmNvbm5lY3RBc3luYyhjb25maWcuSUJfSE9TVCwgY29uZmlnLklCX1BPUlQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGllbnRJZD1jb25maWcuSUJfQ0xJRU5UX0lELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGltZW91dD1jb25maWcuQ09OTkVDVF9USU1FT1VUKQogICAgICAgICAgICBpZiBpYi5pc0Nvbm5lY3RlZCgpOgogICAgICAgICAgICAgICAgYXNzZXJ0X3BhcGVyX29ubHkoaWIpICAjIHJlLXZlcmlmeSBhZnRlciBldmVyeSByZWNvbm5lY3QKICAgICAgICAgICAgICAgIGxvZy5pbmZvKCJyZWNvbm5lY3RlZCBPSyIpCiAgICAgICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZTogICMgbm9xYTogQkxFMDAxCiAgICAgICAgICAgIGxvZy53YXJuaW5nKCJyZWNvbm5lY3QgZmFpbGVkOiAlcyAocmV0cnkgaW4gJS4wZnMpIiwgZSwgZGVsYXkpCiAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoZGVsYXkpCiAgICAgICAgICAgIGRlbGF5ID0gbWluKGRlbGF5ICogMiwgNjApCiAgICBsb2cuZXJyb3IoInJlY29ubmVjdCBleGhhdXN0ZWQiKQogICAgcmV0dXJuIEZhbHNlCgoKZGVmIGFjY291bnRfbmV0X2xpcShpYjogSUIsIGFjY291bnQ6IHN0cikgLT4gZmxvYXQ6CiAgICAiIiJCZXN0LWVmZm9ydCBOZXRMaXF1aWRhdGlvbiBmb3IgdGhlIGRhaWx5LXN0b3AgZGVub21pbmF0b3IuIiIiCiAgICB0cnk6CiAgICAgICAgZm9yIGF2IGluIGliLmFjY291bnRWYWx1ZXMoYWNjb3VudCk6CiAgICAgICAgICAgIGlmIGF2LnRhZyA9PSAiTmV0TGlxdWlkYXRpb24iIGFuZCBhdi5jdXJyZW5jeSA9PSAiVVNEIjoKICAgICAgICAgICAgICAgIHJldHVybiBmbG9hdChhdi52YWx1ZSkKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZTogICMgbm9xYTogQkxFMDAxCiAgICAgICAgbG9nLndhcm5pbmcoImFjY291bnRWYWx1ZXMgZmFpbGVkOiAlcyIsIGUpCiAgICBsb2cud2FybmluZygidXNpbmcgZmFsbGJhY2sgYWNjb3VudCB2YWx1ZSAlLjBmIiwgY29uZmlnLkFDQ09VTlRfRkFMTEJBQ0spCiAgICByZXR1cm4gY29uZmlnLkFDQ09VTlRfRkFMTEJBQ0sK
+"""IBKR connection: exponential-backoff connect, PAPER-ONLY enforcement,
+auto-reconnect on drops.
+
+Paper check: IBKR paper-trading accounts are issued account numbers starting
+with "DU". If ANY managed account is not a DU account, we refuse to run.
+There is deliberately no override flag.
+"""
+import asyncio
+import logging
+
+from ib_insync import IB
+
+import config
+
+log = logging.getLogger("algo.ibkr")
+
+
+def assert_paper_only(ib: IB) -> str:
+    """Return the paper account id, or raise SystemExit on anything else."""
+    accounts = ib.managedAccounts()
+    log.info("managedAccounts=%s", accounts)
+    if not accounts:
+        raise SystemExit("PAPER-GATE: no managed accounts reported - refusing to run")
+    non_paper = [a for a in accounts if not a.startswith("DU")]
+    if non_paper:
+        raise SystemExit(
+            f"PAPER-GATE: refusing to run - non-paper account(s) detected: {non_paper}. "
+            f"This algo is PAPER ONLY."
+        )
+    acct = accounts[0]
+    log.info("PAPER-GATE OK: paper account %s", acct)
+    return acct
+
+
+async def connect_ib() -> tuple[IB, str]:
+    """Connect with exponential backoff; verify paper; wire reconnect handler."""
+    ib = IB()
+    delay = 2.0
+    last_err = None
+    for attempt in range(1, config.CONNECT_RETRIES + 1):
+        try:
+            log.info("connect attempt %d -> %s:%d clientId=%d",
+                     attempt, config.IB_HOST, config.IB_PORT, config.IB_CLIENT_ID)
+            await ib.connectAsync(config.IB_HOST, config.IB_PORT,
+                                  clientId=config.IB_CLIENT_ID,
+                                  timeout=config.CONNECT_TIMEOUT)
+            if ib.isConnected():
+                break
+        except Exception as e:  # noqa: BLE001 - any connect failure retries
+            last_err = e
+            log.warning("connect attempt %d failed: %s (retry in %.0fs)",
+                        attempt, e, delay)
+            await asyncio.sleep(delay)
+            delay = min(delay * 2, 60)
+    else:
+        raise SystemExit(f"could not connect to IBKR after {config.CONNECT_RETRIES} "
+                         f"tries: {last_err}")
+
+    account = assert_paper_only(ib)
+
+    def _on_disconnected():
+        log.error("DISCONNECTED from IBKR (TWS/Gateway dropped)")
+
+    ib.disconnectedEvent += _on_disconnected
+    log.info("connected; serverVersion=%s", ib.client.serverVersion()
+             if hasattr(ib.client, "serverVersion") else "?")
+    return ib, account
+
+
+async def ensure_connected(ib: IB) -> bool:
+    """Call each loop iteration; reconnects with backoff if dropped."""
+    if ib.isConnected():
+        return True
+    log.warning("connection lost - reconnecting")
+    delay = 2.0
+    for _ in range(config.CONNECT_RETRIES):
+        try:
+            await ib.connectAsync(config.IB_HOST, config.IB_PORT,
+                                  clientId=config.IB_CLIENT_ID,
+                                  timeout=config.CONNECT_TIMEOUT)
+            if ib.isConnected():
+                assert_paper_only(ib)  # re-verify after every reconnect
+                log.info("reconnected OK")
+                return True
+        except Exception as e:  # noqa: BLE001
+            log.warning("reconnect failed: %s (retry in %.0fs)", e, delay)
+            await asyncio.sleep(delay)
+            delay = min(delay * 2, 60)
+    log.error("reconnect exhausted")
+    return False
+
+
+def account_net_liq(ib: IB, account: str) -> float:
+    """Best-effort NetLiquidation for the daily-stop denominator."""
+    try:
+        for av in ib.accountValues(account):
+            if av.tag == "NetLiquidation" and av.currency == "USD":
+                return float(av.value)
+    except Exception as e:  # noqa: BLE001
+        log.warning("accountValues failed: %s", e)
+    log.warning("using fallback account value %.0f", config.ACCOUNT_FALLBACK)
+    return config.ACCOUNT_FALLBACK

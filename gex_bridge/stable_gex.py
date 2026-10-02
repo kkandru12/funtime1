@@ -1,1 +1,313 @@
-IiIiR0VYIGxldmVscyB2aWEgdGhlIFN0YWJsZVdhbGwgZXN0aW1hdG9yIChFUyBlZGl0aW9uKS4KCldIWSBOT1QgTkFJVkUgQVJHTUFYIChkaWFnbm9zaXMgb2YgdGhlIG9sZCB3YWxsLWJvdW5jZSk6CiAgMS4gYXJnbWF4IG92ZXIgaW5zdGFudGFuZW91cyBnYW1tYSBmbGlja2VycyDigJQgdHdvIGFkamFjZW50IHN0cmlrZXMgd2l0aAogICAgIHNpbWlsYXIgR0VYIHN3YXAgdGhlIGxlYWQgZXZlcnkgdGljayAoYmlkL2FzayBib3VuY2UgLT4gbW9kZWwgZ2FtbWEKICAgICBqaXR0ZXIpLCBzbyB0aGUgIndhbGwiIGp1bXBzIHN0cmlrZS10by1zdHJpa2Ugb24gbm9pc2UuCiAgMi4gR2FtbWEgaXMgcHJpY2UtZGVwZW5kZW50IOKAlCBhcyBzcG90IGFwcHJvYWNoZXMgYSBzdHJpa2UgaXRzIGdhbW1hCiAgICAgaW5mbGF0ZXMsIHNvIHJhdyB3YWxscyAiY2hhc2UiIHByaWNlIGluc3RlYWQgb2YgbWFya2luZyBzdHJ1Y3R1cmUuCiAgMy4gVGljay1jYWRlbmNlIHJlY29tcHV0YXRpb24gdHVybnMgKDEpKygyKSBpbnRvIHdhbGwganVtcHMuIFdhbGxzIGFyZQogICAgIHN0cnVjdHVyYWw7IHRoZXkgbXVzdCBOT1QgdXBkYXRlIGF0IHRpY2sgZnJlcXVlbmN5LgoKVEhFIEVTVElNQVRPUjoKICAtIFdhbGwgY2xvY2s6IHJlLWV2YWx1YXRlIGV2ZXJ5IEVTX0dFWF9FVkFMX1NFQyAoMzAwcykuIFRoZSA1cyB0cmFkZSBsb29wCiAgICBvbmx5IFJFQURTIHRoZSBsYXN0IHB1Ymxpc2hlZCB3YWxscy4KICAtIElucHV0cyBwZXIgZXZhbHVhdGlvbjogZ2FtbWFfVFdBUDE1IHBlciBzdHJpa2UgKDE1LW1pbiB0aW1lLXdlaWdodGVkCiAgICBhdmVyYWdlIG9mIElCS1Itc2VudCBnYW1tYSDigJQga2lsbHMgdGljayBub2lzZSkgeCBmcm96ZW4gT0kgKGhvdXJseSBGT1AKICAgIHN3ZWVwKSAtPiBkb2xsYXIgZ2FtbWE6IE9JIHggZ2FtbWEgeCBzcG90XjIgeCA1MCAvIDFlOSAoJEIpLgogIC0gU3RyaWtlIHNtb290aGluZzogR0VYX3Nba10gPSAwLjI1KkdFWFtrLTVdICsgMC41KkdFWFtrXSArIDAuMjUqR0VYW2srNV0KICAgIG9uIHRoZSA1LXB0IGdyaWQuIEFkamFjZW50LXN0cmlrZSBmbGlja2VyIG1lcmdlcyBpbnRvIG9uZSBodW1wLgogIC0gSHlzdGVyZXNpcyAoU2NobWl0dCB0cmlnZ2VyKTogdGhlIGluY3VtYmVudCB3YWxsIGtlZXBzIHN0YXR1cyB1bnRpbCBhCiAgICBjaGFsbGVuZ2VyIGV4Y2VlZHMgMS4yNXggaXRzIHNtb290aGVkIEdFWCBvbiAzIENPTlNFQ1VUSVZFIDUtbWluCiAgICBldmFsdWF0aW9ucyAoMTUgbWluKS4gR2VudWluZSByZWdpbWUgc2hpZnRzIHN0aWxsIHBhc3M7IGZsaWNrZXIgbmV2ZXIuCiAgLSBab25lLCBub3QgYSBsaW5lOiB3YWxsIHpvbmUgPSBjb250aWd1b3VzIHN0cmlrZXMgd2l0aAogICAgR0VYX3MgPiAwLjcwIHggR0VYX3Nbd2FsbF0gLT4gcHVibGlzaGVkIFt6b25lX2xvLCB6b25lX2hpXS4KICAtIENvbmZpZGVuY2U6IG1pbigxLCB0ZW51cmVfbWluLzYwKSB4IG1pbigxLCBtYXJnaW4vMC41KSwKICAgIG1hcmdpbiA9IChHRVhbd2FsbF0tR0VYW3J1bm5lci11cF0pL0dFWFtydW5uZXItdXBdLCBydW5uZXItdXAgPSBiZXN0CiAgICBzYW1lLXNpZGUgc21vb3RoZWQgc3RyaWtlIE9VVFNJREUgdGhlIHdhbGwgem9uZS4KICAtIEZsaXAgKG5ldC1HRVggc2lnbik6IHNhbWUgaHlzdGVyZXNpcyDigJQgdGhlIHNpZ24gbXVzdCBob2xkIDMgY29uc2VjdXRpdmUKICAgIGV2YWx1YXRpb25zIGJlZm9yZSB0aGUgcHVibGlzaGVkIHJlZ2ltZSBmbGlwcy4KICAtIEJyZWFrIGRldGVjdGlvbiAoc3RyYXRlZ3kucHkpIHVzZXMgWk9ORSBFREdFUzogMiBjb25zZWN1dGl2ZSAxLW1pbgogICAgY2xvc2VzIGJleW9uZCB0aGUgem9uZSBlZGdlLiBBIHRvdWNoL3dpY2sgaW50byB0aGUgem9uZSBpcyBub3QgYSBicmVhay4KCkJhY2twb3J0YWJsZSB0byB+L3dvcmtzcGFjZS9hbGdvL2dleC5weSBsYXRlciAoc2FtZSBwYXR0ZXJuLCBtdWx0PTEwMCkuCiIiIgppbXBvcnQgbG9nZ2luZwppbXBvcnQgdGltZQpmcm9tIGNvbGxlY3Rpb25zIGltcG9ydCBkZXF1ZQoKaW1wb3J0IGNvbmZpZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ28uZ2V4IikKCkVWQUxfU0VDID0gZmxvYXQoZ2V0YXR0cihjb25maWcsICJHRVhfRVZBTF9TRUMiLCAzMDApKQpUV0FQX1NFQyA9IDkwMC4wICAgICAgICAgICAgIyAxNS1taW4gZ2FtbWEgVFdBUApIWVNUX01VTFQgPSAxLjI1ICAgICAgICAgICAgIyBjaGFsbGVuZ2VyIG11c3QgZXhjZWVkIGluY3VtYmVudCBieSB0aGlzCkhZU1RfRVZBTFMgPSAzICAgICAgICAgICAgICAjIC4uLiBvbiB0aGlzIG1hbnkgY29uc2VjdXRpdmUgZXZhbHVhdGlvbnMKWk9ORV9GUkFDID0gMC43MCAgICAgICAgICAgICMgem9uZSA9IGNvbnRpZ3VvdXMgc3RyaWtlcyBhYm92ZSB0aGlzIHggd2FsbCBHRVgKRE9MTEFSX1NDQUxFID0gMWU5ICAgICAgICAgICMgcHVibGlzaCBkb2xsYXItZ2FtbWEgaW4gJEIKR1JJRF9TVEVQID0gNS4wCgoKY2xhc3MgR2V4U3RhdGU6CiAgICBkZWYgX19pbml0X18oc2VsZiwgbXVsdDogZmxvYXQgPSBOb25lKToKICAgICAgICBzZWxmLm11bHQgPSBtdWx0IGlmIG11bHQgZWxzZSBjb25maWcuR0VYX01VTFQKICAgICAgICBzZWxmLm9pOiBkaWN0ID0ge30KICAgICAgICAjIC0tLS0gcHVibGlzaGVkICg1LW1pbiB3YWxsIGNsb2NrKSAtLS0tCiAgICAgICAgc2VsZi5jYWxsX3dhbGw6IGZsb2F0IHwgTm9uZSA9IE5vbmUKICAgICAgICBzZWxmLnB1dF93YWxsOiBmbG9hdCB8IE5vbmUgPSBOb25lCiAgICAgICAgc2VsZi5jYWxsX3pvbmU6IHR1cGxlIHwgTm9uZSA9IE5vbmUgICAjIChsbywgaGkpCiAgICAgICAgc2VsZi5wdXRfem9uZTogdHVwbGUgfCBOb25lID0gTm9uZQogICAgICAgIHNlbGYuY2FsbF9jb25mOiBmbG9hdCA9IDAuMAogICAgICAgIHNlbGYucHV0X2NvbmY6IGZsb2F0ID0gMC4wCiAgICAgICAgc2VsZi5mbGlwOiBmbG9hdCB8IE5vbmUgPSBOb25lCiAgICAgICAgc2VsZi5yZWdpbWU6IHN0ciA9ICJmbGF0IiAgICAgICAgICAgICAjICcrJywgJy0nLCAnZmxhdCcgKGh5c3RlcmVzaXMtZ2F0ZWQpCiAgICAgICAgc2VsZi5tYWduZXRzOiBsaXN0W2Zsb2F0XSA9IFtdCiAgICAgICAgc2VsZi5uZXRfdG90YWw6IGZsb2F0ID0gMC4wICAgICAgICAgICAjICRCLCBzbW9vdGhlZAogICAgICAgIHNlbGYuc3BvdDogZmxvYXQgPSAwLjAKICAgICAgICBzZWxmLmV2YWxzOiBpbnQgPSAwCiAgICAgICAgIyAtLS0tIGludGVybmFscyAtLS0tCiAgICAgICAgc2VsZi5fc2FtcGxlczogZGljdFt0dXBsZSwgZGVxdWVdID0ge30gICAjIChzdHJpa2UscmlnaHQpIC0+IFsodHMsIGdhbW1hKV0KICAgICAgICBzZWxmLl9sYXN0X2V2YWw6IGZsb2F0ID0gMC4wCiAgICAgICAgc2VsZi5fd2FsbHMgPSB7CiAgICAgICAgICAgICJDIjogeyJpbmMiOiBOb25lLCAic2luY2UiOiAwLjAsICJjaGFsIjogTm9uZSwgImNvdW50IjogMH0sCiAgICAgICAgICAgICJQIjogeyJpbmMiOiBOb25lLCAic2luY2UiOiAwLjAsICJjaGFsIjogTm9uZSwgImNvdW50IjogMH0sCiAgICAgICAgfQogICAgICAgIHNlbGYuX3JlZ2ltZV9zaWduOiBpbnQgPSAwCiAgICAgICAgc2VsZi5fcmVnaW1lX2NvdW50OiBpbnQgPSAwCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tIHRpY2stcGF0aDogb25seSByZWNvcmRzIC0tLS0tLS0tLS0tLS0tLS0KICAgIGRlZiBub3RlX2dhbW1hKHNlbGYsIGdhbW1hX21hcDogZGljdCwgdHM6IGZsb2F0ID0gTm9uZSk6CiAgICAgICAgIiIiQ2FsbGVkIGV2ZXJ5IGxvb3AgaXRlcmF0aW9uLiBBcHBlbmRzICh0cywgZ2FtbWEpIHNhbXBsZXM7IHBydW5lcwogICAgICAgIGFueXRoaW5nIG9sZGVyIHRoYW4gVFdBUF9TRUMuIE5ldmVyIHJlY29tcHV0ZXMgd2FsbHMuIiIiCiAgICAgICAgdHMgPSB0cyBpZiB0cyBpcyBub3QgTm9uZSBlbHNlIHRpbWUudGltZSgpCiAgICAgICAgY3V0b2ZmID0gdHMgLSBUV0FQX1NFQwogICAgICAgIGZvciBrZXksIGcgaW4gZ2FtbWFfbWFwLml0ZW1zKCk6CiAgICAgICAgICAgIGlmIG5vdCBnIG9yIGcgPD0gMDoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGRxID0gc2VsZi5fc2FtcGxlcy5zZXRkZWZhdWx0KGtleSwgZGVxdWUoKSkKICAgICAgICAgICAgZHEuYXBwZW5kKCh0cywgZmxvYXQoZykpKQogICAgICAgICAgICB3aGlsZSBkcSBhbmQgZHFbMF1bMF0gPCBjdXRvZmY6CiAgICAgICAgICAgICAgICBkcS5wb3BsZWZ0KCkKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0gNS1taW4gd2FsbCBjbG9jayAtLS0tLS0tLS0tLS0tLS0tCiAgICBkZWYgbWF5YmVfZXZhbHVhdGUoc2VsZiwgb2k6IGRpY3QsIHNwb3Q6IGZsb2F0LCB0czogZmxvYXQgPSBOb25lKSAtPiBkaWN0IHwgTm9uZToKICAgICAgICAiIiJFdmFsdWF0ZSBhdCBtb3N0IGV2ZXJ5IEVWQUxfU0VDLiBSZXR1cm5zIHRoZSBXQUxMUyBwYXlsb2FkIGRpY3QKICAgICAgICB3aGVuIGFuIGV2YWx1YXRpb24gcmFuLCBlbHNlIE5vbmUuIFRoZSB0cmFkZSBsb29wIGNhbGxzIHRoaXMgZXZlcnkKICAgICAgICBpdGVyYXRpb24gYW5kIHJlYWRzIHRoZSBwdWJsaXNoZWQgYXR0cmlidXRlcyBvdGhlcndpc2UuIiIiCiAgICAgICAgdHMgPSB0cyBpZiB0cyBpcyBub3QgTm9uZSBlbHNlIHRpbWUudGltZSgpCiAgICAgICAgaWYgdHMgLSBzZWxmLl9sYXN0X2V2YWwgPCBFVkFMX1NFQzoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBpZiBub3Qgc3BvdCBvciBzcG90IDw9IDA6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIHNlbGYuZXZhbHVhdGUob2ksIHNwb3QsIHRzKSAgICMgZXZhbHVhdGUoKSByZXNldHMgdGhlIGNsb2NrCgogICAgZGVmIGV2YWx1YXRlKHNlbGYsIG9pOiBkaWN0LCBzcG90OiBmbG9hdCwgdHM6IGZsb2F0KSAtPiBkaWN0OgogICAgICAgIHNlbGYuX2xhc3RfZXZhbCA9IHRzICAgIyBmb3JjZWQgZXZhbHMgYWxzbyByZXNldCB0aGUgNS1taW4gd2FsbCBjbG9jawogICAgICAgIHNlbGYub2kgPSBvaQogICAgICAgIHNlbGYuc3BvdCA9IHNwb3QKICAgICAgICBzZWxmLmV2YWxzICs9IDEKCiAgICAgICAgIyAxLiBnYW1tYSBUV0FQMTUgcGVyIChzdHJpa2UsIHJpZ2h0KQogICAgICAgIHR3YXAgPSB7azogc2VsZi5fdHdhcChrLCB0cykgZm9yIGsgaW4gc2VsZi5fc2FtcGxlc30KICAgICAgICB0d2FwID0ge2s6IHYgZm9yIGssIHYgaW4gdHdhcC5pdGVtcygpIGlmIHYgYW5kIHYgPiAwfQoKICAgICAgICAjIDIuIGRvbGxhciBnYW1tYSAoJEIpIHBlciBzdHJpa2UgcGVyIHNpZGUKICAgICAgICByYXc6IGRpY3Rbc3RyLCBkaWN0W2Zsb2F0LCBmbG9hdF1dID0geyJDIjoge30sICJQIjoge319CiAgICAgICAgZm9yIChrLCByKSwgbyBpbiBvaS5pdGVtcygpOgogICAgICAgICAgICBpZiBub3QgbyBvciBvIDw9IDA6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBnID0gdHdhcC5nZXQoKGssIHIpKQogICAgICAgICAgICBpZiBub3QgZzoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHJhd1tyXVtrXSA9IG8gKiBnICogc3BvdCAqIHNwb3QgKiBzZWxmLm11bHQgLyBET0xMQVJfU0NBTEUKCiAgICAgICAgIyAzLiBzbW9vdGggb24gdGhlIDUtcHQgZ3JpZAogICAgICAgIHNtID0ge3I6IHNlbGYuX3Ntb290aChyYXdbcl0pIGZvciByIGluICgiQyIsICJQIil9CgogICAgICAgICMgNC02LiBoeXN0ZXJlc2lzIC0+IHdhbGwsIHpvbmUsIGNvbmZpZGVuY2UgcGVyIHNpZGUKICAgICAgICBmb3IgciwgYXR0ciBpbiAoKCJDIiwgImNhbGwiKSwgKCJQIiwgInB1dCIpKToKICAgICAgICAgICAgc3QgPSBzZWxmLl93YWxsc1tyXQogICAgICAgICAgICByYXdfd2FsbCA9IG1heChzbVtyXSwga2V5PWxhbWJkYSBzOiBzbVtyXVtzXSkgaWYgc21bcl0gZWxzZSBOb25lCiAgICAgICAgICAgIHdhbGwgPSBzZWxmLl9hcHBseV9oeXN0ZXJlc2lzKHN0LCByYXdfd2FsbCwgc21bcl0sIHRzKQogICAgICAgICAgICBzZXRhdHRyKHNlbGYsIGYie2F0dHJ9X3dhbGwiLCB3YWxsKQogICAgICAgICAgICBpZiB3YWxsIGlzIE5vbmU6CiAgICAgICAgICAgICAgICBzZXRhdHRyKHNlbGYsIGYie2F0dHJ9X3pvbmUiLCBOb25lKQogICAgICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBmInthdHRyfV9jb25mIiwgMC4wKQogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgem9uZSA9IHNlbGYuX3pvbmUod2FsbCwgc21bcl0pCiAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgZiJ7YXR0cn1fem9uZSIsIHpvbmUpCiAgICAgICAgICAgIGNvbmYgPSBzZWxmLl9jb25maWRlbmNlKHN0LCB3YWxsLCBzbVtyXSwgem9uZSwgdHMpCiAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgZiJ7YXR0cn1fY29uZiIsIGNvbmYpCgogICAgICAgICMgNy4gbmV0IC8gZmxpcCAvIG1hZ25ldHMgZnJvbSBzbW9vdGhlZCBzZXJpZXMKICAgICAgICBzdHJpa2VzID0gc29ydGVkKHNldChzbVsiQyJdKSB8IHNldChzbVsiUCJdKSkKICAgICAgICBuZXQgPSB7czogc21bIkMiXS5nZXQocywgMC4wKSAtIHNtWyJQIl0uZ2V0KHMsIDAuMCkgZm9yIHMgaW4gc3RyaWtlc30KICAgICAgICBzZWxmLm5ldF90b3RhbCA9IHN1bShuZXQudmFsdWVzKCkpCiAgICAgICAgY3VtLCBmbGlwID0gMC4wLCBOb25lCiAgICAgICAgZm9yIHMgaW4gc3RyaWtlczoKICAgICAgICAgICAgcHJldiwgY3VtID0gY3VtLCBjdW0gKyBuZXRbc10KICAgICAgICAgICAgaWYgKHByZXYgPCAwIDw9IGN1bSkgb3IgKHByZXYgPiAwID49IGN1bSk6CiAgICAgICAgICAgICAgICBmbGlwID0gcwogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICBzZWxmLmZsaXAgPSBmbGlwCiAgICAgICAgc2VsZi5tYWduZXRzID0gc29ydGVkKHN0cmlrZXMsIGtleT1sYW1iZGEgczogYWJzKG5ldFtzXSksIHJldmVyc2U9VHJ1ZSlbOjVdCgogICAgICAgICMgOC4gcmVnaW1lIHNpZ24gd2l0aCBoeXN0ZXJlc2lzCiAgICAgICAgc2lnbiA9IDEgaWYgc2VsZi5uZXRfdG90YWwgPiAwIGVsc2UgKC0xIGlmIHNlbGYubmV0X3RvdGFsIDwgMCBlbHNlIDApCiAgICAgICAgaWYgc2lnbiA9PSBzZWxmLl9yZWdpbWVfc2lnbjoKICAgICAgICAgICAgc2VsZi5fcmVnaW1lX2NvdW50ID0gMAogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYuX3JlZ2ltZV9jb3VudCArPSAxCiAgICAgICAgICAgIGlmIHNlbGYuX3JlZ2ltZV9jb3VudCA+PSBIWVNUX0VWQUxTOgogICAgICAgICAgICAgICAgc2VsZi5fcmVnaW1lX3NpZ24gPSBzaWduCiAgICAgICAgICAgICAgICBzZWxmLl9yZWdpbWVfY291bnQgPSAwCiAgICAgICAgICAgICAgICBsb2cuaW5mbygiUkVHSU1FIGZsaXAgLT4gJXMgKG5ldCAlKy4yZiAkQikiLAogICAgICAgICAgICAgICAgICAgICAgICAgezE6ICIrIiwgLTE6ICItIiwgMDogImZsYXQifVtzaWduXSwgc2VsZi5uZXRfdG90YWwpCiAgICAgICAgc2VsZi5yZWdpbWUgPSB7MTogIisiLCAtMTogIi0iLCAwOiAiZmxhdCJ9W3NlbGYuX3JlZ2ltZV9zaWduXQoKICAgICAgICBwYXlsb2FkID0gc2VsZi53YWxsc19wYXlsb2FkKHRzKQogICAgICAgIGxvZy5pbmZvKCJXQUxMUyBldmFsICMlZDogJXMiLCBzZWxmLmV2YWxzLCBwYXlsb2FkKQogICAgICAgIHJldHVybiBwYXlsb2FkCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tIGludGVybmFscyAtLS0tLS0tLS0tLS0tLS0tCiAgICBkZWYgX3R3YXAoc2VsZiwga2V5OiB0dXBsZSwgbm93OiBmbG9hdCkgLT4gZmxvYXQgfCBOb25lOgogICAgICAgIGRxID0gc2VsZi5fc2FtcGxlcy5nZXQoa2V5KQogICAgICAgIGlmIG5vdCBkcToKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBjdXRvZmYgPSBub3cgLSBUV0FQX1NFQwogICAgICAgICMgdGltZS13ZWlnaHRlZDogZWFjaCBzYW1wbGUgaG9sZHMgdW50aWwgdGhlIG5leHQgc2FtcGxlIChvciBub3cpCiAgICAgICAgbnVtLCBkZW4gPSAwLjAsIDAuMAogICAgICAgIHByZXZfdCA9IG1heChkcVswXVswXSwgY3V0b2ZmKQogICAgICAgIGZvciB0LCBnIGluIGRxOgogICAgICAgICAgICBpZiB0IDwgY3V0b2ZmOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbnVtICs9IGcgKiAodCAtIHByZXZfdCkKICAgICAgICAgICAgZGVuICs9ICh0IC0gcHJldl90KQogICAgICAgICAgICBwcmV2X3QgPSB0CiAgICAgICAgbnVtICs9IGRxWy0xXVsxXSAqIChub3cgLSBwcmV2X3QpCiAgICAgICAgZGVuICs9IChub3cgLSBwcmV2X3QpCiAgICAgICAgaWYgZGVuIDw9IDA6CiAgICAgICAgICAgIHJldHVybiBkcVstMV1bMV0gICMgc2luZ2xlIHNhbXBsZSBleGFjdGx5IGF0IGV2YWwgdGltZTogdXNlIGl0CiAgICAgICAgcmV0dXJuIG51bSAvIGRlbgoKICAgIGRlZiBfc21vb3RoKHNlbGYsIGdleDogZGljdFtmbG9hdCwgZmxvYXRdKSAtPiBkaWN0W2Zsb2F0LCBmbG9hdF06CiAgICAgICAgIiIiMC4yNS8wLjUvMC4yNSBzbW9vdGhpbmcgb24gdGhlIHVuaWZvcm0gNS1wdCBncmlkLiBNaXNzaW5nIHN0cmlrZXMKICAgICAgICBjb250cmlidXRlIDAgKGVkZ2VzIGFyZSBmYXItT1RNOyBkb2N1bWVudGVkLCBub3QgaGlkZGVuKS4iIiIKICAgICAgICBpZiBub3QgZ2V4OgogICAgICAgICAgICByZXR1cm4ge30KICAgICAgICBsbyA9IG1pbihnZXgpCiAgICAgICAgaGkgPSBtYXgoZ2V4KQogICAgICAgIG4gPSBpbnQocm91bmQoKGhpIC0gbG8pIC8gR1JJRF9TVEVQKSkgKyAxCiAgICAgICAgZ3JpZCA9IFtyb3VuZChsbyArIGkgKiBHUklEX1NURVAsIDYpIGZvciBpIGluIHJhbmdlKG4pXQogICAgICAgIGdldCA9IHtyb3VuZChrLCA2KTogdiBmb3IgaywgdiBpbiBnZXguaXRlbXMoKX0KICAgICAgICBzbSA9IHt9CiAgICAgICAgZm9yIGksIHMgaW4gZW51bWVyYXRlKGdyaWQpOgogICAgICAgICAgICBjID0gZ2V0LmdldChzLCAwLjApCiAgICAgICAgICAgIHAgPSBnZXQuZ2V0KHJvdW5kKHMgLSBHUklEX1NURVAsIDYpLCAwLjApCiAgICAgICAgICAgIHEgPSBnZXQuZ2V0KHJvdW5kKHMgKyBHUklEX1NURVAsIDYpLCAwLjApCiAgICAgICAgICAgIHNtW3NdID0gMC4yNSAqIHAgKyAwLjUgKiBjICsgMC4yNSAqIHEKICAgICAgICByZXR1cm4gc20KCiAgICBkZWYgX2FwcGx5X2h5c3RlcmVzaXMoc2VsZiwgc3Q6IGRpY3QsIHJhd193YWxsLCBnZXhfczogZGljdCwgdHM6IGZsb2F0KToKICAgICAgICBpbmMgPSBzdFsiaW5jIl0KICAgICAgICBpZiByYXdfd2FsbCBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gaW5jICAjIG5vIGRhdGE6IGhvbGQgdGhlIGluY3VtYmVudCAoZmFpbCBzdGF0aWMsIG5vdCBqdW1waW5nKQogICAgICAgIGlmIGluYyBpcyBOb25lOgogICAgICAgICAgICBzdFsiaW5jIl0sIHN0WyJzaW5jZSJdID0gcmF3X3dhbGwsIHRzCiAgICAgICAgICAgIHN0WyJjaGFsIl0sIHN0WyJjb3VudCJdID0gTm9uZSwgMAogICAgICAgICAgICByZXR1cm4gcmF3X3dhbGwKICAgICAgICBpZiByYXdfd2FsbCA9PSBpbmM6CiAgICAgICAgICAgIHN0WyJjaGFsIl0sIHN0WyJjb3VudCJdID0gTm9uZSwgMAogICAgICAgICAgICByZXR1cm4gaW5jCiAgICAgICAgaWYgc3RbImNoYWwiXSAhPSByYXdfd2FsbDoKICAgICAgICAgICAgc3RbImNoYWwiXSwgc3RbImNvdW50Il0gPSByYXdfd2FsbCwgMAogICAgICAgIGdfaW5jID0gZ2V4X3MuZ2V0KGluYywgMC4wKQogICAgICAgIGdfY2hhbCA9IGdleF9zLmdldChyYXdfd2FsbCwgMC4wKQogICAgICAgIHN0cm9uZyA9IChnX2NoYWwgPiBIWVNUX01VTFQgKiBnX2luYykgaWYgZ19pbmMgPiAwIGVsc2UgKGdfY2hhbCA+IDApCiAgICAgICAgaWYgc3Ryb25nOgogICAgICAgICAgICBzdFsiY291bnQiXSArPSAxCiAgICAgICAgICAgIGlmIHN0WyJjb3VudCJdID49IEhZU1RfRVZBTFM6CiAgICAgICAgICAgICAgICBsb2cuaW5mbygiV0FMTCBzd2l0Y2ggJXMgLT4gJXMgKCUuMmYgdnMgJS4yZiAkQiwgJWQgZXZhbHMpIiwKICAgICAgICAgICAgICAgICAgICAgICAgIGluYywgcmF3X3dhbGwsIGdfY2hhbCwgZ19pbmMsIHN0WyJjb3VudCJdKQogICAgICAgICAgICAgICAgc3RbImluYyJdLCBzdFsic2luY2UiXSA9IHJhd193YWxsLCB0cwogICAgICAgICAgICAgICAgc3RbImNoYWwiXSwgc3RbImNvdW50Il0gPSBOb25lLCAwCiAgICAgICAgICAgICAgICByZXR1cm4gcmF3X3dhbGwKICAgICAgICBlbHNlOgogICAgICAgICAgICBzdFsiY291bnQiXSA9IDAgICMgY2hhbGxlbmdlciBub3QgZGVjaXNpdmVseSBzdHJvbmdlcjogaG9sZAogICAgICAgIHJldHVybiBpbmMKCiAgICBkZWYgX3pvbmUoc2VsZiwgd2FsbDogZmxvYXQsIGdleF9zOiBkaWN0KSAtPiB0dXBsZToKICAgICAgICAiIiJDb250aWd1b3VzIHN0cmlrZXMgd2l0aCBHRVhfcyA+IFpPTkVfRlJBQyB4IEdFWF9zW3dhbGxdLiIiIgogICAgICAgIHRocmVzaCA9IFpPTkVfRlJBQyAqIGdleF9zW3dhbGxdCiAgICAgICAgbG8gPSBoaSA9IHdhbGwKICAgICAgICB3aGlsZSBnZXhfcy5nZXQocm91bmQobG8gLSBHUklEX1NURVAsIDYpLCAwLjApID4gdGhyZXNoOgogICAgICAgICAgICBsbyA9IHJvdW5kKGxvIC0gR1JJRF9TVEVQLCA2KQogICAgICAgIHdoaWxlIGdleF9zLmdldChyb3VuZChoaSArIEdSSURfU1RFUCwgNiksIDAuMCkgPiB0aHJlc2g6CiAgICAgICAgICAgIGhpID0gcm91bmQoaGkgKyBHUklEX1NURVAsIDYpCiAgICAgICAgcmV0dXJuIChsbywgaGkpCgogICAgZGVmIF9jb25maWRlbmNlKHNlbGYsIHN0OiBkaWN0LCB3YWxsOiBmbG9hdCwgZ2V4X3M6IGRpY3QsCiAgICAgICAgICAgICAgICAgICAgem9uZTogdHVwbGUsIHRzOiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgdGVudXJlX21pbiA9ICh0cyAtIHN0WyJzaW5jZSJdKSAvIDYwLjAKICAgICAgICB0ZW51cmVfZiA9IG1pbigxLjAsIHRlbnVyZV9taW4gLyA2MC4wKQogICAgICAgIHpsbywgemhpID0gem9uZQogICAgICAgIG90aGVycyA9IFt2IGZvciBzLCB2IGluIGdleF9zLml0ZW1zKCkKICAgICAgICAgICAgICAgICAgaWYgcyAhPSB3YWxsIGFuZCBub3QgKHpsbyA8PSBzIDw9IHpoaSldCiAgICAgICAgcnVubmVyID0gbWF4KG90aGVycykgaWYgb3RoZXJzIGVsc2UgMC4wCiAgICAgICAgZ3cgPSBnZXhfc1t3YWxsXQogICAgICAgIG1hcmdpbiA9IChndyAtIHJ1bm5lcikgLyBydW5uZXIgaWYgcnVubmVyID4gMCBlbHNlIGZsb2F0KCJpbmYiKQogICAgICAgIG1hcmdpbl9mID0gbWluKDEuMCwgbWFyZ2luIC8gMC41KQogICAgICAgIHJldHVybiByb3VuZCh0ZW51cmVfZiAqIG1hcmdpbl9mLCAzKQoKICAgICMgLS0tLS0tLS0tLS0tLS0tLSBwdWJsaXNoZWQgcmVhZGVycyAtLS0tLS0tLS0tLS0tLS0tCiAgICBkZWYgd2FsbHNfcGF5bG9hZChzZWxmLCB0czogZmxvYXQpIC0+IGRpY3Q6CiAgICAgICAgZGVmIHRlbnVyZShzaWRlKToKICAgICAgICAgICAgc3QgPSBzZWxmLl93YWxsc1tzaWRlXQogICAgICAgICAgICByZXR1cm4gcm91bmQoKHRzIC0gc3RbInNpbmNlIl0pIC8gNjAuMCwgMSkgaWYgc3RbImluYyJdIGVsc2UgMC4wCiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgImNhbGxfd2FsbCI6IHNlbGYuY2FsbF93YWxsLCAiY2FsbF96b25lIjogc2VsZi5jYWxsX3pvbmUsCiAgICAgICAgICAgICJjYWxsX2NvbmYiOiBzZWxmLmNhbGxfY29uZiwgImNhbGxfdGVudXJlX21pbiI6IHRlbnVyZSgiQyIpLAogICAgICAgICAgICAicHV0X3dhbGwiOiBzZWxmLnB1dF93YWxsLCAicHV0X3pvbmUiOiBzZWxmLnB1dF96b25lLAogICAgICAgICAgICAicHV0X2NvbmYiOiBzZWxmLnB1dF9jb25mLCAicHV0X3RlbnVyZV9taW4iOiB0ZW51cmUoIlAiKSwKICAgICAgICAgICAgImZsaXAiOiBzZWxmLmZsaXAsICJyZWdpbWUiOiBzZWxmLnJlZ2ltZSwKICAgICAgICAgICAgIm5ldF90b3RhbF9CIjogcm91bmQoc2VsZi5uZXRfdG90YWwsIDMpLAogICAgICAgICAgICAibWFnbmV0cyI6IHNlbGYubWFnbmV0cywgImV2YWxzIjogc2VsZi5ldmFscywKICAgICAgICB9CgogICAgZGVmIGdhbW1hX3JlZ2ltZShzZWxmKSAtPiBzdHI6CiAgICAgICAgIiIiUHVibGlzaGVkIHJlZ2ltZTogJysnLCAnLScsICdmbGF0JyAoaHlzdGVyZXNpcy1nYXRlZCkuIiIiCiAgICAgICAgcmV0dXJuIHNlbGYucmVnaW1lCgogICAgZGVmIHdhbGxfZm9yX2ZhZGUoc2VsZiwgc3BvdDogZmxvYXQpOgogICAgICAgICIiIih3YWxsLCBzaWRlLCBlbnRyeV9lZGdlLCBjb25maWRlbmNlKSBpZiBzcG90IHRvdWNoZXMgYSB3YWxsIHpvbmUKICAgICAgICBmcm9tIHRoZSBvdXRzaWRlIHdpdGhpbiBGQURFX1RPVUNIX1BUUy4gRW50cnkgZWRnZSA9IG5lYXIgem9uZSBlZGdlCiAgICAgICAgKGJldHRlciBmaWxsIHRoYW4gdGhlIHdhbGwgc3RyaWtlIGl0c2VsZikuIiIiCiAgICAgICAgaWYgc2VsZi5jYWxsX3dhbGwgaXMgbm90IE5vbmUgYW5kIHNlbGYuY2FsbF96b25lIGlzIG5vdCBOb25lOgogICAgICAgICAgICB6bG8sIF96aGkgPSBzZWxmLmNhbGxfem9uZQogICAgICAgICAgICBpZiAwIDw9IHpsbyAtIHNwb3QgPD0gY29uZmlnLkZBREVfVE9VQ0hfUFRTOgogICAgICAgICAgICAgICAgcmV0dXJuIHNlbGYuY2FsbF93YWxsLCAic2hvcnQiLCB6bG8sIHNlbGYuY2FsbF9jb25mCiAgICAgICAgaWYgc2VsZi5wdXRfd2FsbCBpcyBub3QgTm9uZSBhbmQgc2VsZi5wdXRfem9uZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgX3psbywgemhpID0gc2VsZi5wdXRfem9uZQogICAgICAgICAgICBpZiAwIDw9IHNwb3QgLSB6aGkgPD0gY29uZmlnLkZBREVfVE9VQ0hfUFRTOgogICAgICAgICAgICAgICAgcmV0dXJuIHNlbGYucHV0X3dhbGwsICJsb25nIiwgemhpLCBzZWxmLnB1dF9jb25mCiAgICAgICAgcmV0dXJuIE5vbmUsIE5vbmUsIE5vbmUsIDAuMAoKICAgIGRlZiBtYWduZXRfYmV5b25kKHNlbGYsIHJlZjogZmxvYXQsIGRpcmVjdGlvbjogaW50KSAtPiBmbG9hdCB8IE5vbmU6CiAgICAgICAgY2FuZHMgPSBbbSBmb3IgbSBpbiBzZWxmLm1hZ25ldHMKICAgICAgICAgICAgICAgICBpZiAoZGlyZWN0aW9uID4gMCBhbmQgbSA+IHJlZikgb3IgKGRpcmVjdGlvbiA8IDAgYW5kIG0gPCByZWYpXQogICAgICAgIGlmIG5vdCBjYW5kczoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICByZXR1cm4gbWluKGNhbmRzKSBpZiBkaXJlY3Rpb24gPiAwIGVsc2UgbWF4KGNhbmRzKQoKICAgIEBzdGF0aWNtZXRob2QKICAgIGRlZiBkb21pbmFuY2Uod2FsbDogZmxvYXQsIHJpZ2h0OiBzdHIsIG9pOiBkaWN0LCBzdGVwOiBmbG9hdCA9IDUuMCk6CiAgICAgICAgIiIiV2FsbCBPSSAvIGFkamFjZW50IHNwb3Qtc2lkZSBzdHJpa2UgT0kgKHNhbWUgcmlnaHQpLiIiIgogICAgICAgIHdhbGxfb2kgPSBvaS5nZXQoKHdhbGwsIHJpZ2h0KSwgMC4wKSBvciAwLjAKICAgICAgICBpZiB3YWxsX29pIDw9IDA6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgYWRqID0gd2FsbCAtIHN0ZXAgaWYgcmlnaHQgPT0gIkMiIGVsc2Ugd2FsbCArIHN0ZXAKICAgICAgICBhZGpfb2kgPSBvaS5nZXQoKGFkaiwgcmlnaHQpLCAwLjApIG9yIDAuMAogICAgICAgIGlmIGFkal9vaSA8PSAwOgogICAgICAgICAgICByZXR1cm4gZmxvYXQoImluZiIpCiAgICAgICAgcmV0dXJuIHdhbGxfb2kgLyBhZGpfb2kK
+"""GEX levels via the StableWall estimator (ES edition).
+
+WHY NOT NAIVE ARGMAX (diagnosis of the old wall-bounce):
+  1. argmax over instantaneous gamma flickers — two adjacent strikes with
+     similar GEX swap the lead every tick (bid/ask bounce -> model gamma
+     jitter), so the "wall" jumps strike-to-strike on noise.
+  2. Gamma is price-dependent — as spot approaches a strike its gamma
+     inflates, so raw walls "chase" price instead of marking structure.
+  3. Tick-cadence recomputation turns (1)+(2) into wall jumps. Walls are
+     structural; they must NOT update at tick frequency.
+
+THE ESTIMATOR:
+  - Wall clock: re-evaluate every ES_GEX_EVAL_SEC (300s). The 5s trade loop
+    only READS the last published walls.
+  - Inputs per evaluation: gamma_TWAP15 per strike (15-min time-weighted
+    average of IBKR-sent gamma — kills tick noise) x frozen OI (hourly FOP
+    sweep) -> dollar gamma: OI x gamma x spot^2 x 50 / 1e9 ($B).
+  - Strike smoothing: GEX_s[k] = 0.25*GEX[k-5] + 0.5*GEX[k] + 0.25*GEX[k+5]
+    on the 5-pt grid. Adjacent-strike flicker merges into one hump.
+  - Hysteresis (Schmitt trigger): the incumbent wall keeps status until a
+    challenger exceeds 1.25x its smoothed GEX on 3 CONSECUTIVE 5-min
+    evaluations (15 min). Genuine regime shifts still pass; flicker never.
+  - Zone, not a line: wall zone = contiguous strikes with
+    GEX_s > 0.70 x GEX_s[wall] -> published [zone_lo, zone_hi].
+  - Confidence: min(1, tenure_min/60) x min(1, margin/0.5),
+    margin = (GEX[wall]-GEX[runner-up])/GEX[runner-up], runner-up = best
+    same-side smoothed strike OUTSIDE the wall zone.
+  - Flip (net-GEX sign): same hysteresis — the sign must hold 3 consecutive
+    evaluations before the published regime flips.
+  - Break detection (strategy.py) uses ZONE EDGES: 2 consecutive 1-min
+    closes beyond the zone edge. A touch/wick into the zone is not a break.
+
+Backportable to ~/workspace/algo/gex.py later (same pattern, mult=100).
+"""
+import logging
+import time
+from collections import deque
+
+import config
+
+log = logging.getLogger("algo.gex")
+
+EVAL_SEC = float(getattr(config, "GEX_EVAL_SEC", 300))
+TWAP_SEC = 900.0            # 15-min gamma TWAP
+HYST_MULT = 1.25            # challenger must exceed incumbent by this
+HYST_EVALS = 3              # ... on this many consecutive evaluations
+ZONE_FRAC = 0.70            # zone = contiguous strikes above this x wall GEX
+DOLLAR_SCALE = 1e9          # publish dollar-gamma in $B
+GRID_STEP = 5.0
+
+
+class GexState:
+    def __init__(self, mult: float = None):
+        self.mult = mult if mult else config.GEX_MULT
+        self.oi: dict = {}
+        # ---- published (5-min wall clock) ----
+        self.call_wall: float | None = None
+        self.put_wall: float | None = None
+        self.call_zone: tuple | None = None   # (lo, hi)
+        self.put_zone: tuple | None = None
+        self.call_conf: float = 0.0
+        self.put_conf: float = 0.0
+        self.flip: float | None = None
+        self.regime: str = "flat"             # '+', '-', 'flat' (hysteresis-gated)
+        self.magnets: list[float] = []
+        self.net_total: float = 0.0           # $B, smoothed
+        self.spot: float = 0.0
+        self.evals: int = 0
+        # ---- internals ----
+        self._samples: dict[tuple, deque] = {}   # (strike,right) -> [(ts, gamma)]
+        self._last_eval: float = 0.0
+        self._walls = {
+            "C": {"inc": None, "since": 0.0, "chal": None, "count": 0},
+            "P": {"inc": None, "since": 0.0, "chal": None, "count": 0},
+        }
+        self._regime_sign: int = 0
+        self._regime_count: int = 0
+
+    # ---------------- tick-path: only records ----------------
+    def note_gamma(self, gamma_map: dict, ts: float = None):
+        """Called every loop iteration. Appends (ts, gamma) samples; prunes
+        anything older than TWAP_SEC. Never recomputes walls."""
+        ts = ts if ts is not None else time.time()
+        cutoff = ts - TWAP_SEC
+        for key, g in gamma_map.items():
+            if not g or g <= 0:
+                continue
+            dq = self._samples.setdefault(key, deque())
+            dq.append((ts, float(g)))
+            while dq and dq[0][0] < cutoff:
+                dq.popleft()
+
+    # ---------------- 5-min wall clock ----------------
+    def maybe_evaluate(self, oi: dict, spot: float, ts: float = None) -> dict | None:
+        """Evaluate at most every EVAL_SEC. Returns the WALLS payload dict
+        when an evaluation ran, else None. The trade loop calls this every
+        iteration and reads the published attributes otherwise."""
+        ts = ts if ts is not None else time.time()
+        if ts - self._last_eval < EVAL_SEC:
+            return None
+        if not spot or spot <= 0:
+            return None
+        return self.evaluate(oi, spot, ts)   # evaluate() resets the clock
+
+    def evaluate(self, oi: dict, spot: float, ts: float) -> dict:
+        self._last_eval = ts   # forced evals also reset the 5-min wall clock
+        self.oi = oi
+        self.spot = spot
+        self.evals += 1
+
+        # 1. gamma TWAP15 per (strike, right)
+        twap = {k: self._twap(k, ts) for k in self._samples}
+        twap = {k: v for k, v in twap.items() if v and v > 0}
+
+        # 2. dollar gamma ($B) per strike per side
+        raw: dict[str, dict[float, float]] = {"C": {}, "P": {}}
+        for (k, r), o in oi.items():
+            if not o or o <= 0:
+                continue
+            g = twap.get((k, r))
+            if not g:
+                continue
+            raw[r][k] = o * g * spot * spot * self.mult / DOLLAR_SCALE
+
+        # 3. smooth on the 5-pt grid
+        sm = {r: self._smooth(raw[r]) for r in ("C", "P")}
+
+        # 4-6. hysteresis -> wall, zone, confidence per side
+        for r, attr in (("C", "call"), ("P", "put")):
+            st = self._walls[r]
+            raw_wall = max(sm[r], key=lambda s: sm[r][s]) if sm[r] else None
+            wall = self._apply_hysteresis(st, raw_wall, sm[r], ts)
+            setattr(self, f"{attr}_wall", wall)
+            if wall is None:
+                setattr(self, f"{attr}_zone", None)
+                setattr(self, f"{attr}_conf", 0.0)
+                continue
+            zone = self._zone(wall, sm[r])
+            setattr(self, f"{attr}_zone", zone)
+            conf = self._confidence(st, wall, sm[r], zone, ts)
+            setattr(self, f"{attr}_conf", conf)
+
+        # 7. net / flip / magnets from smoothed series
+        strikes = sorted(set(sm["C"]) | set(sm["P"]))
+        net = {s: sm["C"].get(s, 0.0) - sm["P"].get(s, 0.0) for s in strikes}
+        self.net_total = sum(net.values())
+        cum, flip = 0.0, None
+        for s in strikes:
+            prev, cum = cum, cum + net[s]
+            if (prev < 0 <= cum) or (prev > 0 >= cum):
+                flip = s
+                break
+        self.flip = flip
+        self.magnets = sorted(strikes, key=lambda s: abs(net[s]), reverse=True)[:5]
+
+        # 8. regime sign with hysteresis
+        sign = 1 if self.net_total > 0 else (-1 if self.net_total < 0 else 0)
+        if sign == self._regime_sign:
+            self._regime_count = 0
+        else:
+            self._regime_count += 1
+            if self._regime_count >= HYST_EVALS:
+                self._regime_sign = sign
+                self._regime_count = 0
+                log.info("REGIME flip -> %s (net %+.2f $B)",
+                         {1: "+", -1: "-", 0: "flat"}[sign], self.net_total)
+        self.regime = {1: "+", -1: "-", 0: "flat"}[self._regime_sign]
+
+        payload = self.walls_payload(ts)
+        log.info("WALLS eval #%d: %s", self.evals, payload)
+        return payload
+
+    # ---------------- internals ----------------
+    def _twap(self, key: tuple, now: float) -> float | None:
+        dq = self._samples.get(key)
+        if not dq:
+            return None
+        cutoff = now - TWAP_SEC
+        # time-weighted: each sample holds until the next sample (or now)
+        num, den = 0.0, 0.0
+        prev_t = max(dq[0][0], cutoff)
+        for t, g in dq:
+            if t < cutoff:
+                continue
+            num += g * (t - prev_t)
+            den += (t - prev_t)
+            prev_t = t
+        num += dq[-1][1] * (now - prev_t)
+        den += (now - prev_t)
+        if den <= 0:
+            return dq[-1][1]  # single sample exactly at eval time: use it
+        return num / den
+
+    def _smooth(self, gex: dict[float, float]) -> dict[float, float]:
+        """0.25/0.5/0.25 smoothing on the uniform 5-pt grid. Missing strikes
+        contribute 0 (edges are far-OTM; documented, not hidden)."""
+        if not gex:
+            return {}
+        lo = min(gex)
+        hi = max(gex)
+        n = int(round((hi - lo) / GRID_STEP)) + 1
+        grid = [round(lo + i * GRID_STEP, 6) for i in range(n)]
+        get = {round(k, 6): v for k, v in gex.items()}
+        sm = {}
+        for i, s in enumerate(grid):
+            c = get.get(s, 0.0)
+            p = get.get(round(s - GRID_STEP, 6), 0.0)
+            q = get.get(round(s + GRID_STEP, 6), 0.0)
+            sm[s] = 0.25 * p + 0.5 * c + 0.25 * q
+        return sm
+
+    def _apply_hysteresis(self, st: dict, raw_wall, gex_s: dict, ts: float):
+        inc = st["inc"]
+        if raw_wall is None:
+            return inc  # no data: hold the incumbent (fail static, not jumping)
+        if inc is None:
+            st["inc"], st["since"] = raw_wall, ts
+            st["chal"], st["count"] = None, 0
+            return raw_wall
+        if raw_wall == inc:
+            st["chal"], st["count"] = None, 0
+            return inc
+        if st["chal"] != raw_wall:
+            st["chal"], st["count"] = raw_wall, 0
+        g_inc = gex_s.get(inc, 0.0)
+        g_chal = gex_s.get(raw_wall, 0.0)
+        strong = (g_chal > HYST_MULT * g_inc) if g_inc > 0 else (g_chal > 0)
+        if strong:
+            st["count"] += 1
+            if st["count"] >= HYST_EVALS:
+                log.info("WALL switch %s -> %s (%.2f vs %.2f $B, %d evals)",
+                         inc, raw_wall, g_chal, g_inc, st["count"])
+                st["inc"], st["since"] = raw_wall, ts
+                st["chal"], st["count"] = None, 0
+                return raw_wall
+        else:
+            st["count"] = 0  # challenger not decisively stronger: hold
+        return inc
+
+    def _zone(self, wall: float, gex_s: dict) -> tuple:
+        """Contiguous strikes with GEX_s > ZONE_FRAC x GEX_s[wall]."""
+        thresh = ZONE_FRAC * gex_s[wall]
+        lo = hi = wall
+        while gex_s.get(round(lo - GRID_STEP, 6), 0.0) > thresh:
+            lo = round(lo - GRID_STEP, 6)
+        while gex_s.get(round(hi + GRID_STEP, 6), 0.0) > thresh:
+            hi = round(hi + GRID_STEP, 6)
+        return (lo, hi)
+
+    def _confidence(self, st: dict, wall: float, gex_s: dict,
+                    zone: tuple, ts: float) -> float:
+        tenure_min = (ts - st["since"]) / 60.0
+        tenure_f = min(1.0, tenure_min / 60.0)
+        zlo, zhi = zone
+        others = [v for s, v in gex_s.items()
+                  if s != wall and not (zlo <= s <= zhi)]
+        runner = max(others) if others else 0.0
+        gw = gex_s[wall]
+        margin = (gw - runner) / runner if runner > 0 else float("inf")
+        margin_f = min(1.0, margin / 0.5)
+        return round(tenure_f * margin_f, 3)
+
+    # ---------------- published readers ----------------
+    def walls_payload(self, ts: float) -> dict:
+        def tenure(side):
+            st = self._walls[side]
+            return round((ts - st["since"]) / 60.0, 1) if st["inc"] else 0.0
+        return {
+            "call_wall": self.call_wall, "call_zone": self.call_zone,
+            "call_conf": self.call_conf, "call_tenure_min": tenure("C"),
+            "put_wall": self.put_wall, "put_zone": self.put_zone,
+            "put_conf": self.put_conf, "put_tenure_min": tenure("P"),
+            "flip": self.flip, "regime": self.regime,
+            "net_total_B": round(self.net_total, 3),
+            "magnets": self.magnets, "evals": self.evals,
+        }
+
+    def gamma_regime(self) -> str:
+        """Published regime: '+', '-', 'flat' (hysteresis-gated)."""
+        return self.regime
+
+    def wall_for_fade(self, spot: float):
+        """(wall, side, entry_edge, confidence) if spot touches a wall zone
+        from the outside within FADE_TOUCH_PTS. Entry edge = near zone edge
+        (better fill than the wall strike itself)."""
+        if self.call_wall is not None and self.call_zone is not None:
+            zlo, _zhi = self.call_zone
+            if 0 <= zlo - spot <= config.FADE_TOUCH_PTS:
+                return self.call_wall, "short", zlo, self.call_conf
+        if self.put_wall is not None and self.put_zone is not None:
+            _zlo, zhi = self.put_zone
+            if 0 <= spot - zhi <= config.FADE_TOUCH_PTS:
+                return self.put_wall, "long", zhi, self.put_conf
+        return None, None, None, 0.0
+
+    def magnet_beyond(self, ref: float, direction: int) -> float | None:
+        cands = [m for m in self.magnets
+                 if (direction > 0 and m > ref) or (direction < 0 and m < ref)]
+        if not cands:
+            return None
+        return min(cands) if direction > 0 else max(cands)
+
+    @staticmethod
+    def dominance(wall: float, right: str, oi: dict, step: float = 5.0):
+        """Wall OI / adjacent spot-side strike OI (same right)."""
+        wall_oi = oi.get((wall, right), 0.0) or 0.0
+        if wall_oi <= 0:
+            return None
+        adj = wall - step if right == "C" else wall + step
+        adj_oi = oi.get((adj, right), 0.0) or 0.0
+        if adj_oi <= 0:
+            return float("inf")
+        return wall_oi / adj_oi

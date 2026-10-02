@@ -1,1 +1,90 @@
-IiIiR0VYIGxldmVscyBmcm9tIEZST1pFTiBtb3JuaW5nIE9JIHggTElWRSBnYW1tYSAoSUJLUi1zZW50IEdyZWVrcykuCgpHRVhfc3RyaWtlID0gKy8tIE9JIHggZ2FtbWEgeCAxMDAgeCBzcG90XjIgICAoY2FsbHMgKywgcHV0cyAtKQpJbmNyZW1lbnRhbDogYSBzdHJpa2UncyBHRVggaXMgcmVjb21wdXRlZCBvbmx5IHdoZW4gaXRzIGdhbW1hIG1vdmVkCm1hdGVyaWFsbHkgKD5HQU1NQV9DSEFOR0VfUENUKTsgbGV2ZWxzIHJlLWRlcml2ZSBvbiBhbnkgY2hhbmdlLCBwbHVzIGEgZnVsbApyZWZyZXNoIGV2ZXJ5IEdFWF9SRUNPTVBVVEVfU0VDLgoiIiIKaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IHRpbWUKCmltcG9ydCBjb25maWcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvLmdleCIpCgoKY2xhc3MgR2V4U3RhdGU6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi5uZXQ6IGRpY3RbZmxvYXQsIGZsb2F0XSA9IHt9ICAgICAgICMgc3RyaWtlIC0+IG5ldCBHRVggKCQpCiAgICAgICAgc2VsZi5tYWduZXRzOiBsaXN0W2Zsb2F0XSA9IFtdICAgICAgICAgICMgdG9wLTUgfG5ldHwgc3RyaWtlcwogICAgICAgIHNlbGYuZmxpcDogZmxvYXQgfCBOb25lID0gTm9uZQogICAgICAgIHNlbGYuY2FsbF93YWxsOiBmbG9hdCB8IE5vbmUgPSBOb25lCiAgICAgICAgc2VsZi5wdXRfd2FsbDogZmxvYXQgfCBOb25lID0gTm9uZQogICAgICAgIHNlbGYuX2xhc3RfZ2FtbWE6IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGZsb2F0XSA9IHt9CiAgICAgICAgc2VsZi5fbGFzdF9mdWxsID0gMC4wCiAgICAgICAgc2VsZi5zcG90ID0gMC4wCgogICAgZGVmIHVwZGF0ZShzZWxmLCBvaTogZGljdCwgZ2FtbWFfbWFwOiBkaWN0LCBzcG90OiBmbG9hdCwgZm9yY2U9RmFsc2UpIC0+IGJvb2w6CiAgICAgICAgIiIiUmV0dXJucyBUcnVlIGlmIGxldmVscyBjaGFuZ2VkLiIiIgogICAgICAgIGlmIG5vdCBzcG90IG9yIHNwb3QgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgc2VsZi5zcG90ID0gc3BvdAogICAgICAgIG5vdyA9IHRpbWUubW9ub3RvbmljKCkKICAgICAgICBjaGFuZ2VkID0gZm9yY2Ugb3IgKG5vdyAtIHNlbGYuX2xhc3RfZnVsbCA+IGNvbmZpZy5HRVhfUkVDT01QVVRFX1NFQykKICAgICAgICBpZiBmb3JjZToKICAgICAgICAgICAgc2VsZi5fbGFzdF9nYW1tYSA9IHt9CiAgICAgICAgZm9yIGtleSwgZyBpbiBnYW1tYV9tYXAuaXRlbXMoKToKICAgICAgICAgICAgaWYgZyA8PSAwOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgb2xkID0gc2VsZi5fbGFzdF9nYW1tYS5nZXQoa2V5KQogICAgICAgICAgICBpZiBvbGQgaXMgTm9uZSBvciBhYnMoZyAtIG9sZCkgLyBtYXgob2xkLCAxZS0xMikgPiBjb25maWcuR0FNTUFfQ0hBTkdFX1BDVDoKICAgICAgICAgICAgICAgIHNlbGYuX2xhc3RfZ2FtbWFba2V5XSA9IGcKICAgICAgICAgICAgICAgIGNoYW5nZWQgPSBUcnVlCiAgICAgICAgaWYgbm90IGNoYW5nZWQ6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIHNlbGYuX3JlY29tcHV0ZShvaSwgc3BvdCkKICAgICAgICBzZWxmLl9sYXN0X2Z1bGwgPSBub3cKICAgICAgICByZXR1cm4gVHJ1ZQoKICAgIGRlZiBfcmVjb21wdXRlKHNlbGYsIG9pLCBzcG90KToKICAgICAgICBwZXI6IGRpY3RbZmxvYXQsIGxpc3RdID0ge30gICMgc3RyaWtlIC0+IFtjYWxsX2dleCwgcHV0X2dleF0KICAgICAgICBmb3IgKGssIHIpLCBvIGluIG9pLml0ZW1zKCk6CiAgICAgICAgICAgIGlmIG5vdCBvOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgZyA9IHNlbGYuX2xhc3RfZ2FtbWEuZ2V0KChrLCByKSkKICAgICAgICAgICAgaWYgbm90IGcgb3IgZyA8PSAwOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgdiA9IG8gKiBnICogMTAwLjAgKiBzcG90ICogc3BvdAogICAgICAgICAgICBkID0gcGVyLnNldGRlZmF1bHQoaywgWzAuMCwgMC4wXSkKICAgICAgICAgICAgZFswIGlmIHIgPT0gIkMiIGVsc2UgMV0gKz0gdgogICAgICAgIHN0cmlrZXMgPSBzb3J0ZWQocGVyKQogICAgICAgIHNlbGYubmV0ID0ge3M6IHBlcltzXVswXSAtIHBlcltzXVsxXSBmb3IgcyBpbiBzdHJpa2VzfQogICAgICAgIGN1bSwgZmxpcCA9IDAuMCwgTm9uZQogICAgICAgIGZvciBzIGluIHN0cmlrZXM6CiAgICAgICAgICAgIHByZXYsIGN1bSA9IGN1bSwgY3VtICsgc2VsZi5uZXRbc10KICAgICAgICAgICAgaWYgKHByZXYgPCAwIDw9IGN1bSkgb3IgKHByZXYgPiAwID49IGN1bSk6CiAgICAgICAgICAgICAgICBmbGlwID0gcwogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICBzZWxmLmZsaXAgPSBmbGlwCiAgICAgICAgc2VsZi5tYWduZXRzID0gc29ydGVkKHN0cmlrZXMsIGtleT1sYW1iZGEgczogYWJzKHNlbGYubmV0W3NdKSwgcmV2ZXJzZT1UcnVlKVs6NV0KICAgICAgICBzZWxmLmNhbGxfd2FsbCA9IG1heChzdHJpa2VzLCBrZXk9bGFtYmRhIHM6IHBlcltzXVswXSkgaWYgc3RyaWtlcyBlbHNlIE5vbmUKICAgICAgICAjIHB1dCB3YWxsID0gc3RyaWtlIHdpdGggbGFyZ2VzdCBwdXQtR0VYIG1hZ25pdHVkZSAobW9zdCBuZWdhdGl2ZSBwdXQgbGVnKQogICAgICAgIHNlbGYucHV0X3dhbGwgPSBtYXgoc3RyaWtlcywga2V5PWxhbWJkYSBzOiBwZXJbc11bMV0pIGlmIHN0cmlrZXMgZWxzZSBOb25lCiAgICAgICAgbG9nLmluZm8oIkdFWCBsZXZlbHM6IGZsaXA9JXMgbWFnbmV0cz0lcyBjYWxsX3dhbGw9JXMgcHV0X3dhbGw9JXMiLAogICAgICAgICAgICAgICAgIGZsaXAsIFtmInttOi4wZn0iIGZvciBtIGluIHNlbGYubWFnbmV0c10sCiAgICAgICAgICAgICAgICAgc2VsZi5jYWxsX3dhbGwsIHNlbGYucHV0X3dhbGwpCgogICAgZGVmIHdhbGxfZm9yKHNlbGYsIHN0cmlrZTogZmxvYXQsIHJpZ2h0OiBzdHIpIC0+IGZsb2F0IHwgTm9uZToKICAgICAgICAiIiJOZWFyZXN0IHdhbGwgYmV5b25kIHRoZSBzdHJpa2UgaW4gdGhlIHBvc2l0aW9uJ3MgZGlyZWN0aW9uLiIiIgogICAgICAgIGNhbmRzID0gbGlzdChzZWxmLm1hZ25ldHMpCiAgICAgICAgaWYgc2VsZi5mbGlwOgogICAgICAgICAgICBjYW5kcy5hcHBlbmQoc2VsZi5mbGlwKQogICAgICAgIGlmIHNlbGYuY2FsbF93YWxsOgogICAgICAgICAgICBjYW5kcy5hcHBlbmQoc2VsZi5jYWxsX3dhbGwpCiAgICAgICAgaWYgc2VsZi5wdXRfd2FsbDoKICAgICAgICAgICAgY2FuZHMuYXBwZW5kKHNlbGYucHV0X3dhbGwpCiAgICAgICAgaWYgcmlnaHQgPT0gImNhbGwiOgogICAgICAgICAgICBhYm92ZSA9IFt3IGZvciB3IGluIGNhbmRzIGlmIHcgYW5kIHcgPiBzdHJpa2VdCiAgICAgICAgICAgIHJldHVybiBtaW4oYWJvdmUpIGlmIGFib3ZlIGVsc2UgTm9uZQogICAgICAgIGJlbG93ID0gW3cgZm9yIHcgaW4gY2FuZHMgaWYgdyBhbmQgdyA8IHN0cmlrZV0KICAgICAgICByZXR1cm4gbWF4KGJlbG93KSBpZiBiZWxvdyBlbHNlIE5vbmUK
+"""GEX levels from FROZEN morning OI x LIVE gamma (IBKR-sent Greeks).
+
+GEX_strike = +/- OI x gamma x 100 x spot^2   (calls +, puts -)
+Incremental: a strike's GEX is recomputed only when its gamma moved
+materially (>GAMMA_CHANGE_PCT); levels re-derive on any change, plus a full
+refresh every GEX_RECOMPUTE_SEC.
+"""
+import logging
+import time
+
+import config
+
+log = logging.getLogger("algo.gex")
+
+
+class GexState:
+    def __init__(self):
+        self.net: dict[float, float] = {}       # strike -> net GEX ($)
+        self.magnets: list[float] = []          # top-5 |net| strikes
+        self.flip: float | None = None
+        self.call_wall: float | None = None
+        self.put_wall: float | None = None
+        self._last_gamma: dict[tuple[float, str], float] = {}
+        self._last_full = 0.0
+        self.spot = 0.0
+
+    def update(self, oi: dict, gamma_map: dict, spot: float, force=False) -> bool:
+        """Returns True if levels changed."""
+        if not spot or spot <= 0:
+            return False
+        self.spot = spot
+        now = time.monotonic()
+        changed = force or (now - self._last_full > config.GEX_RECOMPUTE_SEC)
+        if force:
+            self._last_gamma = {}
+        for key, g in gamma_map.items():
+            if g <= 0:
+                continue
+            old = self._last_gamma.get(key)
+            if old is None or abs(g - old) / max(old, 1e-12) > config.GAMMA_CHANGE_PCT:
+                self._last_gamma[key] = g
+                changed = True
+        if not changed:
+            return False
+        self._recompute(oi, spot)
+        self._last_full = now
+        return True
+
+    def _recompute(self, oi, spot):
+        per: dict[float, list] = {}  # strike -> [call_gex, put_gex]
+        for (k, r), o in oi.items():
+            if not o:
+                continue
+            g = self._last_gamma.get((k, r))
+            if not g or g <= 0:
+                continue
+            v = o * g * 100.0 * spot * spot
+            d = per.setdefault(k, [0.0, 0.0])
+            d[0 if r == "C" else 1] += v
+        strikes = sorted(per)
+        self.net = {s: per[s][0] - per[s][1] for s in strikes}
+        cum, flip = 0.0, None
+        for s in strikes:
+            prev, cum = cum, cum + self.net[s]
+            if (prev < 0 <= cum) or (prev > 0 >= cum):
+                flip = s
+                break
+        self.flip = flip
+        self.magnets = sorted(strikes, key=lambda s: abs(self.net[s]), reverse=True)[:5]
+        self.call_wall = max(strikes, key=lambda s: per[s][0]) if strikes else None
+        # put wall = strike with largest put-GEX magnitude (most negative put leg)
+        self.put_wall = max(strikes, key=lambda s: per[s][1]) if strikes else None
+        log.info("GEX levels: flip=%s magnets=%s call_wall=%s put_wall=%s",
+                 flip, [f"{m:.0f}" for m in self.magnets],
+                 self.call_wall, self.put_wall)
+
+    def wall_for(self, strike: float, right: str) -> float | None:
+        """Nearest wall beyond the strike in the position's direction."""
+        cands = list(self.magnets)
+        if self.flip:
+            cands.append(self.flip)
+        if self.call_wall:
+            cands.append(self.call_wall)
+        if self.put_wall:
+            cands.append(self.put_wall)
+        if right == "call":
+            above = [w for w in cands if w and w > strike]
+            return min(above) if above else None
+        below = [w for w in cands if w and w < strike]
+        return max(below) if below else None

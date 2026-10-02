@@ -1,1 +1,115 @@
-IyBCVUlMRF9OT1RFUyDigJQgYWxnb19lcwoKIyMgMS4gV2h5IHdhbGxzIGJvdW5jZSAoZGlhZ25vc2lzKQoKVGhlIG5haXZlIGFwcHJvYWNoIOKAlCBgYXJnbWF4YCBvdmVyIGluc3RhbnRhbmVvdXMgcGVyLXN0cmlrZSBnYW1tYSwgcmVjb21wdXRlZApldmVyeSBsb29wIOKAlCBwcm9kdWNlcyB3YWxscyB0aGF0IGRlcml2ZSwgYm91bmNlLCBhbmQganVtcC4gVGhyZWUgY29tcG91bmRpbmcKY2F1c2VzOgoKMS4gKiphcmdtYXggb3ZlciBpbnN0YW50YW5lb3VzIGdhbW1hIGZsaWNrZXJzLioqIFR3byBhZGphY2VudCBzdHJpa2VzIHdpdGgKICAgc2ltaWxhciBHRVggc3dhcCB0aGUgbGVhZCBldmVyeSB0aWNrOiBiaWQvYXNrIGJvdW5jZSDihpIgbW9kZWwtZ2FtbWEKICAgaml0dGVyIOKGkiB0aGUgIndhbGwiIGp1bXBzIHN0cmlrZS10by1zdHJpa2Ugb24gcHVyZSBub2lzZS4KMi4gKipHYW1tYSBpcyBwcmljZS1kZXBlbmRlbnQuKiogQXMgc3BvdCBhcHByb2FjaGVzIGEgc3RyaWtlIGl0cyBnYW1tYQogICBpbmZsYXRlcywgc28gcmF3IHdhbGxzICpjaGFzZSBwcmljZSogaW5zdGVhZCBvZiBtYXJraW5nIHN0cnVjdHVyZS4gVGhlCiAgIHdhbGwgZm9sbG93cyB0aGUgbWFya2V0IHJhdGhlciB0aGFuIHRoZSBtYXJrZXQgcmVzcGVjdGluZyB0aGUgd2FsbC4KMy4gKipUaWNrLWNhZGVuY2UgcmVjb21wdXRhdGlvbioqIHR1cm5zICgxKSsoMikgaW50byB2aXNpYmxlIHdhbGwganVtcHMuCiAgIFdhbGxzIGFyZSBzdHJ1Y3R1cmFsIHN1cHBseS9kZW1hbmQgY29uY2VudHJhdGlvbnM7IHJlY29tcHV0aW5nIHRoZW0gYXQKICAgNS1zZWNvbmQgY2FkZW5jZSBpcyBhIGNhdGVnb3J5IGVycm9yLgoKVGhlaXIgb2xkIHNlcnZlcidzIGBHRVhfV0FMTF9NT0RFPXN0YWJsZWAgd2FzIGEgcGF0Y2ggb24gdGhlIHNhbWUgYXJnbWF4Owp0aGUgZmxpY2tlciBpcyBzdHJ1Y3R1cmFsIHRvIHRoZSBlc3RpbWF0b3IsIG5vdCB0aGUgbW9kZSBmbGFnLgoKIyMgMi4gVGhlIFN0YWJsZVdhbGwgZXN0aW1hdG9yIChgZ2V4LnB5YCkKCi0gKipXYWxsIGNsb2NrOiA1IG1pbnV0ZXMuKiogYG1heWJlX2V2YWx1YXRlKClgIHJ1bnMgYXQgbW9zdCBldmVyeQogIGBFU19HRVhfRVZBTF9TRUNgICgzMDBzKS4gVGhlIDVzIHRyYWRlIGxvb3Agb25seSAqcmVjb3JkcyogZ2FtbWEgc2FtcGxlcwogIChgbm90ZV9nYW1tYWApIGFuZCAqcmVhZHMqIHRoZSBsYXN0IHB1Ymxpc2hlZCB3YWxscy4gU21va2UgVDEgcHJvdmVzIDQ4CiAgaml0dGVyZWQgdGlja3MgZmlyZSB6ZXJvIGV2YWx1YXRpb25zIGFuZCBtb3ZlIG5vIHdhbGwuCi0gKipnYW1tYV9UV0FQMTUgw5cgZnJvemVuIE9JIOKGkiBkb2xsYXIgZ2FtbWEuKiogRWFjaCBldmFsdWF0aW9uIHVzZXMgdGhlCiAgMTUtbWluIHRpbWUtd2VpZ2h0ZWQgYXZlcmFnZSBvZiBJQktSLXNlbnQgZ2FtbWEgcGVyIHN0cmlrZSAoa2lsbHMgdGljawogIG5vaXNlKSB0aW1lcyB0aGUgaG91cmx5LWZyb3plbiBGT1AgT0k6IGBPSSDDlyBnYW1tYSDDlyBzcG90wrIgw5cgNTAgLyAxZTlgCiAgKCRCKS4gQmV0d2VlbiBob3VybHkgc3dlZXBzIE9JIGlzIGZyb3plbiBhbmQgZ2FtbWEga2VlcHMgZmxvd2luZyDigJQgdGhlCiAgZG9jdW1lbnRlZCBHbG9iZXggY29tcHJvbWlzZSAobm8gbW9ybmluZyBzbmFwc2hvdCBleGlzdHMgb24gYSAyNGgKICBtYXJrZXQpLgotICoqU3RyaWtlIHNtb290aGluZy4qKiBgR0VYX3Nba10gPSAwLjI1wrdHRVhba+KIkjVdICsgMC41wrdHRVhba10gKyAwLjI1wrdHRVhbays1XWAKICBvbiB0aGUgNS1wdCBncmlkLiBBZGphY2VudC1zdHJpa2UgZmxpY2tlciBtZXJnZXMgaW50byBvbmUgaHVtcCBpbnN0ZWFkIG9mCiAgdHdvIGFsdGVybmF0aW5nIGFyZ21heCB3aW5uZXJzLgotICoqSHlzdGVyZXNpcyAoU2NobWl0dCB0cmlnZ2VyKS4qKiBUaGUgaW5jdW1iZW50IHdhbGwga2VlcHMgc3RhdHVzIHVudGlsIGEKICBjaGFsbGVuZ2VyIGV4Y2VlZHMgKioxLjI1w5cqKiBpdHMgc21vb3RoZWQgR0VYIG9uICoqMyBjb25zZWN1dGl2ZSoqIDUtbWluCiAgZXZhbHVhdGlvbnMgKDE1IG1pbikuIFNtb2tlIFQyOiDCsTEwJS9taW4gb3NjaWxsYXRpb24gZm9yIDYwIG1pbiDihpIgd2FsbAogIG5ldmVyIG1vdmVzLiBTbW9rZSBUMy9UNDogYSAyLjLDlyBzdGVwIOKGkiBleGFjdGx5IG9uZSBzd2l0Y2gsIHRoZW4gaG9sZHM7CiAgcmVtb3ZpbmcgaXQg4oaSIGV4YWN0bHkgb25lIHN3aXRjaCBiYWNrLiBOb3RlIHRoZSBob25lc3QgbGF0ZW5jeTogVFdBUDE1CiAgbmVlZHMgfjEwIG1pbiB0byByZWdpc3RlciBhIHN0ZXAgYXMgInN0cm9uZyIsIHNvIGEgMsOXIHN0ZXAgc3dpdGNoZXMgYXQKICB+MjUgbWluLiBHZW51aW5lIHJlZ2ltZSBzaGlmdHMgc3RpbGwgcGFzczsgZmxpY2tlciBuZXZlciBkb2VzLgotICoqWm9uZSwgbm90IGEgbGluZS4qKiBQdWJsaXNoZWQgem9uZSA9IGNvbnRpZ3VvdXMgc3RyaWtlcyB3aXRoCiAgYEdFWF9zID4gMC43MCDDlyBHRVhfc1t3YWxsXWAg4oaSIGBbem9uZV9sbywgem9uZV9oaV1gLiBGYWRlIGVudHJpZXMgdXNlIHRoZQogIG5lYXIgem9uZSBlZGdlIChiZXR0ZXIgZmlsbCB0aGFuIHRoZSB3YWxsIHN0cmlrZSk7ICoqYnJlYWsgZGV0ZWN0aW9uIHVzZXMKICB6b25lIGVkZ2VzKiog4oCUIDIgY29uc2VjdXRpdmUgMS1taW4gY2xvc2VzIGJleW9uZCB0aGUgZWRnZSAoKzJwdCBidWZmZXIpLgogIEEgd2ljayB0aHJvdWdoIHRoZSB3YWxsIHN0cmlrZSBpcyBub3QgYSBicmVhayAoc21va2UgVDcpLgotICoqQ29uZmlkZW5jZS4qKiBgbWluKDEsIHRlbnVyZV9taW4vNjApIMOXIG1pbigxLCBtYXJnaW4vMC41KWAsCiAgYG1hcmdpbiA9IChHRVhbd2FsbF3iiJJHRVhbcnVubmVyLXVwXSkvR0VYW3J1bm5lci11cF1gIHdpdGggcnVubmVyLXVwID0gYmVzdAogIHNhbWUtc2lkZSBzdHJpa2UgKm91dHNpZGUqIHRoZSB6b25lLiBTdHJhdGVneSBnYXRpbmc6IGZhZGUgbmVlZHMKICBjb25maWRlbmNlIOKJpSAqKjAuNSoqOyBicmVha291dCBhcm1pbmcgbmVlZHMg4omlICoqMC4zNSoqIChzbW9rZSBUOC9UOSkuCi0gKipGbGlwL3JlZ2ltZSBoeXN0ZXJlc2lzLioqIE5ldC1HRVggc2lnbiBtdXN0IGhvbGQgMyBjb25zZWN1dGl2ZQogIGV2YWx1YXRpb25zIGJlZm9yZSB0aGUgcHVibGlzaGVkIHJlZ2ltZSBmbGlwcyDigJQgc2FtZSBTY2htaXR0IHBhdHRlcm4uCi0gRXZlcnkgZXZhbHVhdGlvbiBlbWl0cyBgV0FMTFNgIHdpdGggd2FsbCwgem9uZSwgY29uZmlkZW5jZSwgdGVudXJlLAogIGZsaXAsIHJlZ2ltZSwgbmV0ICRCLCBtYWduZXRzLgoKKipCYWNrcG9ydDoqKiB0aGlzIHBhdHRlcm4gcG9ydHMgZGlyZWN0bHkgdG8gYH4vd29ya3NwYWNlL2FsZ28vZ2V4LnB5YAoobXVsdD0xMDAsIFNQWFcgT0kgaW5zdGVhZCBvZiBGT1ApLiBOb3QgZG9uZSB5ZXQg4oCUIGZsYWdnZWQgZm9yIGxhdGVyLgoKIyMgMy4gRGVzaWduIGRlY2lzaW9ucyAmIGRldmlhdGlvbnMKCi0gKipWZWhpY2xlIGlzIGZ1dHVyZXMsIG5vdCBvcHRpb25zLioqIEFsbCBHRVggbWF0aCBpcyBvbmx5IHVzZWQgdG8gbG9jYXRlCiAgbGV2ZWxzOyBlbnRyaWVzL2V4aXRzIGFyZSBFUyBmdXR1cmVzICgkNTAvcHQpLiBObyBGT1AgbGVncyBhcmUgdHJhZGVkLgotICoqRk9QIGV4cGlyeSA9IGZyb250IEZyaWRheSB3ZWVrbHkqKiAoRnJpZGF5LXByZWZlcnJpbmcgZGlzY292ZXJ5OwogIGRvY3VtZW50OiBGT1BzIGFyZSBBbWVyaWNhbi1zdHlsZSwgd2Vla2xpZXMgZXhwaXJlIEZyaWRheSkuCi0gKipGYWRlIFRQMSA9IGZsaXAqKiwgbm90IHRoZSB3YWxsOiBpbiArZ2FtbWEgdGhlIGZsaXAgaXMgdGhlIG1hZ25ldCB0aGUKICB3YWxsIGZhZGVzICp0b3dhcmQqLiBTdG9wIDYgcHRzIGJleW9uZCB0aGUgd2FsbCAoc3RydWN0dXJhbCBpbnZhbGlkYXRpb24pLAogIG5vdCBhIHByZW1pdW0gc3RvcC4KLSAqKkJyZWFrb3V0IHN0b3AgPSA0IHB0cyBiYWNrIGluc2lkZSBmcm9tIHRoZSBicm9rZW4gem9uZSBlZGdlKiogKGEgY2xvc2UKICBiYWNrIGluc2lkZSB0aGUgem9uZSA9IHRoZXNpcyBkZWFkKSwgdGFyZ2V0ID0gbmV4dCBtYWduZXQgYmV5b25kIHRoZSBlZGdlCiAgZWxzZSAyw5cgc3RvcCBtZWFzdXJlZCBtb3ZlLgotICoqWm9uZSBzbmFwc2hvdCBhdCBhcm0gdGltZSoqIGZvciBgV2FsbEJyZWFrU3RhdGVgOiBicmVhayBkZXRlY3Rpb24gcnVucwogIGFnYWluc3QgdGhlIGFybWVkIHpvbmUgZXZlbiBpZiB0aGUgZXN0aW1hdG9yIHJlcHVibGlzaGVzIG1pZC1icmVhay4KLSAqKkZsYXR0ZW4gMTY6NTUgRVQqKiBiZWZvcmUgdGhlIDE3OjAw4oCTMTg6MDAgR2xvYmV4IGhhbHQgKGRlZmF1bHQgb24pOwogIG5vIGVudHJpZXMgaW5zaWRlIHRoZSBmbGF0dGVuIHdpbmRvdy4KLSAqKlJpc2s6KiogJDIwMC90cmFkZSDihpIgYGZsb29yKDIwMC8oc3RvcF9wdHPDlzUwKSlgLCBtaW4gMSBjb250cmFjdDsKICA0IHRyYWRlcy9kYXk7IG9uZSBwb3NpdGlvbjsg4oiSMiUgTmV0TGlxIGtpbGwgc3dpdGNoLiBHbG9iZXggImRheSIgPQogIDE4OjAw4oaSMTc6MDAgRVQgZm9yIHRoZSBkYWlseSByZXNldC4KLSAqKkNoYXNzaXMqKiAoRFUqIHBhcGVyIGdhdGUsIGRyeS1ydW4gZGVmYXVsdCwgSlNPTkwsIGhlYXJ0YmVhdCwgZ3JhY2VmdWwKICBzaHV0ZG93biwgYWx3YXlzLW9uICsgYC0tb25lc2hvdGApIGNvcGllZCBmcm9tIGB+L3dvcmtzcGFjZS9hbGdvL2AuCgojIyA0LiBTaW1wbGlmaWNhdGlvbnMgdnMgdGhlaXIgc2VydmVyCgpEcm9wcGVkOiBXMlctTFEgc2xlZXZlIChzaGFkb3ctb25seSBvbiB0aGVpciBzaWRlIGFmdGVyIGxvc3NlcyksIHByZS1idXkKbGVncywgRVMgbGVnIHNwbGl0IG9uIFdCRVMsIHRpY2stY2FkZW5jZSByZWNvbXB1dGUsIGBHRVhfV0FMTF9NT0RFYCBmbGFnCihyZXBsYWNlZCBieSB0aGUgZXN0aW1hdG9yKSwgcGVyLXN0cmlrZSB3YWxsIGxpbmVzIChyZXBsYWNlZCBieSB6b25lcykuCgojIyA1LiBTbW9rZSB0ZXN0cyDigJQgMzYvMzYgcGFzcyAoYC90bXAvc21va2VfZXMucHlgLCBzeW50aGV0aWMpCgpUMSB0aWNrIGNhZGVuY2UgbmV2ZXIgcmUtZXZhbHVhdGVzIMK3IFQyIMKxMTAlIGZsaWNrZXIgNjBtaW4g4oaSIG5vIHdhbGwgbW92ZSDCtwpUMyAyLjLDlyBzdGVwIOKGkiBleGFjdGx5IG9uZSBzd2l0Y2gsIGhvbGRzIMK3IFQ0IHN3aXRjaC1iYWNrIHN5bW1ldHJpYyDCtwpUNSB6b25lIGVkZ2VzIMK3IFQ2IGNvbmZpZGVuY2UgbWF0aCDCtyBUNyBicmVha3MgbmVlZCBjbG9zZXMgYmV5b25kIHpvbmUgZWRnZQood2ljayDiiaAgYnJlYWssIHNpbmdsZSBjbG9zZSDiiaAgYnJlYWspIMK3IFQ4IGZhZGUgY29uZmlkZW5jZSBnYXRlIMK3ClQ5IGJyZWFrb3V0IGFybSBjb25maWRlbmNlIGdhdGUgwrcgVDEwIHNpemluZyDCtyBUMTEgZHJ5LXJ1biBUUDEvQkUvc3RvcCBmbG93LgoKIyMgNi4gTVVTVC1WQUxJREFURSBhZ2FpbnN0IFRXUyAoZHJ5LXJ1biBmaXJzdCwgdGhlbiBwYXBlcikKCjEuICoqRk9QIGNvbnRyYWN0IHNwZWNzKio6IHdlZWtseSBGT1AgZXhwaXJpZXMvc3RyZWFtaW5nIHN5bWJvbHMgb24gVFdTCiAgIHBhcGVyIOKAlCBgZGlzY292ZXJfd2Vla2x5KClgIGFzc3VtZXMgRnJpZGF5IHdlZWtsaWVzIGV4aXN0LgoyLiAqKkdlbmVyaWMgdGljayAxMDEgKE9JKSBvbiBGT1BzKio6IHZlcmlmaWVkIG9uIFNQWFcgaW5kZXggb3B0aW9uczsgRk9QCiAgIGZ1dHVyZXMtb3B0aW9ucyB0aWNrIGNvdmVyYWdlIG11c3QgYmUgY29uZmlybWVkIChmYWxsYmFjazogcmVxdWVzdCBPSQogICB2aWEgYSBzZWNvbmQgY29udHJhY3QtZGV0YWlscyBwYXNzKS4KMy4gKipDb250RnV0dXJlKCdFUycsJ0NNRScpIHJvbGxpbmcqKjogZnJvbnQtbW9udGggcm9sbG92ZXIgYmVoYXZpb3IgbmVhcgogICBleHBpcnkgd2VlazsgdmVyaWZ5IGBmb3AuZXNfY29udHJhY3RgIHRyYWNrcyB0aGUgaW50ZW5kZWQgbW9udGguCjQuICoqTW9kZWwtZ2FtbWEgYXZhaWxhYmlsaXR5Kio6IHRpY2sgMTA2LzEwNyBHcmVla3Mgb24gRk9QcyBpbiBwYXBlciBtb2RlOwogICBpZiBHcmVla3MgbGFnLCBUV0FQMTUgZGVncmFkZXMgZ3JhY2VmdWxseSAoZmV3ZXIgc2FtcGxlcywgc2FtZSBjbG9jaykuCjUuICoqWm9uZSB3aWR0aHMgaW4gcHJvZHVjdGlvbioqOiBpZiB6b25lcyBwcmludCB3aWRlciB0aGFuIH4xNSBwdHMKICAgcm91dGluZWx5LCB0aGUgMC43MCBmcmFjdGlvbiBpcyB0b28gbG9vc2UgZm9yIEVTOyB0aWdodGVuIHRvIDAuODAuCjYuICoqSHlzdGVyZXNpcyBsYXRlbmN5Kio6IH4yNSBtaW4gdG8gYWNrbm93bGVkZ2UgYSAyw5cgR0VYIHN0ZXAgaXMgYnkKICAgZGVzaWduIChzdHJ1Y3R1cmFsIHdhbGxzKSwgYnV0IGlmIHJlYWwgcmVnaW1lIHNoaWZ0cyBuZWVkIGZhc3RlcgogICByZWFjdGlvbiwgbG93ZXIgYEhZU1RfRVZBTFNgIHRvIDIgKDEwIG1pbikg4oCUIGRvIG5vdCBsb3dlciB0aGUgMS4yNcOXLgo3LiAqKk92ZXJuaWdodCBPSSBzdGFsZW5lc3MqKjogaG91cmx5IHN3ZWVwcyBhc3N1bWUgRk9QIE9JIHJlZnJlc2hlcwogICBpbnRyYWRheTsgaWYgT0NDL0ZPUCBPSSBvbmx5IHJlZnJlc2hlcyBvbmNlIGRhaWx5LCB0aGUgImZyb3plbiBPSSIKICAgaXMganVzdCBkYWlseS1mcm96ZW4g4oCUIHN0aWxsIGZpbmUsIGdhbW1hIFRXQVAgY2FycmllcyB0aGUgZHluYW1pY3MuCg==
+# BUILD_NOTES — algo_es
+
+## 1. Why walls bounce (diagnosis)
+
+The naive approach — `argmax` over instantaneous per-strike gamma, recomputed
+every loop — produces walls that derive, bounce, and jump. Three compounding
+causes:
+
+1. **argmax over instantaneous gamma flickers.** Two adjacent strikes with
+   similar GEX swap the lead every tick: bid/ask bounce → model-gamma
+   jitter → the "wall" jumps strike-to-strike on pure noise.
+2. **Gamma is price-dependent.** As spot approaches a strike its gamma
+   inflates, so raw walls *chase price* instead of marking structure. The
+   wall follows the market rather than the market respecting the wall.
+3. **Tick-cadence recomputation** turns (1)+(2) into visible wall jumps.
+   Walls are structural supply/demand concentrations; recomputing them at
+   5-second cadence is a category error.
+
+Their old server's `GEX_WALL_MODE=stable` was a patch on the same argmax;
+the flicker is structural to the estimator, not the mode flag.
+
+## 2. The StableWall estimator (`gex.py`)
+
+- **Wall clock: 5 minutes.** `maybe_evaluate()` runs at most every
+  `ES_GEX_EVAL_SEC` (300s). The 5s trade loop only *records* gamma samples
+  (`note_gamma`) and *reads* the last published walls. Smoke T1 proves 48
+  jittered ticks fire zero evaluations and move no wall.
+- **gamma_TWAP15 × frozen OI → dollar gamma.** Each evaluation uses the
+  15-min time-weighted average of IBKR-sent gamma per strike (kills tick
+  noise) times the hourly-frozen FOP OI: `OI × gamma × spot² × 50 / 1e9`
+  ($B). Between hourly sweeps OI is frozen and gamma keeps flowing — the
+  documented Globex compromise (no morning snapshot exists on a 24h
+  market).
+- **Strike smoothing.** `GEX_s[k] = 0.25·GEX[k−5] + 0.5·GEX[k] + 0.25·GEX[k+5]`
+  on the 5-pt grid. Adjacent-strike flicker merges into one hump instead of
+  two alternating argmax winners.
+- **Hysteresis (Schmitt trigger).** The incumbent wall keeps status until a
+  challenger exceeds **1.25×** its smoothed GEX on **3 consecutive** 5-min
+  evaluations (15 min). Smoke T2: ±10%/min oscillation for 60 min → wall
+  never moves. Smoke T3/T4: a 2.2× step → exactly one switch, then holds;
+  removing it → exactly one switch back. Note the honest latency: TWAP15
+  needs ~10 min to register a step as "strong", so a 2× step switches at
+  ~25 min. Genuine regime shifts still pass; flicker never does.
+- **Zone, not a line.** Published zone = contiguous strikes with
+  `GEX_s > 0.70 × GEX_s[wall]` → `[zone_lo, zone_hi]`. Fade entries use the
+  near zone edge (better fill than the wall strike); **break detection uses
+  zone edges** — 2 consecutive 1-min closes beyond the edge (+2pt buffer).
+  A wick through the wall strike is not a break (smoke T7).
+- **Confidence.** `min(1, tenure_min/60) × min(1, margin/0.5)`,
+  `margin = (GEX[wall]−GEX[runner-up])/GEX[runner-up]` with runner-up = best
+  same-side strike *outside* the zone. Strategy gating: fade needs
+  confidence ≥ **0.5**; breakout arming needs ≥ **0.35** (smoke T8/T9).
+- **Flip/regime hysteresis.** Net-GEX sign must hold 3 consecutive
+  evaluations before the published regime flips — same Schmitt pattern.
+- Every evaluation emits `WALLS` with wall, zone, confidence, tenure,
+  flip, regime, net $B, magnets.
+
+**Backport:** this pattern ports directly to `~/workspace/algo/gex.py`
+(mult=100, SPXW OI instead of FOP). Not done yet — flagged for later.
+
+## 3. Design decisions & deviations
+
+- **Vehicle is futures, not options.** All GEX math is only used to locate
+  levels; entries/exits are ES futures ($50/pt). No FOP legs are traded.
+- **FOP expiry = front Friday weekly** (Friday-preferring discovery;
+  document: FOPs are American-style, weeklies expire Friday).
+- **Fade TP1 = flip**, not the wall: in +gamma the flip is the magnet the
+  wall fades *toward*. Stop 6 pts beyond the wall (structural invalidation),
+  not a premium stop.
+- **Breakout stop = 4 pts back inside from the broken zone edge** (a close
+  back inside the zone = thesis dead), target = next magnet beyond the edge
+  else 2× stop measured move.
+- **Zone snapshot at arm time** for `WallBreakState`: break detection runs
+  against the armed zone even if the estimator republishes mid-break.
+- **Flatten 16:55 ET** before the 17:00–18:00 Globex halt (default on);
+  no entries inside the flatten window.
+- **Risk:** $200/trade → `floor(200/(stop_pts×50))`, min 1 contract;
+  4 trades/day; one position; −2% NetLiq kill switch. Globex "day" =
+  18:00→17:00 ET for the daily reset.
+- **Chassis** (DU* paper gate, dry-run default, JSONL, heartbeat, graceful
+  shutdown, always-on + `--oneshot`) copied from `~/workspace/algo/`.
+
+## 4. Simplifications vs their server
+
+Dropped: W2W-LQ sleeve (shadow-only on their side after losses), pre-buy
+legs, ES leg split on WBES, tick-cadence recompute, `GEX_WALL_MODE` flag
+(replaced by the estimator), per-strike wall lines (replaced by zones).
+
+## 5. Smoke tests — 36/36 pass (`/tmp/smoke_es.py`, synthetic)
+
+T1 tick cadence never re-evaluates · T2 ±10% flicker 60min → no wall move ·
+T3 2.2× step → exactly one switch, holds · T4 switch-back symmetric ·
+T5 zone edges · T6 confidence math · T7 breaks need closes beyond zone edge
+(wick ≠ break, single close ≠ break) · T8 fade confidence gate ·
+T9 breakout arm confidence gate · T10 sizing · T11 dry-run TP1/BE/stop flow.
+
+## 6. MUST-VALIDATE against TWS (dry-run first, then paper)
+
+1. **FOP contract specs**: weekly FOP expiries/streaming symbols on TWS
+   paper — `discover_weekly()` assumes Friday weeklies exist.
+2. **Generic tick 101 (OI) on FOPs**: verified on SPXW index options; FOP
+   futures-options tick coverage must be confirmed (fallback: request OI
+   via a second contract-details pass).
+3. **ContFuture('ES','CME') rolling**: front-month rollover behavior near
+   expiry week; verify `fop.es_contract` tracks the intended month.
+4. **Model-gamma availability**: tick 106/107 Greeks on FOPs in paper mode;
+   if Greeks lag, TWAP15 degrades gracefully (fewer samples, same clock).
+5. **Zone widths in production**: if zones print wider than ~15 pts
+   routinely, the 0.70 fraction is too loose for ES; tighten to 0.80.
+6. **Hysteresis latency**: ~25 min to acknowledge a 2× GEX step is by
+   design (structural walls), but if real regime shifts need faster
+   reaction, lower `HYST_EVALS` to 2 (10 min) — do not lower the 1.25×.
+7. **Overnight OI staleness**: hourly sweeps assume FOP OI refreshes
+   intraday; if OCC/FOP OI only refreshes once daily, the "frozen OI"
+   is just daily-frozen — still fine, gamma TWAP carries the dynamics.

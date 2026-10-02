@@ -1,1 +1,212 @@
-IiIiZ2V4X2JyaWRnZSBjb25maWcg4oCUIHRoZSBzaW5nbGUgSUJLUiBzdHJlYW1pbmcgY29ubmVjdGlvbi4KCk9uZSBwcm9jZXNzIHN0cmVhbXMgZXZlcnl0aGluZyBib3RoIGFsZ29zIG5lZWQ6CiAgMSAgU1BYIGluZGV4IChzcG90KQogIDEgIEVTIGZyb250IGZ1dHVyZXMgQ29udEZ1dHVyZSAoYmFzaXMgPSBFUyAtIFNQWCkKICA0MiBTUFhXIDBEVEUgYWN0aXZlIHdpbmRvdzogc3BvdCArLy01MCwgNS1wdCBzdHJpa2VzLCBib3RoIHJpZ2h0cwogIDIwIFNQWFcgMERURSBjcnVzaCBiYW5kOiA1NS05NSBwdHMgT1RNLCAxMC1wdCBzdGVwcywgYm90aCBzaWRlcy9yaWdodHMKIC0tICA2NCBzdXN0YWluZWQgc3RyZWFtaW5nIGxpbmVzICh0YXJnZXQgPD03NSwgaGFyZCBjYXAgMTAwKQoKT0kgaXMgZnJvemVuIGludHJhZGF5ICh2ZXJpZmllZCk6IE9ORSBtb3JuaW5nIHNuYXBzaG90IHZpYSBwYWNlZCBvbmUtc2hvdApzbmFwc2hvdCByZXF1ZXN0cywgdGhlbiB1bnN1YnNjcmliZS4gR0VYID0gZnJvemVuIE9JIHggbGl2ZSBnYW1tYSAoU3RhYmxlV2FsbAplc3RpbWF0b3I6IDUtbWluIHdhbGwgY2xvY2ssIFRXQVAxNSBnYW1tYSwgc3RyaWtlIHNtb290aGluZywgMS4yNXgvMy1ldmFsCmh5c3RlcmVzaXMsIHpvbmVzLCBjb25maWRlbmNlKS4KClNlc3Npb25zIChFVCk6CiAgTlkgMDk6MzAtMTY6MDUgIGZ1bGwgc3RyZWFtaW5nLCBmcmVzaCA1LW1pbiB3YWxsIGV2YWxzLCBwdWJsaXNoIGV2ZXJ5IDVzCiAgT1ZFUk5JR0hUICAgICAgIGNoYWluIHN0cmVhbWluZyBjYW5jZWxsZWQgKGxpbmVzIGZyZWVkKSwgd2FsbHMgZnJvemVuIHdpdGgKICAgICAgICAgICAgICAgICAgd2FsbF90cy9zdGFsZT10cnVlICsgY29uZmlkZW5jZSBkZWNheSwgRVMgZnV0dXJlcyBrZXB0LAogICAgICAgICAgICAgICAgICBwdWJsaXNoIGV2ZXJ5IDE1cwogIFdFRUtFTkQgICAgICAgICBGcmkgMTc6MDAgLT4gU3VuIDE3OjU1OiBzbGVlcCAobm8gR2xvYmV4KQoKUHVibGlzaGVzIH4vd29ya3NwYWNlL3NoYXJlZC9sZXZlbHMuanNvbiBBVE9NSUNBTExZICh0bXAgKyBvcy5yZXBsYWNlKS4KQ29uc3VtZXJzIChhbGdvLywgYWxnb19lcy8pIE5FVkVSIHN0cmVhbTsgdGhleSByZWFkIHRoZSBmaWxlLgoKQWxsIG92ZXJyaWRlcyB2aWEgZW52IHZhcnMgcHJlZml4ZWQgQlJJREdFXy4KIiIiCmltcG9ydCBvcwpmcm9tIHpvbmVpbmZvIGltcG9ydCBab25lSW5mbwoKRVQgPSBab25lSW5mbygiQW1lcmljYS9OZXdfWW9yayIpCgoKZGVmIF9mKG5hbWUsIGRlZmF1bHQpOgogICAgcmV0dXJuIGZsb2F0KG9zLmdldGVudihuYW1lLCBkZWZhdWx0KSkKCgpkZWYgX2kobmFtZSwgZGVmYXVsdCk6CiAgICByZXR1cm4gaW50KG9zLmdldGVudihuYW1lLCBkZWZhdWx0KSkKCgpkZWYgX3MobmFtZSwgZGVmYXVsdCk6CiAgICByZXR1cm4gb3MuZ2V0ZW52KG5hbWUsIGRlZmF1bHQpCgoKZGVmIF9iKG5hbWUsIGRlZmF1bHQpOgogICAgdiA9IG9zLmdldGVudihuYW1lKQogICAgaWYgdiBpcyBOb25lOgogICAgICAgIHJldHVybiBkZWZhdWx0CiAgICByZXR1cm4gdi5zdHJpcCgpLmxvd2VyKCkgbm90IGluICgiMCIsICJmYWxzZSIsICJubyIsICJvZmYiLCAiIikKCgojIC0tLS0tLS0tLS0tLS0tLS0gSUJLUiBjb25uZWN0aW9uIChEQVRBIE9OTFkg4oCUIG5ldmVyIHBsYWNlcyBvcmRlcnMpIC0tLS0tLS0tLS0tLS0tLS0KSUJfSE9TVCA9IF9zKCJCUklER0VfSUJfSE9TVCIsICIxMjcuMC4wLjEiKQpJQl9QT1JUID0gX2koIkJSSURHRV9JQl9QT1JUIiwgNzQ5NykgICAjIFRXUyBwYXBlcjsgR2F0ZXdheSBwYXBlcj00MDAyCklCX0NMSUVOVF9JRCA9IF9pKCJCUklER0VfSUJfQ0xJRU5UX0lEIiwgMSkgICAjIFRIRSBzdHJlYW1pbmcgY29ubmVjdGlvbgpDT05ORUNUX1RJTUVPVVQgPSBfZigiQlJJREdFX0NPTk5FQ1RfVElNRU9VVCIsIDIwKQpDT05ORUNUX1JFVFJJRVMgPSBfaSgiQlJJREdFX0NPTk5FQ1RfUkVUUklFUyIsIDEwKQoKIyAtLS0tLS0tLS0tLS0tLS0tIHNoYXJlZCBkaXIgLS0tLS0tLS0tLS0tLS0tLQojIEFsbCB0aHJlZSBwcm9jZXNzZXMgKGdleF9icmlkZ2UsIGFsZ28sIGFsZ29fZXMpIG11c3QgYmUgc2libGluZ3MsIGFzIGluCiMgdGhlIHppcHMuIE92ZXJyaWRlIHdpdGggQlJJREdFX1NIQVJFRF9ESVIgaWYgbGFpZCBvdXQgZGlmZmVyZW50bHkuClNIQVJFRF9ESVIgPSBfcygiQlJJREdFX1NIQVJFRF9ESVIiLCBvcy5wYXRoLmpvaW4oCiAgICBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5kaXJuYW1lKG9zLnBhdGguYWJzcGF0aChfX2ZpbGVfXykpKSwgInNoYXJlZCIpKQpMRVZFTFNfUEFUSCA9IG9zLnBhdGguam9pbihTSEFSRURfRElSLCAibGV2ZWxzLmpzb24iKQpDT05UUkFDVFNfUEFUSCA9IG9zLnBhdGguam9pbihTSEFSRURfRElSLCAiY29udHJhY3RzLmpzb24iKQoKIyAtLS0tLS0tLS0tLS0tLS0tIHNlc3Npb24gY2xvY2sgKEVUKSAtLS0tLS0tLS0tLS0tLS0tCk5ZX1NUQVJUID0gKDksIDMwKQpOWV9FTkQgPSAoMTYsIDUpICAgICAgICAgICMgY2hhaW4gc3RyZWFtaW5nIGNhbmNlbGxlZCBhdC9hZnRlciB0aGlzCldFRUtFTkRfU0xFRVBfVU5USUwgPSAoNiwgMTcsIDU1KSAgIyBTdW5kYXkgMTc6NTUgRVQgKGRvdywgaGgsIG1tKQoKCmRlZiBzZXNzaW9uKG5vd19ldCkgLT4gc3RyOgogICAgIiIiJ255JyB8ICdvdmVybmlnaHQnIHwgJ3dlZWtlbmQnLiIiIgogICAgd2QgPSBub3dfZXQud2Vla2RheSgpCiAgICB0ID0gKG5vd19ldC5ob3VyLCBub3dfZXQubWludXRlKQogICAgaWYgd2QgPT0gNTogICAgICAgICAgICAgICAgICAgICAgICMgU2F0dXJkYXk6IGZ1bGx5IGNsb3NlZAogICAgICAgIHJldHVybiAid2Vla2VuZCIKICAgIGlmIHdkID09IDQgYW5kIHQgPj0gKDE3LCAwKTogICAgICAjIEZyaWRheSAxNzowMCAtPiB3ZWVrZW5kCiAgICAgICAgcmV0dXJuICJ3ZWVrZW5kIgogICAgaWYgd2QgPT0gNiBhbmQgdCA8ICgxNywgNTUpOiAgICAgICMgU3VuZGF5IGJlZm9yZSAxNzo1NSAtPiB3ZWVrZW5kCiAgICAgICAgcmV0dXJuICJ3ZWVrZW5kIgogICAgaWYgTllfU1RBUlQgPD0gdCA8IE5ZX0VORCBhbmQgd2QgPCA1OgogICAgICAgIHJldHVybiAibnkiCiAgICByZXR1cm4gIm92ZXJuaWdodCIKCgpkZWYgbmV4dF93YWtlKG5vd19ldCk6CiAgICAiIiJOZXh0IEVUIGRhdGV0aW1lIHRoZSBicmlkZ2Ugc2hvdWxkIGJlIGF3YWtlIChTdW4gMTc6NTUgYWZ0ZXIgd2Vla2VuZCkuIiIiCiAgICBmcm9tIGRhdGV0aW1lIGltcG9ydCB0aW1lZGVsdGEKICAgIHQgPSBub3dfZXQucmVwbGFjZShzZWNvbmQ9MCwgbWljcm9zZWNvbmQ9MCkgKyB0aW1lZGVsdGEobWludXRlcz01KQogICAgZm9yIF8gaW4gcmFuZ2UoMyAqIDI0ICogMTIpOgogICAgICAgIGlmIHNlc3Npb24odCkgIT0gIndlZWtlbmQiOgogICAgICAgICAgICByZXR1cm4gdAogICAgICAgIHQgKz0gdGltZWRlbHRhKG1pbnV0ZXM9NSkKICAgIHJldHVybiB0CgojIC0tLS0tLS0tLS0tLS0tLS0gaW5zdHJ1bWVudHMgLS0tLS0tLS0tLS0tLS0tLQpVTkRFUkxZSU5HID0gIlNQWCIKRVhDSEFOR0UgPSAiQ0JPRSIKVFJBRElOR19DTEFTUyA9ICJTUFhXIgpFU19TWU1CT0wgPSBfcygiQlJJREdFX0VTX1NZTUJPTCIsICJFUyIpCkVTX0VYQ0hBTkdFID0gX3MoIkJSSURHRV9FU19FWENIQU5HRSIsICJDTUUiKQoKIyAtLS0tLS0tLS0tLS0tLS0tIGxpbmUgYnVkZ2V0IChoYXJkIGNhcCAxMDAsIHRhcmdldCA8PTc1IHN1c3RhaW5lZCkgLS0tLS0tLS0tLS0tLS0tLQojIDEgU1BYICsgNDIgYWN0aXZlIHdpbmRvdyArIDIwIGNydXNoIGJhbmQgKyAxIEVTIGZ1dHVyZXMgPSA2NCBzdXN0YWluZWQuCiMgT0kgc25hcHNob3QgKyB3aW5nIHN3ZWVwcyBhcmUgcGFjZWQgb25lLXNob3Qgc25hcHNob3QgcmVxdWVzdHMKIyAoc3Vic2NyaWJlIC0+IGR3ZWxsIC0+IGNhbmNlbCksIG5ldmVyIGhlbGQgbGluZXMuIEFsbExhc3QgZmxvdyB3YXMKIyB0aWVicmVhay1vbmx5IGluIHYzIGFuZCBpcyBOT1Qgc3RyZWFtZWQgYnkgdGhlIGJyaWRnZS4KTElORV9IQVJEX0NBUCA9IDEwMApMSU5FX1RBUkdFVCA9IDc1ClNQWF9MSU5FUyA9IDEKQUNUSVZFX1dJTkRPV19QVFMgPSBfaSgiQlJJREdFX0FDVElWRV9XSU5ET1dfUFRTIiwgNTApClNUUklLRV9TVEVQID0gNQpDUlVTSF9CQU5EX01JTl9PVE0gPSBfaSgiQlJJREdFX0NSVVNIX0JBTkRfTUlOX09UTSIsIDU1KQpDUlVTSF9CQU5EX01BWF9PVE0gPSBfaSgiQlJJREdFX0NSVVNIX0JBTkRfTUFYX09UTSIsIDk1KQpDUlVTSF9CQU5EX1NURVAgPSBfaSgiQlJJREdFX0NSVVNIX0JBTkRfU1RFUCIsIDEwKQpBTExMQVNUX01BWF9MSU5FUyA9IDAgICAgICAgICAgICAgICAgICMgbm90IHN0cmVhbWVkIGJ5IHRoZSBicmlkZ2UKV0lOR19TV0VFUF9SQU5HRSA9IF9pKCJCUklER0VfV0lOR19TV0VFUF9SQU5HRSIsIDIwMCkKV0lOR19TV0VFUF9NSU4gPSBfaSgiQlJJREdFX1dJTkdfU1dFRVBfTUlOIiwgMTUpClJFQ0VOVEVSX01JTiA9IF9pKCJCUklER0VfUkVDRU5URVJfTUlOIiwgMTUpCkdFTkVSSUNfVElDS1MgPSAiMTAwLDEwMSwxMDYsMTA3IiAgICAgIyB2b2x1bWUsIE9JLCBiaWQvYXNrIG1vZGVsIEdyZWVrcwoKIyAtLS0tLS0tLS0tLS0tLS0tIEFQSSBwYWNlciAtLS0tLS0tLS0tLS0tLS0tClBBQ0VSX01LVF9QRVJfU0VDID0gX2YoIkJSSURHRV9QQUNFUl9NS1RfUEVSX1NFQyIsIDMuMCkKUEFDRVJfTUFYX0NPTkNVUlJFTlQgPSBfaSgiQlJJREdFX1BBQ0VSX01BWF9DT05DVVJSRU5UIiwgOCkKU05BUFNIT1RfRFdFTEwgPSBfZigiQlJJREdFX1NOQVBTSE9UX0RXRUxMIiwgMi41KQoKIyAtLS0tLS0tLS0tLS0tLS0tIEdFWCAvIFN0YWJsZVdhbGwgLS0tLS0tLS0tLS0tLS0tLQpHRVhfTVVMVCA9IF9mKCJCUklER0VfR0VYX01VTFQiLCAxMDAuMCkgICAgICAjIFNQWFc6IDEgY29udHJhY3QgPSAxMDB4CkdFWF9FVkFMX1NFQyA9IF9pKCJCUklER0VfR0VYX0VWQUxfU0VDIiwgMzAwKSAgIyA1LW1pbiB3YWxsIGNsb2NrCkdBTU1BX0NIQU5HRV9QQ1QgPSBfZigiQlJJREdFX0dBTU1BX0NIQU5HRV9QQ1QiLCAwLjA1KQpGQURFX1RPVUNIX1BUUyA9IF9mKCJCUklER0VfRkFERV9UT1VDSF9QVFMiLCAzLjApCkNPTkZfREVDQVlfTUlOID0gX2YoIkJSSURHRV9DT05GX0RFQ0FZX01JTiIsIDI0MC4wKSAgIyBvdmVybmlnaHQgZGVjYXkgaG9yaXpvbgpDT05GX0RFQ0FZX0ZMT09SID0gX2YoIkJSSURHRV9DT05GX0RFQ0FZX0ZMT09SIiwgMC4zMCkKCiMgLS0tLS0tLS0tLS0tLS0tLSAwRFRFIGNhbmRpZGF0ZSBzY3JlZW4gKHYzIDEwWC1PVE0sIG1lYXN1cmVkKSAtLS0tLS0tLS0tLS0tLS0tCkVOVFJZX1dJTkRPV1MgPSAoCiAgICAoIkEiLCAoMTEsIDApLCAoMTIsIDMwKSwgX2koIkJSSURHRV9XSU5fQV9PVE1fTUlOIiwgNDApLCBfaSgiQlJJREdFX1dJTl9BX09UTV9NQVgiLCA1NSkpLAogICAgKCJCIiwgKDE1LCAzMCksICgxNSwgNTgpLCBfaSgiQlJJREdFX1dJTl9CX09UTV9NSU4iLCA4KSwgX2koIkJSSURHRV9XSU5fQl9PVE1fTUFYIiwgMTIpKSwKKQpFTlRSWV9DVVRPRkYgPSAoMTUsIDUwKQoKCmRlZiBhY3RpdmVfd2luZG93KG5vd19ldCk6CiAgICB0ID0gKG5vd19ldC5ob3VyLCBub3dfZXQubWludXRlKQogICAgaWYgdCA+PSBFTlRSWV9DVVRPRkY6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGZvciB3aWQsIHMsIGUsIG9taW4sIG9tYXggaW4gRU5UUllfV0lORE9XUzoKICAgICAgICBpZiBzIDw9IHQgPCBlOgogICAgICAgICAgICByZXR1cm4gd2lkLCBvbWluLCBvbWF4CiAgICByZXR1cm4gTm9uZQoKCmRlZiBpbl9lbnRyeV93aW5kb3cobm93X2V0KSAtPiBib29sOgogICAgcmV0dXJuIGFjdGl2ZV93aW5kb3cobm93X2V0KSBpcyBub3QgTm9uZQoKCkFTS19NSU4gPSBfZigiQlJJREdFX0FTS19NSU4iLCAwLjIwKQpBU0tfTUFYID0gX2YoIkJSSURHRV9BU0tfTUFYIiwgMC41MCkKREVMVEFfTUFYID0gX2YoIkJSSURHRV9ERUxUQV9NQVgiLCAwLjE1KQpTUFJFQURfTUFYID0gX2YoIkJSSURHRV9TUFJFQURfTUFYIiwgMC4yNSkKQVNLX1pfTUFYID0gX2YoIkJSSURHRV9BU0tfWl9NQVgiLCAtMS4wKQpBU0tfWl9NSU4gPSBfZigiQlJJREdFX0FTS19aX01JTiIsIC0yLjApCkFTS19aX0xPT0tCQUNLX01JTiA9IF9pKCJCUklER0VfQVNLX1pfTE9PS0JBQ0tfTUlOIiwgMzApCklWX1NQSUtFX1JBVElPID0gX2YoIkJSSURHRV9JVl9TUElLRV9SQVRJTyIsIDEuMykKSVZfTE9PS0JBQ0tfTUlOID0gX2koIkJSSURHRV9JVl9MT09LQkFDS19NSU4iLCAzMCkKTUlOX0FTS19ISVNUT1JZID0gX2koIkJSSURHRV9NSU5fQVNLX0hJU1RPUlkiLCAxMCkKVE9QX0NBTkRJREFURVMgPSBfaSgiQlJJREdFX1RPUF9DQU5ESURBVEVTIiwgMykKCiMgLS0tLS0tLS0tLS0tLS0tLSB3YWxsLWJyZWFrIHNjcmVlbiAoem9uZS1lZGdlIHZlcnNpb24pIC0tLS0tLS0tLS0tLS0tLS0KV0FMTEJSRUFLX0VOQUJMRUQgPSBfYigiQlJJREdFX1dBTExCUkVBS19FTkFCTEVEIiwgVHJ1ZSkKV0FMTF9ET01JTkFOQ0UgPSBfZigiQlJJREdFX1dBTExfRE9NSU5BTkNFIiwgMi41KQpXQUxMX0FSTV9QVFMgPSBfZigiQlJJREdFX1dBTExfQVJNX1BUUyIsIDE1LjApCldBTExfRElTQVJNX01VTFQgPSBfZigiQlJJREdFX1dBTExfRElTQVJNX01VTFQiLCAyLjApCldBTExCUkVBS19PVE1fTUFYID0gX2YoIkJSSURHRV9XQUxMQlJFQUtfT1RNX01BWCIsIDMwLjApCldBTExCUkVBS19NQVhfUEVSX1dBTEwgPSBfaSgiQlJJREdFX1dBTExCUkVBS19NQVhfUEVSX1dBTEwiLCAyKQoKIyAtLS0tLS0tLS0tLS0tLS0tIHJlZ2ltZSAoTW9kdWxlIEMsIG9ic2VydmUtbW9kZSBzY2FmZm9sZGluZykgLS0tLS0tLS0tLS0tLS0tLQpSRUdJTUVfTU9ERSA9IF9zKCJCUklER0VfUkVHSU1FX01PREUiLCAib2JzZXJ2ZSIpCgojIC0tLS0tLS0tLS0tLS0tLS0gcHVibGlzaCAtLS0tLS0tLS0tLS0tLS0tClBVQkxJU0hfTllfU0VDID0gX2YoIkJSSURHRV9QVUJMSVNIX05ZX1NFQyIsIDUpClBVQkxJU0hfT05fU0VDID0gX2YoIkJSSURHRV9QVUJMSVNIX09OX1NFQyIsIDE1KQpMT09QX0NBREVOQ0VfU0VDID0gX2YoIkJSSURHRV9MT09QX0NBREVOQ0VfU0VDIiwgNSkKSEVBUlRCRUFUX1NFQyA9IF9pKCJCUklER0VfSEVBUlRCRUFUX1NFQyIsIDYwKQpMT0dfRElSID0gX3MoIkJSSURHRV9MT0dfRElSIiwgImxvZ3MiKQo=
+"""gex_bridge config — the single IBKR streaming connection.
+
+One process streams everything both algos need:
+  1  SPX index (spot)
+  1  ES front futures ContFuture (basis = ES - SPX)
+  42 SPXW 0DTE active window: spot +/-50, 5-pt strikes, both rights
+  20 SPXW 0DTE crush band: 55-95 pts OTM, 10-pt steps, both sides/rights
+ --  64 sustained streaming lines (target <=75, hard cap 100)
+
+OI is frozen intraday (verified): ONE morning snapshot via paced one-shot
+snapshot requests, then unsubscribe. GEX = frozen OI x live gamma (StableWall
+estimator: 5-min wall clock, TWAP15 gamma, strike smoothing, 1.25x/3-eval
+hysteresis, zones, confidence).
+
+Sessions (ET):
+  NY 09:30-16:05  full streaming, fresh 5-min wall evals, publish every 5s
+  OVERNIGHT       chain streaming cancelled (lines freed), walls frozen with
+                  wall_ts/stale=true + confidence decay, ES futures kept,
+                  publish every 15s
+  WEEKEND         Fri 17:00 -> Sun 17:55: sleep (no Globex)
+
+Publishes ~/workspace/shared/levels.json ATOMICALLY (tmp + os.replace).
+Consumers (algo/, algo_es/) NEVER stream; they read the file.
+
+All overrides via env vars prefixed BRIDGE_.
+"""
+import os as _os
+
+
+def _load_dotenv():
+    """[v1.01 ENVLOAD] Read KEY=VALUE lines from <repo>/.env and <component>/.env
+    into os.environ. Real environment variables win (never overwritten).
+    Values are never printed."""
+    here = _os.path.dirname(_os.path.abspath(__file__))
+    for path in (_os.path.join(here, ".env"), _os.path.join(_os.path.dirname(here), ".env")):
+        try:
+            with open(path, encoding="utf-8-sig") as fh:
+                for line in fh:
+                    line = line.strip()
+                    if not line or line.startswith("#") or "=" not in line:
+                        continue
+                    k, v = line.split("=", 1)
+                    k, v = k.strip(), v.strip().strip('"').strip("'")
+                    if k and k not in _os.environ:
+                        _os.environ[k] = v
+        except OSError:
+            pass
+
+
+_load_dotenv()
+
+import os
+from zoneinfo import ZoneInfo
+
+ET = ZoneInfo("America/New_York")
+
+
+def _f(name, default):
+    return float(os.getenv(name, default))
+
+
+def _i(name, default):
+    return int(os.getenv(name, default))
+
+
+def _s(name, default):
+    return os.getenv(name, default)
+
+
+def _b(name, default):
+    v = os.getenv(name)
+    if v is None:
+        return default
+    return v.strip().lower() not in ("0", "false", "no", "off", "")
+
+
+# ---------------- IBKR connection (DATA ONLY — never places orders) ----------------
+IB_HOST = _s("BRIDGE_IB_HOST", "127.0.0.1")
+IB_PORT = _i("BRIDGE_IB_PORT", 7497)   # TWS paper; Gateway paper=4002
+IB_CLIENT_ID = _i("BRIDGE_IB_CLIENT_ID", 1)   # THE streaming connection
+CONNECT_TIMEOUT = _f("BRIDGE_CONNECT_TIMEOUT", 20)
+CONNECT_RETRIES = _i("BRIDGE_CONNECT_RETRIES", 10)
+
+# ---------------- shared dir ----------------
+# All three processes (gex_bridge, algo, algo_es) must be siblings, as in
+# the zips. Override with BRIDGE_SHARED_DIR if laid out differently.
+SHARED_DIR = _s("BRIDGE_SHARED_DIR", os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "shared"))
+LEVELS_PATH = os.path.join(SHARED_DIR, "levels.json")
+CONTRACTS_PATH = os.path.join(SHARED_DIR, "contracts.json")
+
+# ---------------- session clock (ET) ----------------
+NY_START = (9, 30)
+NY_END = (16, 5)          # chain streaming cancelled at/after this
+WEEKEND_SLEEP_UNTIL = (6, 17, 55)  # Sunday 17:55 ET (dow, hh, mm)
+
+
+def session(now_et) -> str:
+    """'ny' | 'overnight' | 'weekend'."""
+    wd = now_et.weekday()
+    t = (now_et.hour, now_et.minute)
+    if wd == 5:                       # Saturday: fully closed
+        return "weekend"
+    if wd == 4 and t >= (17, 0):      # Friday 17:00 -> weekend
+        return "weekend"
+    if wd == 6 and t < (17, 55):      # Sunday before 17:55 -> weekend
+        return "weekend"
+    if NY_START <= t < NY_END and wd < 5:
+        return "ny"
+    return "overnight"
+
+
+def next_wake(now_et):
+    """Next ET datetime the bridge should be awake (Sun 17:55 after weekend)."""
+    from datetime import timedelta
+    t = now_et.replace(second=0, microsecond=0) + timedelta(minutes=5)
+    for _ in range(3 * 24 * 12):
+        if session(t) != "weekend":
+            return t
+        t += timedelta(minutes=5)
+    return t
+
+# ---------------- instruments ----------------
+UNDERLYING = "SPX"
+EXCHANGE = "CBOE"
+TRADING_CLASS = "SPXW"
+ES_SYMBOL = _s("BRIDGE_ES_SYMBOL", "ES")
+ES_EXCHANGE = _s("BRIDGE_ES_EXCHANGE", "CME")
+
+# ---------------- line budget (hard cap 100, target <=75 sustained) ----------------
+# 1 SPX + 42 active window + 20 crush band + 1 ES futures = 64 sustained.
+# OI snapshot + wing sweeps are paced one-shot snapshot requests
+# (subscribe -> dwell -> cancel), never held lines. AllLast flow was
+# tiebreak-only in v3 and is NOT streamed by the bridge.
+LINE_HARD_CAP = 100
+LINE_TARGET = 75
+SPX_LINES = 1
+ACTIVE_WINDOW_PTS = _i("BRIDGE_ACTIVE_WINDOW_PTS", 50)
+STRIKE_STEP = 5
+CRUSH_BAND_MIN_OTM = _i("BRIDGE_CRUSH_BAND_MIN_OTM", 55)
+CRUSH_BAND_MAX_OTM = _i("BRIDGE_CRUSH_BAND_MAX_OTM", 95)
+CRUSH_BAND_STEP = _i("BRIDGE_CRUSH_BAND_STEP", 10)
+ALLLAST_MAX_LINES = 0                 # not streamed by the bridge
+WING_SWEEP_RANGE = _i("BRIDGE_WING_SWEEP_RANGE", 200)
+WING_SWEEP_MIN = _i("BRIDGE_WING_SWEEP_MIN", 15)
+RECENTER_MIN = _i("BRIDGE_RECENTER_MIN", 15)
+GENERIC_TICKS = "100,101,106,107"     # volume, OI, bid/ask model Greeks
+
+# ---------------- API pacer ----------------
+PACER_MKT_PER_SEC = _f("BRIDGE_PACER_MKT_PER_SEC", 3.0)
+PACER_MAX_CONCURRENT = _i("BRIDGE_PACER_MAX_CONCURRENT", 8)
+SNAPSHOT_DWELL = _f("BRIDGE_SNAPSHOT_DWELL", 2.5)
+
+# ---------------- GEX / StableWall ----------------
+GEX_MULT = _f("BRIDGE_GEX_MULT", 100.0)      # SPXW: 1 contract = 100x
+GEX_EVAL_SEC = _i("BRIDGE_GEX_EVAL_SEC", 300)  # 5-min wall clock
+GAMMA_CHANGE_PCT = _f("BRIDGE_GAMMA_CHANGE_PCT", 0.05)
+FADE_TOUCH_PTS = _f("BRIDGE_FADE_TOUCH_PTS", 3.0)
+CONF_DECAY_MIN = _f("BRIDGE_CONF_DECAY_MIN", 240.0)  # overnight decay horizon
+CONF_DECAY_FLOOR = _f("BRIDGE_CONF_DECAY_FLOOR", 0.30)
+
+# ---------------- 0DTE candidate screen (v3 10X-OTM, measured) ----------------
+ENTRY_WINDOWS = (
+    ("A", (11, 0), (12, 30), _i("BRIDGE_WIN_A_OTM_MIN", 40), _i("BRIDGE_WIN_A_OTM_MAX", 55)),
+    ("B", (15, 30), (15, 58), _i("BRIDGE_WIN_B_OTM_MIN", 8), _i("BRIDGE_WIN_B_OTM_MAX", 12)),
+)
+ENTRY_CUTOFF = (15, 50)
+
+
+def active_window(now_et):
+    t = (now_et.hour, now_et.minute)
+    if t >= ENTRY_CUTOFF:
+        return None
+    for wid, s, e, omin, omax in ENTRY_WINDOWS:
+        if s <= t < e:
+            return wid, omin, omax
+    return None
+
+
+def in_entry_window(now_et) -> bool:
+    return active_window(now_et) is not None
+
+
+ASK_MIN = _f("BRIDGE_ASK_MIN", 0.20)
+ASK_MAX = _f("BRIDGE_ASK_MAX", 0.50)
+DELTA_MAX = _f("BRIDGE_DELTA_MAX", 0.15)
+SPREAD_MAX = _f("BRIDGE_SPREAD_MAX", 0.25)
+ASK_Z_MAX = _f("BRIDGE_ASK_Z_MAX", -1.0)
+ASK_Z_MIN = _f("BRIDGE_ASK_Z_MIN", -2.0)
+ASK_Z_LOOKBACK_MIN = _i("BRIDGE_ASK_Z_LOOKBACK_MIN", 30)
+IV_SPIKE_RATIO = _f("BRIDGE_IV_SPIKE_RATIO", 1.3)
+IV_LOOKBACK_MIN = _i("BRIDGE_IV_LOOKBACK_MIN", 30)
+MIN_ASK_HISTORY = _i("BRIDGE_MIN_ASK_HISTORY", 10)
+TOP_CANDIDATES = _i("BRIDGE_TOP_CANDIDATES", 3)
+
+# ---------------- wall-break screen (zone-edge version) ----------------
+WALLBREAK_ENABLED = _b("BRIDGE_WALLBREAK_ENABLED", True)
+WALL_DOMINANCE = _f("BRIDGE_WALL_DOMINANCE", 2.5)
+WALL_ARM_PTS = _f("BRIDGE_WALL_ARM_PTS", 15.0)
+WALL_DISARM_MULT = _f("BRIDGE_WALL_DISARM_MULT", 2.0)
+WALLBREAK_OTM_MAX = _f("BRIDGE_WALLBREAK_OTM_MAX", 30.0)
+WALLBREAK_MAX_PER_WALL = _i("BRIDGE_WALLBREAK_MAX_PER_WALL", 2)
+
+# ---------------- regime (Module C, observe-mode scaffolding) ----------------
+REGIME_MODE = _s("BRIDGE_REGIME_MODE", "observe")
+
+# ---------------- publish ----------------
+PUBLISH_NY_SEC = _f("BRIDGE_PUBLISH_NY_SEC", 5)
+PUBLISH_ON_SEC = _f("BRIDGE_PUBLISH_ON_SEC", 15)
+LOOP_CADENCE_SEC = _f("BRIDGE_LOOP_CADENCE_SEC", 5)
+HEARTBEAT_SEC = _i("BRIDGE_HEARTBEAT_SEC", 60)
+LOG_DIR = _s("BRIDGE_LOG_DIR", "logs")

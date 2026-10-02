@@ -1,1 +1,84 @@
-IiIiUHJlLXRyYWRlIHJpc2sgY2hlY2tzICsgZGFpbHkga2lsbCBzd2l0Y2guCgpBY2NvdW50aW5nIGlzIG91ciBvd24gKGZpbGxzIHdlIG1hZGUpLCBub3QgdGhlIGJyb2tlcidzIC0gYXVkaXRhYmxlIGFuZAppbW11bmUgdG8gYW55dGhpbmcgZWxzZSBoYXBwZW5pbmcgaW4gdGhlIHBhcGVyIGFjY291bnQuCiIiIgppbXBvcnQgbG9nZ2luZwpmcm9tIGRhdGV0aW1lIGltcG9ydCBkYXRldGltZQoKaW1wb3J0IGNvbmZpZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ28ucmlzayIpCgoKY2xhc3MgUmlza01hbmFnZXI6CiAgICBkZWYgX19pbml0X18oc2VsZiwgYWNjb3VudF92YWx1ZTogZmxvYXQpOgogICAgICAgIHNlbGYuYWNjb3VudF92YWx1ZSA9IGFjY291bnRfdmFsdWUKICAgICAgICBzZWxmLmRhaWx5X3N0b3BfYW10ID0gYWNjb3VudF92YWx1ZSAqIGNvbmZpZy5EQUlMWV9TVE9QX1BDVAogICAgICAgIHNlbGYudHJhZGVzX3RvZGF5ID0gMAogICAgICAgIHNlbGYuZGFpbHlfcG5sID0gMC4wCiAgICAgICAgc2VsZi5raWxsZWQgPSBGYWxzZQogICAgICAgIHNlbGYuZGF0ZSA9IE5vbmUKICAgICAgICAjIHYzIE1vZHVsZSBDOiByZWdpbWUgZ2F0ZS4gRGVmYXVsdCBwZXJtaXNzaXZlIChvYnNlcnZlIG1vZGUpOwogICAgICAgICMgbWFpbi5weSB0aWdodGVucyBpdCBvbmNlIHRoZSBtb3JuaW5nIHJlZ2ltZSBzY29yZSBpcyBmaW5hbC4KICAgICAgICBzZWxmLnJlZ2ltZV9vayA9IFRydWUKICAgICAgICBzZWxmLnNpemVfbXVsdCA9IDEuMAoKICAgIGRlZiBzZXRfcmVnaW1lKHNlbGYsIG9rOiBib29sLCBtdWx0OiBmbG9hdCA9IDEuMCk6CiAgICAgICAgc2VsZi5yZWdpbWVfb2sgPSBvawogICAgICAgIHNlbGYuc2l6ZV9tdWx0ID0gbXVsdAogICAgICAgIGxvZy5pbmZvKCJyZWdpbWUgc2V0OiBvaz0lcyBzaXplX211bHQ9JS4yZiIsIG9rLCBtdWx0KQoKICAgIGRlZiBuZXdfZGF5KHNlbGYsIHRvZGF5KToKICAgICAgICBpZiBzZWxmLmRhdGUgIT0gdG9kYXk6CiAgICAgICAgICAgIHNlbGYuZGF0ZSA9IHRvZGF5CiAgICAgICAgICAgIHNlbGYudHJhZGVzX3RvZGF5ID0gMAogICAgICAgICAgICBzZWxmLmRhaWx5X3BubCA9IDAuMAogICAgICAgICAgICBzZWxmLmtpbGxlZCA9IEZhbHNlCgogICAgZGVmIHNpemVfcXR5KHNlbGYsIGFzazogZmxvYXQpIC0+IGludDoKICAgICAgICBiYXNlID0gbWF4KGludChjb25maWcuUklTS19QRVJfVFJBREUgLy8gKGFzayAqIDEwMCkpLCAxKQogICAgICAgIGlmIHNlbGYuc2l6ZV9tdWx0ID4gMS4wOgogICAgICAgICAgICAjIHJlZ2ltZSBzaXplLXVwLCBoYXJkLWNhcHBlZCBwZXIgdHJhZGUKICAgICAgICAgICAgY2FwID0gbWF4KGludChjb25maWcuUkVHSU1FX1RSQURFX0NBUCAvLyAoYXNrICogMTAwKSksIDEpCiAgICAgICAgICAgIHJldHVybiBtYXgobWluKGludChiYXNlICogc2VsZi5zaXplX211bHQpLCBjYXApLCAxKQogICAgICAgIHJldHVybiBiYXNlCgogICAgZGVmIGNhbl9lbnRlcihzZWxmLCBub3dfZXQ6IGRhdGV0aW1lLCBoYXNfcG9zaXRpb246IGJvb2wsCiAgICAgICAgICAgICAgICAgIHRyaWdnZXI6IHN0ciA9ICJjcnVzaCIpOgogICAgICAgIGlmIHNlbGYua2lsbGVkOgogICAgICAgICAgICByZXR1cm4gRmFsc2UsICJraWxsLXN3aXRjaCIKICAgICAgICBpZiBoYXNfcG9zaXRpb246CiAgICAgICAgICAgIHJldHVybiBGYWxzZSwgIm9uZS1wb3NpdGlvbiIKICAgICAgICBpZiBzZWxmLnRyYWRlc190b2RheSA+PSBjb25maWcuTUFYX1RSQURFU19QRVJfREFZOgogICAgICAgICAgICByZXR1cm4gRmFsc2UsICJtYXgtdHJhZGVzIgogICAgICAgIGlmIHNlbGYuZGFpbHlfcG5sIDw9IC1zZWxmLmRhaWx5X3N0b3BfYW10OgogICAgICAgICAgICByZXR1cm4gRmFsc2UsICJkYWlseS1zdG9wIgogICAgICAgICMgdjM6IHdhbGwtYnJlYWsgZW50cmllcyBhcmUgZ2F0ZWQgb24gdGhlIFNBTUUgdjIgd2luZG93cyBhcyBjcnVzaAogICAgICAgICMgKEEgMTE6MDAtMTI6MzAsIEIgMTU6MzAtMTU6NTgsIGN1dG9mZiAxNTo1MCkuIE5vIG5ldyB0cmlnZ2VyIG1heQogICAgICAgICMgd2lkZW4gdGhlIHRyYWRpbmcgZGF5LgogICAgICAgIGlmIGNvbmZpZy5hY3RpdmVfd2luZG93KG5vd19ldCkgaXMgTm9uZToKICAgICAgICAgICAgcmV0dXJuIEZhbHNlLCAidGltZS1nYXRlIgogICAgICAgIGlmIG5vdCBzZWxmLnJlZ2ltZV9vazoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlLCAicmVnaW1lIgogICAgICAgIHJldHVybiBUcnVlLCAib2siCgogICAgZGVmIHJlZ2lzdGVyX3BhcnRpYWwoc2VsZiwgcG5sOiBmbG9hdCk6CiAgICAgICAgIiIiVGllciBmaWxscyBhcmUgcGFydGlhbHMgb2Ygb25lIHRyYWRlOiBtb3ZlIFBuTCwgbm90IHRoZSBjb3VudC4iIiIKICAgICAgICBzZWxmLmRhaWx5X3BubCArPSBwbmwKICAgICAgICBpZiBzZWxmLmRhaWx5X3BubCA8PSAtc2VsZi5kYWlseV9zdG9wX2FtdDoKICAgICAgICAgICAgc2VsZi5raWxsZWQgPSBUcnVlCiAgICAgICAgICAgIGxvZy5lcnJvcigiS0lMTCBTV0lUQ0g6IGRhaWx5IHN0b3AgaGl0ICglKy4yZikiLCBzZWxmLmRhaWx5X3BubCkKCiAgICBkZWYgcmVnaXN0ZXJfY2xvc2Uoc2VsZiwgcG5sOiBmbG9hdCk6CiAgICAgICAgc2VsZi50cmFkZXNfdG9kYXkgKz0gMQogICAgICAgIHNlbGYuZGFpbHlfcG5sICs9IHBubAogICAgICAgIGxvZy5pbmZvKCJ0cmFkZSBjbG9zZWQ6IHBubD0lKy4yZiBkYXlfcG5sPSUrLjJmIHRyYWRlcz0lZCIsCiAgICAgICAgICAgICAgICAgcG5sLCBzZWxmLmRhaWx5X3BubCwgc2VsZi50cmFkZXNfdG9kYXkpCiAgICAgICAgaWYgc2VsZi5kYWlseV9wbmwgPD0gLXNlbGYuZGFpbHlfc3RvcF9hbXQ6CiAgICAgICAgICAgIHNlbGYua2lsbGVkID0gVHJ1ZQogICAgICAgICAgICBsb2cuZXJyb3IoIktJTEwgU1dJVENIOiBkYWlseSBzdG9wIGhpdCAoJSsuMmYpIiwgc2VsZi5kYWlseV9wbmwpCgogICAgZGVmIGNoZWNrX2tpbGwoc2VsZiwgaGFzX3Bvc2l0aW9uOiBib29sKSAtPiBib29sOgogICAgICAgICIiIlRydWUgaWYgdGhlIGtpbGwgc3dpdGNoIGp1c3QgdHJpcHBlZCB3aXRoIGFuIG9wZW4gcG9zaXRpb24uIiIiCiAgICAgICAgcmV0dXJuIHNlbGYua2lsbGVkIGFuZCBoYXNfcG9zaXRpb24K
+"""Pre-trade risk checks + daily kill switch.
+
+Accounting is our own (fills we made), not the broker's - auditable and
+immune to anything else happening in the paper account.
+"""
+import logging
+from datetime import datetime
+
+import config
+
+log = logging.getLogger("algo.risk")
+
+
+class RiskManager:
+    def __init__(self, account_value: float):
+        self.account_value = account_value
+        self.daily_stop_amt = account_value * config.DAILY_STOP_PCT
+        self.trades_today = 0
+        self.daily_pnl = 0.0
+        self.killed = False
+        self.date = None
+        # v3 Module C: regime gate. Default permissive (observe mode);
+        # main.py tightens it once the morning regime score is final.
+        self.regime_ok = True
+        self.size_mult = 1.0
+
+    def set_regime(self, ok: bool, mult: float = 1.0):
+        self.regime_ok = ok
+        self.size_mult = mult
+        log.info("regime set: ok=%s size_mult=%.2f", ok, mult)
+
+    def new_day(self, today):
+        if self.date != today:
+            self.date = today
+            self.trades_today = 0
+            self.daily_pnl = 0.0
+            self.killed = False
+
+    def size_qty(self, ask: float) -> int:
+        base = max(int(config.RISK_PER_TRADE // (ask * 100)), 1)
+        if self.size_mult > 1.0:
+            # regime size-up, hard-capped per trade
+            cap = max(int(config.REGIME_TRADE_CAP // (ask * 100)), 1)
+            return max(min(int(base * self.size_mult), cap), 1)
+        return base
+
+    def can_enter(self, now_et: datetime, has_position: bool,
+                  trigger: str = "crush"):
+        if self.killed:
+            return False, "kill-switch"
+        if has_position:
+            return False, "one-position"
+        if self.trades_today >= config.MAX_TRADES_PER_DAY:
+            return False, "max-trades"
+        if self.daily_pnl <= -self.daily_stop_amt:
+            return False, "daily-stop"
+        # v3: wall-break entries are gated on the SAME v2 windows as crush
+        # (A 11:00-12:30, B 15:30-15:58, cutoff 15:50). No new trigger may
+        # widen the trading day.
+        if config.active_window(now_et) is None:
+            return False, "time-gate"
+        if not self.regime_ok:
+            return False, "regime"
+        return True, "ok"
+
+    def register_partial(self, pnl: float):
+        """Tier fills are partials of one trade: move PnL, not the count."""
+        self.daily_pnl += pnl
+        if self.daily_pnl <= -self.daily_stop_amt:
+            self.killed = True
+            log.error("KILL SWITCH: daily stop hit (%+.2f)", self.daily_pnl)
+
+    def register_close(self, pnl: float):
+        self.trades_today += 1
+        self.daily_pnl += pnl
+        log.info("trade closed: pnl=%+.2f day_pnl=%+.2f trades=%d",
+                 pnl, self.daily_pnl, self.trades_today)
+        if self.daily_pnl <= -self.daily_stop_amt:
+            self.killed = True
+            log.error("KILL SWITCH: daily stop hit (%+.2f)", self.daily_pnl)
+
+    def check_kill(self, has_position: bool) -> bool:
+        """True if the kill switch just tripped with an open position."""
+        return self.killed and has_position

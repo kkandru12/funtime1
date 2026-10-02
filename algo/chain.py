@@ -1,1 +1,393 @@
-IiIiTWFya2V0LWRhdGEgbGF5ZXI6IGNoYWluIGRpc2NvdmVyeSwgbW9ybmluZyBPSSBzbmFwc2hvdCwgbGluZS1idWRnZXRlZApzdHJlYW1pbmcsIGR5bmFtaWMgd2luZG93IHJlLWNlbnRlcmluZywgd2luZyBzd2VlcHMsIDEtbWluIGJhcnMsIEFsbExhc3QgZmxvdy4KCkxJTkUgQlVER0VUIChoYXJkIGNhcCAxMDAsIHRhcmdldCA8PTc1IHN1c3RhaW5lZCk6CiAgMSAgIFNQWCB1bmRlcmx5aW5nIHN0cmVhbWluZwogIDQyICBhY3RpdmUgd2luZG93OiA1LXB0IHN0cmlrZXMsIHNwb3QgKy8tNTAsIGJvdGggcmlnaHRzIChzdHJlYW1pbmcpCiAgMjAgIGNydXNoIGJhbmQ6IDU1LTk1IHB0cyBPVE0sIDEwLXB0IHN0ZXBzLCBib3RoIHNpZGVzLCBib3RoIHJpZ2h0cyAoc3RyZWFtaW5nKQogIDEwICByZXNlcnZlZDogQWxsTGFzdCB0aWNrLWJ5LXRpY2sgb24gaGVsZCBwb3NpdGlvbiArIHRvcCBjYW5kaWRhdGVzCiAgLS0gIHN1c3RhaW5lZCA2MywgcGVhayB3aXRoIEFsbExhc3QgNzMuCgpPSSBpcyBmcm96ZW4gaW50cmFkYXkgKHZlcmlmaWVkKTogT05FIG1vcm5pbmcgc25hcHNob3Qgb2YgYWxsIDBEVEUgc3RyaWtlcyB2aWEKcGFjZWQgb25lLXNob3Qgc25hcHNob3QgcmVxdWVzdHMsIHRoZW4gdW5zdWJzY3JpYmUuIEdFWCA9IGZyb3plbiBPSSB4IGxpdmUgZ2FtbWEuCgpHcmVla3MgYXJlIElCS1Itc2VudCAoYmlkL2FzayBtb2RlbCBHcmVla3MgZnJvbSBnZW5lcmljIHRpY2tzIDEwNi8xMDcpIC0gd2UgZG8KTk9UIHJlY29tcHV0ZSBHcmVla3MgaW4gUHl0aG9uLgoiIiIKaW1wb3J0IGFzeW5jaW8KaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IHN0YXRpc3RpY3MKZnJvbSBjb2xsZWN0aW9ucyBpbXBvcnQgZGVmYXVsdGRpY3QsIGRlcXVlCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lLCB0aW1lZGVsdGEsIHRpbWV6b25lCgpmcm9tIGliX2luc3luYyBpbXBvcnQgSUIsIENvbnRyYWN0LCBJbmRleCwgVGlja2VyCgppbXBvcnQgY29uZmlnCmZyb20gcGFjZXIgaW1wb3J0IFBhY2VyCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiYWxnby5jaGFpbiIpCgojIHByaW9yaXR5OiBsb3dlciBudW1iZXIgPSBzaGVkIGxhc3QKUFJJT19TUFggPSAwClBSSU9fQUNUSVZFID0gMQpQUklPX0NSVVNIID0gMgpQUklPX0FMTExBU1QgPSAzCgoKZGVmIF9pc181cHQoazogZmxvYXQpIC0+IGJvb2w6CiAgICByZXR1cm4gYWJzKGsgLSByb3VuZChrIC8gNSkgKiA1KSA8IDAuMDEKCgpkZWYgX2dyZWVrc19mcm9tX3RpY2tlcih0OiBUaWNrZXIpOgogICAgZyA9IHQuYXNrR3JlZWtzIG9yIHQuYmlkR3JlZWtzIG9yIHQubGFzdEdyZWVrcyBvciB0Lm1vZGVsR3JlZWtzCiAgICBpZiBnIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIHRyeToKICAgICAgICByZXR1cm4gZGljdChpdj1mbG9hdChnLmltcGxpZWRWb2wpLCBkZWx0YT1mbG9hdChnLmRlbHRhKSwKICAgICAgICAgICAgICAgICAgICBnYW1tYT1mbG9hdChnLmdhbW1hKSwgdGhldGE9ZmxvYXQoZy50aGV0YSksCiAgICAgICAgICAgICAgICAgICAgdmVnYT1mbG9hdChnLnZlZ2EpKQogICAgZXhjZXB0IChUeXBlRXJyb3IsIFZhbHVlRXJyb3IpOgogICAgICAgIHJldHVybiBOb25lCgoKZGVmIF9vaV9mcm9tX3RpY2tlcih0OiBUaWNrZXIsIHJpZ2h0OiBzdHIpIC0+IGZsb2F0OgogICAgdiA9IHQuY2FsbE9wZW5JbnRlcmVzdCBpZiByaWdodCA9PSAiQyIgZWxzZSB0LnB1dE9wZW5JbnRlcmVzdAogICAgdHJ5OgogICAgICAgIHJldHVybiBmbG9hdCh2IG9yIDApCiAgICBleGNlcHQgKFR5cGVFcnJvciwgVmFsdWVFcnJvcik6CiAgICAgICAgcmV0dXJuIDAuMAoKCmNsYXNzIENoYWluU3RyZWFtOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGliOiBJQiwgcGFjZXI6IFBhY2VyKToKICAgICAgICBzZWxmLmliID0gaWIKICAgICAgICBzZWxmLnBhY2VyID0gcGFjZXIKICAgICAgICBzZWxmLmNvbnRyYWN0czogZGljdFt0dXBsZVtmbG9hdCwgc3RyXSwgQ29udHJhY3RdID0ge30KICAgICAgICBzZWxmLmV4cGlyeSA9ICIiCiAgICAgICAgc2VsZi5zdHJlYW06IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIFRpY2tlcl0gPSB7fQogICAgICAgIHNlbGYuc3RyZWFtX3ByaW86IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGludF0gPSB7fQogICAgICAgIHNlbGYuc3B4X3RpY2tlcjogVGlja2VyIHwgTm9uZSA9IE5vbmUKICAgICAgICBzZWxmLmFsbGxhc3Q6IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIFRpY2tlcl0gPSB7fQogICAgICAgIHNlbGYuYWxsbGFzdF9zZWVuOiBkaWN0W3R1cGxlW2Zsb2F0LCBzdHJdLCBpbnRdID0ge30KICAgICAgICBzZWxmLm9pOiBkaWN0W3R1cGxlW2Zsb2F0LCBzdHJdLCBmbG9hdF0gPSB7fQogICAgICAgIHNlbGYud2luZ19ncmVla3M6IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGRpY3RdID0ge30KICAgICAgICBzZWxmLmFza19oaXN0OiBkaWN0W3R1cGxlW2Zsb2F0LCBzdHJdLCBkZXF1ZV0gPSBkZWZhdWx0ZGljdCgKICAgICAgICAgICAgbGFtYmRhOiBkZXF1ZShtYXhsZW49Y29uZmlnLkFTS19aX0xPT0tCQUNLX01JTikpCiAgICAgICAgc2VsZi5pdl9oaXN0OiBkZXF1ZSA9IGRlcXVlKG1heGxlbj1jb25maWcuSVZfTE9PS0JBQ0tfTUlOKQogICAgICAgIHNlbGYuX2Jhcl9taW51dGU6IGRhdGV0aW1lIHwgTm9uZSA9IE5vbmUKICAgICAgICBzZWxmLl9iYXJfYWNjdW06IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGxpc3RdID0gZGVmYXVsdGRpY3QobGlzdCkKICAgICAgICBzZWxmLl9pdl9hY2N1bTogbGlzdCA9IFtdCiAgICAgICAgc2VsZi5mbG93OiBkaWN0W3R1cGxlW2Zsb2F0LCBzdHJdLCBkZXF1ZV0gPSBkZWZhdWx0ZGljdChsYW1iZGE6IGRlcXVlKG1heGxlbj01MDApKQogICAgICAgIHNlbGYubGluZXNfdXNlZCA9IDAKCiAgICBhc3luYyBkZWYgZGlzY292ZXIoc2VsZiwgZXhwaXJ5X3l5eXltbWRkOiBzdHIpIC0+IGludDoKICAgICAgICAiIiJPbmUgcmVxQ29udHJhY3REZXRhaWxzIHJldHVybnMgdGhlIHdob2xlIDBEVEUgU1BYVyBjaGFpbi4iIiIKICAgICAgICBzZWxmLmV4cGlyeSA9IGV4cGlyeV95eXl5bW1kZAogICAgICAgIHByb2JlID0gQ29udHJhY3Qoc2VjVHlwZT0iT1BUIiwgc3ltYm9sPWNvbmZpZy5VTkRFUkxZSU5HLAogICAgICAgICAgICAgICAgICAgICAgICAgbGFzdFRyYWRlRGF0ZU9yQ29udHJhY3RNb250aD1leHBpcnlfeXl5eW1tZGQsCiAgICAgICAgICAgICAgICAgICAgICAgICBleGNoYW5nZT1jb25maWcuRVhDSEFOR0UsIHRyYWRpbmdDbGFzcz1jb25maWcuVFJBRElOR19DTEFTUywKICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbmN5PSJVU0QiKQogICAgICAgIGRldGFpbHMgPSBhd2FpdCBzZWxmLmliLnJlcUNvbnRyYWN0RGV0YWlsc0FzeW5jKHByb2JlKQogICAgICAgIG4gPSAwCiAgICAgICAgZm9yIGQgaW4gZGV0YWlsczoKICAgICAgICAgICAgYyA9IGQuY29udHJhY3QKICAgICAgICAgICAgaWYgYy5zZWNUeXBlICE9ICJPUFQiOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgc2VsZi5jb250cmFjdHNbKGZsb2F0KGMuc3RyaWtlKSwgYy5yaWdodCldID0gYwogICAgICAgICAgICBuICs9IDEKICAgICAgICBsb2cuaW5mbygiZGlzY292ZXJlZCAlZCAwRFRFIFNQWFcgY29udHJhY3RzIGZvciAlcyIsIG4sIGV4cGlyeV95eXl5bW1kZCkKICAgICAgICByZXR1cm4gbgoKICAgIGFzeW5jIGRlZiBfc25hcHNob3Rfb25lKHNlbGYsIGNvbnRyYWN0OiBDb250cmFjdCwgdGlja19saXN0OiBzdHIpOgogICAgICAgIGF3YWl0IHNlbGYucGFjZXIuYWNxdWlyZSgpCiAgICAgICAgdCA9IHNlbGYuaWIucmVxTWt0RGF0YShjb250cmFjdCwgZ2VuZXJpY1RpY2tMaXN0PXRpY2tfbGlzdCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNuYXBzaG90PVRydWUsIHJlZ3VsYXRvcnlTbmFwc2hvdD1GYWxzZSkKICAgICAgICBhd2FpdCBhc3luY2lvLnNsZWVwKGNvbmZpZy5TTkFQU0hPVF9EV0VMTCkKICAgICAgICBkYXRhID0geyJiaWQiOiB0LmJpZCwgImFzayI6IHQuYXNrLCAiZ3JlZWtzIjogX2dyZWVrc19mcm9tX3RpY2tlcih0KX0KICAgICAgICBzZWxmLmliLmNhbmNlbE1rdERhdGEoY29udHJhY3QpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBhc3luYyBkZWYgbW9ybmluZ19vaV9zbmFwc2hvdChzZWxmKSAtPiBkaWN0OgogICAgICAgICIiIk9ORSBmdWxsLWNoYWluIE9JIHNuYXBzaG90IChvbmUtc2hvdCByZXF1ZXN0cywgbm8gbGluZXMgaGVsZCkuIiIiCiAgICAgICAgbG9nLmluZm8oIm1vcm5pbmcgT0kgc25hcHNob3Q6ICVkIGNvbnRyYWN0cyIsIGxlbihzZWxmLmNvbnRyYWN0cykpCiAgICAgICAgb2k6IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGZsb2F0XSA9IHt9CgogICAgICAgIGFzeW5jIGRlZiBvbmUoaXRlbSk6CiAgICAgICAgICAgIGtleSwgY29udHJhY3QgPSBpdGVtCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGF3YWl0IHNlbGYucGFjZXIuYWNxdWlyZSgpCiAgICAgICAgICAgICAgICB0ID0gc2VsZi5pYi5yZXFNa3REYXRhKGNvbnRyYWN0LCBnZW5lcmljVGlja0xpc3Q9IjEwMSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNuYXBzaG90PVRydWUsIHJlZ3VsYXRvcnlTbmFwc2hvdD1GYWxzZSkKICAgICAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoY29uZmlnLlNOQVBTSE9UX0RXRUxMKQogICAgICAgICAgICAgICAgb2lba2V5XSA9IF9vaV9mcm9tX3RpY2tlcih0LCBrZXlbMV0pCiAgICAgICAgICAgICAgICBzZWxmLmliLmNhbmNlbE1rdERhdGEoY29udHJhY3QpCiAgICAgICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgICAgIGxvZy53YXJuaW5nKCJPSSBzbmFwc2hvdCBmYWlsZWQgJXM6ICVzIiwga2V5LCBlKQoKICAgICAgICBhd2FpdCBhc3luY2lvLmdhdGhlcigqKG9uZShpdCkgZm9yIGl0IGluIHNlbGYuY29udHJhY3RzLml0ZW1zKCkpKQogICAgICAgIHNlbGYub2kgPSBvaQogICAgICAgIGNvdmVyZWQgPSBzdW0oMSBmb3IgdiBpbiBvaS52YWx1ZXMoKSBpZiB2ID4gMCkKICAgICAgICBsb2cuaW5mbygiT0kgc25hcHNob3QgZG9uZTogJWQvJWQgcmVwb3J0aW5nIE9JPjAiLCBjb3ZlcmVkLCBsZW4ob2kpKQogICAgICAgIHJldHVybiBvaQoKICAgIGFzeW5jIGRlZiB3aW5nX3N3ZWVwKHNlbGYsIHNwb3Q6IGZsb2F0KToKICAgICAgICAiIiJQYWNlZCBzbmFwc2hvdCBzd2VlcCBvZiBub24tc3RyZWFtaW5nIHN0cmlrZXMgd2l0aGluIHJhbmdlLCBmb3IgR0VYCiAgICAgICAgcXVvdGUvR3JlZWsgY29tcGxldGVuZXNzLiBOZXZlciBzdHJlYW1zIHdpbmdzLiIiIgogICAgICAgIHdhbnQgPSBbayBmb3IgayBpbiBzZWxmLmNvbnRyYWN0cwogICAgICAgICAgICAgICAgaWYgYWJzKGtbMF0gLSBzcG90KSA8PSBjb25maWcuV0lOR19TV0VFUF9SQU5HRSBhbmQgayBub3QgaW4gc2VsZi5zdHJlYW1dCiAgICAgICAgbG9nLmluZm8oIndpbmcgc3dlZXA6ICVkIHN0cmlrZXMiLCBsZW4od2FudCkpCgogICAgICAgIGFzeW5jIGRlZiBvbmUoa2V5KToKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZCA9IGF3YWl0IHNlbGYuX3NuYXBzaG90X29uZShzZWxmLmNvbnRyYWN0c1trZXldLCBjb25maWcuR0VORVJJQ19USUNLUykKICAgICAgICAgICAgICAgIGlmIGRbImdyZWVrcyJdOgogICAgICAgICAgICAgICAgICAgIHNlbGYud2luZ19ncmVla3Nba2V5XSA9IGRbImdyZWVrcyJdCiAgICAgICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgICAgIGxvZy5kZWJ1Zygid2luZyBzd2VlcCBtaXNzICVzOiAlcyIsIGtleSwgZSkKCiAgICAgICAgYXdhaXQgYXN5bmNpby5nYXRoZXIoKihvbmUoaykgZm9yIGsgaW4gd2FudCkpCiAgICAgICAgbG9nLmluZm8oIndpbmcgc3dlZXAgZG9uZTogZ3JlZWtzIGZvciAlZCB3aW5nIHN0cmlrZXMiLCBsZW4oc2VsZi53aW5nX2dyZWVrcykpCgogICAgZGVmIF9saW5lcyhzZWxmKSAtPiBpbnQ6CiAgICAgICAgcmV0dXJuICgxIGlmIHNlbGYuc3B4X3RpY2tlciBlbHNlIDApICsgbGVuKHNlbGYuc3RyZWFtKSArIGxlbihzZWxmLmFsbGxhc3QpCgogICAgYXN5bmMgZGVmIF9zdWJfc3RyZWFtKHNlbGYsIGtleSwgcHJpbyk6CiAgICAgICAgaWYga2V5IGluIHNlbGYuc3RyZWFtOgogICAgICAgICAgICByZXR1cm4KICAgICAgICBhd2FpdCBzZWxmLnBhY2VyLmFjcXVpcmUoKQogICAgICAgIHQgPSBzZWxmLmliLnJlcU1rdERhdGEoc2VsZi5jb250cmFjdHNba2V5XSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdlbmVyaWNUaWNrTGlzdD1jb25maWcuR0VORVJJQ19USUNLUywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNuYXBzaG90PUZhbHNlLCByZWd1bGF0b3J5U25hcHNob3Q9RmFsc2UpCiAgICAgICAgc2VsZi5zdHJlYW1ba2V5XSA9IHQKICAgICAgICBzZWxmLnN0cmVhbV9wcmlvW2tleV0gPSBwcmlvCgogICAgZGVmIF91bnN1Yl9zdHJlYW0oc2VsZiwga2V5KToKICAgICAgICBpZiBrZXkgaW4gc2VsZi5zdHJlYW06CiAgICAgICAgICAgIHNlbGYuaWIuY2FuY2VsTWt0RGF0YShzZWxmLmNvbnRyYWN0c1trZXldKQogICAgICAgICAgICBkZWwgc2VsZi5zdHJlYW1ba2V5XQogICAgICAgICAgICBzZWxmLnN0cmVhbV9wcmlvLnBvcChrZXksIE5vbmUpCiAgICAgICAgaWYga2V5IGluIHNlbGYuYWxsbGFzdDoKICAgICAgICAgICAgc2VsZi5pYi5jYW5jZWxUaWNrQnlUaWNrRGF0YShzZWxmLmNvbnRyYWN0c1trZXldKQogICAgICAgICAgICBkZWwgc2VsZi5hbGxsYXN0W2tleV0KICAgICAgICAgICAgc2VsZi5hbGxsYXN0X3NlZW4ucG9wKGtleSwgTm9uZSkKCiAgICBkZWYgZW5mb3JjZV9idWRnZXQoc2VsZik6CiAgICAgICAgIiIiU2hlZCBsb3dlc3QtcHJpb3JpdHkgbGluZXMgbmVhciB0aGUgY2FwLiBBbGxMYXN0IGdvZXMgYmVmb3JlIGFueQogICAgICAgIGNoYWluIGxpbmU7IGNoYWluIHByaW9yaXR5OiBjcnVzaCBiYW5kLCB0aGVuIGFjdGl2ZSB3aW5kb3csIG5ldmVyIFNQWC4iIiIKICAgICAgICB3aGlsZSBzZWxmLl9saW5lcygpID4gY29uZmlnLkxJTkVfSEFSRF9DQVAgLSAyOgogICAgICAgICAgICBpZiBzZWxmLmFsbGxhc3Q6CiAgICAgICAgICAgICAgICBrZXkgPSBuZXh0KGl0ZXIoc2VsZi5hbGxsYXN0KSkKICAgICAgICAgICAgICAgIGxvZy53YXJuaW5nKCJzaGVkZGluZyBBbGxMYXN0ICVzIChidWRnZXQpIiwga2V5KQogICAgICAgICAgICAgICAgc2VsZi5fdW5zdWJfc3RyZWFtKGtleSkKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHNoZWQgPSBbayBmb3IgaywgcCBpbiBzZWxmLnN0cmVhbV9wcmlvLml0ZW1zKCkgaWYgcCA9PSBQUklPX0NSVVNIXQogICAgICAgICAgICBpZiBub3Qgc2hlZDoKICAgICAgICAgICAgICAgIHNoZWQgPSBbayBmb3IgaywgcCBpbiBzZWxmLnN0cmVhbV9wcmlvLml0ZW1zKCkgaWYgcCA9PSBQUklPX0FDVElWRV0KICAgICAgICAgICAgaWYgbm90IHNoZWQ6CiAgICAgICAgICAgICAgICBsb2cuZXJyb3IoImNhbm5vdCBzaGVkIGZ1cnRoZXI7IGxpbmVzPSVkIiwgc2VsZi5fbGluZXMoKSkKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGtleSA9IHNoZWRbMF0KICAgICAgICAgICAgbG9nLndhcm5pbmcoInNoZWRkaW5nIHN0cmVhbWluZyAlcyBwcmlvPSVkIChidWRnZXQpIiwga2V5LCBzZWxmLnN0cmVhbV9wcmlvW2tleV0pCiAgICAgICAgICAgIHNlbGYuX3Vuc3ViX3N0cmVhbShrZXkpCgogICAgZGVmIGRlc2lyZWRfc2V0cyhzZWxmLCBzcG90OiBmbG9hdCk6CiAgICAgICAgYWN0aXZlLCBjcnVzaCA9IHNldCgpLCBzZXQoKQogICAgICAgIGZvciAoaywgcikgaW4gc2VsZi5jb250cmFjdHM6CiAgICAgICAgICAgIGlmIGFicyhrIC0gc3BvdCkgPD0gY29uZmlnLkFDVElWRV9XSU5ET1dfUFRTIGFuZCBfaXNfNXB0KGspOgogICAgICAgICAgICAgICAgYWN0aXZlLmFkZCgoaywgcikpCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBkID0gayAtIHNwb3QKICAgICAgICAgICAgb3RtID0gYWJzKGQpCiAgICAgICAgICAgIGlmIGNvbmZpZy5DUlVTSF9CQU5EX01JTl9PVE0gPD0gb3RtIDw9IGNvbmZpZy5DUlVTSF9CQU5EX01BWF9PVE06CiAgICAgICAgICAgICAgICBpZiBhYnMob3RtIC0gcm91bmQob3RtIC8gY29uZmlnLkNSVVNIX0JBTkRfU1RFUCkKICAgICAgICAgICAgICAgICAgICAgICAqIGNvbmZpZy5DUlVTSF9CQU5EX1NURVApIDwgMC4wMToKICAgICAgICAgICAgICAgICAgICBjcnVzaC5hZGQoKGssIHIpKQogICAgICAgIHJldHVybiBhY3RpdmUsIGNydXNoCgogICAgYXN5bmMgZGVmIHN0YXJ0X3N0cmVhbWluZyhzZWxmLCBzcG90OiBmbG9hdCk6CiAgICAgICAgYXdhaXQgc2VsZi5wYWNlci5hY3F1aXJlKCkKICAgICAgICBzcHggPSBJbmRleChjb25maWcuVU5ERVJMWUlORywgY29uZmlnLkVYQ0hBTkdFLCAiVVNEIikKICAgICAgICBhd2FpdCBzZWxmLmliLnF1YWxpZnlDb250cmFjdHNBc3luYyhzcHgpCiAgICAgICAgc2VsZi5zcHhfdGlja2VyID0gc2VsZi5pYi5yZXFNa3REYXRhKHNweCwgIiIsIEZhbHNlLCBGYWxzZSkKICAgICAgICBsb2cuaW5mbygiU1BYIHN0cmVhbWluZyBzdWJzY3JpYmVkIikKICAgICAgICBhd2FpdCBzZWxmLnJlY2VudGVyKHNwb3QsIGZvcmNlPVRydWUpCgogICAgYXN5bmMgZGVmIHJlY2VudGVyKHNlbGYsIHNwb3Q6IGZsb2F0LCBmb3JjZTogYm9vbCA9IEZhbHNlKToKICAgICAgICBhY3RpdmUsIGNydXNoID0gc2VsZi5kZXNpcmVkX3NldHMoc3BvdCkKICAgICAgICB3YW50ID0ge2s6IFBSSU9fQUNUSVZFIGZvciBrIGluIGFjdGl2ZX0gfCB7azogUFJJT19DUlVTSCBmb3IgayBpbiBjcnVzaH0KICAgICAgICBmb3Iga2V5IGluIHNldChzZWxmLnN0cmVhbSkgLSBzZXQod2FudCk6CiAgICAgICAgICAgIHNlbGYuX3Vuc3ViX3N0cmVhbShrZXkpCiAgICAgICAgYWRkZWQgPSAwCiAgICAgICAgZm9yIGtleSwgcHJpbyBpbiB3YW50Lml0ZW1zKCk6CiAgICAgICAgICAgIGlmIGtleSBub3QgaW4gc2VsZi5zdHJlYW06CiAgICAgICAgICAgICAgICBhd2FpdCBzZWxmLl9zdWJfc3RyZWFtKGtleSwgcHJpbykKICAgICAgICAgICAgICAgIGFkZGVkICs9IDEKICAgICAgICBzZWxmLmVuZm9yY2VfYnVkZ2V0KCkKICAgICAgICBzZWxmLmxpbmVzX3VzZWQgPSBzZWxmLl9saW5lcygpCiAgICAgICAgbG9nLmluZm8oInJlY2VudGVyIHNwb3Q9JS4xZiBhY3RpdmU9JWQgY3J1c2g9JWQgbGluZXM9JWQgKCslZCkiLAogICAgICAgICAgICAgICAgIHNwb3QsIGxlbihhY3RpdmUpLCBsZW4oY3J1c2gpLCBzZWxmLmxpbmVzX3VzZWQsIGFkZGVkKQoKICAgICMgLS0tLS0tLS0tLS0tLS0tLSBBbGxMYXN0IGZsb3cgLS0tLS0tLS0tLS0tLS0tLQogICAgYXN5bmMgZGVmIGFsbGxhc3Rfc2V0KHNlbGYsIGtleXM6IGxpc3RbdHVwbGVbZmxvYXQsIHN0cl1dKToKICAgICAgICAiIiJBbGxMYXN0IG9uIDw9IEFMTExBU1RfTUFYX0xJTkVTOiBoZWxkIHBvc2l0aW9uICsgdG9wIGNhbmRpZGF0ZXMuIiIiCiAgICAgICAgd2FudCA9IHNldChrZXlzWzpjb25maWcuQUxMTEFTVF9NQVhfTElORVNdKQogICAgICAgIGZvciBrZXkgaW4gbGlzdChzZWxmLmFsbGxhc3QpOgogICAgICAgICAgICBpZiBrZXkgbm90IGluIHdhbnQ6CiAgICAgICAgICAgICAgICBzZWxmLmliLmNhbmNlbFRpY2tCeVRpY2tEYXRhKHNlbGYuY29udHJhY3RzW2tleV0pCiAgICAgICAgICAgICAgICBkZWwgc2VsZi5hbGxsYXN0W2tleV0KICAgICAgICAgICAgICAgIHNlbGYuYWxsbGFzdF9zZWVuLnBvcChrZXksIE5vbmUpCiAgICAgICAgZm9yIGtleSBpbiB3YW50OgogICAgICAgICAgICBpZiBrZXkgbm90IGluIHNlbGYuYWxsbGFzdCBhbmQga2V5IGluIHNlbGYuY29udHJhY3RzOgogICAgICAgICAgICAgICAgYXdhaXQgc2VsZi5wYWNlci5hY3F1aXJlKCkKICAgICAgICAgICAgICAgIHQgPSBzZWxmLmliLnJlcVRpY2tCeVRpY2tEYXRhKHNlbGYuY29udHJhY3RzW2tleV0sICJBbGxMYXN0IiwgMCwgRmFsc2UpCiAgICAgICAgICAgICAgICBzZWxmLmFsbGxhc3Rba2V5XSA9IHQKICAgICAgICAgICAgICAgIHNlbGYuYWxsbGFzdF9zZWVuW2tleV0gPSBsZW4odC50aWNrQnlUaWNrcykKICAgICAgICBzZWxmLmVuZm9yY2VfYnVkZ2V0KCkKCiAgICBkZWYgZHJhaW5fZmxvdyhzZWxmKToKICAgICAgICAiIiJEcmFpbiBuZXcgQWxsTGFzdCBwcmludHM7IHRpY2stcnVsZSBzaWduIHZzIHN0cmVhbWluZyBxdW90ZS4iIiIKICAgICAgICBmb3Iga2V5LCB0IGluIHNlbGYuYWxsbGFzdC5pdGVtcygpOgogICAgICAgICAgICB0aWNrcyA9IHQudGlja0J5VGlja3MKICAgICAgICAgICAgc2VlbiA9IHNlbGYuYWxsbGFzdF9zZWVuLmdldChrZXksIDApCiAgICAgICAgICAgIGlmIGxlbih0aWNrcykgPD0gc2VlbjoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHN0ID0gc2VsZi5zdHJlYW0uZ2V0KGtleSkKICAgICAgICAgICAgYmlkID0gc3QuYmlkIGlmIHN0IGFuZCBzdC5iaWQgYW5kIHN0LmJpZCA+IDAgZWxzZSBOb25lCiAgICAgICAgICAgIGFzayA9IHN0LmFzayBpZiBzdCBhbmQgc3QuYXNrIGFuZCBzdC5hc2sgPiAwIGVsc2UgTm9uZQogICAgICAgICAgICBmb3IgdGljayBpbiB0aWNrc1tzZWVuOl06CiAgICAgICAgICAgICAgICBwcmljZSA9IGdldGF0dHIodGljaywgInByaWNlIiwgTm9uZSkKICAgICAgICAgICAgICAgIHNpemUgPSBnZXRhdHRyKHRpY2ssICJzaXplIiwgMCkgb3IgMAogICAgICAgICAgICAgICAgdHMgPSBnZXRhdHRyKHRpY2ssICJ0aW1lIiwgTm9uZSkKICAgICAgICAgICAgICAgIGlmIHByaWNlIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGlmIGFzayBhbmQgcHJpY2UgPj0gYXNrOgogICAgICAgICAgICAgICAgICAgIHMgPSAxCiAgICAgICAgICAgICAgICBlbGlmIGJpZCBhbmQgcHJpY2UgPD0gYmlkOgogICAgICAgICAgICAgICAgICAgIHMgPSAtMQogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBzID0gMAogICAgICAgICAgICAgICAgc2VsZi5mbG93W2tleV0uYXBwZW5kKCh0cywgcyAqIHNpemUpKQogICAgICAgICAgICBzZWxmLmFsbGxhc3Rfc2VlbltrZXldID0gbGVuKHRpY2tzKQoKICAgIGRlZiBmbG93X3N0YXRzKHNlbGYsIGtleSwgd2luZG93X3NlYz0zMDApOgogICAgICAgICIiIihuX3ByaW50cywgc2lnbmVkX3ZvbHVtZSkgb3ZlciB0cmFpbGluZyB3aW5kb3cuIExvZ2dlZCAvIHRpZWJyZWFrIG9ubHkuIiIiCiAgICAgICAgbm93ID0gZGF0ZXRpbWUubm93KHRpbWV6b25lLnV0YykudGltZXN0YW1wKCkKICAgICAgICBuLCBzdiA9IDAsIDAKICAgICAgICBmb3IgdHMsIHNzIGluIHNlbGYuZmxvdy5nZXQoa2V5LCAoKSk6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHQgPSB0cy50aW1lc3RhbXAoKSBpZiBoYXNhdHRyKHRzLCAidGltZXN0YW1wIikgZWxzZSBmbG9hdCh0cykKICAgICAgICAgICAgZXhjZXB0IChUeXBlRXJyb3IsIFZhbHVlRXJyb3IpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgaWYgbm93IC0gdCA8PSB3aW5kb3dfc2VjOgogICAgICAgICAgICAgICAgbiArPSAxCiAgICAgICAgICAgICAgICBzdiArPSBzcwogICAgICAgIHJldHVybiBuLCBzdgoKICAgICMgLS0tLS0tLS0tLS0tLS0tLSAxLW1pbnV0ZSBiYXJzIC0tLS0tLS0tLS0tLS0tLS0KICAgIGRlZiBub3RlX3F1b3RlcyhzZWxmLCBub3dfZXQ6IGRhdGV0aW1lKToKICAgICAgICAiIiJDYWxsIGVhY2ggbG9vcCBpdGVyYXRpb24uIFJvbGxzIDEtbWluIGFzayBiYXJzIGZvciBjcnVzaC1iYW5kCiAgICAgICAgY29udHJhY3RzIGFuZCBBVE0gSVY7IHotc2NvcmVzIG5lZWQgdHJhaWxpbmcgMzAtbWluIHNlcmllcy4iIiIKICAgICAgICBtaW51dGUgPSBub3dfZXQucmVwbGFjZShzZWNvbmQ9MCwgbWljcm9zZWNvbmQ9MCkKICAgICAgICBpZiBzZWxmLl9iYXJfbWludXRlIGlzIE5vbmU6CiAgICAgICAgICAgIHNlbGYuX2Jhcl9taW51dGUgPSBtaW51dGUKICAgICAgICBpZiBtaW51dGUgIT0gc2VsZi5fYmFyX21pbnV0ZToKICAgICAgICAgICAgZm9yIGtleSwgYXNrcyBpbiBzZWxmLl9iYXJfYWNjdW0uaXRlbXMoKToKICAgICAgICAgICAgICAgIGlmIGFza3M6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5hc2tfaGlzdFtrZXldLmFwcGVuZChzdGF0aXN0aWNzLm1lZGlhbihhc2tzKSkKICAgICAgICAgICAgaWYgc2VsZi5faXZfYWNjdW06CiAgICAgICAgICAgICAgICBzZWxmLml2X2hpc3QuYXBwZW5kKHN0YXRpc3RpY3MubWVkaWFuKHNlbGYuX2l2X2FjY3VtKSkKICAgICAgICAgICAgc2VsZi5fYmFyX2FjY3VtID0gZGVmYXVsdGRpY3QobGlzdCkKICAgICAgICAgICAgc2VsZi5faXZfYWNjdW0gPSBbXQogICAgICAgICAgICBzZWxmLl9iYXJfbWludXRlID0gbWludXRlCiAgICAgICAgZm9yIGtleSwgdCBpbiBzZWxmLnN0cmVhbS5pdGVtcygpOgogICAgICAgICAgICBpZiBzZWxmLnN0cmVhbV9wcmlvLmdldChrZXkpIGluIChQUklPX0NSVVNILCBQUklPX0FDVElWRSkgXAogICAgICAgICAgICAgICAgICAgIGFuZCB0LmFzayBhbmQgdC5hc2sgPiAwOgogICAgICAgICAgICAgICAgc2VsZi5fYmFyX2FjY3VtW2tleV0uYXBwZW5kKHQuYXNrKQogICAgICAgIGl2ID0gc2VsZi5hdG1faXYoKQogICAgICAgIGlmIGl2OgogICAgICAgICAgICBzZWxmLl9pdl9hY2N1bS5hcHBlbmQoaXYpCiAgICAgICAgc2VsZi5kcmFpbl9mbG93KCkKCiAgICBkZWYgYXNrX3pzY29yZShzZWxmLCBrZXkpIC0+IGZsb2F0IHwgTm9uZToKICAgICAgICBoID0gc2VsZi5hc2tfaGlzdC5nZXQoa2V5KQogICAgICAgIGlmIG5vdCBoIG9yIGxlbihoKSA8IGNvbmZpZy5NSU5fQVNLX0hJU1RPUlk6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgbXUgPSBzdGF0aXN0aWNzLm1lYW4oaCkKICAgICAgICBzZCA9IHN0YXRpc3RpY3MucHN0ZGV2KGgpCiAgICAgICAgaWYgc2QgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBjdXIgPSBoWy0xXQogICAgICAgIHJldHVybiAoY3VyIC0gbXUpIC8gc2QKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0gc3RhdGUgZm9yIHN0cmF0ZWd5IC0tLS0tLS0tLS0tLS0tLS0KICAgIGRlZiBzcG90KHNlbGYpIC0+IGZsb2F0IHwgTm9uZToKICAgICAgICB0ID0gc2VsZi5zcHhfdGlja2VyCiAgICAgICAgaWYgdCBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIHB4ID0gdC5tYXJrZXRQcmljZSgpIG9yIHQubGFzdCBvciB0LmNsb3NlCiAgICAgICAgcmV0dXJuIGZsb2F0KHB4KSBpZiBweCBhbmQgcHggPiAwIGVsc2UgTm9uZQoKICAgIGRlZiBhdG1faXYoc2VsZikgLT4gZmxvYXQgfCBOb25lOgogICAgICAgIHMgPSBzZWxmLnNwb3QoKQogICAgICAgIGlmIG5vdCBzOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIGJlc3QsIGJlc3RkID0gTm9uZSwgMWU5CiAgICAgICAgZm9yIChrLCByKSwgdCBpbiBzZWxmLnN0cmVhbS5pdGVtcygpOgogICAgICAgICAgICBpZiByICE9ICJDIjoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGQgPSBhYnMoayAtIHMpCiAgICAgICAgICAgIGlmIGQgPCBiZXN0ZDoKICAgICAgICAgICAgICAgIGcgPSBfZ3JlZWtzX2Zyb21fdGlja2VyKHQpCiAgICAgICAgICAgICAgICBpZiBnIGFuZCBnWyJpdiJdIGFuZCAwLjAyIDwgZ1siaXYiXSA8IDMuMDoKICAgICAgICAgICAgICAgICAgICBiZXN0LCBiZXN0ZCA9IGdbIml2Il0sIGQKICAgICAgICByZXR1cm4gYmVzdAoKICAgIGRlZiBpdl9vayhzZWxmKSAtPiB0dXBsZVtib29sLCBzdHJdOgogICAgICAgICIiIklWLWZsYXQgcmVnaW1lIGNoZWNrOiBza2lwIGVudHJpZXMgd2hlbiBBVE0gSVYgc3Bpa2VkLiIiIgogICAgICAgIGlmIGxlbihzZWxmLml2X2hpc3QpIDwgY29uZmlnLk1JTl9BU0tfSElTVE9SWToKICAgICAgICAgICAgcmV0dXJuIFRydWUsICJ3YXJtaW5nLXVwIgogICAgICAgIGl2X25vdyA9IHNlbGYuaXZfaGlzdFstMV0KICAgICAgICBtZWQgPSBzdGF0aXN0aWNzLm1lZGlhbihzZWxmLml2X2hpc3QpCiAgICAgICAgaWYgbWVkIDw9IDA6CiAgICAgICAgICAgIHJldHVybiBUcnVlLCAibm8taXYiCiAgICAgICAgaWYgaXZfbm93ID4gY29uZmlnLklWX1NQSUtFX1JBVElPICogbWVkOgogICAgICAgICAgICByZXR1cm4gRmFsc2UsIGYiaXYtc3Bpa2Uge2l2X25vdzouMmZ9ID4ge2NvbmZpZy5JVl9TUElLRV9SQVRJT314IG1lZGlhbiB7bWVkOi4yZn0iCiAgICAgICAgcmV0dXJuIFRydWUsICJvayIKCiAgICBkZWYgY29udHJhY3Rfc3RhdGUoc2VsZiwga2V5KSAtPiBkaWN0IHwgTm9uZToKICAgICAgICB0ID0gc2VsZi5zdHJlYW0uZ2V0KGtleSkKICAgICAgICBpZiB0IGlzIE5vbmU6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgYmlkID0gdC5iaWQgaWYgdC5iaWQgYW5kIHQuYmlkID4gMCBlbHNlIDAuMAogICAgICAgIGFzayA9IHQuYXNrIGlmIHQuYXNrIGFuZCB0LmFzayA+IDAgZWxzZSAwLjAKICAgICAgICBpZiBhc2sgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBnID0gX2dyZWVrc19mcm9tX3RpY2tlcih0KQogICAgICAgIGlmIG5vdCBnOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIHJldHVybiBkaWN0KGtleT1rZXksIHN0cmlrZT1rZXlbMF0sIHJpZ2h0PSJjYWxsIiBpZiBrZXlbMV0gPT0gIkMiIGVsc2UgInB1dCIsCiAgICAgICAgICAgICAgICAgICAgYmlkPWJpZCwgYXNrPWFzaywgbWlkPShiaWQgKyBhc2spIC8gMiwKICAgICAgICAgICAgICAgICAgICBkZWx0YT1nWyJkZWx0YSJdLCBnYW1tYT1nWyJnYW1tYSJdLCBpdj1nWyJpdiJdLAogICAgICAgICAgICAgICAgICAgIG9pPXNlbGYub2kuZ2V0KGtleSwgMC4wKSkKCiAgICBkZWYgZXZhbF91bml2ZXJzZShzZWxmKSAtPiBsaXN0W2RpY3RdOgogICAgICAgICIiIkFsbCBzdHJlYW1pbmcgY29udHJhY3RzIHdpdGggdXNhYmxlIHF1b3RlcyArIElCS1IgR3JlZWtzLiIiIgogICAgICAgIG91dCA9IFtdCiAgICAgICAgZm9yIGtleSBpbiBzZWxmLnN0cmVhbToKICAgICAgICAgICAgYyA9IHNlbGYuY29udHJhY3Rfc3RhdGUoa2V5KQogICAgICAgICAgICBpZiBjOgogICAgICAgICAgICAgICAgb3V0LmFwcGVuZChjKQogICAgICAgIHJldHVybiBvdXQKCiAgICBkZWYgZ2FtbWFfbWFwKHNlbGYpIC0+IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGZsb2F0XToKICAgICAgICAiIiJCZXN0LWF2YWlsYWJsZSBnYW1tYSBwZXIgc3RyaWtlIGZvciBHRVg6IHN0cmVhbWluZyBHcmVla3MgZmlyc3QsCiAgICAgICAgd2luZy1zd2VlcCBHcmVla3Mgc2Vjb25kLiIiIgogICAgICAgIG06IGRpY3RbdHVwbGVbZmxvYXQsIHN0cl0sIGZsb2F0XSA9IHt9CiAgICAgICAgZm9yIGtleSwgdCBpbiBzZWxmLnN0cmVhbS5pdGVtcygpOgogICAgICAgICAgICBnID0gX2dyZWVrc19mcm9tX3RpY2tlcih0KQogICAgICAgICAgICBpZiBnIGFuZCBnWyJnYW1tYSJdIGFuZCBnWyJnYW1tYSJdID4gMDoKICAgICAgICAgICAgICAgIG1ba2V5XSA9IGdbImdhbW1hIl0KICAgICAgICBmb3Iga2V5LCBnIGluIHNlbGYud2luZ19ncmVla3MuaXRlbXMoKToKICAgICAgICAgICAgaWYga2V5IG5vdCBpbiBtIGFuZCBnWyJnYW1tYSJdIGFuZCBnWyJnYW1tYSJdID4gMDoKICAgICAgICAgICAgICAgIG1ba2V5XSA9IGdbImdhbW1hIl0KICAgICAgICByZXR1cm4gbQo=
+"""Market-data layer: chain discovery, morning OI snapshot, line-budgeted
+streaming, dynamic window re-centering, wing sweeps, 1-min bars, AllLast flow.
+
+LINE BUDGET (hard cap 100, target <=75 sustained):
+  1   SPX underlying streaming
+  42  active window: 5-pt strikes, spot +/-50, both rights (streaming)
+  20  crush band: 55-95 pts OTM, 10-pt steps, both sides, both rights (streaming)
+  10  reserved: AllLast tick-by-tick on held position + top candidates
+  --  sustained 63, peak with AllLast 73.
+
+OI is frozen intraday (verified): ONE morning snapshot of all 0DTE strikes via
+paced one-shot snapshot requests, then unsubscribe. GEX = frozen OI x live gamma.
+
+Greeks are IBKR-sent (bid/ask model Greeks from generic ticks 106/107) - we do
+NOT recompute Greeks in Python.
+"""
+import asyncio
+import logging
+import statistics
+from collections import defaultdict, deque
+from datetime import datetime, timedelta, timezone
+
+from ib_insync import IB, Contract, Index, Ticker
+
+import config
+from pacer import Pacer
+
+log = logging.getLogger("algo.chain")
+
+# priority: lower number = shed last
+PRIO_SPX = 0
+PRIO_ACTIVE = 1
+PRIO_CRUSH = 2
+PRIO_ALLLAST = 3
+
+
+def _is_5pt(k: float) -> bool:
+    return abs(k - round(k / 5) * 5) < 0.01
+
+
+def _greeks_from_ticker(t: Ticker):
+    g = t.askGreeks or t.bidGreeks or t.lastGreeks or t.modelGreeks
+    if g is None:
+        return None
+    try:
+        return dict(iv=float(g.impliedVol), delta=float(g.delta),
+                    gamma=float(g.gamma), theta=float(g.theta),
+                    vega=float(g.vega))
+    except (TypeError, ValueError):
+        return None
+
+
+def _oi_from_ticker(t: Ticker, right: str) -> float:
+    v = t.callOpenInterest if right == "C" else t.putOpenInterest
+    try:
+        return float(v or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+class ChainStream:
+    def __init__(self, ib: IB, pacer: Pacer):
+        self.ib = ib
+        self.pacer = pacer
+        self.contracts: dict[tuple[float, str], Contract] = {}
+        self.expiry = ""
+        self.stream: dict[tuple[float, str], Ticker] = {}
+        self.stream_prio: dict[tuple[float, str], int] = {}
+        self.spx_ticker: Ticker | None = None
+        self.alllast: dict[tuple[float, str], Ticker] = {}
+        self.alllast_seen: dict[tuple[float, str], int] = {}
+        self.oi: dict[tuple[float, str], float] = {}
+        self.wing_greeks: dict[tuple[float, str], dict] = {}
+        self.ask_hist: dict[tuple[float, str], deque] = defaultdict(
+            lambda: deque(maxlen=config.ASK_Z_LOOKBACK_MIN))
+        self.iv_hist: deque = deque(maxlen=config.IV_LOOKBACK_MIN)
+        self._bar_minute: datetime | None = None
+        self._bar_accum: dict[tuple[float, str], list] = defaultdict(list)
+        self._iv_accum: list = []
+        self.flow: dict[tuple[float, str], deque] = defaultdict(lambda: deque(maxlen=500))
+        self.lines_used = 0
+
+    async def discover(self, expiry_yyyymmdd: str) -> int:
+        """One reqContractDetails returns the whole 0DTE SPXW chain."""
+        self.expiry = expiry_yyyymmdd
+        probe = Contract(secType="OPT", symbol=config.UNDERLYING,
+                         lastTradeDateOrContractMonth=expiry_yyyymmdd,
+                         exchange=config.EXCHANGE, tradingClass=config.TRADING_CLASS,
+                         currency="USD")
+        details = await self.ib.reqContractDetailsAsync(probe)
+        n = 0
+        for d in details:
+            c = d.contract
+            if c.secType != "OPT":
+                continue
+            self.contracts[(float(c.strike), c.right)] = c
+            n += 1
+        log.info("discovered %d 0DTE SPXW contracts for %s", n, expiry_yyyymmdd)
+        return n
+
+    async def _snapshot_one(self, contract: Contract, tick_list: str):
+        await self.pacer.acquire()
+        t = self.ib.reqMktData(contract, genericTickList=tick_list,
+                               snapshot=True, regulatorySnapshot=False)
+        await asyncio.sleep(config.SNAPSHOT_DWELL)
+        data = {"bid": t.bid, "ask": t.ask, "greeks": _greeks_from_ticker(t)}
+        self.ib.cancelMktData(contract)
+        return data
+
+    async def morning_oi_snapshot(self) -> dict:
+        """ONE full-chain OI snapshot (one-shot requests, no lines held)."""
+        log.info("morning OI snapshot: %d contracts", len(self.contracts))
+        oi: dict[tuple[float, str], float] = {}
+
+        async def one(item):
+            key, contract = item
+            try:
+                await self.pacer.acquire()
+                t = self.ib.reqMktData(contract, genericTickList="101",
+                                       snapshot=True, regulatorySnapshot=False)
+                await asyncio.sleep(config.SNAPSHOT_DWELL)
+                oi[key] = _oi_from_ticker(t, key[1])
+                self.ib.cancelMktData(contract)
+            except Exception as e:
+                log.warning("OI snapshot failed %s: %s", key, e)
+
+        await asyncio.gather(*(one(it) for it in self.contracts.items()))
+        self.oi = oi
+        covered = sum(1 for v in oi.values() if v > 0)
+        log.info("OI snapshot done: %d/%d reporting OI>0", covered, len(oi))
+        return oi
+
+    async def wing_sweep(self, spot: float):
+        """Paced snapshot sweep of non-streaming strikes within range, for GEX
+        quote/Greek completeness. Never streams wings."""
+        want = [k for k in self.contracts
+                if abs(k[0] - spot) <= config.WING_SWEEP_RANGE and k not in self.stream]
+        log.info("wing sweep: %d strikes", len(want))
+
+        async def one(key):
+            try:
+                d = await self._snapshot_one(self.contracts[key], config.GENERIC_TICKS)
+                if d["greeks"]:
+                    self.wing_greeks[key] = d["greeks"]
+            except Exception as e:
+                log.debug("wing sweep miss %s: %s", key, e)
+
+        await asyncio.gather(*(one(k) for k in want))
+        log.info("wing sweep done: greeks for %d wing strikes", len(self.wing_greeks))
+
+    def _lines(self) -> int:
+        return (1 if self.spx_ticker else 0) + len(self.stream) + len(self.alllast)
+
+    async def _sub_stream(self, key, prio):
+        if key in self.stream:
+            return
+        await self.pacer.acquire()
+        t = self.ib.reqMktData(self.contracts[key],
+                               genericTickList=config.GENERIC_TICKS,
+                               snapshot=False, regulatorySnapshot=False)
+        self.stream[key] = t
+        self.stream_prio[key] = prio
+
+    def _unsub_stream(self, key):
+        if key in self.stream:
+            self.ib.cancelMktData(self.contracts[key])
+            del self.stream[key]
+            self.stream_prio.pop(key, None)
+        if key in self.alllast:
+            self.ib.cancelTickByTickData(self.contracts[key])
+            del self.alllast[key]
+            self.alllast_seen.pop(key, None)
+
+    def enforce_budget(self):
+        """Shed lowest-priority lines near the cap. AllLast goes before any
+        chain line; chain priority: crush band, then active window, never SPX."""
+        while self._lines() > config.LINE_HARD_CAP - 2:
+            if self.alllast:
+                key = next(iter(self.alllast))
+                log.warning("shedding AllLast %s (budget)", key)
+                self._unsub_stream(key)
+                continue
+            shed = [k for k, p in self.stream_prio.items() if p == PRIO_CRUSH]
+            if not shed:
+                shed = [k for k, p in self.stream_prio.items() if p == PRIO_ACTIVE]
+            if not shed:
+                log.error("cannot shed further; lines=%d", self._lines())
+                break
+            key = shed[0]
+            log.warning("shedding streaming %s prio=%d (budget)", key, self.stream_prio[key])
+            self._unsub_stream(key)
+
+    def desired_sets(self, spot: float):
+        active, crush = set(), set()
+        for (k, r) in self.contracts:
+            if abs(k - spot) <= config.ACTIVE_WINDOW_PTS and _is_5pt(k):
+                active.add((k, r))
+                continue
+            d = k - spot
+            otm = abs(d)
+            if config.CRUSH_BAND_MIN_OTM <= otm <= config.CRUSH_BAND_MAX_OTM:
+                if abs(otm - round(otm / config.CRUSH_BAND_STEP)
+                       * config.CRUSH_BAND_STEP) < 0.01:
+                    crush.add((k, r))
+        return active, crush
+
+    async def start_streaming(self, spot: float):
+        await self.pacer.acquire()
+        spx = Index(config.UNDERLYING, config.EXCHANGE, "USD")
+        await self.ib.qualifyContractsAsync(spx)
+        self.spx_ticker = self.ib.reqMktData(spx, "", False, False)
+        log.info("SPX streaming subscribed")
+        await self.recenter(spot, force=True)
+
+    async def recenter(self, spot: float, force: bool = False):
+        active, crush = self.desired_sets(spot)
+        want = {k: PRIO_ACTIVE for k in active} | {k: PRIO_CRUSH for k in crush}
+        for key in set(self.stream) - set(want):
+            self._unsub_stream(key)
+        added = 0
+        for key, prio in want.items():
+            if key not in self.stream:
+                await self._sub_stream(key, prio)
+                added += 1
+        self.enforce_budget()
+        self.lines_used = self._lines()
+        log.info("recenter spot=%.1f active=%d crush=%d lines=%d (+%d)",
+                 spot, len(active), len(crush), self.lines_used, added)
+
+    # ---------------- AllLast flow ----------------
+    async def alllast_set(self, keys: list[tuple[float, str]]):
+        """AllLast on <= ALLLAST_MAX_LINES: held position + top candidates."""
+        want = set(keys[:config.ALLLAST_MAX_LINES])
+        for key in list(self.alllast):
+            if key not in want:
+                self.ib.cancelTickByTickData(self.contracts[key])
+                del self.alllast[key]
+                self.alllast_seen.pop(key, None)
+        for key in want:
+            if key not in self.alllast and key in self.contracts:
+                await self.pacer.acquire()
+                t = self.ib.reqTickByTickData(self.contracts[key], "AllLast", 0, False)
+                self.alllast[key] = t
+                self.alllast_seen[key] = len(t.tickByTicks)
+        self.enforce_budget()
+
+    def drain_flow(self):
+        """Drain new AllLast prints; tick-rule sign vs streaming quote."""
+        for key, t in self.alllast.items():
+            ticks = t.tickByTicks
+            seen = self.alllast_seen.get(key, 0)
+            if len(ticks) <= seen:
+                continue
+            st = self.stream.get(key)
+            bid = st.bid if st and st.bid and st.bid > 0 else None
+            ask = st.ask if st and st.ask and st.ask > 0 else None
+            for tick in ticks[seen:]:
+                price = getattr(tick, "price", None)
+                size = getattr(tick, "size", 0) or 0
+                ts = getattr(tick, "time", None)
+                if price is None:
+                    continue
+                if ask and price >= ask:
+                    s = 1
+                elif bid and price <= bid:
+                    s = -1
+                else:
+                    s = 0
+                self.flow[key].append((ts, s * size))
+            self.alllast_seen[key] = len(ticks)
+
+    def flow_stats(self, key, window_sec=300):
+        """(n_prints, signed_volume) over trailing window. Logged / tiebreak only."""
+        now = datetime.now(timezone.utc).timestamp()
+        n, sv = 0, 0
+        for ts, ss in self.flow.get(key, ()):
+            try:
+                t = ts.timestamp() if hasattr(ts, "timestamp") else float(ts)
+            except (TypeError, ValueError):
+                continue
+            if now - t <= window_sec:
+                n += 1
+                sv += ss
+        return n, sv
+
+    # ---------------- 1-minute bars ----------------
+    def note_quotes(self, now_et: datetime):
+        """Call each loop iteration. Rolls 1-min ask bars for crush-band
+        contracts and ATM IV; z-scores need trailing 30-min series."""
+        minute = now_et.replace(second=0, microsecond=0)
+        if self._bar_minute is None:
+            self._bar_minute = minute
+        if minute != self._bar_minute:
+            for key, asks in self._bar_accum.items():
+                if asks:
+                    self.ask_hist[key].append(statistics.median(asks))
+            if self._iv_accum:
+                self.iv_hist.append(statistics.median(self._iv_accum))
+            self._bar_accum = defaultdict(list)
+            self._iv_accum = []
+            self._bar_minute = minute
+        for key, t in self.stream.items():
+            if self.stream_prio.get(key) in (PRIO_CRUSH, PRIO_ACTIVE) \
+                    and t.ask and t.ask > 0:
+                self._bar_accum[key].append(t.ask)
+        iv = self.atm_iv()
+        if iv:
+            self._iv_accum.append(iv)
+        self.drain_flow()
+
+    def ask_zscore(self, key) -> float | None:
+        h = self.ask_hist.get(key)
+        if not h or len(h) < config.MIN_ASK_HISTORY:
+            return None
+        mu = statistics.mean(h)
+        sd = statistics.pstdev(h)
+        if sd <= 0:
+            return None
+        cur = h[-1]
+        return (cur - mu) / sd
+
+    # ---------------- state for strategy ----------------
+    def spot(self) -> float | None:
+        t = self.spx_ticker
+        if t is None:
+            return None
+        px = t.marketPrice() or t.last or t.close
+        return float(px) if px and px > 0 else None
+
+    def atm_iv(self) -> float | None:
+        s = self.spot()
+        if not s:
+            return None
+        best, bestd = None, 1e9
+        for (k, r), t in self.stream.items():
+            if r != "C":
+                continue
+            d = abs(k - s)
+            if d < bestd:
+                g = _greeks_from_ticker(t)
+                if g and g["iv"] and 0.02 < g["iv"] < 3.0:
+                    best, bestd = g["iv"], d
+        return best
+
+    def iv_ok(self) -> tuple[bool, str]:
+        """IV-flat regime check: skip entries when ATM IV spiked."""
+        if len(self.iv_hist) < config.MIN_ASK_HISTORY:
+            return True, "warming-up"
+        iv_now = self.iv_hist[-1]
+        med = statistics.median(self.iv_hist)
+        if med <= 0:
+            return True, "no-iv"
+        if iv_now > config.IV_SPIKE_RATIO * med:
+            return False, f"iv-spike {iv_now:.2f} > {config.IV_SPIKE_RATIO}x median {med:.2f}"
+        return True, "ok"
+
+    def contract_state(self, key) -> dict | None:
+        t = self.stream.get(key)
+        if t is None:
+            return None
+        bid = t.bid if t.bid and t.bid > 0 else 0.0
+        ask = t.ask if t.ask and t.ask > 0 else 0.0
+        if ask <= 0:
+            return None
+        g = _greeks_from_ticker(t)
+        if not g:
+            return None
+        return dict(key=key, strike=key[0], right="call" if key[1] == "C" else "put",
+                    bid=bid, ask=ask, mid=(bid + ask) / 2,
+                    delta=g["delta"], gamma=g["gamma"], iv=g["iv"],
+                    oi=self.oi.get(key, 0.0))
+
+    def eval_universe(self) -> list[dict]:
+        """All streaming contracts with usable quotes + IBKR Greeks."""
+        out = []
+        for key in self.stream:
+            c = self.contract_state(key)
+            if c:
+                out.append(c)
+        return out
+
+    def gamma_map(self) -> dict[tuple[float, str], float]:
+        """Best-available gamma per strike for GEX: streaming Greeks first,
+        wing-sweep Greeks second."""
+        m: dict[tuple[float, str], float] = {}
+        for key, t in self.stream.items():
+            g = _greeks_from_ticker(t)
+            if g and g["gamma"] and g["gamma"] > 0:
+                m[key] = g["gamma"]
+        for key, g in self.wing_greeks.items():
+            if key not in m and g["gamma"] and g["gamma"] > 0:
+                m[key] = g["gamma"]
+        return m

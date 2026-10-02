@@ -1,1 +1,14 @@
-IyBzaGFyZWQvIOKAlCB0aGUgYnJpZGdlJ3MgcHVibGlzaCBkaXJlY3RvcnkKCmBnZXhfYnJpZGdlYCAodGhlIGFjY291bnQncyBzaW5nbGUgSUJLUiBzdHJlYW1pbmcgY29ubmVjdGlvbikgYXRvbWljYWxseQpwdWJsaXNoZXMgaGVyZToKCi0gYGxldmVscy5qc29uYCDigJQgY2hhaW4gcXVvdGVzL0dyZWVrcyBmcmFtZSwgU3RhYmxlV2FsbCB3YWxscyt6b25lcwogIChTUFggYW5kIEVTLWNvbnZlcnRlZCksIGZsaXAsIHJlZ2ltZSwgbWFnbmV0cywgMERURSBjYW5kaWRhdGVzLAogIHNlc3Npb24gZmxhZy4gTlk6IGV2ZXJ5IDVzLiBPdmVybmlnaHQ6IGV2ZXJ5IDE1cyAoZnJvemVuIHdhbGxzLAogIGBzdGFsZTp0cnVlYCwgY29uZmlkZW5jZSBkZWNheWVkKS4KLSBgY29udHJhY3RzLmpzb25gIOKAlCBhbGwgZGlzY292ZXJlZCAwRFRFIFNQWFcgY29udHJhY3QgZGVzY3JpcHRvcnMKICAocHVibGlzaGVkIG9uY2UgcGVyIE5ZIHNlc3Npb24gYXQgZGlzY292ZXJ5KS4KCkNvbnN1bWVycyAoYGFsZ28vYCwgYGFsZ29fZXMvYCkgYXJlIHJlYWQtb25seSBoZXJlLiBBbGwgdGhyZWUgZm9sZGVycyBtdXN0CmJlIHNpYmxpbmdzIHNvIGAuLi9zaGFyZWRgIHJlc29sdmVzLiBTdGFydCB0aGUgYnJpZGdlIEZJUlNULgo=
+# shared/ — the bridge's publish directory
+
+`gex_bridge` (the account's single IBKR streaming connection) atomically
+publishes here:
+
+- `levels.json` — chain quotes/Greeks frame, StableWall walls+zones
+  (SPX and ES-converted), flip, regime, magnets, 0DTE candidates,
+  session flag. NY: every 5s. Overnight: every 15s (frozen walls,
+  `stale:true`, confidence decayed).
+- `contracts.json` — all discovered 0DTE SPXW contract descriptors
+  (published once per NY session at discovery).
+
+Consumers (`algo/`, `algo_es/`) are read-only here. All three folders must
+be siblings so `../shared` resolves. Start the bridge FIRST.

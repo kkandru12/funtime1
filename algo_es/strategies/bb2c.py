@@ -1,1 +1,294 @@
-IiIiQkItMkMg4oCUIHBvcnRlZCBmcm9tIEFwZXggcnVuX2NvbnNvbF9iYl8yY19jeWNsZS4KCkJvbGxpbmdlciB0d28tY2FuZGxlIEZBREUgb24gdGhlIHN0cnVjdHVyZSB0aW1lZnJhbWUgKGRlZmF1bHQgNGggYmFuZHMsCjIwLzIuMCwgcG9wdWxhdGlvbiBzaWdtYSB0byBtYXRjaCB0aGUgRUEpOgoKICBBID0gc3RydWN0dXJlIGJhciBjbG9zZWQgc3RyaWN0bHkgT1VUU0lERSBpdHMgb3duIGJhbmQKICAgICAgKGJhbmQgY29tcHV0ZWQgZnJvbSB0aGUgMjAgY2xvc2VzIEVORElORyBBVCB0aGF0IGJhciwgaW5jbHVzaXZlKQogIGRpcmVjdGlvbjogQSBhYm92ZSB1cHBlciAtPiBTRUxMIDsgQSBiZWxvdyBsb3dlciAtPiBCVVkKCkVudHJ5IG1vZGVzIChCQjJDX0VOVFJZX1RSSUdHRVIpOgogICJmaXJzdF9tMSIgKEFwZXggZGVmYXVsdCk6IG5vIEIgcmVxdWlyZW1lbnQuIEVudGVyIGF0IHRoZSBjbG9zZSBvZiB0aGUKICAgICAgRklSU1QgTTEgY2FuZGxlIG9mIHRoZSBzdHJ1Y3R1cmUgYmFyIHRoYXQgb3BlbnMgcmlnaHQgYWZ0ZXIgQS4KICAgICAgUmVmdXNlZCBpZiB0aGF0IE0xIGNsb3NlZCA+IGZpcnN0X20xX21heF9sYWdfc2VjIGFnby4KICAidHdvX2NhbmRsZSI6IEIgPSBuZXh0IGNsb3NlZCBiYXIgYmFjayBJTlNJREUgaXRzIG93biBiYW5kIEFORCBpbiB0aGUKICAgICAgY29ycmVjdCBoYWxmICg+PSBtaWRsaW5lIGFmdGVyIGFuIHVwcGVyIEEsIDw9IG1pZGxpbmUgYWZ0ZXIgYSBsb3dlciBBKS4KICAgICAgRW50cnkgcHJlY2VkZW5jZToKICAgICAgICAxLiBwaW4gYmFyIG9uIHRoZSBlbnRyeSBURiAoZGVmYXVsdCAxaCkgYXQvYWZ0ZXIgQiBhZ3JlZWluZyB3aXRoCiAgICAgICAgICAgZGlyZWN0aW9uIC0+IGVudHJ5ID0gcGluIGNsb3NlCiAgICAgICAgMi4gZGlzdChCLmNsb3NlLCA1RE1BKSA8IDIwIC0+IEZWRyBsaW1pdCBpbnRvIEIncyBvd24gaW1iYWxhbmNlCiAgICAgICAgICAgKGJ1eTogZ2FwID0gQS5oaWdoIC0+IEIubG93IDsgc2VsbDogZ2FwID0gQi5oaWdoIC0+IEEubG93IDsKICAgICAgICAgICAgZW50cnkgPSBuZWFyICsgKGZhci1uZWFyKSpmaWxsX2ZyYWMpLiBObyBpbWJhbGFuY2UgLT4gRFJPUCBzZXR1cC4KICAgICAgICAzLiBlbHNlIG1hcmtldCBhdCBCIGNsb3NlLgoKICBUUCA9IHRoZSA1RE1BIChjYXBwZWQgYXQgNDAgcHRzIHZpYSBfdHBfY2FwcGVkIGluIHR3b19jYW5kbGUgbW9kZSk7CiAgU0wgPSBlbnRyeSArLy0gMjAgcHRzLiBUaGUgNURNQSBtdXN0IGJlIEFIRUFEIG9mIGVudHJ5IG9yIHRoZSBzZXR1cCBpcwogIGRyb3BwZWQgKG5vdCBhIGZhZGUgYmFjayB0byBpdCBvdGhlcndpc2UpLgoKNURNQTogbWVhbiBvZiBsYXN0IDUgb2Ygc3RhdGVbImRhaWx5X2Nsb3NlcyJdOyBmYWxsYmFjayBTTUEoNSkgb24gdGhlCnN0cnVjdHVyZSBiYXJzIChhcyBpbiBBcGV4KS4KCk9uZSBzaWduYWwgcGVyIEIgYmFyICh0d29fY2FuZGxlKSAvIHBlciBmb3JtaW5nIHN0cnVjdHVyZSBiYXIgKGZpcnN0X20xKTsKY29vbGRvd24gMzAwIHMuCgpJbnRlcmZhY2U6CiAgYmFyICAgOiBuZXdlc3QgQ0xPU0VEIHN0cnVjdHVyZSBiYXIgZGljdAogIHN0YXRlIDogeyJiYXJzIjogICAgICAgIFsuLi5jbG9zZWQgc3RydWN0dXJlIGJhcnMsIG9sZGVzdC0+bmV3ZXN0Li4uXSwKICAgICAgICAgICAiZW50cnlfYmFycyI6ICBbLi4uY2xvc2VkIGVudHJ5LVRGIGJhcnMuLi5dICAgICAgKHR3b19jYW5kbGUgcGluKSwKICAgICAgICAgICAiYmFyc19tMSI6ICAgICBbLi4uY2xvc2VkIE0xIGJhcnMuLi5dICAgICAgICAgICAgKGZpcnN0X20xKSwKICAgICAgICAgICAiZGFpbHlfY2xvc2VzIjogW2Zsb2F0LCAuLi5dICAoZGFpbHkgY2xvc2VzLCBvbGRlc3QtPm5ld2VzdCksCiAgICAgICAgICAgIm5vd19ldCI6IGRhdGV0aW1lIChFVCksICJsYXN0X3ByaWNlIjogZmxvYXQsCiAgICAgICAgICAgInN0cnVjdF90ZiI6ICI0aCIgIChvbmx5IG5lZWRlZCBmb3IgZmlyc3RfbTEgZm9ybWluZy1iYXIgbWF0aCl9CiIiIgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgbG9nZ2luZwppbXBvcnQgdGltZQpmcm9tIHR5cGluZyBpbXBvcnQgRGljdCwgTGlzdCwgT3B0aW9uYWwsIFR1cGxlCgpmcm9tIC5zaWduYWwgaW1wb3J0IChTaWduYWwsIGJvbGxpbmdlcl9hdCwgY2xvc2VzLCBnbG9iZXhfb25seV9vaywgcGluYmFyLAogICAgICAgICAgICAgICAgICAgICB0Zl9zZWNvbmRzLCB0cF9jYXBwZWQsIHRzKQoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ29fZXMuc3RyYXRlZ2llcy5iYjJjIikKCgpkZWYgX2ltYmFsYW5jZShhX2hpZ2g6IGZsb2F0LCBhX2xvdzogZmxvYXQsIGJfaGlnaDogZmxvYXQsIGJfbG93OiBmbG9hdCwKICAgICAgICAgICAgICAgZGlyZWN0aW9uOiBzdHIpIC0+IE9wdGlvbmFsW1R1cGxlW2Zsb2F0LCBmbG9hdF1dOgogICAgIiIiUG9ydCBvZiBBcGV4IF9iYjJjX2ltYmFsYW5jZS4gKG5lYXIsIGZhcikgd2l0aCBgbmVhcmAgdGhlIGVkZ2UgcHJpY2UKICAgIHJlYWNoZXMgRklSU1Qgb24gdGhlIHJldHJhY2UsIG9yIE5vbmUgd2hlbiBjYW5kbGVzIG92ZXJsYXAuIiIiCiAgICBpZiBkaXJlY3Rpb24gPT0gImJ1eSI6CiAgICAgICAgaWYgYl9sb3cgPiBhX2hpZ2g6CiAgICAgICAgICAgIHJldHVybiAoYl9sb3csIGFfaGlnaCkKICAgICAgICByZXR1cm4gTm9uZQogICAgaWYgYV9sb3cgPiBiX2hpZ2g6CiAgICAgICAgcmV0dXJuIChiX2hpZ2gsIGFfbG93KQogICAgcmV0dXJuIE5vbmUKCgpkZWYgX2ZpbmRfZW50cnlfcGluKGVudHJ5X2JhcnM6IExpc3RbRGljdF0sIGFmdGVyX3RzOiBmbG9hdCwgZGlyZWN0aW9uOiBzdHIsCiAgICAgICAgICAgICAgICAgICAgbG9va2FoZWFkOiBpbnQsIHRhaWxfcGN0OiBmbG9hdCwgYm9keV9wY3Q6IGZsb2F0LAogICAgICAgICAgICAgICAgICAgIG5vc2VfcGN0OiBmbG9hdCkgLT4gT3B0aW9uYWxbZmxvYXRdOgogICAgIiIiUG9ydCBvZiBBcGV4IF9iYjJjX2ZpbmRfZW50cnlfcGluOiBmaXJzdCBDTE9TRUQgZW50cnktdGYgcGluIGJhcgogICAgYWdyZWVpbmcgd2l0aCBkaXJlY3Rpb24gdGhhdCBjbG9zZWQgYXQvYWZ0ZXIgYWZ0ZXJfdHMuIEZvcndhcmQtb25seTsKICAgIHNjYW5zIGF0IG1vc3QgYGxvb2thaGVhZGAgZWxpZ2libGUgYmFycy4iIiIKICAgIGlmIG5vdCBlbnRyeV9iYXJzIG9yIGxlbihlbnRyeV9iYXJzKSA8IDI6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIG4gPSBsZW4oZW50cnlfYmFycykKICAgIHdhbnQgPSAiYnVsbCIgaWYgZGlyZWN0aW9uID09ICJidXkiIGVsc2UgImJlYXIiCiAgICBzY2FubmVkID0gMAogICAgZm9yIGkgaW4gcmFuZ2UobiAtIDIsIG1heChuIC0gMiAtIGxvb2thaGVhZCAqIDMsIC0xKSwgLTEpOgogICAgICAgIHJvdyA9IGVudHJ5X2JhcnNbaV0KICAgICAgICBydHMgPSB0cyhyb3cuZ2V0KCJ0aW1lIikpCiAgICAgICAgaWYgcnRzIDwgYWZ0ZXJfdHM6CiAgICAgICAgICAgIGJyZWFrCiAgICAgICAgc2Nhbm5lZCArPSAxCiAgICAgICAgaWYgc2Nhbm5lZCA+IGxvb2thaGVhZDoKICAgICAgICAgICAgYnJlYWsKICAgICAgICBraW5kLCBfID0gcGluYmFyKGZsb2F0KHJvd1sib3BlbiJdKSwgZmxvYXQocm93WyJoaWdoIl0pLAogICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQocm93WyJsb3ciXSksIGZsb2F0KHJvd1siY2xvc2UiXSksCiAgICAgICAgICAgICAgICAgICAgICAgICB0YWlsX3BjdCwgYm9keV9wY3QsIG5vc2VfcGN0KQogICAgICAgIGlmIGtpbmQgPT0gd2FudDoKICAgICAgICAgICAgcmV0dXJuIGZsb2F0KHJvd1siY2xvc2UiXSkKICAgIHJldHVybiBOb25lCgoKY2xhc3MgU3RyYXRlZ3k6CiAgICBkZWYgX19pbml0X18oc2VsZiwgY29uZmlnOiBPcHRpb25hbFtEaWN0XSA9IE5vbmUpOgogICAgICAgIGMgPSBjb25maWcgb3Ige30KICAgICAgICBnID0gYy5nZXQKICAgICAgICBzZWxmLnN0cnVjdF90ZiA9IHN0cihnKCJzdHJ1Y3RfdGYiLCAiNGgiKSkKICAgICAgICBzZWxmLmVudHJ5X3RmID0gc3RyKGcoImVudHJ5X3RmIiwgIjFoIikpCiAgICAgICAgc2VsZi5lbnRyeV90cmlnZ2VyID0gc3RyKGcoImVudHJ5X3RyaWdnZXIiLCAiZmlyc3RfbTEiKSkubG93ZXIoKQogICAgICAgIHNlbGYucGVyaW9kID0gaW50KGcoInBlcmlvZCIsIDIwKSkKICAgICAgICBzZWxmLmRldmlhdGlvbiA9IGZsb2F0KGcoImRldmlhdGlvbiIsIDIuMCkpCiAgICAgICAgc2VsZi5mdmdfZGlzdF9wdHMgPSBmbG9hdChnKCJmdmdfZGlzdF9wdHMiLCAyMC4wKSkKICAgICAgICBzZWxmLmZ2Z19maWxsX2ZyYWMgPSBmbG9hdChnKCJmdmdfZmlsbF9mcmFjIiwgMC41KSkKICAgICAgICBzZWxmLnNsX3B0cyA9IGZsb2F0KGcoInNsX3B0cyIsIDIwLjApKQogICAgICAgIHNlbGYudHBfY2FwX3B0cyA9IGZsb2F0KGcoInRwX2NhcF9wdHMiLCA0MC4wKSkKICAgICAgICBzZWxmLmNvb2xkb3duX3NlYyA9IGZsb2F0KGcoImNvb2xkb3duX3NlYyIsIDMwMC4wKSkKICAgICAgICBzZWxmLnBpbl9sb29rYWhlYWQgPSBpbnQoZygicGluX2xvb2thaGVhZCIsIDQpKQogICAgICAgIHNlbGYucGluX3RhaWxfcGN0ID0gZmxvYXQoZygicGluX3RhaWxfcGN0IiwgNjAuMCkpCiAgICAgICAgc2VsZi5waW5fYm9keV9wY3QgPSBmbG9hdChnKCJwaW5fYm9keV9wY3QiLCAzNS4wKSkKICAgICAgICBzZWxmLnBpbl9ub3NlX3BjdCA9IGZsb2F0KGcoInBpbl9ub3NlX3BjdCIsIDIwLjApKQogICAgICAgIHNlbGYuZmlyc3RfbTFfbWF4X2xhZ19zZWMgPSBmbG9hdChnKCJmaXJzdF9tMV9tYXhfbGFnX3NlYyIsIDE4MC4wKSkKICAgICAgICBzZWxmLmdsb2JleF9vbmx5ID0gYm9vbChnKCJnbG9iZXhfb25seSIsIFRydWUpKQogICAgICAgIHNlbGYucnRoX3N0YXJ0ID0gc3RyKGcoInJ0aF9zdGFydCIsICIwOTozMCIpKQogICAgICAgIHNlbGYucnRoX2VuZCA9IHN0cihnKCJydGhfZW5kIiwgIjEzOjAwIikpCiAgICAgICAgc2VsZi5fbGFzdF9iYXJfdHMgPSAwLjAKICAgICAgICBzZWxmLl9sYXN0X2ZpcmUgPSAwLjAKCiAgICAjIC0tIDVETUEgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgZGVmIF9kbWE1KHNlbGYsIHN0YXRlOiBEaWN0LCBzdHJ1Y3RfYmFyczogTGlzdFtEaWN0XSkgLT4gT3B0aW9uYWxbZmxvYXRdOgogICAgICAgIGRjID0gc3RhdGUuZ2V0KCJkYWlseV9jbG9zZXMiKSBvciBbXQogICAgICAgIGlmIGxlbihkYykgPj0gNToKICAgICAgICAgICAgcmV0dXJuIHN1bShmbG9hdCh4KSBmb3IgeCBpbiBkY1stNTpdKSAvIDUuMAogICAgICAgIGNsID0gY2xvc2VzKHN0cnVjdF9iYXJzKQogICAgICAgIGlmIGxlbihjbCkgPj0gNToKICAgICAgICAgICAgcmV0dXJuIHN1bShjbFstNTpdKSAvIDUuMCAgICAgICAjIEFwZXggZmFsbGJhY2s6IFNNQSg1KSBvbiBzdHJ1Y3QgYmFycwogICAgICAgIHJldHVybiBOb25lCgogICAgIyAtLSBtYWluIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIGRlZiBvbl9iYXIoc2VsZiwgYmFyOiBEaWN0LCBzdGF0ZTogT3B0aW9uYWxbRGljdF0gPSBOb25lKSAtPiBPcHRpb25hbFtTaWduYWxdOgogICAgICAgIHN0YXRlID0gc3RhdGUgb3Ige30KICAgICAgICBpZiBzZWxmLmdsb2JleF9vbmx5IGFuZCBub3QgZ2xvYmV4X29ubHlfb2soCiAgICAgICAgICAgICAgICBzdGF0ZSwgc2VsZi5ydGhfc3RhcnQsIHNlbGYucnRoX2VuZCk6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIGJhcnM6IExpc3RbRGljdF0gPSBzdGF0ZS5nZXQoImJhcnMiKSBvciBbXQogICAgICAgIGlmIGxlbihiYXJzKSA8IHNlbGYucGVyaW9kICsgMzoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBjbCA9IGNsb3NlcyhiYXJzKQoKICAgICAgICBub3cgPSB0aW1lLnRpbWUoKQogICAgICAgIGlmIChub3cgLSBzZWxmLl9sYXN0X2ZpcmUpIDwgc2VsZi5jb29sZG93bl9zZWM6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIGlmIHNlbGYuZW50cnlfdHJpZ2dlciA9PSAiZmlyc3RfbTEiOgogICAgICAgICAgICByZXR1cm4gc2VsZi5fZmlyc3RfbTEoYmFycywgY2wsIGJhciwgc3RhdGUsIG5vdykKICAgICAgICByZXR1cm4gc2VsZi5fdHdvX2NhbmRsZShiYXJzLCBjbCwgc3RhdGUsIG5vdykKCiAgICAjIC0tIGZpcnN0X20xIG1vZGUgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBkZWYgX2ZpcnN0X20xKHNlbGYsIGJhcnMsIGNsLCBiYXIsIHN0YXRlLCBub3cpIC0+IE9wdGlvbmFsW1NpZ25hbF06CiAgICAgICAgaWEgPSBsZW4oYmFycykgLSAxICAgICAgICAgICAgICAgICAgICAgICMgQTogbGFzdCBDTE9TRUQgc3RydWN0dXJlIGJhcgogICAgICAgIEEgPSBiYXJzW2lhXQogICAgICAgIGNBID0gZmxvYXQoQVsiY2xvc2UiXSkKICAgICAgICBiYW5kID0gYm9sbGluZ2VyX2F0KGNsLCBpYSwgc2VsZi5wZXJpb2QsIHNlbGYuZGV2aWF0aW9uKQogICAgICAgIGlmIG5vdCBiYW5kOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIHVwQSwgX21pZEEsIGxvQSA9IGJhbmQKICAgICAgICBpZiBjQSA+IHVwQToKICAgICAgICAgICAgZGlyZWN0aW9uLCBzaWRlID0gInNlbGwiLCAidXBwZXIiCiAgICAgICAgZWxpZiBjQSA8IGxvQToKICAgICAgICAgICAgZGlyZWN0aW9uLCBzaWRlID0gImJ1eSIsICJsb3dlciIKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICAjIGZvcm1pbmcgc3RydWN0dXJlIGJhciBvcGVucyByaWdodCBhZnRlciBBCiAgICAgICAgZm9ybWluZ190cyA9IHRzKEEuZ2V0KCJ0aW1lIikpICsgdGZfc2Vjb25kcyhzZWxmLnN0cnVjdF90ZikKICAgICAgICBpZiBmb3JtaW5nX3RzID4gMCBhbmQgZm9ybWluZ190cyA9PSBzZWxmLl9sYXN0X2Jhcl90czoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgbTE6IExpc3RbRGljdF0gPSBzdGF0ZS5nZXQoImJhcnNfbTEiKSBvciBbXQogICAgICAgIGlmIGxlbihtMSkgPCAyOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIGZpcnN0X2kgPSBOb25lCiAgICAgICAgZm9yIGksIG0gaW4gZW51bWVyYXRlKG0xKToKICAgICAgICAgICAgdCA9IHRzKG0uZ2V0KCJ0aW1lIikpCiAgICAgICAgICAgIGlmIGZvcm1pbmdfdHMgPD0gdCA8IGZvcm1pbmdfdHMgKyA2MC4wOgogICAgICAgICAgICAgICAgZmlyc3RfaSA9IGkKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgaWYgZmlyc3RfaSBpcyBOb25lIG9yIGZpcnN0X2kgPj0gbGVuKG0xKSAtIDE6CiAgICAgICAgICAgIHJldHVybiBOb25lICAgICAgICAgICAgICAgICAgICAgICAgICAjIG5vdCBpbiBmZWVkIC8gc3RpbGwgZm9ybWluZwogICAgICAgIGVudHJ5ID0gZmxvYXQobTFbZmlyc3RfaV1bImNsb3NlIl0pCiAgICAgICAgbGFnID0gbm93IC0gKHRzKG0xW2ZpcnN0X2ldLmdldCgidGltZSIpKSArIDYwLjApCiAgICAgICAgaWYgbGFnID4gc2VsZi5maXJzdF9tMV9tYXhfbGFnX3NlYzoKICAgICAgICAgICAgc2VsZi5fbGFzdF9iYXJfdHMgPSBmb3JtaW5nX3RzCiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIHNtYTUgPSBzZWxmLl9kbWE1KHN0YXRlLCBiYXJzKQogICAgICAgIGlmIG5vdCBzbWE1IG9yIHNtYTUgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICB0cF9weCA9IGZsb2F0KHNtYTUpCiAgICAgICAgc2xfcHggPSBlbnRyeSAtIHNlbGYuc2xfcHRzIGlmIGRpcmVjdGlvbiA9PSAiYnV5IiBcCiAgICAgICAgICAgIGVsc2UgZW50cnkgKyBzZWxmLnNsX3B0cwogICAgICAgIGlmIChkaXJlY3Rpb24gPT0gImJ1eSIgYW5kIHRwX3B4IDw9IGVudHJ5KSBvciBcCiAgICAgICAgICAgKGRpcmVjdGlvbiA9PSAic2VsbCIgYW5kIHRwX3B4ID49IGVudHJ5KToKICAgICAgICAgICAgc2VsZi5fbGFzdF9iYXJfdHMgPSBmb3JtaW5nX3RzCiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIHNlbGYuX2xhc3RfYmFyX3RzID0gZm9ybWluZ190cwogICAgICAgIHNlbGYuX2xhc3RfZmlyZSA9IG5vdwogICAgICAgIG5hbWUgPSAiQkItMkMtTCIgaWYgZGlyZWN0aW9uID09ICJidXkiIGVsc2UgIkJCLTJDLVMiCiAgICAgICAgbG9nLmluZm8oIltCQjJDXSAlcyBGSVJTVF9NMSB8IEEoJXMpIGM9JS4yZiBiYW5kPVslLjJmLi4lLjJmXSB8ICIKICAgICAgICAgICAgICAgICAiZW50cnk9JS4yZiAobGFnICUuMGZzKSB8IDVETUE9JS4yZiB8IHNsPSUuMmYgdHA9JS4yZiIsCiAgICAgICAgICAgICAgICAgZGlyZWN0aW9uLnVwcGVyKCksIHNpZGUsIGNBLCBsb0EsIHVwQSwgZW50cnksIGxhZywKICAgICAgICAgICAgICAgICBzbWE1LCBzbF9weCwgdHBfcHgpCiAgICAgICAgcmV0dXJuIFNpZ25hbCgKICAgICAgICAgICAgc2lkZT1kaXJlY3Rpb24sIGVudHJ5X3B4PWVudHJ5LCBzdG9wX3B4PXNsX3B4LCB0YXJnZXRfcHg9dHBfcHgsCiAgICAgICAgICAgIHN0cmF0ZWd5X25hbWU9bmFtZSwgY29uZmlkZW5jZT0wLjk3LAogICAgICAgICAgICByZWFzb249ZiJCQjJDIHtzaWRlfS1iYW5kIGZhZGUgb24ge3NlbGYuc3RydWN0X3RmfTogQSBjbG9zZWQgIgogICAgICAgICAgICAgICAgICAgZiJvdXRzaWRlLCBmaXJzdC1NMSBlbnRyeSIsCiAgICAgICAgICAgIGV4dHJhPXsiZW50cnlfa2luZCI6ICJGSVJTVF9NMSIsICJiYW5kX3NpZGUiOiBzaWRlLAogICAgICAgICAgICAgICAgICAgImRtYTUiOiByb3VuZChzbWE1LCAyKX0pCgogICAgIyAtLSB0d29fY2FuZGxlIG1vZGUgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgZGVmIF90d29fY2FuZGxlKHNlbGYsIGJhcnMsIGNsLCBzdGF0ZSwgbm93KSAtPiBPcHRpb25hbFtTaWduYWxdOgogICAgICAgIGlhLCBpYiA9IGxlbihiYXJzKSAtIDMsIGxlbihiYXJzKSAtIDIgICAjIEEsIEI6IGJvdGggQ0xPU0VECiAgICAgICAgQSwgQiA9IGJhcnNbaWFdLCBiYXJzW2liXQogICAgICAgIGNBLCBjQiA9IGZsb2F0KEFbImNsb3NlIl0pLCBmbG9hdChCWyJjbG9zZSJdKQogICAgICAgIGhBLCBsQSA9IGZsb2F0KEFbImhpZ2giXSksIGZsb2F0KEFbImxvdyJdKQogICAgICAgIGhCLCBsQiA9IGZsb2F0KEJbImhpZ2giXSksIGZsb2F0KEJbImxvdyJdKQoKICAgICAgICBiYXJfdHMgPSB0cyhCLmdldCgidGltZSIpKQogICAgICAgIGlmIGJhcl90cyA+IDAgYW5kIGJhcl90cyA9PSBzZWxmLl9sYXN0X2Jhcl90czoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgYmFuZEEgPSBib2xsaW5nZXJfYXQoY2wsIGlhLCBzZWxmLnBlcmlvZCwgc2VsZi5kZXZpYXRpb24pCiAgICAgICAgYmFuZEIgPSBib2xsaW5nZXJfYXQoY2wsIGliLCBzZWxmLnBlcmlvZCwgc2VsZi5kZXZpYXRpb24pCiAgICAgICAgaWYgbm90IGJhbmRBIG9yIG5vdCBiYW5kQjoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICB1cEEsIF9taWRBLCBsb0EgPSBiYW5kQQogICAgICAgIHVwQiwgbWlkQiwgbG9CID0gYmFuZEIKCiAgICAgICAgaWYgY0EgPiB1cEE6CiAgICAgICAgICAgIGRpcmVjdGlvbiwgc2lkZSA9ICJzZWxsIiwgInVwcGVyIgogICAgICAgIGVsaWYgY0EgPCBsb0E6CiAgICAgICAgICAgIGRpcmVjdGlvbiwgc2lkZSA9ICJidXkiLCAibG93ZXIiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuIE5vbmUgICAgICAgICAgICAgICAgICAgICAgICAgICMgQSBub3Qgb3V0c2lkZTogbm8gZXZlbnQKICAgICAgICBpZiBub3QgKGxvQiA8PSBjQiA8PSB1cEIpOgogICAgICAgICAgICByZXR1cm4gTm9uZSAgICAgICAgICAgICAgICAgICAgICAgICAgIyBCIG5vdCBiYWNrIGluc2lkZQogICAgICAgIGlmIHNpZGUgPT0gInVwcGVyIiBhbmQgY0IgPCBtaWRCOgogICAgICAgICAgICByZXR1cm4gTm9uZSAgICAgICAgICAgICAgICAgICAgICAgICAgIyBCIGFscmVhZHkgcGFzdCBtaWRsaW5lCiAgICAgICAgaWYgc2lkZSA9PSAibG93ZXIiIGFuZCBjQiA+IG1pZEI6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIHNtYTUgPSBzZWxmLl9kbWE1KHN0YXRlLCBiYXJzKQogICAgICAgIGlmIG5vdCBzbWE1IG9yIHNtYTUgPD0gMDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBkaXN0ID0gYWJzKGNCIC0gZmxvYXQoc21hNSkpCgogICAgICAgIGVudHJ5X2JhcnM6IExpc3RbRGljdF0gPSBzdGF0ZS5nZXQoImVudHJ5X2JhcnMiKSBvciBbXQogICAgICAgIHBpbl9weCA9IF9maW5kX2VudHJ5X3BpbihlbnRyeV9iYXJzLCBiYXJfdHMsIGRpcmVjdGlvbiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VsZi5waW5fbG9va2FoZWFkLCBzZWxmLnBpbl90YWlsX3BjdCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VsZi5waW5fYm9keV9wY3QsIHNlbGYucGluX25vc2VfcGN0KQogICAgICAgIGVudHJ5X2tpbmQsIGdhcCA9IE5vbmUsIE5vbmUKICAgICAgICBpZiBwaW5fcHggaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGVudHJ5ID0gZmxvYXQocGluX3B4KQogICAgICAgICAgICBlbnRyeV9raW5kID0gZiJQSU5fe3NlbGYuZW50cnlfdGYudXBwZXIoKX1fQ0xPU0UiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZ2FwID0gX2ltYmFsYW5jZShoQSwgbEEsIGhCLCBsQiwgZGlyZWN0aW9uKQogICAgICAgICAgICBpZiBkaXN0IDwgc2VsZi5mdmdfZGlzdF9wdHM6CiAgICAgICAgICAgICAgICBpZiBnYXAgaXMgTm9uZToKICAgICAgICAgICAgICAgICAgICBzZWxmLl9sYXN0X2Jhcl90cyA9IGJhcl90cyAgICMgZHJvcHBlZCwgbm90IGRvd25ncmFkZWQKICAgICAgICAgICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgICAgICAgICAgbmVhciwgZmFyID0gZ2FwCiAgICAgICAgICAgICAgICBlbnRyeSA9IG5lYXIgKyAoZmFyIC0gbmVhcikgKiBzZWxmLmZ2Z19maWxsX2ZyYWMKICAgICAgICAgICAgICAgIGVudHJ5X2tpbmQgPSAiRlZHX0xJTUlUIgogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZW50cnkgPSBjQgogICAgICAgICAgICAgICAgZW50cnlfa2luZCA9ICJNQVJLRVRfQl9DTE9TRSIKCiAgICAgICAgdHBfcHggPSB0cF9jYXBwZWQoZW50cnksIGZsb2F0KHNtYTUpLCBkaXJlY3Rpb24sIHNlbGYudHBfY2FwX3B0cykKICAgICAgICBzbF9weCA9IGVudHJ5IC0gc2VsZi5zbF9wdHMgaWYgZGlyZWN0aW9uID09ICJidXkiIFwKICAgICAgICAgICAgZWxzZSBlbnRyeSArIHNlbGYuc2xfcHRzCiAgICAgICAgaWYgKGRpcmVjdGlvbiA9PSAiYnV5IiBhbmQgdHBfcHggPD0gZW50cnkpIG9yIFwKICAgICAgICAgICAoZGlyZWN0aW9uID09ICJzZWxsIiBhbmQgdHBfcHggPj0gZW50cnkpOgogICAgICAgICAgICBzZWxmLl9sYXN0X2Jhcl90cyA9IGJhcl90cwogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBzZWxmLl9sYXN0X2Jhcl90cyA9IGJhcl90cwogICAgICAgIHNlbGYuX2xhc3RfZmlyZSA9IG5vdwogICAgICAgIG5hbWUgPSAiQkItMkMtTCIgaWYgZGlyZWN0aW9uID09ICJidXkiIGVsc2UgIkJCLTJDLVMiCiAgICAgICAgbG9nLmluZm8oIltCQjJDXSAlcyAlcyB8IEEoJXMpIGM9JS4yZiB8IEIgYz0lLjJmIG1pZD0lLjJmIHwgIgogICAgICAgICAgICAgICAgICI1RE1BPSUuMmYgZGlzdD0lLjFmIHwgZW50cnk9JS4yZiBzbD0lLjJmIHRwPSUuMmYiLAogICAgICAgICAgICAgICAgIGRpcmVjdGlvbi51cHBlcigpLCBlbnRyeV9raW5kLCBzaWRlLCBjQSwgY0IsIG1pZEIsCiAgICAgICAgICAgICAgICAgc21hNSwgZGlzdCwgZW50cnksIHNsX3B4LCB0cF9weCkKICAgICAgICByZXR1cm4gU2lnbmFsKAogICAgICAgICAgICBzaWRlPWRpcmVjdGlvbiwgZW50cnlfcHg9ZW50cnksIHN0b3BfcHg9c2xfcHgsIHRhcmdldF9weD10cF9weCwKICAgICAgICAgICAgc3RyYXRlZ3lfbmFtZT1uYW1lLCBjb25maWRlbmNlPTAuOTcsCiAgICAgICAgICAgIHJlYXNvbj1mIkJCMkMge3NpZGV9LWJhbmQgZmFkZSBvbiB7c2VsZi5zdHJ1Y3RfdGZ9OiBBIGNsb3NlZCAiCiAgICAgICAgICAgICAgICAgICBmIm91dHNpZGUsIEIgYmFjayBpbnNpZGUgY29ycmVjdCBoYWxmOyBCLT41RE1BICIKICAgICAgICAgICAgICAgICAgIGYie2Rpc3Q6LjFmfXB0cyAtPiB7ZW50cnlfa2luZH0iLAogICAgICAgICAgICBleHRyYT17ImVudHJ5X2tpbmQiOiBlbnRyeV9raW5kLCAiYmFuZF9zaWRlIjogc2lkZSwKICAgICAgICAgICAgICAgICAgICJkaXN0X3RvXzVkbWEiOiByb3VuZChkaXN0LCAyKX0pCg==
+"""BB-2C — ported from Apex run_consol_bb_2c_cycle.
+
+Bollinger two-candle FADE on the structure timeframe (default 4h bands,
+20/2.0, population sigma to match the EA):
+
+  A = structure bar closed strictly OUTSIDE its own band
+      (band computed from the 20 closes ENDING AT that bar, inclusive)
+  direction: A above upper -> SELL ; A below lower -> BUY
+
+Entry modes (BB2C_ENTRY_TRIGGER):
+  "first_m1" (Apex default): no B requirement. Enter at the close of the
+      FIRST M1 candle of the structure bar that opens right after A.
+      Refused if that M1 closed > first_m1_max_lag_sec ago.
+  "two_candle": B = next closed bar back INSIDE its own band AND in the
+      correct half (>= midline after an upper A, <= midline after a lower A).
+      Entry precedence:
+        1. pin bar on the entry TF (default 1h) at/after B agreeing with
+           direction -> entry = pin close
+        2. dist(B.close, 5DMA) < 20 -> FVG limit into B's own imbalance
+           (buy: gap = A.high -> B.low ; sell: gap = B.high -> A.low ;
+            entry = near + (far-near)*fill_frac). No imbalance -> DROP setup.
+        3. else market at B close.
+
+  TP = the 5DMA (capped at 40 pts via _tp_capped in two_candle mode);
+  SL = entry +/- 20 pts. The 5DMA must be AHEAD of entry or the setup is
+  dropped (not a fade back to it otherwise).
+
+5DMA: mean of last 5 of state["daily_closes"]; fallback SMA(5) on the
+structure bars (as in Apex).
+
+One signal per B bar (two_candle) / per forming structure bar (first_m1);
+cooldown 300 s.
+
+Interface:
+  bar   : newest CLOSED structure bar dict
+  state : {"bars":        [...closed structure bars, oldest->newest...],
+           "entry_bars":  [...closed entry-TF bars...]      (two_candle pin),
+           "bars_m1":     [...closed M1 bars...]            (first_m1),
+           "daily_closes": [float, ...]  (daily closes, oldest->newest),
+           "now_et": datetime (ET), "last_price": float,
+           "struct_tf": "4h"  (only needed for first_m1 forming-bar math)}
+"""
+from __future__ import annotations
+
+import logging
+import time
+from typing import Dict, List, Optional, Tuple
+
+from .signal import (Signal, bollinger_at, closes, globex_only_ok, pinbar,
+                     tf_seconds, tp_capped, ts)
+
+log = logging.getLogger("algo_es.strategies.bb2c")
+
+
+def _imbalance(a_high: float, a_low: float, b_high: float, b_low: float,
+               direction: str) -> Optional[Tuple[float, float]]:
+    """Port of Apex _bb2c_imbalance. (near, far) with `near` the edge price
+    reaches FIRST on the retrace, or None when candles overlap."""
+    if direction == "buy":
+        if b_low > a_high:
+            return (b_low, a_high)
+        return None
+    if a_low > b_high:
+        return (b_high, a_low)
+    return None
+
+
+def _find_entry_pin(entry_bars: List[Dict], after_ts: float, direction: str,
+                    lookahead: int, tail_pct: float, body_pct: float,
+                    nose_pct: float) -> Optional[float]:
+    """Port of Apex _bb2c_find_entry_pin: first CLOSED entry-tf pin bar
+    agreeing with direction that closed at/after after_ts. Forward-only;
+    scans at most `lookahead` eligible bars."""
+    if not entry_bars or len(entry_bars) < 2:
+        return None
+    n = len(entry_bars)
+    want = "bull" if direction == "buy" else "bear"
+    scanned = 0
+    for i in range(n - 2, max(n - 2 - lookahead * 3, -1), -1):
+        row = entry_bars[i]
+        rts = ts(row.get("time"))
+        if rts < after_ts:
+            break
+        scanned += 1
+        if scanned > lookahead:
+            break
+        kind, _ = pinbar(float(row["open"]), float(row["high"]),
+                         float(row["low"]), float(row["close"]),
+                         tail_pct, body_pct, nose_pct)
+        if kind == want:
+            return float(row["close"])
+    return None
+
+
+class Strategy:
+    def __init__(self, config: Optional[Dict] = None):
+        c = config or {}
+        g = c.get
+        self.struct_tf = str(g("struct_tf", "4h"))
+        self.entry_tf = str(g("entry_tf", "1h"))
+        self.entry_trigger = str(g("entry_trigger", "first_m1")).lower()
+        self.period = int(g("period", 20))
+        self.deviation = float(g("deviation", 2.0))
+        self.fvg_dist_pts = float(g("fvg_dist_pts", 20.0))
+        self.fvg_fill_frac = float(g("fvg_fill_frac", 0.5))
+        self.sl_pts = float(g("sl_pts", 20.0))
+        self.tp_cap_pts = float(g("tp_cap_pts", 40.0))
+        self.cooldown_sec = float(g("cooldown_sec", 300.0))
+        self.pin_lookahead = int(g("pin_lookahead", 4))
+        self.pin_tail_pct = float(g("pin_tail_pct", 60.0))
+        self.pin_body_pct = float(g("pin_body_pct", 35.0))
+        self.pin_nose_pct = float(g("pin_nose_pct", 20.0))
+        self.first_m1_max_lag_sec = float(g("first_m1_max_lag_sec", 180.0))
+        self.globex_only = bool(g("globex_only", True))
+        self.rth_start = str(g("rth_start", "09:30"))
+        self.rth_end = str(g("rth_end", "13:00"))
+        self._last_bar_ts = 0.0
+        self._last_fire = 0.0
+
+    # -- 5DMA -------------------------------------------------------------
+    def _dma5(self, state: Dict, struct_bars: List[Dict]) -> Optional[float]:
+        dc = state.get("daily_closes") or []
+        if len(dc) >= 5:
+            return sum(float(x) for x in dc[-5:]) / 5.0
+        cl = closes(struct_bars)
+        if len(cl) >= 5:
+            return sum(cl[-5:]) / 5.0       # Apex fallback: SMA(5) on struct bars
+        return None
+
+    # -- main -------------------------------------------------------------
+    def on_bar(self, bar: Dict, state: Optional[Dict] = None) -> Optional[Signal]:
+        state = state or {}
+        if self.globex_only and not globex_only_ok(
+                state, self.rth_start, self.rth_end):
+            return None
+
+        bars: List[Dict] = state.get("bars") or []
+        if len(bars) < self.period + 3:
+            return None
+        cl = closes(bars)
+
+        now = time.time()
+        if (now - self._last_fire) < self.cooldown_sec:
+            return None
+
+        if self.entry_trigger == "first_m1":
+            return self._first_m1(bars, cl, bar, state, now)
+        return self._two_candle(bars, cl, state, now)
+
+    # -- first_m1 mode ------------------------------------------------------
+    def _first_m1(self, bars, cl, bar, state, now) -> Optional[Signal]:
+        ia = len(bars) - 1                      # A: last CLOSED structure bar
+        A = bars[ia]
+        cA = float(A["close"])
+        band = bollinger_at(cl, ia, self.period, self.deviation)
+        if not band:
+            return None
+        upA, _midA, loA = band
+        if cA > upA:
+            direction, side = "sell", "upper"
+        elif cA < loA:
+            direction, side = "buy", "lower"
+        else:
+            return None
+
+        # forming structure bar opens right after A
+        forming_ts = ts(A.get("time")) + tf_seconds(self.struct_tf)
+        if forming_ts > 0 and forming_ts == self._last_bar_ts:
+            return None
+
+        m1: List[Dict] = state.get("bars_m1") or []
+        if len(m1) < 2:
+            return None
+        first_i = None
+        for i, m in enumerate(m1):
+            t = ts(m.get("time"))
+            if forming_ts <= t < forming_ts + 60.0:
+                first_i = i
+                break
+        if first_i is None or first_i >= len(m1) - 1:
+            return None                          # not in feed / still forming
+        entry = float(m1[first_i]["close"])
+        lag = now - (ts(m1[first_i].get("time")) + 60.0)
+        if lag > self.first_m1_max_lag_sec:
+            self._last_bar_ts = forming_ts
+            return None
+
+        sma5 = self._dma5(state, bars)
+        if not sma5 or sma5 <= 0:
+            return None
+        tp_px = float(sma5)
+        sl_px = entry - self.sl_pts if direction == "buy" \
+            else entry + self.sl_pts
+        if (direction == "buy" and tp_px <= entry) or \
+           (direction == "sell" and tp_px >= entry):
+            self._last_bar_ts = forming_ts
+            return None
+
+        self._last_bar_ts = forming_ts
+        self._last_fire = now
+        name = "BB-2C-L" if direction == "buy" else "BB-2C-S"
+        log.info("[BB2C] %s FIRST_M1 | A(%s) c=%.2f band=[%.2f..%.2f] | "
+                 "entry=%.2f (lag %.0fs) | 5DMA=%.2f | sl=%.2f tp=%.2f",
+                 direction.upper(), side, cA, loA, upA, entry, lag,
+                 sma5, sl_px, tp_px)
+        return Signal(
+            side=direction, entry_px=entry, stop_px=sl_px, target_px=tp_px,
+            strategy_name=name, confidence=0.97,
+            reason=f"BB2C {side}-band fade on {self.struct_tf}: A closed "
+                   f"outside, first-M1 entry",
+            extra={"entry_kind": "FIRST_M1", "band_side": side,
+                   "dma5": round(sma5, 2)})
+
+    # -- two_candle mode ----------------------------------------------------
+    def _two_candle(self, bars, cl, state, now) -> Optional[Signal]:
+        ia, ib = len(bars) - 3, len(bars) - 2   # A, B: both CLOSED
+        A, B = bars[ia], bars[ib]
+        cA, cB = float(A["close"]), float(B["close"])
+        hA, lA = float(A["high"]), float(A["low"])
+        hB, lB = float(B["high"]), float(B["low"])
+
+        bar_ts = ts(B.get("time"))
+        if bar_ts > 0 and bar_ts == self._last_bar_ts:
+            return None
+
+        bandA = bollinger_at(cl, ia, self.period, self.deviation)
+        bandB = bollinger_at(cl, ib, self.period, self.deviation)
+        if not bandA or not bandB:
+            return None
+        upA, _midA, loA = bandA
+        upB, midB, loB = bandB
+
+        if cA > upA:
+            direction, side = "sell", "upper"
+        elif cA < loA:
+            direction, side = "buy", "lower"
+        else:
+            return None                          # A not outside: no event
+        if not (loB <= cB <= upB):
+            return None                          # B not back inside
+        if side == "upper" and cB < midB:
+            return None                          # B already past midline
+        if side == "lower" and cB > midB:
+            return None
+
+        sma5 = self._dma5(state, bars)
+        if not sma5 or sma5 <= 0:
+            return None
+        dist = abs(cB - float(sma5))
+
+        entry_bars: List[Dict] = state.get("entry_bars") or []
+        pin_px = _find_entry_pin(entry_bars, bar_ts, direction,
+                                 self.pin_lookahead, self.pin_tail_pct,
+                                 self.pin_body_pct, self.pin_nose_pct)
+        entry_kind, gap = None, None
+        if pin_px is not None:
+            entry = float(pin_px)
+            entry_kind = f"PIN_{self.entry_tf.upper()}_CLOSE"
+        else:
+            gap = _imbalance(hA, lA, hB, lB, direction)
+            if dist < self.fvg_dist_pts:
+                if gap is None:
+                    self._last_bar_ts = bar_ts   # dropped, not downgraded
+                    return None
+                near, far = gap
+                entry = near + (far - near) * self.fvg_fill_frac
+                entry_kind = "FVG_LIMIT"
+            else:
+                entry = cB
+                entry_kind = "MARKET_B_CLOSE"
+
+        tp_px = tp_capped(entry, float(sma5), direction, self.tp_cap_pts)
+        sl_px = entry - self.sl_pts if direction == "buy" \
+            else entry + self.sl_pts
+        if (direction == "buy" and tp_px <= entry) or \
+           (direction == "sell" and tp_px >= entry):
+            self._last_bar_ts = bar_ts
+            return None
+
+        self._last_bar_ts = bar_ts
+        self._last_fire = now
+        name = "BB-2C-L" if direction == "buy" else "BB-2C-S"
+        log.info("[BB2C] %s %s | A(%s) c=%.2f | B c=%.2f mid=%.2f | "
+                 "5DMA=%.2f dist=%.1f | entry=%.2f sl=%.2f tp=%.2f",
+                 direction.upper(), entry_kind, side, cA, cB, midB,
+                 sma5, dist, entry, sl_px, tp_px)
+        return Signal(
+            side=direction, entry_px=entry, stop_px=sl_px, target_px=tp_px,
+            strategy_name=name, confidence=0.97,
+            reason=f"BB2C {side}-band fade on {self.struct_tf}: A closed "
+                   f"outside, B back inside correct half; B->5DMA "
+                   f"{dist:.1f}pts -> {entry_kind}",
+            extra={"entry_kind": entry_kind, "band_side": side,
+                   "dist_to_5dma": round(dist, 2)})

@@ -1,1 +1,58 @@
-IiIiUmVzb2x2ZSBhbiBNVDUgc3ltYm9sIHRvIHRoZSB0cmFkYWJsZSBjb250cmFjdC4KCk1UNV9TWU1CT0wgaXMgb2Z0ZW4gYSBjb250aW51b3VzL2luZGljYXRpdmUgc3ltYm9sIChlLmcuICJARVAiKSB0aGF0IGNhbm5vdApiZSB0cmFkZWQgZGlyZWN0bHkuIFRoaXMgbW9kdWxlIHJlc29sdmVzIGl0IHRvIHRoZSBmcm9udC1tb250aCBmdXR1cmVzCmNvbnRyYWN0IG9uY2UgcGVyIHNlc3Npb24gKGJvdGggTVQ1RGF0YUZlZWQgYW5kIE1UNUV4ZWN1dG9yIGNhbGwgaXQgaW4KY29ubmVjdCgpLCBzbyBxdWFydGVybHkgcm9sbHMgYXJlIHBpY2tlZCB1cCBhdXRvbWF0aWNhbGx5KS4KIiIiCmltcG9ydCBhc3luY2lvCmltcG9ydCBsb2dnaW5nCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lLCB0aW1lem9uZQoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImFsZ29fZXMubXQ1X3N5bWJvbCIpCgoKZGVmIF9leHBfa2V5KHMpOgogICAgZSA9IHMuZXhwaXJhdGlvbl90aW1lCiAgICBpZiBpc2luc3RhbmNlKGUsIGRhdGV0aW1lKToKICAgICAgICBpZiBlLnR6aW5mbyBpcyBOb25lOgogICAgICAgICAgICAjIHNlcnZlci10aW1lIG5haXZlOyBhIGZldyBob3VycyBvZiBza2V3IGNhbm5vdCBtaXNvcmRlcgogICAgICAgICAgICAjIHF1YXJ0ZXJseSBleHBpcmllcywgc28gdHJlYXQgYXMgVVRDIGZvciBvcmRlcmluZy4KICAgICAgICAgICAgZSA9IGUucmVwbGFjZSh0emluZm89dGltZXpvbmUudXRjKQogICAgICAgIHJldHVybiBlCiAgICByZXR1cm4gZGF0ZXRpbWUubWF4LnJlcGxhY2UodHppbmZvPXRpbWV6b25lLnV0YykKCgphc3luYyBkZWYgcmVzb2x2ZV90cmFkZWFibGVfc3ltYm9sKG10NSwgc3ltYm9sOiBzdHIpIC0+IHN0cjoKICAgICIiIlJldHVybiB0aGUgdHJhZGFibGUgY29udHJhY3QgZm9yIGBzeW1ib2xgLgoKICAgIElmIGBzeW1ib2xgIGl0c2VsZiBpcyBmdWxseSB0cmFkZWFibGUsIGl0IGlzIHJldHVybmVkIHVuY2hhbmdlZC4KICAgIE90aGVyd2lzZSB0aGUgZnJvbnQtbW9udGggRVMgZnV0dXJlcyBjb250cmFjdCBpcyBwaWNrZWQ6IHRyYWRlX21vZGUgRlVMTAogICAgd2l0aCB0aGUgbmVhcmVzdCBmdXR1cmUgZXhwaXJhdGlvbiBhbW9uZyAqRVAqIC8gKkVTKiBzeW1ib2xzLgogICAgUmFpc2VzIFJ1bnRpbWVFcnJvciB3aXRoIGNhbmRpZGF0ZXMgaWYgbm90aGluZyBxdWFsaWZpZXMuCiAgICAiIiIKICAgIGluZm8gPSBhd2FpdCBhc3luY2lvLnRvX3RocmVhZChtdDUuc3ltYm9sX2luZm8sIHN5bWJvbCkKICAgIGlmIGluZm8gaXMgbm90IE5vbmUgYW5kIGluZm8udHJhZGVfbW9kZSA9PSBtdDUuU1lNQk9MX1RSQURFX01PREVfRlVMTDoKICAgICAgICByZXR1cm4gc3ltYm9sCgogICAgc2VlbiA9IHt9CiAgICBmb3IgcGF0IGluICgiKkVQKiIsICIqRVMqIik6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBmb3IgcyBpbiBhd2FpdCBhc3luY2lvLnRvX3RocmVhZChtdDUuc3ltYm9sc19nZXQsIHBhdCkgb3IgKCk6CiAgICAgICAgICAgICAgICBzZWVuW3MubmFtZV0gPSBzCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICAgICAgcGFzcwogICAgbm93ID0gZGF0ZXRpbWUubm93KHRpbWV6b25lLnV0YykKICAgIGNhbmRzID0gW3MgZm9yIHMgaW4gc2Vlbi52YWx1ZXMoKQogICAgICAgICAgICAgaWYgcy50cmFkZV9tb2RlID09IG10NS5TWU1CT0xfVFJBREVfTU9ERV9GVUxMCiAgICAgICAgICAgICBhbmQgX2V4cF9rZXkocykgPiBub3ddCiAgICBjYW5kcy5zb3J0KGtleT1fZXhwX2tleSkKICAgIGlmIG5vdCBjYW5kczoKICAgICAgICBuYW1lcyA9IHNvcnRlZChzZWVuKVs6MjBdCiAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKAogICAgICAgICAgICBmIk1UNSBzeW1ib2wgJ3tzeW1ib2x9JyBpcyBub3QgZGlyZWN0bHkgdHJhZGVhYmxlIGFuZCBubyAiCiAgICAgICAgICAgIGYiZnJvbnQgZnV0dXJlcyBjb250cmFjdCBmb3VuZC4gQ2FuZGlkYXRlczoge25hbWVzIG9yICcobm9uZSknfSIpCiAgICBmcm9udCA9IGNhbmRzWzBdCiAgICBsb2cuaW5mbygicmVzb2x2ZWQgTVQ1IHN5bWJvbCAlcyAtPiBmcm9udCBjb250cmFjdCAlcyAoZXhwICVzKSIsCiAgICAgICAgICAgICBzeW1ib2wsIGZyb250Lm5hbWUsIGZyb250LmV4cGlyYXRpb25fdGltZSkKICAgIHJldHVybiBmcm9udC5uYW1lCg==
+"""Resolve an MT5 symbol to the tradable contract.
+
+MT5_SYMBOL is often a continuous/indicative symbol (e.g. "@EP") that cannot
+be traded directly. This module resolves it to the front-month futures
+contract once per session (both MT5DataFeed and MT5Executor call it in
+connect(), so quarterly rolls are picked up automatically).
+"""
+import asyncio
+import logging
+from datetime import datetime, timezone
+
+log = logging.getLogger("algo_es.mt5_symbol")
+
+
+def _exp_key(s):
+    e = s.expiration_time
+    if isinstance(e, datetime):
+        if e.tzinfo is None:
+            # server-time naive; a few hours of skew cannot misorder
+            # quarterly expiries, so treat as UTC for ordering.
+            e = e.replace(tzinfo=timezone.utc)
+        return e
+    return datetime.max.replace(tzinfo=timezone.utc)
+
+
+async def resolve_tradeable_symbol(mt5, symbol: str) -> str:
+    """Return the tradable contract for `symbol`.
+
+    If `symbol` itself is fully tradeable, it is returned unchanged.
+    Otherwise the front-month ES futures contract is picked: trade_mode FULL
+    with the nearest future expiration among *EP* / *ES* symbols.
+    Raises RuntimeError with candidates if nothing qualifies.
+    """
+    info = await asyncio.to_thread(mt5.symbol_info, symbol)
+    if info is not None and info.trade_mode == mt5.SYMBOL_TRADE_MODE_FULL:
+        return symbol
+
+    seen = {}
+    for pat in ("*EP*", "*ES*"):
+        try:
+            for s in await asyncio.to_thread(mt5.symbols_get, pat) or ():
+                seen[s.name] = s
+        except Exception:
+            pass
+    now = datetime.now(timezone.utc)
+    cands = [s for s in seen.values()
+             if s.trade_mode == mt5.SYMBOL_TRADE_MODE_FULL
+             and _exp_key(s) > now]
+    cands.sort(key=_exp_key)
+    if not cands:
+        names = sorted(seen)[:20]
+        raise RuntimeError(
+            f"MT5 symbol '{symbol}' is not directly tradeable and no "
+            f"front futures contract found. Candidates: {names or '(none)'}")
+    front = cands[0]
+    log.info("resolved MT5 symbol %s -> front contract %s (exp %s)",
+             symbol, front.name, front.expiration_time)
+    return front.name

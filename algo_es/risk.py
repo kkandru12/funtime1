@@ -1,1 +1,53 @@
-IiIiUHJlLXRyYWRlIHJpc2sgY2hlY2tzICsgZGFpbHkga2lsbCBzd2l0Y2gsIEVTIGVkaXRpb24uCgpPd24gYWNjb3VudGluZyAoZmlsbHMgd2UgbWFkZSksIG5vdCB0aGUgYnJva2VyJ3MuIFRoZSAiZGF5IiBpcyB0aGUgR2xvYmV4CnRyYWRpbmcgZGF0ZSAoY29uZmlnLnNlc3Npb25fZGF0ZTogU3VuIDE4OjAwKyBjb3VudHMgYXMgTW9uZGF5KS4KIiIiCmltcG9ydCBsb2dnaW5nCgppbXBvcnQgY29uZmlnCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiYWxnby5yaXNrIikKCgpjbGFzcyBSaXNrTWFuYWdlcjoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBhY2NvdW50X3ZhbHVlOiBmbG9hdCk6CiAgICAgICAgc2VsZi5hY2NvdW50X3ZhbHVlID0gYWNjb3VudF92YWx1ZQogICAgICAgIHNlbGYuZGFpbHlfc3RvcF9hbXQgPSBhY2NvdW50X3ZhbHVlICogY29uZmlnLkRBSUxZX1NUT1BfUENUCiAgICAgICAgc2VsZi50cmFkZXNfdG9kYXkgPSAwCiAgICAgICAgc2VsZi5kYWlseV9wbmwgPSAwLjAKICAgICAgICBzZWxmLmtpbGxlZCA9IEZhbHNlCiAgICAgICAgc2VsZi5kYXRlID0gTm9uZQoKICAgIGRlZiBuZXdfZGF5KHNlbGYsIHRvZGF5KToKICAgICAgICBpZiBzZWxmLmRhdGUgIT0gdG9kYXk6CiAgICAgICAgICAgIHNlbGYuZGF0ZSA9IHRvZGF5CiAgICAgICAgICAgIHNlbGYudHJhZGVzX3RvZGF5ID0gMAogICAgICAgICAgICBzZWxmLmRhaWx5X3BubCA9IDAuMAogICAgICAgICAgICBzZWxmLmtpbGxlZCA9IEZhbHNlCiAgICAgICAgICAgIGxvZy5pbmZvKCJuZXcgR2xvYmV4IGRheSAlczogcmlzayByZXNldCIsIHRvZGF5KQoKICAgIGRlZiBjYW5fZW50ZXIoc2VsZiwgbm93X2V0LCBoYXNfcG9zaXRpb246IGJvb2wsIHRyaWdnZXI6IHN0ciA9ICJmYWRlIik6CiAgICAgICAgaWYgc2VsZi5raWxsZWQ6CiAgICAgICAgICAgIHJldHVybiBGYWxzZSwgImtpbGwtc3dpdGNoIgogICAgICAgIGlmIGhhc19wb3NpdGlvbjoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlLCAib25lLXBvc2l0aW9uIgogICAgICAgIGlmIHNlbGYudHJhZGVzX3RvZGF5ID49IGNvbmZpZy5NQVhfVFJBREVTX1BFUl9EQVk6CiAgICAgICAgICAgIHJldHVybiBGYWxzZSwgIm1heC10cmFkZXMiCiAgICAgICAgaWYgc2VsZi5kYWlseV9wbmwgPD0gLXNlbGYuZGFpbHlfc3RvcF9hbXQ6CiAgICAgICAgICAgIHJldHVybiBGYWxzZSwgImRhaWx5LXN0b3AiCiAgICAgICAgaWYgbm90IGNvbmZpZy5pbl90cmFkaW5nX3Nlc3Npb24obm93X2V0KToKICAgICAgICAgICAgcmV0dXJuIEZhbHNlLCAic2Vzc2lvbiIKICAgICAgICByZXR1cm4gVHJ1ZSwgIm9rIgoKICAgIGRlZiByZWdpc3Rlcl9jbG9zZShzZWxmLCBwbmw6IGZsb2F0KToKICAgICAgICBzZWxmLnRyYWRlc190b2RheSArPSAxCiAgICAgICAgc2VsZi5kYWlseV9wbmwgKz0gcG5sCiAgICAgICAgbG9nLmluZm8oInRyYWRlIGNsb3NlZDogcG5sPSUrLjJmIGRheV9wbmw9JSsuMmYgdHJhZGVzPSVkIiwKICAgICAgICAgICAgICAgICBwbmwsIHNlbGYuZGFpbHlfcG5sLCBzZWxmLnRyYWRlc190b2RheSkKICAgICAgICBpZiBzZWxmLmRhaWx5X3BubCA8PSAtc2VsZi5kYWlseV9zdG9wX2FtdDoKICAgICAgICAgICAgc2VsZi5raWxsZWQgPSBUcnVlCiAgICAgICAgICAgIGxvZy5lcnJvcigiS0lMTCBTV0lUQ0g6IGRhaWx5IHN0b3AgaGl0ICglKy4yZikiLCBzZWxmLmRhaWx5X3BubCkKCiAgICBkZWYgY2hlY2tfa2lsbChzZWxmLCBoYXNfcG9zaXRpb246IGJvb2wpIC0+IGJvb2w6CiAgICAgICAgcmV0dXJuIHNlbGYua2lsbGVkIGFuZCBoYXNfcG9zaXRpb24K
+"""Pre-trade risk checks + daily kill switch, ES edition.
+
+Own accounting (fills we made), not the broker's. The "day" is the Globex
+trading date (config.session_date: Sun 18:00+ counts as Monday).
+"""
+import logging
+
+import config
+
+log = logging.getLogger("algo.risk")
+
+
+class RiskManager:
+    def __init__(self, account_value: float):
+        self.account_value = account_value
+        self.daily_stop_amt = account_value * config.DAILY_STOP_PCT
+        self.trades_today = 0
+        self.daily_pnl = 0.0
+        self.killed = False
+        self.date = None
+
+    def new_day(self, today):
+        if self.date != today:
+            self.date = today
+            self.trades_today = 0
+            self.daily_pnl = 0.0
+            self.killed = False
+            log.info("new Globex day %s: risk reset", today)
+
+    def can_enter(self, now_et, has_position: bool, trigger: str = "fade"):
+        if self.killed:
+            return False, "kill-switch"
+        if has_position:
+            return False, "one-position"
+        if self.trades_today >= config.MAX_TRADES_PER_DAY:
+            return False, "max-trades"
+        if self.daily_pnl <= -self.daily_stop_amt:
+            return False, "daily-stop"
+        if not config.in_trading_session(now_et):
+            return False, "session"
+        return True, "ok"
+
+    def register_close(self, pnl: float):
+        self.trades_today += 1
+        self.daily_pnl += pnl
+        log.info("trade closed: pnl=%+.2f day_pnl=%+.2f trades=%d",
+                 pnl, self.daily_pnl, self.trades_today)
+        if self.daily_pnl <= -self.daily_stop_amt:
+            self.killed = True
+            log.error("KILL SWITCH: daily stop hit (%+.2f)", self.daily_pnl)
+
+    def check_kill(self, has_position: bool) -> bool:
+        return self.killed and has_position

@@ -1,1 +1,151 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiIKNURNQSArIFN0cnVjdHVyZSDigJQgdGhlIG1haW4gc3RyYXRlZ3kuCgpUaGUgdXNlcidzIGNvcmUgZWRnZTogNURNQSBjb25mbHVlbmNlIHdpdGggcHJpY2Ugc3RydWN0dXJlLCB0cmFkZWQgb24KQUxMIHNlc3Npb25zIChOWSArIEdsb2JleCkuCgpTZXR1cDoKICAtIFRyZW5kOiBwcmV2IGNsb3NlIHZzIDVETUEgKGxvbmcgaWYgYWJvdmUsIHNob3J0IGlmIGJlbG93KQogIC0gVG91Y2g6IHByaWNlIHRvdWNoZXMgdGhlIDVETUEKICAtIENvbmZsdWVuY2U6IGEgc3RydWN0dXJlIGxldmVsIChwcmlvciA1ZCBoaWdoL2xvdywgb3Zlcm5pZ2h0IGhpZ2gvbG93LAogICAgcm91bmQgbGV2ZWxzKSB3aXRoaW4gMC4xeCBBVFIgb2YgdGhlIDVETUEKICAtIEVudHJ5OiBhdCB0aGUgcmVjb3ZlcnkgYmFyJ3MgY2xvc2UgKGJhciBjbG9zZXMgYmFjayBvbiB0aGUgdHJlbmQgc2lkZSkKICAtIFN0b3A6IDAuM3ggQVRSIGJleW9uZCB0aGUgNURNQQogIC0gVGFyZ2V0OiBuZWFyZXN0IHN0cnVjdHVyZSBsZXZlbCBiZXlvbmQgMToxIFI6UiAod2l0aGluIDN4IEFUUikKICAtIEhvbGQ6IHVwIHRvIDUgZGF5cyAoc3dpbmcg4oCUIGZsYXR0ZW4tYXQtY2xvc2Uga2lsbHMgdGhpcykKClNlc3Npb25zOiBBTEwgKE5ZICsgR2xvYmV4KS4gTm8gc2Vzc2lvbiBnYXRlLgoiIiIKCmZyb20gZGF0YWNsYXNzZXMgaW1wb3J0IGRhdGFjbGFzcywgZmllbGQKZnJvbSB0eXBpbmcgaW1wb3J0IE9wdGlvbmFsCgoKQGRhdGFjbGFzcwpjbGFzcyBTaWduYWw6CiAgICBzaWRlOiBzdHIgICAgICAgICAgIyAibG9uZyIgb3IgInNob3J0IgogICAgZW50cnlfcHg6IGZsb2F0CiAgICBzdG9wX3B4OiBmbG9hdAogICAgdGFyZ2V0X3B4OiBmbG9hdAogICAgc3RyYXRlZ3lfbmFtZTogc3RyID0gIjVETUFfU1RSVUNUIgogICAgcmVhc29uOiBzdHIgPSAiIgoKCkBkYXRhY2xhc3MKY2xhc3MgQmFyOgogICAgdGltZTogc3RyCiAgICBvcGVuOiBmbG9hdAogICAgaGlnaDogZmxvYXQKICAgIGxvdzogZmxvYXQKICAgIGNsb3NlOiBmbG9hdAoKCmNsYXNzIEZpdmVETUEgU3RydWN0OgogICAgZGVmIF9faW5pdF9fKHNlbGYsCiAgICAgICAgICAgICAgICAgYXRyX3BlcmlvZDogaW50ID0gMTQsCiAgICAgICAgICAgICAgICAgY29uZmx1ZW5jZV9hdHJfbXVsdDogZmxvYXQgPSAwLjEsCiAgICAgICAgICAgICAgICAgc3RvcF9hdHJfbXVsdDogZmxvYXQgPSAwLjMsCiAgICAgICAgICAgICAgICAgbWF4X3RhcmdldF9hdHJfbXVsdDogZmxvYXQgPSAzLjAsCiAgICAgICAgICAgICAgICAgbWF4X2hvbGRfZGF5czogaW50ID0gNSk6CiAgICAgICAgc2VsZi5hdHJfcGVyaW9kID0gYXRyX3BlcmlvZAogICAgICAgIHNlbGYuY29uZmx1ZW5jZV9hdHJfbXVsdCA9IGNvbmZsdWVuY2VfYXRyX211bHQKICAgICAgICBzZWxmLnN0b3BfYXRyX211bHQgPSBzdG9wX2F0cl9tdWx0CiAgICAgICAgc2VsZi5tYXhfdGFyZ2V0X2F0cl9tdWx0ID0gbWF4X3RhcmdldF9hdHJfbXVsdAogICAgICAgIHNlbGYubWF4X2hvbGRfZGF5cyA9IG1heF9ob2xkX2RheXMKICAgICAgICBzZWxmLl9jbG9zZXM6IGxpc3RbZmxvYXRdID0gW10KICAgICAgICBzZWxmLl9iYXJzOiBsaXN0W0Jhcl0gPSBbXQogICAgICAgIHNlbGYuX2luX3Bvc2l0aW9uID0gRmFsc2UKCiAgICBkZWYgX2F0cihzZWxmKSAtPiBPcHRpb25hbFtmbG9hdF06CiAgICAgICAgaWYgbGVuKHNlbGYuX2JhcnMpIDwgc2VsZi5hdHJfcGVyaW9kICsgMToKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICB0cnMgPSBbXQogICAgICAgIGZvciBpIGluIHJhbmdlKC1zZWxmLmF0cl9wZXJpb2QsIDApOgogICAgICAgICAgICBiID0gc2VsZi5fYmFyc1tpXQogICAgICAgICAgICBwID0gc2VsZi5fYmFyc1tpIC0gMV0KICAgICAgICAgICAgdHJzLmFwcGVuZChtYXgoYi5oaWdoIC0gYi5sb3csCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGFicyhiLmhpZ2ggLSBwLmNsb3NlKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgYWJzKGIubG93IC0gcC5jbG9zZSkpKQogICAgICAgIHJldHVybiBzdW0odHJzKSAvIGxlbih0cnMpCgogICAgZGVmIF9kbWE1KHNlbGYpIC0+IE9wdGlvbmFsW2Zsb2F0XToKICAgICAgICBpZiBsZW4oc2VsZi5fY2xvc2VzKSA8IDU6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIHN1bShzZWxmLl9jbG9zZXNbLTU6XSkgLyA1CgogICAgZGVmIF9zdHJ1Y3R1cmVfbGV2ZWxzKHNlbGYsIHNpZGU6IHN0ciwgcmVmX3B4OiBmbG9hdCwgYXRyOiBmbG9hdCkgLT4gbGlzdFtmbG9hdF06CiAgICAgICAgIiIiUHJpb3IgNWQgaGlnaC9sb3csIG92ZXJuaWdodCBoaWdoL2xvdywgcm91bmQgbGV2ZWxzLiIiIgogICAgICAgIGlmIGxlbihzZWxmLl9iYXJzKSA8IDU6CiAgICAgICAgICAgIHJldHVybiBbXQogICAgICAgIHJlY2VudCA9IHNlbGYuX2JhcnNbLTU6XQogICAgICAgIGxldmVscyA9IFttYXgoYi5oaWdoIGZvciBiIGluIHJlY2VudCksIG1pbihiLmxvdyBmb3IgYiBpbiByZWNlbnQpXQogICAgICAgICMgUm91bmQgbGV2ZWxzIG5lYXIgcHJpY2UgKEVTLXN0eWxlIDEwcHQgZ3JpZCkKICAgICAgICBiYXNlID0gcm91bmQocmVmX3B4IC8gMTApICogMTAKICAgICAgICBmb3IgciBpbiAoYmFzZSAtIDEwLCBiYXNlLCBiYXNlICsgMTApOgogICAgICAgICAgICBsZXZlbHMuYXBwZW5kKGZsb2F0KHIpKQogICAgICAgICMgRmlsdGVyOiBiZXlvbmQgMToxIGluIHRoZSB0cmFkZSBkaXJlY3Rpb24sIHdpdGhpbiBtYXggQVRSCiAgICAgICAgb3V0ID0gW10KICAgICAgICBmb3IgbHYgaW4gbGV2ZWxzOgogICAgICAgICAgICBkaXN0ID0gYWJzKGx2IC0gcmVmX3B4KQogICAgICAgICAgICBpZiBzaWRlID09ICJsb25nIiBhbmQgbHYgPiByZWZfcHggYW5kIGRpc3QgPD0gc2VsZi5tYXhfdGFyZ2V0X2F0cl9tdWx0ICogYXRyOgogICAgICAgICAgICAgICAgb3V0LmFwcGVuZChsdikKICAgICAgICAgICAgZWxpZiBzaWRlID09ICJzaG9ydCIgYW5kIGx2IDwgcmVmX3B4IGFuZCBkaXN0IDw9IHNlbGYubWF4X3RhcmdldF9hdHJfbXVsdCAqIGF0cjoKICAgICAgICAgICAgICAgIG91dC5hcHBlbmQobHYpCiAgICAgICAgcmV0dXJuIHNvcnRlZChvdXQpIGlmIHNpZGUgPT0gImxvbmciIGVsc2Ugc29ydGVkKG91dCwgcmV2ZXJzZT1UcnVlKQoKICAgIGRlZiBvbl9iYXIoc2VsZiwgYmFyOiBCYXIpIC0+IE9wdGlvbmFsW1NpZ25hbF06CiAgICAgICAgc2VsZi5fYmFycy5hcHBlbmQoYmFyKQogICAgICAgIHNlbGYuX2Nsb3Nlcy5hcHBlbmQoYmFyLmNsb3NlKQogICAgICAgIGlmIHNlbGYuX2luX3Bvc2l0aW9uOgogICAgICAgICAgICByZXR1cm4gTm9uZSAgIyBvbmUgcG9zaXRpb24gYXQgYSB0aW1lOyBleGl0IG1hbmFnZWQgYnkgY2FsbGVyCgogICAgICAgIGF0ciA9IHNlbGYuX2F0cigpCiAgICAgICAgZG1hNSA9IHNlbGYuX2RtYTUoKQogICAgICAgIGlmIGF0ciBpcyBOb25lIG9yIGRtYTUgaXMgTm9uZSBvciBsZW4oc2VsZi5fYmFycykgPCAzOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBwcmV2ID0gc2VsZi5fYmFyc1stMl0KICAgICAgICAjIFRyZW5kOiBwcmV2IGNsb3NlIHZzIDVETUEKICAgICAgICBzaWRlID0gImxvbmciIGlmIHByZXYuY2xvc2UgPiBkbWE1IGVsc2UgInNob3J0IiBpZiBwcmV2LmNsb3NlIDwgZG1hNSBlbHNlIE5vbmUKICAgICAgICBpZiBzaWRlIGlzIE5vbmU6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgICMgVG91Y2g6IHByZXYgYmFyIHRvdWNoZWQgdGhlIDVETUEKICAgICAgICB0b3VjaGVkID0gcHJldi5sb3cgPD0gZG1hNSA8PSBwcmV2LmhpZ2gKICAgICAgICBpZiBub3QgdG91Y2hlZDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAgICAgIyBSZWNvdmVyeTogY3VycmVudCBiYXIgY2xvc2VkIGJhY2sgb24gdHJlbmQgc2lkZQogICAgICAgIHJlY292ZXJlZCA9IChiYXIuY2xvc2UgPiBkbWE1KSBpZiBzaWRlID09ICJsb25nIiBlbHNlIChiYXIuY2xvc2UgPCBkbWE1KQogICAgICAgIGlmIG5vdCByZWNvdmVyZWQ6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgICMgQ29uZmx1ZW5jZTogc3RydWN0dXJlIHdpdGhpbiAwLjF4IEFUUiBvZiA1RE1BCiAgICAgICAgc3RydWN0cyA9IHNlbGYuX3N0cnVjdHVyZV9sZXZlbHMoc2lkZSwgZG1hNSwgYXRyKQogICAgICAgIGNvbmZsdWVudCA9IGFueShhYnMocyAtIGRtYTUpIDw9IHNlbGYuY29uZmx1ZW5jZV9hdHJfbXVsdCAqIGF0ciBmb3IgcyBpbiBzdHJ1Y3RzKQogICAgICAgIGlmIG5vdCBjb25mbHVlbnQ6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgICMgRW50cnkgYXQgcmVjb3ZlcnkgYmFyIGNsb3NlCiAgICAgICAgZW50cnkgPSBiYXIuY2xvc2UKICAgICAgICBzdG9wID0gZG1hNSAtIHNlbGYuc3RvcF9hdHJfbXVsdCAqIGF0ciBpZiBzaWRlID09ICJsb25nIiBlbHNlIGRtYTUgKyBzZWxmLnN0b3BfYXRyX211bHQgKiBhdHIKICAgICAgICByaXNrID0gYWJzKGVudHJ5IC0gc3RvcCkKCiAgICAgICAgIyBUYXJnZXQ6IG5lYXJlc3Qgc3RydWN0dXJlIGJleW9uZCAxOjEKICAgICAgICB0YXJnZXQgPSBOb25lCiAgICAgICAgZm9yIGx2IGluIHN0cnVjdHM6CiAgICAgICAgICAgIGlmIGFicyhsdiAtIGVudHJ5KSA+PSByaXNrOiAgIyBhdCBsZWFzdCAxOjEKICAgICAgICAgICAgICAgIHRhcmdldCA9IGx2CiAgICAgICAgICAgICAgICBicmVhawogICAgICAgIGlmIHRhcmdldCBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgICAgICBzZWxmLl9pbl9wb3NpdGlvbiA9IFRydWUKICAgICAgICByZXR1cm4gU2lnbmFsKAogICAgICAgICAgICBzaWRlPXNpZGUsIGVudHJ5X3B4PWVudHJ5LCBzdG9wX3B4PXN0b3AsIHRhcmdldF9weD10YXJnZXQsCiAgICAgICAgICAgIHJlYXNvbj1mIjVETUEge3NpZGV9IHJldGVzdCArIHN0cnVjdHVyZSBjb25mbCBAIHtkbWE1Oi4xZn0sIHRndCB7dGFyZ2V0Oi4xZn0iLAogICAgICAgICkKCiAgICBkZWYgb25fZXhpdChzZWxmKToKICAgICAgICBzZWxmLl9pbl9wb3NpdGlvbiA9IEZhbHNlCg==
+#!/usr/bin/env python3
+"""
+5DMA + Structure — the main strategy.
+
+The user's core edge: 5DMA confluence with price structure, traded on
+ALL sessions (NY + Globex).
+
+Setup:
+  - Trend: prev close vs 5DMA (long if above, short if below)
+  - Touch: price touches the 5DMA
+  - Confluence: a structure level (prior 5d high/low, overnight high/low,
+    round levels) within 0.1x ATR of the 5DMA
+  - Entry: at the recovery bar's close (bar closes back on the trend side)
+  - Stop: 0.3x ATR beyond the 5DMA
+  - Target: nearest structure level beyond 1:1 R:R (within 3x ATR)
+  - Hold: up to 5 days (swing — flatten-at-close kills this)
+
+Sessions: ALL (NY + Globex). No session gate.
+"""
+
+from dataclasses import dataclass, field
+from typing import Optional
+
+
+@dataclass
+class Signal:
+    side: str          # "long" or "short"
+    entry_px: float
+    stop_px: float
+    target_px: float
+    strategy_name: str = "5DMA_STRUCT"
+    reason: str = ""
+
+
+@dataclass
+class Bar:
+    time: str
+    open: float
+    high: float
+    low: float
+    close: float
+
+
+class FiveDMAStruct:
+    def __init__(self,
+                 atr_period: int = 14,
+                 confluence_atr_mult: float = 0.1,
+                 stop_atr_mult: float = 0.3,
+                 max_target_atr_mult: float = 3.0,
+                 max_hold_days: int = 5):
+        self.atr_period = atr_period
+        self.confluence_atr_mult = confluence_atr_mult
+        self.stop_atr_mult = stop_atr_mult
+        self.max_target_atr_mult = max_target_atr_mult
+        self.max_hold_days = max_hold_days
+        self._closes: list[float] = []
+        self._bars: list[Bar] = []
+        self._in_position = False
+
+    def _atr(self) -> Optional[float]:
+        if len(self._bars) < self.atr_period + 1:
+            return None
+        trs = []
+        for i in range(-self.atr_period, 0):
+            b = self._bars[i]
+            p = self._bars[i - 1]
+            trs.append(max(b.high - b.low,
+                           abs(b.high - p.close),
+                           abs(b.low - p.close)))
+        return sum(trs) / len(trs)
+
+    def _dma5(self) -> Optional[float]:
+        if len(self._closes) < 5:
+            return None
+        return sum(self._closes[-5:]) / 5
+
+    def _structure_levels(self, side: str, ref_px: float, atr: float) -> list[float]:
+        """Prior 5d high/low, overnight high/low, round levels."""
+        if len(self._bars) < 5:
+            return []
+        recent = self._bars[-5:]
+        levels = [max(b.high for b in recent), min(b.low for b in recent)]
+        # Round levels near price (ES-style 10pt grid)
+        base = round(ref_px / 10) * 10
+        for r in (base - 10, base, base + 10):
+            levels.append(float(r))
+        # Filter: beyond 1:1 in the trade direction, within max ATR
+        out = []
+        for lv in levels:
+            dist = abs(lv - ref_px)
+            if side == "long" and lv > ref_px and dist <= self.max_target_atr_mult * atr:
+                out.append(lv)
+            elif side == "short" and lv < ref_px and dist <= self.max_target_atr_mult * atr:
+                out.append(lv)
+        return sorted(out) if side == "long" else sorted(out, reverse=True)
+
+    def on_bar(self, bar: Bar) -> Optional[Signal]:
+        self._bars.append(bar)
+        self._closes.append(bar.close)
+        if self._in_position:
+            return None  # one position at a time; exit managed by caller
+
+        atr = self._atr()
+        dma5 = self._dma5()
+        if atr is None or dma5 is None or len(self._bars) < 3:
+            return None
+
+        prev = self._bars[-2]
+        # Trend: prev close vs 5DMA
+        side = "long" if prev.close > dma5 else "short" if prev.close < dma5 else None
+        if side is None:
+            return None
+
+        # Touch: prev bar touched the 5DMA
+        touched = prev.low <= dma5 <= prev.high
+        if not touched:
+            return None
+
+        # Recovery: current bar closed back on trend side
+        recovered = (bar.close > dma5) if side == "long" else (bar.close < dma5)
+        if not recovered:
+            return None
+
+        # Confluence: structure within 0.1x ATR of 5DMA
+        structs = self._structure_levels(side, dma5, atr)
+        confluent = any(abs(s - dma5) <= self.confluence_atr_mult * atr for s in structs)
+        if not confluent:
+            return None
+
+        # Entry at recovery bar close
+        entry = bar.close
+        stop = dma5 - self.stop_atr_mult * atr if side == "long" else dma5 + self.stop_atr_mult * atr
+        risk = abs(entry - stop)
+
+        # Target: nearest structure beyond 1:1
+        target = None
+        for lv in structs:
+            if abs(lv - entry) >= risk:  # at least 1:1
+                target = lv
+                break
+        if target is None:
+            return None
+
+        self._in_position = True
+        return Signal(
+            side=side, entry_px=entry, stop_px=stop, target_px=target,
+            reason=f"5DMA {side} retest + structure confl @ {dma5:.1f}, tgt {target:.1f}",
+        )
+
+    def on_exit(self):
+        self._in_position = False

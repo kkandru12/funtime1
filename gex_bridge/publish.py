@@ -1,1 +1,24 @@
-IiIiQXRvbWljIEpTT04gcHVibGlzaDogd3JpdGUgdG1wLCBmc3luYywgb3MucmVwbGFjZS4KClJlYWRlcnMgbXVzdCBuZXZlciBzZWUgYSBoYWxmLXdyaXR0ZW4gbGV2ZWxzLmpzb24uCiIiIgppbXBvcnQganNvbgppbXBvcnQgb3MKaW1wb3J0IHRlbXBmaWxlCgoKZGVmIHB1Ymxpc2gocGF0aDogc3RyLCBwYXlsb2FkOiBkaWN0KToKICAgIGQgPSBvcy5wYXRoLmRpcm5hbWUocGF0aCkKICAgIG9zLm1ha2VkaXJzKGQsIGV4aXN0X29rPVRydWUpCiAgICBmZCwgdG1wID0gdGVtcGZpbGUubWtzdGVtcChwcmVmaXg9Ii5sZXZlbHMtIiwgc3VmZml4PSIudG1wIiwgZGlyPWQpCiAgICB0cnk6CiAgICAgICAgd2l0aCBvcy5mZG9wZW4oZmQsICJ3IikgYXMgZjoKICAgICAgICAgICAganNvbi5kdW1wKHBheWxvYWQsIGYpCiAgICAgICAgICAgIGYuZmx1c2goKQogICAgICAgICAgICBvcy5mc3luYyhmLmZpbGVubygpKQogICAgICAgIG9zLnJlcGxhY2UodG1wLCBwYXRoKQogICAgZmluYWxseToKICAgICAgICB0cnk6CiAgICAgICAgICAgIG9zLnVubGluayh0bXApCiAgICAgICAgZXhjZXB0IE9TRXJyb3I6CiAgICAgICAgICAgIHBhc3MK
+"""Atomic JSON publish: write tmp, fsync, os.replace.
+
+Readers must never see a half-written levels.json.
+"""
+import json
+import os
+import tempfile
+
+
+def publish(path: str, payload: dict):
+    d = os.path.dirname(path)
+    os.makedirs(d, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(prefix=".levels-", suffix=".tmp", dir=d)
+    try:
+        with os.fdopen(fd, "w") as f:
+            json.dump(payload, f)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, path)
+    finally:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass

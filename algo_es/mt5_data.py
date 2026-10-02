@@ -1,1 +1,148 @@
-IiIiTVQ1IG1hcmtldC1kYXRhIGZlZWQgZm9yIHRoZSBFUyBhbGdvJ3Mgb3Zlcm5pZ2h0IFBBIHNsZWV2ZXMuCgpUaGUgb3Zlcm5pZ2h0IEdFWCB3YWxscyBhcmUgZnJvemVuL3N0YWxlLCBzbyBzbGVldmVzIEMgKE9OIHJhbmdlIGZhZGUpIGFuZCBECihzd2VlcCtyZWNsYWltKSB0cmFkZSBwdXJlIHByaWNlIGFjdGlvbi4gVGhlaXIgT0hMQyBjb21lcyBmcm9tIEhFUkUg4oCUIE1UNSdzCm93biBNMSBiYXJzIHZpYSBjb3B5X3JhdGVzX2Zyb21fcG9zIChlcXVpdmFsZW50IHRvIGFnZ3JlZ2F0aW5nIE1UNSdzIHRpY2sKc3RyZWFtLCB3aXRob3V0IHN0b3JpbmcgbWlsbGlvbnMgb2YgdGlja3MpIOKAlCBuZXZlciBmcm9tIHRoZSBicmlkZ2UgZmlsZS4KVGhlIGJyaWRnZSBmaWxlIGlzIG9ubHkgZXZlciByZWFkIGZvciB0aGUgc2Vzc2lvbiBmbGFnIGFuZCBHRVggd2FsbHMuCgpGYWlsLXNhZmU6IGlmIHRoZSBNVDUgcGFja2FnZS90ZXJtaW5hbCBpcyB1bmF2YWlsYWJsZSwgY29ubmVjdCgpIHJhaXNlcyBhbmQKbWFpbi5weSBsZWF2ZXMgdGhlIFBBIHNsZWV2ZXMgZG9ybWFudCAobm8gYmFycyAtPiBubyBzaWduYWxzKS4gRXZlcnl0aGluZwplbHNlIGtlZXBzIHJ1bm5pbmcuCgpCYXIgdGltZXN0YW1wczogTVQ1IHJldHVybnMgc2Vjb25kcy1zaW5jZS1lcG9jaDsgdGhlIHpvbmUgdGhleSBhcmUgaW4gaXMKYnJva2VyLWRlcGVuZGVudC4gRVNfTVQ1X0JBUl9UWiAoZGVmYXVsdCAiVVRDIikgbmFtZXMgdGhlIFpvbmVJbmZvIHRoZXkKc2hvdWxkIGJlIGludGVycHJldGVkIGluLCB0aGVuIGNvbnZlcnRlZCB0byBFVC4gVGhlIHN5bmMgbG9nIGxpbmUgcHJpbnRzCnRoZSBmaXJzdC9sYXN0IGJhciBpbiBFVCDigJQgaWYgdGhlIDE4OjAwIE9OLXJhbmdlIHJlc2V0IGxvb2tzIHdyb25nIGFnYWluc3QKdGhlIHdhbGwgY2xvY2ssIHNldCBFU19NVDVfQkFSX1RaIHRvIHRoZSB0ZXJtaW5hbCdzIHpvbmUuCiIiIgppbXBvcnQgYXN5bmNpbwppbXBvcnQgbG9nZ2luZwpmcm9tIGNvbGxlY3Rpb25zIGltcG9ydCBkZXF1ZQpmcm9tIGRhdGV0aW1lIGltcG9ydCBkYXRldGltZSwgdGltZXpvbmUKZnJvbSB6b25laW5mbyBpbXBvcnQgWm9uZUluZm8KCmltcG9ydCBjb25maWcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvLm10NWRhdGEiKQpFVCA9IGNvbmZpZy5FVAoKCmRlZiBfcmVxKG5hbWU6IHN0cikgLT4gc3RyOgogICAgdiA9IF9faW1wb3J0X18oIm9zIikuZ2V0ZW52KG5hbWUpCiAgICBpZiBub3QgdjoKICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoCiAgICAgICAgICAgIGYiTVQ1RGF0YUZlZWQ6IG1pc3NpbmcgcmVxdWlyZWQgZW52IHZhciB7bmFtZX0gIgogICAgICAgICAgICBmIihNVDVfUEFUSCAvIE1UNV9TRVJWRVIgLyBNVDVfTE9HSU4gLyBNVDVfUEFTU1dPUkQgLyBNVDVfU1lNQk9MKS4iKQogICAgcmV0dXJuIHYKCgpjbGFzcyBNVDVEYXRhRmVlZDoKICAgICIiIk0xIGJhcnMgKyBsaXZlIHF1b3RlIGZvciBFUyBmcm9tIHRoZSBsb2NhbCBBTVAgTVQ1IHRlcm1pbmFsLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBlbWl0KToKICAgICAgICBzZWxmLmVtaXQgPSBlbWl0CiAgICAgICAgc2VsZi5tdDUgPSBOb25lCiAgICAgICAgc2VsZi5zeW1ib2wgPSBOb25lCiAgICAgICAgc2VsZi5vayA9IEZhbHNlCiAgICAgICAgc2VsZi5iYXJzOiBkZXF1ZSA9IGRlcXVlKCkgICAjICh0X2V0LCBvLCBoLCBsLCBjKSwgYXNjZW5kaW5nCiAgICAgICAgc2VsZi5fYmFyX3R6ID0gWm9uZUluZm8oY29uZmlnLk1UNV9CQVJfVFopCgogICAgYXN5bmMgZGVmIGNvbm5lY3Qoc2VsZik6CiAgICAgICAgIiIiaW5pdGlhbGl6ZSgpICsgbG9naW4oKSArIHN5bWJvbCByZXNvbHZlLiBSYWlzZXMgb24gYW55IGZhaWx1cmU7CiAgICAgICAgdGhlIGNhbGxlciB0cmVhdHMgdGhhdCBhcyAnUEEgc2xlZXZlcyBkb3JtYW50Jy4iIiIKICAgICAgICBwYXRoID0gX3JlcSgiTVQ1X1BBVEgiKQogICAgICAgIHNlcnZlciA9IF9yZXEoIk1UNV9TRVJWRVIiKQogICAgICAgIGxvZ2luID0gX3JlcSgiTVQ1X0xPR0lOIikKICAgICAgICBwYXNzd29yZCA9IF9yZXEoIk1UNV9QQVNTV09SRCIpICAgIyBuZXZlciBsb2dnZWQKICAgICAgICB0cnk6CiAgICAgICAgICAgIGltcG9ydCBNZXRhVHJhZGVyNSBhcyBtdDUKICAgICAgICBleGNlcHQgSW1wb3J0RXJyb3I6CiAgICAgICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigKICAgICAgICAgICAgICAgICJNVDVEYXRhRmVlZDogdGhlIE1ldGFUcmFkZXI1IHBhY2thZ2UgaXMgbm90IGluc3RhbGxlZCAiCiAgICAgICAgICAgICAgICAiKFdpbmRvd3Mtb25seTsgLlxcdmVudlxcU2NyaXB0c1xccGlwIGluc3RhbGwgTWV0YVRyYWRlcjUpLiIpCiAgICAgICAgc2VsZi5tdDUgPSBtdDUKICAgICAgICBvayA9IGF3YWl0IGFzeW5jaW8udG9fdGhyZWFkKG10NS5pbml0aWFsaXplLCBwYXRoPXBhdGgpCiAgICAgICAgaWYgbm90IG9rOgogICAgICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoCiAgICAgICAgICAgICAgICBmIk1UNURhdGFGZWVkOiBpbml0aWFsaXplKCkgZmFpbGVkIGZvciBNVDVfUEFUSD17cGF0aH06ICIKICAgICAgICAgICAgICAgIGYie210NS5sYXN0X2Vycm9yKCl9IikKICAgICAgICBzeW1ib2wgPSBfcmVxKCJNVDVfU1lNQk9MIikKICAgICAgICBmcm9tIG10NV9zeW1ib2wgaW1wb3J0IHJlc29sdmVfdHJhZGVhYmxlX3N5bWJvbAogICAgICAgIHJlc29sdmVkID0gYXdhaXQgcmVzb2x2ZV90cmFkZWFibGVfc3ltYm9sKG10NSwgc3ltYm9sKQogICAgICAgIGluZm8gPSBhd2FpdCBhc3luY2lvLnRvX3RocmVhZChtdDUuc3ltYm9sX2luZm8sIHJlc29sdmVkKQogICAgICAgIGlmIGluZm8gaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKAogICAgICAgICAgICAgICAgZiJNVDVEYXRhRmVlZDogc3ltYm9sICd7cmVzb2x2ZWR9JyBub3QgZm91bmQgb24gdGhpcyB0ZXJtaW5hbC4iKQogICAgICAgIGlmIG5vdCBpbmZvLnZpc2libGU6CiAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8udG9fdGhyZWFkKG10NS5zeW1ib2xfc2VsZWN0LCByZXNvbHZlZCwgVHJ1ZSkKICAgICAgICBzZWxmLnN5bWJvbCA9IHJlc29sdmVkCiAgICAgICAgdHJ5OgogICAgICAgICAgICBsb2dpbl9pbnQgPSBpbnQobG9naW4pCiAgICAgICAgZXhjZXB0IFZhbHVlRXJyb3I6CiAgICAgICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigiTVQ1X0xPR0lOIG11c3QgYmUgbnVtZXJpYyAodmFsdWUgaGlkZGVuKS4iKQogICAgICAgIGF1dGhlZCA9IGF3YWl0IGFzeW5jaW8udG9fdGhyZWFkKAogICAgICAgICAgICBtdDUubG9naW4sIGxvZ2luX2ludCwgcGFzc3dvcmQ9cGFzc3dvcmQsIHNlcnZlcj1zZXJ2ZXIpCiAgICAgICAgaWYgbm90IGF1dGhlZDoKICAgICAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKAogICAgICAgICAgICAgICAgZiJNVDVEYXRhRmVlZDogbG9naW4gZmFpbGVkIGZvciBsb2dpbj17bG9naW59ICIKICAgICAgICAgICAgICAgIGYic2VydmVyPXtzZXJ2ZXJ9OiB7bXQ1Lmxhc3RfZXJyb3IoKX0iKQogICAgICAgIHNlbGYub2sgPSBUcnVlCiAgICAgICAgYXdhaXQgc2VsZi5lbWl0KCJNVDVfREFUQV9DT05ORUNURUQiLAogICAgICAgICAgICAgICAgICAgICAgICB7InN5bWJvbCI6IHJlc29sdmVkLCAicmVxdWVzdGVkIjogc3ltYm9sLAogICAgICAgICAgICAgICAgICAgICAgICAgImJhcl90eiI6IGNvbmZpZy5NVDVfQkFSX1RafSkKICAgICAgICBsb2cuaW5mbygiTVQ1IGRhdGEgZmVlZCBjb25uZWN0ZWQ6IHN5bWJvbD0lcyAocmVxdWVzdGVkICVzKSBiYXJfdHo9JXMiLAogICAgICAgICAgICAgICAgIHJlc29sdmVkLCBzeW1ib2wsIGNvbmZpZy5NVDVfQkFSX1RaKQoKICAgIGRlZiBzaHV0ZG93bihzZWxmKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGlmIHNlbGYubXQ1OgogICAgICAgICAgICAgICAgc2VsZi5tdDUuc2h1dGRvd24oKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgICAgIHBhc3MKICAgICAgICBzZWxmLm9rID0gRmFsc2UKCiAgICBhc3luYyBkZWYgc3luYyhzZWxmLCBuOiBpbnQgPSBOb25lKToKICAgICAgICAiIiJQdWxsIHRoZSBsYXRlc3QgTTEgYmFycyBhbmQgbWVyZ2UgYW55dGhpbmcgbmV3LiBDYWxsIGV2ZXJ5IGxvb3AuIiIiCiAgICAgICAgaWYgbm90IHNlbGYub2s6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIG4gPSBuIG9yIGNvbmZpZy5NVDVfQkFSX0xPT0tCQUNLCiAgICAgICAgcmF0ZXMgPSBhd2FpdCBhc3luY2lvLnRvX3RocmVhZCgKICAgICAgICAgICAgc2VsZi5tdDUuY29weV9yYXRlc19mcm9tX3BvcywKICAgICAgICAgICAgc2VsZi5zeW1ib2wsIHNlbGYubXQ1LlRJTUVGUkFNRV9NMSwgMCwgbikKICAgICAgICBpZiBub3QgcmF0ZXM6CiAgICAgICAgICAgIGxvZy53YXJuaW5nKCJNVDUgY29weV9yYXRlc19mcm9tX3BvcyByZXR1cm5lZCBub3RoaW5nIikKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgYWRkZWQgPSAwCiAgICAgICAgbGFzdF90ID0gc2VsZi5iYXJzWy0xXVswXSBpZiBzZWxmLmJhcnMgZWxzZSBOb25lCiAgICAgICAgZm9yIHIgaW4gcmF0ZXM6CiAgICAgICAgICAgIHRfZXQgPSBkYXRldGltZS5mcm9tdGltZXN0YW1wKAogICAgICAgICAgICAgICAgZmxvYXQoclsidGltZSJdKSwgdHo9c2VsZi5fYmFyX3R6KS5hc3RpbWV6b25lKEVUKQogICAgICAgICAgICBpZiBsYXN0X3QgaXMgbm90IE5vbmUgYW5kIHRfZXQgPD0gbGFzdF90OgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgc2VsZi5iYXJzLmFwcGVuZCgodF9ldCwgZmxvYXQoclsib3BlbiJdKSwgZmxvYXQoclsiaGlnaCJdKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQoclsibG93Il0pLCBmbG9hdChyWyJjbG9zZSJdKSkpCiAgICAgICAgICAgIGxhc3RfdCA9IHRfZXQKICAgICAgICAgICAgYWRkZWQgKz0gMQogICAgICAgICMga2VlcCBhIGJvdW5kZWQgd2luZG93IChsb29rYmFjayBjb3ZlcnMgYSBmdWxsIG92ZXJuaWdodCBzZXNzaW9uKQogICAgICAgIHdoaWxlIGxlbihzZWxmLmJhcnMpID4gY29uZmlnLk1UNV9CQVJfTE9PS0JBQ0s6CiAgICAgICAgICAgIHNlbGYuYmFycy5wb3BsZWZ0KCkKICAgICAgICBpZiBhZGRlZDoKICAgICAgICAgICAgbG9nLmRlYnVnKCJNVDUgYmFyczogKyVkLCBsYXN0PSVzIiwgYWRkZWQsCiAgICAgICAgICAgICAgICAgICAgICBzZWxmLmJhcnNbLTFdWzBdLnN0cmZ0aW1lKCIlSDolTSAlWiIpKQoKICAgIGRlZiBiYXJzX3NpbmNlKHNlbGYsIHN0YXJ0X2V0OiBkYXRldGltZSk6CiAgICAgICAgIiIiQWxsIE0xIGJhcnMgd2l0aCBiYXIgdGltZSA+PSBzdGFydF9ldCAoYXNjZW5kaW5nKS4iIiIKICAgICAgICByZXR1cm4gW2IgZm9yIGIgaW4gc2VsZi5iYXJzIGlmIGJbMF0gPj0gc3RhcnRfZXRdCgogICAgZGVmIHF1b3RlKHNlbGYpOgogICAgICAgICIiIihiaWQsIGFzaykgfCBOb25lIOKAlCBsaXZlIE1UNSBxdW90ZSBmb3IgUEEgZW50cnkgcHJpY2luZy4iIiIKICAgICAgICBpZiBub3Qgc2VsZi5vazoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICB0cnk6CiAgICAgICAgICAgIHQgPSBzZWxmLm10NS5zeW1ib2xfaW5mb190aWNrKHNlbGYuc3ltYm9sKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgaWYgdCBpcyBOb25lIG9yIG5vdCB0LmJpZCBvciBub3QgdC5hc2s6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIChmbG9hdCh0LmJpZCksIGZsb2F0KHQuYXNrKSkK
+"""MT5 market-data feed for the ES algo's overnight PA sleeves.
+
+The overnight GEX walls are frozen/stale, so sleeves C (ON range fade) and D
+(sweep+reclaim) trade pure price action. Their OHLC comes from HERE — MT5's
+own M1 bars via copy_rates_from_pos (equivalent to aggregating MT5's tick
+stream, without storing millions of ticks) — never from the bridge file.
+The bridge file is only ever read for the session flag and GEX walls.
+
+Fail-safe: if the MT5 package/terminal is unavailable, connect() raises and
+main.py leaves the PA sleeves dormant (no bars -> no signals). Everything
+else keeps running.
+
+Bar timestamps: MT5 returns seconds-since-epoch; the zone they are in is
+broker-dependent. ES_MT5_BAR_TZ (default "UTC") names the ZoneInfo they
+should be interpreted in, then converted to ET. The sync log line prints
+the first/last bar in ET — if the 18:00 ON-range reset looks wrong against
+the wall clock, set ES_MT5_BAR_TZ to the terminal's zone.
+"""
+import asyncio
+import logging
+from collections import deque
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+import config
+
+log = logging.getLogger("algo.mt5data")
+ET = config.ET
+
+
+def _req(name: str) -> str:
+    v = __import__("os").getenv(name)
+    if not v:
+        raise RuntimeError(
+            f"MT5DataFeed: missing required env var {name} "
+            f"(MT5_PATH / MT5_SERVER / MT5_LOGIN / MT5_PASSWORD / MT5_SYMBOL).")
+    return v
+
+
+class MT5DataFeed:
+    """M1 bars + live quote for ES from the local AMP MT5 terminal."""
+
+    def __init__(self, emit):
+        self.emit = emit
+        self.mt5 = None
+        self.symbol = None
+        self.ok = False
+        self.bars: deque = deque()   # (t_et, o, h, l, c), ascending
+        self._bar_tz = ZoneInfo(config.MT5_BAR_TZ)
+
+    async def connect(self):
+        """initialize() + login() + symbol resolve. Raises on any failure;
+        the caller treats that as 'PA sleeves dormant'."""
+        path = _req("MT5_PATH")
+        server = _req("MT5_SERVER")
+        login = _req("MT5_LOGIN")
+        password = _req("MT5_PASSWORD")   # never logged
+        try:
+            import MetaTrader5 as mt5
+        except ImportError:
+            raise RuntimeError(
+                "MT5DataFeed: the MetaTrader5 package is not installed "
+                "(Windows-only; .\\venv\\Scripts\\pip install MetaTrader5).")
+        self.mt5 = mt5
+        ok = await asyncio.to_thread(mt5.initialize, path=path)
+        if not ok:
+            raise RuntimeError(
+                f"MT5DataFeed: initialize() failed for MT5_PATH={path}: "
+                f"{mt5.last_error()}")
+        symbol = _req("MT5_SYMBOL")
+        from mt5_symbol import resolve_tradeable_symbol
+        resolved = await resolve_tradeable_symbol(mt5, symbol)
+        info = await asyncio.to_thread(mt5.symbol_info, resolved)
+        if info is None:
+            raise RuntimeError(
+                f"MT5DataFeed: symbol '{resolved}' not found on this terminal.")
+        if not info.visible:
+            await asyncio.to_thread(mt5.symbol_select, resolved, True)
+        self.symbol = resolved
+        try:
+            login_int = int(login)
+        except ValueError:
+            raise RuntimeError("MT5_LOGIN must be numeric (value hidden).")
+        authed = await asyncio.to_thread(
+            mt5.login, login_int, password=password, server=server)
+        if not authed:
+            raise RuntimeError(
+                f"MT5DataFeed: login failed for login={login} "
+                f"server={server}: {mt5.last_error()}")
+        self.ok = True
+        await self.emit("MT5_DATA_CONNECTED",
+                        {"symbol": resolved, "requested": symbol,
+                         "bar_tz": config.MT5_BAR_TZ})
+        log.info("MT5 data feed connected: symbol=%s (requested %s) bar_tz=%s",
+                 resolved, symbol, config.MT5_BAR_TZ)
+
+    def shutdown(self):
+        try:
+            if self.mt5:
+                self.mt5.shutdown()
+        except Exception:
+            pass
+        self.ok = False
+
+    async def sync(self, n: int = None):
+        """Pull the latest M1 bars and merge anything new. Call every loop."""
+        if not self.ok:
+            return
+        n = n or config.MT5_BAR_LOOKBACK
+        rates = await asyncio.to_thread(
+            self.mt5.copy_rates_from_pos,
+            self.symbol, self.mt5.TIMEFRAME_M1, 0, n)
+        if not rates:
+            log.warning("MT5 copy_rates_from_pos returned nothing")
+            return
+        added = 0
+        last_t = self.bars[-1][0] if self.bars else None
+        for r in rates:
+            t_et = datetime.fromtimestamp(
+                float(r["time"]), tz=self._bar_tz).astimezone(ET)
+            if last_t is not None and t_et <= last_t:
+                continue
+            self.bars.append((t_et, float(r["open"]), float(r["high"]),
+                              float(r["low"]), float(r["close"])))
+            last_t = t_et
+            added += 1
+        # keep a bounded window (lookback covers a full overnight session)
+        while len(self.bars) > config.MT5_BAR_LOOKBACK:
+            self.bars.popleft()
+        if added:
+            log.debug("MT5 bars: +%d, last=%s", added,
+                      self.bars[-1][0].strftime("%H:%M %Z"))
+
+    def bars_since(self, start_et: datetime):
+        """All M1 bars with bar time >= start_et (ascending)."""
+        return [b for b in self.bars if b[0] >= start_et]
+
+    def quote(self):
+        """(bid, ask) | None — live MT5 quote for PA entry pricing."""
+        if not self.ok:
+            return None
+        try:
+            t = self.mt5.symbol_info_tick(self.symbol)
+        except Exception:
+            return None
+        if t is None or not t.bid or not t.ask:
+            return None
+        return (float(t.bid), float(t.ask))

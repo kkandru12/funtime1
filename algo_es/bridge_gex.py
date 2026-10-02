@@ -1,1 +1,95 @@
-IiIiQnJpZGdlR2V4OiByZWFkLW9ubHkgYWRhcHRlciBvdmVyIHNoYXJlZC9sZXZlbHMuanNvbi4KCkV4cG9zZXMgdGhlIHNhbWUgaW50ZXJmYWNlIHRoZSBFUyBzbGVldmVzIHdlcmUgd3JpdHRlbiBhZ2FpbnN0ICh0aGUgb2xkCmxvY2FsIEdleFN0YXRlKTogY2FsbF93YWxsL3B1dF93YWxsICsgem9uZXMgKyBjb25maWRlbmNlLCBnYW1tYV9yZWdpbWUoKSwKd2FsbF9mb3JfZmFkZSgpLCBtYWduZXRfYmV5b25kKCksIGRvbWluYW5jZSgpLiBBbGwgdmFsdWVzIGluIEVTIHBvaW50cyDigJQKd2FsbHMgY29tZSBmcm9tIHRoZSBicmlkZ2UncyBFUy1jb252ZXJ0ZWQgZXNfd2FsbHMgKFNQWCB3YWxsICsgbGl2ZSBiYXNpcyksCm1hZ25ldHMgYXJlIGNvbnZlcnRlZCB3aXRoIHRoZSBzYW1lIGJhc2lzLgoKUmVmcmVzaCBmcm9tIHRoZSBMZXZlbHNXYXRjaGVyIGVhY2ggbG9vcDsgY2hlYXAgYXR0cmlidXRlIHJlYWRzIGFmdGVyLgoiIiIKaW1wb3J0IGxvZ2dpbmcKCmltcG9ydCBjb25maWcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJhbGdvX2VzLmJyaWRnZV9nZXgiKQoKCmNsYXNzIEJyaWRnZUdleDoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBsZXZlbHMpOgogICAgICAgIHNlbGYubGV2ZWxzID0gbGV2ZWxzCiAgICAgICAgc2VsZi5jYWxsX3dhbGwgPSBOb25lCiAgICAgICAgc2VsZi5jYWxsX3pvbmUgPSBOb25lCiAgICAgICAgc2VsZi5jYWxsX2NvbmYgPSAwLjAKICAgICAgICBzZWxmLnB1dF93YWxsID0gTm9uZQogICAgICAgIHNlbGYucHV0X3pvbmUgPSBOb25lCiAgICAgICAgc2VsZi5wdXRfY29uZiA9IDAuMAogICAgICAgIHNlbGYuZmxpcCA9IE5vbmUKICAgICAgICBzZWxmLm1hZ25ldHM6IGxpc3RbZmxvYXRdID0gW10KICAgICAgICBzZWxmLnJlZ2ltZSA9ICJmbGF0IgogICAgICAgIHNlbGYuYmFzaXMgPSBOb25lCiAgICAgICAgc2VsZi53YWxsX2FnZV9taW4gPSAwLjAKICAgICAgICBzZWxmLnN0YWxlID0gRmFsc2UKCiAgICBkZWYgcmVmcmVzaChzZWxmKSAtPiBib29sOgogICAgICAgICIiIlB1bGwgdGhlIGxhdGVzdCBsZXZlbHM7IHBvcHVsYXRlIEVTLWRlbm9taW5hdGVkIGF0dHJpYnV0ZXMuIiIiCiAgICAgICAgbHYgPSBzZWxmLmxldmVscy5nZXQoKQogICAgICAgIGlmIG5vdCBsdjoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgZXcgPSBsdi5nZXQoImVzX3dhbGxzIikgb3Ige30KICAgICAgICBiYXNpcyA9IGx2LmdldCgiYmFzaXMiKQogICAgICAgIHNlbGYuYmFzaXMgPSBiYXNpcwogICAgICAgIHNlbGYuc3RhbGUgPSBib29sKGx2LmdldCgic3RhbGUiKSkKICAgICAgICBzZWxmLndhbGxfYWdlX21pbiA9IGx2LmdldCgid2FsbF9hZ2VfbWluIikgb3IgMC4wCiAgICAgICAgc2VsZi5yZWdpbWUgPSBsdi5nZXQoInJlZ2ltZSIpIG9yICJmbGF0IgogICAgICAgIHNlbGYuZmxpcCA9IChsdi5nZXQoImZsaXAiKSArIGJhc2lzKSBpZiBsdi5nZXQoImZsaXAiKSBhbmQgYmFzaXMgZWxzZSBOb25lCiAgICAgICAgc2VsZi5tYWduZXRzID0gc29ydGVkKAogICAgICAgICAgICAobSArIGJhc2lzKSBmb3IgbSBpbiAobHYuZ2V0KCJtYWduZXRzIikgb3IgW10pIGlmIGJhc2lzKSBcCiAgICAgICAgICAgIGlmIGJhc2lzIGVsc2UgW10KCiAgICAgICAgZGVmIF9zaWRlKGQ6IGRpY3QgfCBOb25lKToKICAgICAgICAgICAgaWYgbm90IGQgb3Igbm90IGQuZ2V0KCJzdHJpa2UiKToKICAgICAgICAgICAgICAgIHJldHVybiBOb25lLCBOb25lLCAwLjAKICAgICAgICAgICAgcmV0dXJuIChkWyJzdHJpa2UiXSwKICAgICAgICAgICAgICAgICAgICAoZFsiem9uZV9sbyJdLCBkWyJ6b25lX2hpIl0pCiAgICAgICAgICAgICAgICAgICAgaWYgZC5nZXQoInpvbmVfbG8iKSBhbmQgZC5nZXQoInpvbmVfaGkiKSBlbHNlIE5vbmUsCiAgICAgICAgICAgICAgICAgICAgZC5nZXQoImNvbmZpZGVuY2UiKSBvciAwLjApCgogICAgICAgIHNlbGYuY2FsbF93YWxsLCBzZWxmLmNhbGxfem9uZSwgc2VsZi5jYWxsX2NvbmYgPSBfc2lkZShldy5nZXQoImNhbGwiKSkKICAgICAgICBzZWxmLnB1dF93YWxsLCBzZWxmLnB1dF96b25lLCBzZWxmLnB1dF9jb25mID0gX3NpZGUoZXcuZ2V0KCJwdXQiKSkKICAgICAgICByZXR1cm4gVHJ1ZQoKICAgICMgLS0tLS0tLS0tLS0tLS0tLSBzbGVldmUgaW50ZXJmYWNlIChtaXJyb3JzIHRoZSBvbGQgR2V4U3RhdGUpIC0tLS0tLS0tLS0tLS0tLS0KICAgIGRlZiBnYW1tYV9yZWdpbWUoc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiBzZWxmLnJlZ2ltZQoKICAgIGRlZiB3YWxsX2Zvcl9mYWRlKHNlbGYsIHNwb3Q6IGZsb2F0KToKICAgICAgICAiIiIod2FsbCwgc2lkZSwgZW50cnlfZWRnZSwgY29uZmlkZW5jZSkgaWYgc3BvdCB0b3VjaGVzIGEgd2FsbCB6b25lCiAgICAgICAgZnJvbSB0aGUgb3V0c2lkZSB3aXRoaW4gRkFERV9UT1VDSF9QVFMuIEVudHJ5IGVkZ2UgPSBuZWFyIHpvbmUgZWRnZS4iIiIKICAgICAgICBpZiBzZWxmLmNhbGxfd2FsbCBpcyBub3QgTm9uZSBhbmQgc2VsZi5jYWxsX3pvbmUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHpsbywgX3poaSA9IHNlbGYuY2FsbF96b25lCiAgICAgICAgICAgIGlmIDAgPD0gemxvIC0gc3BvdCA8PSBjb25maWcuRkFERV9UT1VDSF9QVFM6CiAgICAgICAgICAgICAgICByZXR1cm4gc2VsZi5jYWxsX3dhbGwsICJzaG9ydCIsIHpsbywgc2VsZi5jYWxsX2NvbmYKICAgICAgICBpZiBzZWxmLnB1dF93YWxsIGlzIG5vdCBOb25lIGFuZCBzZWxmLnB1dF96b25lIGlzIG5vdCBOb25lOgogICAgICAgICAgICBfemxvLCB6aGkgPSBzZWxmLnB1dF96b25lCiAgICAgICAgICAgIGlmIDAgPD0gc3BvdCAtIHpoaSA8PSBjb25maWcuRkFERV9UT1VDSF9QVFM6CiAgICAgICAgICAgICAgICByZXR1cm4gc2VsZi5wdXRfd2FsbCwgImxvbmciLCB6aGksIHNlbGYucHV0X2NvbmYKICAgICAgICByZXR1cm4gTm9uZSwgTm9uZSwgTm9uZSwgMC4wCgogICAgZGVmIG1hZ25ldF9iZXlvbmQoc2VsZiwgcmVmOiBmbG9hdCwgZGlyZWN0aW9uOiBpbnQpOgogICAgICAgIGNhbmRzID0gW20gZm9yIG0gaW4gc2VsZi5tYWduZXRzCiAgICAgICAgICAgICAgICAgaWYgKGRpcmVjdGlvbiA+IDAgYW5kIG0gPiByZWYpIG9yIChkaXJlY3Rpb24gPCAwIGFuZCBtIDwgcmVmKV0KICAgICAgICBpZiBub3QgY2FuZHM6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIG1pbihjYW5kcykgaWYgZGlyZWN0aW9uID4gMCBlbHNlIG1heChjYW5kcykKCiAgICBkZWYgZG9taW5hbmNlKHNlbGYsIHdhbGw6IGZsb2F0LCByaWdodDogc3RyLCBvaTogZGljdCk6CiAgICAgICAgIiIiUGVyLXdhbGwgZG9taW5hbmNlIHJhdGlvcyBhcmUgY29tcHV0ZWQgYnkgdGhlIGJyaWRnZSAoaXQgaG9sZHMKICAgICAgICB0aGUgT0kpLiBNYXRjaCB0aGUgRVMgd2FsbCBiYWNrIHRvIGl0cyBwdWJsaXNoZWQgc2lkZS4iIiIKICAgICAgICBsdiA9IHNlbGYubGV2ZWxzLmdldCgpIG9yIHt9CiAgICAgICAgd2FsbHMgPSBsdi5nZXQoImVzX3dhbGxzIikgb3Ige30KICAgICAgICBzaWRlID0gImNhbGwiIGlmIHJpZ2h0ID09ICJDIiBlbHNlICJwdXQiCiAgICAgICAgdyA9IHdhbGxzLmdldChzaWRlKSBvciB7fQogICAgICAgIGlmIHcuZ2V0KCJzdHJpa2UiKSBhbmQgYWJzKHdbInN0cmlrZSJdIC0gd2FsbCkgPD0gMC41OgogICAgICAgICAgICByZXR1cm4gdy5nZXQoImRvbWluYW5jZSIpCiAgICAgICAgcmV0dXJuIE5vbmUK
+"""BridgeGex: read-only adapter over shared/levels.json.
+
+Exposes the same interface the ES sleeves were written against (the old
+local GexState): call_wall/put_wall + zones + confidence, gamma_regime(),
+wall_for_fade(), magnet_beyond(), dominance(). All values in ES points —
+walls come from the bridge's ES-converted es_walls (SPX wall + live basis),
+magnets are converted with the same basis.
+
+Refresh from the LevelsWatcher each loop; cheap attribute reads after.
+"""
+import logging
+
+import config
+
+log = logging.getLogger("algo_es.bridge_gex")
+
+
+class BridgeGex:
+    def __init__(self, levels):
+        self.levels = levels
+        self.call_wall = None
+        self.call_zone = None
+        self.call_conf = 0.0
+        self.put_wall = None
+        self.put_zone = None
+        self.put_conf = 0.0
+        self.flip = None
+        self.magnets: list[float] = []
+        self.regime = "flat"
+        self.basis = None
+        self.wall_age_min = 0.0
+        self.stale = False
+
+    def refresh(self) -> bool:
+        """Pull the latest levels; populate ES-denominated attributes."""
+        lv = self.levels.get()
+        if not lv:
+            return False
+        ew = lv.get("es_walls") or {}
+        basis = lv.get("basis")
+        self.basis = basis
+        self.stale = bool(lv.get("stale"))
+        self.wall_age_min = lv.get("wall_age_min") or 0.0
+        self.regime = lv.get("regime") or "flat"
+        self.flip = (lv.get("flip") + basis) if lv.get("flip") and basis else None
+        self.magnets = sorted(
+            (m + basis) for m in (lv.get("magnets") or []) if basis) \
+            if basis else []
+
+        def _side(d: dict | None):
+            if not d or not d.get("strike"):
+                return None, None, 0.0
+            return (d["strike"],
+                    (d["zone_lo"], d["zone_hi"])
+                    if d.get("zone_lo") and d.get("zone_hi") else None,
+                    d.get("confidence") or 0.0)
+
+        self.call_wall, self.call_zone, self.call_conf = _side(ew.get("call"))
+        self.put_wall, self.put_zone, self.put_conf = _side(ew.get("put"))
+        return True
+
+    # ---------------- sleeve interface (mirrors the old GexState) ----------------
+    def gamma_regime(self) -> str:
+        return self.regime
+
+    def wall_for_fade(self, spot: float):
+        """(wall, side, entry_edge, confidence) if spot touches a wall zone
+        from the outside within FADE_TOUCH_PTS. Entry edge = near zone edge."""
+        if self.call_wall is not None and self.call_zone is not None:
+            zlo, _zhi = self.call_zone
+            if 0 <= zlo - spot <= config.FADE_TOUCH_PTS:
+                return self.call_wall, "short", zlo, self.call_conf
+        if self.put_wall is not None and self.put_zone is not None:
+            _zlo, zhi = self.put_zone
+            if 0 <= spot - zhi <= config.FADE_TOUCH_PTS:
+                return self.put_wall, "long", zhi, self.put_conf
+        return None, None, None, 0.0
+
+    def magnet_beyond(self, ref: float, direction: int):
+        cands = [m for m in self.magnets
+                 if (direction > 0 and m > ref) or (direction < 0 and m < ref)]
+        if not cands:
+            return None
+        return min(cands) if direction > 0 else max(cands)
+
+    def dominance(self, wall: float, right: str, oi: dict):
+        """Per-wall dominance ratios are computed by the bridge (it holds
+        the OI). Match the ES wall back to its published side."""
+        lv = self.levels.get() or {}
+        walls = lv.get("es_walls") or {}
+        side = "call" if right == "C" else "put"
+        w = walls.get(side) or {}
+        if w.get("strike") and abs(w["strike"] - wall) <= 0.5:
+            return w.get("dominance")
+        return None

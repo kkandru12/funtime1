@@ -1,1 +1,72 @@
-IiIiSUJLUiBjb25uZWN0aW9uIGZvciBnZXhfYnJpZGdlOiBEQVRBIE9OTFkuCgpUaGlzIHByb2Nlc3MgTkVWRVIgcGxhY2VzIG9yZGVycyAobm8gcGxhY2VPcmRlciBjYWxsIGV4aXN0cyBhbnl3aGVyZSBpbgpnZXhfYnJpZGdlLyksIHNvIHRoZXJlIGlzIG5vIHBhcGVyLWdhdGUgaGVyZSDigJQgdGhlIGdhdGUgbGl2ZXMgaW4gdGhlCmNvbnN1bWVyIGFsZ29zIHRoYXQgYWN0dWFsbHkgdHJhbnNtaXQuIFRoaXMgaXMgdGhlIGFjY291bnQncyBzaW5nbGUKc3RyZWFtaW5nIGNvbm5lY3Rpb24gKGNsaWVudElkPTEpOyB0aGUgY29uc3VtZXJzIGNvbm5lY3Qgb3JkZXItb25seQooYWxnbywgY2xpZW50SWQ9Nykgb3Igbm90IGF0IGFsbCAoYWxnb19lcyB2aWEgTVQ1KS4KIiIiCmltcG9ydCBhc3luY2lvCmltcG9ydCBsb2dnaW5nCgpmcm9tIGliX2luc3luYyBpbXBvcnQgSUIKCmltcG9ydCBjb25maWcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJicmlkZ2UuaWJrciIpCgoKYXN5bmMgZGVmIGNvbm5lY3RfaWIoKSAtPiBJQjoKICAgIGliID0gSUIoKQogICAgZGVsYXkgPSAyLjAKICAgIGxhc3RfZXJyID0gTm9uZQogICAgZm9yIGF0dGVtcHQgaW4gcmFuZ2UoMSwgY29uZmlnLkNPTk5FQ1RfUkVUUklFUyArIDEpOgogICAgICAgIHRyeToKICAgICAgICAgICAgbG9nLmluZm8oImJyaWRnZSBjb25uZWN0IGF0dGVtcHQgJWQgLT4gJXM6JWQgY2xpZW50SWQ9JWQiLAogICAgICAgICAgICAgICAgICAgICBhdHRlbXB0LCBjb25maWcuSUJfSE9TVCwgY29uZmlnLklCX1BPUlQsCiAgICAgICAgICAgICAgICAgICAgIGNvbmZpZy5JQl9DTElFTlRfSUQpCiAgICAgICAgICAgIGF3YWl0IGliLmNvbm5lY3RBc3luYyhjb25maWcuSUJfSE9TVCwgY29uZmlnLklCX1BPUlQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGllbnRJZD1jb25maWcuSUJfQ0xJRU5UX0lELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGltZW91dD1jb25maWcuQ09OTkVDVF9USU1FT1VUKQogICAgICAgICAgICBpZiBpYi5pc0Nvbm5lY3RlZCgpOgogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6ICAjIG5vcWE6IEJMRTAwMQogICAgICAgICAgICBsYXN0X2VyciA9IGUKICAgICAgICAgICAgbG9nLndhcm5pbmcoImNvbm5lY3QgYXR0ZW1wdCAlZCBmYWlsZWQ6ICVzIChyZXRyeSBpbiAlLjBmcykiLAogICAgICAgICAgICAgICAgICAgICAgICBhdHRlbXB0LCBlLCBkZWxheSkKICAgICAgICAgICAgYXdhaXQgYXN5bmNpby5zbGVlcChkZWxheSkKICAgICAgICAgICAgZGVsYXkgPSBtaW4oZGVsYXkgKiAyLCA2MCkKICAgIGVsc2U6CiAgICAgICAgcmFpc2UgU3lzdGVtRXhpdChmImJyaWRnZTogY291bGQgbm90IGNvbm5lY3QgdG8gSUJLUiBhZnRlciAiCiAgICAgICAgICAgICAgICAgICAgICAgICBmIntjb25maWcuQ09OTkVDVF9SRVRSSUVTfSB0cmllczoge2xhc3RfZXJyfSIpCgogICAgZGVmIF9vbl9kaXNjb25uZWN0ZWQoKToKICAgICAgICBsb2cuZXJyb3IoIkJSSURHRSBESVNDT05ORUNURUQgZnJvbSBJQktSIikKCiAgICBpYi5kaXNjb25uZWN0ZWRFdmVudCArPSBfb25fZGlzY29ubmVjdGVkCiAgICB0cnk6CiAgICAgICAgbG9nLmluZm8oImJyaWRnZSBjb25uZWN0ZWQ7IGFjY291bnRzPSVzIiwgaWIubWFuYWdlZEFjY291bnRzKCkpCiAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgIHBhc3MKICAgIHJldHVybiBpYgoKCmFzeW5jIGRlZiBlbnN1cmVfY29ubmVjdGVkKGliOiBJQikgLT4gYm9vbDoKICAgIGlmIGliLmlzQ29ubmVjdGVkKCk6CiAgICAgICAgcmV0dXJuIFRydWUKICAgIGxvZy53YXJuaW5nKCJicmlkZ2UgY29ubmVjdGlvbiBsb3N0IC0gcmVjb25uZWN0aW5nIikKICAgIGRlbGF5ID0gMi4wCiAgICBmb3IgXyBpbiByYW5nZShjb25maWcuQ09OTkVDVF9SRVRSSUVTKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGF3YWl0IGliLmNvbm5lY3RBc3luYyhjb25maWcuSUJfSE9TVCwgY29uZmlnLklCX1BPUlQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGllbnRJZD1jb25maWcuSUJfQ0xJRU5UX0lELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGltZW91dD1jb25maWcuQ09OTkVDVF9USU1FT1VUKQogICAgICAgICAgICBpZiBpYi5pc0Nvbm5lY3RlZCgpOgogICAgICAgICAgICAgICAgbG9nLmluZm8oImJyaWRnZSByZWNvbm5lY3RlZCBPSyIpCiAgICAgICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZTogICMgbm9xYTogQkxFMDAxCiAgICAgICAgICAgIGxvZy53YXJuaW5nKCJyZWNvbm5lY3QgZmFpbGVkOiAlcyAocmV0cnkgaW4gJS4wZnMpIiwgZSwgZGVsYXkpCiAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoZGVsYXkpCiAgICAgICAgICAgIGRlbGF5ID0gbWluKGRlbGF5ICogMiwgNjApCiAgICBsb2cuZXJyb3IoImJyaWRnZSByZWNvbm5lY3QgZXhoYXVzdGVkIikKICAgIHJldHVybiBGYWxzZQo=
+"""IBKR connection for gex_bridge: DATA ONLY.
+
+This process NEVER places orders (no placeOrder call exists anywhere in
+gex_bridge/), so there is no paper-gate here — the gate lives in the
+consumer algos that actually transmit. This is the account's single
+streaming connection (clientId=1); the consumers connect order-only
+(algo, clientId=7) or not at all (algo_es via MT5).
+"""
+import asyncio
+import logging
+
+from ib_insync import IB
+
+import config
+
+log = logging.getLogger("bridge.ibkr")
+
+
+async def connect_ib() -> IB:
+    ib = IB()
+    delay = 2.0
+    last_err = None
+    for attempt in range(1, config.CONNECT_RETRIES + 1):
+        try:
+            log.info("bridge connect attempt %d -> %s:%d clientId=%d",
+                     attempt, config.IB_HOST, config.IB_PORT,
+                     config.IB_CLIENT_ID)
+            await ib.connectAsync(config.IB_HOST, config.IB_PORT,
+                                  clientId=config.IB_CLIENT_ID,
+                                  timeout=config.CONNECT_TIMEOUT)
+            if ib.isConnected():
+                break
+        except Exception as e:  # noqa: BLE001
+            last_err = e
+            log.warning("connect attempt %d failed: %s (retry in %.0fs)",
+                        attempt, e, delay)
+            await asyncio.sleep(delay)
+            delay = min(delay * 2, 60)
+    else:
+        raise SystemExit(f"bridge: could not connect to IBKR after "
+                         f"{config.CONNECT_RETRIES} tries: {last_err}")
+
+    def _on_disconnected():
+        log.error("BRIDGE DISCONNECTED from IBKR")
+
+    ib.disconnectedEvent += _on_disconnected
+    try:
+        log.info("bridge connected; accounts=%s", ib.managedAccounts())
+    except Exception:
+        pass
+    return ib
+
+
+async def ensure_connected(ib: IB) -> bool:
+    if ib.isConnected():
+        return True
+    log.warning("bridge connection lost - reconnecting")
+    delay = 2.0
+    for _ in range(config.CONNECT_RETRIES):
+        try:
+            await ib.connectAsync(config.IB_HOST, config.IB_PORT,
+                                  clientId=config.IB_CLIENT_ID,
+                                  timeout=config.CONNECT_TIMEOUT)
+            if ib.isConnected():
+                log.info("bridge reconnected OK")
+                return True
+        except Exception as e:  # noqa: BLE001
+            log.warning("reconnect failed: %s (retry in %.0fs)", e, delay)
+            await asyncio.sleep(delay)
+            delay = min(delay * 2, 60)
+    log.error("bridge reconnect exhausted")
+    return False

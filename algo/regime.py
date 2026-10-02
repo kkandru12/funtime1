@@ -1,1 +1,145 @@
-IiIidjMgTW9kdWxlIEM6IHJlZ2ltZSAvIGRheSBmaWx0ZXIuCgpVTkNBTElCUkFURUQgc2NhZmZvbGRpbmcuIEVhY2ggbW9ybmluZyB3ZSBjb21wdXRlOgogIC0gb3Zlcm5pZ2h0IGdhcCAlIChwcmV2IGRhaWx5IGNsb3NlIC0+IGZpcnN0IHNwb3QpCiAgLSBwcmVtYXJrZXQvZmlyc3QtMzAtbWluIHJhbmdlICUgKGZyb20gMS1taW4gc3BvdCBjbG9zZXMpCiAgLSBWSVggbGV2ZWwgKCsgZGF5IGNoYW5nZSB3aGVuIGhpc3RvcnkgaXMgYXZhaWxhYmxlKQogIC0gZGF5IG9mIHdlZWsKYW5kIGNvbWJpbmUgdGhlbSBpbnRvIHJlZ2ltZV9zY29yZSBpbiBbMCwxXS4KClJFR0lNRV9NT0RFPSJvYnNlcnZlIiAoZGVmYXVsdCk6IGxvZyB0aGUgc2NvcmUsIG5vIGVmZmVjdCBvbiB0cmFkaW5nLgpSRUdJTUVfTU9ERT0ibGl2ZSI6IHNjb3JlIDwgUkVHSU1FX01JTl9TQ09SRSAtPiBubyBuZXcgZW50cmllcyB0aGF0IGRheQooam91cm5hbGVkKTsgc2NvcmUgPj0gUkVHSU1FX0hJR0hfU0NPUkUgLT4gMS41eCBzaXplIChoYXJkLWNhcHBlZCBhdApSRUdJTUVfVFJBREVfQ0FQIHBlciB0cmFkZSkuCgpUaGUgd2VpZ2h0cyBiZWxvdyBhcmUgUExBQ0VIT0xERVJTLiBEbyBub3QgdHJ1c3QgImxpdmUiIHVudGlsIDIwKyBqb3VybmFsZWQKbGl2ZSBkYXlzIGhhdmUgY2FsaWJyYXRlZCB0aGVtIChzZWUgQlVJTERfTk9URVMubWQgb3BlbiB3b3JrKS4KIiIiCmltcG9ydCBhc3luY2lvCmltcG9ydCBsb2dnaW5nCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlcXVlCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lCmZyb20gem9uZWluZm8gaW1wb3J0IFpvbmVJbmZvCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiYWxnby5yZWdpbWUiKQpFVCA9IFpvbmVJbmZvKCJBbWVyaWNhL05ld19Zb3JrIikKCiMgcGxhY2Vob2xkZXIgd2VpZ2h0czogZ2FwIDM1IC8gcmFuZ2UgMzUgLyB2aXggMzAgKHN1bSAxLjApCl9XID0geyJnYXAiOiAwLjM1LCAicmFuZ2UiOiAwLjM1LCAidml4IjogMC4zMH0KX0dBUF9OT1JNID0gMS4wICAgICMgfGdhcHwgb2YgMSUgLT4gZnVsbCBnYXAgc2NvcmUKX1JBTkdFX05PUk0gPSAxLjUgICMgMzAtbWluIHJhbmdlIG9mIDEuNSUgLT4gZnVsbCByYW5nZSBzY29yZQpfVklYX0xPLCBfVklYX0hJID0gMTIuMCwgMzAuMCAgIyB2aXggMTIgLT4gMCwgdml4IDMwIC0+IDEKCgpjbGFzcyBTcG90Q2xvc2VzOgogICAgIiIiMS1taW4gc3BvdCBjbG9zZXMgKGxhc3Qgc3BvdCBzZWVuIGluIHRoZSBtaW51dGUgPSB0aGUgY2xvc2UpLiIiIgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGtlZXA6IGludCA9IDQ1KToKICAgICAgICBzZWxmLmNsb3NlcyA9IGRlcXVlKG1heGxlbj1rZWVwKQogICAgICAgIHNlbGYuX21pbiA9IE5vbmUKICAgICAgICBzZWxmLl9sYXN0ID0gMC4wCgogICAgZGVmIG5vdGUoc2VsZiwgbm93X2V0OiBkYXRldGltZSwgc3BvdDogZmxvYXQpOgogICAgICAgIG1pbnV0ZSA9IG5vd19ldC5yZXBsYWNlKHNlY29uZD0wLCBtaWNyb3NlY29uZD0wKQogICAgICAgIGlmIHNlbGYuX21pbiBpcyBOb25lOgogICAgICAgICAgICBzZWxmLl9taW4gPSBtaW51dGUKICAgICAgICBpZiBtaW51dGUgIT0gc2VsZi5fbWluOgogICAgICAgICAgICBpZiBzZWxmLl9sYXN0ID4gMDoKICAgICAgICAgICAgICAgIHNlbGYuY2xvc2VzLmFwcGVuZChzZWxmLl9sYXN0KQogICAgICAgICAgICBzZWxmLl9taW4gPSBtaW51dGUKICAgICAgICBpZiBzcG90IGFuZCBzcG90ID4gMDoKICAgICAgICAgICAgc2VsZi5fbGFzdCA9IHNwb3QKCiAgICBkZWYgcmVhZHkoc2VsZiwgbm93X2V0OiBkYXRldGltZSkgLT4gYm9vbDoKICAgICAgICAiIiIzMCBjbG9zZXMsIG9yIDEwOjA1IEVUIHdpdGggYXQgbGVhc3QgMTAgKHBhcnRpYWwgZGF5LXN0YXJ0KS4iIiIKICAgICAgICBpZiBsZW4oc2VsZi5jbG9zZXMpID49IDMwOgogICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAgIHQgPSAobm93X2V0LmhvdXIsIG5vd19ldC5taW51dGUpCiAgICAgICAgcmV0dXJuIHQgPj0gKDEwLCA1KSBhbmQgbGVuKHNlbGYuY2xvc2VzKSA+PSAxMAoKICAgIGRlZiByYW5nZV9wY3Qoc2VsZikgLT4gZmxvYXQgfCBOb25lOgogICAgICAgIGlmIGxlbihzZWxmLmNsb3NlcykgPCA1IG9yIG5vdCBzZWxmLmNsb3Nlc1swXToKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICByZXR1cm4gKG1heChzZWxmLmNsb3NlcykgLSBtaW4oc2VsZi5jbG9zZXMpKSAvIHNlbGYuY2xvc2VzWzBdICogMTAwLjAKCgphc3luYyBkZWYgX3ByZXZfY2xvc2UoaWIsIGNvbnRyYWN0KSAtPiBmbG9hdCB8IE5vbmU6CiAgICAiIiJMYXN0IGNvbXBsZXRlZCBkYWlseSBjbG9zZSBiZWZvcmUgdG9kYXkuIE5vbmUgb24gYW55IGZhaWx1cmUuIiIiCiAgICB0cnk6CiAgICAgICAgYmFycyA9IGF3YWl0IGFzeW5jaW8ud2FpdF9mb3IoCiAgICAgICAgICAgIGliLnJlcUhpc3RvcmljYWxEYXRhQXN5bmMoY29udHJhY3QsICIiLCAiNCBEIiwgIjEgZGF5IiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiVFJBREVTIiwgVHJ1ZSksCiAgICAgICAgICAgIHRpbWVvdXQ9MjApCiAgICAgICAgdG9kYXkgPSBkYXRldGltZS5ub3coRVQpLmRhdGUoKQogICAgICAgIHByZXYgPSBbYi5jbG9zZSBmb3IgYiBpbiBiYXJzCiAgICAgICAgICAgICAgICBpZiBiLmNsb3NlIGFuZCBiLmNsb3NlID4gMCBhbmQgYi5kYXRlIDwgdG9kYXldCiAgICAgICAgcmV0dXJuIGZsb2F0KHByZXZbLTFdKSBpZiBwcmV2IGVsc2UgTm9uZQogICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgIGxvZy53YXJuaW5nKCJwcmV2X2Nsb3NlIGZhaWxlZDogJXMiLCBlKQogICAgICAgIHJldHVybiBOb25lCgoKYXN5bmMgZGVmIG1vcm5pbmdfc25hcHNob3QoaWIsIHNwb3QwOiBmbG9hdCkgLT4gZGljdDoKICAgICIiIkdhcCAvIFZJWCAvIGRvdyBzbmFwc2hvdCBhdCBzdGFydHVwLiBOZXZlciByYWlzZXMuIiIiCiAgICBmcm9tIGliX2luc3luYyBpbXBvcnQgSW5kZXgKICAgIGYgPSB7InByZXZfY2xvc2UiOiBOb25lLCAiZ2FwX3BjdCI6IE5vbmUsICJ2aXgiOiBOb25lLAogICAgICAgICAidml4X2NoZ19wY3QiOiBOb25lLCAiZG93IjogZGF0ZXRpbWUubm93KEVUKS53ZWVrZGF5KCksCiAgICAgICAgICJzcG90MCI6IHJvdW5kKHNwb3QwLCAyKSBpZiBzcG90MCBlbHNlIE5vbmUsICJwYXJ0aWFsIjogW119CiAgICB0cnk6CiAgICAgICAgc3B4ID0gSW5kZXgoIlNQWCIsICJDQk9FIiwgIlVTRCIpCiAgICAgICAgYXdhaXQgaWIucXVhbGlmeUNvbnRyYWN0c0FzeW5jKHNweCkKICAgICAgICBwYyA9IGF3YWl0IF9wcmV2X2Nsb3NlKGliLCBzcHgpCiAgICAgICAgaWYgcGMgYW5kIHNwb3QwOgogICAgICAgICAgICBmWyJwcmV2X2Nsb3NlIl0gPSByb3VuZChwYywgMikKICAgICAgICAgICAgZlsiZ2FwX3BjdCJdID0gcm91bmQoKHNwb3QwIC0gcGMpIC8gcGMgKiAxMDAuMCwgMykKICAgICAgICBlbHNlOgogICAgICAgICAgICBmWyJwYXJ0aWFsIl0uYXBwZW5kKCJuby1wcmV2LWNsb3NlIikKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICBmWyJwYXJ0aWFsIl0uYXBwZW5kKGYic3B4Ont0eXBlKGUpLl9fbmFtZV9ffSIpCiAgICB0cnk6CiAgICAgICAgdml4ID0gSW5kZXgoIlZJWCIsICJDQk9FIiwgIlVTRCIpCiAgICAgICAgYXdhaXQgaWIucXVhbGlmeUNvbnRyYWN0c0FzeW5jKHZpeCkKICAgICAgICB0ID0gaWIucmVxTWt0RGF0YSh2aXgsICIiLCBUcnVlLCBGYWxzZSkgICMgc25hcHNob3Q6IG5vIGxpbmUgaGVsZAogICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoMykKICAgICAgICBweCA9IHQubWFya2V0UHJpY2UoKSBvciB0Lmxhc3Qgb3IgdC5jbG9zZQogICAgICAgIGliLmNhbmNlbE1rdERhdGEodml4KQogICAgICAgIGlmIHB4IGFuZCBweCA+IDA6CiAgICAgICAgICAgIGZbInZpeCJdID0gcm91bmQoZmxvYXQocHgpLCAyKQogICAgICAgICAgICB2cGMgPSBhd2FpdCBfcHJldl9jbG9zZShpYiwgdml4KQogICAgICAgICAgICBpZiB2cGM6CiAgICAgICAgICAgICAgICBmWyJ2aXhfY2hnX3BjdCJdID0gcm91bmQoKHB4IC0gdnBjKSAvIHZwYyAqIDEwMC4wLCAyKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZbInBhcnRpYWwiXS5hcHBlbmQoIm5vLXZpeC1xdW90ZSIpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgZlsicGFydGlhbCJdLmFwcGVuZChmInZpeDp7dHlwZShlKS5fX25hbWVfX30iKQogICAgbG9nLmluZm8oInJlZ2ltZSBtb3JuaW5nIHNuYXBzaG90OiAlcyIsIGYpCiAgICByZXR1cm4gZgoKCmRlZiBmaW5hbGl6ZShmZWF0dXJlczogZGljdCwgcmFuZ2VfcGN0OiBmbG9hdCB8IE5vbmUpIC0+IHR1cGxlW2Zsb2F0LCBkaWN0XToKICAgICIiInJlZ2ltZV9zY29yZSBpbiBbMCwxXSArIHRoZSBwZXItZmVhdHVyZSBicmVha2Rvd24uCgogICAgV2VpZ2h0cyBhcmUgcGxhY2Vob2xkZXJzICh1bmNhbGlicmF0ZWQpLiBNaXNzaW5nIGZlYXR1cmVzIHNjb3JlIDAgYW5kCiAgICBhcmUgZmxhZ2dlZCBpbiAncGFydGlhbCcgc28gdGhlIGpvdXJuYWwgc2hvd3Mgd2hhdCB3YXMgdW5hdmFpbGFibGUuCiAgICAiIiIKICAgIHBhcnRpYWwgPSBsaXN0KGZlYXR1cmVzLmdldCgicGFydGlhbCIsIFtdKSkKICAgIGdhcCA9IGZlYXR1cmVzLmdldCgiZ2FwX3BjdCIpCiAgICBnYXBfcyA9IG1pbihhYnMoZ2FwKSAvIF9HQVBfTk9STSwgMS4wKSBpZiBnYXAgaXMgbm90IE5vbmUgZWxzZSAwLjAKICAgIGlmIGdhcCBpcyBOb25lOgogICAgICAgIHBhcnRpYWwuYXBwZW5kKCJuby1nYXAiKQogICAgcmFuZ2VfcyA9IG1pbihyYW5nZV9wY3QgLyBfUkFOR0VfTk9STSwgMS4wKSBpZiByYW5nZV9wY3QgaXMgbm90IE5vbmUgZWxzZSAwLjAKICAgIGlmIHJhbmdlX3BjdCBpcyBOb25lOgogICAgICAgIHBhcnRpYWwuYXBwZW5kKCJuby1yYW5nZSIpCiAgICB2aXggPSBmZWF0dXJlcy5nZXQoInZpeCIpCiAgICB2aXhfcyA9IG1pbihtYXgodml4IC0gX1ZJWF9MTywgMC4wKSAvIChfVklYX0hJIC0gX1ZJWF9MTyksIDEuMCkgXAogICAgICAgIGlmIHZpeCBpcyBub3QgTm9uZSBlbHNlIDAuMAogICAgaWYgdml4IGlzIE5vbmU6CiAgICAgICAgcGFydGlhbC5hcHBlbmQoIm5vLXZpeCIpCiAgICBzY29yZSA9IF9XWyJnYXAiXSAqIGdhcF9zICsgX1dbInJhbmdlIl0gKiByYW5nZV9zICsgX1dbInZpeCJdICogdml4X3MKICAgIGRldGFpbCA9IHsid2VpZ2h0cyI6IGRpY3QoX1cpLCAiZ2FwX3MiOiByb3VuZChnYXBfcywgMyksCiAgICAgICAgICAgICAgInJhbmdlX3MiOiByb3VuZChyYW5nZV9zLCAzKSwgInZpeF9zIjogcm91bmQodml4X3MsIDMpLAogICAgICAgICAgICAgICJnYXBfcGN0IjogZ2FwLCAicmFuZ2VfcGN0Ijogcm91bmQocmFuZ2VfcGN0LCAzKQogICAgICAgICAgICAgIGlmIHJhbmdlX3BjdCBpcyBub3QgTm9uZSBlbHNlIE5vbmUsCiAgICAgICAgICAgICAgInZpeCI6IHZpeCwgInZpeF9jaGdfcGN0IjogZmVhdHVyZXMuZ2V0KCJ2aXhfY2hnX3BjdCIpLAogICAgICAgICAgICAgICJkb3ciOiBmZWF0dXJlcy5nZXQoImRvdyIpLCAicGFydGlhbCI6IHBhcnRpYWwsCiAgICAgICAgICAgICAgImNhbGlicmF0ZWQiOiBGYWxzZX0KICAgIHJldHVybiByb3VuZChzY29yZSwgMyksIGRldGFpbAo=
+"""v3 Module C: regime / day filter.
+
+UNCALIBRATED scaffolding. Each morning we compute:
+  - overnight gap % (prev daily close -> first spot)
+  - premarket/first-30-min range % (from 1-min spot closes)
+  - VIX level (+ day change when history is available)
+  - day of week
+and combine them into regime_score in [0,1].
+
+REGIME_MODE="observe" (default): log the score, no effect on trading.
+REGIME_MODE="live": score < REGIME_MIN_SCORE -> no new entries that day
+(journaled); score >= REGIME_HIGH_SCORE -> 1.5x size (hard-capped at
+REGIME_TRADE_CAP per trade).
+
+The weights below are PLACEHOLDERS. Do not trust "live" until 20+ journaled
+live days have calibrated them (see BUILD_NOTES.md open work).
+"""
+import asyncio
+import logging
+from collections import deque
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+log = logging.getLogger("algo.regime")
+ET = ZoneInfo("America/New_York")
+
+# placeholder weights: gap 35 / range 35 / vix 30 (sum 1.0)
+_W = {"gap": 0.35, "range": 0.35, "vix": 0.30}
+_GAP_NORM = 1.0    # |gap| of 1% -> full gap score
+_RANGE_NORM = 1.5  # 30-min range of 1.5% -> full range score
+_VIX_LO, _VIX_HI = 12.0, 30.0  # vix 12 -> 0, vix 30 -> 1
+
+
+class SpotCloses:
+    """1-min spot closes (last spot seen in the minute = the close)."""
+    def __init__(self, keep: int = 45):
+        self.closes = deque(maxlen=keep)
+        self._min = None
+        self._last = 0.0
+
+    def note(self, now_et: datetime, spot: float):
+        minute = now_et.replace(second=0, microsecond=0)
+        if self._min is None:
+            self._min = minute
+        if minute != self._min:
+            if self._last > 0:
+                self.closes.append(self._last)
+            self._min = minute
+        if spot and spot > 0:
+            self._last = spot
+
+    def ready(self, now_et: datetime) -> bool:
+        """30 closes, or 10:05 ET with at least 10 (partial day-start)."""
+        if len(self.closes) >= 30:
+            return True
+        t = (now_et.hour, now_et.minute)
+        return t >= (10, 5) and len(self.closes) >= 10
+
+    def range_pct(self) -> float | None:
+        if len(self.closes) < 5 or not self.closes[0]:
+            return None
+        return (max(self.closes) - min(self.closes)) / self.closes[0] * 100.0
+
+
+async def _prev_close(ib, contract) -> float | None:
+    """Last completed daily close before today. None on any failure."""
+    try:
+        bars = await asyncio.wait_for(
+            ib.reqHistoricalDataAsync(contract, "", "4 D", "1 day",
+                                      "TRADES", True),
+            timeout=20)
+        today = datetime.now(ET).date()
+        prev = [b.close for b in bars
+                if b.close and b.close > 0 and b.date < today]
+        return float(prev[-1]) if prev else None
+    except Exception as e:
+        log.warning("prev_close failed: %s", e)
+        return None
+
+
+async def morning_snapshot(ib, spot0: float) -> dict:
+    """Gap / VIX / dow snapshot at startup. Never raises."""
+    from ib_insync import Index
+    f = {"prev_close": None, "gap_pct": None, "vix": None,
+         "vix_chg_pct": None, "dow": datetime.now(ET).weekday(),
+         "spot0": round(spot0, 2) if spot0 else None, "partial": []}
+    try:
+        spx = Index("SPX", "CBOE", "USD")
+        await ib.qualifyContractsAsync(spx)
+        pc = await _prev_close(ib, spx)
+        if pc and spot0:
+            f["prev_close"] = round(pc, 2)
+            f["gap_pct"] = round((spot0 - pc) / pc * 100.0, 3)
+        else:
+            f["partial"].append("no-prev-close")
+    except Exception as e:
+        f["partial"].append(f"spx:{type(e).__name__}")
+    try:
+        vix = Index("VIX", "CBOE", "USD")
+        await ib.qualifyContractsAsync(vix)
+        t = ib.reqMktData(vix, "", True, False)  # snapshot: no line held
+        await asyncio.sleep(3)
+        px = t.marketPrice() or t.last or t.close
+        ib.cancelMktData(vix)
+        if px and px > 0:
+            f["vix"] = round(float(px), 2)
+            vpc = await _prev_close(ib, vix)
+            if vpc:
+                f["vix_chg_pct"] = round((px - vpc) / vpc * 100.0, 2)
+        else:
+            f["partial"].append("no-vix-quote")
+    except Exception as e:
+        f["partial"].append(f"vix:{type(e).__name__}")
+    log.info("regime morning snapshot: %s", f)
+    return f
+
+
+def finalize(features: dict, range_pct: float | None) -> tuple[float, dict]:
+    """regime_score in [0,1] + the per-feature breakdown.
+
+    Weights are placeholders (uncalibrated). Missing features score 0 and
+    are flagged in 'partial' so the journal shows what was unavailable.
+    """
+    partial = list(features.get("partial", []))
+    gap = features.get("gap_pct")
+    gap_s = min(abs(gap) / _GAP_NORM, 1.0) if gap is not None else 0.0
+    if gap is None:
+        partial.append("no-gap")
+    range_s = min(range_pct / _RANGE_NORM, 1.0) if range_pct is not None else 0.0
+    if range_pct is None:
+        partial.append("no-range")
+    vix = features.get("vix")
+    vix_s = min(max(vix - _VIX_LO, 0.0) / (_VIX_HI - _VIX_LO), 1.0) \
+        if vix is not None else 0.0
+    if vix is None:
+        partial.append("no-vix")
+    score = _W["gap"] * gap_s + _W["range"] * range_s + _W["vix"] * vix_s
+    detail = {"weights": dict(_W), "gap_s": round(gap_s, 3),
+              "range_s": round(range_s, 3), "vix_s": round(vix_s, 3),
+              "gap_pct": gap, "range_pct": round(range_pct, 3)
+              if range_pct is not None else None,
+              "vix": vix, "vix_chg_pct": features.get("vix_chg_pct"),
+              "dow": features.get("dow"), "partial": partial,
+              "calibrated": False}
+    return round(score, 3), detail

@@ -1,1 +1,243 @@
-IyBCVUlMRCBOT1RFUyDigJQgMERURSBTUFhXIDEwWC1PVE0gYWxnbyAodjIgbWVyZ2VkKQoKQnVpbHQgMjAyNi0xMC0wMSAodjEpLiBNZXJnZWQgMjAyNi0xMC0wMSAodjIpIHdpdGggdGhlIHVzZXIncyBwcm92ZW4gMTBYLU9UTQptZWNoYW5pY3MgYWZ0ZXIgYSA1LWRheSBEYXRhYmVudG8gYmFja3Rlc3Qgc2hvd2Rvd24gKH4vd29ya3NwYWNlL2FsZ28tcmV2aWV3LwpzaG93ZG93bi5tZCkuIFNpbmdsZSBhc3luY2lvIGV2ZW50IGxvb3AsIGBpYl9pbnN5bmNgLCBubyBHVUksIG5vIGhhcmRjb2RlZApjcmVkZW50aWFscyAoYWxsIGNvbm5lY3Rpb24gc2V0dGluZ3MgZW52LW92ZXJyaWRhYmxlKS4KCiMjIHYyIG1lcmdlOiB3aGF0IGNoYW5nZWQgYW5kIHdoeSAoZXZpZGVuY2UpCgpUaGUgc2hvd2Rvd24gcmFuIHRoZSB1c2VyJ3MgMTBYLU9UTSB2cyB0aGlzIGFsZ28ncyB2MSBjcnVzaCBkZXNpZ24gb24gdGhlCnNhbWUgNSBkYXlzICgyMDI2LTA5LTIxLi4yNSBTUFhXIDBEVEUsIDEtbWluIENCQk8sIGJ1eS1hc2svc2VsbC1iaWQpOgoKfCBtZXRyaWMgfCB0aGVpcnMgKDEwWC1PVE0pIHwgbWluZSAodjEpIHwKfC0tLXwtLS18LS0tfAp8IGF2ZyBtYXggbXVsdGlwbGUgfCA5LjA4eCB8IDEuMzZ4IHwKfCBtYXggbXVsdGlwbGUgfCAyOS42N3ggfCAyLjgzeCB8CnwgMTB4IHRvdWNoIHJhdGUgfCAyOC42JSB8IDAuMCUgfAp8IFAmTCAobmF0aXZlIHNpemVzKSB8ICskOCwyOTEgfCDiiJIkNjMzIHwKCldpbmRvdyBzY2FuIChmaWx0ZXItb25seSwgYmVzdCBnYW1tYS9hc2sgY2FuZGlkYXRlL21pbiwgbWF4IGZvcndhcmQgYmlkKToKCnwgd2luZG93IHwgdGhlaXJzIDEweCBoaXQgfCBtaW5lIDEweCBoaXQgfAp8LS0tfC0tLXwtLS18CnwgMTE6MDDigJMxMjozMCB8IDIxLjQlIHwgMTcuMCUgfAp8IDEzOjAw4oCTMTU6MDAgfCAqKjAuMCUgKGFsbCA1IGRheXMsIGJvdGggZmlsdGVycykqKiB8IDAuMCUgfAp8IDEzOjAw4oCTMTU6NTAgfCAxLjMlIHwgMS40JSB8CnwgMTU6MzDigJMxNTo1OCB8IDEyLjQlIHwgMy42JSB8CgpWZXJkaWN0OiB0aGUgdjEgMTM6MDDigJMxNTo1MCBlbnRyeSB3aW5kb3cgaXMgUkVUSVJFRCAoMCUgaGl0IGluIDEzOjAw4oCTMTU6MDApLgpUaGUgdjEgKmZpbHRlciogd2FzIG5vdCBkZWFkICgxNyUgMTB4LXF1YWxpdHkgaW4gdGhlIG1vcm5pbmcpIOKAlCB0aGUgd2luZG93IHdhcy4KTWVyZ2VkOiB0aGVpciB3aW5kb3dzICsgZXhpdHMgKG1lYXN1cmVkKSBpbnNpZGUgb3VyIGNoYXNzaXMgKHBhcGVyIGdhdGUsIGtpbGwKc3dpdGNoLCAkMjAwIHNpemluZykuCgojIyB2MyAoMjAyNi0xMC0wMSk6IHRocmVlIGluZGVwZW5kZW50LCBjb25maWctdG9nZ2xlZCBtb2R1bGVzICsgYWx3YXlzLW9uCgpBbGwgdGhyZWUgZGVmYXVsdCB0byB0aGUgbWVhc3VyZWQgdjIgYmVoYXZpb3Igd2hlbiB0b2dnbGVkIG9mZi4gRWFjaCBtb2R1bGUKam91cm5hbHMgc2VwYXJhdGVseSBzbyBpdHMgY29udHJpYnV0aW9uIGNhbiBiZSBtZWFzdXJlZCBpbiB0aGUgSlNPTkwgbG9ncy4KCiMjIyBNb2R1bGUgQSDigJQgdGllcmVkIGV4aXRzIChgQ1JVU0hfVElFUkVEX0VYSVRTYCwgZGVmYXVsdCBvbikKClQxOiByZXN0aW5nIG5hdGl2ZSBsaW1pdCBTRUxMIDEvMyBvZiB0aGUgcG9zaXRpb24gYXQgNXggZW50cnkuIFQyOiByZXN0aW5nCm5hdGl2ZSBsaW1pdCBTRUxMIDEvMyBhdCAxMHguIFJ1bm5lciAxLzMgb24gdGhlIGV4aXN0aW5nIDMwJSBnaXZlYmFjayB0cmFpbAptYWNoaW5lcnkgKFRQX1RPVUNI4oaSVFJBSUwsIGZsb29yID0gbWF4KDEweCwgcGVha8OXMC43MCksIDQtdGljayBjb25maXJtYXRpb24pLgpCb3RoIFRQcyBhcmUgbmF0aXZlIEdUQyBvcmRlcnMgcGxhY2VkIEFUIEZJTEwgKHN1cnZpdmUgcHJvY2VzcyBkZWF0aCk7CmRyeS1ydW4gc2ltdWxhdGVzIHRoZW0gaW4gdGhlIHN0YXRlIG1hY2hpbmUuIFBhcnRpYWwgZmlsbHMgZmxvdyB0aHJvdWdoIHRoZQp0aWVycyBjb3JyZWN0bHk7IGV2ZXJ5IHRpZXIgZmlsbCBpcyBqb3VybmFsZWQgKGBUSUVSX0ZJTExgOiB0aWVyLCBtdWx0aXBsZSwKcXR5LCB0cywgdHJpZ2dlciwgcmVnaW1lX3Njb3JlKS4gUXR5IDwgMyBmYWxscyBiYWNrIHRvIHRoZSB2MiBzaW5nbGUtMTB4LVRQCnBhdGggKG5vdGhpbmcgc2Vuc2libGUgdG8gc3BsaXQpLiBgQ1JVU0hfVElFUkVEX0VYSVRTPTBgIHJlc3RvcmVzIHB1cmUgdjIKYmVoYXZpb3IuIFJhdGlvbmFsZTogbG9ja3MgdGhlICQyMDDihpIkMSwwMDAvJDIsMDAwIGdvYWwgZWFybGllciB3aGlsZSBrZWVwaW5nCnRoZSA1MHggdGFpbCBvbiB0aGUgcnVubmVyLgoKIyMjIE1vZHVsZSBCIOKAlCB3YWxsLWJyZWFrIHNsZWV2ZSAoYENSVVNIX1dBTExCUkVBS19FTkFCTEVEYCwgZGVmYXVsdCBvbikKCkV2ZW50LWRyaXZlbiBlbnRyaWVzIG9uIGRvbWluYW50IEdFWC13YWxsIGJyZWFrcywgcG9ydGVkIGZyb20gdGhlIHVzZXIncwpgX3diX3N0ZXBgIChXQUxMQlJLIHYxLjU5KSBhcm0vYnJlYWsgc2VtYW50aWNzLCBzaW1wbGlmaWVkOgotICoqQXJtOioqIGNhbGxfd2FsbC9wdXRfd2FsbCAobW9ybmluZyBPSSDDlyBsaXZlIGdhbW1hKSBpcyBkb21pbmFudCB3aGVuIGl0cwogIHNhbWUtc2lkZSBPSSDiiaUgYENSVVNIX1dBTExfRE9NSU5BTkNFYCAoMi41KSDDlyB0aGUgYWRqYWNlbnQgc3BvdC1zaWRlCiAgc3RyaWtlJ3MgT0k7IGFybWVkIHdoZW4gfHNwb3Qg4oiSIHdhbGx8IOKJpCBgQ1JVU0hfV0FMTF9BUk1fUFRTYCAoMTUpLiBDYWxsCiAgd2FsbCBhcm1zIG9ubHkgYXMgcmVzaXN0YW5jZSAoc3BvdCDiiaQgd2FsbCDihpIgc2lkZSAidXAiKTsgcHV0IHdhbGwgb25seSBhcwogIHN1cHBvcnQgKHNwb3Qg4omlIHdhbGwg4oaSIHNpZGUgImRvd24iKS4gRGlzYXJtcyBwYXN0IDLDlyBhcm0gZGlzdGFuY2UuCi0gKipCcmVhazoqKiB0d28gY29uc2VjdXRpdmUgMS1taW4gY2xvc2VzIGJleW9uZCB0aGUgd2FsbCAoYWJvdmUgY2FsbCB3YWxsIOKGkgogIGNhbGxzOyBiZWxvdyBwdXQgd2FsbCDihpIgcHV0cykuIE0xIGNsb3NlcyBidWlsdCBmcm9tIGNoYWluIHNwb3QgZXhhY3RseSBhcwogIHRoZWlyIHJlcGxheSBoYXJuZXNzIGRvZXMgKGxhc3Qgc3BvdCBzZWVuIGluIHRoZSBtaW51dGUgPSB0aGUgY2xvc2UpLgotICoqRW50cnk6KiogYmVzdCBnYW1tYS9hc2sgb3V0cmlnaHQgd2l0aGluIGBDUlVTSF9XQUxMQlJFQUtfT1RNX01BWGAgKDMwKQogIHB0cyBiZXlvbmQgdGhlIHdhbGw7IGFzayAkMC4yMOKAkyQwLjUwLCB8ZGVsdGF8IDwgMC4xNSwgc3ByZWFkIOKJpCAyNSUg4oCUCiAgKipubyBjcnVzaCB6LWJhbmQqKiAoYnJlYWtzIGFyZSBtb21lbnR1bSBldmVudHMsIG5vdCBjcnVzaCBldmVudHMpLgotICoqV2luZG93cyAodXNlciBjb25zdHJhaW50KToqKiBhcm1pbmcgQU5EIGVudHJpZXMgYXJlIGdhdGVkIG9uIHRoZSBTQU1FIHYyCiAgd2luZG93cyBBL0IgdmlhIGBjb25maWcuYWN0aXZlX3dpbmRvdygpYCDigJQgbm8gYXJvdW5kLXRoZS1jbG9jayB0cmFkaW5nLgogIENydXNoIGlzIGV2YWx1YXRlZCBmaXJzdCAodjIgcHJpb3JpdHkpOyB3YWxsLWJyZWFrIGlzIHRoZSBmYWxsYmFjayBzbGVldmUuCi0gKipEZXZpYXRpb25zIGZyb20gdGhlaXJzIChkZWxpYmVyYXRlKToqKiBvdXIgdmVoaWNsZSBpcyBvdXRyaWdodHMsIG5vdAogIHRoZWlyIDEwLXdpZGUgZGViaXQgc3ByZWFkczsgbm8gcHJlLWJ1eSB3aGlsZSBwaW5uZWQgKGJyZWFrLWFkZCBvbmx5KTsKICBubyBFUyBsZWc7IG1heCAyIGJyZWFrcy93YWxsL2RheTsgMTU6NTUgZmxhdCAobm8gaG9sZC10by1zZXR0bGVtZW50KS4KLSBTaGFyZWQgbGltaXRzOiAxIHBvc2l0aW9uIHRvdGFsLCAyL2RheSwgJDIwMCBzaXppbmc7IGV4aXRzIHJ1biB0aHJvdWdoIHRoZQogIHNhbWUgdGllcmVkL3RyYWlsIG1hY2hpbmU7IGpvdXJuYWwgYHRyaWdnZXI9IndhbGxicmVhayJgIHZzIGAiY3J1c2giYC4KCiMjIyBNb2R1bGUgQyDigJQgcmVnaW1lIC8gZGF5IGZpbHRlciAoYENSVVNIX1JFR0lNRV9NT0RFYCwgZGVmYXVsdCBgb2JzZXJ2ZWApCgpNb3JuaW5nIGZlYXR1cmVzOiBvdmVybmlnaHQgZ2FwICUgKHByZXYgZGFpbHkgY2xvc2Ug4oaSIGZpcnN0IHNwb3QsIHZpYQpgcmVxSGlzdG9yaWNhbERhdGFgKSwgZmlyc3QtMzAtbWluIHJhbmdlICUgKDEtbWluIHNwb3QgY2xvc2VzKSwgVklYIGxldmVsCigrIGRheSBjaGFuZ2Ugd2hlbiBoaXN0b3J5IGlzIGF2YWlsYWJsZTsgc25hcHNob3QgcmVxdWVzdCwgbm8gbGluZSBoZWxkKSwKZGF5IG9mIHdlZWsuIENvbWJpbmVkIGludG8gYHJlZ2ltZV9zY29yZSDiiIggWzAsMV1gIHdpdGggcGxhY2Vob2xkZXIgd2VpZ2h0cwooZ2FwIC4zNSAvIHJhbmdlIC4zNSAvIHZpeCAuMzA7IGdhcCBub3JtYWxpemVkIGF0IDElLCByYW5nZSBhdCAxLjUlLCBWSVgKMTLihpIwIC8gMzDihpIxKS4gYFJFR0lNRV9TTkFQU0hPVGAgKyBgUkVHSU1FYCBldmVudHMgam91cm5hbCBmZWF0dXJlcywgc2NvcmUsCmFuZCB3aGF0IHdhcyB1bmF2YWlsYWJsZS4KLSBgb2JzZXJ2ZWAgKGRlZmF1bHQpOiBsb2cgb25seSwgemVybyBlZmZlY3Qgb24gdHJhZGluZy4KLSBgbGl2ZWA6IHNjb3JlIDwgYENSVVNIX1JFR0lNRV9NSU5fU0NPUkVgICgwLjM1KSDihpIgbm8gbmV3IGVudHJpZXMgdGhhdCBkYXkKICAoam91cm5hbGVkIGBSRUdJTUVfR0FURWApOyBzY29yZSDiiaUgYENSVVNIX1JFR0lNRV9ISUdIX1NDT1JFYCAoMC43MCkg4oaSCiAgMS41w5cgc2l6ZSwgaGFyZC1jYXBwZWQgYXQgYENSVVNIX1JFR0lNRV9UUkFERV9DQVBgICgkMzAwKS90cmFkZS4KCiMjIyBBbHdheXMtb24gKGRlZmF1bHQpIC8gYC0tb25lc2hvdGAKCmBtYWluLnB5YCBpcyBub3cgYSBzdXBlcnZpc29yOiBgcnVuX3Nlc3Npb24oKWAgcnVucyBvbmUgZnVsbCBzZXNzaW9uCihjb25uZWN0IOKGkiBjaGFpbiDihpIgT0kgc25hcHNob3Qg4oaSIHRyYWRlIOKGkiAxNTo1NSBmbGF0dGVuIOKGkiAxNjowNSBkaXNjb25uZWN0KSwKdGhlbiB0aGUgc3VwZXJ2aXNvciBzbGVlcHMg4oCUIGludGVycnVwdGlibHkgKHJldHVybnMgaW5zdGFudGx5IG9uIEN0cmwrQyAvClNJR1RFUk07IDYwcyBjaHVua3Mgb3RoZXJ3aXNlKSDigJQgdW50aWwgdGhlIG5leHQgd2Vla2RheSAwOTozMCBFVCBhbmQgcnVucwp0aGUgc2Vzc2lvbiBmcmVzaC4gTk9fVFJBREVfREFZICh3ZWVrZW5kIC8gcGFzdCAxNjowNSAvIGVtcHR5IGNoYWluKSBqdXN0CnNsZWVwcyB0byB0aGUgbmV4dCBzZXNzaW9uOyB0aGUgcHJvY2VzcyBuZXZlciBleGl0cyBvbiBpdHMgb3duLgotIGAtLW9uZXNob3RgIHJlc3RvcmVzIHRoZSBvbGQgcnVuLW9uY2UtdGhlbi1leGl0IGJlaGF2aW9yIChkZWJ1Z2dpbmcpLgotIFBlci1zZXNzaW9uIGh5Z2llbmU6IGZyZXNoIGBJQigpYCBjb25uZWN0LCBjaGFpbiBkaXNjb3ZlcnksIE9JIHNuYXBzaG90LAogIGBSaXNrTWFuYWdlcmAsIGFuZCBhIG5ldyBkYXRlZCBsb2cgZmlsZSBlYWNoIHNlc3Npb24gKG9sZCBoYW5kbGVycyBhcmUKICBkcm9wcGVkIOKAlCBubyBkb3VibGUgbG9nZ2luZykuCi0gQ3Jhc2ggcG9saWN5OiB1bmV4cGVjdGVkIGV4Y2VwdGlvbiDihpIgYFNFU1NJT05fRVJST1JgIGpvdXJuYWxlZCwgNS1taW4KICBpbnRlcnJ1cHRpYmxlIHNsZWVwLCBmcmVzaCBzZXNzaW9uIHJldHJ5LiBgU3lzdGVtRXhpdGAgKHBhcGVyLWdhdGUgcmVmdXNhbAogIC8gY29ubmVjdCBleGhhdXN0aW9uIOKAlCBuZWVkcyBhIGh1bWFuIG9yIFRXUykg4oaSIGBTRVNTSU9OX0FCT1JUYCwgc2xlZXAgdG8KICBuZXh0IHNlc3Npb24uCi0gMTU6NTUgZmxhdHRlbiBhbmQgMTY6MDUgbG9vcC1lbmQgYXJlIHVuY2hhbmdlZCB3aXRoaW4gYSBzZXNzaW9uLgotIFRhc2sgU2NoZWR1bGVyL3N5c3RlbWQgaXMgbm93IG9wdGlvbmFsOiBvbmx5IG5lZWRlZCBhcyBhIHdhdGNoZG9nIHRvCiAgcmVzdGFydCB0aGUgcHJvY2VzcyBhZnRlciBhIFZQUyByZWJvb3QgKHNlZSBSRUFETUUgwqc0KS4KCiMjIyBKb3VybmFsIHNjaGVtYSBhZGRpdGlvbnMgKHYzKQoKRXZlcnkgYENBTkRJREFURWAvYENMT1NFRGAgbm93IGNhcnJpZXMgYHRyaWdnZXJgIChgY3J1c2hgL2B3YWxsYnJlYWtgKSBhbmQKYHJlZ2ltZV9zY29yZWAuIE5ldyBldmVudHM6IGBUSUVSX0ZJTExgLCBgV0JfQVJNYCwgYFdCX0RJU0FSTWAsIGBXQl9CUkVBS2AsCmBUUkFJTF9BUk1gIChub3cgd2l0aCBgcnVubmVyX3F0eWApLCBgUkVHSU1FX1NOQVBTSE9UYCwgYFJFR0lNRWAsCmBSRUdJTUVfR0FURWAsIGBTTEVFUGAsIGBEQUVNT05gLCBgREFFTU9OX1NUT1BgLCBgU0VTU0lPTl9FUlJPUmAsCmBTRVNTSU9OX0FCT1JUYC4KCiMjIyBPcGVuIHdvcmsKCjEuICoqUmVnaW1lIGNhbGlicmF0aW9uOioqIHdlaWdodHMgYXJlIHBsYWNlaG9sZGVycy4gTmVlZHMgMjArIGpvdXJuYWxlZAogICBsaXZlIGRheXMgKHJlZ2ltZV9zY29yZSArIHBlci1kYXkgUCZMKSBiZWZvcmUgYENSVVNIX1JFR0lNRV9NT0RFPWxpdmVgCiAgIGlzIHRydXN0d29ydGh5LiBBbmFseXNpczogY29ycmVsYXRlIHNjb3JlIHRlcmNpbGVzIHdpdGggZGF5IFAmTCBhbmQKICAgMTB4LWhpdCByYXRlOyByZWZpdCB3ZWlnaHRzOyBvbmx5IHRoZW4gZW5hYmxlLgoyLiAqKldhbGwtYnJlYWsgbWVhc3VyZW1lbnQ6KiogdGhlIHNsZWV2ZSBpcyBhIGZhaXRoZnVsIHBvcnQgb2YgdGhlaXIKICAgdHJpZ2dlciwgYnV0IGl0cyBoaXQgcmF0ZSBvbiBPVVIgb3V0cmlnaHQgdmVoaWNsZSBpcyB1bm1lYXN1cmVkIOKAlAogICBqb3VybmFsIGB0cmlnZ2VyYCBzcGxpdCBmb3IgYSBtb250aCwgdGhlbiBkZWNpZGUga2VlcC90dW5lL2tpbGwuCjMuICoqVGllciBzaXppbmc6KiogMS8zLTEvMy0xLzMgaXMgYSBzdGFydGluZyBzcGxpdDsgdGhlIGpvdXJuYWwncwogICBgVElFUl9GSUxMYCBtdWx0aXBsZXMgd2lsbCBzaG93IHdoZXRoZXIgVDEgYXQgNXggbGVhdmVzIHRvbyBtdWNoIG9uCiAgIHRoZSB0YWJsZSB2cyBwdXJlIDEweCt0cmFpbC4KCiMjIEZpbGVzCgp8IEZpbGUgfCBSb2xlIHwKfC0tLXwtLS18CnwgYGNvbmZpZy5weWAgfCBFdmVyeSBwYXJhbWV0ZXIgaW4gb25lIHBsYWNlOyBgQ1JVU0hfKmAgZW52IG92ZXJyaWRlczsgYGFjdGl2ZV93aW5kb3coKWAgfAp8IGBwYWNlci5weWAgfCBUb2tlbi1idWNrZXQgQVBJIHBhY2VyICgzIHNuYXBzaG90L3N1YiBvcHMvc2VjLCBtYXggOCBjb25jdXJyZW50KSB8CnwgYGlia3JfY29ubi5weWAgfCBDb25uZWN0IHcvIGV4cG9uZW50aWFsIGJhY2tvZmYsIFBBUEVSLU9OTFkgZ2F0ZSwgYXV0by1yZWNvbm5lY3QgfAp8IGBjaGFpbi5weWAgfCBDaGFpbiBkaXNjb3ZlcnksIE9JIHNuYXBzaG90LCBsaW5lLWJ1ZGdldGVkIHN0cmVhbWluZywgcmUtY2VudGVyaW5nLCB3aW5nIHN3ZWVwcywgMS1taW4gYmFycywgQWxsTGFzdCBmbG93IHwKfCBgZ2V4LnB5YCB8IE5ldCBHRVggLyBmbGlwIC8gbWFnbmV0cyAvIHdhbGxzIGZyb20gZnJvemVuIE9JIMOXIGxpdmUgSUJLUiBnYW1tYSAoaW5jcmVtZW50YWwpLiAqKkJ1ZyBmaXhlZCAyMDI2LTEwLTAxOiBwdXRfd2FsbCB1c2VkIG1pbigpIGluc3RlYWQgb2YgbWF4KCkqKiB8CnwgYHN0cmF0ZWd5LnB5YCB8IDEwWC1PVE0gZW50cnkgZmlsdGVyICsgMTB4L3RyYWlsIGV4aXQgc3RhdGUgbWFjaGluZSAocHVyZSBmdW5jdGlvbnMpLiB2MzogdGllcmVkIFBvc2l0aW9uIChUMSA1eCAvIFQyIDEweCAvIHJ1bm5lciB0cmFpbCksIFdhbGxCcmVha1N0YXRlIChkb21pbmFudC13YWxsIGFybS9icmVhaykgfAp8IGByZWdpbWUucHlgIHwgKip2MyBNb2R1bGUgQzoqKiBtb3JuaW5nIGdhcC9WSVgvcmFuZ2Ugc25hcHNob3QgKyByZWdpbWVfc2NvcmUgKHVuY2FsaWJyYXRlZCBzY2FmZm9sZGluZykgfAp8IGBvcmRlcnMucHlgIHwgRW50cmllcyAobGltaXQgKyAkMC4wNSBjaGFzZSBjYXApLCByZXN0aW5nIG5hdGl2ZSBUUHMgYXQgZmlsbCAodjM6IFQxIDV4ICsgVDIgMTB4IGxlZ3MsIG9yIHNpbmdsZSAxMHggd2hlbiB0aWVycyBvZmYpLCB0cmFpbCBhcm1pbmcsIGRyeS1ydW4gc2ltdWxhdGlvbiB8CnwgYHJpc2sucHlgIHwgUHJlLXRyYWRlIGNoZWNrcywgJDIwMCBzaXppbmcsIDIlL2RheSBraWxsIHN3aXRjaCB8CnwgYG1haW4ucHlgIHwgV2lyaW5nOiBjb25uZWN0IOKGkiBPSSDihpIgc3RyZWFtIOKGkiA1cyBsb29wIOKGkiAxNTo1NSBmbGF0dGVuIOKGkiBzaHV0ZG93biB8CnwgYHJlcXVpcmVtZW50cy50eHRgIHwgYGliX2luc3luYz49MC45Ljg2YCwgYG51bXB5PT0yLjIuNmAsIGB0emRhdGFgICh3aW4zMikgfAoKIyMgU3RyYXRlZ3kgcGFyYW1ldGVycyAodjIg4oCUIDEwWC1PVE0sIG1lYXN1cmVkKQoKLSBFbnRyeSB3aW5kb3dzOiAqKkEgMTE6MDDigJMxMjozMCBFVCAoNDDigJM1NSBwdHMgT1RNKSoqIGFuZCAqKkIgMTU6MzDigJMxNTo1OCBFVAogICg44oCTMTIgcHRzIE9UTSkqKjsgbm8gZW50cmllcyBhdC9hZnRlciAxNTo1MDsgZmxhdCAxNTo1NS4KLSBFbnRyeTogYXNrICQwLjIw4oCTJDAuNTAsIHxkZWx0YXwgPCAwLjE1IChJQktSLXNlbnQgR3JlZWtzKSwgc3ByZWFkIOKJpCAyNSUsCiAgKipjcnVzaCBCQU5EOiBhc2sgei1zY29yZSDiiIggW+KIkjIuMCwg4oiSMS4wXSoqIHZzIHRyYWlsaW5nIDMwLW1pbiAoZGVlcGVyIHRoYW4KICDiiJIyLjAgbWVhc3VyZWQgd29yc2UgdGhhbiByYW5kb20g4oCUIGR5aW5nLCBub3QgbWlzcHJpY2VkKSwgQVRNIElWIG5vdCBzcGlraW5nCiAgKD4xLjPDlyB0cmFpbGluZyBtZWRpYW4gPSBzdGFuZCBkb3duKSwgcmFuayBnYW1tYS9hc2ssIG1pbiAxMCBtaW4gaGlzdG9yeS4KLSBFeGl0czogKipyZXN0aW5nIDEweCBsaW1pdCBUUCBwbGFjZWQgQVQgRklMTCoqIChuYXRpdmUgb3JkZXIgaW4gbGl2ZSBtb2RlIOKAlAogIHN1cnZpdmVzIHByb2Nlc3MgZGVhdGgpOyBvbiAxMHggdG91Y2gg4oaSIGNhbmNlbCBUUCwgYXJtICoqMzAlIGdpdmViYWNrIHRyYWlsKioKICAoZmxvb3IgcmF0Y2hldHMgYXQgbWF4KDEweCBlbnRyeSwgcGVhayDDlyAwLjcwKSwgfjIwcyBjb25maXJtYXRpb24gb24gdGhlIDVzCiAgbG9vcCk7IG5vIHBlci10cmFkZSBzdG9wIGJ5IGRlZmF1bHQgKGBTVE9QX1BDVD0wYDsgdGhlaXIgbWVhc3VyZW1lbnQ6IHJlbW92aW5nCiAgdGhlIOKIkjUwJSBzdG9wIGFkZGVkICQzNywxMDAvNSBzZXNzaW9ucyk7IGRhaWx5IGtpbGwgc3dpdGNoIGlzIHRoZSBiYWNrc3RvcC4KLSBSaXNrOiAkMjAwL3RyYWRlIOKGkiBxdHkgPSAyMDAgLy8gKGFza8OXMTAwKTsgbWF4IDIgdHJhZGVzL2RheTsgMSBwb3NpdGlvbjsKICDiiJIyJSBvZiBOZXRMaXEgZGFpbHkga2lsbCBzd2l0Y2ggKGZsYXR0ZW5zIHRoZSBvcGVuIHBvc2l0aW9uKS4KCiMjIERlbGliZXJhdGVseSBOT1QgcG9ydGVkIGZyb20gdGhlaXIgc3lzdGVtIChhbmQgd2h5KQoKMS4gKiokMywwMDAvZGF5IHByZW1pdW0gY2FwIC8gMTAgY29udHJhY3RzIHBlciB0aWNrZXQqKiDigJQgMTXDlyB0aGUgdXNlcidzICQyMDAKICAgYnVkZ2V0LiBLZXB0ICQyMDAvdHJhZGUsIG1heCAyL2RheS4KMi4gKipIb2xkLXRvLXNldHRsZW1lbnQgZm9yIDEweCsgcG9zaXRpb25zKiog4oCUIGtlZXAgdGhlIDE1OjU1IGhhcmQgZmxhdC4KICAgU2V0dGxlbWVudCBtZWNoYW5pY3MgYWRkIHBpbi9leHBpcnkgcmlzazsgdGhlIHRyYWlsIGFscmVhZHkgY2FwdHVyZWQKICAgMTYuNjd4LzEwLjZ4IGV4aXRzIGluIHRoZSBzaW0gdnMgMTB4IGZsYXQuCjMuICoqTWF4IDMgb3BlbiBwb3NpdGlvbnMgLyAzIHBlciB3aW5kb3cqKiDigJQga2VwdCAxIHBvc2l0aW9uICh0aGVpciBvd24KICAgY29uY2VudHJhdGlvbiB3YXJuaW5nOiA5MSUgb2YgNS1kYXkgUCZMIGZyb20gb25lIGRheTsgNC83IHRyYWRlcyDiiJIxMDAlKS4KNC4gKipXQUxMLUJSRUFLIHN0cmF0ZWd5Kiog4oCUIHBoYXNlIDIgKG5lZWRzIGxhZGRlci1tb25vdG9uaWNpdHkgc2FuaXR5ICsKICAgY29tYm8tdGljayBtYWNoaW5lcnkgdGhlaXIgdjEuNjEgYWRkZWQpLgo1LiAqKlpEVEUtM1BNKiog4oCUIGRlYWQgZGVzaWduIChkZWx0YSAwLjE14oCTMC4zNSArIGJyZWFrb3V0IGNvbmZpcm1hdGlvbiksCiAgIHZlcmlmaWVkIHR3aWNlICgxMyB0cmFkZXMgLyAxIHdpbiAvIOKIkiQ5MDUuNjA7IHRoZWlyIHYxLjUxOiBleGNsdWRlcyA5NCUgb2YKICAgMTB4IHRpY2tldHMpLgo2LiAqKkVT4oaSU1BYVyBicmlkZ2UqKiDigJQgZ2F0ZWQgb2ZmIGluIHRoZWlyIHN5c3RlbTsgRVMgY29tZXMgbGF0ZXIuCjcuICoqfGl2X3p8IOKJpCAxLjUgZm9ybXVsYXRpb24qKiDigJQga2VwdCBvdXIgQVRNLUlWLXJhdGlvIGdhdGUgKHNhbWUgc3Bpcml0LAogICBhbHJlYWR5IGltcGxlbWVudGVkKS4KOC4gKipBYnNvbHV0ZSAkMC41MCBzcHJlYWQgY2FwKiog4oCUIGtlcHQgb3VyIHJlbGF0aXZlIDI1JSAodGlnaHRlciBvbiBjaGVhcAogICB0aWNrZXRzKS4KOS4gKio0NS1taW4gd2FybXVwKiog4oCUIGtlcHQgTUlOX0FTS19ISVNUT1JZPTEwICh0aGVpcnM6IG1pbiAxNSBzYW1wbGVzKS4KCiMjIExpbmUtYnVkZ2V0IGRlc2lnbiAoaGFyZCBjYXAgMTAwLCB0YXJnZXQg4omkNzUgc3VzdGFpbmVkKQoKSUJLUidzIDEwMC1saW5lIGxpbWl0IGlzIHNoYXJlZCBhY3Jvc3MgYHJlcU1rdERhdGFgIGFuZCBgcmVxVGlja0J5VGlja0RhdGFgLgpTdXN0YWluZWQgbGF5b3V0OgoKfCBMaW5lcyB8IFVzZSB8IFByaW9yaXR5IHwKfC0tLXwtLS18LS0tfAp8IDEgfCBTUFggdW5kZXJseWluZyBzdHJlYW1pbmcgfCAwIChuZXZlciBzaGVkKSB8CnwgNDIgfCBBY3RpdmUgd2luZG93OiA1LXB0IHN0cmlrZXMsIHNwb3QgwrE1MCwgYm90aCByaWdodHMsIHN0cmVhbWluZyAoYDEwMCwxMDEsMTA2LDEwN2ApIHwgMSB8CnwgMjAgfCBDcnVzaCBiYW5kOiA1NeKAkzk1IHB0cyBPVE0sIDEwLXB0IHN0ZXBzLCBib3RoIHNpZGVzLCBib3RoIHJpZ2h0cywgc3RyZWFtaW5nIHwgMiB8Cnwg4omkMTAgfCBBbGxMYXN0IHRpY2stYnktdGljazogaGVsZCBwb3NpdGlvbiArIHRvcC0zIGNhbmRpZGF0ZXMgKGZsb3cvSVNPIGNvbnRleHQpIHwgMyAoc2hlZCBmaXJzdCkgfAp8ICoqNjMqKiB8ICoqc3VzdGFpbmVkIHR5cGljYWwqKiB8IHwKfCAqKuKJpDczKiogfCAqKnBlYWsgd2l0aCBBbGxMYXN0KiogfCB8CgotICoqT0kgaXMgZnJvemVuIGludHJhZGF5ICh2ZXJpZmllZCk6Kiogb25lIGZ1bGwtY2hhaW4gT0kgc25hcHNob3QgYXQgc3RhcnR1cCB2aWEKICBwYWNlZCBvbmUtc2hvdCBzbmFwc2hvdCByZXF1ZXN0cyAoYGdlbmVyaWNUaWNrTGlzdD0iMTAxImApLCB0aGVuIHVuc3Vic2NyaWJlIOKAlAogIHplcm8gc3RyZWFtaW5nIGxpbmVzIGhlbGQgZm9yIHdpbmdzLiBHRVggPSBmcm96ZW4gbW9ybmluZyBPSSDDlyBsaXZlIGdhbW1hLgotICoqRHluYW1pYyB3aW5kb3c6KiogZXZlcnkgMTUgbWluIHRoZSBhY3RpdmUvY3J1c2ggc2V0cyByZS1jZW50ZXIgb24gc3BvdDsKICBlbnRlcmluZyBzdHJpa2VzIHN1YnNjcmliZSwgZGVwYXJ0ZWQgb25lcyB1bnN1YnNjcmliZSAoYWxsIHByZS1xdWFsaWZpZWQgZnJvbQogIHRoZSBzaW5nbGUgbW9ybmluZyBgcmVxQ29udHJhY3REZXRhaWxzYCwgc28gcmUtY2VudGVyaW5nIGlzIHN1YnNjcmliZS1vbmx5KS4KLSAqKldpbmcgcXVvdGVzOioqIGV2ZXJ5IDE1IG1pbiBhIHBhY2VkIHNuYXBzaG90IHN3ZWVwIG9mIG5vbi1zdHJlYW1pbmcgc3RyaWtlcwogIHdpdGhpbiDCsTIwMCBwdHMgcmVmcmVzaGVzIEdyZWVrcyBmb3IgR0VYIGNvbXBsZXRlbmVzcy4gV2luZ3MgbmV2ZXIgc3RyZWFtLgotICoqU2hlZGRpbmcgb3JkZXIgbmVhciB0aGUgY2FwOioqIEFsbExhc3Qg4oaSIGNydXNoIGJhbmQg4oaSIGFjdGl2ZSB3aW5kb3cg4oaSIChuZXZlciBTUFgpLgotICoqQ29tcHV0ZToqKiBJQktSLXNlbnQgR3JlZWtzIChgYmlkR3JlZWtzYC9gYXNrR3JlZWtzYCBmcm9tIHRpY2tzIDEwNi8xMDcpIGFyZQogIHVzZWQgZGlyZWN0bHkg4oCUIG5vIHBlci10aWNrIFB5dGhvbiBHcmVlayByZWNvbXB1dGF0aW9uLiBUaGUgY3J1c2ggZGV0ZWN0b3IKICBhZ2dyZWdhdGVzIHN0cmVhbWluZyBhc2tzIGludG8gMS1taW4gYmFyczsgei1zY29yZXMgcnVuIG9uIHRoZSB0cmFpbGluZwogIDMwLW1pbiBzZXJpZXMuIEdFWCByZWNvbXB1dGVzIGEgc3RyaWtlIG9ubHkgd2hlbiBpdHMgZ2FtbWEgbW92ZWQgPjUlLCBwbHVzIGEKICBmdWxsIHJlZnJlc2ggZXZlcnkgNSBtaW4uCi0gKipQYWNlcjoqKiBldmVyeSBzbmFwc2hvdCwgc3Vic2NyaWJlLCBhbmQgcmUtY2VudGVyIG9wIGdvZXMgdGhyb3VnaCB0aGUgdG9rZW4KICBidWNrZXQgKDMvc2VjLCBtYXggOCBjb25jdXJyZW50KSDigJQgc3dlZXBzIGFuZCByZS1jZW50ZXJpbmcgY2Fubm90IHRyaXAgcGFjaW5nCiAgdmlvbGF0aW9ucy4KLSAqKkFsbExhc3QgZmxvdzoqKiBwcmludHMgZHJhaW5lZCBlYWNoIGxvb3AsIHRpY2stcnVsZSBzaWduZWQgdnMgdGhlIHN0cmVhbWluZwogIHF1b3RlLCA1LW1pbiBzaWduZWQgdm9sdW1lIGtlcHQgcGVyIGNvbnRyYWN0LiBJdCBpcyBhIGxvZ2dlZCB0aWVicmVhayBpbgogIHJhbmtpbmcsIG5vdCBhbiBlbnRyeSBnYXRlICh0aGUgYmFja3Rlc3QgdmFsaWRhdGVkIGNydXNoIGVudHJpZXMgc3RhbmRhbG9uZSkuCgojIyBBc3N1bXB0aW9ucyAvIHJpc2tzCgoxLiAqKlBhcGVyIGdhdGUgPSAiRFUiIGFjY291bnQgcHJlZml4LioqIFN0YW5kYXJkIGZvciBJQktSIGluZGl2aWR1YWwgcGFwZXIKICAgYWNjb3VudHMuIElmIHRoZSB1c2VyJ3MgcGFwZXIgYWNjb3VudCBoYXMgYSBkaWZmZXJlbnQgcHJlZml4LCB0aGUgYWxnbyB3aWxsCiAgIHJlZnVzZSB0byBzdGFydCDigJQgY2hlY2sgYG1hbmFnZWRBY2NvdW50cygpYCBhbmQgYWRqdXN0IGlmIG5lZWRlZC4KMi4gKipDaGFpbiBkaXNjb3ZlcnkgdmlhIG9uZSBgcmVxQ29udHJhY3REZXRhaWxzYCoqIG9uIGEgYmFyZSBTUFhXIDBEVEUgT3B0aW9uCiAgIGNvbnRyYWN0LiBJZiBJQktSIHJldHVybnMgYW4gZW1wdHkgbGlzdCAoaG9saWRheSwgYmFkIHNlc3Npb24pLCB0aGUgYWxnbwogICBleGl0cyB3aXRoIE5PX1RSQURFX0RBWS4KMy4gKipFeGl0cyBhcmUgc29mdHdhcmUtbWFuYWdlZCoqIChtYXJrZXRhYmxlIGxpbWl0IG9yZGVycyksIG5vdCBuYXRpdmUgc3RvcAogICBvcmRlcnMuIElmIHRoZSBwcm9jZXNzIGRpZXMgbWlkLXBvc2l0aW9uLCBub3RoaW5nIHByb3RlY3RzIGl0IOKAlCBydW4gdW5kZXIKICAgc3lzdGVtZCB3aXRoIGBSZXN0YXJ0PW9uLWZhaWx1cmVgLCBhbmQgY29uc2lkZXIgSUJLUidzIG93biAiY2FuY2VsIG9uCiAgIGRpc2Nvbm5lY3QiIHNhZmVndWFyZHMgYXMgYSBiYWNrc3RvcCAobm90IGNvbmZpZ3VyZWQgYnkgdGhpcyBhbGdvKS4KNC4gKipTbmFwc2hvdCBmaWxscyBhcmUgYmVzdC1lZmZvcnQ6KiogYSBzbmFwc2hvdCB0aGF0IHJldHVybnMgbm8gR3JlZWtzL09JIGlzCiAgIGxvZ2dlZCBhbmQgc2tpcHBlZDsgdGhlIG1vcm5pbmcgT0kgc25hcHNob3QgbmVlZHMgZGVjZW50IGNvdmVyYWdlIG9yIEdFWAogICB3YWxscyBkZWdyYWRlIChjb3ZlcmFnZSAlIGlzIGxvZ2dlZCkuCjUuICoqQ29uZmxhdGVkIHF1b3RlcyAofjQvc2VjKSoqIG1lYW4gZW50cnkvZXhpdCBwcmljZXMgY2FuIGJlIH4yNTBtcyBzdGFsZTsKICAgdGhlIHN0cmF0ZWd5IGlzIGJhci1iYXNlZCBhbmQgdGhpcyB3YXMgdmVyaWZpZWQgaW1tYXRlcmlhbC4KNi4gKipEcnktcnVuIHNpbXVsYXRlcyBmaWxscyBhdCB0aGUgaW50ZW5kZWQgcHJpY2UqKiDigJQgaXQgZXhlcmNpc2VzIHRoZSBzdGF0ZQogICBtYWNoaW5lIGJ1dCBzYXlzIG5vdGhpbmcgYWJvdXQgcmVhbCBmaWxsIHF1YWxpdHkuIEV4cGVjdCBzbGlwcGFnZSBvbiByZWFsCiAgIChwYXBlcikgZmlsbHMsIGVzcGVjaWFsbHkgdGhlIDE1OjU1IGZsYXR0ZW4uCjcuICoqV2Vla2VuZC9ob2xpZGF5IGhhbmRsaW5nKiogaXMgbWluaW1hbDogbm8gMERURSBjaGFpbiDihpIgY2xlYW4gZXhpdC4KOC4gKipUYXJnZXQgMTB4IGlzIGFzcGlyYXRpb25hbCBwZXItdHJhZGUgYXN5bW1ldHJ5KiosIG5vdCBhIGRhaWx5IGd1YXJhbnRlZToKICAgdmVyaWZpZWQgYmFzZSByYXRlIGlzIH4yLjQlIG9mIGNoZWFwIHRpY2tldHMgaGl0dGluZyAxMHg7IHRoZSBmaWx0ZXIgKGNydXNoICsKICAgSVYtZmxhdCArIHdhbGwgcHJveGltaXR5KSBpcyB3aGF0IG11c3QgbGlmdCBpdC4gUGFwZXItdHJhZGUgZm9yIHdlZWtzIGFuZAogICBtZWFzdXJlIGJlZm9yZSB0cnVzdGluZyBhbnkgZXhwZWN0YW5jeSBjbGFpbS4K
+# BUILD NOTES — 0DTE SPXW 10X-OTM algo (v2 merged)
+
+Built 2026-10-01 (v1). Merged 2026-10-01 (v2) with the user's proven 10X-OTM
+mechanics after a 5-day Databento backtest showdown (~/workspace/algo-review/
+showdown.md). Single asyncio event loop, `ib_insync`, no GUI, no hardcoded
+credentials (all connection settings env-overridable).
+
+## v2 merge: what changed and why (evidence)
+
+The showdown ran the user's 10X-OTM vs this algo's v1 crush design on the
+same 5 days (2026-09-21..25 SPXW 0DTE, 1-min CBBO, buy-ask/sell-bid):
+
+| metric | theirs (10X-OTM) | mine (v1) |
+|---|---|---|
+| avg max multiple | 9.08x | 1.36x |
+| max multiple | 29.67x | 2.83x |
+| 10x touch rate | 28.6% | 0.0% |
+| P&L (native sizes) | +$8,291 | −$633 |
+
+Window scan (filter-only, best gamma/ask candidate/min, max forward bid):
+
+| window | theirs 10x hit | mine 10x hit |
+|---|---|---|
+| 11:00–12:30 | 21.4% | 17.0% |
+| 13:00–15:00 | **0.0% (all 5 days, both filters)** | 0.0% |
+| 13:00–15:50 | 1.3% | 1.4% |
+| 15:30–15:58 | 12.4% | 3.6% |
+
+Verdict: the v1 13:00–15:50 entry window is RETIRED (0% hit in 13:00–15:00).
+The v1 *filter* was not dead (17% 10x-quality in the morning) — the window was.
+Merged: their windows + exits (measured) inside our chassis (paper gate, kill
+switch, $200 sizing).
+
+## v3 (2026-10-01): three independent, config-toggled modules + always-on
+
+All three default to the measured v2 behavior when toggled off. Each module
+journals separately so its contribution can be measured in the JSONL logs.
+
+### Module A — tiered exits (`CRUSH_TIERED_EXITS`, default on)
+
+T1: resting native limit SELL 1/3 of the position at 5x entry. T2: resting
+native limit SELL 1/3 at 10x. Runner 1/3 on the existing 30% giveback trail
+machinery (TP_TOUCH→TRAIL, floor = max(10x, peak×0.70), 4-tick confirmation).
+Both TPs are native GTC orders placed AT FILL (survive process death);
+dry-run simulates them in the state machine. Partial fills flow through the
+tiers correctly; every tier fill is journaled (`TIER_FILL`: tier, multiple,
+qty, ts, trigger, regime_score). Qty < 3 falls back to the v2 single-10x-TP
+path (nothing sensible to split). `CRUSH_TIERED_EXITS=0` restores pure v2
+behavior. Rationale: locks the $200→$1,000/$2,000 goal earlier while keeping
+the 50x tail on the runner.
+
+### Module B — wall-break sleeve (`CRUSH_WALLBREAK_ENABLED`, default on)
+
+Event-driven entries on dominant GEX-wall breaks, ported from the user's
+`_wb_step` (WALLBRK v1.59) arm/break semantics, simplified:
+- **Arm:** call_wall/put_wall (morning OI × live gamma) is dominant when its
+  same-side OI ≥ `CRUSH_WALL_DOMINANCE` (2.5) × the adjacent spot-side
+  strike's OI; armed when |spot − wall| ≤ `CRUSH_WALL_ARM_PTS` (15). Call
+  wall arms only as resistance (spot ≤ wall → side "up"); put wall only as
+  support (spot ≥ wall → side "down"). Disarms past 2× arm distance.
+- **Break:** two consecutive 1-min closes beyond the wall (above call wall →
+  calls; below put wall → puts). M1 closes built from chain spot exactly as
+  their replay harness does (last spot seen in the minute = the close).
+- **Entry:** best gamma/ask outright within `CRUSH_WALLBREAK_OTM_MAX` (30)
+  pts beyond the wall; ask $0.20–$0.50, |delta| < 0.15, spread ≤ 25% —
+  **no crush z-band** (breaks are momentum events, not crush events).
+- **Windows (user constraint):** arming AND entries are gated on the SAME v2
+  windows A/B via `config.active_window()` — no around-the-clock trading.
+  Crush is evaluated first (v2 priority); wall-break is the fallback sleeve.
+- **Deviations from theirs (deliberate):** our vehicle is outrights, not
+  their 10-wide debit spreads; no pre-buy while pinned (break-add only);
+  no ES leg; max 2 breaks/wall/day; 15:55 flat (no hold-to-settlement).
+- Shared limits: 1 position total, 2/day, $200 sizing; exits run through the
+  same tiered/trail machine; journal `trigger="wallbreak"` vs `"crush"`.
+
+### Module C — regime / day filter (`CRUSH_REGIME_MODE`, default `observe`)
+
+Morning features: overnight gap % (prev daily close → first spot, via
+`reqHistoricalData`), first-30-min range % (1-min spot closes), VIX level
+(+ day change when history is available; snapshot request, no line held),
+day of week. Combined into `regime_score ∈ [0,1]` with placeholder weights
+(gap .35 / range .35 / vix .30; gap normalized at 1%, range at 1.5%, VIX
+12→0 / 30→1). `REGIME_SNAPSHOT` + `REGIME` events journal features, score,
+and what was unavailable.
+- `observe` (default): log only, zero effect on trading.
+- `live`: score < `CRUSH_REGIME_MIN_SCORE` (0.35) → no new entries that day
+  (journaled `REGIME_GATE`); score ≥ `CRUSH_REGIME_HIGH_SCORE` (0.70) →
+  1.5× size, hard-capped at `CRUSH_REGIME_TRADE_CAP` ($300)/trade.
+
+### Always-on (default) / `--oneshot`
+
+`main.py` is now a supervisor: `run_session()` runs one full session
+(connect → chain → OI snapshot → trade → 15:55 flatten → 16:05 disconnect),
+then the supervisor sleeps — interruptibly (returns instantly on Ctrl+C /
+SIGTERM; 60s chunks otherwise) — until the next weekday 09:30 ET and runs
+the session fresh. NO_TRADE_DAY (weekend / past 16:05 / empty chain) just
+sleeps to the next session; the process never exits on its own.
+- `--oneshot` restores the old run-once-then-exit behavior (debugging).
+- Per-session hygiene: fresh `IB()` connect, chain discovery, OI snapshot,
+  `RiskManager`, and a new dated log file each session (old handlers are
+  dropped — no double logging).
+- Crash policy: unexpected exception → `SESSION_ERROR` journaled, 5-min
+  interruptible sleep, fresh session retry. `SystemExit` (paper-gate refusal
+  / connect exhaustion — needs a human or TWS) → `SESSION_ABORT`, sleep to
+  next session.
+- 15:55 flatten and 16:05 loop-end are unchanged within a session.
+- Task Scheduler/systemd is now optional: only needed as a watchdog to
+  restart the process after a VPS reboot (see README §4).
+
+### Journal schema additions (v3)
+
+Every `CANDIDATE`/`CLOSED` now carries `trigger` (`crush`/`wallbreak`) and
+`regime_score`. New events: `TIER_FILL`, `WB_ARM`, `WB_DISARM`, `WB_BREAK`,
+`TRAIL_ARM` (now with `runner_qty`), `REGIME_SNAPSHOT`, `REGIME`,
+`REGIME_GATE`, `SLEEP`, `DAEMON`, `DAEMON_STOP`, `SESSION_ERROR`,
+`SESSION_ABORT`.
+
+### Open work
+
+1. **Regime calibration:** weights are placeholders. Needs 20+ journaled
+   live days (regime_score + per-day P&L) before `CRUSH_REGIME_MODE=live`
+   is trustworthy. Analysis: correlate score terciles with day P&L and
+   10x-hit rate; refit weights; only then enable.
+2. **Wall-break measurement:** the sleeve is a faithful port of their
+   trigger, but its hit rate on OUR outright vehicle is unmeasured —
+   journal `trigger` split for a month, then decide keep/tune/kill.
+3. **Tier sizing:** 1/3-1/3-1/3 is a starting split; the journal's
+   `TIER_FILL` multiples will show whether T1 at 5x leaves too much on
+   the table vs pure 10x+trail.
+
+## Files
+
+| File | Role |
+|---|---|
+| `config.py` | Every parameter in one place; `CRUSH_*` env overrides; `active_window()` |
+| `pacer.py` | Token-bucket API pacer (3 snapshot/sub ops/sec, max 8 concurrent) |
+| `ibkr_conn.py` | Connect w/ exponential backoff, PAPER-ONLY gate, auto-reconnect |
+| `chain.py` | Chain discovery, OI snapshot, line-budgeted streaming, re-centering, wing sweeps, 1-min bars, AllLast flow |
+| `gex.py` | Net GEX / flip / magnets / walls from frozen OI × live IBKR gamma (incremental). **Bug fixed 2026-10-01: put_wall used min() instead of max()** |
+| `strategy.py` | 10X-OTM entry filter + 10x/trail exit state machine (pure functions). v3: tiered Position (T1 5x / T2 10x / runner trail), WallBreakState (dominant-wall arm/break) |
+| `regime.py` | **v3 Module C:** morning gap/VIX/range snapshot + regime_score (uncalibrated scaffolding) |
+| `orders.py` | Entries (limit + $0.05 chase cap), resting native TPs at fill (v3: T1 5x + T2 10x legs, or single 10x when tiers off), trail arming, dry-run simulation |
+| `risk.py` | Pre-trade checks, $200 sizing, 2%/day kill switch |
+| `main.py` | Wiring: connect → OI → stream → 5s loop → 15:55 flatten → shutdown |
+| `requirements.txt` | `ib_insync>=0.9.86`, `numpy==2.2.6`, `tzdata` (win32) |
+
+## Strategy parameters (v2 — 10X-OTM, measured)
+
+- Entry windows: **A 11:00–12:30 ET (40–55 pts OTM)** and **B 15:30–15:58 ET
+  (8–12 pts OTM)**; no entries at/after 15:50; flat 15:55.
+- Entry: ask $0.20–$0.50, |delta| < 0.15 (IBKR-sent Greeks), spread ≤ 25%,
+  **crush BAND: ask z-score ∈ [−2.0, −1.0]** vs trailing 30-min (deeper than
+  −2.0 measured worse than random — dying, not mispriced), ATM IV not spiking
+  (>1.3× trailing median = stand down), rank gamma/ask, min 10 min history.
+- Exits: **resting 10x limit TP placed AT FILL** (native order in live mode —
+  survives process death); on 10x touch → cancel TP, arm **30% giveback trail**
+  (floor ratchets at max(10x entry, peak × 0.70), ~20s confirmation on the 5s
+  loop); no per-trade stop by default (`STOP_PCT=0`; their measurement: removing
+  the −50% stop added $37,100/5 sessions); daily kill switch is the backstop.
+- Risk: $200/trade → qty = 200 // (ask×100); max 2 trades/day; 1 position;
+  −2% of NetLiq daily kill switch (flattens the open position).
+
+## Deliberately NOT ported from their system (and why)
+
+1. **$3,000/day premium cap / 10 contracts per ticket** — 15× the user's $200
+   budget. Kept $200/trade, max 2/day.
+2. **Hold-to-settlement for 10x+ positions** — keep the 15:55 hard flat.
+   Settlement mechanics add pin/expiry risk; the trail already captured
+   16.67x/10.6x exits in the sim vs 10x flat.
+3. **Max 3 open positions / 3 per window** — kept 1 position (their own
+   concentration warning: 91% of 5-day P&L from one day; 4/7 trades −100%).
+4. **WALL-BREAK strategy** — phase 2 (needs ladder-monotonicity sanity +
+   combo-tick machinery their v1.61 added).
+5. **ZDTE-3PM** — dead design (delta 0.15–0.35 + breakout confirmation),
+   verified twice (13 trades / 1 win / −$905.60; their v1.51: excludes 94% of
+   10x tickets).
+6. **ES→SPXW bridge** — gated off in their system; ES comes later.
+7. **|iv_z| ≤ 1.5 formulation** — kept our ATM-IV-ratio gate (same spirit,
+   already implemented).
+8. **Absolute $0.50 spread cap** — kept our relative 25% (tighter on cheap
+   tickets).
+9. **45-min warmup** — kept MIN_ASK_HISTORY=10 (theirs: min 15 samples).
+
+## Line-budget design (hard cap 100, target ≤75 sustained)
+
+IBKR's 100-line limit is shared across `reqMktData` and `reqTickByTickData`.
+Sustained layout:
+
+| Lines | Use | Priority |
+|---|---|---|
+| 1 | SPX underlying streaming | 0 (never shed) |
+| 42 | Active window: 5-pt strikes, spot ±50, both rights, streaming (`100,101,106,107`) | 1 |
+| 20 | Crush band: 55–95 pts OTM, 10-pt steps, both sides, both rights, streaming | 2 |
+| ≤10 | AllLast tick-by-tick: held position + top-3 candidates (flow/ISO context) | 3 (shed first) |
+| **63** | **sustained typical** | |
+| **≤73** | **peak with AllLast** | |
+
+- **OI is frozen intraday (verified):** one full-chain OI snapshot at startup via
+  paced one-shot snapshot requests (`genericTickList="101"`), then unsubscribe —
+  zero streaming lines held for wings. GEX = frozen morning OI × live gamma.
+- **Dynamic window:** every 15 min the active/crush sets re-center on spot;
+  entering strikes subscribe, departed ones unsubscribe (all pre-qualified from
+  the single morning `reqContractDetails`, so re-centering is subscribe-only).
+- **Wing quotes:** every 15 min a paced snapshot sweep of non-streaming strikes
+  within ±200 pts refreshes Greeks for GEX completeness. Wings never stream.
+- **Shedding order near the cap:** AllLast → crush band → active window → (never SPX).
+- **Compute:** IBKR-sent Greeks (`bidGreeks`/`askGreeks` from ticks 106/107) are
+  used directly — no per-tick Python Greek recomputation. The crush detector
+  aggregates streaming asks into 1-min bars; z-scores run on the trailing
+  30-min series. GEX recomputes a strike only when its gamma moved >5%, plus a
+  full refresh every 5 min.
+- **Pacer:** every snapshot, subscribe, and re-center op goes through the token
+  bucket (3/sec, max 8 concurrent) — sweeps and re-centering cannot trip pacing
+  violations.
+- **AllLast flow:** prints drained each loop, tick-rule signed vs the streaming
+  quote, 5-min signed volume kept per contract. It is a logged tiebreak in
+  ranking, not an entry gate (the backtest validated crush entries standalone).
+
+## Assumptions / risks
+
+1. **Paper gate = "DU" account prefix.** Standard for IBKR individual paper
+   accounts. If the user's paper account has a different prefix, the algo will
+   refuse to start — check `managedAccounts()` and adjust if needed.
+2. **Chain discovery via one `reqContractDetails`** on a bare SPXW 0DTE Option
+   contract. If IBKR returns an empty list (holiday, bad session), the algo
+   exits with NO_TRADE_DAY.
+3. **Exits are software-managed** (marketable limit orders), not native stop
+   orders. If the process dies mid-position, nothing protects it — run under
+   systemd with `Restart=on-failure`, and consider IBKR's own "cancel on
+   disconnect" safeguards as a backstop (not configured by this algo).
+4. **Snapshot fills are best-effort:** a snapshot that returns no Greeks/OI is
+   logged and skipped; the morning OI snapshot needs decent coverage or GEX
+   walls degrade (coverage % is logged).
+5. **Conflated quotes (~4/sec)** mean entry/exit prices can be ~250ms stale;
+   the strategy is bar-based and this was verified immaterial.
+6. **Dry-run simulates fills at the intended price** — it exercises the state
+   machine but says nothing about real fill quality. Expect slippage on real
+   (paper) fills, especially the 15:55 flatten.
+7. **Weekend/holiday handling** is minimal: no 0DTE chain → clean exit.
+8. **Target 10x is aspirational per-trade asymmetry**, not a daily guarantee:
+   verified base rate is ~2.4% of cheap tickets hitting 10x; the filter (crush +
+   IV-flat + wall proximity) is what must lift it. Paper-trade for weeks and
+   measure before trusting any expectancy claim.
