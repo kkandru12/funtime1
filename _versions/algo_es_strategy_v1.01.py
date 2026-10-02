@@ -32,8 +32,6 @@ def size_contracts(stop_pts: float) -> int:
     """Contracts from dollar risk. ES granularity ($50/pt) means 1 contract
     is the floor even when stop*risk exceeds RISK_PER_TRADE — the journal
     records the true dollar risk."""
-    if getattr(config, "FIXED_QTY", 0) > 0:      # [v1.03 FIXEDQTY] KK: 1 ES contract
-        return int(config.FIXED_QTY)
     if stop_pts <= 0:
         return 1
     return max(1, int(config.RISK_PER_TRADE // (stop_pts * config.FUT_MULT)))

@@ -17,6 +17,15 @@ v1.00 2026-10-01  First build.  Checks:
       synthetic M1 bars with full state without raising; any Signal fired
       has the stop and target on the correct sides of entry
   R9  FiveDMAStruct (5DMA + structure) runs on synthetic bars without raising
+
+v1.01 2026-10-01  [GLOBEXWIRE] R10: end-to-end dry run of algo_es main.run_session
+      against a fake MT5 terminal (algo_es/sim_globex_test.py): a strategy signal
+      becomes GLOBEX_SIGNAL -> CANDIDATE -> SIM_ENTER -> CLOSED target-2; a signal
+      with the stop on the wrong side is rejected; all 6 real strategies run in
+      the loop without raising.  Verified to FAIL against the unwired v1.01 main.py.
+v1.02 2026-10-01  [FIXEDQTY] R11: ES sizing is exactly ES_FIXED_QTY (1) for every
+      stop distance incl. overnight halving; 0DTE sizing is exactly CRUSH_FIXED_QTY
+      (10) for every premium incl. regime size-up.
 """
 import ast, base64, datetime as dt, math, os, random, re, shutil, subprocess, sys, tempfile
 
@@ -209,6 +218,36 @@ try:
     check("R9 FiveDMAStruct runs", True, "signals %d" % n)
 except Exception as e:
     check("R9 FiveDMAStruct runs", False, "%s: %s" % (type(e).__name__, e))
+
+# R10 end-to-end Globex sleeve wiring (fake MT5, dry run) ------------------
+try:
+    import numpy  # noqa: F401
+    out = subprocess.run([sys.executable, "sim_globex_test.py"], cwd=os.path.join(HERE, "algo_es"),
+                         capture_output=True, text=True, timeout=300)
+    tail = [l for l in out.stdout.splitlines() if l.startswith(("FAIL", "SIM"))]
+    check("R10 Globex sleeve wired end-to-end (fake MT5 dry run)", out.returncode == 0,
+          "; ".join(tail[-4:]) or out.stderr.strip()[-300:])
+except ImportError:
+    check("R10 Globex sleeve wired end-to-end (fake MT5 dry run)", False, "numpy not installed")
+
+# R11 fixed contract sizes ---------------------------------------------------
+r11 = []
+code_es = ("import config,strategy;"
+           "print(sorted({strategy.size_contracts(x) for x in (0,0.5,1,2,4,10,40)}),"
+           "max(1, strategy.size_contracts(1)//2))")
+o = subprocess.run([sys.executable, "-c", code_es], cwd=os.path.join(HERE, "algo_es"),
+                   capture_output=True, text=True)
+if o.stdout.strip() != "[1] 1":
+    r11.append("ES sizes %r %s" % (o.stdout.strip(), o.stderr.strip()[-150:]))
+code_od = ("import sys,types;sys.modules.setdefault('ib_insync',types.ModuleType('ib_insync'));"
+           "import config,risk;r=risk.RiskManager.__new__(risk.RiskManager);r.size_mult=1.0;"
+           "a={r.size_qty(x) for x in (0.05,0.2,0.35,0.5,2.0)};r.size_mult=1.5;"
+           "a|={r.size_qty(x) for x in (0.05,0.2,0.5)};print(sorted(a))")
+o = subprocess.run([sys.executable, "-c", code_od], cwd=os.path.join(HERE, "algo"),
+                   capture_output=True, text=True)
+if o.stdout.strip() != "[10]":
+    r11.append("0DTE sizes %r %s" % (o.stdout.strip(), o.stderr.strip()[-150:]))
+check("R11 fixed sizes: ES 1 contract, 0DTE 10 contracts", not r11, "; ".join(r11))
 
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

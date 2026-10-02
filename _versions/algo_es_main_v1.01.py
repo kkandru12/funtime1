@@ -17,11 +17,6 @@ Globex: Sun 18:00 -> Fri 17:00 ET. Always-on: sleeps until the next session
 instead of exiting. Ctrl+C / SIGTERM always exits promptly (flatten first).
 Pass --oneshot to run a single session then exit (debugging).
 
-Globex sleeve [v1.02 GLOBEXWIRE]: the ported Apex strategies in
-strategies/ (VOB, SQUEEZE, BB-2C, DMA-520, SMA-CROSS, 5DMA-STRUCT) run via
-globex.py on every closed MT5 M1 bar, all sessions. They enter only when the
-GEX sleeves have no candidate, the account is flat and the risk gates pass.
-
 Default is DRY-RUN (no orders). Pass --live to transmit to the MT5 demo
 account (--live = MT5 demo only; there is no live-money path).
 """
@@ -45,7 +40,6 @@ from strategy import (evaluate_fade, evaluate_breakout, WallBreakState,
 from mt5_data import MT5DataFeed
 from mt5_exec import MT5Executor
 from risk import RiskManager
-from globex import GlobexSleeve
 
 ET = ZoneInfo("America/New_York")
 log = logging.getLogger("algo_es")
@@ -160,12 +154,6 @@ async def run_session(dry_run: bool):
 
     wb = WallBreakState()
     pa = OvernightPA()
-    glx = GlobexSleeve(emit) if config.GLOBEX_ENABLED else None
-    if glx:
-        await glx.refresh(mt5data, force=True)
-        await emit("GLOBEX_SLEEVE", {"strategies": list(glx.strats),
-                                     "all_hours": config.GLOBEX_ALL_HOURS,
-                                     "qty": config.GLOBEX_QTY})
     closes: deque = deque(maxlen=5)   # ES M1 closes from MT5 bars (breakout)
     position: Position | None = None
     pending_entry = False
@@ -204,21 +192,6 @@ async def run_session(dry_run: bool):
         gex_ok, gex_why = levels.gex_ok()
         if gex_ok:
             gex.refresh()
-
-        # ---- Globex sleeve: every strategy sees every closed M1 bar ----
-        glx_sigs = []
-        if glx:
-            await glx.refresh(mt5data)
-            glx_sigs = glx.step(now, spot, gex if gex_ok else None)
-            for gs in glx_sigs:
-                sg = gs["signal"]
-                await emit("GLOBEX_SIGNAL", {
-                    "strategy": gs["name"], "side": sg.side,
-                    "entry": round(float(sg.entry_px), 2),
-                    "stop": round(float(sg.stop_px), 2),
-                    "target": round(float(sg.target_px), 2),
-                    "reason": str(getattr(sg, "reason", ""))[:160],
-                    "flat": position is None})
         overnight = config.is_pa_overnight(now)   # local clock = authority
         bridge_sess = levels.session()
         if not sess_mismatch_warned and bridge_sess:
@@ -241,7 +214,6 @@ async def run_session(dry_run: bool):
                        and config.FLATTEN_BEFORE_HALT)
 
         # ---- position management ----
-        held_trigger = position.trigger if position else None
         if position and spot:
             if position.simulated:
                 action = position.update(now, bid, ask,
@@ -309,11 +281,7 @@ async def run_session(dry_run: bool):
                                       "pnl": round(pnl, 2)})
                 position = None
 
-        if held_trigger and position is None and glx:
-            glx.on_position_closed(held_trigger)
-
         # ---- entries ----
-        glx_taken = None
         if not position and not pending_entry and spot and not flatten_now:
             ok, why = risk.can_enter(now, False)
             if ok:
@@ -344,23 +312,12 @@ async def run_session(dry_run: bool):
                         if cand is None:
                             cand = evaluate_fade(now, spot, gex, touches)
                             trigger = "fade"
-                # Globex sleeve: only when no GEX/PA candidate this pass
-                if cand is None and glx_sigs:
-                    for gs in glx_sigs:
-                        c = glx.to_candidate(gs["name"], gs["signal"], spot,
-                                             gex if gex_ok else None)
-                        if c:
-                            cand, trigger, glx_taken = c, c["trigger"], gs["name"]
-                            break
-                        await emit("GLOBEX_REJECT", {
-                            "strategy": gs["name"], "spot": round(spot, 2),
-                            "why": "stop/target already on the wrong side of price"})
                 if cand:
                     await emit("CANDIDATE", {
                         k: cand[k] for k in
                         ("trigger", "sleeve", "side", "wall", "qty",
                          "risk_usd", "spot", "regime",
-                         "stop_pts", "overnight", "strategy") if k in cand})
+                         "stop_pts", "overnight") if k in cand})
                     pending_entry = True
                     try:
                         position = await om.enter(cand, now)
@@ -368,8 +325,6 @@ async def run_session(dry_run: bool):
                             await emit("NO_FILL", {
                                 "trigger": trigger,
                                 "wall": cand.get("wall")})
-                            if glx_taken and glx:
-                                glx.on_not_taken(glx_taken)
                         elif trigger == "fade":
                             touches[round(cand["wall"])] = \
                                 touches.get(round(cand["wall"]), 0) + 1
@@ -381,12 +336,6 @@ async def run_session(dry_run: bool):
                                             if overnight else "no entries"})
             elif why not in ("session",):
                 await emit("RISK_BLOCK", {"reason": why})
-
-        # signals that were not taken (in a position, blocked, or another won)
-        if glx:
-            for gs in glx_sigs:
-                if gs["name"] != glx_taken:
-                    glx.on_not_taken(gs["name"])
 
         last_gex_ok = gex_ok
 

@@ -110,7 +110,7 @@ class MT5DataFeed:
         rates = await asyncio.to_thread(
             self.mt5.copy_rates_from_pos,
             self.symbol, self.mt5.TIMEFRAME_M1, 0, n)
-        if not rates:
+        if rates is None or len(rates) == 0:   # [v1.02] numpy array: "not rates" raises
             log.warning("MT5 copy_rates_from_pos returned nothing")
             return
         added = 0
@@ -130,6 +130,38 @@ class MT5DataFeed:
         if added:
             log.debug("MT5 bars: +%d, last=%s", added,
                       self.bars[-1][0].strftime("%H:%M %Z"))
+
+    async def rates(self, tf: str, n: int):
+        """[v1.02 GLOBEXWIRE] Last n bars of timeframe tf ("m1","m15","h1",
+        "h4","d1") as dicts {time(ET), open, high, low, close, volume},
+        oldest -> newest.  The LAST element is the FORMING bar (MT5 pos 0);
+        callers that need closed bars drop it.  [] when unavailable."""
+        if not self.ok:
+            return []
+        tf_map = {"m1": "TIMEFRAME_M1", "m15": "TIMEFRAME_M15",
+                  "h1": "TIMEFRAME_H1", "h4": "TIMEFRAME_H4",
+                  "d1": "TIMEFRAME_D1"}
+        const = getattr(self.mt5, tf_map[tf], None)
+        if const is None:
+            return []
+        try:
+            rates = await asyncio.to_thread(
+                self.mt5.copy_rates_from_pos, self.symbol, const, 0, n)
+        except Exception as e:  # noqa: BLE001
+            log.warning("MT5 rates %s failed: %s", tf, e)
+            return []
+        if rates is None or len(rates) == 0:
+            return []
+        out = []
+        for r in rates:
+            out.append({
+                "time": datetime.fromtimestamp(
+                    float(r["time"]), tz=self._bar_tz).astimezone(ET),
+                "open": float(r["open"]), "high": float(r["high"]),
+                "low": float(r["low"]), "close": float(r["close"]),
+                "volume": float(r["tick_volume"]) if "tick_volume" in
+                (r.dtype.names or ()) else 0.0})
+        return out
 
     def bars_since(self, start_et: datetime):
         """All M1 bars with bar time >= start_et (ascending)."""

@@ -143,6 +143,9 @@ REGIME_SIZE_MULT = _f("CRUSH_REGIME_SIZE_MULT", 1.5)
 REGIME_TRADE_CAP = _f("CRUSH_REGIME_TRADE_CAP", 300.0)  # hard $ cap per trade, live mode
 
 # ---------------- risk ----------------
+# [v1.03 FIXEDQTY] KK: every 0DTE order is exactly 10 contracts.  >0 overrides
+# the $-risk sizing (RISK_PER_TRADE // premium) and the regime size-up.
+FIXED_QTY = _i("CRUSH_FIXED_QTY", 10)
 RISK_PER_TRADE = _f("CRUSH_RISK_PER_TRADE", 200.0)  # $200 -> 10x = $2,000 target
 MAX_TRADES_PER_DAY = _i("CRUSH_MAX_TRADES_PER_DAY", 2)
 DAILY_STOP_PCT = _f("CRUSH_DAILY_STOP_PCT", 0.02)   # -2% of NetLiq -> kill switch, flatten

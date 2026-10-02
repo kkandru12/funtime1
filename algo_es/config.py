@@ -208,3 +208,22 @@ ACCOUNT_FALLBACK = _f("ES_ACCOUNT_FALLBACK", 10000.0)
 LOOP_CADENCE_SEC = _f("ES_LOOP_CADENCE_SEC", 5)
 HEARTBEAT_SEC = _i("ES_HEARTBEAT_SEC", 60)
 LOG_DIR = _s("ES_LOG_DIR", "logs")
+
+
+# ---------------- Globex strategy sleeve [v1.02 GLOBEXWIRE] ----------------
+# The five ported Apex Globex strategies (+ 5DMA-structure) wired into the
+# main loop via globex.py.  They only enter when no GEX sleeve candidate
+# exists and the account is flat (one position at a time, same risk gates).
+# [v1.03 FIXEDQTY] KK: every ES trade is exactly 1 contract.  >0 overrides the
+# $-risk sizing in strategy.size_contracts (overnight halving keeps it at 1).
+FIXED_QTY = _i("ES_FIXED_QTY", 1)
+
+GLOBEX_ENABLED = _b("ES_GLOBEX_ENABLED", True)
+GLOBEX_STRATEGIES = _s("ES_GLOBEX_STRATEGIES",
+                       "vob,squeeze,bb2c,dma520,smacross,fivedma")
+GLOBEX_QTY = _i("ES_GLOBEX_QTY", 1)
+# True = run around the clock (KK: Globex strategies run all the time).
+# False = Apex rule: stand aside 09:30-13:00 ET (the wall cycles' window).
+GLOBEX_ALL_HOURS = _b("ES_GLOBEX_ALL_HOURS", True)
+GLOBEX_REFRESH_SEC = _f("ES_GLOBEX_REFRESH_SEC", 30)
+

@@ -37,8 +37,6 @@ class RiskManager:
             self.killed = False
 
     def size_qty(self, ask: float) -> int:
-        if getattr(config, "FIXED_QTY", 0) > 0:   # [v1.03 FIXEDQTY] KK: 10 contracts
-            return int(config.FIXED_QTY)
         base = max(int(config.RISK_PER_TRADE // (ask * 100)), 1)
         if self.size_mult > 1.0:
             # regime size-up, hard-capped per trade
