@@ -200,38 +200,27 @@ class OrderManager:
         return pos
 
     async def place_spread_cap(self, pos):
-        """[v1.06 HALF10X] Native resting combo SELLs, day orders:
-        tier 2 = HALF the spreads at 10 x debit (the real 10X lock),
-        tier 0 = the runner at the cap (95% of width).
-        Fills land in _tier_done for main.py's live tier path."""
-        legs = []
-        if pos.t2_qty > 0:
-            legs.append((2, pos.t2_qty, pos.lock_px))
-        if pos.runner_qty > 0:
-            legs.append((0, pos.runner_qty, pos.cap_px))
-        info = dict(key=pos.key, vehicle="spread",
-                    legs=[{"tier": t, "qty": q, "px": p} for t, q, p in legs])
+        """Native resting combo SELL at the cap (95% of width), day order."""
         if self.dry_run:
-            await self.emit("SIM_RESTING_TP", info)
+            await self.emit("SIM_RESTING_TP", dict(key=pos.key, qty=pos.qty,
+                                                   px=pos.cap_px, vehicle="spread",
+                                                   lock_10x=pos.lock_px))
             return
         bag = self._bag(pos.long_key, pos.short_key)
-        trades = []
-        for tier, qty, px in legs:
-            order = LimitOrder("SELL", qty, px)
-            order.account = self.account
-            order.tif = "DAY"
-            trade = self.ib.placeOrder(bag, order)
-            self.open_trades.append(trade)
-            trades.append(trade)
+        order = LimitOrder("SELL", pos.qty, pos.cap_px)
+        order.account = self.account
+        order.tif = "DAY"
+        trade = self.ib.placeOrder(bag, order)
+        self.open_trades.append(trade)
 
-            def _done(t, *_, tier=tier, px=px):
-                st = t.orderStatus
-                if st.filled:
-                    self._tier_done.setdefault(id(pos), []).append(
-                        (tier, int(st.filled), float(st.avgFillPrice or px)))
-            trade.filledEvent += _done
-        self._tp_order[id(pos)] = trades
-        await self.emit("RESTING_TP", info)
+        def _done(t, *_):
+            st = t.orderStatus
+            if st.filled:
+                self._tp_done[id(pos)] = (int(st.filled), float(st.avgFillPrice or pos.cap_px))
+        trade.filledEvent += _done
+        self._tp_order[id(pos)] = [trade]
+        await self.emit("RESTING_TP", dict(key=pos.key, qty=pos.qty, px=pos.cap_px,
+                                           vehicle="spread", lock_10x=pos.lock_px))
 
     async def _sell_spread(self, pos, qty: int, reason: str):
         px = round(max(self.mark(pos), 0.05), 2)
@@ -331,9 +320,8 @@ class OrderManager:
 
     async def arm_trail(self, pos: Position, touch_bid: float):
         """10x touched: cancel the resting TP(s), switch remainder to the
-        30% giveback trail.  [v1.06] Spreads keep the runner's resting cap."""
-        if not getattr(pos, "is_spread", False):
-            self._cancel_resting(pos)
+        30% giveback trail."""
+        self._cancel_resting(pos)
         pos.arm_trail(touch_bid)
         pos.trail_arm_emitted = True
         await self.emit("TRAIL_ARM", dict(key=pos.key, touch_bid=round(touch_bid, 2),

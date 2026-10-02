@@ -36,6 +36,8 @@ v1.04 2026-10-01  [RESILIENT] R13: outages. 0DTE (algo/sim_outage_test.py O1-O3)
       MT5 quotes vanish -> reconnect, loop survives. Supervisor restarts a
       component forever (was: gave up after 5). Bridge rebuilds subscriptions
       after an IBKR reconnect. O1/O2 and D verified to FAIL on the pre-v1.05 code.
+v1.05 2026-10-02  [HALF10X] R12 adds S9: half the spreads sold at exactly 10X by
+      the resting order, the runner exits separately; nothing sold before 10X.
 """
 import ast, base64, datetime as dt, math, os, random, re, shutil, subprocess, sys, tempfile
 

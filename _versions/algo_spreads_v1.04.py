@@ -1,18 +1,4 @@
-"""0DTE 10-point DEBIT SPREADS: half at 10X, runner trails  [v1.06 HALF10X]
-
-v1.06 2026-10-02 [HALF10X] KK: "Sell half at 10X and trail the rest."
-  The v1.04 software-only 10X lock leaked below 10X on the Databento replay
-  (Sep 21-25: two spreads touched 10X and were sold at 8.3X / 9.6X because the
-  mark gapped through the floor between checks).  Now:
-    - at fill, a NATIVE resting combo SELL for HALF the spreads at 10 x debit
-      (the exchange fills it the moment 10X trades -- a real lock)
-    - the other half (runner) has a native resting SELL at the cap (95% of
-      width) and, once the half has filled, trails: floor = max(10X,
-      peak x 0.70); sold when the mark closes at/below the floor
-    - before 10X: no stop (unchanged); 15:55 flat (unchanged)
-  Odd qty: the half is qty // 2, the runner gets the remainder.
-
---- v1.04 2026-10-01 [SPREAD10X] (superseded exits, kept for history) ---
+"""0DTE 10-point DEBIT SPREADS with a locked 10X  [v1.04 SPREAD10X]
 
 KK (2026-10-01): "buy 0DTE 10 point spreads at the lowest premium like 0DTE
 with same 10X or more with 10X locked".
@@ -115,11 +101,10 @@ def mark(pos, quote) -> float:
 
 
 class SpreadPosition:
-    """Long debit spread. [v1.06 HALF10X] half sold at 10X by a resting order,
-    runner trails above a 10X floor. Exposes what main.py's loop reads from
-    Position (tier interface: tier 2 = the 10X half, tier 0 = runner cap)."""
+    """Long debit spread with a 10X lock. Exposes the attributes main.py's
+    loop reads from Position, so the loop drives both vehicles."""
     is_spread = True
-    tiered_effective = True
+    tiered_effective = False
 
     def __init__(self, sp: dict, qty: int, debit: float, entry_time: str,
                  simulated: bool = True):
@@ -128,9 +113,7 @@ class SpreadPosition:
         self.strike, self.right = sp.get("strike"), sp.get("right")
         self.width = sp["width"]
         self.qty = qty
-        self.t1_qty = 0
-        self.t2_qty = qty // 2                 # the 10X half
-        self.runner_qty = qty - self.t2_qty
+        self.runner_qty = qty
         self.entry_px = debit
         self.wall = sp.get("wall")
         self.window = sp.get("window")
@@ -139,7 +122,6 @@ class SpreadPosition:
         self.entry_time = entry_time
         self.simulated = simulated
         self.lock_px = _tick05(debit * config.SPREAD_LOCK_MULT)
-        self.tp2_px = self.lock_px
         self.cap_px = _tick05(min(self.width * config.SPREAD_CAP_PCT,
                                   self.width - 0.05))
         self.tp_px = self.cap_px
@@ -152,41 +134,6 @@ class SpreadPosition:
         self.max_bid = debit
         self.min_bid = debit
         self.realized = 0.0
-        self.pending_tier_fills = []
-
-    # -- the 10X half (dry-run: simulated; live: apply_tier_fill) --
-    def _half_filled(self, fq: int, px: float):
-        fq = min(int(fq), int(self.t2_qty))
-        if fq <= 0:
-            return 0.0
-        pnl = self.on_close(fq, px)
-        self.qty -= fq
-        self.t2_qty -= fq
-        self.pending_tier_fills.append((2, fq, px, pnl))
-        if self.t2_qty == 0:
-            self.arm_trail(px)
-        return pnl
-
-    def apply_tier_fill(self, tier: int, fq: int, px: float) -> float:
-        if tier != 2:
-            return 0.0
-        return self._half_filled(fq, px)   # main.py journals live fills itself
-
-    def arm_trail(self, touch: float):
-        if self.state == "TRAIL":
-            return
-        self.state = "TRAIL"
-        self.tp_touched = True
-        self.trail_peak = max(touch, self.lock_px)
-        self.trail_floor = max(self.lock_px,
-                               self.trail_peak * (1 - config.TRAIL_GIVEBACK))
-        log.info("10X half done %s; runner x%d trails floor=%.2f", self.key,
-                 self.qty, self.trail_floor)
-
-    def drain_tier_fills(self):
-        out = self.pending_tier_fills
-        self.pending_tier_fills = []
-        return out
 
     def update(self, now_et: datetime, value: float, spot: float = None) -> str:
         if (now_et.hour, now_et.minute) >= config.FLAT_TIME:
@@ -195,20 +142,19 @@ class SpreadPosition:
             return HOLD
         self.max_bid = max(self.max_bid, value)
         self.min_bid = min(self.min_bid, value)
+        if self.simulated and value >= self.cap_px:
+            return CAP_FILL                     # dry-run: the resting cap fills
         if self.state == "PRE_LOCK":
-            if value >= self.lock_px:
-                if self.simulated:
-                    # resting limit at 10X fills at 10X (or better on a gap)
-                    self._half_filled(self.t2_qty, self.lock_px)
-                else:
-                    self.arm_trail(value)   # live: the exchange fills the half
-                if self.qty <= 0:
-                    return HOLD
-            else:
-                return HOLD
-        if self.simulated and value >= self.cap_px and self.qty > 0:
-            return CAP_FILL                     # dry-run: runner's resting cap
-        # TRAIL: ratchet up, never below 10X
+            if value >= self.lock_px:           # 10X reached -> lock it
+                self.state = "TRAIL"
+                self.tp_touched = True
+                self.trail_peak = value
+                self.trail_floor = max(self.lock_px,
+                                       value * (1 - config.TRAIL_GIVEBACK))
+                log.info("10X LOCK %s value=%.2f floor=%.2f", self.key,
+                         value, self.trail_floor)
+            return HOLD
+        # TRAIL (locked): ratchet up, never below 10X
         if value > self.trail_peak:
             self.trail_peak = value
             self.trail_floor = max(self.lock_px,
@@ -233,6 +179,9 @@ class SpreadPosition:
             return max(0, int((now_et - t0).total_seconds() // 60))
         except Exception:
             return -1
+
+    def drain_tier_fills(self):
+        return []
 
     @property
     def peak_multiple(self):

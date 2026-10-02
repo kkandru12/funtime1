@@ -14,6 +14,8 @@ Called by ../regression_funtime.py (R12).  Exit 0 = pass.
   S6 naked mode    : CRUSH_VEHICLE=naked => single-option SIM_ENTER (no spread)
   S7 size          : every entry is 10 contracts
   S8 no exit before 10X: value 0.30 -> 2.9 -> 0.5 => no close until 15:55 flat
+  S9 [v1.06 HALF10X] in S1-S3 HALF (5) is sold at exactly 10X (3.00) by the
+     resting order (TIER_FILL tier 2), the runner (5) exits separately
 """
 import asyncio, os, sys, tempfile
 from datetime import datetime
@@ -174,6 +176,17 @@ e8 = run(FakeLevels([cand("6720C", 0.40)], s8, flat_at=7))
 c = ev(e8, "CLOSED")
 if not c or c[0]["reason"] != "15:55-flat":
     fails.append("S8 expected only the 15:55 flat (no stop before 10X), got %s" % c[:1])
+
+# S9 -------------------------------------------------------------------------
+for name, evs in (("S1", e1), ("S2", e2), ("S3", e3)):
+    tf = ev(evs, "TIER_FILL")
+    if not tf or tf[0].get("qty") != 5 or abs(tf[0].get("px", 0) - 3.0) > 1e-9:
+        fails.append("S9 %s: expected half (5) sold at 3.00 = 10X, got %s" % (name, tf[:1]))
+    x = ev(evs, "SIM_EXIT")
+    if not x or x[0].get("qty") != 5:
+        fails.append("S9 %s: runner exit should be the other 5, got %s" % (name, x[:1]))
+tf8 = ev(e8, "TIER_FILL")
+if tf8: fails.append("S9 S8: sold a half without reaching 10X: %s" % tf8)
 
 for f in fails:
     print("FAIL", f)
