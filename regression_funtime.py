@@ -482,5 +482,49 @@ got = (o.stdout.strip().splitlines() or ["?"])[-1]
 check("R18 MT5 M1 bars stored closed and final (no frozen partial bar)",
       got == "[60, 120] (9.0, -5.0)", "got %r %s" % (got, o.stderr.strip()[-200:]))
 
+# R19 dashboard: read-only, serves state from files, no broker imports ------
+r19 = []
+src19 = open(os.path.join(HERE, "dashboard", "server.py"), encoding="utf-8").read()
+for bad in ("ib_insync", "MetaTrader5", "placeOrder", "order_send"):
+    if bad in src19:
+        r19.append("server.py references %s" % bad)
+code19 = r"""
+import os, sys, json, tempfile, threading, urllib.request, urllib.error
+sh, lg = tempfile.mkdtemp(), tempfile.mkdtemp()
+os.environ.update(SHARED_DIR=sh, DASH_LOG_DIR=lg, DASH_HOST='127.0.0.1', DASH_PORT='0')
+json.dump({'session': 'ny', 'spx': 6700.0, 'chain_frame': {'x': 1}}, open(os.path.join(sh, 'levels.json'), 'w'))
+json.dump({'spot': 6700, 'strikes': [6690, 6700], 'call': [1, 2], 'put': [1, 1], 'net': [0, 1]},
+          open(os.path.join(sh, 'gex_profile.json'), 'w'))
+json.dump({'es': 6750, 'position': {'side': 'long'}}, open(os.path.join(lg, 'status_es.json'), 'w'))
+sys.path.insert(0, 'dashboard')
+import server
+srv = server.ThreadingHTTPServer(('127.0.0.1', 0), server.H)
+threading.Thread(target=srv.serve_forever, daemon=True).start()
+base = 'http://127.0.0.1:%d' % srv.server_address[1]
+res = []
+res.append(urllib.request.urlopen(base + '/').status)
+st = json.load(urllib.request.urlopen(base + '/api/state'))
+res.append(int(st['levels']['spx'] == 6700.0 and 'chain_frame' not in st['levels']
+               and st['profile']['strikes'] == [6690, 6700] and st['es']['position']['side'] == 'long'))
+for m in ('POST', 'PUT', 'DELETE'):
+    try:
+        urllib.request.urlopen(urllib.request.Request(base + '/api/state', data=b'x', method=m))
+        res.append('open')
+    except urllib.error.HTTPError as e:
+        res.append(e.code)
+try:
+    urllib.request.urlopen(base + '/../.env'); res.append('open')
+except urllib.error.HTTPError as e:
+    res.append(e.code)
+srv.shutdown()
+print(res)
+"""
+o = subprocess.run([sys.executable, "-c", code19], cwd=HERE, capture_output=True, text=True, timeout=60)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+if got != "[200, 1, 405, 405, 405, 404]":
+    r19.append("server behaviour %r %s" % (got, o.stderr.strip()[-200:]))
+check("R19 dashboard read-only: GET works from files, writes 405, no file paths, no broker code",
+      not r19, "; ".join(r19))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

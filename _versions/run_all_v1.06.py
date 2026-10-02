@@ -33,8 +33,6 @@ COMPONENTS = [
     # flag (passing it made both exit with code 2 on the first live start)
     ("algo", ["algo/main.py", ["--dry-run"] if DRY else []]),
     ("algo_es", ["algo_es/main.py", ["--dry-run"] if DRY else []]),
-    # [v1.08 DASH] read-only dashboard: no broker connections, GET only
-    ("dashboard", ["dashboard/server.py", []]),
 ]
 
 BACKOFF_START, BACKOFF_MAX, HEALTHY_SEC = 5, 60, 600

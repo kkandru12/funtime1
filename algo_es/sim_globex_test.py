@@ -153,6 +153,14 @@ if not ent or ent[0].get("trigger") != "globex_smacross":
 if not closed or closed[0].get("reason") != "target-2" or closed[0].get("pnl", 0) <= 0:
     fails.append("A: expected CLOSED target-2 with profit, got %s" % closed[:1])
 
+st_es = os.path.join(os.environ["ES_LOG_DIR"], "status_es.json")
+if not os.path.exists(st_es):
+    fails.append("A: status_es.json not written (dashboard)")
+else:
+    import json as _json
+    if "position" not in _json.load(open(st_es)):
+        fails.append("A: status_es.json has no position field")
+
 # B ------------------------------------------------------------------------
 strategies.STRATEGIES["smacross"] = stub_class(+5, +20)   # stop ABOVE a long
 evB = asyncio.run(run("smacross", loops=12))

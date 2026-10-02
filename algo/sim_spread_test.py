@@ -126,6 +126,11 @@ else:
 if not ev(e1, "TRAIL_ARM"):
     fails.append("S1 no TRAIL_ARM (10X lock) event")
 
+import json as _json
+_st = os.path.join(os.environ["CRUSH_LOG_DIR"], "status_0dte.json")
+if not os.path.exists(_st) or "position" not in _json.load(open(_st)):
+    fails.append("S1 status_0dte.json not written (dashboard)")
+
 # S2 ---------------------------------------------------------------------
 s2 = [entry, entry, leg(5, 5.1, 0.05, 0.1), leg(9.70, 9.8, 0.05, 0.10)]
 e2 = run(FakeLevels([cand("6720C", 0.40)], s2))

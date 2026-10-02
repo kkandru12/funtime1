@@ -1,8 +1,5 @@
 """ES futures GEX algo - always-on main loop (CONSUMER mode).
 
-v1.08 2026-10-02 [DASHSTATUS] every 5 s writes logs/status_es.json (price,
-    position, stop/target, open P&L, day P&L) for the read-only dashboard.
-
 The bridge (gex_bridge/) is the account's single IBKR streaming connection.
 This process holds ZERO IBKR market-data lines and makes ZERO IBKR calls:
   - GEX walls/zones/confidence/regime/flip + basis: ../shared/levels.json
@@ -80,22 +77,6 @@ def setup_logging(log_dir: str):
     root.addHandler(ch)
     _log_handlers = [fh, ch]
     return path
-
-
-def write_status(name: str, doc: dict):
-    """[v1.08 DASHSTATUS] <LOG_DIR>/<name> for the read-only dashboard.
-    Atomic (tmp + replace) and fully guarded: any failure is ignored, it can
-    never affect trading. Nothing in the trading path reads this file."""
-    try:
-        import json as _j, os as _o, tempfile as _t
-        d = config.LOG_DIR
-        _o.makedirs(d, exist_ok=True)
-        fd, tmp = _t.mkstemp(prefix=".status-", suffix=".tmp", dir=d)
-        with _o.fdopen(fd, "w") as f:
-            _j.dump(doc, f, default=str)
-        _o.replace(tmp, _o.path.join(d, name))
-    except Exception:  # noqa: BLE001
-        pass
 
 
 async def emit(event: str, data: dict):
@@ -193,7 +174,6 @@ async def run_session(dry_run: bool):
     pending_entry = False
     touches: dict[int, int] = {}      # fade touches per wall per day
     last_beat = datetime.now(ET)
-    last_status = datetime.min.replace(tzinfo=ET)
     last_quote_ok = datetime.now(ET)
     last_reconnect = datetime.min.replace(tzinfo=ET)   # first retry: no wait
     mt5_backoff = 30
@@ -432,28 +412,6 @@ async def run_session(dry_run: bool):
                     glx.on_not_taken(gs["name"])
 
         last_gex_ok = gex_ok
-
-        # ---- [v1.08 DASHSTATUS] status file for the dashboard (every 5 s) ----
-        if (now - last_status).total_seconds() >= 5:
-            last_status = now
-            pd = None
-            if position:
-                upnl = ((bid if position.side == "long" else ask) - position.entry_px) \
-                    * position.dir * config.FUT_MULT * position.qty
-                pd = {"side": position.side, "qty": position.qty,
-                      "entry": position.entry_px, "stop": position.stop_px,
-                      "target": position.tp2_px or position.tp1_px,
-                      "trigger": position.trigger, "entry_time": position.entry_time,
-                      "upnl": round(upnl, 2), "simulated": position.simulated}
-            write_status("status_es.json", {
-                "ts": now.isoformat(), "mode": "dry-run" if dry_run else "live-mt5-demo",
-                "es": round(spot, 2), "bid": bid, "ask": ask,
-                "session": "overnight" if overnight else "ny",
-                "gex_ok": gex_ok, "regime": gex.regime,
-                "call_wall": gex.call_wall, "put_wall": gex.put_wall, "flip": gex.flip,
-                "position": pd, "day_pnl": round(risk.daily_pnl, 2),
-                "trades": risk.trades_today, "killed": risk.killed,
-                "globex": list(glx.strats) if glx else []})
 
         # ---- heartbeat ----
         if (now - last_beat).total_seconds() >= config.HEARTBEAT_SEC:

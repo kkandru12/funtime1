@@ -1,8 +1,5 @@
 """GEX levels via the StableWall estimator (ES edition).
 
-v1.08 2026-10-02 [DASHPROFILE] evaluate() also keeps self.profile (smoothed
-    call/put/net $B per strike) for the read-only dashboard. No effect on walls.
-
 WHY NOT NAIVE ARGMAX (diagnosis of the old wall-bounce):
   1. argmax over instantaneous gamma flickers — two adjacent strikes with
      similar GEX swap the lead every tick (bid/ask bounce -> model gamma
@@ -168,13 +165,6 @@ class GexState:
                 log.info("REGIME flip -> %s (net %+.2f $B)",
                          {1: "+", -1: "-", 0: "flat"}[sign], self.net_total)
         self.regime = {1: "+", -1: "-", 0: "flat"}[self._regime_sign]
-
-        # [v1.08 DASHPROFILE] keep the per-strike profile for the dashboard
-        # (read-only consumer; nothing in the trading path reads this)
-        self.profile = {"ts": ts, "spot": spot, "strikes": strikes,
-                        "call": [round(sm["C"].get(k, 0.0), 4) for k in strikes],
-                        "put": [round(sm["P"].get(k, 0.0), 4) for k in strikes],
-                        "net": [round(net[k], 4) for k in strikes]}
 
         payload = self.walls_payload(ts)
         log.info("WALLS eval #%d: %s", self.evals, payload)

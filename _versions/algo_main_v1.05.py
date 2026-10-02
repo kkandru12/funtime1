@@ -1,9 +1,5 @@
 """0DTE SPXW crush-entry algo - main loop (CONSUMER mode).
 
-v1.08 2026-10-02 [DASHSTATUS] every 5 s writes logs/status_0dte.json (SPX,
-    candidates, position, mark / multiple / 10X lock, P&L) for the read-only
-    dashboard.
-
 The bridge (gex_bridge/) is the account's single streaming connection.
 This process holds ZERO market-data lines: it connects to IBKR order-only
 (clientId=7, paper-gated) and reads everything -- chain quotes, walls,
@@ -186,22 +182,6 @@ async def main():
         pass
 
 
-def write_status(name: str, doc: dict):
-    """[v1.08 DASHSTATUS] <LOG_DIR>/<name> for the read-only dashboard.
-    Atomic (tmp + replace) and fully guarded: any failure is ignored, it can
-    never affect trading. Nothing in the trading path reads this file."""
-    try:
-        import json as _j, os as _o, tempfile as _t
-        d = config.LOG_DIR
-        _o.makedirs(d, exist_ok=True)
-        fd, tmp = _t.mkstemp(prefix=".status-", suffix=".tmp", dir=d)
-        with _o.fdopen(fd, "w") as f:
-            _j.dump(doc, f, default=str)
-        _o.replace(tmp, _o.path.join(d, name))
-    except Exception:  # noqa: BLE001
-        pass
-
-
 async def _resume_carry(ib, om, emit):
     """[v1.05] Re-attach a position carried over an IBKR reconnect.
     Live: trust the broker -- the position is resumed only for the qty IBKR
@@ -318,7 +298,6 @@ async def run_session(dry_run: bool, args):
     last_beat = datetime.now(ET)
     last_scan_log = 0
     last_spread_log = 0
-    last_status = 0.0
 
     await emit("RUN", {"note": "entering main loop (consumer mode)"})
     while not _shutdown.is_set():
@@ -492,38 +471,6 @@ async def run_session(dry_run: bool, args):
                         await emit("RISK_BLOCK", {"reason": why,
                                                   "trigger": cand.get("trigger",
                                                                       "crush")})
-
-        # ---- [v1.08 DASHSTATUS] status file for the dashboard (every 5 s) ----
-        if now.timestamp() - last_status >= 5:
-            last_status = now.timestamp()
-            pd = None
-            if position:
-                try:
-                    mark = om.mark(position)
-                except Exception:  # noqa: BLE001
-                    mark = None
-                sp_ = getattr(position, "is_spread", False)
-                pd = {"key": position.key, "qty": position.qty,
-                      "vehicle": "spread" if sp_ else "naked",
-                      "entry": position.entry_px, "mark": mark,
-                      "x": round(mark / position.entry_px, 2) if mark and position.entry_px else None,
-                      "state": position.state, "trigger": position.trigger,
-                      "lock_10x": getattr(position, "lock_px", None),
-                      "floor": round(position.trail_floor, 2) if position.state == "TRAIL" else None,
-                      "peak_x": round(position.peak_multiple, 2),
-                      "upnl": round((mark - position.entry_px) * 100 * position.qty, 2)
-                      if mark is not None else None,
-                      "entry_time": position.entry_time, "simulated": position.simulated}
-            write_status("status_0dte.json", {
-                "ts": now.isoformat(), "mode": "dry-run" if dry_run else "live-paper",
-                "spx": spot, "levels_ok": lvl_ok, "levels_why": lvl_why,
-                "levels_age_s": round(levels.age_sec(), 1),
-                "window": (config.active_window(now) or [None])[0],
-                "vehicle": config.VEHICLE, "qty": config.FIXED_QTY,
-                "candidates": [{k: c.get(k) for k in ("key", "ask", "otm", "trigger", "window", "ask_z")}
-                               for c in (levels.candidates() or [])[:3]],
-                "position": pd, "day_pnl": round(risk.daily_pnl, 2),
-                "trades": risk.trades_today, "killed": risk.killed})
 
         # ---- heartbeat ----
         if (now - last_beat).total_seconds() >= config.HEARTBEAT_SEC:

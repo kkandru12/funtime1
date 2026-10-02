@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-v1.08 2026-10-02 [DASHPROFILE] after each 5-min wall evaluation the per-strike
-    GEX profile is written to shared/gex_profile.json for the read-only
-    dashboard (guarded; levels.json unchanged).
-gex_bridge: the single IBKR streaming connection.
+"""gex_bridge: the single IBKR streaming connection.
 
 ALWAYS-ON supervisor loop:
   weekend (Sat, Fri>=17:00, Sun<17:55 ET) -> sleep until Sun 17:55 ET
@@ -212,26 +208,6 @@ def _decay(conf: float, age_min: float) -> float:
     return round(conf * f, 3)
 
 
-def _publish_profile(gex, spot):
-    """[v1.08 DASHPROFILE] shared/gex_profile.json for the read-only dashboard.
-    Separate from levels.json (the algos never read it) and fully guarded:
-    a failure here is logged and ignored, it can never stop the bridge."""
-    try:
-        prof = getattr(gex, "profile", None)
-        if not prof:
-            return
-        doc = dict(prof, ts_utc=_utc_iso_now(),
-                   call_wall=gex.call_wall, call_zone=gex.call_zone,
-                   call_conf=round(gex.call_conf, 3),
-                   put_wall=gex.put_wall, put_zone=gex.put_zone,
-                   put_conf=round(gex.put_conf, 3),
-                   flip=gex.flip, regime=gex.regime, magnets=gex.magnets,
-                   net_total_b=round(gex.net_total, 3))
-        publish(os.path.join(config.SHARED_DIR, "gex_profile.json"), doc)
-    except Exception as e:  # noqa: BLE001
-        log.warning("gex_profile publish failed (ignored): %s", e)
-
-
 def build_payload(state, now, sess: str) -> dict | None:
     """Assemble levels.json. Returns None if nothing publishable yet."""
     spx = state["chain"].spot() if state.get("chain") else None
@@ -400,7 +376,6 @@ async def amain(args):
                     gex.note_gamma(chain.gamma_map(), ts)
                     ev = gex.maybe_evaluate(chain.oi, spot, ts)
                     if ev:
-                        _publish_profile(gex, spot)
                         p = gex.walls_payload(ts)
                         log.info("WALLS cw=%s cz=%s cc=%.2f pw=%s pz=%s "
                                  "pc=%.2f flip=%s regime=%s net=%sB",

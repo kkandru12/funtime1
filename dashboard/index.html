@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FunTime Dashboard</title>
+<!-- v1.08 DASH 2026-10-02: read-only view. No buttons, no actions. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"></script>
+<style>
+  :root { --bg:#0f1218; --panel:#171b23; --line:#262c38; --text:#e6e9ef; --muted:#8b93a3;
+          --green:#2fb67c; --red:#e05c5c; --blue:#5b9cf5; --amber:#e3a33b; --violet:#a07cf0; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--text); font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif }
+  header { display:flex; align-items:baseline; gap:12px; padding:12px 16px; border-bottom:1px solid var(--line) }
+  header h1 { margin:0; font-size:17px; font-weight:600 }
+  header .ro { color:var(--muted); font-size:12px }
+  header .clock { margin-left:auto; color:var(--muted); font-variant-numeric:tabular-nums }
+  main { padding:12px 16px; display:grid; gap:12px; grid-template-columns:repeat(12,1fr) }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px }
+  .kpis { grid-column:1/-1; display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px }
+  .kpi .l { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.04em }
+  .kpi .v { font-size:20px; font-weight:600; font-variant-numeric:tabular-nums }
+  .kpi .s { color:var(--muted); font-size:12px }
+  .chart { grid-column:1/-1; height:420px }
+  .half { grid-column:span 6 } @media (max-width:900px){ .half{ grid-column:1/-1 } }
+  h2 { margin:0 0 8px; font-size:14px; font-weight:600 }
+  table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:13px }
+  th, td { text-align:left; padding:4px 6px; border-bottom:1px solid var(--line); white-space:nowrap }
+  th { color:var(--muted); font-weight:500 }
+  .pos { color:var(--green) } .neg { color:var(--red) } .mut { color:var(--muted) }
+  .pill { display:inline-block; padding:1px 8px; border-radius:99px; font-size:12px; border:1px solid var(--line) }
+  .ok { color:var(--green) } .bad { color:var(--red) } .warn { color:var(--amber) }
+  .scroll { max-height:260px; overflow:auto }
+  .tw { overflow-x:auto }
+  .health { grid-column:1/-1; display:flex; flex-wrap:wrap; gap:16px; color:var(--muted) }
+</style>
+</head>
+<body>
+<header><h1>FunTime</h1><span class="ro">read-only · refreshes every 5 s</span><span class="clock" id="clock">—</span></header>
+<main>
+  <section class="card kpis" id="kpis"></section>
+  <section class="card chart"><div id="gex" style="height:100%"></div></section>
+  <section class="card half"><h2>ES · MT5</h2><div id="es"></div><h2 style="margin-top:12px">Today</h2><div class="scroll" id="es_ev"></div></section>
+  <section class="card half"><h2>0DTE · IBKR</h2><div id="od"></div><h2 style="margin-top:12px">Today</h2><div class="scroll" id="od_ev"></div></section>
+  <section class="card health" id="health"></section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const f = (x, d=2) => (x === null || x === undefined || x === "") ? "—" : (typeof x === "number" ? x.toFixed(d) : x);
+const money = x => x == null ? "—" : `<span class="${x>=0?'pos':'neg'}">${x>=0?'+':'−'}$${Math.abs(x).toLocaleString(undefined,{maximumFractionDigits:0})}</span>`;
+const age = s => s == null ? '<span class="bad">missing</span>' : s < 30 ? `<span class="ok">${Math.round(s)}s</span>` : s < 300 ? `<span class="warn">${Math.round(s)}s</span>` : `<span class="bad">${Math.round(s/60)}m</span>`;
+const t = iso => iso ? iso.slice(11,19) : "";
+function kpi(l, v, s="") { return `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`; }
+
+function drawGex(p, lv) {
+  const el = $("gex");
+  if (!p || !p.strikes || !p.strikes.length) {
+    Plotly.react(el, [], {paper_bgcolor:"#171b23", plot_bgcolor:"#171b23", font:{color:"#8b93a3"},
+      annotations:[{text:"No GEX profile yet — the bridge publishes it after the first 5-min wall evaluation in the NY session.",
+      showarrow:false, xref:"paper", yref:"paper", x:.5, y:.5}], xaxis:{visible:false}, yaxis:{visible:false}}, {displayModeBar:false});
+    return;
+  }
+  const spot = p.spot, lo = spot - 150, hi = spot + 150;
+  const idx = p.strikes.map((k,i)=>i).filter(i => p.strikes[i] >= lo && p.strikes[i] <= hi);
+  const K = idx.map(i=>p.strikes[i]);
+  const S = 0.01;   // bridge units are OI*gamma*S^2*mult/1e9; x0.01 = $B per 1% move
+  const traces = [
+    {type:"bar", name:"Call GEX", x:K, y:idx.map(i=>p.call[i]*S), marker:{color:"rgba(47,182,124,.45)"}, hovertemplate:"%{x}: %{y:.3f} $B<extra>call</extra>"},
+    {type:"bar", name:"Put GEX", x:K, y:idx.map(i=>-p.put[i]*S), marker:{color:"rgba(224,92,92,.45)"}, hovertemplate:"%{x}: %{y:.3f} $B<extra>put</extra>"},
+    {type:"scatter", mode:"lines+markers", name:"Net", x:K, y:idx.map(i=>p.net[i]*S), line:{color:"#5b9cf5", width:2}, marker:{size:4}, hovertemplate:"%{x}: %{y:.3f} $B<extra>net</extra>"}
+  ];
+  const shapes = [], ann = [];
+  let row = 0;   // stagger labels so close levels never overlap
+  const vline = (x, color, label, dash="solid") => { if (x == null) return;
+    shapes.push({type:"line", x0:x, x1:x, yref:"paper", y0:0, y1:1, line:{color, width:2, dash}});
+    ann.push({x, yref:"paper", y:1.03 + 0.065 * (row++), text:label, showarrow:false,
+              font:{color, size:11}, bgcolor:"#171b23"}); };
+  const zone = (z, color) => { if (!z) return; shapes.push({type:"rect", x0:z[0], x1:z[1], yref:"paper", y0:0, y1:1, fillcolor:color, line:{width:0}, layer:"below"}); };
+  zone(p.call_zone, "rgba(47,182,124,.10)"); zone(p.put_zone, "rgba(224,92,92,.10)");
+  vline(spot, "#e6e9ef", `SPX ${spot.toFixed(1)}`);
+  vline(p.call_wall, "#2fb67c", `CW ${p.call_wall}`, "dash");
+  vline(p.put_wall, "#e05c5c", `PW ${p.put_wall}`, "dash");
+  vline(p.flip, "#e3a33b", `flip ${p.flip}`, "dot");
+  Plotly.react(el, traces, {
+    barmode:"relative", paper_bgcolor:"#171b23", plot_bgcolor:"#171b23", font:{color:"#e6e9ef"},
+    margin:{l:64, r:16, t:72, b:80}, legend:{orientation:"h", y:-0.3, yanchor:"top"},
+    xaxis:{title:{text:"SPX strike"}, gridcolor:"#262c38", dtick: el.clientWidth < 700 ? 50 : 10},
+    yaxis:{title:{text:"GEX, $B per 1% move"}, gridcolor:"#262c38", zerolinecolor:"#3a4252"},
+    shapes, annotations:ann}, {displayModeBar:false, responsive:true});
+}
+
+function esPanel(es) {
+  if (!es) return '<p class="mut">No status yet (algo_es not running?).</p>';
+  const p = es.position;
+  let h = `<table><tr><th>ES</th><td>${f(es.es)}</td><th>Session</th><td>${es.session}</td><th>Mode</th><td>${es.mode}</td></tr>
+    <tr><th>Day P&L</th><td>${money(es.day_pnl)}</td><th>Trades</th><td>${es.trades}</td><th>GEX</th><td>${es.gex_ok?'<span class="ok">on</span>':'<span class="mut">off</span>'}</td></tr></table>`;
+  if (p) h += `<h2 style="margin-top:10px">Position</h2><table><tr><th>Side</th><th>Qty</th><th>Entry</th><th>Stop</th><th>Target</th><th>Open P&L</th><th>Trigger</th><th>Since</th></tr>
+    <tr><td class="${p.side==='long'?'pos':'neg'}">${p.side}</td><td>${p.qty}</td><td>${f(p.entry)}</td><td>${f(p.stop)}</td><td>${f(p.target)}</td><td>${money(p.upnl)}</td><td>${p.trigger}</td><td>${p.entry_time}</td></tr></table>`;
+  else h += '<p class="mut" style="margin:8px 0 0">Flat.</p>';
+  if (es.killed) h += '<p class="bad">Daily stop hit — no new entries today.</p>';
+  return h;
+}
+
+function odPanel(od) {
+  if (!od) return '<p class="mut">No status yet (algo not running?).</p>';
+  const p = od.position;
+  let h = `<table><tr><th>SPX</th><td>${f(od.spx)}</td><th>Window</th><td>${od.window||'—'}</td><th>Mode</th><td>${od.mode}</td></tr>
+    <tr><th>Day P&L</th><td>${money(od.day_pnl)}</td><th>Trades</th><td>${od.trades}</td><th>Vehicle</th><td>${od.vehicle} × ${od.qty}</td></tr></table>`;
+  if (p) h += `<h2 style="margin-top:10px">Position</h2><table><tr><th>Contract</th><th>Qty</th><th>Cost</th><th>Mark</th><th>×</th><th>10X lock</th><th>Floor</th><th>State</th><th>Open P&L</th></tr>
+    <tr><td>${p.key}</td><td>${p.qty}</td><td>${f(p.entry)}</td><td>${f(p.mark)}</td><td>${f(p.x,1)}</td><td>${f(p.lock_10x)}</td><td>${f(p.floor)}</td><td>${p.state}</td><td>${money(p.upnl)}</td></tr></table>`;
+  else h += '<p class="mut" style="margin:8px 0 0">Flat.</p>';
+  const c = od.candidates || [];
+  h += `<h2 style="margin-top:10px">Candidates (bridge)</h2>` + (c.length ? `<table><tr><th>Key</th><th>Ask</th><th>OTM</th><th>Ask z</th><th>Trigger</th></tr>` +
+    c.map(x=>`<tr><td>${x.key}</td><td>${f(x.ask)}</td><td>${f(x.otm,1)}</td><td>${f(x.ask_z)}</td><td>${x.trigger}</td></tr>`).join("") + `</table>` : '<p class="mut">None right now.</p>');
+  if (!od.levels_ok) h += `<p class="warn">No new entries: ${od.levels_why}</p>`;
+  return h;
+}
+
+function evTable(ev) {
+  if (!ev || !ev.length) return '<p class="mut">Nothing yet today.</p>';
+  const rows = ev.slice().reverse().map(e => {
+    const d = Object.assign({}, e); delete d.ts; delete d.event; delete d.request;
+    const txt = Object.entries(d).map(([k,v]) => `${k}=${typeof v==='object'?JSON.stringify(v):v}`).join("  ");
+    const cls = e.event === 'CLOSED' ? (e.pnl >= 0 ? 'pos' : 'neg') : '';
+    return `<tr><td class="mut">${t(e.ts)}</td><td class="${cls}">${e.event}</td><td style="white-space:normal">${txt}</td></tr>`; });
+  return `<table>${rows.join("")}</table>`;
+}
+
+async function tick() {
+  try {
+    const r = await fetch("/api/state", {cache:"no-store"}); const s = await r.json();
+    $("clock").textContent = s.now.replace("T"," ");
+    const lv = s.levels || {}, p = s.profile, es = s.es || {}, od = s.odte || {};
+    const reg = (p && p.regime) || lv.regime || "—";
+    $("kpis").innerHTML =
+      kpi("SPX", f(lv.spx ?? (p&&p.spot)), lv.session||"") + kpi("ES", f(es.es ?? lv.es), `basis ${f(lv.basis)}`) +
+      kpi("Gamma regime", reg === '+' ? '<span class="ok">+</span>' : reg === '-' ? '<span class="bad">−</span>' : reg, `net ${f(p&&p.net_total_b!=null?p.net_total_b*0.01:null,1)} $B/1%`) +
+      kpi("Call wall", f(p&&p.call_wall,0), `conf ${f(p&&p.call_conf)}`) + kpi("Put wall", f(p&&p.put_wall,0), `conf ${f(p&&p.put_conf)}`) +
+      kpi("Flip", f(p&&p.flip,0), "") + kpi("ES day P&L", money(es.day_pnl), `${es.trades??0} trades`) + kpi("0DTE day P&L", money(od.day_pnl), `${od.trades??0} trades`);
+    drawGex(p, lv);
+    $("es").innerHTML = '<div class="tw">' + esPanel(s.es) + '</div>'; $("od").innerHTML = '<div class="tw">' + odPanel(s.odte) + '</div>';
+    $("es_ev").innerHTML = evTable(s.es_events); $("od_ev").innerHTML = evTable(s.odte_events);
+    $("health").innerHTML = `<span>levels.json ${age(s.levels_age_s)}</span><span>GEX profile ${age(s.profile_age_s)}</span>` +
+      `<span>algo_es ${age(s.es_age_s)}</span><span>0DTE algo ${age(s.odte_age_s)}</span>`;
+  } catch (e) { $("health").innerHTML = `<span class="bad">dashboard server unreachable: ${e}</span>`; }
+}
+tick(); setInterval(tick, 5000);
+</script>
+</body>
+</html>
