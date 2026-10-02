@@ -456,5 +456,31 @@ got = (o.stdout.strip().splitlines() or ["?"])[-1]
 check("R17 overnight fade restart-safe (no re-sell on restart, cap survives)",
       got == "0001010", "got %r want '0001010' %s" % (got, o.stderr.strip()[-200:]))
 
+# R18 MT5 bars: closed only, final values -----------------------------------
+code18 = r"""
+import sys, asyncio, types
+sys.path.insert(0, '.')
+import numpy as np
+import mt5_data
+dt = np.dtype([('time','i8'),('open','f8'),('high','f8'),('low','f8'),('close','f8'),('tick_volume','i8')])
+seq = [np.array([(60, 1, 2, 0, 1, 1), (120, 1, 1.5, 0.5, 1, 1)], dtype=dt),      # 120 forming, high 1.5
+       np.array([(60, 1, 2, 0, 1, 1), (120, 1, 9.0, -5, 1, 1), (180, 1, 1, 1, 1, 1)], dtype=dt)]
+class M:
+    TIMEFRAME_M1 = 1
+    def __init__(self): self.k = 0
+    def copy_rates_from_pos(self, *a):
+        r = seq[min(self.k, 1)]; self.k += 1; return r
+f = mt5_data.MT5DataFeed(lambda *a, **k: None)
+f.mt5 = M(); f.symbol = 'X'; f.ok = True
+asyncio.run(f.sync()); asyncio.run(f.sync())
+b = {int(x[0].timestamp()): (x[2], x[3]) for x in f.bars}
+print(sorted(b), b.get(120))
+"""
+o = subprocess.run([sys.executable, "-c", code18], cwd=os.path.join(HERE, "algo_es"),
+                   capture_output=True, text=True)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+check("R18 MT5 M1 bars stored closed and final (no frozen partial bar)",
+      got == "[60, 120] (9.0, -5.0)", "got %r %s" % (got, o.stderr.strip()[-200:]))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

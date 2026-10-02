@@ -1,7 +1,4 @@
-"""
-v1.07 2026-10-02 [CLOSEDBARS] sync() keeps closed M1 bars only (the forming
-    bar was frozen at its first partial print).
-MT5 market-data feed for the ES algo's overnight PA sleeves.
+"""MT5 market-data feed for the ES algo's overnight PA sleeves.
 
 The overnight GEX walls are frozen/stale, so sleeves C (ON range fade) and D
 (sweep+reclaim) trade pure price action. Their OHLC comes from HERE — MT5's
@@ -118,11 +115,6 @@ class MT5DataFeed:
             return
         added = 0
         last_t = self.bars[-1][0] if self.bars else None
-        # [v1.07 CLOSEDBARS] rates[-1] is the FORMING bar (pos 0). v1.02 stored
-        # it on first sight and never updated it (later updates have the same
-        # time), so the overnight high/low and sweep detection were built from
-        # partial bars. Keep CLOSED bars only.
-        rates = rates[:-1]
         for r in rates:
             t_et = datetime.fromtimestamp(
                 float(r["time"]), tz=self._bar_tz).astimezone(ET)
