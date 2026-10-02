@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """FunTime dashboard -- READ-ONLY web page (v1.08 DASH, 2026-10-02).
 
-v1.10 2026-10-02 [JSONFINITE] levels.json can carry Infinity / NaN (e.g. a
-    wall "dominance" of Infinity when the neighbours have no OI). Python
-    reads that fine but the browser's JSON.parse rejects it ("Unexpected
-    token 'I'"). /api/state now replaces non-finite numbers with null.
-
 v1.09 2026-10-02 [LOCALPLOTLY] serves the bundled dashboard/plotly.min.js
     (plotly.js 4.1.1, MIT) at /plotly.min.js, so the chart works without
     internet access to the CDN ("ReferenceError: Plotly is not defined").
@@ -94,17 +89,6 @@ def _events(path, want, limit=200):
     return out[-limit:]
 
 
-def _finite(x):
-    """[v1.10 JSONFINITE] NaN/Infinity -> None, recursively (browser-safe JSON)."""
-    if isinstance(x, float):
-        return x if x == x and x not in (float("inf"), float("-inf")) else None
-    if isinstance(x, dict):
-        return {k: _finite(v) for k, v in x.items()}
-    if isinstance(x, (list, tuple)):
-        return [_finite(v) for v in x]
-    return x
-
-
 def state():
     day = datetime.now(ET).strftime("%Y%m%d")
     lv, lv_age = _read_json(os.path.join(SHARED, "levels.json"))
@@ -160,7 +144,7 @@ class H(BaseHTTPRequestHandler):
             except OSError:
                 return self._send(404, b"plotly.min.js missing", "text/plain")
         if path == "/api/state":
-            body = json.dumps(_finite(state()), default=str, allow_nan=False).encode()
+            body = json.dumps(state(), default=str).encode()
             return self._send(200, body, "application/json")
         return self._send(404, b"not found", "text/plain")
 

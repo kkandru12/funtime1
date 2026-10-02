@@ -492,7 +492,7 @@ code19 = r"""
 import os, sys, json, tempfile, threading, urllib.request, urllib.error
 sh, lg = tempfile.mkdtemp(), tempfile.mkdtemp()
 os.environ.update(SHARED_DIR=sh, DASH_LOG_DIR=lg, DASH_HOST='127.0.0.1', DASH_PORT='0')
-json.dump({'session': 'ny', 'spx': 6700.0, 'chain_frame': {'x': 1}}, open(os.path.join(sh, 'levels.json'), 'w'))
+json.dump({'session': 'ny', 'spx': 6700.0, 'chain_frame': {'x': 1}, 'dominance': float('inf'), 'net': float('nan')}, open(os.path.join(sh, 'levels.json'), 'w'))
 json.dump({'spot': 6700, 'strikes': [6690, 6700], 'call': [1, 2], 'put': [1, 1], 'net': [0, 1]},
           open(os.path.join(sh, 'gex_profile.json'), 'w'))
 json.dump({'es': 6750, 'position': {'side': 'long'}}, open(os.path.join(lg, 'status_es.json'), 'w'))
@@ -506,7 +506,8 @@ res.append(urllib.request.urlopen(base + '/').status)
 js = urllib.request.urlopen(base + '/plotly.min.js')
 res.append(int(js.status == 200 and b'plotly' in js.read(400)))
 st = json.load(urllib.request.urlopen(base + '/api/state'))
-res.append(int(st['levels']['spx'] == 6700.0 and 'chain_frame' not in st['levels']
+raw = urllib.request.urlopen(base + '/api/state').read().decode()
+res.append(int(st['levels']['spx'] == 6700.0 and 'chain_frame' not in st['levels'] and 'Infinity' not in raw and 'NaN' not in raw and st['levels']['dominance'] is None
                and st['profile']['strikes'] == [6690, 6700] and st['es']['position']['side'] == 'long'))
 for m in ('POST', 'PUT', 'DELETE'):
     try:
@@ -525,7 +526,7 @@ o = subprocess.run([sys.executable, "-c", code19], cwd=HERE, capture_output=True
 got = (o.stdout.strip().splitlines() or ["?"])[-1]
 if got != "[200, 1, 1, 405, 405, 405, 404]":
     r19.append("server behaviour %r %s" % (got, o.stderr.strip()[-200:]))
-check("R19 dashboard read-only: GET works from files, writes 405, no file paths, no broker code",
+check("R19 dashboard read-only: GET works from files, writes 405, no file paths, no broker code, browser-safe JSON (no Infinity/NaN)",
       not r19, "; ".join(r19))
 
 # R20 TWS + Gateway: falls back 7497 -> 4002, remembers the good port ------
