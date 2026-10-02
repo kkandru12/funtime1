@@ -1,10 +1,5 @@
 """Globex strategy sleeve -- wires algo_es/strategies into the main loop.
 
-v1.09 2026-10-02 [BB2C-H4] KK: "H4 only, M1 close in 2nd candle". Default
-    ES_BB2C_TFS is now "4h" (H1 instance off); entry stays m1_b. 21-month ES
-    replay with the 16:55 flatten: H4 m1_b +$19.3K / DD -$10.3K, H4+H1
-    +$7.3K / DD -$20.9K. ES_BB2C_TFS=4h,1h turns H1 back on.
-
 v1.08 2026-10-02 [BB2CDUAL] KK: "update bb2c to check on H1 and H4 same time".
     BB-2C now runs as two independent instances when enabled:
       bb2c     H4 bands (period 20, 2.0 sd), entry = first M1 of the next H4 bar
