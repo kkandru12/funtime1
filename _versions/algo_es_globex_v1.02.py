@@ -1,8 +1,5 @@
 """Globex strategy sleeve -- wires algo_es/strategies into the main loop.
 
-v1.06 2026-10-02 [D1WARM] 5DMA-STRUCT no longer fires on startup: the
-    warm-up consumes every closed daily bar and only a NEW daily bar can signal.
-
 v1.02 2026-10-01 [GLOBEXWIRE] First build.
     The five ported Apex Globex strategies (VOB, SQUEEZE, BB-2C, DMA-520,
     SMA-CROSS) plus 5DMA-STRUCT existed as modules but main.py never called
@@ -126,16 +123,10 @@ class GlobexSleeve:
                     if not d1 or (self._last_d1 is not None
                                   and d1[-1]["time"] <= self._last_d1):
                         continue
-                    if self._last_d1 is None:
-                        # [v1.06 D1WARM] warm up on ALL closed daily bars and
-                        # signal only on the NEXT one. v1.02 judged the last
-                        # closed day as new, so every restart re-fired a stale
-                        # 5DMA signal (seen live 2026-10-02 00:25).
-                        for b in d1:
+                    if self._last_d1 is None:      # warm up on history first
+                        for b in d1[:-1]:
                             s.on_bar(_fbar(b))
                             s._in_position = False
-                        self._last_d1 = d1[-1]["time"]
-                        continue
                     self._last_d1 = d1[-1]["time"]
                     sig = s.on_bar(_fbar(d1[-1]))
                 else:

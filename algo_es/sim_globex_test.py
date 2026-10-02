@@ -79,8 +79,11 @@ class FakeMT5(types.ModuleType):
         dt = np.dtype([("time", "i8"), ("open", "f8"), ("high", "f8"), ("low", "f8"),
                        ("close", "f8"), ("tick_volume", "i8")])
         rows = []
+        # bar times on the timeframe grid: a D1 bar only changes once a day
+        cur = now + timedelta(minutes=self.minute)
+        base = datetime.fromtimestamp((int(cur.timestamp()) // (tf * 60)) * tf * 60, timezone.utc)
         for i in range(n):
-            t = now - step * (n - 1 - i) + timedelta(minutes=self.minute)
+            t = base - step * (n - 1 - i)
             p = self.px - (n - 1 - i) * 0.01
             rows.append((int(t.timestamp()), p, p + 1, p - 1, p, 100))
         return np.array(rows, dtype=dt)
@@ -164,6 +167,19 @@ if "GLOBEX_SLEEVE" not in names(evC) or "SESSION_LOOP_END" not in names(evC):
 sleeve = [d for e, d in evC if e == "GLOBEX_SLEEVE"]
 if sleeve and len(sleeve[0]["strategies"]) != 6:
     fails.append("C: expected 6 strategies, got %s" % sleeve[0]["strategies"])
+
+# E [v1.06 D1WARM] restart must not fire 5DMA-STRUCT on old daily bars ------
+import strategies.fivedma_struct as fds
+class AlwaysFire(fds.FiveDMAStruct):
+    def on_bar(self, bar):
+        super().on_bar(bar)
+        return Signal("short", bar.close, bar.close + 10, bar.close - 20, "5DMA_STRUCT", "stub")
+real5 = _g.FiveDMAStruct
+_g.FiveDMAStruct = AlwaysFire
+evE = asyncio.run(run("fivedma", loops=10))
+sigE = [d for e, d in evE if e == "GLOBEX_SIGNAL"]
+if sigE: fails.append("E: 5DMA-STRUCT fired on startup from old daily bars: %s" % sigE[:1])
+_g.FiveDMAStruct = real5
 
 # D ------------------------------------------------------------------------
 config.MT5_STALE_SEC = 0
