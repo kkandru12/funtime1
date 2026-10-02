@@ -45,7 +45,6 @@ ET = ZoneInfo("America/New_York")
 log = logging.getLogger("algo")
 
 _shutdown = asyncio.Event()
-_carry = None   # [v1.05] open position carried across an IBKR reconnect
 _log_handlers: list = []
 
 
@@ -145,25 +144,12 @@ async def main():
 
     while not _shutdown.is_set():
         try:
-            res = await run_session(dry_run, args)
-            now = datetime.now(ET)
-            if res == "retry" and (now.hour, now.minute) < config.LOOP_END:
-                # [v1.05 RESILIENT] IBKR dropped mid-session: reconnect in 60s
-                await emit("SESSION_RETRY", {"in_s": 60})
-                await sleep_interruptible(60)
-                continue
+            await run_session(dry_run, args)
         except SystemExit as e:
             try:
                 await emit("SESSION_ABORT", {"error": str(e)})
             except Exception:
                 pass
-            # [v1.05] IBKR not reachable at start: keep trying every 60s while
-            # the session is still on (the paper gate still ends the day)
-            now = datetime.now(ET)
-            if "PAPER-GATE" not in str(e) and \
-                    (now.hour, now.minute) < config.LOOP_END:
-                await sleep_interruptible(60)
-                continue
         except Exception as e:  # noqa: BLE001 - stay alive on transient faults
             log.exception("session crashed; retrying shortly")
             try:
@@ -180,46 +166,6 @@ async def main():
         await emit("DAEMON_STOP", {"reason": "shutdown-signal"})
     except Exception:
         pass
-
-
-async def _resume_carry(ib, om, emit):
-    """[v1.05] Re-attach a position carried over an IBKR reconnect.
-    Live: trust the broker -- the position is resumed only for the qty IBKR
-    still holds (a resting TP/cap may have filled while we were away), then
-    every working order is cancelled and the resting exits are re-placed so
-    their fills are tracked by this connection."""
-    global _carry
-    pos, _carry = _carry, None
-    if pos is None:
-        return None
-    if pos.simulated:
-        await emit("CARRY_RESUMED", {"key": pos.key, "qty": pos.qty})
-        return pos
-    leg = getattr(pos, "long_key", None) or pos.key
-    try:
-        con_id = om._contracts[leg].conId
-        held = sum(int(p.position) for p in ib.positions()
-                   if getattr(p.contract, "conId", None) == con_id)
-    except Exception as e:  # noqa: BLE001
-        await emit("CARRY_UNKNOWN", {"key": pos.key, "error": str(e)[:160],
-                                     "note": "check the IBKR position by hand"})
-        return None
-    if held <= 0:
-        await emit("CARRY_GONE", {"key": pos.key,
-                                  "note": "closed at the exchange while IBKR was down"})
-        return None
-    pos.qty = min(pos.qty, held)
-    try:
-        ib.reqGlobalCancel()
-        await asyncio.sleep(2)
-    except Exception:
-        pass
-    if getattr(pos, "is_spread", False):
-        await om.place_spread_cap(pos)
-    else:
-        await om.place_resting_tp(pos)
-    await emit("CARRY_RESUMED", {"key": pos.key, "qty": pos.qty, "held": held})
-    return pos
 
 
 async def _await_ny_levels(levels: LevelsWatcher, timeout: float = 600):
@@ -292,8 +238,7 @@ async def run_session(dry_run: bool, args):
     om = om_probe  # get_quote = levels.quote (bid, ask) from chain_frame
 
     # ---- main loop ----
-    retry = False
-    position = await _resume_carry(ib, om, emit)
+    position = None
     pending_entry = False
     last_beat = datetime.now(ET)
     last_scan_log = 0
@@ -306,7 +251,6 @@ async def run_session(dry_run: bool, args):
             break
         if not await ensure_connected(ib):
             await emit("FATAL", {"reason": "reconnect-exhausted"})
-            retry = True          # [v1.05] main() retries in 60s, not tomorrow
             break
 
         risk.new_day(now.date())
@@ -315,18 +259,8 @@ async def run_session(dry_run: bool, args):
         walls = (lv or {}).get("walls") or {}
         lvl_ok, lvl_why = levels.entries_allowed(now)
 
-        # [v1.05 RESILIENT] bridge down (levels stale): never decide an exit on
-        # frozen quotes -- the native resting TP/cap still protects the
-        # position at the exchange; only the 15:55 flat is still enforced.
-        frozen = position is not None and not levels.fresh() and \
-            (now.hour, now.minute) < config.FLAT_TIME
-        if frozen and now.timestamp() - last_scan_log > 60:
-            last_scan_log = now.timestamp()
-            await emit("EXITS_FROZEN", {"why": "levels stale (bridge/IBKR data down)",
-                                        "age_s": round(levels.age_sec(), 1)})
-
         # ---- position management (exits first) ----
-        if position and spot and not frozen:
+        if position and spot:
             if position.tiered_effective:
                 live_fills = [(t, fq, fpx)
                               for t, fq, fpx in om.check_tier_fills(position)]
@@ -490,15 +424,6 @@ async def run_session(dry_run: bool, args):
 
     # ---- shutdown: flatten first ----
     await emit("SHUTDOWN", {"reason": "loop-end" if not _shutdown.is_set() else "signal"})
-    global _carry
-    if position and retry and not _shutdown.is_set():
-        # [v1.05 RESILIENT] IBKR is down: selling is impossible and blind
-        # retries could double-trade. Keep the position (its resting native
-        # TP/cap stays at the exchange) and resume it after the reconnect.
-        _carry = position
-        await emit("CARRY", {"key": position.key, "qty": position.qty,
-                             "note": "IBKR down - resumes after reconnect"})
-        position = None
     if position:
         pnl = await om.flatten(position, "shutdown")
         risk.register_close(pnl)
@@ -506,11 +431,7 @@ async def run_session(dry_run: bool, args):
                               "pnl": round(pnl, 2)})
     await emit("DAY_END", {"trades": risk.trades_today,
                            "day_pnl": round(risk.daily_pnl, 2)})
-    try:
-        ib.disconnect()
-    except Exception:
-        pass
-    return "retry" if retry else "done"
+    ib.disconnect()
 
 
 if __name__ == "__main__":

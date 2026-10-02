@@ -59,6 +59,7 @@ class FakeLevels:
         return {"session": "ny", "spx": 6710.0, "walls": {}}
 
     def entries_allowed(self, now): return True, "ok"
+    def fresh(self, max_age=60): return not getattr(self, "stale", False)
     def quote(self, k): return self.q.get(k, (None, None))
     def candidates(self): return self.cands
     def regime(self): return {"mode": "observe"}

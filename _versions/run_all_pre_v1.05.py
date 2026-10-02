@@ -7,10 +7,7 @@ Usage:
 
 - Starts all three as subprocesses in ONE console window.
 - Prefixes every log line with the component name.
-- Restarts any component that exits, FOREVER (v1.05 RESILIENT): backoff
-  5s -> 10s -> ... -> 60s; the backoff resets after 10 min of healthy running.
-  (Before v1.05 it gave up after 5 crashes -- an IBKR/MT5 outage longer than
-  a few minutes left that component dead until someone restarted it.)
+- Restarts any component that crashes (max 5 restarts, then gives up).
 - Ctrl+C stops everything cleanly.
 - --live passes --live to both algos (paper/demo orders). Default is dry-run.
 """
@@ -33,7 +30,7 @@ COMPONENTS = [
     ("algo_es", ["algo_es/main.py", ["--dry-run"] if DRY else ["--live"]]),
 ]
 
-BACKOFF_START, BACKOFF_MAX, HEALTHY_SEC = 5, 60, 600
+MAX_RESTARTS = 5
 
 
 def stream_output(name, proc):
@@ -43,10 +40,8 @@ def stream_output(name, proc):
 
 def run_component(name, script, args):
     restarts = 0
-    backoff = BACKOFF_START
-    while True:
+    while restarts <= MAX_RESTARTS:
         print(f"[supervisor] starting {name} (attempt {restarts + 1})", flush=True)
-        started = time.time()
         proc = subprocess.Popen(
             [PY, os.path.join(HERE, script)] + args,
             stdout=subprocess.PIPE,
@@ -59,12 +54,11 @@ def run_component(name, script, args):
         t.start()
         proc.wait()
         restarts += 1
-        if time.time() - started >= HEALTHY_SEC:
-            backoff = BACKOFF_START          # it ran fine for a while: reset
-        print(f"[supervisor] {name} exited (code {proc.returncode}); "
-              f"restarting in {backoff}s", flush=True)
-        time.sleep(backoff)
-        backoff = min(backoff * 2, BACKOFF_MAX)
+        if restarts <= MAX_RESTARTS:
+            print(f"[supervisor] {name} exited (code {proc.returncode}); restarting in 5s",
+                  flush=True)
+            time.sleep(5)
+    print(f"[supervisor] {name} crashed {MAX_RESTARTS}x; giving up", flush=True)
 
 
 def main():

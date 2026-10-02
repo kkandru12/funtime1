@@ -133,8 +133,7 @@ async def run_session(dry_run: bool):
     except Exception as e:  # noqa: BLE001 - without MT5 there is no market
         log.error("MT5 data feed failed: %s", e)
         await emit("MT5_DATA_DOWN", {"error": str(e)[:200],
-                                     "note": "no quotes possible; retry in 60s"})
-        await sleep_interruptible(60)     # [v1.05] no tight retry loop
+                                     "note": "no quotes possible; session aborted"})
         return
 
     # ---- MT5 executor (demo account) ----
@@ -143,10 +142,8 @@ async def run_session(dry_run: bool):
         await om.connect()
     except Exception as e:  # noqa: BLE001
         log.error("MT5 executor connect failed: %s", e)
-        await emit("MT5_EXEC_DOWN", {"error": str(e)[:200],
-                                     "note": "retry in 60s"})
+        await emit("MT5_EXEC_DOWN", {"error": str(e)[:200]})
         mt5data.shutdown()
-        await sleep_interruptible(60)     # [v1.05] no tight retry loop
         return
 
     try:
@@ -174,9 +171,6 @@ async def run_session(dry_run: bool):
     pending_entry = False
     touches: dict[int, int] = {}      # fade touches per wall per day
     last_beat = datetime.now(ET)
-    last_quote_ok = datetime.now(ET)
-    last_reconnect = datetime.min.replace(tzinfo=ET)   # first retry: no wait
-    mt5_backoff = 30
     sess_mismatch_warned = False
     last_gex_ok = True
 
@@ -192,25 +186,8 @@ async def run_session(dry_run: bool):
         # ---- spot: MT5 live quote (entry trigger price source) ----
         q = mt5data.quote()
         if not q:
-            # [v1.05 RESILIENT] MT5 terminal down/disconnected: reconnect with
-            # backoff. A live position keeps its broker-side SL/TP meanwhile.
-            if (now - last_quote_ok).total_seconds() >= config.MT5_STALE_SEC and \
-                    (now - last_reconnect).total_seconds() >= mt5_backoff:
-                last_reconnect = now
-                await emit("MT5_RECONNECT", {"no_quote_s": int((now - last_quote_ok).total_seconds()),
-                                             "backoff_s": mt5_backoff})
-                try:
-                    mt5data.shutdown()
-                    await mt5data.connect()
-                    await om.connect()
-                    mt5_backoff = 30
-                    await emit("MT5_RECONNECTED", {})
-                except Exception as e:  # noqa: BLE001
-                    mt5_backoff = min(mt5_backoff * 2, 300)
-                    await emit("MT5_RECONNECT_FAIL", {"error": str(e)[:200]})
             await asyncio.sleep(config.LOOP_CADENCE_SEC)
             continue
-        last_quote_ok = now
         bid, ask = q
         spot = (bid + ask) / 2
 

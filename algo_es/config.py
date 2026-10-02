@@ -227,3 +227,5 @@ GLOBEX_QTY = _i("ES_GLOBEX_QTY", 1)
 GLOBEX_ALL_HOURS = _b("ES_GLOBEX_ALL_HOURS", True)
 GLOBEX_REFRESH_SEC = _f("ES_GLOBEX_REFRESH_SEC", 30)
 
+# [v1.05 RESILIENT] no MT5 quote for this long -> reconnect (30s..300s backoff)
+MT5_STALE_SEC = _f("ES_MT5_STALE_SEC", 60)

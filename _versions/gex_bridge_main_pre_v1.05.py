@@ -348,16 +348,9 @@ async def amain(args):
                 await _weekend_sleep(now)
                 continue
 
-            was_up = ib.isConnected()
             if not await ibkr_conn.ensure_connected(ib):
                 await asyncio.sleep(30)
                 continue
-            if not was_up:
-                # [v1.05 RESILIENT] a reconnect drops every market-data
-                # subscription: throw the chain away so _ensure_day/_ensure_es
-                # resubscribe instead of publishing frozen quotes forever.
-                log.warning("IBKR reconnected - rebuilding chain + ES subscriptions")
-                state.clear()
 
             await _ensure_es(ib, state)
 

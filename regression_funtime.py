@@ -30,6 +30,12 @@ v1.03 2026-10-01  [SPREAD10X] R12: 0DTE 10-pt debit spreads end-to-end in a dry 
       of algo main.run_session (algo/sim_spread_test.py, S1-S8): 10X lock + trail,
       cap fill, lock exits at >= 10X, >$1.00 debit refused, lowest debit chosen,
       naked mode intact, 10 contracts, no exit before 10X except the 15:55 flat.
+v1.04 2026-10-01  [RESILIENT] R13: outages. 0DTE (algo/sim_outage_test.py O1-O3):
+      IBKR drop mid-trade carries + resumes the position, stale bridge data
+      freezes exits, IBKR down at start retries every 60s. ES (sim_globex_test D):
+      MT5 quotes vanish -> reconnect, loop survives. Supervisor restarts a
+      component forever (was: gave up after 5). Bridge rebuilds subscriptions
+      after an IBKR reconnect. O1/O2 and D verified to FAIL on the pre-v1.05 code.
 """
 import ast, base64, datetime as dt, math, os, random, re, shutil, subprocess, sys, tempfile
 
@@ -264,6 +270,42 @@ try:
 except ImportError:
     check("R12 0DTE 10-pt spreads with 10X lock (dry run S1-S8)", False,
           "ib_insync not installed (pip install -r requirements.txt)")
+
+# R13 outage behaviour --------------------------------------------------------
+r13 = []
+out = subprocess.run([sys.executable, "sim_outage_test.py"], cwd=os.path.join(HERE, "algo"),
+                     capture_output=True, text=True, timeout=300)
+if out.returncode != 0:
+    r13.append("0DTE: " + "; ".join(l for l in out.stdout.splitlines() if l.startswith("FAIL"))[:300]
+               or out.stderr.strip()[-200:])
+code_sup = r"""
+import sys, types, threading, time
+sys.argv = ['run_all.py']
+import run_all
+starts = []
+class P:
+    def __init__(self, *a, **k):
+        starts.append(1)
+        if len(starts) > 8: raise SystemExit
+        self.stdout = []; self.returncode = 1
+    def wait(self): return 1
+run_all.subprocess.Popen = P
+run_all.time.sleep = lambda s: None
+try:
+    run_all.run_component('x', 'gex_bridge/main.py', [])
+except SystemExit:
+    pass
+print(len(starts))
+"""
+o = subprocess.run([sys.executable, "-c", code_sup], cwd=HERE, capture_output=True, text=True, timeout=60)
+last = (o.stdout.strip().splitlines() or [""])[-1]
+if last != "9":
+    r13.append("supervisor restarts %r (want unlimited) %s" % (last, o.stderr.strip()[-150:]))
+br = open(os.path.join(HERE, "gex_bridge", "main.py"), encoding="utf-8").read()
+if "was_up = ib.isConnected()" not in br or "state.clear()" not in br:
+    r13.append("bridge does not rebuild subscriptions after an IBKR reconnect")
+check("R13 outages: IBKR/MT5 down -> retry, carry, freeze; supervisor never gives up",
+      not r13, "; ".join(r13))
 
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

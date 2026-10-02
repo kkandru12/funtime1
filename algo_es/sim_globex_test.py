@@ -10,6 +10,10 @@ Scenarios
      SIM_ENTER trigger globex_smacross, then price rallies -> CLOSED target-2
   B  stub fires BUY with the stop ABOVE price    -> GLOBEX_REJECT, no entry
   C  real strategies (no stub) on 30 bars       -> loop runs, no exception
+  D  [v1.05 RESILIENT] MT5 quotes vanish mid-session -> MT5_RECONNECT, the
+     feed reconnects (MT5_RECONNECTED), quotes return and the loop goes on
+     (no crash, no exit); IBKR/bridge down (no levels.json) never stops the
+     Globex sleeve -- it already runs with gex=None in A-C
 """
 import asyncio, os, sys, tempfile, types
 from datetime import datetime, timedelta, timezone
@@ -40,8 +44,12 @@ class FakeMT5(types.ModuleType):
         self.path = None         # optional fn(minute) -> price
         self.max_loops = 40
         self.stop_event = None
+        self.outage = None
+        self.inits = 0
 
-    def initialize(self, path=None): return True
+    def initialize(self, path=None):
+        self.inits += 1
+        return True
     def login(self, *a, **k): return True
     def last_error(self): return (0, "ok")
     def shutdown(self): pass
@@ -55,6 +63,10 @@ class FakeMT5(types.ModuleType):
 
     def symbol_info_tick(self, s):
         self.minute += 1
+        if self.outage and self.outage[0] <= self.minute < self.outage[1]:
+            if self.minute >= self.max_loops and self.stop_event:
+                self.stop_event.set()
+            return None                      # terminal down: no tick
         if self.path:
             self.px = self.path(self.minute)
         if self.minute >= self.max_loops and self.stop_event:
@@ -152,6 +164,18 @@ if "GLOBEX_SLEEVE" not in names(evC) or "SESSION_LOOP_END" not in names(evC):
 sleeve = [d for e, d in evC if e == "GLOBEX_SLEEVE"]
 if sleeve and len(sleeve[0]["strategies"]) != 6:
     fails.append("C: expected 6 strategies, got %s" % sleeve[0]["strategies"])
+
+# D ------------------------------------------------------------------------
+config.MT5_STALE_SEC = 0
+fake.outage = (5, 12)
+inits0 = fake.inits
+evD = asyncio.run(run("vob,bb2c,dma520,smacross,fivedma", loops=25))
+nD = names(evD)
+if "MT5_RECONNECT" not in nD: fails.append("D: no MT5_RECONNECT during the outage")
+if "MT5_RECONNECTED" not in nD: fails.append("D: feed never reconnected")
+if fake.inits <= inits0 + 2: fails.append("D: MT5 initialize() not called again")
+if "SESSION_LOOP_END" not in nD: fails.append("D: loop did not survive the outage")
+fake.outage = None
 
 for f in fails:
     print("FAIL", f)
