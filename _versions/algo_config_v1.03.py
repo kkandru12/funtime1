@@ -143,16 +143,6 @@ REGIME_SIZE_MULT = _f("CRUSH_REGIME_SIZE_MULT", 1.5)
 REGIME_TRADE_CAP = _f("CRUSH_REGIME_TRADE_CAP", 300.0)  # hard $ cap per trade, live mode
 
 # ---------------- risk ----------------
-# [v1.04 SPREAD10X] vehicle: "spread" = 10-pt debit spreads (see spreads.py),
-# "naked" = single long options (the v3 behaviour).
-VEHICLE = _s("CRUSH_VEHICLE", "spread").strip().lower()
-SPREAD_WIDTH = _f("CRUSH_SPREAD_WIDTH", 10.0)       # points between the legs
-SPREAD_MIN_MULT = _f("CRUSH_SPREAD_MIN_MULT", 10.0) # must be able to pay >= 10X
-SPREAD_MIN_DEBIT = _f("CRUSH_SPREAD_MIN_DEBIT", 0.05)
-SPREAD_LOCK_MULT = _f("CRUSH_SPREAD_LOCK_MULT", 10.0)  # lock floor at 10X
-SPREAD_LOCK_TICKS = _i("CRUSH_SPREAD_LOCK_TICKS", 2)   # loops below floor -> sell
-SPREAD_CAP_PCT = _f("CRUSH_SPREAD_CAP_PCT", 0.95)      # resting sell at 95% of width
-
 # [v1.03 FIXEDQTY] KK: every 0DTE order is exactly 10 contracts.  >0 overrides
 # the $-risk sizing (RISK_PER_TRADE // premium) and the regime size-up.
 FIXED_QTY = _i("CRUSH_FIXED_QTY", 10)

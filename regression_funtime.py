@@ -26,6 +26,10 @@ v1.01 2026-10-01  [GLOBEXWIRE] R10: end-to-end dry run of algo_es main.run_sessi
 v1.02 2026-10-01  [FIXEDQTY] R11: ES sizing is exactly ES_FIXED_QTY (1) for every
       stop distance incl. overnight halving; 0DTE sizing is exactly CRUSH_FIXED_QTY
       (10) for every premium incl. regime size-up.
+v1.03 2026-10-01  [SPREAD10X] R12: 0DTE 10-pt debit spreads end-to-end in a dry run
+      of algo main.run_session (algo/sim_spread_test.py, S1-S8): 10X lock + trail,
+      cap fill, lock exits at >= 10X, >$1.00 debit refused, lowest debit chosen,
+      naked mode intact, 10 contracts, no exit before 10X except the 15:55 flat.
 """
 import ast, base64, datetime as dt, math, os, random, re, shutil, subprocess, sys, tempfile
 
@@ -248,6 +252,18 @@ o = subprocess.run([sys.executable, "-c", code_od], cwd=os.path.join(HERE, "algo
 if o.stdout.strip() != "[10]":
     r11.append("0DTE sizes %r %s" % (o.stdout.strip(), o.stderr.strip()[-150:]))
 check("R11 fixed sizes: ES 1 contract, 0DTE 10 contracts", not r11, "; ".join(r11))
+
+# R12 0DTE spread vehicle ---------------------------------------------------
+try:
+    import ib_insync  # noqa: F401
+    out = subprocess.run([sys.executable, "sim_spread_test.py"], cwd=os.path.join(HERE, "algo"),
+                         capture_output=True, text=True, timeout=300)
+    tail = [l for l in out.stdout.splitlines() if l.startswith(("FAIL", "SIM"))]
+    check("R12 0DTE 10-pt spreads with 10X lock (dry run S1-S8)", out.returncode == 0,
+          "; ".join(tail[-5:]) or out.stderr.strip()[-300:])
+except ImportError:
+    check("R12 0DTE 10-pt spreads with 10X lock (dry run S1-S8)", False,
+          "ib_insync not installed (pip install -r requirements.txt)")
 
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

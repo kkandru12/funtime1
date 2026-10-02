@@ -135,7 +135,10 @@ ES_EXCHANGE = _s("BRIDGE_ES_EXCHANGE", "CME")
 LINE_HARD_CAP = 100
 LINE_TARGET = 75
 SPX_LINES = 1
-ACTIVE_WINDOW_PTS = _i("BRIDGE_ACTIVE_WINDOW_PTS", 50)
+# [v1.04 SPREAD10X] 65 (was 50): window-A spreads buy 40-55 OTM and sell 10
+# further out, so the short legs (50-65 OTM) must be streamed too.
+# 27 strikes x 2 rights = 54 + crush band 20 + SPX + ES = 76 lines (cap 100).
+ACTIVE_WINDOW_PTS = _i("BRIDGE_ACTIVE_WINDOW_PTS", 65)
 STRIKE_STEP = 5
 CRUSH_BAND_MIN_OTM = _i("BRIDGE_CRUSH_BAND_MIN_OTM", 55)
 CRUSH_BAND_MAX_OTM = _i("BRIDGE_CRUSH_BAND_MAX_OTM", 95)

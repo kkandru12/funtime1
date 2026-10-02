@@ -14,10 +14,6 @@ connect (paper-gated) -> wait for bridge levels -> trade -> 15:55 flatten
 09:30 ET. Ctrl+C / SIGTERM always exits promptly (flatten first).
 Pass --oneshot for a single session (debugging).
 
-v1.04 2026-10-01 [SPREAD10X] CRUSH_VEHICLE=spread (default): the bridge's
-candidates become 10-pt debit spreads (lowest debit that can pay >= 10X),
-10X locked once reached -- see spreads.py.  =naked keeps single options.
-
 Default is DRY-RUN (no orders). Pass --live to transmit on the PAPER
 account (still hard-gated to DU* paper accounts; live money impossible).
 """
@@ -37,8 +33,6 @@ from ibkr_conn import connect_ib, ensure_connected, account_net_liq
 from strategy import (HOLD, T1_FILL, T2_FILL, TP_TOUCH, TRAIL_STOP, STOP,
                       FLATTEN)
 from orders import OrderManager, COMMISSION
-import spreads
-from spreads import CAP_FILL
 from risk import RiskManager
 
 ET = ZoneInfo("America/New_York")
@@ -242,7 +236,6 @@ async def run_session(dry_run: bool, args):
     pending_entry = False
     last_beat = datetime.now(ET)
     last_scan_log = 0
-    last_spread_log = 0
 
     await emit("RUN", {"note": "entering main loop (consumer mode)"})
     while not _shutdown.is_set():
@@ -275,9 +268,7 @@ async def run_session(dry_run: bool, args):
                     fpnl = position.apply_tier_fill(tier, fq, fpx) - COMMISSION
                 risk.register_partial(fpnl)
                 if tier == 0:
-                    await emit("CLOSED", {"key": position.key,
-                                          "reason": ("spread-cap" if getattr(
-                                              position, "is_spread", False) else "tp-10x"),
+                    await emit("CLOSED", {"key": position.key, "reason": "tp-10x",
                                           "pnl": round(fpnl, 2),
                                           "exit_px": round(fpx, 2),
                                           "peak_x": round(position.peak_multiple, 2),
@@ -300,7 +291,8 @@ async def run_session(dry_run: bool, args):
             position.drain_tier_fills() if position else None
 
             if position:
-                bid = om.mark(position)   # option bid, or spread natural value
+                q = levels.quote(position.key)
+                bid = q[0] if q and q[0] else 0.0
                 action = position.update(now, bid, spot)
                 for tier, fq, fpx, fpnl0 in position.drain_tier_fills():
                     fpnl = fpnl0 - COMMISSION
@@ -321,12 +313,9 @@ async def run_session(dry_run: bool, args):
                                 "trigger": position.trigger})
                 if action == TP_TOUCH:
                     await om.arm_trail(position, bid)
-                elif action in (STOP, TRAIL_STOP, FLATTEN, CAP_FILL):
+                elif action in (STOP, TRAIL_STOP, FLATTEN):
                     reason = {"STOP": "stop-loss", "TRAIL_STOP": "trail-stop",
-                              "FLATTEN": "15:55-flat",
-                              "CAP_FILL": "spread-max"}[action]
-                    if action == TRAIL_STOP and getattr(position, "is_spread", False):
-                        reason = "10x-lock"
+                              "FLATTEN": "15:55-flat"}[action]
                     pnl = await om.close(position, reason)
                     risk.register_close(pnl)
                     await emit("CLOSED", {"key": position.key, "reason": reason,
@@ -359,13 +348,6 @@ async def run_session(dry_run: bool, args):
             else:
                 cands = levels.candidates()
                 cand = cands[0] if cands else None
-                if cand is not None and config.VEHICLE == "spread":
-                    cand, sp_rej = spreads.pick(cands, levels.quote)
-                    if cand is None and \
-                            now.timestamp() - last_spread_log > 60:
-                        last_spread_log = now.timestamp()
-                        await emit("SPREAD_NONE", {"candidates": len(cands),
-                                                   "rejects": sp_rej})
                 if cand is not None:
                     ok, why = risk.can_enter(
                         now, False, cand.get("trigger", "crush"))
@@ -383,18 +365,10 @@ async def run_session(dry_run: bool, args):
                             "wb_side": cand.get("wb_side"),
                             "flip": (lv or {}).get("flip"),
                             "regime_score": regime_score,
-                            "qty": qty,
-                            "vehicle": cand.get("vehicle", "naked"),
-                            "debit": cand.get("debit"),
-                            "max_mult": cand.get("max_mult"),
-                            "legs": ([cand.get("long_key"), cand.get("short_key")]
-                                     if cand.get("vehicle") == "spread" else None)})
+                            "qty": qty})
                         pending_entry = True
                         try:
-                            if cand.get("vehicle") == "spread":
-                                position = await om.enter_spread(cand, qty, now)
-                            else:
-                                position = await om.enter(cand, qty, now)
+                            position = await om.enter(cand, qty, now)
                             if position is None:
                                 await emit("NO_FILL", {
                                     "key": cand["key"],
