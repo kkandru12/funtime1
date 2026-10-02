@@ -1,8 +1,5 @@
 """ES futures GEX algo - always-on main loop (CONSUMER mode).
 
-v1.09 2026-10-02 [NATIVECLOSE] any broker-side close that leaves 0 contracts
-    ends the position and books the full realized P&L (tp1 part included).
-
 v1.08 2026-10-02 [DASHSTATUS] every 5 s writes logs/status_es.json (price,
     position, stop/target, open P&L, day P&L) for the read-only dashboard.
 
@@ -324,29 +321,21 @@ async def run_session(dry_run: bool):
                 # live: the exchange drives fills via native OCA brackets
                 for leg, fq, px in om.check_native_fills(position):
                     pnl = position.on_fill(fq, px, leg)
-                    position._fees = getattr(position, "_fees", 0.0) + \
-                        om.commission_rt * fq
                     await emit("NATIVE_FILL", {"leg": leg, "qty": fq,
                                                "px": round(px, 2),
                                                "pnl": round(pnl, 2)})
-                    # [v1.09 NATIVECLOSE] ANY broker close that leaves no
-                    # contracts ends the position -- also a slipped stop, a
-                    # manual close or another program on the shared account
-                    # (leg "exit"). v1.08 ignored "exit": the bot kept a
-                    # phantom position (blocking all entries, P&L lost) until
-                    # a restart "closed" it for $0 (live 01:01 and 01:28).
-                    if position.qty <= 0 or leg in ("stop", "tp2"):
-                        total = position.realized - position._fees
-                        risk.register_close(total)
+                    if leg == "tp1":
+                        await om.rebracket_breakeven(position)
+                    elif leg in ("stop", "tp2"):
+                        pnl -= om.commission_rt * fq
+                        risk.register_close(pnl)
                         await emit("CLOSED", {
                             "trigger": position.trigger,
                             "reason": "native-" + leg,
-                            "pnl": round(total, 2),
+                            "pnl": round(pnl, 2),
                             "held_min": position.held_minutes(now)})
                         position = None
                         break
-                    if leg == "tp1":
-                        await om.rebracket_breakeven(position)
                 if position and flatten_now:
                     pnl = await om.close(position, "pre-halt-flat", leg="exit")
                     risk.register_close(pnl)

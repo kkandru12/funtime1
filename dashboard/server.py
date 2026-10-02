@@ -100,7 +100,8 @@ def state():
     es_ev = _events(os.path.join(LOGS, f"algo_es_{day}.jsonl"),
                     {"ENTER", "SIM_ENTER", "FILL", "SIM_FILL", "CLOSED", "NO_FILL",
                      "ORDER_REJECT", "GLOBEX_SIGNAL", "GLOBEX_REJECT", "MT5_RECONNECT",
-                     "MT5_RECONNECT_FAIL", "MT5_DATA_DOWN", "MT5_EXEC_DOWN", "RISK_BLOCK"})
+                     "MT5_RECONNECT_FAIL", "MT5_DATA_DOWN", "MT5_EXEC_DOWN", "RISK_BLOCK",
+                     "NATIVE_FILL", "CLOSE_SKIPPED", "EXIT_ORDER"})
     od_ev = _events(os.path.join(LOGS, f"algo_{day}.jsonl"),
                     {"CANDIDATE", "ENTER", "SIM_ENTER", "FILL", "SIM_FILL", "TIER_FILL",
                      "TRAIL_ARM", "CLOSED", "NO_FILL", "ENTER_UNFILLED", "SPREAD_NONE",

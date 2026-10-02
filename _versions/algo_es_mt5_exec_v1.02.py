@@ -1,7 +1,4 @@
-"""
-v1.09 2026-10-02 [CLOSEGUARD] close() checks the ticket is still open at the
-    broker before sending; a missing ticket never produces a blind order.
-MT5 execution backend for the ES futures GEX algo.
+"""MT5 execution backend for the ES futures GEX algo.
 
 Mirrors orders.OrderManager's interface (enter / place_bracket /
 rebracket_breakeven / check_native_fills / close / bind_es) so main.py can
@@ -384,27 +381,6 @@ class MT5Executor:
             return pnl
         mt5 = self.mt5
         ticket = self._tickets.get(id(pos))
-        # [v1.09 CLOSEGUARD] never send a "close" for a trade the broker no
-        # longer holds: on a netting account that order would OPEN a new
-        # opposite position.
-        if ticket:
-            try:
-                still = await asyncio.to_thread(mt5.positions_get, ticket=ticket)
-            except Exception:  # noqa: BLE001
-                still = None
-            if still is not None and len(still) == 0:
-                await self.emit("CLOSE_SKIPPED", {
-                    "reason": reason, "ticket": ticket,
-                    "note": "already closed at the broker -- no order sent"})
-                pos.qty = 0
-                self._tickets.pop(id(pos), None)
-                return 0.0
-        else:
-            await self.emit("CLOSE_SKIPPED", {
-                "reason": reason, "ticket": None,
-                "note": "no broker ticket known -- no blind close sent"})
-            log.error("close(%s): no ticket for position; check MT5 by hand", reason)
-            return 0.0
         tick = await asyncio.to_thread(mt5.symbol_info_tick, self.symbol)
         is_long = pos.side == "long"
         price = _tick((tick.bid if is_long else tick.ask)

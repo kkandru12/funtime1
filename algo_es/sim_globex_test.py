@@ -10,6 +10,11 @@ Scenarios
      SIM_ENTER trigger globex_smacross, then price rallies -> CLOSED target-2
   B  stub fires BUY with the stop ABOVE price    -> GLOBEX_REJECT, no entry
   C  real strategies (no stub) on 30 bars       -> loop runs, no exception
+  F  [v1.09 NATIVECLOSE] LIVE path (fake order_send / deals): the broker
+     closes the trade at a SLIPPED stop (not within 2 ticks) -> CLOSED
+     native-exit with the loss booked, and a later signal can enter again
+  G  [v1.09 CLOSEGUARD] the broker already closed the trade but the bot does
+     not know -> at session end NO close order is sent (CLOSE_SKIPPED)
   D  [v1.05 RESILIENT] MT5 quotes vanish mid-session -> MT5_RECONNECT, the
      feed reconnects (MT5_RECONNECTED), quotes return and the loop goes on
      (no crash, no exit); IBKR/bridge down (no levels.json) never stops the
@@ -190,6 +195,92 @@ config.FIVEDMA_ENTRY = "m1"
 sigE = [d for e, d in evE if e == "GLOBEX_SIGNAL"]
 if sigE: fails.append("E: 5DMA-STRUCT fired on startup from old daily bars: %s" % sigE[:1])
 _g.FiveDMAStruct = real5
+
+# F / G: live path -----------------------------------------------------------
+import types as _types
+class LiveBits:
+    def __init__(self): self.reset()
+    def reset(self, slip_close_at=None, deal=True):
+        self.open = {}; self.sent = []; self.ticket = 1000
+        self.slip_close_at = slip_close_at; self.deal = deal; self.deals = []
+LB = LiveBits()
+def _order_send(req):
+    LB.sent.append(dict(req))
+    if req.get("position_id"):                       # a close
+        LB.open.pop(req["position_id"], None)
+        return _types.SimpleNamespace(retcode=10009, volume=req["volume"], price=req["price"], comment="ok")
+    LB.ticket += 1
+    LB.open[LB.ticket] = _types.SimpleNamespace(ticket=LB.ticket, magic=req["magic"], symbol=req["symbol"],
+                                                type=req["type"], sl=req["sl"], tp=req["tp"])
+    return _types.SimpleNamespace(retcode=10009, volume=req["volume"], price=req["price"], comment="ok")
+def _positions_get(symbol=None, ticket=None):
+    if ticket is not None:
+        return tuple(p for t, p in LB.open.items() if t == ticket)
+    return tuple(LB.open.values())
+def _history_deals_get(a, b):
+    return tuple(LB.deals)
+def _tick_hook():
+    # broker closes the open trade at a slipped price once the minute is reached
+    if LB.slip_close_at and fake.minute >= LB.slip_close_at and LB.open:
+        t, p = next(iter(LB.open.items()))
+        LB.open.pop(t)
+        if LB.deal:
+            LB.deals.append(_types.SimpleNamespace(position_id=t, ticket=900 + len(LB.deals),
+                            entry=fake.DEAL_ENTRY_OUT, symbol=p.symbol, volume=1.0, price=p.sl - 1.5))
+        LB.slip_close_at = None
+fake.order_send = _order_send
+fake.positions_get = _positions_get
+fake.history_deals_get = _history_deals_get
+_orig_tick = FakeMT5.symbol_info_tick
+def _tick(self, s):
+    r = _orig_tick(self, s); _tick_hook(); return r
+FakeMT5.symbol_info_tick = _tick
+
+def stub_twice():
+    class Stub:
+        def __init__(self, cfg=None): self.n = 0
+        def on_bar(self, bar, state):
+            self.n += 1
+            if self.n in (3, 15):
+                p = state["last_price"]
+                return Signal("buy", p, p - 10, p + 20, "SMA_CROSS", "stub")
+            return None
+    return Stub
+
+async def run_live(strats, loops):
+    events = []
+    async def emit(ev, data): events.append((ev, data))
+    main.emit = emit
+    main._shutdown = asyncio.Event()
+    fake.minute, fake.px, fake.path, fake.max_loops = 0, 7700.0, None, loops
+    fake.stop_event = main._shutdown
+    config.GLOBEX_STRATEGIES = strats
+    await asyncio.wait_for(main.run_session(dry_run=False), timeout=60)
+    return events
+
+strategies.STRATEGIES["smacross"] = stub_twice()
+_g.STRATEGIES = strategies.STRATEGIES
+LB.reset(slip_close_at=8, deal=True)
+evF = asyncio.run(run_live("smacross", 30))
+nF = names(evF)
+cF = [d for e, d in evF if e == "CLOSED"]
+if not any(d.get("reason") == "native-exit" and d.get("pnl", 0) < 0 for d in cF):
+    fails.append("F: slipped broker stop not booked as CLOSED native-exit: %s" % cF[:2])
+if nF.count("ENTER") < 2:
+    fails.append("F: bot stayed stuck after the broker close (entries: %d)" % nF.count("ENTER"))
+
+strategies.STRATEGIES["smacross"] = stub_class(-10, +20)
+_g.STRATEGIES = strategies.STRATEGIES
+LB.reset(slip_close_at=8, deal=False)              # broker closed it, no deal seen
+evG = asyncio.run(run_live("smacross", 14))
+closes_sent = [r for r in LB.sent if r.get("position_id")]
+if closes_sent:
+    fails.append("G: a close order was sent for a trade the broker had already closed: %s" % closes_sent)
+if "CLOSE_SKIPPED" not in names(evG):
+    fails.append("G: no CLOSE_SKIPPED event")
+strategies.STRATEGIES["smacross"] = real_sma
+_g.STRATEGIES = strategies.STRATEGIES
+FakeMT5.symbol_info_tick = _orig_tick
 
 # D ------------------------------------------------------------------------
 config.MT5_STALE_SEC = 0
