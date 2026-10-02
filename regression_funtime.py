@@ -528,5 +528,46 @@ if got != "[200, 1, 1, 405, 405, 405, 404]":
 check("R19 dashboard read-only: GET works from files, writes 405, no file paths, no broker code",
       not r19, "; ".join(r19))
 
+# R20 TWS + Gateway: falls back 7497 -> 4002, remembers the good port ------
+r20 = []
+code20 = r"""
+import sys, types, asyncio
+fake = types.ModuleType('ib_insync')
+class IB:
+    up = {4002}
+    def __init__(s): s.c = False; s.tried = []
+    async def connectAsync(s, h, p, clientId=0, timeout=0):
+        s.tried.append(p)
+        if p not in IB.up: raise ConnectionRefusedError('refused')
+        s.c = True
+    def isConnected(s): return s.c
+    def disconnect(s): s.c = False
+fake.IB = IB
+sys.modules['ib_insync'] = fake
+out = []
+for comp in ('gex_bridge', 'algo'):
+    for m in ('config', 'ibkr_conn'): sys.modules.pop(m, None)
+    sys.path.insert(0, comp)
+    import config, ibkr_conn
+    sys.path.pop(0)
+    ib = IB()
+    p1 = asyncio.run(ibkr_conn._try_ports(ib, 't'))
+    ib2 = IB(); p2 = asyncio.run(ibkr_conn._try_ports(ib2, 't'))
+    IB.up = set()
+    try: asyncio.run(ibkr_conn._try_ports(IB(), 't')); bad = 'no-raise'
+    except ConnectionError: bad = 'raise'
+    IB.up = {4002}
+    out.append((config.IB_PORTS[:2], p1, ib.tried, ib2.tried, bad))
+print(out)
+"""
+o = subprocess.run([sys.executable, "-c", code20], cwd=HERE, capture_output=True, text=True, timeout=60,
+                   env=dict(os.environ, BRIDGE_IB_PORTS="", CRUSH_IB_PORTS=""))
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+want = str([([7497, 4002], 4002, [7497, 4002], [4002], 'raise')] * 2)
+if got != want:
+    r20.append("port fallback %r %s" % (got, o.stderr.strip()[-300:]))
+check("R20 IBKR TWS(7497) + Gateway(4002) fallback, last good port first, both components",
+      not r20, "; ".join(r20))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

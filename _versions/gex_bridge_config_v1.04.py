@@ -77,13 +77,6 @@ def _b(name, default):
 # ---------------- IBKR connection (DATA ONLY — never places orders) ----------------
 IB_HOST = _s("BRIDGE_IB_HOST", "127.0.0.1")
 IB_PORT = _i("BRIDGE_IB_PORT", 7497)   # TWS paper; Gateway paper=4002
-# [v1.10 TWSGW] TWS *and* IB Gateway: try these ports in order, first that
-# answers wins (7497 = TWS paper, 4002 = Gateway paper). An explicitly set
-# BRIDGE_IB_PORT is tried first. Live-money ports (7496/4001) are NOT in the
-# default list, and the paper gate still refuses non-DU accounts.
-IB_PORTS = [int(x) for x in (_s("BRIDGE_IB_PORTS", "") or "7497,4002").split(",") if x.strip()]
-if os.getenv("BRIDGE_IB_PORT"):
-    IB_PORTS = [IB_PORT] + [x for x in IB_PORTS if x != IB_PORT]
 IB_CLIENT_ID = _i("BRIDGE_IB_CLIENT_ID", 1)   # THE streaming connection
 CONNECT_TIMEOUT = _f("BRIDGE_CONNECT_TIMEOUT", 20)
 CONNECT_RETRIES = _i("BRIDGE_CONNECT_RETRIES", 10)

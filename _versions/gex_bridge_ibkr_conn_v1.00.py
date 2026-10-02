@@ -1,5 +1,4 @@
-"""v1.10 TWSGW 2026-10-02: tries TWS 7497 and Gateway 4002 (IB_PORTS).
-IBKR connection for gex_bridge: DATA ONLY.
+"""IBKR connection for gex_bridge: DATA ONLY.
 
 This process NEVER places orders (no placeOrder call exists anywhere in
 gex_bridge/), so there is no paper-gate here — the gate lives in the
@@ -17,53 +16,18 @@ import config
 log = logging.getLogger("bridge.ibkr")
 
 
-# v1.10 TWSGW: try TWS (7497) and IB Gateway (4002) - last good port first.
-_last_port = None
-
-
-def _ports():
-    ps = list(getattr(config, "IB_PORTS", None) or [config.IB_PORT])
-    if _last_port in ps:
-        ps = [_last_port] + [p for p in ps if p != _last_port]
-    return ps
-
-
-def _kind(p):
-    return "TWS" if p in (7496, 7497) else "Gateway" if p in (4001, 4002) else "port"
-
-
-async def _try_ports(ib, tag):
-    """Connect on the first port that answers; raise if none do."""
-    global _last_port
-    errs = []
-    for p in _ports():
-        try:
-            log.info("%s -> %s:%d (%s) clientId=%d", tag, config.IB_HOST, p,
-                     _kind(p), config.IB_CLIENT_ID)
-            await ib.connectAsync(config.IB_HOST, p,
-                                  clientId=config.IB_CLIENT_ID,
-                                  timeout=config.CONNECT_TIMEOUT)
-            if ib.isConnected():
-                if p != _last_port:
-                    log.info("IBKR connected via %s on port %d", _kind(p), p)
-                _last_port = p
-                return p
-        except Exception as e:  # noqa: BLE001
-            errs.append("%d: %s" % (p, e or type(e).__name__))
-        try:
-            ib.disconnect()
-        except Exception:  # noqa: BLE001
-            pass
-    raise ConnectionError("no IBKR on " + ", ".join(errs))
-
-
 async def connect_ib() -> IB:
     ib = IB()
     delay = 2.0
     last_err = None
     for attempt in range(1, config.CONNECT_RETRIES + 1):
         try:
-            await _try_ports(ib, "connect attempt %d" % attempt)
+            log.info("bridge connect attempt %d -> %s:%d clientId=%d",
+                     attempt, config.IB_HOST, config.IB_PORT,
+                     config.IB_CLIENT_ID)
+            await ib.connectAsync(config.IB_HOST, config.IB_PORT,
+                                  clientId=config.IB_CLIENT_ID,
+                                  timeout=config.CONNECT_TIMEOUT)
             if ib.isConnected():
                 break
         except Exception as e:  # noqa: BLE001
@@ -94,7 +58,9 @@ async def ensure_connected(ib: IB) -> bool:
     delay = 2.0
     for _ in range(config.CONNECT_RETRIES):
         try:
-            await _try_ports(ib, "reconnect")
+            await ib.connectAsync(config.IB_HOST, config.IB_PORT,
+                                  clientId=config.IB_CLIENT_ID,
+                                  timeout=config.CONNECT_TIMEOUT)
             if ib.isConnected():
                 log.info("bridge reconnected OK")
                 return True

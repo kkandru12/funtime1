@@ -58,13 +58,6 @@ def _b(name, default):
 # Gateway paper = 4002 | TWS paper = 7497 (manual backup)
 IB_HOST = _s("CRUSH_IB_HOST", "127.0.0.1")
 IB_PORT = _i("CRUSH_IB_PORT", 7497)  # TWS paper (user runs TWS on VPS); Gateway paper=4002, TWS live=7496
-# [v1.10 TWSGW] TWS *and* IB Gateway: try these ports in order, first that
-# answers wins (7497 = TWS paper, 4002 = Gateway paper). An explicitly set
-# CRUSH_IB_PORT is tried first. Live-money ports (7496/4001) are NOT in the
-# default list, and the paper gate still refuses non-DU accounts.
-IB_PORTS = [int(x) for x in (_s("CRUSH_IB_PORTS", "") or "7497,4002").split(",") if x.strip()]
-if os.getenv("CRUSH_IB_PORT"):
-    IB_PORTS = [IB_PORT] + [x for x in IB_PORTS if x != IB_PORT]
 IB_CLIENT_ID = _i("CRUSH_IB_CLIENT_ID", 7)
 CONNECT_TIMEOUT = _f("CRUSH_CONNECT_TIMEOUT", 20)
 CONNECT_RETRIES = _i("CRUSH_CONNECT_RETRIES", 10)
