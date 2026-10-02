@@ -160,7 +160,6 @@ GENERIC_TICKS = "100,101,106,107"     # volume, OI, bid/ask model Greeks
 PACER_MKT_PER_SEC = _f("BRIDGE_PACER_MKT_PER_SEC", 3.0)
 PACER_MAX_CONCURRENT = _i("BRIDGE_PACER_MAX_CONCURRENT", 8)
 SNAPSHOT_DWELL = _f("BRIDGE_SNAPSHOT_DWELL", 2.5)
-BRIEF_MAX_LINES = _i("BRIDGE_BRIEF_MAX_LINES", 15)   # [NOSNAPGENERIC] brief stream lines open at once
 
 # ---------------- GEX / StableWall ----------------
 GEX_MULT = _f("BRIDGE_GEX_MULT", 100.0)      # SPXW: 1 contract = 100x

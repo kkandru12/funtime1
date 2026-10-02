@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 """
-v1.09 2026-10-02 [SPXFIRST + NOSNAPGENERIC] Live 09:33 the day setup aborted
-    with "no SPX spot": _await_spot() polled the SPX ticker, but the SPX line
-    was only subscribed later inside start_streaming(), so the wait could
-    never succeed. SPX is now subscribed (chain.ensure_spx) BEFORE the OI
-    scan, so spot is live by the time it is needed. Same restart also fixes
-    the OI scan returning 0/602 (see chain.py v1.01).
 v1.08 2026-10-02 [DASHPROFILE] after each 5-min wall evaluation the per-strike
     GEX profile is written to shared/gex_profile.json for the read-only
     dashboard (guarded; levels.json unchanged).
@@ -113,7 +107,6 @@ async def _ensure_day(ib, pacer, state, now) -> bool:
         log.error("chain discovery failed for %s", expiry)
         return False
     _publish_contracts(chain, expiry)
-    await chain.ensure_spx()          # [v1.09 SPXFIRST] spot must be streaming first
     oi = await chain.morning_oi_snapshot()
     if not oi:
         log.error("morning OI snapshot failed")

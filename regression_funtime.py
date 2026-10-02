@@ -619,5 +619,61 @@ if o.stdout.strip() != "['bb2c'] first_m1":
 check("R21 BB-2C on H4+H1; entry = first M1 close back inside the band during the 2nd candle; target 5DMA",
       not r21, "; ".join(r21))
 
+# R22 bridge OI/wing scans never use snapshot=True with generic ticks ------
+r22 = []
+code22 = r"""
+import sys, types, asyncio
+fake = types.ModuleType('ib_insync')
+class T:
+    def __init__(s): s.callOpenInterest = s.putOpenInterest = None; s.bid = s.ask = None
+    askGreeks = bidGreeks = lastGreeks = modelGreeks = None
+class IB:
+    def __init__(s): s.calls = []; s.open = 0; s.peak = 0
+    def reqMktData(s, c, genericTickList='', snapshot=False, regulatorySnapshot=False):
+        if snapshot and genericTickList: raise RuntimeError('321 snapshot+generic')
+        s.calls.append(snapshot); s.open += 1; s.peak = max(s.peak, s.open)
+        t = T()
+        async def fill():
+            await asyncio.sleep(0.3)
+            if c.right == 'C': t.callOpenInterest = 100.0
+            else: t.putOpenInterest = 50.0
+        asyncio.get_event_loop().create_task(fill())
+        return t
+    def cancelMktData(s, c): s.open -= 1
+class C:
+    def __init__(s, k, r): s.strike = k; s.right = r
+for n in ('IB', 'Contract', 'Index', 'Ticker'): setattr(fake, n, IB if n == 'IB' else object)
+sys.modules['ib_insync'] = fake
+sys.path.insert(0, 'gex_bridge')
+import config; config.BRIEF_MAX_LINES = 5; config.PACER_MKT_PER_SEC = 1000
+import chain
+from pacer import Pacer
+async def go():
+    ib = IB(); cs = chain.ChainStream(ib, Pacer(1000, 50))
+    cs.contracts = {(6700.0 + 5*i, r): C(6700.0 + 5*i, r) for i in range(12) for r in 'CP'}
+    oi = await cs.morning_oi_snapshot()
+    class TK:
+        def __init__(s, mp, l, c): s._mp = mp; s.last = l; s.close = c
+        def marketPrice(s): return s._mp
+    nan = float('nan'); sp = []
+    for tk in (TK(nan, nan, 6701.5), TK(6702.0, nan, nan), TK(nan, nan, nan)):
+        cs.spx_ticker = tk; sp.append(cs.spot())
+    sp[2] = sp[2] is None
+    return [sum(1 for v in oi.values() if v > 0), len(oi), any(ib.calls), ib.peak <= 5, ib.open, sp]
+print(asyncio.run(go()))
+"""
+o = subprocess.run([sys.executable, "-c", code22], cwd=HERE, capture_output=True, text=True, timeout=60)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+if got != "[24, 24, False, True, 0, [6701.5, 6702.0, True]]":
+    r22.append("OI scan %r %s" % (got, o.stderr.strip()[-300:]))
+src = open(os.path.join(HERE, "gex_bridge", "chain.py")).read()
+if "snapshot=True" in src.split('"""', 2)[2]:
+    r22.append("gex_bridge/chain.py still requests snapshot=True")
+msrc = open(os.path.join(HERE, "gex_bridge", "main.py")).read()
+if not (0 < msrc.find("chain.ensure_spx()") < msrc.find("_await_spot(chain)")):
+    r22.append("SPX is not subscribed before the spot wait")
+check("R22 bridge: OI scan by brief streaming, lines capped; SPX subscribed before spot wait; NaN-safe spot",
+      not r22, "; ".join(r22))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

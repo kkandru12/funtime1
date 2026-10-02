@@ -1,16 +1,4 @@
-"""v1.01 2026-10-02 [NOSNAPGENERIC] IBKR rejects snapshot=True with generic
-    ticks (Error 321 "Snapshot market data subscription is not applicable to
-    generic ticks"), so the morning OI scan (tick 101) and the wing sweeps
-    (100,101,106,107) never received data -- seen live 2026-10-02 09:32.
-    Both now use a BRIEF STREAMING request: subscribe (snapshot=False), wait
-    until the wanted field arrives or BRIDGE_SNAPSHOT_DWELL passes, cancel.
-    At most BRIDGE_BRIEF_MAX_LINES (default 15) brief lines are open at once,
-    so peak lines stay ~63 streaming + 15 brief < 100 cap.
-    [SPXFIRST] ensure_spx() subscribes the SPX line before the OI scan (main
-    v1.09) -- spot() was polled before SPX was ever subscribed. spot() now
-    skips NaN marketPrice and falls back to last/close.
-
-Market-data layer: chain discovery, morning OI snapshot, line-budgeted
+"""Market-data layer: chain discovery, morning OI snapshot, line-budgeted
 streaming, dynamic window re-centering, wing sweeps, 1-min bars, AllLast flow.
 
 LINE BUDGET (hard cap 100, target <=75 sustained):
@@ -74,7 +62,6 @@ class ChainStream:
     def __init__(self, ib: IB, pacer: Pacer):
         self.ib = ib
         self.pacer = pacer
-        self._brief_sem = None          # [v1.01] created on the running loop
         self.contracts: dict[tuple[float, str], Contract] = {}
         self.expiry = ""
         self.stream: dict[tuple[float, str], Ticker] = {}
@@ -111,49 +98,29 @@ class ChainStream:
         log.info("discovered %d 0DTE SPXW contracts for %s", n, expiry_yyyymmdd)
         return n
 
-    async def _brief(self, contract: Contract, tick_list: str, done):
-        """[v1.01 NOSNAPGENERIC] Short streaming request; returns the Ticker
-        after `done(ticker)` is true or the dwell expires. Line always freed."""
-        if self._brief_sem is None:
-            self._brief_sem = asyncio.Semaphore(config.BRIEF_MAX_LINES)
-        async with self._brief_sem:
-            await self.pacer.acquire()
-            t = self.ib.reqMktData(contract, genericTickList=tick_list,
-                                   snapshot=False, regulatorySnapshot=False)
-            try:
-                waited = 0.0
-                while waited < config.SNAPSHOT_DWELL:
-                    await asyncio.sleep(0.25)
-                    waited += 0.25
-                    try:
-                        if done(t):
-                            break
-                    except Exception:  # noqa: BLE001
-                        pass
-            finally:
-                try:
-                    self.ib.cancelMktData(contract)
-                except Exception:  # noqa: BLE001
-                    pass
-            return t
-
     async def _snapshot_one(self, contract: Contract, tick_list: str):
-        t = await self._brief(contract, tick_list,
-                              lambda x: _greeks_from_ticker(x) is not None)
-        return {"bid": t.bid, "ask": t.ask, "greeks": _greeks_from_ticker(t)}
+        await self.pacer.acquire()
+        t = self.ib.reqMktData(contract, genericTickList=tick_list,
+                               snapshot=True, regulatorySnapshot=False)
+        await asyncio.sleep(config.SNAPSHOT_DWELL)
+        data = {"bid": t.bid, "ask": t.ask, "greeks": _greeks_from_ticker(t)}
+        self.ib.cancelMktData(contract)
+        return data
 
     async def morning_oi_snapshot(self) -> dict:
-        """ONE full-chain OI scan (brief streaming requests, <= BRIEF_MAX_LINES held)."""
+        """ONE full-chain OI snapshot (one-shot requests, no lines held)."""
         log.info("morning OI snapshot: %d contracts", len(self.contracts))
         oi: dict[tuple[float, str], float] = {}
 
         async def one(item):
             key, contract = item
             try:
-                r = key[1]
-                t = await self._brief(contract, "101",
-                                      lambda x: _oi_from_ticker(x, r) > 0)
+                await self.pacer.acquire()
+                t = self.ib.reqMktData(contract, genericTickList="101",
+                                       snapshot=True, regulatorySnapshot=False)
+                await asyncio.sleep(config.SNAPSHOT_DWELL)
                 oi[key] = _oi_from_ticker(t, key[1])
+                self.ib.cancelMktData(contract)
             except Exception as e:
                 log.warning("OI snapshot failed %s: %s", key, e)
 
@@ -237,18 +204,12 @@ class ChainStream:
                     crush.add((k, r))
         return active, crush
 
-    async def ensure_spx(self):
-        """[v1.01 SPXFIRST] Subscribe the SPX index line once (idempotent)."""
-        if self.spx_ticker is not None:
-            return
+    async def start_streaming(self, spot: float):
         await self.pacer.acquire()
         spx = Index(config.UNDERLYING, config.EXCHANGE, "USD")
         await self.ib.qualifyContractsAsync(spx)
         self.spx_ticker = self.ib.reqMktData(spx, "", False, False)
         log.info("SPX streaming subscribed")
-
-    async def start_streaming(self, spot: float):
-        await self.ensure_spx()
         await self.recenter(spot, force=True)
 
     async def recenter(self, spot: float, force: bool = False):
@@ -386,14 +347,8 @@ class ChainStream:
         t = self.spx_ticker
         if t is None:
             return None
-        # [v1.01] NaN is truthy: take the first FINITE positive price
-        for px in (t.marketPrice(), t.last, t.close):
-            try:
-                if px is not None and float(px) > 0 and float(px) == float(px):
-                    return float(px)
-            except (TypeError, ValueError):
-                continue
-        return None
+        px = t.marketPrice() or t.last or t.close
+        return float(px) if px and px > 0 else None
 
     def atm_iv(self) -> float | None:
         s = self.spot()
