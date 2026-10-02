@@ -361,5 +361,61 @@ got = (o.stdout.strip().splitlines() or ["?"])[-1]
 check("R15 DMA-520 fires on a sweep late in the forming candle", got == "40",
       "fired at minute %s (want 40) %s" % (got, o.stderr.strip()[-150:]))
 
+# R16 5DMA intraday: M1-close entry, every touch, NY+GEX block -------------
+code16 = r"""
+import sys, datetime as dt
+sys.path.insert(0, '.')
+import globex
+from zoneinfo import ZoneInfo
+ET = ZoneInfo('America/New_York')
+sl = globex.GlobexSleeve(lambda *a, **k: None, enabled='fivedma', all_hours=True)
+# 25 completed days trending up to 7600; yesterday closes 7700 > 5DMA (uptrend)
+d1 = []
+for k in range(25):
+    c = 7400 + 12 * k
+    d1.append({'time': dt.datetime(2026, 8, 1, tzinfo=ET) + dt.timedelta(days=k),
+               'open': c - 5, 'high': c + 30, 'low': c - 30, 'close': c})
+d1[-1]['close'] = 7700.0
+f5 = sl.strats['fivedma']
+f5.load_days([globex._fbar(b) for b in d1])
+st = f5.setup()
+if not st:
+    # make confluence true: put a round level on the 5DMA
+    pass
+side, dma5, atr = f5.setup() or (None, None, None)
+today = {'time': dt.datetime(2026, 8, 26, tzinfo=ET), 'open': 7700, 'high': 7720, 'low': 7600, 'close': 7700}
+class G:  # GEX active
+    call_wall = put_wall = flip = None; stale = False
+    def gamma_regime(self): return '+'
+def run(times_prices, gex):
+    hits = []
+    for t, (hi, lo, cl) in times_prices:
+        m1 = [{'time': t - dt.timedelta(minutes=1), 'open': cl, 'high': hi, 'low': lo, 'close': cl, 'volume': 1},
+              {'time': t, 'open': cl, 'high': cl, 'low': cl, 'close': cl, 'volume': 0}]
+        sl.load({'m1': m1, 'd1': d1 + [today]})
+        for g in sl.step(t, cl, gex):
+            hits.append((t.strftime('%H:%M'), g['name']))
+            sl.on_position_closed('globex_fivedma')
+    return hits
+if side != 'long':
+    print('setup', side, dma5); raise SystemExit
+D = dma5
+base = dt.datetime(2026, 8, 26, 2, 0, tzinfo=ET)          # Globex hours
+seq = [(D + 20, D + 10, D + 15), (D + 5, D - 1, D + 3),   # touch + close back -> entry
+       (D + 4, D - 2, D + 2),                              # still on the line: no re-entry
+       (D + 25, D + 12, D + 20),                           # traded away -> re-armed
+       (D + 8, D - 1, D + 4)]                              # second touch -> 2nd entry
+g = run([(base + dt.timedelta(minutes=i), p) for i, p in enumerate(seq)], None)
+ny = dt.datetime(2026, 8, 26, 10, 0, tzinfo=ET)            # NY session + GEX
+f5._need_away = False
+b = run([(ny + dt.timedelta(minutes=i), p) for i, p in enumerate(seq)], G())
+print(len(g), len(b))
+"""
+o = subprocess.run([sys.executable, "-c", code16], cwd=os.path.join(HERE, "algo_es"),
+                   capture_output=True, text=True)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+check("R16 5DMA M1-close entry, every touch counts, blocked in NY while GEX active",
+      got == "2 0", "globex/ny entries %r (want '2 0') %s" % (got, o.stderr.strip()[-200:]))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

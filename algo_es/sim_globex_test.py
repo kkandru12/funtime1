@@ -176,7 +176,9 @@ class AlwaysFire(fds.FiveDMAStruct):
         return Signal("short", bar.close, bar.close + 10, bar.close - 20, "5DMA_STRUCT", "stub")
 real5 = _g.FiveDMAStruct
 _g.FiveDMAStruct = AlwaysFire
+config.FIVEDMA_ENTRY = "daily"      # E is about the daily-close path's warm-up
 evE = asyncio.run(run("fivedma", loops=10))
+config.FIVEDMA_ENTRY = "m1"
 sigE = [d for e, d in evE if e == "GLOBEX_SIGNAL"]
 if sigE: fails.append("E: 5DMA-STRUCT fired on startup from old daily bars: %s" % sigE[:1])
 _g.FiveDMAStruct = real5

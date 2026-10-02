@@ -1,14 +1,5 @@
 """Globex strategy sleeve -- wires algo_es/strategies into the main loop.
 
-v1.07 2026-10-02 [5DMA-M1 + NYGEX] 5DMA-STRUCT enters intraday (KK: daily
-    close is too late; every touch counts): an M1 bar touches the 5DMA, entry
-    on the M1 close back on the trend side; re-arms after price trades away.
-    NY session (09:30-16:00 ET) with GEX active: the Globex sleeve does NOT
-    enter -- the dominant-wall fade/breakout sleeves own the single ES slot
-    there (KK: "if it interferes with dominant wall logic, limit to Globex").
-    Strategies still see every bar so their state stays current.
-    ES_5DMA_ENTRY=daily restores the v1.06 daily-close entry.
-
 v1.06 2026-10-02 [D1WARM] 5DMA-STRUCT no longer fires on startup: the
     warm-up consumes every closed daily bar and only a NEW daily bar can signal.
 
@@ -127,18 +118,10 @@ class GlobexSleeve:
         if self._last_m1 is not None and last["time"] <= self._last_m1:
             return []
         self._last_m1 = last["time"]
-        block = self.ny_gex_block(now, gex)
         out = []
         for name, s in self.strats.items():
             try:
-                if name == "fivedma" and config.FIVEDMA_ENTRY == "m1":
-                    d1_all = self.bars["d1"]
-                    if len(d1_all) < 3:
-                        continue
-                    s.load_days([_fbar(b) for b in d1_all[:-1]])   # completed days
-                    sig = s.on_m1(last["high"], last["low"], last["close"],
-                                  close_mode=not block)   # blocked: track only
-                elif name == "fivedma":
+                if name == "fivedma":
                     d1 = _closed(self.bars["d1"])
                     if not d1 or (self._last_d1 is not None
                                   and d1[-1]["time"] <= self._last_d1):
@@ -160,19 +143,9 @@ class GlobexSleeve:
             except Exception as e:  # noqa: BLE001 - one bad strategy never stops the loop
                 log.warning("globex %s raised %s: %s", name, type(e).__name__, e)
                 continue
-            if sig and block:
-                self.on_not_taken(name)          # NY + GEX: wall sleeves only
-                continue
             if sig:
                 out.append({"name": name, "signal": sig})
         return out
-
-    @staticmethod
-    def ny_gex_block(now: datetime, gex) -> bool:
-        """[v1.07 NYGEX] True in the NY session (09:30-16:00 ET) while GEX is
-        active: the dominant-wall sleeves own the ES slot, Globex stands aside."""
-        t = (now.hour, now.minute)
-        return gex is not None and (9, 30) <= t < (16, 0)
 
     def to_candidate(self, name: str, sig, spot: float, gex) -> Optional[Dict]:
         """Signal -> main.py candidate dict, or None when the levels no longer

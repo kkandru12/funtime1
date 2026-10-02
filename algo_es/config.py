@@ -229,3 +229,7 @@ GLOBEX_REFRESH_SEC = _f("ES_GLOBEX_REFRESH_SEC", 30)
 
 # [v1.05 RESILIENT] no MT5 quote for this long -> reconnect (30s..300s backoff)
 MT5_STALE_SEC = _f("ES_MT5_STALE_SEC", 60)
+
+# [v1.07 5DMA-M1] 5DMA-STRUCT entry: "m1" = first M1 close back on the trend
+# side after today touches the 5DMA (default); "daily" = next daily close (v1.06)
+FIVEDMA_ENTRY = _s("ES_5DMA_ENTRY", "m1").strip().lower()
