@@ -569,5 +569,55 @@ if got != want:
 check("R20 IBKR TWS(7497) + Gateway(4002) fallback, last good port first, both components",
       not r20, "; ".join(r20))
 
+# R21 BB-2C dual TF + M1-close entry during the 2nd candle ----------------
+r21 = []
+code21 = r"""
+import sys, os, datetime as dt, time as _t
+sys.path.insert(0, 'algo_es')
+import globex
+out = []
+sl = globex.GlobexSleeve(lambda *a, **k: None, enabled='bb2c')
+out.append(sorted(sl.strats))
+out.append((sl.strats['bb2c'].struct_tf, sl.strats['bb2c_h1'].struct_tf,
+            sl.strats['bb2c_h1'].entry_trigger))
+base = 1_700_000_000 - (1_700_000_000 % 3600)
+h1 = [{'time': base + i*3600, 'open': 6700, 'high': 6702, 'low': 6698,
+       'close': 6700 + (0.5 if i % 2 else -0.5)} for i in range(30)]
+h1.append({'time': base + 30*3600, 'open': 6700, 'high': 6700, 'low': 6660, 'close': 6662})  # A
+B = base + 31*3600
+h1.append({'time': B, 'open': 6662, 'high': 6692, 'low': 6660, 'close': 6690})               # forming B
+sl.bars.update(h1=h1, m15=[], h4=[], d1=[{'time': base - k*86400, 'open': 6700, 'high': 6700,
+               'low': 6700, 'close': 6700} for k in range(6, 0, -1)])
+now = dt.datetime(2026, 10, 2, 3, 0)
+seq = []
+for k, c in enumerate((6663, 6690, 6691)):      # M1 closes during B
+    m = {'time': B + k*60, 'open': c, 'high': c, 'low': c, 'close': c}
+    sl.bars['m1'] = [m, dict(m, time=m['time'] + 60)]           # + forming M1
+    _t.time = lambda t=m['time']: t + 70
+    got = []
+    for name, s in sl.strats.items():
+        sig = s.on_bar(m, sl._state(name, now, c, None))
+        if sig: got.append((name, sig.side, sig.entry_px, sig.target_px, sig.stop_px))
+    seq.append(got)
+out.append(seq)
+print(out)
+"""
+o = subprocess.run([sys.executable, "-c", code21], cwd=HERE, capture_output=True, text=True, timeout=60,
+                   env=dict(os.environ, ES_BB2C_TFS="4h,1h", ES_BB2C_ENTRY="m1_b"))
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+want = ("[['bb2c', 'bb2c_h1'], ('4h', '1h', 'm1_b'), "
+        "[[], [('bb2c_h1', 'buy', 6690.0, 6700.0, 6670.0)], []]]")
+if got != want:
+    r21.append("dual/m1_b %r %s" % (got, o.stderr.strip()[-300:]))
+o = subprocess.run([sys.executable, "-c", "import sys; sys.path.insert(0,'algo_es'); import globex; "
+                    "g=globex.GlobexSleeve(lambda *a, **k: None, enabled='bb2c'); "
+                    "print(sorted(g.strats), g.strats['bb2c'].entry_trigger)"],
+                   cwd=HERE, capture_output=True, text=True, timeout=60,
+                   env=dict(os.environ, ES_BB2C_TFS="4h", ES_BB2C_ENTRY="first_m1"))
+if o.stdout.strip() != "['bb2c'] first_m1":
+    r21.append("ES_BB2C_TFS=4h/first_m1 gave %r %s" % (o.stdout.strip(), o.stderr.strip()[-200:]))
+check("R21 BB-2C on H4+H1; entry = first M1 close back inside the band during the 2nd candle; target 5DMA",
+      not r21, "; ".join(r21))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

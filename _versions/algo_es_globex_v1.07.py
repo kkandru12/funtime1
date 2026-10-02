@@ -1,15 +1,5 @@
 """Globex strategy sleeve -- wires algo_es/strategies into the main loop.
 
-v1.08 2026-10-02 [BB2CDUAL] KK: "update bb2c to check on H1 and H4 same time".
-    BB-2C now runs as two independent instances when enabled:
-      bb2c     H4 bands (period 20, 2.0 sd), entry = first M1 of the next H4 bar
-      bb2c_h1  H1 bands (same rule),         entry = first M1 of the next H1 bar
-    Each has its own cooldown / once-per-bar memory, so a band close on H1
-    and one on H4 can each signal. Target = 5DMA, stop 20 pts (unchanged).
-    ES_BB2C_TFS=4h restores the H4-only behaviour (default "4h,1h").
-    Entry: ES_BB2C_ENTRY (default m1_b = M1 close back inside the band
-    during the 2nd candle; see strategies/bb2c.py v1.01).
-
 v1.07 2026-10-02 [5DMA-M1 + NYGEX] 5DMA-STRUCT enters intraday (KK: daily
     close is too late; every touch counts): an M1 bar touches the 5DMA, entry
     on the M1 close back on the trend side; re-arms after price trades away.
@@ -77,13 +67,6 @@ class GlobexSleeve:
                 continue
             if n == "fivedma":
                 self.strats[n] = FiveDMAStruct()
-            elif n == "bb2c":
-                # [v1.08 BB2CDUAL] one instance per structure TF
-                for tf in config.BB2C_TFS:
-                    key = "bb2c" if tf == "4h" else "bb2c_h1"
-                    c = dict(cfg, struct_tf=tf, entry_trigger=config.BB2C_ENTRY,
-                             entry_tf="1h" if tf == "4h" else "15m")
-                    self.strats[key] = STRATEGIES["bb2c"](c)
             elif n in STRATEGIES:
                 self.strats[n] = STRATEGIES[n](dict(cfg))
         unknown = [n for n in names if n not in ORDER]
@@ -126,10 +109,6 @@ class GlobexSleeve:
             st["bars"] = _closed(self.bars["h4"])        # structure TF 4h
             st["entry_bars"] = _closed(self.bars["h1"])  # entry TF 1h
             st["struct_tf"] = "4h"
-        elif name == "bb2c_h1":                          # [v1.08 BB2CDUAL]
-            st["bars"] = _closed(self.bars["h1"])        # structure TF 1h
-            st["entry_bars"] = _closed(self.bars["m15"]) # entry TF 15m
-            st["struct_tf"] = "1h"
         elif name == "dma520":
             # m1 entry mode reads the FORMING tf candle -> keep it last
             st["tf_bars"] = {"1h": list(self.bars["h1"]), "4h": list(self.bars["h4"])}

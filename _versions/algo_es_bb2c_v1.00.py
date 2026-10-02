@@ -1,15 +1,5 @@
 """BB-2C — ported from Apex run_consol_bb_2c_cycle.
 
-v1.01 2026-10-02 [BB2C-M1B] KK: "entry on M1 close of 2nd candle".
-  New entry mode "m1_b" (now the default, ES_BB2C_ENTRY): A closes outside
-  its band; while the 2nd candle (B) is FORMING, the first CLOSED M1 that is
-  back inside the band and in the correct half (upper A: mid..upper -> SELL;
-  lower A: lower..mid -> BUY) is the entry, at that M1 close. Band for the
-  check = the 20 structure closes ending at B with B's close = the M1 close.
-  Only during B; once B closes the setup expires. Target 5DMA (must be
-  ahead), stop 20 pts, one signal per B. ES_BB2C_ENTRY=first_m1 restores
-  v1.00 (enter on the first M1 of B with no back-inside check).
-
 Bollinger two-candle FADE on the structure timeframe (default 4h bands,
 20/2.0, population sigma to match the EA):
 
@@ -155,8 +145,6 @@ class Strategy:
 
         if self.entry_trigger == "first_m1":
             return self._first_m1(bars, cl, bar, state, now)
-        if self.entry_trigger == "m1_b":
-            return self._m1_b(bars, cl, state, now)
         return self._two_candle(bars, cl, state, now)
 
     # -- first_m1 mode ------------------------------------------------------
@@ -222,65 +210,6 @@ class Strategy:
                    f"outside, first-M1 entry",
             extra={"entry_kind": "FIRST_M1", "band_side": side,
                    "dma5": round(sma5, 2)})
-
-    # -- m1_b mode [v1.01 BB2C-M1B] -----------------------------------------
-    def _m1_b(self, bars, cl, state, now) -> Optional[Signal]:
-        ia = len(bars) - 1                      # A: last CLOSED structure bar
-        A = bars[ia]
-        cA = float(A["close"])
-        band = bollinger_at(cl, ia, self.period, self.deviation)
-        if not band:
-            return None
-        upA, _midA, loA = band
-        if cA > upA:
-            direction, side = "sell", "upper"
-        elif cA < loA:
-            direction, side = "buy", "lower"
-        else:
-            return None
-        b_ts = ts(A.get("time")) + tf_seconds(self.struct_tf)   # B opens
-        if b_ts > 0 and b_ts == self._last_bar_ts:
-            return None                          # B already used
-        m1: List[Dict] = state.get("bars_m1") or []
-        if not m1:
-            return None
-        m = m1[-1]                               # newest CLOSED M1
-        mt = ts(m.get("time"))
-        if not (b_ts <= mt < b_ts + tf_seconds(self.struct_tf)):
-            return None                          # not inside B
-        if now - (mt + 60.0) > self.first_m1_max_lag_sec:
-            return None                          # stale feed
-        c = float(m["close"])
-        bb = bollinger_at(cl + [c], len(cl), self.period, self.deviation)
-        if not bb:
-            return None
-        up, mid, lo = bb
-        if direction == "sell" and not (mid <= c <= up):
-            return None
-        if direction == "buy" and not (lo <= c <= mid):
-            return None
-        sma5 = self._dma5(state, bars)
-        if not sma5 or sma5 <= 0:
-            return None
-        tp_px = float(sma5)
-        if (direction == "buy" and tp_px <= c) or (direction == "sell" and tp_px >= c):
-            self._last_bar_ts = b_ts             # 5DMA behind: drop this B
-            return None
-        sl_px = c - self.sl_pts if direction == "buy" else c + self.sl_pts
-        self._last_bar_ts = b_ts
-        self._last_fire = now
-        name = "BB-2C-L" if direction == "buy" else "BB-2C-S"
-        log.info("[BB2C] %s M1_B %s | A c=%.2f outside [%.2f..%.2f] | M1 back "
-                 "inside c=%.2f band=[%.2f..%.2f] | 5DMA=%.2f sl=%.2f",
-                 direction.upper(), self.struct_tf, cA, loA, upA, c, lo, up,
-                 sma5, sl_px)
-        return Signal(
-            side=direction, entry_px=c, stop_px=sl_px, target_px=tp_px,
-            strategy_name=name, confidence=0.97,
-            reason=f"BB2C {side}-band fade on {self.struct_tf}: A closed "
-                   f"outside, M1 close back inside during B",
-            extra={"entry_kind": "M1_B", "band_side": side,
-                   "dma5": round(sma5, 2), "struct_tf": self.struct_tf})
 
     # -- two_candle mode ----------------------------------------------------
     def _two_candle(self, bars, cl, state, now) -> Optional[Signal]:

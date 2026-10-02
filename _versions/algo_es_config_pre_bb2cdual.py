@@ -222,12 +222,6 @@ GLOBEX_ENABLED = _b("ES_GLOBEX_ENABLED", True)
 GLOBEX_STRATEGIES = _s("ES_GLOBEX_STRATEGIES",
                        "vob,squeeze,bb2c,dma520,smacross,fivedma")
 GLOBEX_QTY = _i("ES_GLOBEX_QTY", 1)
-# [BB2CDUAL] BB-2C structure timeframes, each its own instance (4h: H4 bands;
-# 1h: H1 bands). "4h" alone restores the single-TF behaviour.
-BB2C_TFS = [t.strip().lower() for t in _s("ES_BB2C_TFS", "4h,1h").split(",") if t.strip() in ("4h", "1h")] or ["4h"]
-# [BB2C-M1B] BB-2C entry: m1_b = first M1 close back inside the band during
-# the 2nd candle (default); first_m1 = v1.00; two_candle = Apex B-close/pin/FVG.
-BB2C_ENTRY = _s("ES_BB2C_ENTRY", "m1_b").lower()
 # True = run around the clock (KK: Globex strategies run all the time).
 # False = Apex rule: stand aside 09:30-13:00 ET (the wall cycles' window).
 GLOBEX_ALL_HOURS = _b("ES_GLOBEX_ALL_HOURS", True)

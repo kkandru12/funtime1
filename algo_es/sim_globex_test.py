@@ -178,8 +178,8 @@ evC = asyncio.run(run("vob,squeeze,bb2c,dma520,smacross,fivedma", loops=30))
 if "GLOBEX_SLEEVE" not in names(evC) or "SESSION_LOOP_END" not in names(evC):
     fails.append("C: real strategies loop did not run to the end: %s" % names(evC)[-5:])
 sleeve = [d for e, d in evC if e == "GLOBEX_SLEEVE"]
-if sleeve and len(sleeve[0]["strategies"]) != 6:
-    fails.append("C: expected 6 strategies, got %s" % sleeve[0]["strategies"])
+if sleeve and len(sleeve[0]["strategies"]) != 7:
+    fails.append("C: expected 7 strategies (bb2c on H4+H1), got %s" % sleeve[0]["strategies"])
 
 # E [v1.06 D1WARM] restart must not fire 5DMA-STRUCT on old daily bars ------
 import strategies.fivedma_struct as fds
