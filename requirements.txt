@@ -1,0 +1,6 @@
+# One-shot install for the whole bridge setup (bridge + 0DTE + ES algo).
+# Run:  .\venv\Scripts\python -m pip install -r requirements.txt
+ib_insync>=0.9.86
+numpy==2.2.6
+tzdata; sys_platform == "win32"
+MetaTrader5; sys_platform == "win32"
