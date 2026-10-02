@@ -1,7 +1,4 @@
-"""v1.02 2026-10-02 [OIRANGE] morning_oi_snapshot(spot) scans only strikes
-    within BRIDGE_OI_SCAN_RANGE (default 300) of spot; 0 = whole chain.
-
-v1.01 2026-10-02 [NOSNAPGENERIC] IBKR rejects snapshot=True with generic
+"""v1.01 2026-10-02 [NOSNAPGENERIC] IBKR rejects snapshot=True with generic
     ticks (Error 321 "Snapshot market data subscription is not applicable to
     generic ticks"), so the morning OI scan (tick 101) and the wing sweeps
     (100,101,106,107) never received data -- seen live 2026-10-02 09:32.
@@ -145,14 +142,9 @@ class ChainStream:
                               lambda x: _greeks_from_ticker(x) is not None)
         return {"bid": t.bid, "ask": t.ask, "greeks": _greeks_from_ticker(t)}
 
-    async def morning_oi_snapshot(self, spot: float | None = None) -> dict:
+    async def morning_oi_snapshot(self) -> dict:
         """ONE full-chain OI scan (brief streaming requests, <= BRIEF_MAX_LINES held)."""
-        items = list(self.contracts.items())
-        rng = config.OI_SCAN_RANGE
-        if spot and rng > 0:              # [v1.02 OIRANGE]
-            items = [it for it in items if abs(it[0][0] - spot) <= rng]
-        log.info("morning OI snapshot: %d of %d contracts (spot %s +/- %s)",
-                 len(items), len(self.contracts), spot, rng if spot and rng > 0 else "all")
+        log.info("morning OI snapshot: %d contracts", len(self.contracts))
         oi: dict[tuple[float, str], float] = {}
 
         async def one(item):
@@ -165,7 +157,7 @@ class ChainStream:
             except Exception as e:
                 log.warning("OI snapshot failed %s: %s", key, e)
 
-        await asyncio.gather(*(one(it) for it in items))
+        await asyncio.gather(*(one(it) for it in self.contracts.items()))
         self.oi = oi
         covered = sum(1 for v in oi.values() if v > 0)
         log.info("OI snapshot done: %d/%d reporting OI>0", covered, len(oi))

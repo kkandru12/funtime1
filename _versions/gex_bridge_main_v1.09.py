@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 """
-v1.10 2026-10-02 [OIRANGE] KK: "can this be faster, under a min?" Spot is
-    awaited BEFORE the OI scan, and the scan covers only strikes within
-    BRIDGE_OI_SCAN_RANGE (default 300) of spot -- GEX only ever uses strikes
-    that have gamma (<= wing range 200), so the far wings were wasted
-    requests. ~240 contracts instead of 602; with the pacer default raised
-    3 -> 8/s the scan takes ~30 s instead of ~3.5 min.
 v1.09 2026-10-02 [SPXFIRST + NOSNAPGENERIC] Live 09:33 the day setup aborted
     with "no SPX spot": _await_spot() polled the SPX ticker, but the SPX line
     was only subscribed later inside start_streaming(), so the wait could
@@ -120,13 +114,13 @@ async def _ensure_day(ib, pacer, state, now) -> bool:
         return False
     _publish_contracts(chain, expiry)
     await chain.ensure_spx()          # [v1.09 SPXFIRST] spot must be streaming first
+    oi = await chain.morning_oi_snapshot()
+    if not oi:
+        log.error("morning OI snapshot failed")
+        return False
     spot0 = await _await_spot(chain)
     if not spot0:
         log.error("no SPX spot; aborting day setup")
-        return False
-    oi = await chain.morning_oi_snapshot(spot0)   # [v1.10 OIRANGE] spot +/- range only
-    if not oi:
-        log.error("morning OI snapshot failed")
         return False
     await chain.start_streaming(spot0)
     await chain.wing_sweep(spot0)

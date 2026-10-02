@@ -652,6 +652,9 @@ async def go():
     ib = IB(); cs = chain.ChainStream(ib, Pacer(1000, 50))
     cs.contracts = {(6700.0 + 5*i, r): C(6700.0 + 5*i, r) for i in range(12) for r in 'CP'}
     oi = await cs.morning_oi_snapshot()
+    config.OI_SCAN_RANGE = 20
+    oi2 = await cs.morning_oi_snapshot(6725.0)
+    rng_ok = sorted({k for k, _ in oi2}) == [6705.0, 6710.0, 6715.0, 6720.0, 6725.0, 6730.0, 6735.0, 6740.0, 6745.0]
     class TK:
         def __init__(s, mp, l, c): s._mp = mp; s.last = l; s.close = c
         def marketPrice(s): return s._mp
@@ -659,18 +662,19 @@ async def go():
     for tk in (TK(nan, nan, 6701.5), TK(6702.0, nan, nan), TK(nan, nan, nan)):
         cs.spx_ticker = tk; sp.append(cs.spot())
     sp[2] = sp[2] is None
+    sp.append(rng_ok)
     return [sum(1 for v in oi.values() if v > 0), len(oi), any(ib.calls), ib.peak <= 5, ib.open, sp]
 print(asyncio.run(go()))
 """
 o = subprocess.run([sys.executable, "-c", code22], cwd=HERE, capture_output=True, text=True, timeout=60)
 got = (o.stdout.strip().splitlines() or ["?"])[-1]
-if got != "[24, 24, False, True, 0, [6701.5, 6702.0, True]]":
+if got != "[24, 24, False, True, 0, [6701.5, 6702.0, True, True]]":
     r22.append("OI scan %r %s" % (got, o.stderr.strip()[-300:]))
 src = open(os.path.join(HERE, "gex_bridge", "chain.py")).read()
 if "snapshot=True" in src.split('"""', 2)[2]:
     r22.append("gex_bridge/chain.py still requests snapshot=True")
 msrc = open(os.path.join(HERE, "gex_bridge", "main.py")).read()
-if not (0 < msrc.find("chain.ensure_spx()") < msrc.find("_await_spot(chain)")):
+if not (0 < msrc.find("chain.ensure_spx()") < msrc.find("_await_spot(chain)") < msrc.find("morning_oi_snapshot(spot0)")):
     r22.append("SPX is not subscribed before the spot wait")
 check("R22 bridge: OI scan by brief streaming, lines capped; SPX subscribed before spot wait; NaN-safe spot",
       not r22, "; ".join(r22))

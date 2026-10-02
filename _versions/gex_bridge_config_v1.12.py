@@ -152,7 +152,6 @@ CRUSH_BAND_MAX_OTM = _i("BRIDGE_CRUSH_BAND_MAX_OTM", 95)
 CRUSH_BAND_STEP = _i("BRIDGE_CRUSH_BAND_STEP", 10)
 ALLLAST_MAX_LINES = 0                 # not streamed by the bridge
 WING_SWEEP_RANGE = _i("BRIDGE_WING_SWEEP_RANGE", 200)
-OI_SCAN_RANGE = _i("BRIDGE_OI_SCAN_RANGE", 300)   # [v1.13 OIRANGE] morning OI scan: spot +/- pts (0 = all)
 WING_SWEEP_MIN = _i("BRIDGE_WING_SWEEP_MIN", 15)
 RECENTER_MIN = _i("BRIDGE_RECENTER_MIN", 15)
 # [v1.12 TICKS107] 107 is not a legal OPT generic tick (IBKR Error 321 live
@@ -160,7 +159,7 @@ RECENTER_MIN = _i("BRIDGE_RECENTER_MIN", 15)
 GENERIC_TICKS = "100,101,106"         # volume, OI, implied vol
 
 # ---------------- API pacer ----------------
-PACER_MKT_PER_SEC = _f("BRIDGE_PACER_MKT_PER_SEC", 8.0)   # [v1.13 OIRANGE] was 3.0; 16 msg/s of IBKR ~50
+PACER_MKT_PER_SEC = _f("BRIDGE_PACER_MKT_PER_SEC", 3.0)
 PACER_MAX_CONCURRENT = _i("BRIDGE_PACER_MAX_CONCURRENT", 8)
 SNAPSHOT_DWELL = _f("BRIDGE_SNAPSHOT_DWELL", 2.5)
 BRIEF_MAX_LINES = _i("BRIDGE_BRIEF_MAX_LINES", 15)   # [NOSNAPGENERIC] brief stream lines open at once
