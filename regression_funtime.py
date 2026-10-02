@@ -309,5 +309,57 @@ if "was_up = ib.isConnected()" not in br or "state.clear()" not in br:
 check("R13 outages: IBKR/MT5 down -> retry, carry, freeze; supervisor never gives up",
       not r13, "; ".join(r13))
 
+# R14 launcher arguments accepted by every component ------------------------
+r14 = []
+for live in (False, True):
+    code = ("import sys,ast;sys.argv=['run_all.py']+(['--live'] if %r else ['--dry-run']);"
+            "import run_all;print(repr(run_all.COMPONENTS))") % live
+    o = subprocess.run([sys.executable, "-c", code], cwd=HERE, capture_output=True, text=True)
+    try:
+        comps = ast.literal_eval(o.stdout.strip().splitlines()[-1])
+    except Exception:
+        r14.append("cannot read COMPONENTS: %s" % o.stderr.strip()[-150:]); continue
+    for name, (script, args) in comps:
+        src = open(os.path.join(HERE, script), encoding="utf-8").read()
+        flags = set(re.findall(r'add_argument\(\s*"(--[\w-]+)"', src))
+        bad = [a for a in args if a.startswith("--") and a not in flags]
+        if bad:
+            r14.append("%s %s: %s not accepted" % ("live" if live else "dry", name, bad))
+check("R14 run_all.py arguments accepted by every component (dry + live)", not r14, "; ".join(r14))
+
+# R15 DMA-520 sees a sweep late in the forming candle ----------------------
+code15 = r"""
+import sys, datetime as dt
+sys.path.insert(0, '.')
+import strategies.dma520 as m
+clock = {'t': 0.0}
+m.time = type('T', (), {'time': staticmethod(lambda: clock['t'])})
+s = m.Strategy({'globex_only': False, 'tfs': ['1h']})
+ET = dt.timezone(dt.timedelta(hours=-4))
+t0 = dt.datetime(2026, 9, 1, 10, 0, tzinfo=ET)
+dc = [7500.0] * 15 + [7520.0] * 5           # 5DMA 7520, 20DMA 7505
+hist = [{'time': t0 - dt.timedelta(hours=k), 'open': 7510, 'high': 7540 + (k % 3),
+         'low': 7480 - (k % 4), 'close': 7510 + (k % 5) - 2} for k in range(30, 0, -1)]
+fired = None
+for i in range(60):                          # minutes of the forming 10:00 candle
+    hi = 7512 + (20 if i >= 40 else 0)       # sweeps ABOVE both lines at minute 40
+    lo = 7508 - (25 if i >= 40 else 0)       # ... and below both (bigger under)
+    form = {'time': t0, 'open': 7510, 'high': hi, 'low': lo, 'close': 7512}
+    m1t = t0 + dt.timedelta(minutes=i)
+    clock['t'] = (m1t + dt.timedelta(minutes=1)).timestamp()
+    st = {'tf_bars': {'1h': hist + [form]}, 'daily_closes': dc,
+          'bars_m1': [{'time': m1t - dt.timedelta(minutes=1), 'close': 7511},
+                      {'time': m1t, 'close': 7512}]}
+    sig = s.on_bar(st['bars_m1'][-1], st)
+    if sig:
+        fired = i; break
+print(fired)
+"""
+o = subprocess.run([sys.executable, "-c", code15], cwd=os.path.join(HERE, "algo_es"),
+                   capture_output=True, text=True)
+got = (o.stdout.strip().splitlines() or ["?"])[-1]
+check("R15 DMA-520 fires on a sweep late in the forming candle", got == "40",
+      "fired at minute %s (want 40) %s" % (got, o.stderr.strip()[-150:]))
+
 print("\n%d passed, %d failed" % (len(passes), len(fails)))
 sys.exit(1 if fails else 0)

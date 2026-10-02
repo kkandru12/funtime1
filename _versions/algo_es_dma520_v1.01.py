@@ -117,11 +117,8 @@ class Strategy:
                 return None                       # stale minute
 
         if bar_ts > 0 and bar_ts == self._last_bar_ts.get(tf, 0.0):
-            return None                           # already fired on this candle
-        # [v1.06 DMAFIX] the candle is marked ONLY when a signal fires (below).
-        # v1.01 marked it on the first M1 of the forming candle, so in m1 mode
-        # every later minute was skipped and the sweep could never be seen:
-        # 0 trades in 5 years on the Databento replay.
+            return None
+        self._last_bar_ts[tf] = bar_ts
 
         lo_line, hi_line = min(dma5, dma20), max(dma5, dma20)
         swept_both = (c_low <= lo_line and c_high >= hi_line)
@@ -178,7 +175,6 @@ class Strategy:
                  tf, direction.upper(), mode, c_high, c_low, c_close,
                  dma5, dma20, under, over, entry, sl_px, tp_px, rr)
         self._last_fire = now
-        self._last_bar_ts[tf] = bar_ts            # one signal per tf candle
         return Signal(
             side=direction, entry_px=entry, stop_px=sl_px, target_px=tp_px,
             strategy_name=name, confidence=0.97,

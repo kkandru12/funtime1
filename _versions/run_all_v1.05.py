@@ -29,10 +29,8 @@ DRY = "--live" not in sys.argv
 
 COMPONENTS = [
     ("bridge", ["gex_bridge/main.py", []]),
-    # [v1.06 LIVEARG] the algos are LIVE unless --dry-run; they have no --live
-    # flag (passing it made both exit with code 2 on the first live start)
-    ("algo", ["algo/main.py", ["--dry-run"] if DRY else []]),
-    ("algo_es", ["algo_es/main.py", ["--dry-run"] if DRY else []]),
+    ("algo", ["algo/main.py", ["--dry-run"] if DRY else ["--live"]]),
+    ("algo_es", ["algo_es/main.py", ["--dry-run"] if DRY else ["--live"]]),
 ]
 
 BACKOFF_START, BACKOFF_MAX, HEALTHY_SEC = 5, 60, 600
